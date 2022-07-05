@@ -28,13 +28,18 @@
 - Food questionnaire (FQ)
 - Environmental questionnaire (EQ)
 - Standardized voice collection
+- Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)
+- Perceived Stress Scale (PSS)
+- Fatigue Severity Scale (FSS)
+
+### Rheumatic Diseases (RD) - Rheumatoid arthritis (RA), systemic lupus erythematosus (SLE)
+#### Questionnaire / element
 - Manual Muscle Testing (MMT)
 - Myositis Disease Activity Assessment Tool (MDAAT)
 - Hospital Anxiety and Depression Scale (HADS)
 - Short fatigue questionnaire (SFQ)
 - Patient Health Questionnaire-9 (PHQ-9)
 - Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)
-- Perceived Stress Scale (PSS)
 - Functional Assessment of Chronic Illness Therapy - Fatigue (FACIT-F)
 - Health Assessment Questionnaire (HAQ)
 - Physician's Global Assessment of Health (PhGA VAS)
@@ -49,7 +54,13 @@
 - Disease Activity Score-28 (DAS-28)
 - Swollen and Tender Joint Count (SJC/TJC 66/68)
 - Connor's Criteria of Antisynthetase Syndrome
-- Fatigue Severity Scale (FSS)
 - SIMPLIFIED DISEASE ACTIVITY INDEX (SDAI) - Patient Global Assessment of Disease Activity & Physician Global Assessment of Disease Activity
 - CLINICAL DISEASE ACTIVITY INDEX (CDAI) - Patient Global Assessment of Disease Activity & Physician Global Assessment of Disease Activity
 - Cutaneous Lupus Erythematodes Disease Area and Severity Index (CLASI)
+
+
+
+
+### Multiple sclerosis (MS)
+#### Questionnaire / element
+- to do
