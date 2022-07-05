@@ -1,6 +1,7 @@
 # Clinnova
 
 ## Initial - list of instruments
+Might be not final per use-case and more will be added in a near future.
 
 ### Inflammatory bowel disease (IBD)
 #### Questionnaire / element
@@ -32,6 +33,8 @@
 - Perceived Stress Scale (PSS)
 - Fatigue Severity Scale (FSS)
 
+***
+
 ### Rheumatic Diseases (RD) - Rheumatoid arthritis (RA), systemic lupus erythematosus (SLE)
 #### Questionnaire / element
 - Manual Muscle Testing (MMT)
@@ -58,8 +61,7 @@
 - CLINICAL DISEASE ACTIVITY INDEX (CDAI) - Patient Global Assessment of Disease Activity & Physician Global Assessment of Disease Activity
 - Cutaneous Lupus Erythematodes Disease Area and Severity Index (CLASI)
 
-
-
+***
 
 ### Multiple sclerosis (MS)
 #### Questionnaire / element
