@@ -23,6 +23,8 @@ Might be not final per use-case and more will be added in a near future.
 | Ulcerative Colitis Endoscopic Index of Severity (UCEIS)  |             |             |             |
 | Simple Clinical Colitis Activity Index (SCCAI)           |             |             |             |
 | Morisky Medication Adherence Scale (MMAS-8)              |             |             |             |
+| The Montreal classification for Crohn disease and ulcerative colitis |          |         |        |
+| Nancy histological index for ulcerative colitis          |             |             |             |
 | Visual analogue scale of Medication Adherence (VAS-MA)   |             |             |             |
 | 5-item Medication adherence Scale (MARS-5)               |             |             |             |
 | Pittsburgh Sleep Quality Index (PSQI)                    |             |             |             |
