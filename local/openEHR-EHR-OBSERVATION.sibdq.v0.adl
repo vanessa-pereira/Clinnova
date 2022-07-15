@@ -21,34 +21,39 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-07-15">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health / Better">
 		["email"] = <"vanessapereira@pm.com">
-		["date"] = <"2022-07-15">
 	>
 	lifecycle_state = <"in_development">
 	details = <
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
+			keywords = <"*Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease (en)", ...>
 			copyright = <"© openEHR Foundation">
 		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
+			keywords = <"*Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease (en)", ...>
 			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease", ...>
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Paulides E, Kim C, Frampton C, Gearry RB, Eglinton T, Leong RW, et al. Validation of the inflammatory bowel disease disability index for self-report and development of an item-reduced version. J Gastroenterol Hepatol. 2019;34(1):92-102. Epub 2018/10/03. doi: 10.1111/jgh.14496. PubMed PMID: 30276858. 
+
+Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease Questionnaire: translation and validation to the Portuguese language. Health Qual Life Outcomes 19, 59 (2021). https://doi.org/10.1186/s12955-021-01698-9">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["references"] = <"Paulides E, Kim C, Frampton C, Gearry RB, Eglinton T, Leong RW, et al. Validation of the inflammatory bowel disease disability index for self-report and development of an item-reduced version. J Gastroenterol Hepatol. 2019;34(1):92-102. Epub 2018/10/03. doi: 10.1111/jgh.14496. PubMed PMID: 30276858. ">
-		["MD5-CAM-1.0.1"] = <"32fff8a0767a3bb12c0c84ff8b5362b0">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
+		["MD5-CAM-1.0.1"] = <"8d4756233035999b404a3b9bf8b2a46c">
 	>
 
 definition
@@ -58,8 +63,82 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- DV_ORDINAL
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- DV_COUNT
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
 						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -72,7 +151,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Short Inflammatory Bowel Disease Questionnaire (SIBDQ)">
-					description = <"The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients.">
+					description = <"The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. Each question is scored by a 7-point Likert scale, ranging from 1 (a severe problem) to 7 (not a problem at all), giving an absolute SIBDQ score ranging from 10 (poor HRQoL) to 70 (optimal HRQoL). A SIBDQ score below 50 was considered as poor QoL.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -86,13 +165,93 @@ ontology
 					text = <"Tree">
 					description = <"@ internal @">
 				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"DV_ORDINAL">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"DV_COUNT">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Most of the time">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"A good bit of the time">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"A little of the time">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Hardly any of the time">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"None of the time">
+					description = <"">
+				>
 			>
 		>
 		["pt-pt"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Short Inflammatory Bowel Disease Questionnaire (SIBDQ) (en)">
-					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. (en)">
+					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. Each question is scored by a 7-point Likert scale, ranging from 1 (a severe problem) to 7 (not a problem at all), giving an absolute SIBDQ score ranging from 10 (poor HRQoL) to 70 (optimal HRQoL). A SIBDQ score below 50 was considered as poor QoL. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -105,6 +264,86 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*DV_COUNT (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*All of the time (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Most of the time (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*A good bit of the time (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Some of the time (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*A little of the time (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Hardly any of the time (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*None of the time (en)">
+					description = <"">
 				>
 			>
 		>
@@ -112,7 +351,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"*Short Inflammatory Bowel Disease Questionnaire (SIBDQ) (en)">
-					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. (en)">
+					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. Each question is scored by a 7-point Likert scale, ranging from 1 (a severe problem) to 7 (not a problem at all), giving an absolute SIBDQ score ranging from 10 (poor HRQoL) to 70 (optimal HRQoL). A SIBDQ score below 50 was considered as poor QoL. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -125,6 +364,86 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*DV_ORDINAL (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*DV_COUNT (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*All of the time (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Most of the time (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*A good bit of the time (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Some of the time (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*A little of the time (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Hardly any of the time (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*None of the time (en)">
+					description = <"">
 				>
 			>
 		>
