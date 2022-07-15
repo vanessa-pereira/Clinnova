@@ -1,0 +1,131 @@
+archetype (adl_version=1.4; uid=9dd5fb68-46e1-4e37-b3eb-ae37d85886f3)
+	openEHR-EHR-OBSERVATION.sibdq.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+			>
+		>
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+		["date"] = <"2022-07-15">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			copyright = <"© openEHR Foundation">
+		>
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["references"] = <"Paulides E, Kim C, Frampton C, Gearry RB, Eglinton T, Leong RW, et al. Validation of the inflammatory bowel disease disability index for self-report and development of an item-reduced version. J Gastroenterol Hepatol. 2019;34(1):92-102. Epub 2018/10/03. doi: 10.1111/jgh.14496. PubMed PMID: 30276858. ">
+		["MD5-CAM-1.0.1"] = <"32fff8a0767a3bb12c0c84ff8b5362b0">
+		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Short Inflammatory Bowel Disease Questionnaire (SIBDQ)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Short Inflammatory Bowel Disease Questionnaire (SIBDQ)">
+					description = <"The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Short Inflammatory Bowel Disease Questionnaire (SIBDQ) (en)">
+					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Short Inflammatory Bowel Disease Questionnaire (SIBDQ) (en)">
+					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
