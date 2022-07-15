@@ -4,14 +4,20 @@ The openEHR archetypes build for the Clinnova project will stay in this section 
 
 Once the archetypes reach a stable stage, a list will be available on this README.
 
-| Archetype name                                            | Status      | url         |
-| -----------                                               | ----------- |-----------  |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
-|                                                           |             |             |
+| Archetype name                                            | Status      | language    | url         | comment           |
+| -----------                                               | ----------- |-----------  |-----------  |-----------        |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+|                                                           |             |             |             |                   |
+
