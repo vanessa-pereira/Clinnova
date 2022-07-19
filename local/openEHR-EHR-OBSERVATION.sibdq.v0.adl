@@ -10,11 +10,17 @@ language
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health / Better">
+				["email"] = <"vanessapereira@pm.com">
 			>
 		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["email"] = <"vanessapereira@pm.com">
+				["organisation"] = <"Luxembourg Institute of Health / Better">
 			>
 		>
 	>
@@ -30,17 +36,38 @@ description
 	details = <
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
+			purpose = <"*To record the results for each component parameter and their total sum for the SIBDQ measure. (en)">
 			keywords = <"Questionário curto de doença inflamatória intestinal, SIBDQ, IBD, HRQoL, UC, colite ulcerativa, doença inflamatória intestinal, QoL, Qualidade de vida, Doença de Crohn", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Use to record the results for each component parameter and their total sum for the SIBDQ measure.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+Copyright statement: © Copyright McMaster, Hamilton Health Sciences, and St. Joseph’s Healthcare Hamilton 
+
+Terms and conditions for use: https://research.mcmaster.ca/industry-and-investors/technologies-available-for-licensing/questionnaire-request-form/ (en)">
 		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
+			purpose = <"*To record the results for each component parameter and their total sum for the SIBDQ measure. (en)">
 			keywords = <"*Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Use to record the results for each component parameter and their total sum for the SIBDQ measure.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+Copyright statement: © Copyright McMaster, Hamilton Health Sciences, and St. Joseph’s Healthcare Hamilton 
+
+Terms and conditions for use: https://research.mcmaster.ca/industry-and-investors/technologies-available-for-licensing/questionnaire-request-form/ (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To record the results for each component parameter and their total sum for the SIBDQ measure.">
 			keywords = <"Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease", ...>
+			use = <"Use to record the results for each component parameter and their total sum for the SIBDQ measure.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+Copyright statement: © Copyright McMaster, Hamilton Health Sciences, and St. Joseph’s Healthcare Hamilton 
+
+Terms and conditions for use: https://research.mcmaster.ca/industry-and-investors/technologies-available-for-licensing/questionnaire-request-form/">
 		>
 	>
 	other_details = <
@@ -52,8 +79,9 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bc0a2cf5a8c874e047b2d552a86c3855">
+		["MD5-CAM-1.0.1"] = <"8f9c6e04aca4d85d5b01b468fd19cbdc">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
+		["revision"] = <"0.0.1">
 	>
 
 definition
@@ -308,7 +336,8 @@ ontology
 				>
 				["at0016"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 				["at0017"] = <
 					text = <"All of the time">
@@ -500,7 +529,8 @@ ontology
 				>
 				["at0016"] = <
 					text = <"Extensão">
-					description = <"">
+					description = <"Informações adicionais necessárias para estender o modelo com conteúdo local ou para alinhar com outros modelos de referência ou formalismos.">
+					comment = <"Por exemplo: requisitos de informações locais; ou metadados adicionais para alinhar com FHIR.">
 				>
 				["at0017"] = <
 					text = <"Sempre">
@@ -692,7 +722,8 @@ ontology
 				>
 				["at0016"] = <
 					text = <"Extensão">
-					description = <"">
+					description = <"Informações adicionais necessárias para estender o modelo com conteúdo local ou para alinhar com outros modelos de referência ou formalismos.">
+					comment = <"Por exemplo: requisitos de informações locais; ou metadados adicionais para alinhar com FHIR.">
 				>
 				["at0017"] = <
 					text = <"Sempre">
