@@ -1,0 +1,830 @@
+archetype (adl_version=1.4; uid=9dd5fb68-46e1-4e37-b3eb-ae37d85886f3)
+	openEHR-EHR-OBSERVATION.sibdq.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health / Better">
+				["email"] = <"vanessapereira@pm.com">
+			>
+		>
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["email"] = <"vanessapereira@pm.com">
+				["organisation"] = <"Luxembourg Institute of Health / Better">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-07-15">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			purpose = <"*To record the results for each component parameter and their total sum for the SIBDQ measure. (en)">
+			keywords = <"Questionário curto de doença inflamatória intestinal, SIBDQ, IBD, HRQoL, UC, colite ulcerativa, doença inflamatória intestinal, QoL, Qualidade de vida, Doença de Crohn", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"*Use to record the results for each component parameter and their total sum for the SIBDQ measure.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+Copyright statement: © Copyright McMaster, Hamilton Health Sciences, and St. Joseph’s Healthcare Hamilton 
+
+Terms and conditions for use: https://research.mcmaster.ca/industry-and-investors/technologies-available-for-licensing/questionnaire-request-form/ (en)">
+		>
+		["pt"] = <
+			language = <[ISO_639-1::pt]>
+			purpose = <"*To record the results for each component parameter and their total sum for the SIBDQ measure. (en)">
+			keywords = <"*Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease (en)", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"*Use to record the results for each component parameter and their total sum for the SIBDQ measure.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+Copyright statement: © Copyright McMaster, Hamilton Health Sciences, and St. Joseph’s Healthcare Hamilton 
+
+Terms and conditions for use: https://research.mcmaster.ca/industry-and-investors/technologies-available-for-licensing/questionnaire-request-form/ (en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the results for each component parameter and their total sum for the SIBDQ measure.">
+			keywords = <"Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease", ...>
+			use = <"Use to record the results for each component parameter and their total sum for the SIBDQ measure.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+Copyright statement: © Copyright McMaster, Hamilton Health Sciences, and St. Joseph’s Healthcare Hamilton 
+
+Terms and conditions for use: https://research.mcmaster.ca/industry-and-investors/technologies-available-for-licensing/questionnaire-request-form/">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Paulides E, Kim C, Frampton C, Gearry RB, Eglinton T, Leong RW, et al. Validation of the inflammatory bowel disease disability index for self-report and development of an item-reduced version. J Gastroenterol Hepatol. 2019;34(1):92-102. Epub 2018/10/03. doi: 10.1111/jgh.14496. PubMed PMID: 30276858. 
+
+Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease Questionnaire: translation and validation to the Portuguese language. Health Qual Life Outcomes 19, 59 (2021). https://doi.org/10.1186/s12955-021-01698-9">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8f9c6e04aca4d85d5b01b468fd19cbdc">
+		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
+		["revision"] = <"0.0.1">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Short Inflammatory Bowel Disease Questionnaire (SIBDQ)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- In the last 2 weeks
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Feeling of fatigue or of being tired and worn out
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Had to delay or cancel a social engagement due to bowel problem
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Difficulty doing leisure or sport activities
+										value matches {
+											1|[local::at0028],
+											2|[local::at0029],
+											3|[local::at0030],
+											4|[local::at0031],
+											5|[local::at0032],
+											6|[local::at0033],
+											7|[local::at0034]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Have been troubled by pain in the abdomen
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Felt depressed or discouraged
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Problems passing large amounts of gas
+										value matches {
+											1|[local::at0035],
+											2|[local::at0036],
+											3|[local::at0037],
+											4|[local::at0038],
+											5|[local::at0039],
+											6|[local::at0040],
+											7|[local::at0041]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Problems maintaining or getting to desired weight
+										value matches {
+											1|[local::at0035],
+											2|[local::at0036],
+											3|[local::at0037],
+											4|[local::at0038],
+											5|[local::at0039],
+											6|[local::at0040],
+											7|[local::at0041]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Felt relaxed and free of tension
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Feeling of having to go to bathroom even with bowel empty
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Felt angry as a result of bowel problem
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- SIBDQ score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|10..70|}
+											}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- SIBDQ score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0025,    -- Poor health-related quality of life (HRQoL)
+													at0026,    -- Optimal health-related quality of life (HRQoL)
+													at0027]    -- Best health-related quality of life (HRQoL)
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {PT2S}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0016] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Short Inflammatory Bowel Disease Questionnaire (SIBDQ)">
+					description = <"The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. Each question is scored by a 7-point Likert scale, ranging from 1 (a severe problem) to 7 (not a problem at all), giving an absolute SIBDQ score ranging from 10 (poor HRQoL) to 70 (optimal HRQoL). A SIBDQ score below 50 was considered as poor QoL.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"In the last 2 weeks">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Feeling of fatigue or of being tired and worn out">
+					description = <"Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks?">
+					dimension = <"systemic">
+					question_number = <"1">
+				>
+				["at0006"] = <
+					text = <"Had to delay or cancel a social engagement due to bowel problem">
+					description = <"Original question: How often during the last 2 weeks have you had to delay or cancel a social engagement because of your bowel problem?">
+					dimension = <"social">
+					question_number = <"2">
+				>
+				["at0007"] = <
+					text = <"Difficulty doing leisure or sport activities">
+					description = <"Original question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done during the last 2 weeks?">
+					dimension = <"social">
+					question_number = <"3">
+				>
+				["at0008"] = <
+					text = <"Have been troubled by pain in the abdomen">
+					description = <"Original question: How often during the last 2 weeks have you been troubled by pain in the abdomen?">
+					dimension = <"bowel">
+					question_number = <"4">
+				>
+				["at0009"] = <
+					text = <"Felt depressed or discouraged">
+					description = <"Original question: How often during the last 2 weeks have you felt depressed or discouraged?">
+					dimension = <"emotional">
+					question_number = <"5">
+				>
+				["at0010"] = <
+					text = <"Problems passing large amounts of gas">
+					description = <"Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas?">
+					dimension = <"bowel">
+					question_number = <"6">
+				>
+				["at0011"] = <
+					text = <"Problems maintaining or getting to desired weight">
+					description = <"Original question: Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be?">
+					dimension = <"systemic">
+					question_number = <"7">
+				>
+				["at0012"] = <
+					text = <"Felt relaxed and free of tension">
+					description = <"Original question: How often during the last 2 weeks have you felt relaxed and free of tension?">
+					dimension = <"emotional">
+					question_number = <"8">
+				>
+				["at0013"] = <
+					text = <"Feeling of having to go to bathroom even with bowel empty">
+					description = <"Original question: How much of the time during the last 2 weeks have you been troubled by a feeling of having to go to the bathroom even though your bowels were empty?">
+					dimension = <"bowel">
+					question_number = <"9">
+				>
+				["at0014"] = <
+					text = <"Felt angry as a result of bowel problem">
+					description = <"Original question: How much of the time during the last 2 weeks have you felt angry as a result of your bowel problem?">
+					dimension = <"emotional">
+					question_number = <"10">
+				>
+				["at0015"] = <
+					text = <"SIBDQ score">
+					description = <"The total score for the SIBDQ, from 10 to 70. Results from the sum of the values of the previous questions.">
+				>
+				["at0016"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0017"] = <
+					text = <"All of the time">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Most of the time">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"A good bit of the time">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Some of the time">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"A little of the time">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Hardly any of the time">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"None of the time">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"SIBDQ score interpretation">
+					description = <"Interpretation of the value from the total SIBDQ score.">
+				>
+				["at0025"] = <
+					text = <"Poor health-related quality of life (HRQoL)">
+					description = <"If SIBDQ score is below 50, is considered that the patient has a poor quality of life.">
+				>
+				["at0026"] = <
+					text = <"Optimal health-related quality of life (HRQoL)">
+					description = <"If SIBDQ score is equal or above 50, is considered that the patient has a good quality of life.">
+				>
+				["at0027"] = <
+					text = <"Best health-related quality of life (HRQoL)">
+					description = <"If SIBDQ score is equal to 70, is considered that the patient has a best quality of life.">
+				>
+				["at0028"] = <
+					text = <"A great deal of difficulty, activities made impossible">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"A lot of difficulty">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"A fair bit of difficulty">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Some difficulty">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"A little difficulty">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Hardly any difficulty">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"No difficulty, the bowel problems did not limit sports of leisure activities">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"A major problem">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"A big problem">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"A significant problem">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Some trouble">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"A little trouble">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Hardly any trouble">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"No trouble">
+					description = <"">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"Questionário curto de doença inflamatória intestinal (SIBDQ - PT)">
+					description = <"O Short Inflammatory Bowel Disease Questionnaire (SIBDQ) é uma ferramenta de qualidade de vida relacionada à saúde (QoL) que mede o estado físico, social e emocional (pontuação de 10 (má qualidade de vida) - 70 (melhor qualidade de vida). O SIBDQ tem sido predominantemente usado em ensaios para a doença de Crohn, e uma validação adicional do SIBDQ é desejável em pacientes com colite ulcerosa. Cada questão é pontuada por uma escala Likert de 7 pontos, variando de 1 (um problema grave) a 7 (nenhum problema), dando uma pontuação absoluta do SIBDQ que varia de 10 (QoL má) a 70 (QoL ótima). Uma pontuação de SIBDQ abaixo de 50 foi considerado como má qualidade de vida.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Nas últimas 2 semanas">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Teve sensação de cansaço ou de exaustão">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência é que a sensação de cansaço ou exaustão foi um problema para si?">
+					dimension = <"emotional">
+					question_number = <"1">
+				>
+				["at0006"] = <
+					text = <"Teve de adiar ou cancelar um evento social">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência teve de adiar ou cancelar um evento social devido à sua doença intestinal?">
+					dimension = <"social">
+					question_number = <"2">
+				>
+				["at0007"] = <
+					text = <"Dificuldade em realizar actividades de lazer ou desportivas">
+					description = <"Questão original: Nas últimas 2 semanas, quantifique a dificuldade que teve em realizar atividades de lazer ou desportivas de que gosta, devido à sua doença intestinal">
+					dimension = <"social">
+					question_number = <"3">
+				>
+				["at0008"] = <
+					text = <"Se sentiu incomodado com dor abdominal">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu incomodado com dor abdominal? ">
+					dimension = <"intestinal">
+					question_number = <"4">
+				>
+				["at0009"] = <
+					text = <"Se sentiu deprimido ou desmotivado">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu deprimido ou desmotivado? ">
+					dimension = <"social">
+					question_number = <"5">
+				>
+				["at0010"] = <
+					text = <"Teve problemas de flatulência">
+					description = <"Questão original: De uma forma geral, nas últimas 2 semanas, quão problemática foi para si a flatulência? ">
+					dimension = <"intestinal">
+					question_number = <"6">
+				>
+				["at0011"] = <
+					text = <"Teve problemas em manter o peso ideal">
+					description = <"Questão original: De uma forma geral, nas últimas 2 semanas, quão problemática foi a manutenção do seu peso ideal?">
+					dimension = <"sistémico">
+					question_number = <"7">
+				>
+				["at0012"] = <
+					text = <"Se sentiu relaxado">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu relaxado?">
+					dimension = <"emocional">
+					question_number = <"8">
+				>
+				["at0013"] = <
+					text = <"Se sentiu incomodado com a sensação de ir à casa de banho mesmo não tendo dejeções">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu incomodado com a sensação de ter de ir à casa de banho, mesmo não tendo dejeções? ">
+					dimension = <"instestinal">
+					question_number = <"9">
+				>
+				["at0014"] = <
+					text = <"Se sentiu irritado pela doença intestinal">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu irritado como resultado da sua doença intestinal? ">
+					dimension = <"intestinal">
+					question_number = <"10">
+				>
+				["at0015"] = <
+					text = <"Pontuação SIBDQ">
+					description = <"Pontuação SIBDQ, de 10 a 70. Resultado da soma dos valores das questões anteriores.">
+				>
+				["at0016"] = <
+					text = <"Extensão">
+					description = <"Informações adicionais necessárias para estender o modelo com conteúdo local ou para alinhar com outros modelos de referência ou formalismos.">
+					comment = <"Por exemplo: requisitos de informações locais; ou metadados adicionais para alinhar com FHIR.">
+				>
+				["at0017"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Maior parte do tempo">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Uma boa parte do tempo">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Algumas vezes">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Poucas vezes">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Raramente">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Interpretação da pontuação SIBDQ">
+					description = <"Interpretação do valor total da pontuação SIBDQ.">
+				>
+				["at0025"] = <
+					text = <"Baixa qualidade de vida relacionada à saúde (HRQoL)">
+					description = <"Se a pontuação do SIBDQ for inferior a 50, considera-se que o paciente tem uma má qualidade de vida relacionada à saúde.">
+				>
+				["at0026"] = <
+					text = <"Boa qualidade de vida relacionada à saúde (HRQoL)">
+					description = <"Se a pontuação do SIBDQ for igual ou inferior a 50, considera-se que o paciente tem uma boa qualidade de vida relacionada à saúde.">
+				>
+				["at0027"] = <
+					text = <"A melhor qualidade de vida relacionada à saúde (HRQoL)">
+					description = <"Se a pontuação do SIBDQ for igual a 70, considera-se que o paciente tem a melhor qualidade de vida relacionada à saúde.">
+				>
+				["at0028"] = <
+					text = <"Extrema dificuldade, impossível realizar as atividades">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Muita dificuldade">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Bastante dificuldade">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Alguma dificuldade">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Pouca dificuldade">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Praticamente nenhuma dificuldade">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Nenhuma dificuldade, sem limitações de pratica desportiva e atividades de lazer">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Problema major">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Grande problema">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Problema significativo">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Algum incómodo">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Pequeno incómodo">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Praticamente nenhum incómodo">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Não foi problema">
+					description = <"">
+				>
+			>
+		>
+		["pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"Questionário curto de doença inflamatória intestinal (SIBDQ - PT)">
+					description = <"O Short Inflammatory Bowel Disease Questionnaire (SIBDQ) é uma ferramenta de qualidade de vida relacionada à saúde (QoL) que mede o estado físico, social e emocional (pontuação de 10 (má qualidade de vida) - 70 (melhor qualidade de vida). O SIBDQ tem sido predominantemente usado em ensaios para a doença de Crohn, e uma validação adicional do SIBDQ é desejável em pacientes com colite ulcerosa. Cada questão é pontuada por uma escala Likert de 7 pontos, variando de 1 (um problema grave) a 7 (nenhum problema), dando uma pontuação absoluta do SIBDQ que varia de 10 (QoL má) a 70 (QoL ótima). Uma pontuação de SIBDQ abaixo de 50 foi considerado como má qualidade de vida.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Nas últimas 2 semanas">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Teve sensação de cansaço ou de exaustão">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência é que a sensação de cansaço ou exaustão foi um problema para si?">
+					dimension = <"emotional">
+					question_number = <"1">
+				>
+				["at0006"] = <
+					text = <"Teve de adiar ou cancelar um evento social">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência teve de adiar ou cancelar um evento social devido à sua doença intestinal?">
+					dimension = <"social">
+					question_number = <"2">
+				>
+				["at0007"] = <
+					text = <"Dificuldade em realizar actividades de lazer ou desportivas">
+					description = <"Questão original: Nas últimas 2 semanas, quantifique a dificuldade que teve em realizar atividades de lazer ou desportivas de que gosta, devido à sua doença intestinal">
+					dimension = <"social">
+					question_number = <"3">
+				>
+				["at0008"] = <
+					text = <"Se sentiu incomodado com dor abdominal">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu incomodado com dor abdominal? ">
+					dimension = <"intestinal">
+					question_number = <"4">
+				>
+				["at0009"] = <
+					text = <"Se sentiu deprimido ou desmotivado">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu deprimido ou desmotivado? ">
+					dimension = <"social">
+					question_number = <"5">
+				>
+				["at0010"] = <
+					text = <"Teve problemas de flatulência">
+					description = <"Questão original: De uma forma geral, nas últimas 2 semanas, quão problemática foi para si a flatulência? ">
+					dimension = <"intestinal">
+					question_number = <"6">
+				>
+				["at0011"] = <
+					text = <"Teve problemas em manter o peso ideal">
+					description = <"Questão original: De uma forma geral, nas últimas 2 semanas, quão problemática foi a manutenção do seu peso ideal?">
+					dimension = <"sistémico">
+					question_number = <"7">
+				>
+				["at0012"] = <
+					text = <"Se sentiu relaxado">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu relaxado?">
+					dimension = <"emocional">
+					question_number = <"8">
+				>
+				["at0013"] = <
+					text = <"Se sentiu incomodado com a sensação de ir à casa de banho mesmo não tendo dejeções">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu incomodado com a sensação de ter de ir à casa de banho, mesmo não tendo dejeções? ">
+					dimension = <"instestinal">
+					question_number = <"9">
+				>
+				["at0014"] = <
+					text = <"Se sentiu irritado pela doença intestinal">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu irritado como resultado da sua doença intestinal? ">
+					dimension = <"intestinal">
+					question_number = <"10">
+				>
+				["at0015"] = <
+					text = <"Pontuação SIBDQ">
+					description = <"Pontuação SIBDQ, de 10 a 70. Resultado da soma dos valores das questões anteriores.">
+				>
+				["at0016"] = <
+					text = <"Extensão">
+					description = <"Informações adicionais necessárias para estender o modelo com conteúdo local ou para alinhar com outros modelos de referência ou formalismos.">
+					comment = <"Por exemplo: requisitos de informações locais; ou metadados adicionais para alinhar com FHIR.">
+				>
+				["at0017"] = <
+					text = <"Sempre">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Maior parte do tempo">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Uma boa parte do tempo">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Algumas vezes">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Poucas vezes">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Raramente">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Nunca">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Interpretação da pontuação SIBDQ">
+					description = <"Interpretação do valor total da pontuação SIBDQ.">
+				>
+				["at0025"] = <
+					text = <"Baixa qualidade de vida relacionada à saúde (HRQoL)">
+					description = <"Se a pontuação do SIBDQ for inferior a 50, considera-se que o paciente tem uma má qualidade de vida relacionada à saúde.">
+				>
+				["at0026"] = <
+					text = <"Boa qualidade de vida relacionada à saúde (HRQoL)">
+					description = <"Se a pontuação do SIBDQ for igual ou inferior a 50, considera-se que o paciente tem uma boa qualidade de vida relacionada à saúde.">
+				>
+				["at0027"] = <
+					text = <"A melhor qualidade de vida relacionada à saúde (HRQoL)">
+					description = <"Se a pontuação do SIBDQ for igual a 70, considera-se que o paciente tem a melhor qualidade de vida relacionada à saúde.">
+				>
+				["at0028"] = <
+					text = <"Extrema dificuldade, impossível realizar as atividades">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Muita dificuldade">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Bastante dificuldade">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Alguma dificuldade">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Pouca dificuldade">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Praticamente nenhuma dificuldade">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Nenhuma dificuldade, sem limitações de pratica desportiva e atividades de lazer">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Problema major">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Grande problema">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Problema significativo">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Algum incómodo">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Pequeno incómodo">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Praticamente nenhum incómodo">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Não foi problema">
+					description = <"">
+				>
+			>
+		>
+	>
