@@ -11,7 +11,7 @@ This folder "local" has been automatically created by openEHR archetype designer
 | -----------                                               | ----------- |-----------  |-----------  |-----------        |
 | openEHR-EHR-OBSERVATION.wpai_gh.v1                        | in progress | en, ger     |             | needs FR language |
 | openEHR-EHR-OBSERVATION.hads.v1                           | in progress | en, ger     |             | needs FR language |
-|                                                           |             |             |             |                   |
+| openEHR-EHR-OBSERVATION.sibdq.v0                          | in progress | en, pt      |             |                   |
 |                                                           |             |             |             |                   |
 |                                                           |             |             |             |                   |
 |                                                           |             |             |             |                   |
