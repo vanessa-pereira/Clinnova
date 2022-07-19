@@ -52,7 +52,7 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3e04abf6da768aa113d67afb03ff0bd4">
+		["MD5-CAM-1.0.1"] = <"37314c8187d9e96bf0d1f9bdce50c032">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
 	>
 
@@ -262,13 +262,13 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Have been troubled by pain in the abdomen">
-					description = <"Original question: ">
+					description = <"Original question: How often during the last 2 weeks have you been troubled by pain in the abdomen?">
 					dimension = <"bowel">
 					question_number = <"4">
 				>
 				["at0009"] = <
 					text = <"Felt depressed or discouraged">
-					description = <"Original question: ">
+					description = <"Original question: How often during the last 2 weeks have you felt depressed or discouraged?">
 					dimension = <"emotional">
 					question_number = <"5">
 				>
@@ -304,7 +304,7 @@ ontology
 				>
 				["at0015"] = <
 					text = <"SIBDQ score">
-					description = <"">
+					description = <"The total score for the SIBDQ, from 10 to 70. Results from the sum of the values of the previous questions.">
 				>
 				["at0016"] = <
 					text = <"Extension">
@@ -340,7 +340,7 @@ ontology
 				>
 				["at0024"] = <
 					text = <"SIBDQ score interpretation">
-					description = <"">
+					description = <"Interpretation of the value from the total SIBDQ score.">
 				>
 				["at0025"] = <
 					text = <"Poor health-related quality of life (HRQoL)">
@@ -436,47 +436,68 @@ ontology
 				>
 				["at0005"] = <
 					text = <"Teve sensação de cansaço ou de exaustão">
-					description = <"*Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência é que a sensação de cansaço ou exaustão foi um problema para si? ">
+					dimension = <"emotional">
+					question_number = <"1">
 				>
 				["at0006"] = <
 					text = <"Teve de adiar ou cancelar um evento social">
-					description = <"*Original question: How often during the last 2 weeks have you had to delay or cancel a social engagement because of your bowel problem? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência teve de adiar ou cancelar um evento social devido à sua doença intestinal?
+">
+					dimension = <"social">
+					question_number = <"2">
 				>
 				["at0007"] = <
 					text = <"Dificuldade em realizar actividades de lazer ou desportivas">
-					description = <"*Original question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done during the last 2 weeks? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, quantifique a dificuldade que teve em realizar atividades de lazer ou desportivas de que gosta, devido à sua doença intestinal">
+					dimension = <"social">
+					question_number = <"3">
 				>
 				["at0008"] = <
 					text = <"Se sentiu incomodado com dor abdominal">
-					description = <"*Original question:  (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu incomodado com dor abdominal? ">
+					dimension = <"intestinal">
+					question_number = <"4">
 				>
 				["at0009"] = <
 					text = <"Se sentiu deprimido ou desmotivado">
-					description = <"*Original question:  (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu deprimido ou desmotivado? ">
+					dimension = <"social">
+					question_number = <"5">
 				>
 				["at0010"] = <
 					text = <"Teve problemas de flatulência">
-					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas? (en)">
+					description = <"Questão original: De uma forma geral, nas últimas 2 semanas, quão problemática foi para si a flatulência? ">
+					dimension = <"intestinal">
+					question_number = <"6">
 				>
 				["at0011"] = <
 					text = <"Teve problemas em manter o peso ideal">
-					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be? (en)">
+					description = <"Questão original: De uma forma geral, nas últimas 2 semanas, quão problemática foi a manutenção do seu peso ideal?">
+					dimension = <"sistémico">
+					question_number = <"7">
 				>
 				["at0012"] = <
 					text = <"Se sentiu relaxado">
-					description = <"*Original question: How often during the last 2 weeks have you felt relaxed and free of tension? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu relaxado?">
+					dimension = <"emocional">
+					question_number = <"8">
 				>
 				["at0013"] = <
 					text = <"Se sentiu incomodado com a sensação de ir à casa de banho mesmo não tendo dejeções">
-					description = <"*Original question: How much of the time during the last 2 weeks have you been troubled by a feeling of having to go to the bathroom even though your bowels were empty? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu incomodado com a sensação de ter de ir à casa de banho, mesmo não tendo dejeções? ">
+					dimension = <"instestinal">
+					question_number = <"9">
 				>
 				["at0014"] = <
 					text = <"Se sentiu irritado pela doença intestinal">
-					description = <"*Original question: How much of the time during the last 2 weeks have you felt angry as a result of your bowel problem? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência se sentiu irritado como resultado da sua doença intestinal? ">
+					dimension = <"intestinal">
+					question_number = <"10">
 				>
 				["at0015"] = <
 					text = <"Pontuação SIBDQ">
-					description = <"">
+					description = <"Pontuação SIBDQ, de 10 a 70. Resultado da soma dos valores das questões anteriores.">
 				>
 				["at0016"] = <
 					text = <"Extensão">
@@ -512,7 +533,7 @@ ontology
 				>
 				["at0024"] = <
 					text = <"Interpretação da pontuação SIBDQ">
-					description = <"">
+					description = <"Interpretação do valor total da pontuação SIBDQ.">
 				>
 				["at0025"] = <
 					text = <"*Poor health-related quality of life (HRQoL) (en)">
@@ -620,11 +641,11 @@ ontology
 				>
 				["at0008"] = <
 					text = <"*Have been troubled by pain in the abdomen (en)">
-					description = <"*Original question:  (en)">
+					description = <"*Original question: How often during the last 2 weeks have you been troubled by pain in the abdomen? (en)">
 				>
 				["at0009"] = <
 					text = <"*Felt depressed or discouraged (en)">
-					description = <"*Original question:  (en)">
+					description = <"*Original question: How often during the last 2 weeks have you felt depressed or discouraged? (en)">
 				>
 				["at0010"] = <
 					text = <"*Problems passing large amounts of gas (en)">
@@ -648,7 +669,7 @@ ontology
 				>
 				["at0015"] = <
 					text = <"*SIBDQ score (en)">
-					description = <"">
+					description = <"*The total score for the SIBDQ, from 10 to 70. Results from the sum of the values of the previous questions. (en)">
 				>
 				["at0016"] = <
 					text = <"*Extension (en)">
@@ -684,7 +705,7 @@ ontology
 				>
 				["at0024"] = <
 					text = <"*SIBDQ score interpretation (en)">
-					description = <"">
+					description = <"*Interpretation of the value from the total SIBDQ score. (en)">
 				>
 				["at0025"] = <
 					text = <"*Poor health-related quality of life (HRQoL) (en)">
