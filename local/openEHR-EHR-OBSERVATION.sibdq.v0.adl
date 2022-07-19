@@ -52,7 +52,7 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9f11141adaa1d3e863561279d5d35971">
+		["MD5-CAM-1.0.1"] = <"fb573dacb2f57f6b768a9f14e5b6fef7">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
 	>
 
@@ -89,7 +89,13 @@ definition
 									}
 									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Difficulty doing leisure or sport activities
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0028],
+											2|[local::at0029],
+											3|[local::at0030],
+											4|[local::at0031],
+											5|[local::at0032],
+											6|[local::at0033],
+											7|[local::at0034]
 										}
 									}
 									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Have been troubled by pain in the abdomen
@@ -116,37 +122,27 @@ definition
 									}
 									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Problems passing large amounts of gas
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0035],
+											2|[local::at0036],
+											3|[local::at0037],
+											4|[local::at0038],
+											5|[local::at0039],
+											6|[local::at0040],
+											7|[local::at0041]
 										}
 									}
-									ELEMENT[at0011] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Problems maintaining or getting to desired weight
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0035],
+											2|[local::at0036],
+											3|[local::at0037],
+											4|[local::at0038],
+											5|[local::at0039],
+											6|[local::at0040],
+											7|[local::at0041]
 										}
 									}
-									ELEMENT[at0012] occurrences matches {0..1} matches {    -- DV_ORDINAL
-										value matches {
-											1|[local::at0017],
-											2|[local::at0018],
-											3|[local::at0019],
-											4|[local::at0020],
-											5|[local::at0021],
-											6|[local::at0022],
-											7|[local::at0023]
-										}
-									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {    -- DV_ORDINAL
-										value matches {
-											1|[local::at0017],
-											2|[local::at0018],
-											3|[local::at0019],
-											4|[local::at0020],
-											5|[local::at0021],
-											6|[local::at0022],
-											7|[local::at0023]
-										}
-									}
-									ELEMENT[at0014] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Felt relaxed and free of tension
 										value matches {
 											1|[local::at0017],
 											2|[local::at0018],
@@ -157,9 +153,45 @@ definition
 											7|[local::at0023]
 										}
 									}
-									ELEMENT[at0015] occurrences matches {0..1} matches {    -- DV_COUNT
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Feeling of having to go to bathroom even with bowel empty
 										value matches {
-											DV_COUNT matches {*}
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Felt angry as a result of bowel problem
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- SIBDQ score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|10..70|}
+											}
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- SIBDQ score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0025,    -- Poor health-related quality of life (HRQoL)
+													at0026,    -- Optimal health-related quality of life (HRQoL)
+													at0027]    -- Best health-related quality of life (HRQoL)
+												}
+											}
 										}
 									}
 								}
@@ -247,31 +279,31 @@ ontology
 					question_number = <"6">
 				>
 				["at0011"] = <
-					text = <"DV_ORDINAL">
-					description = <"Original question: ">
+					text = <"Problems maintaining or getting to desired weight">
+					description = <"Original question: Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be?">
 					dimension = <"systemic">
 					question_number = <"7">
 				>
 				["at0012"] = <
-					text = <"DV_ORDINAL">
-					description = <"Original question: ">
+					text = <"Felt relaxed and free of tension">
+					description = <"Original question: How often during the last 2 weeks have you felt relaxed and free of tension?">
 					dimension = <"emotional">
 					question_number = <"8">
 				>
 				["at0013"] = <
-					text = <"DV_ORDINAL">
-					description = <"Original question: ">
+					text = <"Feeling of having to go to bathroom even with bowel empty">
+					description = <"Original question: How much of the time during the last 2 weeks have you been troubled by a feeling of having to go to the bathroom even though your bowels were empty?">
 					dimension = <"bowel">
 					question_number = <"9">
 				>
 				["at0014"] = <
-					text = <"DV_ORDINAL">
-					description = <"Original question: ">
+					text = <"Felt angry as a result of bowel problem">
+					description = <"Original question: How much of the time during the last 2 weeks have you felt angry as a result of your bowel problem?">
 					dimension = <"emotional">
 					question_number = <"10">
 				>
 				["at0015"] = <
-					text = <"DV_COUNT">
+					text = <"SIBDQ score">
 					description = <"">
 				>
 				["at0016"] = <
@@ -304,6 +336,78 @@ ontology
 				>
 				["at0023"] = <
 					text = <"None of the time">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"SIBDQ score interpretation">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Poor health-related quality of life (HRQoL)">
+					description = <"If SIBDQ score is below 50, is considered that the patient has a poor quality of life.">
+				>
+				["at0026"] = <
+					text = <"Optimal health-related quality of life (HRQoL)">
+					description = <"If SIBDQ score is equal or above 50, is considered that the patient has a good quality of life.">
+				>
+				["at0027"] = <
+					text = <"Best health-related quality of life (HRQoL)">
+					description = <"If SIBDQ score is equal to 70, is considered that the patient has a best quality of life.">
+				>
+				["at0028"] = <
+					text = <"A great deal of difficulty, activities made impossible">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"A lot of difficulty">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"A fair bit of difficulty">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Some difficulty">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"A little difficulty">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Hardly any difficulty">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"No difficulty, the bowel problems did not limit sports of leisure activities">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"A major problem">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"A big problem">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"A significant problem">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Some trouble">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"A little trouble">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Hardly any trouble">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"No trouble">
 					description = <"">
 				>
 			>
@@ -355,23 +459,23 @@ ontology
 					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas? (en)">
 				>
 				["at0011"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Problems maintaining or getting to desired weight (en)">
+					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be? (en)">
 				>
 				["at0012"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Felt relaxed and free of tension (en)">
+					description = <"*Original question: How often during the last 2 weeks have you felt relaxed and free of tension? (en)">
 				>
 				["at0013"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Feeling of having to go to bathroom even with bowel empty (en)">
+					description = <"*Original question: How much of the time during the last 2 weeks have you been troubled by a feeling of having to go to the bathroom even though your bowels were empty? (en)">
 				>
 				["at0014"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Felt angry as a result of bowel problem (en)">
+					description = <"*Original question: How much of the time during the last 2 weeks have you felt angry as a result of your bowel problem? (en)">
 				>
 				["at0015"] = <
-					text = <"*DV_COUNT (en)">
+					text = <"*SIBDQ score (en)">
 					description = <"">
 				>
 				["at0016"] = <
@@ -404,6 +508,78 @@ ontology
 				>
 				["at0023"] = <
 					text = <"*None of the time (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*SIBDQ score interpretation (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Poor health-related quality of life (HRQoL) (en)">
+					description = <"*If SIBDQ score is below 50, is considered that the patient has a poor quality of life. (en)">
+				>
+				["at0026"] = <
+					text = <"*Optimal health-related quality of life (HRQoL) (en)">
+					description = <"*If SIBDQ score is equal or above 50, is considered that the patient has a good quality of life. (en)">
+				>
+				["at0027"] = <
+					text = <"*Best health-related quality of life (HRQoL) (en)">
+					description = <"*If SIBDQ score is equal to 70, is considered that the patient has a best quality of life. (en)">
+				>
+				["at0028"] = <
+					text = <"*A great deal of difficulty, activities made impossible (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*A lot of difficulty (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*A fair bit of difficulty (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Some difficulty (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*A little difficulty (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Hardly any difficulty (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*No difficulty, the bowel problems did not limit sports of leisure activities (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*A major problem (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*A big problem (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*A significant problem (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Some trouble (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*A little trouble (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Hardly any trouble (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*No trouble (en)">
 					description = <"">
 				>
 			>
@@ -455,23 +631,23 @@ ontology
 					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas? (en)">
 				>
 				["at0011"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Problems maintaining or getting to desired weight (en)">
+					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be? (en)">
 				>
 				["at0012"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Felt relaxed and free of tension (en)">
+					description = <"*Original question: How often during the last 2 weeks have you felt relaxed and free of tension? (en)">
 				>
 				["at0013"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Feeling of having to go to bathroom even with bowel empty (en)">
+					description = <"*Original question: How much of the time during the last 2 weeks have you been troubled by a feeling of having to go to the bathroom even though your bowels were empty? (en)">
 				>
 				["at0014"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"*Original question:  (en)">
+					text = <"*Felt angry as a result of bowel problem (en)">
+					description = <"*Original question: How much of the time during the last 2 weeks have you felt angry as a result of your bowel problem? (en)">
 				>
 				["at0015"] = <
-					text = <"*DV_COUNT (en)">
+					text = <"*SIBDQ score (en)">
 					description = <"">
 				>
 				["at0016"] = <
@@ -504,6 +680,78 @@ ontology
 				>
 				["at0023"] = <
 					text = <"*None of the time (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*SIBDQ score interpretation (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Poor health-related quality of life (HRQoL) (en)">
+					description = <"*If SIBDQ score is below 50, is considered that the patient has a poor quality of life. (en)">
+				>
+				["at0026"] = <
+					text = <"*Optimal health-related quality of life (HRQoL) (en)">
+					description = <"*If SIBDQ score is equal or above 50, is considered that the patient has a good quality of life. (en)">
+				>
+				["at0027"] = <
+					text = <"*Best health-related quality of life (HRQoL) (en)">
+					description = <"*If SIBDQ score is equal to 70, is considered that the patient has a best quality of life. (en)">
+				>
+				["at0028"] = <
+					text = <"*A great deal of difficulty, activities made impossible (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*A lot of difficulty (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*A fair bit of difficulty (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Some difficulty (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*A little difficulty (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Hardly any difficulty (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*No difficulty, the bowel problems did not limit sports of leisure activities (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*A major problem (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*A big problem (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*A significant problem (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Some trouble (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*A little trouble (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Hardly any trouble (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*No trouble (en)">
 					description = <"">
 				>
 			>
