@@ -52,7 +52,7 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"37314c8187d9e96bf0d1f9bdce50c032">
+		["MD5-CAM-1.0.1"] = <"f24eedc0c00ecc001114b892a7dc8ccc">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
 	>
 
@@ -504,31 +504,31 @@ ontology
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*All of the time (en)">
+					text = <"Sempre">
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"*Most of the time (en)">
+					text = <"Maior parte do tempo">
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"*A good bit of the time (en)">
+					text = <"Uma boa parte do tempo">
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*Some of the time (en)">
+					text = <"Algumas vezes">
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*A little of the time (en)">
+					text = <"Poucas vezes">
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"*Hardly any of the time (en)">
+					text = <"Raramente">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*None of the time (en)">
+					text = <"Nunca">
 					description = <"">
 				>
 				["at0024"] = <
@@ -548,59 +548,59 @@ ontology
 					description = <"*If SIBDQ score is equal to 70, is considered that the patient has a best quality of life. (en)">
 				>
 				["at0028"] = <
-					text = <"*A great deal of difficulty, activities made impossible (en)">
+					text = <"Extrema dificuldade, impossível realizar as atividades">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"*A lot of difficulty (en)">
+					text = <"Muita dificuldade">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"*A fair bit of difficulty (en)">
+					text = <"Bastante dificuldade">
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"*Some difficulty (en)">
+					text = <"Alguma dificuldade">
 					description = <"">
 				>
 				["at0032"] = <
-					text = <"*A little difficulty (en)">
+					text = <"Pouca dificuldade">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Hardly any difficulty (en)">
+					text = <"Praticamente nenhuma dificuldade">
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*No difficulty, the bowel problems did not limit sports of leisure activities (en)">
+					text = <"Nenhuma dificuldade, sem limitações de pratica desportiva e atividades de lazer">
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"*A major problem (en)">
+					text = <"Problema major">
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"*A big problem (en)">
+					text = <"Grande problema">
 					description = <"">
 				>
 				["at0037"] = <
-					text = <"*A significant problem (en)">
+					text = <"Problema significativo">
 					description = <"">
 				>
 				["at0038"] = <
-					text = <"*Some trouble (en)">
+					text = <"Algum incómodo">
 					description = <"">
 				>
 				["at0039"] = <
-					text = <"*A little trouble (en)">
+					text = <"Pequeno incómodo">
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Hardly any trouble (en)">
+					text = <"Praticamente nenhum incómodo">
 					description = <"">
 				>
 				["at0041"] = <
-					text = <"*No trouble (en)">
+					text = <"Não foi problema">
 					description = <"">
 				>
 			>
