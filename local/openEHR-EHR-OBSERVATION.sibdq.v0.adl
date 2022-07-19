@@ -52,8 +52,8 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9f11141adaa1d3e863561279d5d35971">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
-		["MD5-CAM-1.0.1"] = <"8d4756233035999b404a3b9bf8b2a46c">
 	>
 
 definition
@@ -61,11 +61,11 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- In the last 2 weeks
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Feeling of fatigue or of being tired and worn out
 										value matches {
 											1|[local::at0017],
 											2|[local::at0018],
@@ -76,27 +76,45 @@ definition
 											7|[local::at0023]
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Had to delay or cancel a social engagement due to bowel problem
+										value matches {
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Difficulty doing leisure or sport activities
 										value matches {
 											DV_ORDINAL matches {*}
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Have been troubled by pain in the abdomen
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
 										}
 									}
-									ELEMENT[at0008] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Felt depressed or discouraged
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- DV_ORDINAL
-										value matches {
-											DV_ORDINAL matches {*}
-										}
-									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {    -- DV_ORDINAL
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Problems passing large amounts of gas
 										value matches {
 											DV_ORDINAL matches {*}
 										}
@@ -108,17 +126,35 @@ definition
 									}
 									ELEMENT[at0012] occurrences matches {0..1} matches {    -- DV_ORDINAL
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
 										}
 									}
 									ELEMENT[at0013] occurrences matches {0..1} matches {    -- DV_ORDINAL
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
 										}
 									}
 									ELEMENT[at0014] occurrences matches {0..1} matches {    -- DV_ORDINAL
 										value matches {
-											DV_ORDINAL matches {*}
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023]
 										}
 									}
 									ELEMENT[at0015] occurrences matches {0..1} matches {    -- DV_COUNT
@@ -127,6 +163,11 @@ definition
 										}
 									}
 								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {PT2S}
 							}
 						}
 					}
@@ -158,7 +199,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
+					text = <"In the last 2 weeks">
 					description = <"">
 				>
 				["at0003"] = <
@@ -170,44 +211,64 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"DV_ORDINAL">
-					description = <"">
+					text = <"Feeling of fatigue or of being tired and worn out">
+					description = <"Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks?">
+					dimension = <"systemic">
+					question_number = <"1">
 				>
 				["at0006"] = <
-					text = <"DV_ORDINAL">
-					description = <"">
+					text = <"Had to delay or cancel a social engagement due to bowel problem">
+					description = <"Original question: How often during the last 2 weeks have you had to delay or cancel a social engagement because of your bowel problem?">
+					dimension = <"social">
+					question_number = <"2">
 				>
 				["at0007"] = <
-					text = <"DV_ORDINAL">
-					description = <"">
+					text = <"Difficulty doing leisure or sport activities">
+					description = <"Original question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done during the last 2 weeks?">
+					dimension = <"social">
+					question_number = <"3">
 				>
 				["at0008"] = <
-					text = <"DV_ORDINAL">
-					description = <"">
+					text = <"Have been troubled by pain in the abdomen">
+					description = <"Original question: ">
+					dimension = <"bowel">
+					question_number = <"4">
 				>
 				["at0009"] = <
-					text = <"DV_ORDINAL">
-					description = <"">
+					text = <"Felt depressed or discouraged">
+					description = <"Original question: ">
+					dimension = <"emotional">
+					question_number = <"5">
 				>
 				["at0010"] = <
-					text = <"DV_ORDINAL">
-					description = <"">
+					text = <"Problems passing large amounts of gas">
+					description = <"Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas?">
+					dimension = <"bowel">
+					question_number = <"6">
 				>
 				["at0011"] = <
 					text = <"DV_ORDINAL">
-					description = <"">
+					description = <"Original question: ">
+					dimension = <"systemic">
+					question_number = <"7">
 				>
 				["at0012"] = <
 					text = <"DV_ORDINAL">
-					description = <"">
+					description = <"Original question: ">
+					dimension = <"emotional">
+					question_number = <"8">
 				>
 				["at0013"] = <
 					text = <"DV_ORDINAL">
-					description = <"">
+					description = <"Original question: ">
+					dimension = <"bowel">
+					question_number = <"9">
 				>
 				["at0014"] = <
 					text = <"DV_ORDINAL">
-					description = <"">
+					description = <"Original question: ">
+					dimension = <"emotional">
+					question_number = <"10">
 				>
 				["at0015"] = <
 					text = <"DV_COUNT">
@@ -258,7 +319,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event (en)">
+					text = <"*In the last 2 weeks (en)">
 					description = <"">
 				>
 				["at0003"] = <
@@ -270,44 +331,44 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Feeling of fatigue or of being tired and worn out (en)">
+					description = <"*Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks? (en)">
 				>
 				["at0006"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Had to delay or cancel a social engagement due to bowel problem (en)">
+					description = <"*Original question: How often during the last 2 weeks have you had to delay or cancel a social engagement because of your bowel problem? (en)">
 				>
 				["at0007"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Difficulty doing leisure or sport activities (en)">
+					description = <"*Original question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done during the last 2 weeks? (en)">
 				>
 				["at0008"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Have been troubled by pain in the abdomen (en)">
+					description = <"*Original question:  (en)">
 				>
 				["at0009"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Felt depressed or discouraged (en)">
+					description = <"*Original question:  (en)">
 				>
 				["at0010"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Problems passing large amounts of gas (en)">
+					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas? (en)">
 				>
 				["at0011"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0012"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0013"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0014"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0015"] = <
 					text = <"*DV_COUNT (en)">
@@ -358,7 +419,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event (en)">
+					text = <"*In the last 2 weeks (en)">
 					description = <"">
 				>
 				["at0003"] = <
@@ -370,44 +431,44 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Feeling of fatigue or of being tired and worn out (en)">
+					description = <"*Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks? (en)">
 				>
 				["at0006"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Had to delay or cancel a social engagement due to bowel problem (en)">
+					description = <"*Original question: How often during the last 2 weeks have you had to delay or cancel a social engagement because of your bowel problem? (en)">
 				>
 				["at0007"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Difficulty doing leisure or sport activities (en)">
+					description = <"*Original question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done during the last 2 weeks? (en)">
 				>
 				["at0008"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Have been troubled by pain in the abdomen (en)">
+					description = <"*Original question:  (en)">
 				>
 				["at0009"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Felt depressed or discouraged (en)">
+					description = <"*Original question:  (en)">
 				>
 				["at0010"] = <
-					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					text = <"*Problems passing large amounts of gas (en)">
+					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas? (en)">
 				>
 				["at0011"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0012"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0013"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0014"] = <
 					text = <"*DV_ORDINAL (en)">
-					description = <"">
+					description = <"*Original question:  (en)">
 				>
 				["at0015"] = <
 					text = <"*DV_COUNT (en)">
