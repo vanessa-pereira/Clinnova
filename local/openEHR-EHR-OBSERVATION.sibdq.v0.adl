@@ -30,7 +30,7 @@ description
 	details = <
 		["pt-pt"] = <
 			language = <[ISO_639-1::pt-pt]>
-			keywords = <"*Short Inflammatory Bowel Disease Questionnaire, SIBDQ, IBD, HRQoL, UC, ulcerative colitis, Inflammatory Bowel Disease, QoL, Quality of life, Crohn's disease (en)", ...>
+			keywords = <"Questionário curto de doença inflamatória intestinal, SIBDQ, IBD, HRQoL, UC, colite ulcerativa, doença inflamatória intestinal, QoL, Qualidade de vida, Doença de Crohn", ...>
 			copyright = <"© openEHR Foundation">
 		>
 		["pt"] = <
@@ -52,7 +52,7 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"fb573dacb2f57f6b768a9f14e5b6fef7">
+		["MD5-CAM-1.0.1"] = <"3e04abf6da768aa113d67afb03ff0bd4">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
 	>
 
@@ -415,15 +415,15 @@ ontology
 		["pt-pt"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Short Inflammatory Bowel Disease Questionnaire (SIBDQ) (en)">
-					description = <"*The Short Inflammatory Bowel Disease Questionnaire (SIBDQ) is a health-related quality of life (HRQoL) tool measuring physical, social, and emotional status (score 10-70, poor to good HRQoL). The SIBDQ has been predominantly used in trials for Crohn's disease, and further validation of the SIBDQ is desirable in ulcerative colitis (UC) patients. Each question is scored by a 7-point Likert scale, ranging from 1 (a severe problem) to 7 (not a problem at all), giving an absolute SIBDQ score ranging from 10 (poor HRQoL) to 70 (optimal HRQoL). A SIBDQ score below 50 was considered as poor QoL. (en)">
+					text = <"Questionário curto de doença inflamatória intestinal (SIBDQ - PT)">
+					description = <"O Short Inflammatory Bowel Disease Questionnaire (SIBDQ) é uma ferramenta de qualidade de vida relacionada à saúde (QoL) que mede o estado físico, social e emocional (pontuação de 10 (má qualidade de vida) - 70 (melhor qualidade de vida). O SIBDQ tem sido predominantemente usado em ensaios para a doença de Crohn, e uma validação adicional do SIBDQ é desejável em pacientes com colite ulcerosa. Cada questão é pontuada por uma escala Likert de 7 pontos, variando de 1 (um problema grave) a 7 (nenhum problema), dando uma pontuação absoluta do SIBDQ que varia de 10 (QoL má) a 70 (QoL ótima). Uma pontuação de SIBDQ abaixo de 50 foi considerado como má qualidade de vida.">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*In the last 2 weeks (en)">
+					text = <"Nas últimas 2 semanas">
 					description = <"">
 				>
 				["at0003"] = <
@@ -435,51 +435,51 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"*Feeling of fatigue or of being tired and worn out (en)">
+					text = <"Teve sensação de cansaço ou de exaustão">
 					description = <"*Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks? (en)">
 				>
 				["at0006"] = <
-					text = <"*Had to delay or cancel a social engagement due to bowel problem (en)">
+					text = <"Teve de adiar ou cancelar um evento social">
 					description = <"*Original question: How often during the last 2 weeks have you had to delay or cancel a social engagement because of your bowel problem? (en)">
 				>
 				["at0007"] = <
-					text = <"*Difficulty doing leisure or sport activities (en)">
+					text = <"Dificuldade em realizar actividades de lazer ou desportivas">
 					description = <"*Original question: How much difficulty have you had, as a result of your bowel problems, doing leisure or sports activities you would have liked to have done during the last 2 weeks? (en)">
 				>
 				["at0008"] = <
-					text = <"*Have been troubled by pain in the abdomen (en)">
+					text = <"Se sentiu incomodado com dor abdominal">
 					description = <"*Original question:  (en)">
 				>
 				["at0009"] = <
-					text = <"*Felt depressed or discouraged (en)">
+					text = <"Se sentiu deprimido ou desmotivado">
 					description = <"*Original question:  (en)">
 				>
 				["at0010"] = <
-					text = <"*Problems passing large amounts of gas (en)">
+					text = <"Teve problemas de flatulência">
 					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas? (en)">
 				>
 				["at0011"] = <
-					text = <"*Problems maintaining or getting to desired weight (en)">
+					text = <"Teve problemas em manter o peso ideal">
 					description = <"*Original question: Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be? (en)">
 				>
 				["at0012"] = <
-					text = <"*Felt relaxed and free of tension (en)">
+					text = <"Se sentiu relaxado">
 					description = <"*Original question: How often during the last 2 weeks have you felt relaxed and free of tension? (en)">
 				>
 				["at0013"] = <
-					text = <"*Feeling of having to go to bathroom even with bowel empty (en)">
+					text = <"Se sentiu incomodado com a sensação de ir à casa de banho mesmo não tendo dejeções">
 					description = <"*Original question: How much of the time during the last 2 weeks have you been troubled by a feeling of having to go to the bathroom even though your bowels were empty? (en)">
 				>
 				["at0014"] = <
-					text = <"*Felt angry as a result of bowel problem (en)">
+					text = <"Se sentiu irritado pela doença intestinal">
 					description = <"*Original question: How much of the time during the last 2 weeks have you felt angry as a result of your bowel problem? (en)">
 				>
 				["at0015"] = <
-					text = <"*SIBDQ score (en)">
+					text = <"Pontuação SIBDQ">
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*Extension (en)">
+					text = <"Extensão">
 					description = <"">
 				>
 				["at0017"] = <
@@ -511,7 +511,7 @@ ontology
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*SIBDQ score interpretation (en)">
+					text = <"Interpretação da pontuação SIBDQ">
 					description = <"">
 				>
 				["at0025"] = <
@@ -608,7 +608,7 @@ ontology
 				>
 				["at0005"] = <
 					text = <"*Feeling of fatigue or of being tired and worn out (en)">
-					description = <"*Original question: How often as the feeling of fatigue or of being tired and worn out been a problem for you during the last 2 weeks? (en)">
+					description = <"Questão original: Nas últimas 2 semanas, com que frequência é que a sensação de cansaço ou exaustão foi um problema para si?">
 				>
 				["at0006"] = <
 					text = <"*Had to delay or cancel a social engagement due to bowel problem (en)">
