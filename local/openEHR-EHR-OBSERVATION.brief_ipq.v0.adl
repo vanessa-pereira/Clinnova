@@ -69,7 +69,7 @@ Revised (IPQ-R). (en)">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
-		["MD5-CAM-1.0.1"] = <"490f736041a63232a37ce3ced7b1ecb6">
+		["MD5-CAM-1.0.1"] = <"486db576cfdc8dd58b1a1418ce36ef75">
 	>
 
 definition
@@ -691,7 +691,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*How much does your illness affect your life? (en)">
+					text = <"Wie stark beeinträchtigt Ihre Erkrankung Ihr Leben?">
 					description = <"">
 				>
 				["at0005"] = <
@@ -739,11 +739,11 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*How long do you think your illness will continue? (en)">
+					text = <"Wie lange meinen Sie, dass Ihre Krankheit noch andauern wird?">
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"*How much control do you feel you have over your illness? (en)">
+					text = <"Wie stark meinen Sie, Ihre Krankheit selbst kontrollieren zu können?">
 					description = <"">
 				>
 				["at0017"] = <
@@ -755,7 +755,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"*How much do you think your treatment can help your illness? (en)">
+					text = <"Wie stark meinen Sie, dass Ihre Behandlung bei Ihrer Erkrankung helfen kann?">
 					description = <"">
 				>
 				["at0020"] = <
@@ -775,11 +775,11 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*How much do you experience symptoms from your illness? (en)">
+					text = <"Wie stark spüren Sie Beschwerden durch Ihre Krankheit?">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*How concerned are you about your illness? (en)">
+					text = <"Wie gut meinen Sie, Ihre Krankheit zu verstehen?">
 					description = <"">
 				>
 				["at0026"] = <
@@ -791,7 +791,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"*How well do you feel you understand your illness? (en)">
+					text = <"Wie stark machen Sie sich Sorgen über Ihre Krankheit?">
 					description = <"">
 				>
 				["at0029"] = <
@@ -803,7 +803,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*How much does your illness affect you emotionally? (en)">
+					text = <"Wie gut meinen Sie, Ihre Krankheit zu verstehen?">
 					description = <"*Original question: \"How much does your illness affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?)\" (en)">
 					comment = <"*(e.g. does it make you angry, scared, upset or depressed?) (en)">
 				>
@@ -854,12 +854,12 @@ The most important causes for me:
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"*Name of illness evaluated (en)">
+					text = <"Name der Krankheit">
 					description = <"">
 					comment = <"*The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. This data point has been added to record the illness evaluated. (en)">
 				>
 				["at0044"] = <
-					text = <"*Name of treatment (en)">
+					text = <"Name der Behandlung">
 					description = <"">
 					comment = <"*Similarly, the treatment control item uses the word
 \"treatment\", but this can be replaced by a particular
