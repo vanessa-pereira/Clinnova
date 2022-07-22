@@ -1,0 +1,146 @@
+archetype (adl_version=1.4; uid=6dd6fdd8-992b-4f93-888d-97276181d04f)
+	openEHR-EHR-OBSERVATION.brief_ipq.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+		["date"] = <"2022-07-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To rapidly assess the cognitive and emotional representations of illness. (en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be changed in the run time in this archetype or within a template. (en)">
+			misuse = <"*Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
+Revised (IPQ-R). (en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To rapidly assess the cognitive and emotional representations of illness.">
+			use = <"The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be changed in the run time in this archetype or within a template.">
+			misuse = <"Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
+Revised (IPQ-R).">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"*To rapidly assess the cognitive and emotional representations of illness. (en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be changed in the run time in this archetype or within a template. (en)">
+			misuse = <"*Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
+Revised (IPQ-R). (en)">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["references"] = <"Broadbent E, Petrie KJ, Main J, Weinman J. The brief illness perception questionnaire. Journal of psychosomatic research. 2006;60(6):631-7. ">
+		["MD5-CAM-1.0.1"] = <"b650b36b78831326247433ea38479af2">
+		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Brief Illness Perception Questionnaire (Brief IPQ)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Brief Illness Perception Questionnaire (Brief IPQ)">
+					description = <"Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness. All of the items except the causal question are rated using a 0-to10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). Responses to the causal item can be grouped into categories such as stress, lifestyle, hereditary, etc., determined by the particular illness studied, and categorical analysis can then be performed.
+">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Bref Questionnaire de Perception de Maladie">
+					description = <"*Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness. All of the items except the causal question are rated using a 0-to10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). Responses to the causal item can be grouped into categories such as stress, lifestyle, hereditary, etc., determined by the particular illness studied, and categorical analysis can then be performed.
+ (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fragebogen zur Krankheitswahrnehmung (Kurzform)">
+					description = <"*Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness. All of the items except the causal question are rated using a 0-to10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). Responses to the causal item can be grouped into categories such as stress, lifestyle, hereditary, etc., determined by the particular illness studied, and categorical analysis can then be performed.
+ (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
