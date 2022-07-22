@@ -69,7 +69,7 @@ Revised (IPQ-R). (en)">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
-		["MD5-CAM-1.0.1"] = <"c3f2f59305882dbdb01147ac1de9a2c1">
+		["MD5-CAM-1.0.1"] = <"490f736041a63232a37ce3ced7b1ecb6">
 	>
 
 definition
@@ -232,7 +232,15 @@ definition
 									}
 									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Total score
 										value matches {
-											DV_QUANTITY matches {*}
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.0..80.0|>
+													>
+												>
+											>
 										}
 									}
 								}
@@ -421,7 +429,7 @@ ontology
 \"Please list in rank-order the three most important factors that you believe caused your illness.
 The most important causes for me: 
 - Rank1, 
--Rank2, 
+- Rank2, 
 - Rank3\"
 ">
 				>
@@ -463,22 +471,22 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0045"] = <
 					text = <"Total score">
-					description = <"">
+					description = <"The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. ">
 				>
 			>
 		>
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"Bref Questionnaire de Perception de Maladie">
-					description = <"*Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness.  (en)">
+					text = <"Bref Questionnaire de Perception de Maladie (Brief IPQ)">
+					description = <"Brief Illness Perception Questionnaire (Brief IPQ) est une échelle de neuf items conçue pour évaluer rapidement les représentations cognitives et émotionnelles de la maladie.">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event (en)">
+					text = <"Tout événement">
 					description = <"">
 				>
 				["at0003"] = <
@@ -486,184 +494,181 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*How much does your illness affect your life? (en)">
+					text = <"Comment votre maladie affecte-t-elle votre vie?">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"*No affect at all (en)">
+					text = <"N'affecte pas du tout">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*1 (en)">
+					text = <"1">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*2 (en)">
+					text = <"2">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*3 (en)">
+					text = <"3">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*4 (en)">
+					text = <"4">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*5 (en)">
+					text = <"5">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*6 (en)">
+					text = <"6">
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"*7 (en)">
+					text = <"7">
 					description = <"">
 				>
 				["at0013"] = <
-					text = <"*8 (en)">
+					text = <"8">
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"*9 (en)">
+					text = <"9">
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"*Severely affects my life (en)">
+					text = <"Affecte sévèrement ma vie">
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*How long do you think your illness will continue? (en)">
-					description = <"">
-				>
-				["at0019"] = <
-					text = <"*How much control do you feel you have over your illness? (en)">
+					text = <"Combien de temps estimez-vous que votre maladie va durer?">
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*A very short time(en)">
+					text = <"Très peu de temps">
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"*Forever(en)">
+					text = <"Toujours">
 					description = <"">
 				>
-				["at0022"] = <
-					text = <"*How much do you think your treatment can help your illness? (en)">
+				["at0019"] = <
+					text = <"Comment évaluez-vous votre pouvoir de contrôle sur votre maladie ?">
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*Absolutely no control(en)">
+					text = <"Absolutment aucun contrôle">
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*Extreme amount of control(en)">
+					text = <"Enormément de contrôle">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Comment pensez-vous que votre traitement puisse vous aider?">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Not at all(en)">
+					text = <"Pas du tout">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*Extremely helpful(en)">
+					text = <"Extrêmement utile">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*How much do you experience symptoms from your illness? (en)">
-					description = <"">
-				>
-				["at0028"] = <
-					text = <"*How concerned are you about your illness? (en)">
+					text = <"Quelle est la fréquence de vos symptômes?">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*No symptoms at all(en)">
+					text = <"Pas de symptômes du tout">
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"*Many severe symptoms(en)">
+					text = <"Beaucoup de symptômes sévères">
 					description = <"">
 				>
-				["at0031"] = <
-					text = <"*How well do you feel you understand your illness? (en)">
+				["at0028"] = <
+					text = <"Comment êtes-vous concerné par votre maladie ?">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"*Not at all concerned(en)">
+					text = <"Pas du tout concerné">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"*Extremely concerned(en)">
+					text = <"Extrêmement concerné">
 					description = <"">
 				>
-				["at0034"] = <
-					text = <"*How much does your illness affect you emotionally? (en)">
-					description = <"*Original question: \"How much does your illness affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?)\" (en)">
-					comment = <"*(e.g. does it make you angry, scared, upset or depressed?) (en)">
+				["at0031"] = <
+					text = <"Comment pensez-vous comprendre votre maladie?">
+					description = <"">
 				>
 				["at0032"] = <
-					text = <"*Don't understand at all(en)">
+					text = <"Ne comprends pas du tout">
 					description = <"">
 				>
 				["at0033"] = <
-					text = <"*Understand very clearly(en)">
+					text = <"Comprends très clairement">
 					description = <"">
 				>
-				["at0037"] = <
-					text = <"*Most important factors believed to cause illness (en)">
-					description = <"*Original question: 
-\"Please list in rank-order the three most important factors that you believe caused your illness.
-The most important causes for me: 
-- Rank1, 
--Rank2, 
-- Rank3\"
- (en)">
-				>
-				["at0038"] = <
-					text = <"*Rank 1 (en)">
-					description = <"">
-				>
-				["at0039"] = <
-					text = <"*Rank 2 (en)">
-					description = <"">
-				>
-				["at0040"] = <
-					text = <"*Rank 3 (en)">
-					description = <"">
-				>
-				["at0041"] = <
-					text = <"*Item tree (en)">
-					description = <"@ internal @">
-				>
-				["at0042"] = <
-					text = <"*Extension (en)">
-					description = <"">
+				["at0034"] = <
+					text = <"Comment votre maladie vous affecte-t-elle émotionellement ?">
+					description = <"Question originale: \"Comment votre maladie vous affecte-t-elle émotionellement ? (par exemple : Vous met en colère, vous effraye, vous contrarie ou vous déprime?\"">
+					comment = <"(par exemple : Vous met en colère, vous effraye, vous contrarie ou vous déprime">
 				>
 				["at0035"] = <
-					text = <"*Not at all affected emotionally(en)">
+					text = <"Pas du tout affecté émotionellement">
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"*Extremely affected emotionally(en)">
+					text = <"Extrêmement affecté émotionellement">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Principaux facteurs soupçonnés de causer la maladie">
+					description = <"Question originale: 
+\"Veuillez énumérer par ordre d’importance les trois raisons qui ont - à votre avis - provoqué
+votre maladie. Les raisons les plus importantes pour moi: 
+- Rang1, 
+- Rang2, 
+- Rang3\"
+ ">
+				>
+				["at0038"] = <
+					text = <"Rang 1">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Rang 2">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Rang 3">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0042"] = <
+					text = <"Extension">
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"*Name of illness evaluated (en)">
+					text = <"Nom de la maladie évaluée">
 					description = <"">
-					comment = <"*The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. This data point has been added to record the illness evaluated. (en)">
+					comment = <"La version la plus générale du Brief IPQ utilise le mot \"maladie\", mais il est possible de le remplacer par le nom d'une maladie particulière comme le diabète ou l'asthme. Ce point de données a été ajouté pour enregistrer la maladie évaluée.">
 				>
 				["at0044"] = <
-					text = <"*Name of treatment (en)">
+					text = <"Nom du traitement">
 					description = <"">
-					comment = <"*Similarly, the treatment control item uses the word
-\"treatment\", but this can be replaced by a particular
-treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This data point has been added to record the treatment given to this patient.
- (en)">
+					comment = <"De même, l'élément de contrôle du traitement utilise le mot \"traitement\", mais cela peut être remplacé par un traitement particulier tel que \"chirurgie\" ou \"inhalateur\" si les chercheurs sont intéressés par un traitement particulier. Ce point de données a été ajouté pour enregistrer le traitement administré à ce patient.">
 				>
 				["at0045"] = <
-					text = <"*Total score (en)">
-					description = <"">
+					text = <"Score total">
+					description = <"Le score total de perception de la maladie est calculé en inversant le score des items 3, 4 et 8 et additionné au score des autres items. Le score total maximum est de 80 et le score total minimum est de 0. Un score plus élevé indique une vision plus menaçante du patient, tandis qu'un score inférieur indique une vision plus optimiste de la maladie.">
 				>
 			>
 		>
@@ -863,7 +868,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0045"] = <
 					text = <"*Total score (en)">
-					description = <"">
+					description = <"*The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease.  (en)">
 				>
 			>
 		>
