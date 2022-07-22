@@ -69,7 +69,7 @@ Revised (IPQ-R). (en)">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
-		["MD5-CAM-1.0.1"] = <"486db576cfdc8dd58b1a1418ce36ef75">
+		["MD5-CAM-1.0.1"] = <"12238822fce5a1e243953ca40690b5e8">
 	>
 
 definition
@@ -683,8 +683,8 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event (en)">
-					description = <"">
+					text = <"Jedes Ereignis">
+					description = <"Standard, nicht spezifizierter Zeitpunkt oder Intervallereignis, das in einer Vorlage oder zur Laufzeit explizit definiert werden kann.">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -816,7 +816,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 					description = <"">
 				>
 				["at0037"] = <
-					text = <"*Most important factors believed to cause illness (en)">
+					text = <"Die wichtigsten Faktoren, von denen angenommen wird, dass sie Krankheiten verursachen">
 					description = <"*Original question: 
 \"Please list in rank-order the three most important factors that you believe caused your illness.
 The most important causes for me: 
@@ -826,15 +826,15 @@ The most important causes for me:
  (en)">
 				>
 				["at0038"] = <
-					text = <"*Rank 1 (en)">
+					text = <"Rang 1">
 					description = <"">
 				>
 				["at0039"] = <
-					text = <"*Rank 2 (en)">
+					text = <"Rang 2">
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Rank 3 (en)">
+					text = <"Rang 3">
 					description = <"">
 				>
 				["at0041"] = <
@@ -842,8 +842,9 @@ The most important causes for me:
 					description = <"@ internal @">
 				>
 				["at0042"] = <
-					text = <"*Extension (en)">
-					description = <"">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder zur Angleichung an andere Referenzmodelle/Formalismen.">
+					comment = <"Comment: Zum Beispiel: lokale Informationsanforderungen oder zusätzliche Metadaten zur Angleichung an FHIR oder CIMI-Äquivalente.">
 				>
 				["at0035"] = <
 					text = <"*Not at all affected emotionally(en)">
@@ -867,7 +868,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
  (en)">
 				>
 				["at0045"] = <
-					text = <"*Total score (en)">
+					text = <"Gesamtpunktzahl">
 					description = <"*The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease.  (en)">
 				>
 			>
