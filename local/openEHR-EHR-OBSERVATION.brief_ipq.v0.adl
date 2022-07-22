@@ -1,0 +1,875 @@
+archetype (adl_version=1.4; uid=6dd6fdd8-992b-4f93-888d-97276181d04f)
+	openEHR-EHR-OBSERVATION.brief_ipq.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-07-22">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"*To rapidly assess the cognitive and emotional representations of illness. (en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. 
+Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. 
+
+The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be added in this archetype using the data points \"name of illness evaluated\" and \"name of treatment\", if necessary. (en)">
+			misuse = <"*Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
+Revised (IPQ-R). (en)">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To rapidly assess the cognitive and emotional representations of illness.">
+			use = <"All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. 
+Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. 
+
+The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be added in this archetype using the data points \"name of illness evaluated\" and \"name of treatment\", if necessary.">
+			misuse = <"Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
+Revised (IPQ-R).">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"*To rapidly assess the cognitive and emotional representations of illness. (en)">
+			copyright = <"© openEHR Foundation">
+			use = <"*All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. 
+Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. 
+
+The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be added in this archetype using the data points \"name of illness evaluated\" and \"name of treatment\", if necessary. (en)">
+			misuse = <"*Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
+Revised (IPQ-R). (en)">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Broadbent E, Petrie KJ, Main J, Weinman J. The brief illness perception questionnaire. Journal of psychosomatic research. 2006;60(6):631-7.  https://doi.org/10.1016/j.jpsychores.2005.10.020">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
+		["MD5-CAM-1.0.1"] = <"490f736041a63232a37ce3ced7b1ecb6">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Brief Illness Perception Questionnaire (Brief IPQ)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0043] occurrences matches {0..1} matches {    -- Name of illness evaluated
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- How much does your illness affect your life?
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0015]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- How long do you think your illness will continue?
+										value matches {
+											0|[local::at0017],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0018]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- How much control do you feel you have over your illness?
+										value matches {
+											0|[local::at0020],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0021]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- How much do you think your treatment can help your illness?
+										value matches {
+											0|[local::at0023],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0024]
+										}
+									}
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Name of treatment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- How much do you experience symptoms from your illness?
+										value matches {
+											0|[local::at0026],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0027]
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- How concerned are you about your illness?
+										value matches {
+											0|[local::at0029],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0030]
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- How well do you feel you understand your illness?
+										value matches {
+											0|[local::at0032],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0033]
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- How much does your illness affect you emotionally?
+										value matches {
+											0|[local::at0035],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009],
+											5|[local::at0010],
+											6|[local::at0011],
+											7|[local::at0012],
+											8|[local::at0013],
+											9|[local::at0014],
+											10|[local::at0036]
+										}
+									}
+									CLUSTER[at0037] occurrences matches {0..1} matches {    -- Most important factors believed to cause illness
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0038] occurrences matches {0..1} matches {    -- Rank 1
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0039] occurrences matches {0..1} matches {    -- Rank 2
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- Rank 3
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.0..80.0|>
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0041] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0042] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Brief Illness Perception Questionnaire (Brief IPQ)">
+					description = <"Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness. ">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"How much does your illness affect your life?">
+					description = <"">
+					cognitive_illness_representation = <"consequences">
+				>
+				["at0005"] = <
+					text = <"No affect at all">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Severely affects my life">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"How long do you think your illness will continue?">
+					description = <"">
+					cognitive_illness_representation = <"timeline">
+				>
+				["at0017"] = <
+					text = <"A very short time">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Forever">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"How much control do you feel you have over your illness?">
+					description = <"">
+					cognitive_illness_representation = <"personal control">
+				>
+				["at0020"] = <
+					text = <"Absolutely no control">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Extreme amount of control">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"How much do you think your treatment can help your illness?">
+					description = <"">
+					cognitive_illness_representation = <"treatment control">
+				>
+				["at0023"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Extremely helpful">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"How much do you experience symptoms from your illness?">
+					description = <"">
+					cognitive_illness_representation = <"identity">
+				>
+				["at0026"] = <
+					text = <"No symptoms at all">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Many severe symptoms">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"How concerned are you about your illness?">
+					description = <"">
+					cognitive_illness_representation = <"concern">
+				>
+				["at0029"] = <
+					text = <"Not at all concerned">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Extremely concerned">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"How well do you feel you understand your illness?">
+					description = <"">
+					cognitive_illness_representation = <"emotions">
+				>
+				["at0032"] = <
+					text = <"Don't understand at all">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Understand very clearly">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"How much does your illness affect you emotionally?">
+					description = <"Original question: \"How much does your illness affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?)\"">
+					comment = <"(e.g. does it make you angry, scared, upset or depressed?)">
+					cognitive_illness_representation = <"illness comprehensibility">
+				>
+				["at0035"] = <
+					text = <"Not at all affected emotionally">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Extremely affected emotionally">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Most important factors believed to cause illness">
+					description = <"Original question: 
+\"Please list in rank-order the three most important factors that you believe caused your illness.
+The most important causes for me: 
+- Rank1, 
+- Rank2, 
+- Rank3\"
+">
+				>
+				["at0038"] = <
+					text = <"Rank 1">
+					description = <"">
+					cognitive_illness_representation = <"illness factors">
+				>
+				["at0039"] = <
+					text = <"Rank 2">
+					description = <"">
+					cognitive_illness_representation = <"illness factors">
+				>
+				["at0040"] = <
+					text = <"Rank 3">
+					description = <"">
+					cognitive_illness_representation = <"illness factors">
+				>
+				["at0041"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0042"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Name of illness evaluated">
+					description = <"">
+					comment = <"The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. This data point has been added to record the illness evaluated.">
+				>
+				["at0044"] = <
+					text = <"Name of treatment">
+					description = <"">
+					comment = <"Similarly, the treatment control item uses the word
+\"treatment\", but this can be replaced by a particular
+treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This data point has been added to record the treatment given to this patient.
+">
+				>
+				["at0045"] = <
+					text = <"Total score">
+					description = <"The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. ">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Bref Questionnaire de Perception de Maladie (Brief IPQ)">
+					description = <"Brief Illness Perception Questionnaire (Brief IPQ) est une échelle de neuf items conçue pour évaluer rapidement les représentations cognitives et émotionnelles de la maladie.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Comment votre maladie affecte-t-elle votre vie?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"N'affecte pas du tout">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Affecte sévèrement ma vie">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Combien de temps estimez-vous que votre maladie va durer?">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Très peu de temps">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Toujours">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Comment évaluez-vous votre pouvoir de contrôle sur votre maladie ?">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Absolutment aucun contrôle">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Enormément de contrôle">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Comment pensez-vous que votre traitement puisse vous aider?">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Extrêmement utile">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Quelle est la fréquence de vos symptômes?">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Pas de symptômes du tout">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Beaucoup de symptômes sévères">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Comment êtes-vous concerné par votre maladie ?">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Pas du tout concerné">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Extrêmement concerné">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Comment pensez-vous comprendre votre maladie?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Ne comprends pas du tout">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Comprends très clairement">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Comment votre maladie vous affecte-t-elle émotionellement ?">
+					description = <"Question originale: \"Comment votre maladie vous affecte-t-elle émotionellement ? (par exemple : Vous met en colère, vous effraye, vous contrarie ou vous déprime?\"">
+					comment = <"(par exemple : Vous met en colère, vous effraye, vous contrarie ou vous déprime">
+				>
+				["at0035"] = <
+					text = <"Pas du tout affecté émotionellement">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Extrêmement affecté émotionellement">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Principaux facteurs soupçonnés de causer la maladie">
+					description = <"Question originale: 
+\"Veuillez énumérer par ordre d’importance les trois raisons qui ont - à votre avis - provoqué
+votre maladie. Les raisons les plus importantes pour moi: 
+- Rang1, 
+- Rang2, 
+- Rang3\"
+ ">
+				>
+				["at0038"] = <
+					text = <"Rang 1">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Rang 2">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Rang 3">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0042"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Nom de la maladie évaluée">
+					description = <"">
+					comment = <"La version la plus générale du Brief IPQ utilise le mot \"maladie\", mais il est possible de le remplacer par le nom d'une maladie particulière comme le diabète ou l'asthme. Ce point de données a été ajouté pour enregistrer la maladie évaluée.">
+				>
+				["at0044"] = <
+					text = <"Nom du traitement">
+					description = <"">
+					comment = <"De même, l'élément de contrôle du traitement utilise le mot \"traitement\", mais cela peut être remplacé par un traitement particulier tel que \"chirurgie\" ou \"inhalateur\" si les chercheurs sont intéressés par un traitement particulier. Ce point de données a été ajouté pour enregistrer le traitement administré à ce patient.">
+				>
+				["at0045"] = <
+					text = <"Score total">
+					description = <"Le score total de perception de la maladie est calculé en inversant le score des items 3, 4 et 8 et additionné au score des autres items. Le score total maximum est de 80 et le score total minimum est de 0. Un score plus élevé indique une vision plus menaçante du patient, tandis qu'un score inférieur indique une vision plus optimiste de la maladie.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fragebogen zur Krankheitswahrnehmung (Kurzform)">
+					description = <"*Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness.  (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*How much does your illness affect your life? (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*No affect at all (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*1 (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*9 (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Severely affects my life (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*How long do you think your illness will continue? (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*How much control do you feel you have over your illness? (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*A very short time(en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Forever(en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*How much do you think your treatment can help your illness? (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Absolutely no control(en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Extreme amount of control(en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Not at all(en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*Extremely helpful(en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*How much do you experience symptoms from your illness? (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*How concerned are you about your illness? (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*No symptoms at all(en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Many severe symptoms(en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*How well do you feel you understand your illness? (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Not at all concerned(en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Extremely concerned(en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*How much does your illness affect you emotionally? (en)">
+					description = <"*Original question: \"How much does your illness affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?)\" (en)">
+					comment = <"*(e.g. does it make you angry, scared, upset or depressed?) (en)">
+				>
+				["at0032"] = <
+					text = <"*Don't understand at all(en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Understand very clearly(en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Most important factors believed to cause illness (en)">
+					description = <"*Original question: 
+\"Please list in rank-order the three most important factors that you believe caused your illness.
+The most important causes for me: 
+- Rank1, 
+-Rank2, 
+- Rank3\"
+ (en)">
+				>
+				["at0038"] = <
+					text = <"*Rank 1 (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*Rank 2 (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Rank 3 (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0042"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Not at all affected emotionally(en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Extremely affected emotionally(en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Name of illness evaluated (en)">
+					description = <"">
+					comment = <"*The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. This data point has been added to record the illness evaluated. (en)">
+				>
+				["at0044"] = <
+					text = <"*Name of treatment (en)">
+					description = <"">
+					comment = <"*Similarly, the treatment control item uses the word
+\"treatment\", but this can be replaced by a particular
+treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This data point has been added to record the treatment given to this patient.
+ (en)">
+				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"*The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease.  (en)">
+				>
+			>
+		>
+	>
