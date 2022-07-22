@@ -3,7 +3,7 @@
 ## Initial - list of instruments
 Might be not final per use-case and more will be added in a near future.
 
-All archetypes that are for PROM will be translated in english (en), german (ger) and french (fr).
+All archetypes that are for PROM will be translated in english (en), german (de) and french (fr).
 
 ### Inflammatory bowel disease (IBD)
 
