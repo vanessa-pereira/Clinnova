@@ -10,11 +10,17 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health / Better">
+				["email"] = <"vanessapereira@pm.com">
 			>
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health / Better">
+				["email"] = <"vanessapereira@pm.com">
 			>
 		>
 	>
@@ -31,6 +37,7 @@ description
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"*To rapidly assess the cognitive and emotional representations of illness. (en)">
+			keywords = <"*Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM (en)", ...>
 			copyright = <"© openEHR Foundation">
 			use = <"*All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. 
 Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. 
@@ -42,6 +49,7 @@ Revised (IPQ-R). (en)">
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To rapidly assess the cognitive and emotional representations of illness.">
+			keywords = <"Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM", ...>
 			use = <"All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. 
 Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. 
 
@@ -51,14 +59,15 @@ Revised (IPQ-R).">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			purpose = <"*To rapidly assess the cognitive and emotional representations of illness. (en)">
+			purpose = <"Évaluer rapidement les représentations cognitives et émotionnelles de la maladie.">
+			keywords = <"*Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM (en)", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. 
-Assessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. 
+			use = <"Tous les items, à l'exception de la question causale, sont évalués à l'aide d'une échelle de réponse de 0 à 10. Cinq des items évaluent les représentations des maladies cognitives : conséquences (Item 1), chronologie (Item 2), contrôle personnel (Item 3), contrôle du traitement (Item 4) et identité (Item 5). Deux des items évaluent les représentations émotionnelles : l'inquiétude (item 6) et les émotions (item 8). Un item évalue la compréhensibilité de la maladie (item 7). Les éléments 1 à 5 évaluent les dimensions cognitives liées à la compréhension de la maladie, de ses causes et de l'effet du traitement, tandis que les éléments 6 à 8 évaluent les dimensions émotionnelles liées aux émotions telles que l'humeur, la peur, l'anxiété ou la colère.
+L'évaluation de la représentation causale se fait par un item de réponse ouvert, qui demande aux patients d'énumérer les trois facteurs causaux les plus importants de leur maladie (item 9). Le score total de perception de la maladie est calculé en inversant le score des items 3, 4 et 8 et additionné au score des autres items. Le score total maximum est de 80 et le score total minimum est de 0. Un score plus élevé indique une vision plus menaçante du patient, tandis qu'un score inférieur indique une vision plus optimiste de la maladie.
 
-The most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be added in this archetype using the data points \"name of illness evaluated\" and \"name of treatment\", if necessary. (en)">
-			misuse = <"*Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–
-Revised (IPQ-R). (en)">
+La version la plus générale du Brief IPQ utilise le mot \"maladie\", mais il est possible de le remplacer par le nom d'une maladie particulière comme le diabète ou l'asthme. De même, l'item de contrôle du traitement utilise le mot « traitement », mais celui-ci peut être remplacé par un traitement particulier tel que « chirurgie » ou « inhalateur » si les chercheurs sont intéressés par un traitement particulier. Cela peut être ajouté dans cet archétype en utilisant les points de données \"nom de la maladie évaluée\" et \"nom du traitement\", si nécessaire (en)">
+			misuse = <"Ne doit pas être utilisé pour enregistrer le questionnaire de perception de la maladie (IPQ) et le questionnaire de perception de la maladie–
+Révisé (IPQ-R).">
 		>
 	>
 	other_details = <
@@ -68,8 +77,8 @@ Revised (IPQ-R). (en)">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f48d56421d115608e525f97a27e02a5e">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
-		["MD5-CAM-1.0.1"] = <"12238822fce5a1e243953ca40690b5e8">
 	>
 
 definition
@@ -284,7 +293,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"How much does your illness affect your life?">
-					description = <"">
+					description = <"Original question: \"How much does your illness affect your life?\"">
 					cognitive_illness_representation = <"consequences">
 				>
 				["at0005"] = <
@@ -333,7 +342,7 @@ ontology
 				>
 				["at0016"] = <
 					text = <"How long do you think your illness will continue?">
-					description = <"">
+					description = <"Original question: \"How long do you think your illness will continue?\"">
 					cognitive_illness_representation = <"timeline">
 				>
 				["at0017"] = <
@@ -346,7 +355,7 @@ ontology
 				>
 				["at0019"] = <
 					text = <"How much control do you feel you have over your illness?">
-					description = <"">
+					description = <"Original question: \"How much control do you feel you have over your illness?\"">
 					cognitive_illness_representation = <"personal control">
 				>
 				["at0020"] = <
@@ -359,7 +368,7 @@ ontology
 				>
 				["at0022"] = <
 					text = <"How much do you think your treatment can help your illness?">
-					description = <"">
+					description = <"Original question: \"How much do you think your treatment can help your illness?\"">
 					cognitive_illness_representation = <"treatment control">
 				>
 				["at0023"] = <
@@ -372,7 +381,7 @@ ontology
 				>
 				["at0025"] = <
 					text = <"How much do you experience symptoms from your illness?">
-					description = <"">
+					description = <"Original question: \"How much do you experience symptoms from your illness?\"">
 					cognitive_illness_representation = <"identity">
 				>
 				["at0026"] = <
@@ -385,7 +394,7 @@ ontology
 				>
 				["at0028"] = <
 					text = <"How concerned are you about your illness?">
-					description = <"">
+					description = <"Original question: \"How concerned are you about your illness?\"">
 					cognitive_illness_representation = <"concern">
 				>
 				["at0029"] = <
@@ -398,7 +407,7 @@ ontology
 				>
 				["at0031"] = <
 					text = <"How well do you feel you understand your illness?">
-					description = <"">
+					description = <"Original question: \"How well do you feel you understand your illness?\"">
 					cognitive_illness_representation = <"emotions">
 				>
 				["at0032"] = <
@@ -495,7 +504,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0004"] = <
 					text = <"Comment votre maladie affecte-t-elle votre vie?">
-					description = <"">
+					description = <"Question originale: \"Comment votre maladie affecte-t-elle votre vie?\"">
 				>
 				["at0005"] = <
 					text = <"N'affecte pas du tout">
@@ -543,7 +552,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0016"] = <
 					text = <"Combien de temps estimez-vous que votre maladie va durer?">
-					description = <"">
+					description = <"Question originale: \"Combien de temps estimez-vous que votre maladie va durer?\"">
 				>
 				["at0017"] = <
 					text = <"Très peu de temps">
@@ -554,8 +563,8 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"Comment évaluez-vous votre pouvoir de contrôle sur votre maladie ?">
-					description = <"">
+					text = <"Comment évaluez-vous votre pouvoir de contrôle sur votre maladie?">
+					description = <"Question originale: \"Comment évaluez-vous votre pouvoir de contrôle sur votre maladie?\"">
 				>
 				["at0020"] = <
 					text = <"Absolutment aucun contrôle">
@@ -567,7 +576,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0022"] = <
 					text = <"Comment pensez-vous que votre traitement puisse vous aider?">
-					description = <"">
+					description = <"Question originale: \"Comment pensez-vous que votre traitement puisse vous aider?\"">
 				>
 				["at0023"] = <
 					text = <"Pas du tout">
@@ -579,7 +588,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0025"] = <
 					text = <"Quelle est la fréquence de vos symptômes?">
-					description = <"">
+					description = <"Question originale: \"Quelle est la fréquence de vos symptômes?\"">
 				>
 				["at0026"] = <
 					text = <"Pas de symptômes du tout">
@@ -590,8 +599,8 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"Comment êtes-vous concerné par votre maladie ?">
-					description = <"">
+					text = <"Comment êtes-vous concerné par votre maladie?">
+					description = <"Question originale:: \"Comment êtes-vous concerné par votre maladie ?\"">
 				>
 				["at0029"] = <
 					text = <"Pas du tout concerné">
@@ -603,7 +612,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				>
 				["at0031"] = <
 					text = <"Comment pensez-vous comprendre votre maladie?">
-					description = <"">
+					description = <"Question originale: : \"Comment pensez-vous comprendre votre maladie?\"">
 				>
 				["at0032"] = <
 					text = <"Ne comprends pas du tout">
@@ -692,7 +701,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0004"] = <
 					text = <"Wie stark beeinträchtigt Ihre Erkrankung Ihr Leben?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0005"] = <
 					text = <"*No affect at all (en)">
@@ -740,11 +749,11 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0016"] = <
 					text = <"Wie lange meinen Sie, dass Ihre Krankheit noch andauern wird?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0019"] = <
 					text = <"Wie stark meinen Sie, Ihre Krankheit selbst kontrollieren zu können?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0017"] = <
 					text = <"*A very short time(en)">
@@ -756,7 +765,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0022"] = <
 					text = <"Wie stark meinen Sie, dass Ihre Behandlung bei Ihrer Erkrankung helfen kann?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0020"] = <
 					text = <"*Absolutely no control(en)">
@@ -776,11 +785,11 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0025"] = <
 					text = <"Wie stark spüren Sie Beschwerden durch Ihre Krankheit?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0028"] = <
 					text = <"Wie gut meinen Sie, Ihre Krankheit zu verstehen?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0026"] = <
 					text = <"*No symptoms at all(en)">
@@ -792,7 +801,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0031"] = <
 					text = <"Wie stark machen Sie sich Sorgen über Ihre Krankheit?">
-					description = <"">
+					description = <"Ursprüngliche Frage:">
 				>
 				["at0029"] = <
 					text = <"*Not at all concerned(en)">
@@ -804,7 +813,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0034"] = <
 					text = <"Wie gut meinen Sie, Ihre Krankheit zu verstehen?">
-					description = <"*Original question: \"How much does your illness affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?)\" (en)">
+					description = <"Ursprüngliche Frage: \"How much does your illness affect you emotionally? (e.g. does it make you angry, scared, upset or depressed?)\" (en)">
 					comment = <"*(e.g. does it make you angry, scared, upset or depressed?) (en)">
 				>
 				["at0032"] = <
@@ -817,13 +826,12 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0037"] = <
 					text = <"Die wichtigsten Faktoren, von denen angenommen wird, dass sie Krankheiten verursachen">
-					description = <"*Original question: 
-\"Please list in rank-order the three most important factors that you believe caused your illness.
-The most important causes for me: 
-- Rank1, 
--Rank2, 
-- Rank3\"
- (en)">
+					description = <"Ursprüngliche Frage: 
+\"Bitte führen Sie nun die drei wichtigsten Gründe auf, die Ihrer Meinung nach Ihre Krankheit verursacht haben.
+Die wichtigsten Ursachen meiner Krankheit sind: 
+- Rang1, 
+-Rang2, 
+- Rang3\"">
 				>
 				["at0038"] = <
 					text = <"Rang 1">
@@ -838,7 +846,7 @@ The most important causes for me:
 					description = <"">
 				>
 				["at0041"] = <
-					text = <"*Item tree (en)">
+					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0042"] = <
