@@ -1,0 +1,442 @@
+archetype (adl_version=1.4; uid=a17d708b-5a2e-4f9e-883b-25dc83fd5654)
+	openEHR-EHR-OBSERVATION.wexner_score.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-07-25">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"ac757da8-ade7-3edf-bce6-d549068c9067">
+		["references"] = <"Jorge JM, Wexner SD. Etiology and management of fecal incontinence. Dis Colon Rectum. 1993 Jan;36(1):77-97. doi: 10.1007/BF02050307. PMID: 8416784.
+
+Vaizey CJ, Carapeti E, Cahill JA, Kamm MA. Prospective comparison of faecal incontinence grading systems. Gut. 1999 Jan;44(1):77-80. doi: 10.1136/gut.44.1.77. PMID: 9862829; PMCID: PMC1760067.">
+		["MD5-CAM-1.0.1"] = <"c4011b866afe5dcd3f22b11bc7668c23">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Jorge-Wexner faecal score incontinence
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Incontinence to solid stool
+										value matches {
+											0|[local::at0009],
+											1|[local::at0010],
+											2|[local::at0011],
+											3|[local::at0012],
+											4|[local::at0013]
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Incontinence to liquid stool
+										value matches {
+											0|[local::at0009],
+											1|[local::at0010],
+											2|[local::at0011],
+											3|[local::at0012],
+											4|[local::at0013]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Incontinence to gas
+										value matches {
+											0|[local::at0009],
+											1|[local::at0010],
+											2|[local::at0011],
+											3|[local::at0012],
+											4|[local::at0013]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Wears pad
+										value matches {
+											0|[local::at0009],
+											1|[local::at0010],
+											2|[local::at0011],
+											3|[local::at0012],
+											4|[local::at0013]
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Lifestyle alterations
+										value matches {
+											0|[local::at0009],
+											1|[local::at0010],
+											2|[local::at0011],
+											3|[local::at0012],
+											4|[local::at0013]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..20|}
+											}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0016,    -- Perfect continence
+													at0017,    -- Mild incontinence
+													at0018,    -- Moderate incontinence
+													at0019,    -- Severe incontinence
+													at0020]    -- Complete incontinence
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0021] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0022] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Jorge-Wexner faecal score incontinence">
+					description = <"wexner score">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"All of the questions should be answered according to patient's incidence of bowel (fecal) incontinence.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Incontinence to solid stool">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Incontinence to liquid stool">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Incontinence to gas">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Wears pad">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Lifestyle alterations">
+					description = <"Defined in the original study only as \"the extent to which it alters the patient's life\"">
+				>
+				["at0009"] = <
+					text = <"Never">
+					description = <"Never">
+				>
+				["at0010"] = <
+					text = <"Rarely">
+					description = <"Less than once per month">
+				>
+				["at0011"] = <
+					text = <"Sometimes">
+					description = <"Between once per week and once per month">
+				>
+				["at0012"] = <
+					text = <"Often">
+					description = <"Between once per day and once per week">
+				>
+				["at0013"] = <
+					text = <"Always">
+					description = <"At least once per day">
+				>
+				["at0014"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Perfect continence">
+					description = <"A total score of 0.">
+				>
+				["at0017"] = <
+					text = <"Mild incontinence">
+					description = <"A total score of bigger than 0 and equals or less than 5.">
+				>
+				["at0018"] = <
+					text = <"Moderate incontinence">
+					description = <"A total score of equals or bigger than 6 and equals or less than 15.">
+				>
+				["at0019"] = <
+					text = <"Severe incontinence">
+					description = <"A total score of equals or bigger than 16 and equals or less than 19.">
+				>
+				["at0020"] = <
+					text = <"Complete incontinence">
+					description = <"A total score of 20.">
+				>
+				["at0021"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Score fonctionnel d’incontinence fécale dit de Jorge & Wexner">
+					description = <"*wexner score (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"*All of the questions should be answered according to patient's incidence of bowel (fecal) incontinence. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Incontinence à selles solides">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Incontinence à selles liquides">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Incontinence aux gaz">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Porte des garnitures">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Modifications de qualité de vie">
+					description = <"*Defined in the original study only as \"the extent to which it alters the patient's life\" (en)">
+				>
+				["at0009"] = <
+					text = <"Jamais">
+					description = <"Jamais">
+				>
+				["at0010"] = <
+					text = <"Rarement">
+					description = <"Moins d'une fois par mois">
+				>
+				["at0011"] = <
+					text = <"Quelquefois">
+					description = <"Entre une fois par semaine et une fois par mois">
+				>
+				["at0012"] = <
+					text = <"Souvent">
+					description = <"Entre une fois par jour et une fois par semaine">
+				>
+				["at0013"] = <
+					text = <"Toujours">
+					description = <"Au moins une fois par jour">
+				>
+				["at0014"] = <
+					text = <"Score total">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Interprétation du score total">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Continence parfaite">
+					description = <"Un score totale de 0">
+				>
+				["at0017"] = <
+					text = <"Incontinence minime">
+					description = <"Un score total supérieur à 0 et égal ou inférieur à 5.">
+				>
+				["at0018"] = <
+					text = <"Incontinence modérée">
+					description = <"Un score total égal ou supérieur à 6 et égal ou inférieur à 15.">
+				>
+				["at0019"] = <
+					text = <"Incontinence sévère">
+					description = <"Un score total égal ou supérieur à 16 et égal ou inférieur à 19.">
+				>
+				["at0020"] = <
+					text = <"Incontinence complète">
+					description = <"Un score totale de 20">
+				>
+				["at0021"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Jorge-Wexner Stuhlinkontinenz-Score">
+					description = <"Jorge-Wexner Stuhlinkontinenz-Score">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Jedes Ereignis">
+					description = <"Alle Fragen sollten entsprechend dem Auftreten von Stuhlinkontinenz des Patienten beantwortet werden.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Für geformten stuh">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Für flüssig/weichen stuh">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Für Winde">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Einlagen erforderlich">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Sozialleben eingeschränkt">
+					description = <"In der ursprünglichen Studie nur als das Ausmaß definiert, in dem es das Leben des Patienten verändert">
+				>
+				["at0009"] = <
+					text = <"Nie">
+					description = <"Nie">
+				>
+				["at0010"] = <
+					text = <"Sporadisch">
+					description = <"Weniger als einmal pro monat">
+				>
+				["at0011"] = <
+					text = <"Gelegentlich">
+					description = <"Zwischen einmal pro woche und einmal im monat">
+				>
+				["at0012"] = <
+					text = <"Häufig">
+					description = <"Zwischen einmal pro tag und einmal pro woche">
+				>
+				["at0013"] = <
+					text = <"Immer">
+					description = <"Mindestens einmal am tag">
+				>
+				["at0014"] = <
+					text = <"Gesamtpunktzahl">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Interpretation der Gesamtpunktzahl">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Völlig kontinent">
+					description = <"Gesamtpunktzahl 0.">
+				>
+				["at0017"] = <
+					text = <"Milde Inkontinenz">
+					description = <"Eine Gesamtpunktzahl größer als 0 und gleich oder kleiner als 5.">
+				>
+				["at0018"] = <
+					text = <"Mittlere Inkontinenz">
+					description = <"Eine Gesamtpunktzahl von gleich oder größer als 6 und kleiner oder gleich 15.">
+				>
+				["at0019"] = <
+					text = <"Schwere Inkontinenz">
+					description = <"Eine Gesamtpunktzahl von gleich oder größer als 16 und gleich oder kleiner als 19.">
+				>
+				["at0020"] = <
+					text = <"Vollständig incontinent">
+					description = <"Gesamtpunktzahl 20.">
+				>
+				["at0021"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder zur Angleichung an andere Referenzmodelle/Formalismen.">
+					comment = <"Zum Beispiel: lokale Informationsanforderungen oder zusätzliche Metadaten zur Angleichung an FHIR oder CIMI-Äquivalente.">
+				>
+			>
+		>
+	>
