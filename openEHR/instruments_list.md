@@ -9,12 +9,12 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
-| Short IBD-related Quality of Life (SIBDQ)                |              |             | in dev review| PROM /             |
-| Short IBD-Disability Index (IBD-DI-SR)                   |              |             | in progress  | PROM /             |
-| Brief Illness Perception Questionnaire (Brief IPQ)       |              |             | in progress  | PROM /             |
-| Jorge and Wexner faecal score incontinence               |              |             |              | PROM /             |
-| Mayo score (ulcerative colitis)                          |international ckm | openEHR-EHR-OBSERVATION.mayo_score.v1 - https://ckm.openehr.org/ckm/archetypes/1013.1.5078 |              |             |
-| Crohn's Disease Activity Index (CDAI)                    |              |             |              |                    |
+| Short IBD-related Quality of Life (SIBDQ)                |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.sibdq.v0.adl)| in dev review| PROM / Yes         |
+| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|             | in progress  | PROM /  ?          |
+| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes         |
+| Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM /  ?          |
+| Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              |             |
+| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|             | in progress  | CROM / Yes                   |
 | Lémann Index (bowel damage)                              |              |             |              | PROM /             |
 | Harvey Bradshaw Index Crohn's activity index (HBI)       |              |             |              | PROM /             |
 | Crohn Disease - Patient reported outcome (CD-PRO-2)      |              |             |              | PROM /             |
@@ -32,15 +32,15 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Food questionnaire (FQ)                                  |              |             |              | PROM / No, trademark of LIH|
 | Environmental questionnaire (EQ)                         |              |             |              | PROM / No, trademark of LIH|
 | Standardized voice collection                            |              |             |              | PROM / No, trademark of LIH|
-| Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |openEHR-EHR-OBSERVATION.phq_9.v0 - https://ckm.openehr.org/ckm/archetypes/1013.1.1645 |            | PROM /        |
+| Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |[openEHR-EHR-OBSERVATION.phq_9.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |            | PROM /        |
 | Perceived Stress Scale (PSS)                             |              |             |             | PROM /              |
 | Fatigue Severity Scale (FSS)                             |              |             |             | PROM /              |
 | Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)|           |          |             |           |           |
 | Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)|        |          |             |           |           |
 | ~~Endoscopic partial Mayo score (PMES)~~                 |              |             | **cancelled**    |                    |
 | ~~Multidimensional fatigue inventory (MFI)~~             |              |             | **cancelled**    |                    |
-| ~~Hospital Anxiety and Depression Scale (HADS)~~         |Highmed       | openEHR-EHR-OBSERVATION.hads.v1 - https://ckm.highmed.org/ckm/archetypes/1246.145.1751 | **canceled**, subst by PHQ-9| PROM / Yes  |
-| ~~Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)~~ | Highmed  |openEHR-EHR-OBSERVATION.wpai_gh.v1 - https://ckm.highmed.org/ckm/archetypes/1246.145.1737 | **canceled**, subst by WPAI:UC & WPAI:CD| PROM /          |
+| ~~Hospital Anxiety and Depression Scale (HADS)~~         |Highmed       | [openEHR-EHR-OBSERVATION.hads.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1751) | **canceled**, subst by PHQ-9| PROM / Yes  |
+| ~~Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)~~ | Highmed  |[openEHR-EHR-OBSERVATION.wpai_gh.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1737) | **canceled**, subst by WPAI:UC & WPAI:CD| PROM /          |
 
 
 ***
@@ -51,22 +51,22 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | -----------                                              | -----------      |-----------          |-----------                | -----------         |
 | Manual Muscle Testing (MMT)                              |Vanessa Pereira   |                     | waiting approv int ckm    |                     |
 | Myositis Disease Activity Assessment Tool (MDAAT)        |                  |                     |                           |                     |
-| Hospital Anxiety and Depression Scale (HADS)             |Highmed           | openEHR-EHR-OBSERVATION.hads.v1 - https://ckm.highmed.org/ckm/archetypes/1246.145.175|            |                 |
+| Hospital Anxiety and Depression Scale (HADS)             |Highmed           | [openEHR-EHR-OBSERVATION.hads.v1]( https://ckm.highmed.org/ckm/archetypes/1246.145.175)|            |                 |
 | Short fatigue questionnaire (SFQ)                        |                  |                     |                           |                     |
-| Patient Health Questionnaire-9 (PHQ-9)                   |International CKM | openEHR-EHR-OBSERVATION.phq_9.v0 - https://ckm.openehr.org/ckm/archetypes/1013.1.1645 |            |                 |
-| Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)| Highmed |openEHR-EHR-OBSERVATION.wpai_gh.v1 - https://ckm.highmed.org/ckm/archetypes/1246.145.1737 |          |                 |
+| Patient Health Questionnaire-9 (PHQ-9)                   |International CKM | [openEHR-EHR-OBSERVATION.phq_9.v0]( https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |            |                 |
+| Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)| Highmed |[openEHR-EHR-OBSERVATION.wpai_gh.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1737) |          |                 |
 | Functional Assessment of Chronic Illness Therapy - Fatigue (FACIT-F)|        |                    |                           |                     |
-| Health Assessment Questionnaire (HAQ)                    |International CKM |openEHR-EHR-OBSERVATION.haq.v0-https://ckm.openehr.org/ckm/archetypes/1013.1.3337 |            |                 |
+| Health Assessment Questionnaire (HAQ)                    |International CKM |[openEHR-EHR-OBSERVATION.haq.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.3337) |            |                 |
 | Physician's Global Assessment of Health (PhGA VAS)       |                  |                     |                           |                     |
 | Patient's Global Assessment of Disease Activity (PtGA VAS)|                 |                     |                           |                     |
-| Patient Assessment of Pain (VAS pain)                    | Apperta          |openEHR-EHR-CLUSTER.pain_vas.v0 - https://ckm.apperta.org/ckm/archetypes/1051.32.712 |             |                 |
+| Patient Assessment of Pain (VAS pain)                    | Apperta          |[openEHR-EHR-CLUSTER.pain_vas.v0](https://ckm.apperta.org/ckm/archetypes/1051.32.712) |             |                 |
 | Modified Rodnan Skin Score (mRSS)                        |                  |                     |                           |                     |
 | Systemic Lupus Erythematosus INT Collaborating Clinics Group/American College of Rheumatology Damage Index for Systemic Lupus Erythematosus (SLICC) | Vanessa Pereira | openEHR-EHR-OBSERVATION.slicc_damage.v0 | waiting approv int ckm |            |
 | Systemic Lupus Erythematosus Disease Activity Index (SLEDAI-2K)| Vanessa Pereira| openEHR-EHR-OBSERVATION.sledai_2k.v0 | waiting approv int ckm |
 | ACR/EULAR Classification Criteria of Rheumatoid Arthritis|                  |                     |                           |                     |
 | ACR/EULAR Classification Criteria of Systemic Lupus Erythematosus|Vanessa Pereira| openEHR-EHR-OBSERVATION.eular_acr_classification_sle.v0 | waiting approv int ckm |              |
 | ACR/EULAR Classification Criteria for Systemic Sclerosis (SSc)|             |                     |                           |                     |
-| Disease Activity Score-28 (DAS-28)                       | International CKM |openEHR-EHR-OBSERVATION.das28.v0 - https://ckm.openehr.org/ckm/archetypes/1013.1.3338 |           |          |
+| Disease Activity Score-28 (DAS-28)                       | International CKM |[openEHR-EHR-OBSERVATION.das28.v0]( https://ckm.openehr.org/ckm/archetypes/1013.1.3338) |           |          |
 | Swollen and Tender Joint Count (SJC/TJC 66/68)           |                  |                      |                          |                      |
 | Connor's Criteria of Antisynthetase Syndrome             |                  |                      |                          |                      |
 | SIMPLIFIED DISEASE ACTIVITY INDEX (SDAI) - Patient Global Assessment of Disease Activity & Physician Global Assessment of Disease Activity |                                                                                         |                      |                           |                     |
