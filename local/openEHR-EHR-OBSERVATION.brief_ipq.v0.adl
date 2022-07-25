@@ -91,7 +91,7 @@ Révisé (IPQ-R).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c3f71798fea1fbdc2fba4fceb3e79fa2">
+		["MD5-CAM-1.0.1"] = <"571ca806c97e46705c9426955e001f9e">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
 	>
 
@@ -677,7 +677,8 @@ votre maladie. Les raisons les plus importantes pour moi:
 				>
 				["at0042"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
 				>
 				["at0043"] = <
 					text = <"Nom de la maladie évaluée">
