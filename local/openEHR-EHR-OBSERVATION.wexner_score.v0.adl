@@ -50,7 +50,7 @@ description
 		["references"] = <"Jorge JM, Wexner SD. Etiology and management of fecal incontinence. Dis Colon Rectum. 1993 Jan;36(1):77-97. doi: 10.1007/BF02050307. PMID: 8416784.
 
 Vaizey CJ, Carapeti E, Cahill JA, Kamm MA. Prospective comparison of faecal incontinence grading systems. Gut. 1999 Jan;44(1):77-80. doi: 10.1136/gut.44.1.77. PMID: 9862829; PMCID: PMC1760067.">
-		["MD5-CAM-1.0.1"] = <"b3abb55f274f7e2fdb5bf68658ff804a">
+		["MD5-CAM-1.0.1"] = <"63443c60d626cc987feb06056a79d8a1">
 	>
 
 definition
@@ -284,24 +284,24 @@ ontology
 					description = <"*Defined in the original study only as \"the extent to which it alters the patient's life\" (en)">
 				>
 				["at0009"] = <
-					text = <"*Never (en)">
-					description = <"*Never (en)">
+					text = <"Jamais">
+					description = <"Jamais">
 				>
 				["at0010"] = <
-					text = <"*Rarely (en)">
-					description = <"*Less than once per month (en)">
+					text = <"Rarement">
+					description = <"Moins d'une fois par mois">
 				>
 				["at0011"] = <
-					text = <"*Sometimes (en)">
-					description = <"*Between once per week and once per month (en)">
+					text = <"Quelquefois">
+					description = <"Entre une fois par semaine et une fois par mois">
 				>
 				["at0012"] = <
-					text = <"*Often (en)">
-					description = <"*Between once per day and once per week (en)">
+					text = <"Souvent">
+					description = <"Entre une fois par jour et une fois par semaine">
 				>
 				["at0013"] = <
-					text = <"*Always (en)">
-					description = <"*At least once per day (en)">
+					text = <"Toujours">
+					description = <"Au moins une fois par jour">
 				>
 				["at0014"] = <
 					text = <"Score total">
