@@ -50,7 +50,7 @@ description
 		["references"] = <"Jorge JM, Wexner SD. Etiology and management of fecal incontinence. Dis Colon Rectum. 1993 Jan;36(1):77-97. doi: 10.1007/BF02050307. PMID: 8416784.
 
 Vaizey CJ, Carapeti E, Cahill JA, Kamm MA. Prospective comparison of faecal incontinence grading systems. Gut. 1999 Jan;44(1):77-80. doi: 10.1136/gut.44.1.77. PMID: 9862829; PMCID: PMC1760067.">
-		["MD5-CAM-1.0.1"] = <"63443c60d626cc987feb06056a79d8a1">
+		["MD5-CAM-1.0.1"] = <"c4011b866afe5dcd3f22b11bc7668c23">
 	>
 
 definition
@@ -312,24 +312,24 @@ ontology
 					description = <"">
 				>
 				["at0016"] = <
-					text = <"*Perfect continence (en)">
-					description = <"*A total score of 0. (en)">
+					text = <"Continence parfaite">
+					description = <"Un score totale de 0">
 				>
 				["at0017"] = <
-					text = <"*Mild incontinence (en)">
-					description = <"*A total score of bigger than 0 and equals or less than 5. (en)">
+					text = <"Incontinence minime">
+					description = <"Un score total supérieur à 0 et égal ou inférieur à 5.">
 				>
 				["at0018"] = <
-					text = <"*Moderate incontinence (en)">
-					description = <"*A total score of equals or bigger than 6 and equals or less than 15. (en)">
+					text = <"Incontinence modérée">
+					description = <"Un score total égal ou supérieur à 6 et égal ou inférieur à 15.">
 				>
 				["at0019"] = <
-					text = <"*Severe incontinence (en)">
-					description = <"*A total score of equals or bigger than 16 and equals or less than 19. (en)">
+					text = <"Incontinence sévère">
+					description = <"Un score total égal ou supérieur à 16 et égal ou inférieur à 19.">
 				>
 				["at0020"] = <
-					text = <"*Complete incontinence (en)">
-					description = <"*A total score of 20. (en)">
+					text = <"Incontinence complète">
+					description = <"Un score totale de 20">
 				>
 				["at0021"] = <
 					text = <"Item tree">
