@@ -13,8 +13,9 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Archetype name                         | Status      | language    | Name                                | comment             | Type        |
 | -----------                            | ----------- |-----------  |-----------                          |-----------          |-----------  |
 | openEHR-EHR-OBSERVATION.sibdq.v0       | in progress | en, pt      |Short IBD - related Quality of Life  |                     | PROM        |
-| openEHR-EHR-OBSERVATION.mayo_score.v1  | in progress | en, de, nb  |Mayo Score (Ulcerative colitis)      |                     | PROM        |
-| openEHR-EHR-OBSERVATION.brief_ipq.v0   | in progress | en, de, fr  |Brief Illness Perception Questionnaire|                    | PROM        |
+| openEHR-EHR-OBSERVATION.mayo_score.v1  | in progress | en, de, nb  |Mayo Score (Ulcerative colitis)      |                     |             |
+| openEHR-EHR-OBSERVATION.brief_ipq.v0   | in review | en, de, fr  |Brief Illness Perception Questionnaire|                    | PROM        |
+| openEHR-EHR-OBSERVATION.wexner_score.v0| in review | en, de, fr  |Jorge and Wexner faecal score incontinence|                    | PROM        |
 | openEHR-EHR-OBSERVATION.ibd_di_sr.v0   | up next     |             |Short IBD - Disability Index          |                    | PROM        | 
 | openEHR-EHR-OBSERVATION.cd_pro_2.v0    | up next     |             |Crohn Disease - Patient reported outcome|                  | PROM        |
 | openEHR-EHR-OBSERVATION.uc_pro_2.v0    | up next     |             |Ulcerative Colitis - Patient reported outcome|             | PROM        |
