@@ -19,8 +19,8 @@ language
 			language = <[ISO_639-1::pt]>
 			author = <
 				["name"] = <"Vanessa Pereira">
-				["email"] = <"vanessapereira@pm.com">
 				["organisation"] = <"Luxembourg Institute of Health / Better">
+				["email"] = <"vanessapereira@pm.com">
 			>
 		>
 	>
@@ -79,7 +79,7 @@ Roseira, J., Sousa, H.T., Marreiros, A. et al. Short Inflammatory Bowel Disease 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8f9c6e04aca4d85d5b01b468fd19cbdc">
+		["MD5-CAM-1.0.1"] = <"3c94f940b565a6128557fc85650e89ee">
 		["build_uid"] = <"db368e34-d445-3a23-a713-ce8ea2735691">
 		["revision"] = <"0.0.1">
 	>
@@ -220,6 +220,11 @@ definition
 													at0027]    -- Best health-related quality of life (HRQoL)
 												}
 											}
+										}
+									}
+									ELEMENT[at0042] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -439,6 +444,10 @@ ontology
 					text = <"No trouble">
 					description = <"">
 				>
+				["at0042"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the observation, not captured in other fields.">
+				>
 			>
 		>
 		["pt-pt"] = <
@@ -632,6 +641,10 @@ ontology
 					text = <"Não foi problema">
 					description = <"">
 				>
+				["at0042"] = <
+					text = <"Comentário">
+					description = <"Narrativa adicional sobre a observação, não mencionada nos outros campos deste modelo.">
+				>
 			>
 		>
 		["pt"] = <
@@ -824,6 +837,10 @@ ontology
 				["at0041"] = <
 					text = <"Não foi problema">
 					description = <"">
+				>
+				["at0042"] = <
+					text = <"Comentário">
+					description = <"Narrativa adicional sobre a observação, não mencionada nos outros campos deste modelo.">
 				>
 			>
 		>
