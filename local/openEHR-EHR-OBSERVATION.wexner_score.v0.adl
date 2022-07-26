@@ -43,14 +43,14 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["build_uid"] = <"ac757da8-ade7-3edf-bce6-d549068c9067">
 		["references"] = <"Jorge JM, Wexner SD. Etiology and management of fecal incontinence. Dis Colon Rectum. 1993 Jan;36(1):77-97. doi: 10.1007/BF02050307. PMID: 8416784.
 
 Vaizey CJ, Carapeti E, Cahill JA, Kamm MA. Prospective comparison of faecal incontinence grading systems. Gut. 1999 Jan;44(1):77-80. doi: 10.1136/gut.44.1.77. PMID: 9862829; PMCID: PMC1760067.">
-		["MD5-CAM-1.0.1"] = <"c4011b866afe5dcd3f22b11bc7668c23">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"02cab25e5c0b087f59d14bac715b9155">
+		["build_uid"] = <"ac757da8-ade7-3edf-bce6-d549068c9067">
 	>
 
 definition
@@ -126,6 +126,11 @@ definition
 													at0020]    -- Complete incontinence
 												}
 											}
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -243,6 +248,10 @@ ontology
 					text = <"Extension">
 					description = <"">
 				>
+				["at0023"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the observation, not captured in other fields.">
+				>
 			>
 		>
 		["fr"] = <
@@ -340,6 +349,10 @@ ontology
 					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
 					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
 				>
+				["at0023"] = <
+					text = <"Commentaire">
+					description = <"Récit supplémentaire sur l'observation, non capturé dans d'autres champs.">
+				>
 			>
 		>
 		["de"] = <
@@ -436,6 +449,10 @@ ontology
 					text = <"Erweiterung">
 					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder zur Angleichung an andere Referenzmodelle/Formalismen.">
 					comment = <"Zum Beispiel: lokale Informationsanforderungen oder zusätzliche Metadaten zur Angleichung an FHIR oder CIMI-Äquivalente.">
+				>
+				["at0023"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Erzählung über die Beobachtung, die nicht in anderen Bereichen erfasst wurde.">
 				>
 			>
 		>
