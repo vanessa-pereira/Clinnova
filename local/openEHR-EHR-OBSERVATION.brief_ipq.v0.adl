@@ -91,7 +91,7 @@ Révisé (IPQ-R).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"571ca806c97e46705c9426955e001f9e">
+		["MD5-CAM-1.0.1"] = <"9fbb26b810a5ba463cb6373ef0c1d691">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
 	>
 
@@ -264,6 +264,11 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -496,6 +501,10 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 					text = <"Total score">
 					description = <"The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. ">
 				>
+				["at0046"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the observation, not captured in other fields.">
+				>
 			>
 		>
 		["fr"] = <
@@ -693,6 +702,10 @@ votre maladie. Les raisons les plus importantes pour moi:
 				["at0045"] = <
 					text = <"Score total">
 					description = <"Le score total de perception de la maladie est calculé en inversant le score des items 3, 4 et 8 et additionné au score des autres items. Le score total maximum est de 80 et le score total minimum est de 0. Un score plus élevé indique une vision plus menaçante du patient, tandis qu'un score inférieur indique une vision plus optimiste de la maladie.">
+				>
+				["at0046"] = <
+					text = <"Commentaire">
+					description = <"Récit supplémentaire sur l'observation, non capturé dans d'autres champs.">
 				>
 			>
 		>
@@ -893,6 +906,10 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 				["at0045"] = <
 					text = <"Gesamtpunktzahl">
 					description = <"*The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease.  (en)">
+				>
+				["at0046"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Erzählung über die Beobachtung, die nicht in anderen Bereichen erfasst wurde.">
 				>
 			>
 		>
