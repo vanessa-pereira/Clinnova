@@ -1,0 +1,635 @@
+archetype (adl_version=1.4; uid=6621eddc-bd39-4565-8c09-a230239f1480)
+	openEHR-EHR-OBSERVATION.pss.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-07-27">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Bewertet das Ausmaß, in dem eine Person das Leben im vergangenen Monat als unvorhersehbar, unkontrollierbar und überlastend empfunden hat.">
+			keywords = <"Perceived Stress Scale, PSS, PROM, Scale, Stress, Fragen zum thema stress", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Die Fragen in dieser Skala fragen nach Gefühlen und Gedanken des Patienten während des letzten Monats. In jedem Fall wird der Patient gebeten anzugeben, wie oft er auf eine bestimmte Weise gefühlt oder gedacht hat. Obwohl einige der Fragen ähnlich sind, gibt es Unterschiede zwischen ihnen und der Patient sollte jede Frage als separate Frage behandeln. Der beste Ansatz ist, ziemlich schnell zu antworten.
+
+Nach Umkehrung der Punktzahlen bei den vier positiv angegebenen Items (Items 4, 5, 7 und 8 - (d.h. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - bereits in diesem Archetyp wiederhergestellt), wird die PSS-10-Gesamtpunktzahl durch Summieren aller 10 Punkte ermittelt. Höhere Werte zeigten ein höheres Maß an wahrgenommenem Stress an.
+
+
+Während openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen. Beachten Sie, dass keine Nutzungserlaubnis erforderlich ist, wenn es für gemeinnützige akademische Forschung oder Bildung verwendet wird. Wenden Sie sich für andere Zwecke an Ellen Conser unter conser@andrew.cmu.edu.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month.">
+			keywords = <"Perceived Stress Scale, PSS, PROM, Scale, Stress", ...>
+			use = <"The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.
+
+After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 -  (i.e. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.
+
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. Note that permission for use is not necessary when used for nonprofit academic research or education. For other use contact Ellen Conser at conser@andrew.cmu.edu.  
+">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Évalue le degré auquel un individu a perçu la vie comme imprévisible, incontrôlable et surchargée au cours du mois précédent.">
+			keywords = <"Perceived Stress Scale, PSS, PROM, Scale, Stress", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Les questions de cette échelle portent sur les sentiments et les pensées du patient au cours du dernier mois. Dans chaque cas, il sera demandé au patient d'indiquer à quelle fréquence il a ressenti ou pensé d'une certaine manière. Bien que certaines questions soient similaires, il existe des différences entre elles et le patient doit traiter chacune comme une question distincte. La meilleure approche est de répondre assez rapidement.
+
+Après avoir inversé les scores des quatre items positifs (items 4, 5, 7 et 8 - (c'est-à-dire 0 => 4 ; 1 => 3 ; 2 => 2 ; 3 => 1 ; 4 => 0) - déjà inversé dans cet archétype), le score total PSS-10 est obtenu en additionnant les 10 items. Des scores plus élevés indiquaient un niveau plus élevé de stress perçu.
+
+
+Alors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur. Notez que l'autorisation d'utilisation n'est pas nécessaire lorsqu'elle est utilisée pour la recherche universitaire ou l'éducation à but non lucratif. Pour toute autre utilisation, contactez Ellen Conser à conser@andrew.cmu.edu.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Cohen, S., Kamarck, T., and Mermelstein, R. (1983). A global measure of perceived stress. Journal of Health and Social Behavior, 24, 386-396.
+
+Cohen, S. and Williamson, G. Perceived Stress in a Probability Sample of the United States. Spacapan, S. and Oskamp, S. (Eds.) The Social Psychology of Health. Newbury Park, CA: Sage, 1988
+
+Translation of Cohen's 10 item PERCEIVED STRESS SCALE (PSS) courtesy of Prof. Dr. Arndt Büssing, University of Witten/Herdecke(arndt.buessing@uni-wh.de); April2011
+
+Klein, E.M., Brähler, E., Dreier, M. et al. The German version of the Perceived Stress Scale – psychometric characteristics in a representative German community sample. BMC Psychiatry 16, 159 (2016). https://doi.org/10.1186/s12888-016-0875-9">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9e1f41d0ab0d40c7026c4f613387df86">
+		["build_uid"] = <"eab972a9-e22b-3c56-932f-29c45a1a3e39">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Perceived Stress Scale (PSS)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- In the last month
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Have been upset because of something that happened unexpectedly
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Have felt that was unable to control the important things in life
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Have felt nervous and stressed
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Have felt confident about ability to handle personal problems
+										value matches {
+											4|[local::at0026],
+											3|[local::at0027],
+											2|[local::at0028],
+											1|[local::at0029],
+											0|[local::at0030]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Have felt that things were going in the desired way
+										value matches {
+											4|[local::at0026],
+											3|[local::at0027],
+											2|[local::at0028],
+											1|[local::at0029],
+											0|[local::at0030]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Have found that could not cope with all the things that had to do
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Have been able to control irritations in life
+										value matches {
+											4|[local::at0026],
+											3|[local::at0027],
+											2|[local::at0028],
+											1|[local::at0029],
+											0|[local::at0030]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Have felt that were on top of things
+										value matches {
+											4|[local::at0026],
+											3|[local::at0027],
+											2|[local::at0028],
+											1|[local::at0029],
+											0|[local::at0030]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Have been angered because of things that happened outside of patient control
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Have felt difficulties were piling up high that could not overcome them
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008],
+											4|[local::at0009]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..40|}
+											}
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0023,    -- Low stress
+													at0024,    -- Moderate stress
+													at0025]    -- High perceived stress
+												}
+											}
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P1M}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0019] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Perceived Stress Scale (PSS)">
+					description = <"The Perceived Stress Scale (PSS-10) is a 10-item questionnaire originally developed by Cohen et al. (1983) widely used to assess stress levels in young people and adults aged 12 and above. It evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"In the last month">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Have been upset because of something that happened unexpectedly">
+					description = <"Original question: \"In the last month, how often have you been upset because of something that happened unexpectedly?\"">
+				>
+				["at0005"] = <
+					text = <"Never">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Almost never">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Sometimes">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Fairly often">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Very often">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Have felt that was unable to control the important things in life">
+					description = <"Original question: \"In the last month, how often have you felt that you were unable to control the important things in your life?\"">
+				>
+				["at0011"] = <
+					text = <"Have felt nervous and stressed">
+					description = <"Original question: \"In the last month, how often have you felt nervous and \"stressed\"?\"">
+				>
+				["at0012"] = <
+					text = <"Have felt confident about ability to handle personal problems">
+					description = <"Original question: \"In the last month, how often have you felt confident about your ability to handle your personal problems\"">
+				>
+				["at0013"] = <
+					text = <"Have felt that things were going in the desired way">
+					description = <"Original question: \"In the last month. how often have you felt that things were going your way\"">
+				>
+				["at0014"] = <
+					text = <"Have found that could not cope with all the things that had to do">
+					description = <"Original question: \"In the last month, how often have you found that you could not cope with all the things that you had to do?\"">
+				>
+				["at0015"] = <
+					text = <"Have been able to control irritations in life">
+					description = <"Original question: \"In the last month, how often have you been able to control irritations in your life?\"">
+				>
+				["at0016"] = <
+					text = <"Have felt that were on top of things">
+					description = <"Original question: \"In the last month, how often have you felt that you were on top of things?\"">
+				>
+				["at0017"] = <
+					text = <"Have been angered because of things that happened outside of patient control">
+					description = <"Original question: \"In the last month, how often have you been angered because of things that were outside of your control?\"">
+				>
+				["at0018"] = <
+					text = <"Have felt difficulties were piling up high that could not overcome them">
+					description = <"Original question: \"In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?\"">
+				>
+				["at0019"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0020"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Total score">
+					description = <"After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.">
+				>
+				["at0022"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Low stress">
+					description = <"Scores ranging from 0 to 13.">
+				>
+				["at0024"] = <
+					text = <"Moderate stress">
+					description = <"Scores ranging from 14 to 26.">
+				>
+				["at0025"] = <
+					text = <"High perceived stress">
+					description = <"Scores ranging from 27 to 40.">
+				>
+				["at0026"] = <
+					text = <"Never">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Almost never">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Sometimes">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Fairly often">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Very often">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Échelle de stress perçu (PSS)">
+					description = <"L'échelle de stress perçu (PSS-10) est un questionnaire en 10 items développé à l'origine par Cohen et al. (1983) largement utilisé pour évaluer les niveaux de stress chez les jeunes et les adultes âgés de 12 ans et plus. Il évalue dans quelle mesure un individu a perçu la vie comme imprévisible, incontrôlable et surchargée au cours du mois précédent.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Au cours du dernier mois">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Ont été bouleversés à cause de quelque chose qui s'est produit de façon inattendue">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous été bouleversé à cause d'un événement inattendu?\"">
+				>
+				["at0005"] = <
+					text = <"Jamais">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Presque jamais">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Parfois">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Assez souvent">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Très souvent">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Avoir senti qu'il était incapable de contrôler les choses importantes dans la vie">
+					description = <"Question originale: \"Au cours du dernier mois, combien de fois avez-vous eu l'impression de ne pas pouvoir contrôler les choses importantes de votre vie?\"">
+				>
+				["at0011"] = <
+					text = <"Se sont sentis nerveux et stressés">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence vous êtes-vous senti nerveux et stressé?\"">
+				>
+				["at0012"] = <
+					text = <"Avoir confiance en sa capacité à gérer ses problèmes personnels">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence vous êtes-vous senti confiant quant à votre
+capacité à gérer vos problèmes personnels?\"">
+				>
+				["at0013"] = <
+					text = <"Ont senti que les choses allaient dans le sens souhaité">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous senti que les choses allaient dans votre sens?\"">
+				>
+				["at0014"] = <
+					text = <"Ont trouvé qu'on ne pouvait pas faire face à toutes les choses qu'il fallait faire">
+					description = <"Question originale: \"Au cours du dernier mois, combien de fois avez-vous constaté que vous ne pouviez pas faire face à toutes les choses que vous deviez faire?\"">
+				>
+				["at0015"] = <
+					text = <"Avoir été capable de contrôler les irritations dans la vie">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous pu contrôler les irritations dans votre vie?\"">
+				>
+				["at0016"] = <
+					text = <"Avoir l'impression d'être au top">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous senti que vous étiez au courant des choses?\"">
+				>
+				["at0017"] = <
+					text = <"Ont été en colère à cause de choses qui se sont produites en dehors du contrôle du patient">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous été irrité à cause de choses qui se sont déroulées hors de votre contrôle?\"">
+				>
+				["at0018"] = <
+					text = <"Ont senti que les difficultés s'accumulaient et ne pouvaient pas les surmonter">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous senti que les difficultés s'accumulaient si haut que vous ne pouviez pas les surmonter?\"">
+				>
+				["at0019"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0020"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour saisir le contenu local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
+				>
+				["at0021"] = <
+					text = <"Score total">
+					description = <"Après avoir inversé les scores des quatre items positifs (items 4, 5, 7 et 8 - (c'est-à-dire 0 => 4 ; 1 => 3 ; 2 => 2 ; 3 => 1 ; 4 => 0) - déjà inversé dans cet archétype), le score total PSS-10 est obtenu en additionnant les 10 items. Des scores plus élevés indiquaient un niveau plus élevé de stress perçu.
+">
+				>
+				["at0022"] = <
+					text = <"Interprétation du score total">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Stress faible">
+					description = <"Les scores allant de 0 à 13.">
+				>
+				["at0024"] = <
+					text = <"Stress modéré">
+					description = <"Les scores allant de 14 à 26.">
+				>
+				["at0025"] = <
+					text = <"Stress perçu élevé">
+					description = <"Les scores allant de 27 à 40.">
+				>
+				["at0026"] = <
+					text = <"Jamais">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Presque jamais">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Parfois">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Assez souvent">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Très souvent">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Commentaire">
+					description = <"Récit supplémentaire sur l'observation, non capturé dans d'autres champs.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fragen zum thema stress (PSS)">
+					description = <"Die Perceived Stress Scale (PSS-10) ist ein 10-Punkte-Fragebogen, der ursprünglich von Cohen et al. (1983) weithin verwendet, um das Stressniveau bei Jugendlichen und Erwachsenen ab 12 Jahren zu beurteilen. Es bewertet, inwieweit eine Person das Leben im vergangenen Monat als unvorhersehbar, unkontrollierbar und überlastend empfunden hat.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Im letzten Monat">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Wegen etwas Unerwartetem verärgert gewesen sein">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat darüber aufgeregt, dass etwas völlig Unerwartetes eingetreten ist?\"">
+				>
+				["at0005"] = <
+					text = <"Nie">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Selten">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Manchmal">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Häufig">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Sehr oft">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Hatte das Gefühl, die wichtigen Dinge im Leben nicht kontrollieren zu können">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, wichtige Dinge in Ihrem Leben nicht beeinflussen zu können?\"">
+				>
+				["at0011"] = <
+					text = <"Habe mich nervös und gestresst gefühlt">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat nervös und „gestresst\" gefühlt?\"">
+				>
+				["at0012"] = <
+					text = <"Haben sich in Bezug auf die Fähigkeit, mit persönlichen Problemen umzugehen, sicher gefühlt">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat sicher im Umgang mitpersönlichen Aufgaben und Problemen gefühlt?\"">
+				>
+				["at0013"] = <
+					text = <"Haben gespürt, dass die Dinge in die gewünschte Richtung laufen">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl. dass sich die Dinge nach Ihren Vorstellungen entwickeln?\"">
+				>
+				["at0014"] = <
+					text = <"Habe festgestellt, dass ich mit all den Dingen, die zu tun hatten, nicht fertig werden konnte">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, mit all den anstehenden Aufgaben und Problemen nicht richtig umgehen zu können?\"">
+				>
+				["at0015"] = <
+					text = <"Have been able to control irritations in life">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, mit Ärger in Ihrem Leben klar zu kommen?\"">
+				>
+				["at0016"] = <
+					text = <"Haben das Gefühl, dass die Dinge im Vordergrund standen">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, alles im Griff zu
+haben?\"">
+				>
+				["at0017"] = <
+					text = <"Waren verärgert über Dinge, die außerhalb der Kontrolle des Patienten geschehen sind">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat darüber geärgert, wichtige Dinge nicht beeinflussen zu können?\"">
+				>
+				["at0018"] = <
+					text = <"Habe gespürt, dass sich Schwierigkeiten auftürmten, die sie nicht überwinden konnten">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, dass sich die Probleme so aufgestaut haben, dass Sie diese nicht mehr bewältigen können?\"">
+				>
+				["at0019"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0020"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder zur Angleichung an andere Referenzmodelle/Formalismen.">
+					comment = <"Zum Beispiel: lokale Informationsanforderungen oder zusätzliche Metadaten zur Angleichung an FHIR oder CIMI-Äquivalente">
+				>
+				["at0021"] = <
+					text = <"Gesamtpunktzahl">
+					description = <"*After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress. (en)">
+				>
+				["at0022"] = <
+					text = <"Interpretation der Gesamtpunktzahl">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Wenig stress">
+					description = <"Werte von 0 bis 13.">
+				>
+				["at0024"] = <
+					text = <"Moderater stress">
+					description = <"Werte zwischen 14 und 26.">
+				>
+				["at0025"] = <
+					text = <"Hoher empfundener stress">
+					description = <"Werte zwischen 27 und 40.">
+				>
+				["at0026"] = <
+					text = <"Nie">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Selten">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Manchmal">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Häufig">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Sehr oft">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Erzählung über die Beobachtung, die nicht in anderen Bereichen erfasst wurde.">
+				>
+			>
+		>
+	>
