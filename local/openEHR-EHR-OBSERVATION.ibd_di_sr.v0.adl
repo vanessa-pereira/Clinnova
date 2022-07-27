@@ -30,27 +30,52 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"*Evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month. (en)">
+			keywords = <"*Perceived Stress Scale, PSS, PROM, Scale, Stress (en)", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly. (en)">
+			use = <"*The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.
+
+After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 -  (i.e. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.
+
+The PSS is free to use. Permission for use of scales is not necessary when use is for non-profit academic research or non-profit educational purposes. For other uses, please find information on permissions by following the link: https://www.cmu.edu/dietrich/psychology/stress-immunity-disease-lab/scales/revised-pss-request-reply-for-all-requests.pdf (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			use = <"The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.">
+			purpose = <"Evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month.">
+			keywords = <"Perceived Stress Scale, PSS, PROM, Scale, Stress", ...>
+			use = <"The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.
+
+After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 -  (i.e. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.
+
+The PSS is free to use. Permission for use of scales is not necessary when use is for non-profit academic research or non-profit educational purposes. For other uses, please find information on permissions by following the link: https://www.cmu.edu/dietrich/psychology/stress-immunity-disease-lab/scales/revised-pss-request-reply-for-all-requests.pdf">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
+			purpose = <"*Evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month. (en)">
+			keywords = <"*Perceived Stress Scale, PSS, PROM, Scale, Stress (en)", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly. (en)">
+			use = <"*The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.
+
+After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 -  (i.e. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.
+
+The PSS is free to use. Permission for use of scales is not necessary when use is for non-profit academic research or non-profit educational purposes. For other uses, please find information on permissions by following the link: https://www.cmu.edu/dietrich/psychology/stress-immunity-disease-lab/scales/revised-pss-request-reply-for-all-requests.pdf (en)">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Cohen, S., Kamarck, T., and Mermelstein, R. (1983). A global measure of perceived stress. Journal of Health and Social Behavior, 24, 386-396.
+
+Cohen, S. and Williamson, G. Perceived Stress in a Probability Sample of the United States. Spacapan, S. and Oskamp, S. (Eds.) The Social Psychology of Health. Newbury Park, CA: Sage, 1988
+
+Translation of Cohen's 10 item PERCEIVED STRESS SCALE (PSS) courtesy of Prof. Dr. Arndt Büssing, University of Witten/Herdecke(arndt.buessing@uni-wh.de); April2011
+
+Klein, E.M., Brähler, E., Dreier, M. et al. The German version of the Perceived Stress Scale – psychometric characteristics in a representative German community sample. BMC Psychiatry 16, 159 (2016). https://doi.org/10.1186/s12888-016-0875-9">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"eab972a9-e22b-3c56-932f-29c45a1a3e39">
-		["MD5-CAM-1.0.1"] = <"c90a9ab495582e05d31f4e16dbcfc1fe">
+		["MD5-CAM-1.0.1"] = <"eb5824d853faa875f43d06e69fe11e08">
 	>
 
 definition
@@ -171,6 +196,11 @@ definition
 											}
 										}
 									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -201,9 +231,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Perceived Stress Scale (PSS)">
-					description = <"The Perceived Stress Scale (PSS) is a classic stress assessment instrument. The tool, while originally
-developed in 1983, remains a popular choice for helping understand how different situations affect
-patient feelings and perceived stress.">
+					description = <"The Perceived Stress Scale (PSS-10) is a 10-item questionnaire originally developed by Cohen et al. (1983) widely used to assess stress levels in young people and adults aged 12 and above. It evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -219,7 +247,7 @@ patient feelings and perceived stress.">
 				>
 				["at0004"] = <
 					text = <"Have been upset because of something that happened unexpectedly">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you been upset because of something that happened unexpectedly?\"">
 				>
 				["at0005"] = <
 					text = <"Never">
@@ -243,39 +271,39 @@ patient feelings and perceived stress.">
 				>
 				["at0010"] = <
 					text = <"Have felt that was unable to control the important things in life">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you felt that you were unable to control the important things in your life?\"">
 				>
 				["at0011"] = <
 					text = <"Have felt nervous and stressed">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you felt nervous and \"stressed\"?\"">
 				>
 				["at0012"] = <
 					text = <"Have felt confident about ability to handle personal problems">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you felt confident about your ability to handle your personal problems\"">
 				>
 				["at0013"] = <
 					text = <"Have felt that things were going in the desired way">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month. how often have you felt that things were going your way\"">
 				>
 				["at0014"] = <
 					text = <"Have found that could not cope with all the things that had to do">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you found that you could not cope with all the things that you had to do?\"">
 				>
 				["at0015"] = <
 					text = <"Have been able to control irritations in life">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you been able to control irritations in your life?\"">
 				>
 				["at0016"] = <
 					text = <"Have felt that were on top of things">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you felt that you were on top of things?\"">
 				>
 				["at0017"] = <
 					text = <"Have been angered because of things that happened outside of patient control">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you been angered because of things that were outside of your control?\"">
 				>
 				["at0018"] = <
 					text = <"Have felt difficulties were piling up high that could not overcome them">
-					description = <"Original question: ">
+					description = <"Original question: \"In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?\"">
 				>
 				["at0019"] = <
 					text = <"Item tree">
@@ -287,7 +315,7 @@ patient feelings and perceived stress.">
 				>
 				["at0021"] = <
 					text = <"Total score">
-					description = <"">
+					description = <"After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.">
 				>
 				["at0022"] = <
 					text = <"Total score interpretation">
@@ -325,15 +353,17 @@ patient feelings and perceived stress.">
 					text = <"Very often">
 					description = <"">
 				>
+				["at0031"] = <
+					text = <"Comment">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Perceived Stress Scale (PSS) (en)">
-					description = <"*The Perceived Stress Scale (PSS) is a classic stress assessment instrument. The tool, while originally
-developed in 1983, remains a popular choice for helping understand how different situations affect
-patient feelings and perceived stress. (en)">
+					description = <"L'échelle de stress perçu (PSS-10) est un questionnaire en 10 items développé à l'origine par Cohen et al. (1983) largement utilisé pour évaluer les niveaux de stress chez les jeunes et les adultes âgés de 12 ans et plus. Il évalue dans quelle mesure un individu a perçu la vie comme imprévisible, incontrôlable et surchargée au cours du mois précédent.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -349,7 +379,7 @@ patient feelings and perceived stress. (en)">
 				>
 				["at0004"] = <
 					text = <"*Have been upset because of something that happened unexpectedly (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you been upset because of something that happened unexpectedly?\" (en)">
 				>
 				["at0005"] = <
 					text = <"*Never (en)">
@@ -373,39 +403,39 @@ patient feelings and perceived stress. (en)">
 				>
 				["at0010"] = <
 					text = <"*Have felt that was unable to control the important things in life (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you felt that you were unable to control the important things in your life?\" (en)">
 				>
 				["at0011"] = <
 					text = <"*Have felt nervous and stressed (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you felt nervous and \"stressed\"?\" (en)">
 				>
 				["at0012"] = <
 					text = <"*Have felt confident about ability to handle personal problems (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you felt confident about your ability to handle your personal problems\" (en)">
 				>
 				["at0013"] = <
 					text = <"*Have felt that things were going in the desired way (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month. how often have you felt that things were going your way\" (en)">
 				>
 				["at0014"] = <
 					text = <"*Have found that could not cope with all the things that had to do (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you found that you could not cope with all the things that you had to do?\" (en)">
 				>
 				["at0015"] = <
 					text = <"*Have been able to control irritations in life (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you been able to control irritations in your life?\" (en)">
 				>
 				["at0016"] = <
 					text = <"*Have felt that were on top of things (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you felt that you were on top of things?\" (en)">
 				>
 				["at0017"] = <
 					text = <"*Have been angered because of things that happened outside of patient control (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you been angered because of things that were outside of your control?\" (en)">
 				>
 				["at0018"] = <
 					text = <"*Have felt difficulties were piling up high that could not overcome them (en)">
-					description = <"">
+					description = <"*Original question: \"In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?\" (en)">
 				>
 				["at0019"] = <
 					text = <"*Item tree (en)">
@@ -417,7 +447,7 @@ patient feelings and perceived stress. (en)">
 				>
 				["at0021"] = <
 					text = <"*Total score (en)">
-					description = <"">
+					description = <"*After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress. (en)">
 				>
 				["at0022"] = <
 					text = <"*Total score interpretation (en)">
@@ -455,22 +485,24 @@ patient feelings and perceived stress. (en)">
 					text = <"*Very often (en)">
 					description = <"">
 				>
+				["at0031"] = <
+					text = <"*Comment (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Perceived Stress Scale (PSS) (en)">
-					description = <"*The Perceived Stress Scale (PSS) is a classic stress assessment instrument. The tool, while originally
-developed in 1983, remains a popular choice for helping understand how different situations affect
-patient feelings and perceived stress. (en)">
+					text = <"Fragen zum thema stress (PSS)">
+					description = <"Die Perceived Stress Scale (PSS-10) ist ein 10-Punkte-Fragebogen, der ursprünglich von Cohen et al. (1983) weithin verwendet, um das Stressniveau bei Jugendlichen und Erwachsenen ab 12 Jahren zu beurteilen. Es bewertet, inwieweit eine Person das Leben im vergangenen Monat als unvorhersehbar, unkontrollierbar und überlastend empfunden hat.">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*In the last month (en)">
+					text = <"Im letzten Monat">
 					description = <"">
 				>
 				["at0003"] = <
@@ -478,8 +510,8 @@ patient feelings and perceived stress. (en)">
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Have been upset because of something that happened unexpectedly (en)">
-					description = <"">
+					text = <"Wegen etwas Unerwartetem verärgert gewesen sein">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat darüber aufgeregt, dass etwas völlig Unerwartetes eingetreten ist?\"">
 				>
 				["at0005"] = <
 					text = <"Nie">
@@ -502,68 +534,70 @@ patient feelings and perceived stress. (en)">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Have felt that was unable to control the important things in life (en)">
-					description = <"">
+					text = <"Hatte das Gefühl, die wichtigen Dinge im Leben nicht kontrollieren zu können">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, wichtige Dinge in Ihrem Leben nicht beeinflussen zu können?\"">
 				>
 				["at0011"] = <
-					text = <"*Have felt nervous and stressed (en)">
-					description = <"">
+					text = <"Habe mich nervös und gestresst gefühlt">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat nervös und „gestresst\" gefühlt?\"">
 				>
 				["at0012"] = <
-					text = <"*Have felt confident about ability to handle personal problems (en)">
-					description = <"">
+					text = <"Haben sich in Bezug auf die Fähigkeit, mit persönlichen Problemen umzugehen, sicher gefühlt">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat sicher im Umgang mitpersönlichen Aufgaben und Problemen gefühlt?\"">
 				>
 				["at0013"] = <
-					text = <"*Have felt that things were going in the desired way (en)">
-					description = <"">
+					text = <"Haben gespürt, dass die Dinge in die gewünschte Richtung laufen">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl. dass sich die Dinge nach Ihren Vorstellungen entwickeln?\"">
 				>
 				["at0014"] = <
-					text = <"*Have found that could not cope with all the things that had to do (en)">
-					description = <"">
+					text = <"Habe festgestellt, dass ich mit all den Dingen, die zu tun hatten, nicht fertig werden konnte">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, mit all den anstehenden Aufgaben und Problemen nicht richtig umgehen zu können?\"">
 				>
 				["at0015"] = <
-					text = <"*Have been able to control irritations in life (en)">
-					description = <"">
+					text = <"Have been able to control irritations in life">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, mit Ärger in Ihrem Leben klar zu kommen?\"">
 				>
 				["at0016"] = <
-					text = <"*Have felt that were on top of things (en)">
-					description = <"">
+					text = <"Haben das Gefühl, dass die Dinge im Vordergrund standen">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, alles im Griff zu
+haben?\"">
 				>
 				["at0017"] = <
-					text = <"*Have been angered because of things that happened outside of patient control (en)">
-					description = <"">
+					text = <"Waren verärgert über Dinge, die außerhalb der Kontrolle des Patienten geschehen sind">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie sich im letzten Monat darüber geärgert, wichtige Dinge nicht beeinflussen zu können?\"">
 				>
 				["at0018"] = <
-					text = <"*Have felt difficulties were piling up high that could not overcome them (en)">
-					description = <"">
+					text = <"Habe gespürt, dass sich Schwierigkeiten auftürmten, die sie nicht überwinden konnten">
+					description = <"Ursprüngliche Frage: \"Wie oft hatten Sie im letzten Monat das Gefühl, dass sich die Probleme so aufgestaut haben, dass Sie diese nicht mehr bewältigen können?\"">
 				>
 				["at0019"] = <
 					text = <"*Item tree (en)">
 					description = <"@ internal @">
 				>
 				["at0020"] = <
-					text = <"*Extension (en)">
-					description = <"">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder zur Angleichung an andere Referenzmodelle/Formalismen.">
+					comment = <"Zum Beispiel: lokale Informationsanforderungen oder zusätzliche Metadaten zur Angleichung an FHIR oder CIMI-Äquivalente">
 				>
 				["at0021"] = <
-					text = <"*Total score (en)">
-					description = <"">
+					text = <"Gesamtpunktzahl">
+					description = <"*After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress. (en)">
 				>
 				["at0022"] = <
-					text = <"*Total score interpretation (en)">
+					text = <"Interpretation der Gesamtpunktzahl">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Low stress (en)">
-					description = <"*Scores ranging from 0 to 13. (en)">
+					text = <"Wenig stress">
+					description = <"Werte von 0 bis 13.">
 				>
 				["at0024"] = <
-					text = <"*Moderate stress (en)">
-					description = <"*Scores ranging from 14 to 26. (en)">
+					text = <"Moderater stress">
+					description = <"Werte zwischen 14 und 26.">
 				>
 				["at0025"] = <
-					text = <"*High perceived stress (en)">
-					description = <"*Scores ranging from 27 to 40. (en)">
+					text = <"Hoher empfundener stress">
+					description = <"Werte zwischen 27 und 40.">
 				>
 				["at0026"] = <
 					text = <"*Never (en)">
@@ -584,6 +618,10 @@ patient feelings and perceived stress. (en)">
 				["at0030"] = <
 					text = <"*Very often (en)">
 					description = <"">
+				>
+				["at0031"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Erzählung über die Beobachtung, die nicht in anderen Bereichen erfasst wurde.">
 				>
 			>
 		>
