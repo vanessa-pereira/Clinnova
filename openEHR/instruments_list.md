@@ -10,7 +10,7 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
 | Short IBD-related Quality of Life (SIBDQ)                |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.sibdq.v0.adl)| in dev review| PROM / Yes         |
-| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)|| in progress  | PROM /  No        |
+| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No        |
 | Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes     |
 | Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No          |
 | Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              |             |
