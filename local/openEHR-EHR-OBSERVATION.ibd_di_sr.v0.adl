@@ -78,8 +78,8 @@ Klein, E.M., Brähler, E., Dreier, M. et al. The German version of the Perceived
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9e1f41d0ab0d40c7026c4f613387df86">
 		["build_uid"] = <"eab972a9-e22b-3c56-932f-29c45a1a3e39">
-		["MD5-CAM-1.0.1"] = <"20d336b5b61da548c1f0250e56ce8781">
 	>
 
 definition
@@ -382,64 +382,65 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Have been upset because of something that happened unexpectedly (en)">
-					description = <"*Original question: \"In the last month, how often have you been upset because of something that happened unexpectedly?\" (en)">
+					text = <"Ont été bouleversés à cause de quelque chose qui s'est produit de façon inattendue">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous été bouleversé à cause d'un événement inattendu?\"">
 				>
 				["at0005"] = <
-					text = <"*Never (en)">
+					text = <"Jamais">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*Almost never (en)">
+					text = <"Presque jamais">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*Sometimes (en)">
+					text = <"Parfois">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*Fairly often (en)">
+					text = <"Assez souvent">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Very often (en)">
+					text = <"Très souvent">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Have felt that was unable to control the important things in life (en)">
-					description = <"*Original question: \"In the last month, how often have you felt that you were unable to control the important things in your life?\" (en)">
+					text = <"Avoir senti qu'il était incapable de contrôler les choses importantes dans la vie">
+					description = <"Question originale: \"Au cours du dernier mois, combien de fois avez-vous eu l'impression de ne pas pouvoir contrôler les choses importantes de votre vie?\"">
 				>
 				["at0011"] = <
-					text = <"*Have felt nervous and stressed (en)">
-					description = <"*Original question: \"In the last month, how often have you felt nervous and \"stressed\"?\" (en)">
+					text = <"Se sont sentis nerveux et stressés">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence vous êtes-vous senti nerveux et stressé?\"">
 				>
 				["at0012"] = <
-					text = <"*Have felt confident about ability to handle personal problems (en)">
-					description = <"*Original question: \"In the last month, how often have you felt confident about your ability to handle your personal problems\" (en)">
+					text = <"Avoir confiance en sa capacité à gérer ses problèmes personnels">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence vous êtes-vous senti confiant quant à votre
+capacité à gérer vos problèmes personnels?\"">
 				>
 				["at0013"] = <
-					text = <"*Have felt that things were going in the desired way (en)">
-					description = <"*Original question: \"In the last month. how often have you felt that things were going your way\" (en)">
+					text = <"Ont senti que les choses allaient dans le sens souhaité">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous senti que les choses allaient dans votre sens?\"">
 				>
 				["at0014"] = <
-					text = <"*Have found that could not cope with all the things that had to do (en)">
-					description = <"*Original question: \"In the last month, how often have you found that you could not cope with all the things that you had to do?\" (en)">
+					text = <"Ont trouvé qu'on ne pouvait pas faire face à toutes les choses qu'il fallait faire">
+					description = <"Question originale: \"Au cours du dernier mois, combien de fois avez-vous constaté que vous ne pouviez pas faire face à toutes les choses que vous deviez faire?\"">
 				>
 				["at0015"] = <
-					text = <"*Have been able to control irritations in life (en)">
-					description = <"*Original question: \"In the last month, how often have you been able to control irritations in your life?\" (en)">
+					text = <"Avoir été capable de contrôler les irritations dans la vie">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous pu contrôler les irritations dans votre vie?\"">
 				>
 				["at0016"] = <
-					text = <"*Have felt that were on top of things (en)">
-					description = <"*Original question: \"In the last month, how often have you felt that you were on top of things?\" (en)">
+					text = <"Avoir l'impression d'être au top">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous senti que vous étiez au courant des choses?\"">
 				>
 				["at0017"] = <
-					text = <"*Have been angered because of things that happened outside of patient control (en)">
-					description = <"*Original question: \"In the last month, how often have you been angered because of things that were outside of your control?\" (en)">
+					text = <"Ont été en colère à cause de choses qui se sont produites en dehors du contrôle du patient">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous été irrité à cause de choses qui se sont déroulées hors de votre contrôle?\"">
 				>
 				["at0018"] = <
-					text = <"*Have felt difficulties were piling up high that could not overcome them (en)">
-					description = <"*Original question: \"In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?\" (en)">
+					text = <"Ont senti que les difficultés s'accumulaient et ne pouvaient pas les surmonter">
+					description = <"Question originale: \"Au cours du dernier mois, à quelle fréquence avez-vous senti que les difficultés s'accumulaient si haut que vous ne pouviez pas les surmonter?\"">
 				>
 				["at0019"] = <
 					text = <"Item tree">
@@ -451,43 +452,44 @@ ontology
 					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires à aligner sur les équivalents FHIR ou CIMI.">
 				>
 				["at0021"] = <
-					text = <"*Total score (en)">
-					description = <"*After reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress. (en)">
+					text = <"Score total">
+					description = <"Après avoir inversé les scores des quatre items positifs (items 4, 5, 7 et 8 - (c'est-à-dire 0 => 4 ; 1 => 3 ; 2 => 2 ; 3 => 1 ; 4 => 0) - déjà inversé dans cet archétype), le score total PSS-10 est obtenu en additionnant les 10 items. Des scores plus élevés indiquaient un niveau plus élevé de stress perçu.
+">
 				>
 				["at0022"] = <
-					text = <"*Total score interpretation (en)">
+					text = <"Interprétation du score total">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*Low stress (en)">
-					description = <"*Scores ranging from 0 to 13. (en)">
+					text = <"Stress faible">
+					description = <"Les scores allant de 0 à 13.">
 				>
 				["at0024"] = <
-					text = <"*Moderate stress (en)">
-					description = <"*Scores ranging from 14 to 26. (en)">
+					text = <"Stress modéré">
+					description = <"Les scores allant de 14 à 26.">
 				>
 				["at0025"] = <
-					text = <"*High perceived stress (en)">
-					description = <"*Scores ranging from 27 to 40. (en)">
+					text = <"Stress perçu élevé">
+					description = <"Les scores allant de 27 à 40.">
 				>
 				["at0026"] = <
-					text = <"*Never (en)">
+					text = <"Jamais">
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"*Almost never (en)">
+					text = <"Presque jamais">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"*Sometimes (en)">
+					text = <"Parfois">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"*Fairly often (en)">
+					text = <"Assez souvent">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"*Very often (en)">
+					text = <"Très souvent">
 					description = <"">
 				>
 				["at0031"] = <
@@ -613,7 +615,7 @@ haben?\"">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"Almost never">
+					text = <"Manchmal">
 					description = <"">
 				>
 				["at0029"] = <
