@@ -33,7 +33,7 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Environmental questionnaire (EQ)                         |              |             |              | PROM / No, trademark of LIH|
 | Standardized voice collection                            |              |             |              | PROM / No, trademark of LIH|
 | Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |[openEHR-EHR-OBSERVATION.phq_9.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |            | PROM / Yes    |
-| Perceived Stress Scale (PSS)                             |Vanessa Pereira| [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.pss.v0.adl)|in progress|PROM / Yes but free to use for research|
+| Perceived Stress Scale (PSS)                             |Vanessa Pereira| [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.pss.v0.adl)|in dev review|PROM / Yes, but free to use for research|
 | Fatigue Severity Scale (FSS)                             |Vanessa Pereira| [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.fss.v0.adl)|in progress|PROM / Yes          |
 | Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)|           |          |             |           |           |
 | Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)|        |          |             |           |           |
