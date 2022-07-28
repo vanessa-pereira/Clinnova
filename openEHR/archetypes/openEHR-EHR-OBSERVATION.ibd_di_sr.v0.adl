@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -21,10 +21,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-07-27">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health / Better">
 		["email"] = <"vanessapereira@pm.com">
-		["date"] = <"2022-07-27">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f3de37f07a5f3a3ebac4c1383e2de051">
+		["MD5-CAM-1.0.1"] = <"b4610745d4b7907e568d43477f38a3cf">
 		["build_uid"] = <"e3d2e565-bd6c-3409-b2b3-bd3f4071d159">
 	>
 
@@ -57,7 +57,34 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- How would rate health today
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- How much stomach or abdomen ached or pains had last week
+										value matches {
+											DV_ORDINAL matches {*}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- How many liquid or very soft stools had last week
+										value matches {
+											DV_COUNT matches {*}
+										}
+										name matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0007,    -- How many liquid or very soft stools had last week
+													at0008]    -- How many liquid or very soft stool had per day on average in the last 7 days
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -85,6 +112,26 @@ ontology
 					text = <"Tree">
 					description = <"@ internal @">
 				>
+				["at0004"] = <
+					text = <"How would rate health today">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"How much stomach or abdomen ached or pains had last week">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"How many liquid or very soft stools had last week">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"How many liquid or very soft stools had last week">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"How many liquid or very soft stool had per day on average in the last 7 days">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
@@ -105,6 +152,26 @@ ontology
 					text = <"Tree">
 					description = <"@ internal @">
 				>
+				["at0004"] = <
+					text = <"*How would rate health today (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*How much stomach or abdomen ached or pains had last week (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*How many liquid or very soft stools had last week (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*How many liquid or very soft stools had last week (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*How many liquid or very soft stool had per day on average in the last 7 days (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -124,6 +191,26 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*How would rate health today (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*How much stomach or abdomen ached or pains had last week (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*How many liquid or very soft stools had last week (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*How many liquid or very soft stools had last week (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*How many liquid or very soft stool had per day on average in the last 7 days (en)">
+					description = <"">
 				>
 			>
 		>
