@@ -9,10 +9,10 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
-| Short IBD-related Quality of Life (SIBDQ)                |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.sibdq.v0.adl)| in dev review| PROM / Yes         |
-| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No        |
-| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes     |
-| Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No          |
+| Short IBD-related Quality of Life (SIBDQ)                |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sibdq.v0.adl)| in dev review| PROM / Yes         |
+| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No        |
+| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes     |
+| Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No          |
 | Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              |             |
 | Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|             | in progress  | CROM / Yes                   |
 | Lémann Index (bowel damage)                              |              |             |              | PROM /             |
@@ -33,8 +33,8 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Environmental questionnaire (EQ)                         |              |             |              | PROM / No, trademark of LIH|
 | Standardized voice collection                            |              |             |              | PROM / No, trademark of LIH|
 | Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |[openEHR-EHR-OBSERVATION.phq_9.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |            | PROM / Yes    |
-| Perceived Stress Scale (PSS)                             |Vanessa Pereira| [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.pss.v0.adl)|in dev review|PROM / Yes, but free to use for research|
-| Fatigue Severity Scale (FSS)                             |Vanessa Pereira| [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.fss.v0.adl)|in progress|PROM / Yes          |
+| Perceived Stress Scale (PSS)                             |Vanessa Pereira| [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.pss.v0.adl)|in dev review|PROM / Yes, but free to use for research|
+| Fatigue Severity Scale (FSS)                             |Vanessa Pereira| [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.fss.v0.adl)|in progress|PROM / Yes          |
 | Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)|           |          |             |           |           |
 | Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)|        |          |             |           |           |
 | ~~Endoscopic partial Mayo score (PMES)~~                 |              |             | **cancelled**    |                    |
