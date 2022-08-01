@@ -7,13 +7,15 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 
 ### Inflammatory bowel disease (IBD)
 
+> **_NOTE:_** in the url column, the archetype id's without prefix "openEHR-EHR-" means they are not in the openEHR international CKM and are newly made.
+
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
 | Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No        |
 | Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes     |
 | Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No          |
 | Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              |             |
-| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|             | in progress  | CROM / Yes                   |
+| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|[OBSERVATION.cdai.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | CROM / Yes                   |
 | Lémann Index (bowel damage)                              |              |             |              | PROM /             |
 | Harvey Bradshaw Index Crohn's activity index (HBI)       |              |             |              | PROM / No          |
 | Crohn Disease - Patient reported outcome (CD-PRO-2)      |              |             |              | PROM /             |
