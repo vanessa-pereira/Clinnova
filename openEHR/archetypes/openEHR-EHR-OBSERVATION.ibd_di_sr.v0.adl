@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"10b790f3710a80c88a88f56085e5a392">
+		["MD5-CAM-1.0.1"] = <"6a2b074ef129ab0ae6d9b8be74149c76">
 		["build_uid"] = <"e3d2e565-bd6c-3409-b2b3-bd3f4071d159">
 	>
 
@@ -133,6 +133,16 @@ definition
 											4|[local::at0040],
 											5|[local::at0041],
 											6|[local::at0042]
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -338,6 +348,14 @@ ontology
 					text = <"Extension">
 					description = <"">
 				>
+				["at0045"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Comment">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
@@ -522,6 +540,14 @@ ontology
 					text = <"*Extension (en)">
 					description = <"">
 				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*Comment (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -704,6 +730,14 @@ ontology
 				>
 				["at0044"] = <
 					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*Comment (en)">
 					description = <"">
 				>
 			>
