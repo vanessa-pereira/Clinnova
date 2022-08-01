@@ -9,7 +9,6 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
-| Short IBD-related Quality of Life (SIBDQ)                |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sibdq.v0.adl)| in dev review| PROM / Yes         |
 | Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No        |
 | Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes     |
 | Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No          |
@@ -22,10 +21,8 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Simple Endoscopic Score for Crohn Disease (SES-CD)       |              |             |              |                    |
 | Ulcerative Colitis Endoscopic Index of Severity (UCEIS)  |              |             |              |                    |
 | Simple Clinical Colitis Activity Index (SCCAI)           |              |             |              | PROM / No          |
-| Morisky Medication Adherence Scale (MMAS-8)              |              |             |              |                    |
 | The Montreal classification for Crohn disease and ulcerative colitis    |             |              |                    |
 | Nancy histological index for ulcerative colitis          |              |             |              |                    |
-| Visual analogue scale of Medication Adherence (VAS-MA)   |              |             |will use vas cluster?| PROM /      |
 | 5-item Medication adherence Scale (MARS-5)               |              |             |              | PROM / Yes         |
 | Pittsburgh Sleep Quality Index (PSQI)                    |              |             |              | PROM / Yes         |
 | Health questionnaire (EQ-5D-5L)                          |Ian McNicoll  |             | in progress  | PROM /             |
@@ -37,7 +34,10 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Fatigue Severity Scale (FSS)                             |Vanessa Pereira| [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.fss.v0.adl)|in progress|PROM / Yes          |
 | Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)|           |          |             |           |           |
 | Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)|        |          |             |           |           |
-| ~~Endoscopic partial Mayo score (PMES)~~                 |              |             | **cancelled**    |                    |
+| ~~Short IBD-related Quality of Life (SIBDQ)~~               |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sibdq.v0.adl)|**cancelled**| PROM / Yes |
+| ~~Morisky Medication Adherence Scale (MMAS-8)~~              |              |             |**cancelled**|                    |
+| ~~Visual analogue scale of Medication Adherence (VAS-MA)~~   |              |             |**cancelled**| PROM /      |
+| ~~Endoscopic partial Mayo score (PMES)~~                 |              |             |**cancelled**    |                    |
 | ~~Multidimensional fatigue inventory (MFI)~~             |              |             | **cancelled**    |                    |
 | ~~Hospital Anxiety and Depression Scale (HADS)~~         |Highmed       | [openEHR-EHR-OBSERVATION.hads.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1751) | **canceled**, subst by PHQ-9| PROM / Yes  |
 | ~~Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)~~ | Highmed  |[openEHR-EHR-OBSERVATION.wpai_gh.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1737) | **canceled**, subst by WPAI:UC & WPAI:CD| PROM /          |
