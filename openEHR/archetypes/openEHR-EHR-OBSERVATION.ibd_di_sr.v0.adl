@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"213216d246f1639baf6d5bf53bc8ed01">
+		["MD5-CAM-1.0.1"] = <"10b790f3710a80c88a88f56085e5a392">
 		["build_uid"] = <"e3d2e565-bd6c-3409-b2b3-bd3f4071d159">
 	>
 
@@ -160,7 +160,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Item Reduced Inflammatory Bowel Disease Disability Index Self Report">
-					description = <"ibd_di_sr">
+					description = <"The IBD-DI-SR is an 8-item self-reported questionnaire. It assesses IBD-related disability. The score goes from -26 to 6. Extreme negative values indicate a disability. There is no cut-off value yet for this shortened version. ">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -344,7 +344,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"*Item Reduced Inflammatory Bowel Disease Disability Index Self Report (en)">
-					description = <"*ibd_di_sr (en)">
+					description = <"*The IBD-DI-SR is an 8-item self-reported questionnaire. It assesses IBD-related disability. The score goes from -26 to 6. Extreme negative values indicate a disability. There is no cut-off value yet for this shortened version.  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -528,7 +528,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"*Item Reduced Inflammatory Bowel Disease Disability Index Self Report (en)">
-					description = <"*ibd_di_sr (en)">
+					description = <"*The IBD-DI-SR is an 8-item self-reported questionnaire. It assesses IBD-related disability. The score goes from -26 to 6. Extreme negative values indicate a disability. There is no cut-off value yet for this shortened version.  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
