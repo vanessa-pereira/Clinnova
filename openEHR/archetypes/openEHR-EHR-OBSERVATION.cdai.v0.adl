@@ -31,7 +31,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"49c26626d61c0cdab7cdc62b2a1360e9">
+		["MD5-CAM-1.0.1"] = <"5b9b935b18d9a63c48803494e1daa41e">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
@@ -114,6 +114,10 @@ definition
 												value matches {
 													DV_COUNT matches {*}
 												}
+											}
+											allow_archetype ELEMENT[at0045] occurrences matches {0..*} matches {    -- Weight
+												include
+													archetype_id/value matches {/.*/}
 											}
 										}
 									}
@@ -345,6 +349,10 @@ ontology
 				>
 				["at0044"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Weight">
 					description = <"">
 				>
 			>
