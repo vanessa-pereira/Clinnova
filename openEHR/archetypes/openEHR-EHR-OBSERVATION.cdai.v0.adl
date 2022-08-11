@@ -18,7 +18,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"The Crohn's Disease Activity Index (CDAI) is used in clinical trials to assess disease activity in Crohn's.">
+			purpose = <"The Crohn's Disease Activity Index (CDAI) is used in clinical trials to assess disease activity in Crohn's disease. Crohn disease is a chronic transmural inflammatory bowel disease that usually affects the distal ileum and colon but may occur in any part of the gastrointestinal tract. Symptoms include diarrhea and abdominal pain. Abscesses, internal and external fistulas, and bowel obstruction may arise. Extraintestinal symptoms, particularly arthritis, may occur.">
 			keywords = <"Crohn's Disease Activity Index, CDAI, PROM", ...>
 			use = <"While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. 
 Copyright statement: Copyright © 1976 The Williams & Wilkins Co. Published by Elsevier Inc. All rights reserved.">
@@ -40,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"873733c8360b668a13d56fe8d0a754dc">
+		["MD5-CAM-1.0.1"] = <"c34e8881f49be9f782b72334d0aceb01">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
