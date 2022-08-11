@@ -18,8 +18,17 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"The Crohn's Disease Activity Index (CDAI) is used in clinical trials to assess disease activity in Crohn's.">
+			keywords = <"Crohn's Disease Activity Index, CDAI, PROM", ...>
 			use = <"While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. 
 Copyright statement: Copyright © 1976 The Williams & Wilkins Co. Published by Elsevier Inc. All rights reserved.">
+			misuse = <"CDAI has some limitations, which include:
+- interobserver variability
+- ratings of 'general well being' and 'intensity of abdominal pain' are subjective
+- stool frequency is based on a diary filled in by the patient for 7 days before evaluation which doesn't generally get done in routine clinical practice
+- it is not accurate in patients with fistulizing and stenosing disease
+- it is not useful in patients with previous extensive ileo-colonic resections or stoma
+">
 		>
 	>
 	other_details = <
@@ -31,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5b9b935b18d9a63c48803494e1daa41e">
+		["MD5-CAM-1.0.1"] = <"873733c8360b668a13d56fe8d0a754dc">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
@@ -44,19 +53,19 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Patient reported stool pattern
+									CLUSTER[at0004] matches {    -- Patient reported stool pattern
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Average number of liquid or soft stools per day over seven days
+											ELEMENT[at0005] matches {    -- Average number of liquid or soft stools per day over seven days
 												value matches {
 													DV_COUNT matches {*}
 												}
 											}
-											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Multiplier result for the number of liquid or soft stools
+											ELEMENT[at0015] matches {    -- Multiplier result for the number of liquid or soft stools
 												value matches {
 													DV_COUNT matches {*}
 												}
 											}
-											ELEMENT[at0006] occurrences matches {0..1} matches {    -- Using diphenoxylate or loperimide for diarrhea
+											ELEMENT[at0006] matches {    -- Using diphenoxylate or loperimide for diarrhea
 												value matches {
 													30|[local::at0007],
 													0|[local::at0008]
@@ -64,7 +73,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Average abdominal pain rating over seven days
+									ELEMENT[at0009] matches {    -- Average abdominal pain rating over seven days
 										value matches {
 											0|[local::at0010],
 											35|[local::at0011],
@@ -72,7 +81,7 @@ definition
 											105|[local::at0013]
 										}
 									}
-									ELEMENT[at0014] occurrences matches {0..1} matches {    -- General well being each day over seven days
+									ELEMENT[at0014] matches {    -- General well being each day over seven days
 										value matches {
 											0|[local::at0016],
 											49|[local::at0017],
@@ -91,44 +100,89 @@ definition
 											20|[local::at0027]
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Finding of an abdominal mass
+									ELEMENT[at0028] matches {    -- Finding of an abdominal mass
 										value matches {
 											0|[local::at0029],
 											20|[local::at0030],
 											50|[local::at0031]
 										}
 									}
-									CLUSTER[at0032] occurrences matches {0..1} matches {    -- Anemia and weight change
+									CLUSTER[at0032] matches {    -- Anemia and weight change
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0033] occurrences matches {0..1} matches {    -- Absolute deviation of hematocrit from 47% in males or 42% in females
+											ELEMENT[at0033] matches {    -- Absolute deviation of hematocrit from 47% in males or 42% in females
 												value matches {
 													DV_COUNT matches {*}
 												}
 											}
-											ELEMENT[at0034] occurrences matches {0..1} matches {    -- Multiplier result for the absolute deviation of hematocrit
+											ELEMENT[at0034] matches {    -- Multiplier result for the absolute deviation of hematocrit
 												value matches {
 													DV_COUNT matches {*}
 												}
 											}
-											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Percentage deviation from standard weight
+											ELEMENT[at0046] matches {    -- Gender
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Male
+															at0048]    -- Female
+														}
+													}
+												}
+											}
+											ELEMENT[at0049] matches {    -- Current body weight
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::124]>
+														list = <
+															["1"] = <
+																units = <"kg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"kg">
+															>
+															["2"] = <
+																units = <"[lb_av]">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"lbm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0050] matches {    -- Standard body weight
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::124]>
+														list = <
+															["1"] = <
+																units = <"kg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"kg">
+															>
+															["2"] = <
+																units = <"[lb_av]">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"lbm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0035] matches {    -- Percentage deviation from standard weight
 												value matches {
 													DV_COUNT matches {*}
 												}
-											}
-											allow_archetype ELEMENT[at0045] occurrences matches {0..*} matches {    -- Weight
-												include
-													archetype_id/value matches {/.*/}
 											}
 										}
 									}
-									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Total score
+									ELEMENT[at0036] matches {    -- Total score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..1100|}
 											}
 										}
 									}
-									ELEMENT[at0037] occurrences matches {0..1} matches {    -- Total score interpretation
+									ELEMENT[at0037] matches {    -- Total score interpretation
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
@@ -351,8 +405,28 @@ ontology
 					text = <"Extension">
 					description = <"">
 				>
-				["at0045"] = <
-					text = <"Weight">
+				["at0046"] = <
+					text = <"Gender">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Male">
+					description = <"Patient is male.">
+				>
+				["at0048"] = <
+					text = <"Female">
+					description = <"Patient is female.">
+				>
+				["at0049"] = <
+					text = <"Current body weight">
+					description = <"">
+				>
+				["[lb_av]"] = <
+					text = <"Pounds">
+					description = <"pound mass">
+				>
+				["at0050"] = <
+					text = <"Standard body weight">
 					description = <"">
 				>
 			>
