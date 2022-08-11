@@ -1,0 +1,72 @@
+archetype (adl_version=1.4; uid=f5496fce-fd97-4b3d-8afc-bdedf36e1518)
+	openEHR-EHR-OBSERVATION.cd_pro_2.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+		["date"] = <"2022-08-11">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"2 Item Crohn's Disease, Patient reported outcome, CD-PRO-2, PROM", ...>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["references"] = <"Khanna R, Zou G, D'haens G, Feagan B, Sandborn W, Vandervoort M, et al. A retrospective analysis: the development of patient reported outcome measures for the assessment of Crohn's disease activity. Alimentary pharmacology & therapeutics. 2015;41(1):77-86.">
+		["MD5-CAM-1.0.1"] = <"c9cb2a4e74a606e50a86ebbc37667f28">
+		["build_uid"] = <"b5304988-1401-3114-bdc6-6e8695624772">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- 2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2)">
+					description = <"2-item Crohn Disease Patient-Reported Outcome (CDPRO2) is a self-reported questionnaire and consists of two questions. The patient has to answer these questions daily for seven days. Cut-offs are mean daily stool frequency ≤1.5, abdominal pain ≤1, and general well-being score of ≤1. ">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
