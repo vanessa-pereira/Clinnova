@@ -1,0 +1,303 @@
+archetype (adl_version=1.4; uid=5cdf4d40-fc76-4854-8284-3e5c19cf1766)
+	openEHR-EHR-OBSERVATION.wpai_cd.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["application"] = <"Adl Designer">
+			>
+			other_details = <
+				["notes"] = <"Generated automatically by Adl Designer">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-08-12">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			other_details = <
+				["notes"] = <"Generated automatically by Adl Designer">
+			>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
+		["MD5-CAM-1.0.1"] = <"2971386952c53ec5550f3411e2252705">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Currently employed
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- Yes
+													at0006]    -- No
+												}
+											}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Miss from work due to health problems
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"h">
+														magnitude = <|>=0.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Miss from work due to other reasons
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"h">
+														magnitude = <|>=0.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Hours actually working
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"h">
+														magnitude = <|>=0.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Affection of health problems
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..10|}
+											}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Affection of health problems on daily activities
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..10|}
+											}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0012] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD)">
+					description = <"WPAI-CD">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Currently employed">
+					description = <"Are you currently employed (working for pay)?">
+					comment = <"If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities).">
+				>
+				["at0005"] = <
+					text = <"Yes">
+					description = <"Yes">
+				>
+				["at0006"] = <
+					text = <"No">
+					description = <"No">
+				>
+				["at0007"] = <
+					text = <"Miss from work due to health problems">
+					description = <"During the past seven days, how many hours did you miss from work because of your health problems?">
+					comment = <"This question is about the past seven days, not including today.
+Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study.">
+				>
+				["at0008"] = <
+					text = <"Miss from work due to other reasons">
+					description = <"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?">
+					comment = <"This question is about the past seven days, not including today.">
+				>
+				["at0009"] = <
+					text = <"Hours actually working">
+					description = <"During the past seven days, how many hours did you actually work?">
+					comment = <"This question is about the past seven days, not including today.
+If “0”, skip to question 6 (Affection of health problems on daily activities).">
+				>
+				["at0010"] = <
+					text = <"Affection of health problems">
+					description = <"During the past seven days, how much did your health problems affect your productivity while you were working? Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".">
+					comment = <"This question is about the past seven days, not including today.
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.">
+				>
+				["at0011"] = <
+					text = <"Affection of health problems on daily activities">
+					description = <"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".">
+					comment = <"This question is about the past seven days, not including today.
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Comment">
+					description = <"Additional narrative on the WPAI Questionnaire.">
+				>
+				["at0014"] = <
+					text = <"Extension">
+					description = <"Additional narrative, not captured in other fields.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität (WPAI) (GH:2.0)">
+					description = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität: Allgemeine Gesundheit V2.0 (WPAI:GH).">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Jedes Ereignis">
+					description = <"Standard, nicht spezifizierter Zeitpunkt oder Intervallereignis, das explizit in einer Vorlage oder zur Laufzeit definiert werden kann.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Derzeit beschäftigt">
+					description = <"Sind Sie derzeit erwerbstätig (gegen Bezahlung)?">
+					comment = <"Falls NEIN, kreuzen Sie \"NEIN\" an und gehen Sie zu Frage 6 (Auswirkungen von Gesundheitsproblemen auf die täglichen Aktivitäten) über.">
+				>
+				["at0005"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0006"] = <
+					text = <"Nein">
+					description = <"Nein">
+				>
+				["at0007"] = <
+					text = <"Fernbleiben von der Arbeit aufgrund von Gesundheitsproblemen">
+					description = <"Wie viele Stunden haben Sie in den letzten sieben Tagen wegen Ihrer gesundheitlichen Probleme der Arbeit ferngeblieben?">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet.
+Geben Sie auch die Stunden an, die Sie aufgrund von Krankheitstagen versäumt haben, sowie die Zeiten, in denen Sie wegen Ihrer Gesundheitsprobleme zu spät gekommen sind, früher gegangen sind usw. Berücksichtigen Sie nicht die Zeit, die Sie für die Teilnahme an dieser Studie versäumt haben.">
+				>
+				["at0008"] = <
+					text = <"Fernbleiben von der Arbeit aus anderen Gründen">
+					description = <"Wie viele Stunden haben Sie in den letzten sieben Tagen aus anderen Gründen nicht gearbeitet, z. B. wegen Urlaub, Feiertagen, Freistellung für die Teilnahme an dieser Studie?">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, ohne den heutigen Tag.">
+				>
+				["at0009"] = <
+					text = <"Tatsächlich geleistete Arbeitsstunden">
+					description = <"Wie viele Stunden haben Sie in den letzten sieben Tagen tatsächlich gearbeitet?">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, ohne den heutigen Tag.
+Wenn \"0\", übergehen Sie zu Frage 6 (Auswirkung von Gesundheitsproblemen auf die täglichen Aktivitäten).">
+				>
+				["at0010"] = <
+					text = <"Befürchtung von Gesundheitsproblemen">
+					description = <"Wie stark haben sich Ihre gesundheitlichen Probleme in den letzten sieben Tagen auf Ihre Produktivität bei der Arbeit ausgewirkt? Dabei bedeutet eine Bewertung von 0 \"Gesundheitsprobleme hatten keine Auswirkungen auf meine Arbeit\" und eine Bewertung von 10 \"Gesundheitsprobleme haben mich vollständig an der Arbeit gehindert\".">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet.
+Denken Sie an Tage, an denen Sie in der Menge oder Art Ihrer Arbeit eingeschränkt waren, an Tage, an denen Sie weniger geschafft haben, als Sie wollten, oder an Tage, an denen Sie Ihre Arbeit nicht so sorgfältig wie sonst erledigen konnten. Wenn gesundheitliche Probleme Ihre Arbeit nur wenig beeinträchtigt haben, wählen Sie eine niedrige Zahl. Wählen Sie eine hohe Zahl, wenn gesundheitliche Probleme Ihre Arbeit stark beeinträchtigt haben.">
+				>
+				["at0011"] = <
+					text = <"Beeinträchtigung der täglichen Aktivitäten durch gesundheitliche Probleme">
+					description = <"Wie sehr haben Ihre Gesundheitsprobleme in den letzten sieben Tagen Ihre Fähigkeit beeinträchtigt, Ihren normalen täglichen Aktivitäten nachzugehen, außer der Arbeit in einem Job?
+Dabei bedeutet eine Bewertung von 0 \"Gesundheitsprobleme hatten keine Auswirkungen auf meine täglichen Aktivitäten\" und eine Bewertung von 10 \"Gesundheitsprobleme haben mich vollständig daran gehindert, meinen täglichen Aktivitäten nachzugehen\".
+
+">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet.
+Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie ausüben, z. B. Arbeiten im Haushalt, Einkaufen, Kinderbetreuung, Sport treiben, lernen usw. Denken Sie an Zeiten, in denen Sie in der Anzahl oder Art Ihrer Aktivitäten eingeschränkt waren und in denen Sie weniger geschafft haben, als Sie wollten. Wenn gesundheitliche Probleme Ihre Aktivitäten nur wenig beeinträchtigt haben, wählen Sie eine niedrige Zahl. Wählen Sie eine hohe Zahl, wenn gesundheitliche Probleme Ihre Aktivitäten sehr stark beeinträchtigt haben.
+
+">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Angaben zum WPAI-Fragebogen.">
+				>
+				["at0014"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+				>
+			>
+		>
+	>
