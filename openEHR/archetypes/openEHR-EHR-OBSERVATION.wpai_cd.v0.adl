@@ -10,10 +10,11 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["application"] = <"Adl Designer">
 			>
-			other_details = <
-				["notes"] = <"Generated automatically by Adl Designer">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
 			>
 		>
 	>
@@ -29,12 +30,18 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD (en)", ...>
 			other_details = <
 				["notes"] = <"Generated automatically by Adl Designer">
 			>
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD", ...>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -43,8 +50,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e6ba278cf2433a9945800fd83b0ad1e4">
 		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
-		["MD5-CAM-1.0.1"] = <"2971386952c53ec5550f3411e2252705">
 	>
 
 definition
@@ -224,7 +231,7 @@ By regular activities, we mean the usual activities you do, such as work around 
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität (WPAI) (GH:2.0)">
+					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität V2.0 (WPAI-CD)">
 					description = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität: Allgemeine Gesundheit V2.0 (WPAI:GH).">
 				>
 				["at0001"] = <
@@ -297,6 +304,81 @@ Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie a
 				["at0014"] = <
 					text = <"Erweiterung">
 					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD) (en)">
+					description = <"*WPAI-CD (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Currently employed (en)">
+					description = <"*Are you currently employed (working for pay)? (en)">
+					comment = <"*If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities). (en)">
+				>
+				["at0005"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (en)">
+				>
+				["at0006"] = <
+					text = <"*No (en)">
+					description = <"*No (en)">
+				>
+				["at0007"] = <
+					text = <"*Miss from work due to health problems (en)">
+					description = <"*During the past seven days, how many hours did you miss from work because of your health problems? (en)">
+					comment = <"*This question is about the past seven days, not including today.
+Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study. (en)">
+				>
+				["at0008"] = <
+					text = <"*Miss from work due to other reasons (en)">
+					description = <"*During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study? (en)">
+					comment = <"*This question is about the past seven days, not including today. (en)">
+				>
+				["at0009"] = <
+					text = <"*Hours actually working (en)">
+					description = <"*During the past seven days, how many hours did you actually work? (en)">
+					comment = <"*This question is about the past seven days, not including today.
+If “0”, skip to question 6 (Affection of health problems on daily activities). (en)">
+				>
+				["at0010"] = <
+					text = <"*Affection of health problems (en)">
+					description = <"*During the past seven days, how much did your health problems affect your productivity while you were working? Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\". (en)">
+					comment = <"*This question is about the past seven days, not including today.
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal. (en)">
+				>
+				["at0011"] = <
+					text = <"*Affection of health problems on daily activities (en)">
+					description = <"*During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\". (en)">
+					comment = <"*This question is about the past seven days, not including today.
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal. (en)">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative on the WPAI Questionnaire. (en)">
+				>
+				["at0014"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional narrative, not captured in other fields. (en)">
 				>
 			>
 		>
