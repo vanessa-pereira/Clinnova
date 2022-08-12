@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -21,10 +21,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-07-27">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health / Better">
 		["email"] = <"vanessapereira@pm.com">
-		["date"] = <"2022-07-27">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f3de37f07a5f3a3ebac4c1383e2de051">
+		["MD5-CAM-1.0.1"] = <"6a2b074ef129ab0ae6d9b8be74149c76">
 		["build_uid"] = <"e3d2e565-bd6c-3409-b2b3-bd3f4071d159">
 	>
 
@@ -57,8 +57,107 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- How would rate health today
+										value matches {
+											1|[local::at0014],
+											2|[local::at0015],
+											3|[local::at0016],
+											4|[local::at0017],
+											5|[local::at0018]
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- In last week how much stomach or abdomen aches or pains
+										value matches {
+											1|[local::at0019],
+											2|[local::at0020],
+											3|[local::at0021],
+											4|[local::at0022],
+											5|[local::at0023]
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- In last week how many liquid or very soft stools
+										value matches {
+											DV_COUNT matches {*}
+										}
+										name matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0007,    -- How many liquid or very soft stools had last week
+													at0008]    -- How many liquid or very soft stool had per day on average in the last 7 days
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- In last week how much blood had in stool on average
+										value matches {
+											1|[local::at0024],
+											2|[local::at0025],
+											3|[local::at0026]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- In the last week how much difficulty did have with work or home activities
+										value matches {
+											1|[local::at0027],
+											2|[local::at0028],
+											3|[local::at0029],
+											4|[local::at0030],
+											5|[local::at0031]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- In last week how much of a problem did have with feeling sad, low or depressed
+										value matches {
+											1|[local::at0032],
+											2|[local::at0033],
+											3|[local::at0034],
+											4|[local::at0035],
+											5|[local::at0036]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- In last week how much of a problem did have with worry or anxiety
+										value matches {
+											1|[local::at0032],
+											2|[local::at0033],
+											3|[local::at0034],
+											4|[local::at0035],
+											5|[local::at0036]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- In the last week did family lessen problems and difficulties
+										value matches {
+											1|[local::at0037],
+											2|[local::at0038],
+											3|[local::at0039],
+											4|[local::at0040],
+											5|[local::at0041],
+											6|[local::at0042]
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0046] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
 						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0043] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0044] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -71,7 +170,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Item Reduced Inflammatory Bowel Disease Disability Index Self Report">
-					description = <"ibd_di_sr">
+					description = <"The IBD-DI-SR is an 8-item self-reported questionnaire. It assesses IBD-related disability. The score goes from -26 to 6. Extreme negative values indicate a disability. There is no cut-off value yet for this shortened version. ">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -85,13 +184,185 @@ ontology
 					text = <"Tree">
 					description = <"@ internal @">
 				>
+				["at0004"] = <
+					text = <"How would rate health today">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"In last week how much stomach or abdomen aches or pains">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"In last week how many liquid or very soft stools">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"How many liquid or very soft stools had last week">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"How many liquid or very soft stool had per day on average in the last 7 days">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"In last week how much blood had in stool on average">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"In the last week how much difficulty did have with work or home activities">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"In last week how much of a problem did have with feeling sad, low or depressed">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"In last week how much of a problem did have with worry or anxiety">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"In the last week did family lessen problems and difficulties">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Bad">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Very bad">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"No pain">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Mild pain">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Moderate pain">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Severe pain">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Extreme pain">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"A little">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"A lot">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"No difficulty">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Mild difficulty">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Moderate difficulty">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Severe difficulty">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Extreme difficulty or could not do">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Not a problem">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Mild problem">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Moderate problem">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Severe problem">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Extreme problem">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Not applicable">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"No positive effect">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Mild positive effect">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Moderate positive effect">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Great positive effect">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Extreme positive effect">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Comment">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
 			items = <
 				["at0000"] = <
 					text = <"*Item Reduced Inflammatory Bowel Disease Disability Index Self Report (en)">
-					description = <"*ibd_di_sr (en)">
+					description = <"*The IBD-DI-SR is an 8-item self-reported questionnaire. It assesses IBD-related disability. The score goes from -26 to 6. Extreme negative values indicate a disability. There is no cut-off value yet for this shortened version.  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -104,6 +375,178 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*How would rate health today (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*In last week how much stomach or abdomen aches or pains (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*In last week how many liquid or very soft stools (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*How many liquid or very soft stools had last week (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*How many liquid or very soft stool had per day on average in the last 7 days (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*In last week how much blood had in stool on average (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*In the last week how much difficulty did have with work or home activities (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*In last week how much of a problem did have with feeling sad, low or depressed (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*In last week how much of a problem did have with worry or anxiety (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*In the last week did family lessen problems and difficulties (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Very good (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Good (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Moderate (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Bad (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Very bad (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*No pain (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Mild pain (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Moderate pain (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Severe pain (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Extreme pain (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*A little (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*A lot (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*No difficulty (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Mild difficulty (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Moderate difficulty (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Severe difficulty (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Extreme difficulty or could not do (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Not a problem (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Mild problem (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Moderate problem (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Severe problem (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Extreme problem (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Not applicable (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*No positive effect (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*Mild positive effect (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Moderate positive effect (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Great positive effect (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Extreme positive effect (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*Comment (en)">
+					description = <"">
 				>
 			>
 		>
@@ -111,7 +554,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"*Item Reduced Inflammatory Bowel Disease Disability Index Self Report (en)">
-					description = <"*ibd_di_sr (en)">
+					description = <"*The IBD-DI-SR is an 8-item self-reported questionnaire. It assesses IBD-related disability. The score goes from -26 to 6. Extreme negative values indicate a disability. There is no cut-off value yet for this shortened version.  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -124,6 +567,178 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*How would rate health today (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*In last week how much stomach or abdomen aches or pains (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*In last week how many liquid or very soft stools (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*How many liquid or very soft stools had last week (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*How many liquid or very soft stool had per day on average in the last 7 days (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*In last week how much blood had in stool on average (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*In the last week how much difficulty did have with work or home activities (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*In last week how much of a problem did have with feeling sad, low or depressed (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*In last week how much of a problem did have with worry or anxiety (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*In the last week did family lessen problems and difficulties (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Very good (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Good (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Moderate (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Bad (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Very bad (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*No pain (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Mild pain (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Moderate pain (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Severe pain (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Extreme pain (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*A little (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*A lot (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*No difficulty (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Mild difficulty (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Moderate difficulty (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Severe difficulty (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Extreme difficulty or could not do (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Not a problem (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Mild problem (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Moderate problem (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Severe problem (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Extreme problem (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Not applicable (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*No positive effect (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*Mild positive effect (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Moderate positive effect (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Great positive effect (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Extreme positive effect (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*Comment (en)">
+					description = <"">
 				>
 			>
 		>

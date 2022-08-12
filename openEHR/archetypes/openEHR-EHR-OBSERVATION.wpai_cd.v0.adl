@@ -1,5 +1,5 @@
-archetype (adl_version=1.4; uid=33be8135-f1ce-41ad-9072-aab829f9a1b1)
-	openEHR-EHR-OBSERVATION.wpai_gh.v1
+archetype (adl_version=1.4; uid=5cdf4d40-fc76-4854-8284-3e5c19cf1766)
+	openEHR-EHR-OBSERVATION.wpai_cd.v0
 
 concept
 	[at0000]
@@ -10,52 +10,52 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Sarah Ballout">
-				["organisation"] = <"MHH-Hannover">
-				["email"] = <"ballout.sarah@mh-hannover.de">
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
 			>
 		>
 	>
 
 description
 	original_author = <
-		["date"] = <"2022-04-19">
-		["name"] = <"Mareike Joseph">
-		["organisation"] = <"Peter L. Reichertz Institute for Medical Informatics of TU BS and Hannover Medical School">
-		["email"] = <"joseph.mareike@mh-hannover.de">
+		["date"] = <"2022-08-12">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"unmanaged">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"Erfassung der Auswirkungen von Gesundheitsproblemen auf die Fähigkeit einer Person, zu arbeiten und regelmäßige Aktivitäten durchzuführen. Mit Gesundheitsproblemen sind physische oder emotionale Probleme oder Symptome gemeint.">
-			keywords = <"WPAI, Gesundheit, Arbeit, regelmäßige Aktivitäten, Produktivität, Aktivitätsbeeinträchtigung, Test, Fragebogen, allgemeine Gesundheit", ...>
-			use = <"Wird verwendet, um die Auswirkungen von Gesundheitsproblemen auf die Fähigkeit einer Person, zu arbeiten und regelmäßige Aktivitäten durchzuführen, zu erfassen. Mit Gesundheitsproblemen sind physische oder emotionale Probleme oder Symptome gemeint.">
-			misuse = <"Darf nicht zur Aufzeichnung anderer WPAI als WPAI:GH verwendet werden.">
+			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD (en)", ...>
+			other_details = <
+				["notes"] = <"Generated automatically by Adl Designer">
+			>
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To record the effect of health problems on a persons ability to work and perform regular activities. By health problems physical or emotional problems or symptoms are meant.">
-			keywords = <"WPAI, health, work, regular activities, productivity, activity impairment, test, questionnaire, general health", ...>
-			copyright = <"© HiGHmed">
-			use = <"Used to record the effect of health problems on a persons ability to work and perform regular activities. By health problems physical or emotional problem or symptoms are meant.">
-			misuse = <"Not to be used to record other WPAI than WPAI:GH.">
+			keywords = <"Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD", ...>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
-		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["custodian_organisation"] = <"HiGHmed">
-		["references"] = <"http://www.reillyassociates.net/WPAI_GH.html (WPAI:GH English (US) 2.0)">
-		["original_namespace"] = <"org.highmed">
-		["original_publisher"] = <"HiGHmed">
-		["custodian_namespace"] = <"org.highmed">
-		["MD5-CAM-1.0.1"] = <"A92653E749E633CDED46EB5EA3E53986">
-		["build_uid"] = <"0ce68655-445a-41e8-90bb-e9065db2dfd4">
-		["revision"] = <"1.0.1-alpha">
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e6ba278cf2433a9945800fd83b0ad1e4">
+		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
 	>
 
 definition
-	OBSERVATION[at0000] occurrences matches {0..1} matches {    -- Work Productivity and Activity Impairment (WPAI) Questionnaire (GH:2.0)
+	OBSERVATION[at0000] matches {    -- Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -127,6 +127,11 @@ definition
 											}
 										}
 									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -137,11 +142,6 @@ definition
 		protocol matches {
 			ITEM_TREE[at0012] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Comment
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
 					allow_archetype CLUSTER[at0014] occurrences matches {0..*} matches {    -- Extension
 						include
 							archetype_id/value matches {/.*/}
@@ -156,8 +156,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Work Productivity and Activity Impairment (WPAI) Questionnaire (GH:2.0)">
-					description = <"Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH).">
+					text = <"Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD)">
+					description = <"WPAI-CD">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -231,7 +231,7 @@ By regular activities, we mean the usual activities you do, such as work around 
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität (WPAI) (GH:2.0)">
+					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität V2.0 (WPAI-CD)">
 					description = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität: Allgemeine Gesundheit V2.0 (WPAI:GH).">
 				>
 				["at0001"] = <
@@ -304,6 +304,81 @@ Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie a
 				["at0014"] = <
 					text = <"Erweiterung">
 					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD) (en)">
+					description = <"*WPAI-CD (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Currently employed (en)">
+					description = <"*Are you currently employed (working for pay)? (en)">
+					comment = <"*If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities). (en)">
+				>
+				["at0005"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (en)">
+				>
+				["at0006"] = <
+					text = <"*No (en)">
+					description = <"*No (en)">
+				>
+				["at0007"] = <
+					text = <"*Miss from work due to health problems (en)">
+					description = <"*During the past seven days, how many hours did you miss from work because of your health problems? (en)">
+					comment = <"*This question is about the past seven days, not including today.
+Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study. (en)">
+				>
+				["at0008"] = <
+					text = <"*Miss from work due to other reasons (en)">
+					description = <"*During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study? (en)">
+					comment = <"*This question is about the past seven days, not including today. (en)">
+				>
+				["at0009"] = <
+					text = <"*Hours actually working (en)">
+					description = <"*During the past seven days, how many hours did you actually work? (en)">
+					comment = <"*This question is about the past seven days, not including today.
+If “0”, skip to question 6 (Affection of health problems on daily activities). (en)">
+				>
+				["at0010"] = <
+					text = <"*Affection of health problems (en)">
+					description = <"*During the past seven days, how much did your health problems affect your productivity while you were working? Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\". (en)">
+					comment = <"*This question is about the past seven days, not including today.
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal. (en)">
+				>
+				["at0011"] = <
+					text = <"*Affection of health problems on daily activities (en)">
+					description = <"*During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\". (en)">
+					comment = <"*This question is about the past seven days, not including today.
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal. (en)">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative on the WPAI Questionnaire. (en)">
+				>
+				["at0014"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional narrative, not captured in other fields. (en)">
 				>
 			>
 		>

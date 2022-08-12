@@ -1,0 +1,307 @@
+archetype (adl_version=1.4; uid=f5496fce-fd97-4b3d-8afc-bdedf36e1518)
+	openEHR-EHR-OBSERVATION.cd_pro_2.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-08-11">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"2 Item Crohn's Disease, Patient reported outcome, CD-PRO-2, PROM", ...>
+			use = <"This archetype represents a patient assessment that needs to be filled up everyday and when getting the total days necessary to do the calculation for the total scores, a final composition submission must be present. This means that in order to achieve the total score, multi submissions must be sent to the database and in order to achieve this the composition should have different versions during his lifecycle. This archetype includes several single point events which include the total scores for each abdominal pain and number of stools. In the 7 days point events these elements should be constrained to 0 at the template level or in the run time, being only filled in on the interval events for 7 days average and total score where the count and ordinals for number of stools and abdominal pain should be constrained to 0.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Khanna R, Zou G, D'haens G, Feagan B, Sandborn W, Vandervoort M, et al. A retrospective analysis: the development of patient reported outcome measures for the assessment of Crohn's disease activity. Alimentary pharmacology & therapeutics. 2015;41(1):77-86.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"c85756fecaf0f1aed06295bfee932d9c">
+		["build_uid"] = <"b5304988-1401-3114-bdc6-6e8695624772">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- 2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Day 1
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Number of liquid or very soft stools
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- Abdominal pain
+										value matches {
+											0|[local::at0016],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- 7 days average number of liquid or very soft stools
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Total score number of liquid or very soft stools
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- 7 day average abdominal pain
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Total score abdominal pain
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- CD-PRO-2 total score
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::507]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+					}
+					POINT_EVENT[at0109] occurrences matches {0..1} matches {    -- Day 2
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+					}
+					POINT_EVENT[at0122] occurrences matches {0..1} matches {    -- Day 3
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+					}
+					POINT_EVENT[at0135] occurrences matches {0..1} matches {    -- Day 4
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+					}
+					POINT_EVENT[at0148] occurrences matches {0..1} matches {    -- Day 5
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+					}
+					POINT_EVENT[at0161] occurrences matches {0..1} matches {    -- Day 6
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+					}
+					POINT_EVENT[at0174] occurrences matches {0..1} matches {    -- Day 7
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+					}
+					INTERVAL_EVENT[at0175] occurrences matches {0..1} matches {    -- Average 7 days
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[openehr::146]
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P7D}
+							}
+						}
+					}
+					INTERVAL_EVENT[at0188] occurrences matches {0..1} matches {    -- Total score
+						data matches {
+							use_node ITEM_TREE /data[at0001]/events[at0002]/data[at0003]
+						}
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[openehr::146]
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P7D}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0028] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0029] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2)">
+					description = <"2-item Crohn Disease Patient-Reported Outcome (CDPRO2) is a self-reported questionnaire and consists of two questions. The patient has to answer these questions daily for seven days. Cut-offs are mean daily stool frequency ≤1.5, abdominal pain ≤1, and general well-being score of ≤1. The Crohn's Disease Activity Index (CDAI) is a measure of disease activity based on symptoms, signs and a laboratory test. The US Food and Drug Administration has indicated that patient reported outcomes (PROs) should be the primary outcome in randomised controlled trials for Crohn's disease (CD).">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Day 1">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Number of liquid or very soft stools">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Abdominal pain">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"7 days average number of liquid or very soft stools">
+					description = <"Sum of number of liquid or very soft stools from all 7 days dividing by 7">
+				>
+				["at0013"] = <
+					text = <"Total score number of liquid or very soft stools">
+					description = <"Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of liquid or very soft stools) by a weighting factor of x2, then summing the total scores for all eight items.">
+				>
+				["at0016"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Mild">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"7 day average abdominal pain">
+					description = <"Sum of number of abdominal pains ordinals from all 7 days dividing by 7">
+				>
+				["at0027"] = <
+					text = <"Total score abdominal pain">
+					description = <"Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of abdominal pain) by a weighting factor of x5, then summing the total scores for all eight items.">
+				>
+				["at0028"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0029"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"CD-PRO-2 total score">
+					description = <"Sum of the total score element from \"Number of liquid or very soft stools\" cluster and total score element from \"Abdominal pain\" cluster.">
+				>
+				["at0109"] = <
+					text = <"Day 2">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"Day 3">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"Day 4">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"Day 5">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"Day 6">
+					description = <"">
+				>
+				["at0174"] = <
+					text = <"Day 7">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"Average 7 days">
+					description = <"">
+				>
+				["at0188"] = <
+					text = <"Total score">
+					description = <"">
+				>
+			>
+		>
+	>

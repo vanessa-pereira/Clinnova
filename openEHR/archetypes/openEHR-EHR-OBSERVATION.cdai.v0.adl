@@ -1,0 +1,434 @@
+archetype (adl_version=1.4; uid=fe5485ce-f756-4fd4-9885-594a9dafbb4d)
+	openEHR-EHR-OBSERVATION.cdai.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-08-01">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The Crohn's Disease Activity Index (CDAI) is used in clinical trials to assess disease activity in Crohn's disease. Crohn disease is a chronic transmural inflammatory bowel disease that usually affects the distal ileum and colon but may occur in any part of the gastrointestinal tract. Symptoms include diarrhea and abdominal pain. Abscesses, internal and external fistulas, and bowel obstruction may arise. Extraintestinal symptoms, particularly arthritis, may occur.">
+			keywords = <"Crohn's Disease Activity Index, CDAI, PROM", ...>
+			use = <"While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. 
+Copyright statement: Copyright © 1976 The Williams & Wilkins Co. Published by Elsevier Inc. All rights reserved.">
+			misuse = <"CDAI has some limitations, which include:
+- interobserver variability
+- ratings of 'general well being' and 'intensity of abdominal pain' are subjective
+- stool frequency is based on a diary filled in by the patient for 7 days before evaluation which doesn't generally get done in routine clinical practice
+- it is not accurate in patients with fistulizing and stenosing disease
+- it is not useful in patients with previous extensive ileo-colonic resections or stoma
+">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Best WR, Becktel JM, Singleton JW, Kern F Jr. Development of a Crohn's disease activity index. National Cooperative Crohn's Disease Study. Gastroenterology. 1976 Mar;70(3):439-44.PubMed ID: 1248701 PDF: https://www.gastrojournal.org/article/S0016-5085(76)80163-1/pdf 
+
+Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw Index. Inflamm Bowel Dis. 2006 Apr;12(4):304-10. PubMed ID: 16633052">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"c34e8881f49be9f782b72334d0aceb01">
+		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Crohn's Disease Activity Index (CDAI)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] matches {    -- Patient reported stool pattern
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] matches {    -- Average number of liquid or soft stools per day over seven days
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+											ELEMENT[at0015] matches {    -- Multiplier result for the number of liquid or soft stools
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+											ELEMENT[at0006] matches {    -- Using diphenoxylate or loperimide for diarrhea
+												value matches {
+													30|[local::at0007],
+													0|[local::at0008]
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] matches {    -- Average abdominal pain rating over seven days
+										value matches {
+											0|[local::at0010],
+											35|[local::at0011],
+											70|[local::at0012],
+											105|[local::at0013]
+										}
+									}
+									ELEMENT[at0014] matches {    -- General well being each day over seven days
+										value matches {
+											0|[local::at0016],
+											49|[local::at0017],
+											98|[local::at0018],
+											147|[local::at0019],
+											196|[local::at0020]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..6} matches {    -- Complications
+										value matches {
+											20|[local::at0022],
+											20|[local::at0023],
+											20|[local::at0024],
+											20|[local::at0025],
+											20|[local::at0026],
+											20|[local::at0027]
+										}
+									}
+									ELEMENT[at0028] matches {    -- Finding of an abdominal mass
+										value matches {
+											0|[local::at0029],
+											20|[local::at0030],
+											50|[local::at0031]
+										}
+									}
+									CLUSTER[at0032] matches {    -- Anemia and weight change
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0033] matches {    -- Absolute deviation of hematocrit from 47% in males or 42% in females
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+											ELEMENT[at0034] matches {    -- Multiplier result for the absolute deviation of hematocrit
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+											ELEMENT[at0046] matches {    -- Gender
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Male
+															at0048]    -- Female
+														}
+													}
+												}
+											}
+											ELEMENT[at0049] matches {    -- Current body weight
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::124]>
+														list = <
+															["1"] = <
+																units = <"kg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"kg">
+															>
+															["2"] = <
+																units = <"[lb_av]">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"lbm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0050] matches {    -- Standard body weight
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::124]>
+														list = <
+															["1"] = <
+																units = <"kg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"kg">
+															>
+															["2"] = <
+																units = <"[lb_av]">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"lbm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0035] matches {    -- Percentage deviation from standard weight
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0036] matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..1100|}
+											}
+										}
+									}
+									ELEMENT[at0037] matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0038,    -- Asymptomatic remission
+													at0039,    -- Mildly to moderately active Crohn's disease
+													at0040,    -- Moderately to severely active Crohn's disease
+													at0041]    -- Severely active to fulminant disease
+												}
+											}
+										}
+									}
+									ELEMENT[at0042] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0043] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0044] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Crohn's Disease Activity Index (CDAI)">
+					description = <"CDAI">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Patient reported stool pattern">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Average number of liquid or soft stools per day over seven days">
+					description = <"Count 14 points per stool for the final score. The result of the multiplication should be stored in the data element \"Multiplier result for the number of liquid or soft stools\".">
+				>
+				["at0006"] = <
+					text = <"Using diphenoxylate or loperimide for diarrhea">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Average abdominal pain rating over seven days">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Mild pain">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Moderate pain">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Severe pain">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"General well being each day over seven days">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Multiplier result for the number of liquid or soft stools">
+					description = <"Count 14 points per stool from the element/data point \"Average number of liquid or soft stools per day over seven days\" for the final score. ">
+				>
+				["at0016"] = <
+					text = <"Well">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Slightly below average">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Very poor">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Terrible">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Complications">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Arthritis or arthralgia">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Iritis or uveitis">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Erythema nodosum, pyoderma gangrenosum or aphthous stomatitis">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Anal fissure, fistula or abscess">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Other fistula">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Temperature over 37.8 degrees Celsius (100 degrees F) in the last week">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Finding of an abdominal mass">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"No mass">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Possible mass">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Definite mass">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Anemia and weight change">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Absolute deviation of hematocrit from 47% in males or 42% in females">
+					description = <"Absolute deviation of hematocrit is the difference in hematocrit from standard. A male patient with a hematocrit of 40% has an absolute deviation of 7.
+">
+				>
+				["at0034"] = <
+					text = <"Multiplier result for the absolute deviation of hematocrit">
+					description = <"6 points per percent deviation. ">
+				>
+				["at0035"] = <
+					text = <"Percentage deviation from standard weight">
+					description = <"1 point per each percent deviation. Percent deviation from standard weight is (1 - weight/standard weight) * 100, thus positive percent deviation represents weight loss, adding points to the CDAI.">
+				>
+				["at0036"] = <
+					text = <"Total score">
+					description = <"">
+					comment = <"Patients requiring steroids to remain asymptomatic are not considered to be in remission but are referred to as being \"steroid dependent.\"">
+				>
+				["at0037"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Asymptomatic remission">
+					description = <"When total score is from 0 to 149 points.">
+				>
+				["at0039"] = <
+					text = <"Mildly to moderately active Crohn's disease">
+					description = <"When total score is from 150 to 220 points.">
+				>
+				["at0040"] = <
+					text = <"Moderately to severely active Crohn's disease">
+					description = <"When total score is from 221 to 450 points.">
+				>
+				["at0041"] = <
+					text = <"Severely active to fulminant disease">
+					description = <"When total score is from 451 to 1100 points.">
+				>
+				["at0042"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Gender">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Male">
+					description = <"Patient is male.">
+				>
+				["at0048"] = <
+					text = <"Female">
+					description = <"Patient is female.">
+				>
+				["at0049"] = <
+					text = <"Current body weight">
+					description = <"">
+				>
+				["[lb_av]"] = <
+					text = <"Pounds">
+					description = <"pound mass">
+				>
+				["at0050"] = <
+					text = <"Standard body weight">
+					description = <"">
+				>
+			>
+		>
+	>
