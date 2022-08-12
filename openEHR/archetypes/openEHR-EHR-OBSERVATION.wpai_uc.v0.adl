@@ -44,11 +44,11 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"4b1a3cb2-cf67-3267-8988-a98e624de10d">
-		["MD5-CAM-1.0.1"] = <"e09eef5e2b0c74989e69f3010591d64b">
+		["MD5-CAM-1.0.1"] = <"bc99f420cefbaa6e8e98d1c4e199b337">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI:UC)
+	OBSERVATION[at0000] matches {    -- Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -149,7 +149,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI:UC)">
+					text = <"Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC)">
 					description = <"wpai_uc">
 				>
 				["at0001"] = <
@@ -224,7 +224,7 @@ By regular activities, we mean the usual activities you do, such as work around 
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität (WPAI) (GH:2.0)">
+					text = <"*Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC) (en)">
 					description = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität: Allgemeine Gesundheit V2.0 (WPAI:GH).">
 				>
 				["at0001"] = <
