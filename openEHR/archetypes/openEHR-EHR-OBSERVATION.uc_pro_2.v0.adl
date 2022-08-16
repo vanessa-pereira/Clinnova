@@ -18,7 +18,8 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			use = <"The PRO2 questionnaire consists of two separate questions (stool frequency and rectal bleeding), with four response options each, scored from normal (no disease symptoms) to most severe symptoms (0–3) (further detail can be found in “Appendix”). A PRO2 score of 0 indicates inactive UC and a score of 6 indicates active disease and spontaneous bleeding. Patients were also asked to complete additional validated patient-reported outcome (PRO) measures on health-related quality of life and work productivity at baseline and study end but, as these data are not pertinent to the primary objective, they are not presented here.">
+			keywords = <"2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2), UC-PRO-2, UC, PROM", ...>
+			use = <"The UC-PRO-2 questionnaire consists of two separate questions (stool frequency and rectal bleeding), with four response options each, scored from normal (no disease symptoms) to most severe symptoms (0–3). A PRO2 score of 0 indicates inactive UC and a score of 6 indicates active disease and spontaneous bleeding.">
 		>
 	>
 	other_details = <
@@ -29,7 +30,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"30a099c2-b83f-356b-b7b1-67a40bae65ee">
-		["MD5-CAM-1.0.1"] = <"6a294c9e19379ab446c6418e9ccb5c2d">
+		["MD5-CAM-1.0.1"] = <"857d37b68477d16fa3b668eea4e6b0f6">
 	>
 
 definition
@@ -118,7 +119,8 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Stool frequency">
-					description = <"">
+					description = <"Original question: \"Please indicate how you perceive your stool frequency (Based on the
+last 3 days)\"">
 				>
 				["at0005"] = <
 					text = <"Normal">
@@ -138,7 +140,8 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Severity of rectal bleeding">
-					description = <"">
+					description = <"Original question: \"Please indicate the severity of your rectal bleeding (Based on the last
+3 days)\"">
 				>
 				["at0010"] = <
 					text = <"No blood seen">
