@@ -23,25 +23,32 @@ description
 	original_author = <
 		["date"] = <"2022-08-12">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD (en)", ...>
+			purpose = <"*To assess the impact of Crohn's Disease (CD) on work and activity. (en)">
+			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO (en)", ...>
+			use = <"*Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly. (en)">
 			other_details = <
 				["notes"] = <"Generated automatically by Adl Designer">
 			>
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			keywords = <"Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD", ...>
+			purpose = <"To assess the impact of Crohn's Disease (CD) on work and activity.">
+			keywords = <"Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO", ...>
+			use = <"Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly.">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
+			purpose = <"*To assess the impact of Crohn's Disease (CD) on work and activity. (en)">
+			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly. (en)">
 		>
 	>
 	other_details = <
@@ -50,9 +57,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9d3d76801786498a8f943c791d7ed298">
+		["MD5-CAM-1.0.1"] = <"33e4821dc13bfa61ba2e555a781abcc3">
 		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
-		["references"] = <"Reilly MC, Zbrozek AS, Dukes EM. The validity and reproducibility of a work productivity and activity impairment instrument. Pharmacoeconomics. 1993 Nov;4(5):353-65. ">
+		["references"] = <"Reilly MC, Gerlier L, Brabant Y, Brown M. Validity, reliability, and responsiveness of the work productivity and activity impairment questionnaire in Crohn's disease. Clin Ther. 2008 Feb;30(2):393-404
+
+Reilly MC, Zbrozek AS, Dukes EM. The validity and reproducibility of a work productivity and activity impairment instrument. Pharmacoeconomics. 1993 Nov;4(5):353-65. 
+
+Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instruments. Validation studies in allergic rhinitis. Clin Drug Invest 1996;11(5):278-288">
 	>
 
 definition
@@ -158,7 +169,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD)">
-					description = <"WPAI-CD">
+					description = <"The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -236,7 +247,7 @@ Consider only how much Crohn’s disease affected your ability to perform your n
 			items = <
 				["at0000"] = <
 					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität V2.0 (WPAI-CD)">
-					description = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität: Allgemeine Gesundheit V2.0 (WPAI:GH).">
+					description = <"*The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -314,7 +325,7 @@ Consider only how much Crohn’s disease affected your ability to perform your n
 			items = <
 				["at0000"] = <
 					text = <"*Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD) (en)">
-					description = <"*WPAI-CD (en)">
+					description = <"*The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
