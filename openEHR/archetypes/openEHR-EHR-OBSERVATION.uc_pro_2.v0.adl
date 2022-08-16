@@ -1,0 +1,180 @@
+archetype (adl_version=1.4; uid=bf1054b9-d355-48b1-b4fe-03c1ed233029)
+	openEHR-EHR-OBSERVATION.uc_pro_2.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-08-16">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2), UC-PRO-2, UC, PROM", ...>
+			use = <"The UC-PRO-2 questionnaire consists of two separate questions (stool frequency and rectal bleeding), with four response options each, scored from normal (no disease symptoms) to most severe symptoms (0–3). A PRO2 score of 0 indicates inactive UC and a score of 6 indicates active disease and spontaneous bleeding.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Sebastian, S., et al., Remote Monitoring of Patient-Reported Outcomes in Ulcerative Colitis: A Prospective Real-World Pilot Study. Pharmacoecon Open, 2019. 3(3): p. 359-365">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"30a099c2-b83f-356b-b7b1-67a40bae65ee">
+		["MD5-CAM-1.0.1"] = <"857d37b68477d16fa3b668eea4e6b0f6">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- 2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- In the last 3 days
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Stool frequency
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008]
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Severity of rectal bleeding
+										value matches {
+											0|[local::at0010],
+											1|[local::at0011],
+											2|[local::at0012],
+											3|[local::at0013]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..6|}
+											}
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0016,    -- Inactive Ulcerative Colitis
+													at0017]    -- Active Ulcerative Colitis
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[openehr::640]
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P3D}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2)">
+					description = <"uc_pro_2">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"In the last 3 days">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Stool frequency">
+					description = <"Original question: \"Please indicate how you perceive your stool frequency (Based on the
+last 3 days)\"">
+				>
+				["at0005"] = <
+					text = <"Normal">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"1 to 2 more stools than normal">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"3 to 4 stools more than normal">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"5 or more stools than normal">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Severity of rectal bleeding">
+					description = <"Original question: \"Please indicate the severity of your rectal bleeding (Based on the last
+3 days)\"">
+				>
+				["at0010"] = <
+					text = <"No blood seen">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Streaks of blood seen with stools for half of the time">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Obvious blood with stool most of the time">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Blood alone passed (with no stool)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Inactive Ulcerative Colitis">
+					description = <"A score of 0 indicates inactive UC.">
+				>
+				["at0017"] = <
+					text = <"Active Ulcerative Colitis">
+					description = <"A score of 6 indicates active disease and spontaneous bleeding.">
+				>
+			>
+		>
+	>

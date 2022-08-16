@@ -23,25 +23,32 @@ description
 	original_author = <
 		["date"] = <"2022-08-12">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD (en)", ...>
+			purpose = <"*To assess the impact of Crohn's Disease (CD) on work and activity. (en)">
+			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO (en)", ...>
+			use = <"*Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly. (en)">
 			other_details = <
 				["notes"] = <"Generated automatically by Adl Designer">
 			>
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			keywords = <"Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD", ...>
+			purpose = <"To assess the impact of Crohn's Disease (CD) on work and activity.">
+			keywords = <"Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO", ...>
+			use = <"Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly.">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
+			purpose = <"*To assess the impact of Crohn's Disease (CD) on work and activity. (en)">
+			keywords = <"*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly. (en)">
 		>
 	>
 	other_details = <
@@ -50,8 +57,13 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e6ba278cf2433a9945800fd83b0ad1e4">
+		["MD5-CAM-1.0.1"] = <"33e4821dc13bfa61ba2e555a781abcc3">
 		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
+		["references"] = <"Reilly MC, Gerlier L, Brabant Y, Brown M. Validity, reliability, and responsiveness of the work productivity and activity impairment questionnaire in Crohn's disease. Clin Ther. 2008 Feb;30(2):393-404
+
+Reilly MC, Zbrozek AS, Dukes EM. The validity and reproducibility of a work productivity and activity impairment instrument. Pharmacoeconomics. 1993 Nov;4(5):353-65. 
+
+Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instruments. Validation studies in allergic rhinitis. Clin Drug Invest 1996;11(5):278-288">
 	>
 
 definition
@@ -157,7 +169,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD)">
-					description = <"WPAI-CD">
+					description = <"The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -173,7 +185,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Currently employed">
-					description = <"Are you currently employed (working for pay)?">
+					description = <"Original question: \"Are you currently employed (working for pay)?\"">
 					comment = <"If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities).">
 				>
 				["at0005"] = <
@@ -186,33 +198,36 @@ ontology
 				>
 				["at0007"] = <
 					text = <"Miss from work due to health problems">
-					description = <"During the past seven days, how many hours did you miss from work because of your health problems?">
+					description = <"Original question: \"During the past seven days, how many hours did you miss from work because of problems associated with your Crohn’s disease?\"">
 					comment = <"This question is about the past seven days, not including today.
-Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study.">
+Include hours you missed on sick days, times you went in late, left early, etc., because of your Crohn’s disease. Do not include time you missed in order to participate in this study. ">
 				>
 				["at0008"] = <
 					text = <"Miss from work due to other reasons">
-					description = <"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?">
+					description = <"Original question: \"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?\"">
 					comment = <"This question is about the past seven days, not including today.">
 				>
 				["at0009"] = <
 					text = <"Hours actually working">
-					description = <"During the past seven days, how many hours did you actually work?">
+					description = <"Original question: \"During the past seven days, how many hours did you actually work?\"">
 					comment = <"This question is about the past seven days, not including today.
 If “0”, skip to question 6 (Affection of health problems on daily activities).">
 				>
 				["at0010"] = <
 					text = <"Affection of health problems">
-					description = <"During the past seven days, how much did your health problems affect your productivity while you were working? Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".">
+					description = <"Original question: \"During the past seven days, how much did your health problems affect your productivity while you were working?\"">
 					comment = <"This question is about the past seven days, not including today.
-Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.">
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.
+Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".
+Consider only how much Crohn’s disease affected productivity while you were working. ">
 				>
 				["at0011"] = <
 					text = <"Affection of health problems on daily activities">
-					description = <"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?
-Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".">
+					description = <"Original question: \"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?\"">
 					comment = <"This question is about the past seven days, not including today.
-By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.">
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".
+Consider only how much Crohn’s disease affected your ability to perform your normal daily activities, excluding your job.">
 				>
 				["at0012"] = <
 					text = <"Item tree">
@@ -232,7 +247,7 @@ By regular activities, we mean the usual activities you do, such as work around 
 			items = <
 				["at0000"] = <
 					text = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität V2.0 (WPAI-CD)">
-					description = <"Fragebogen zur Beeinträchtigung der Arbeitsproduktivität und Aktivität: Allgemeine Gesundheit V2.0 (WPAI:GH).">
+					description = <"*The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -248,7 +263,7 @@ By regular activities, we mean the usual activities you do, such as work around 
 				>
 				["at0004"] = <
 					text = <"Derzeit beschäftigt">
-					description = <"Sind Sie derzeit erwerbstätig (gegen Bezahlung)?">
+					description = <"*Original question: \"Are you currently employed (working for pay)?\" (en)">
 					comment = <"Falls NEIN, kreuzen Sie \"NEIN\" an und gehen Sie zu Frage 6 (Auswirkungen von Gesundheitsproblemen auf die täglichen Aktivitäten) über.">
 				>
 				["at0005"] = <
@@ -261,37 +276,36 @@ By regular activities, we mean the usual activities you do, such as work around 
 				>
 				["at0007"] = <
 					text = <"Fernbleiben von der Arbeit aufgrund von Gesundheitsproblemen">
-					description = <"Wie viele Stunden haben Sie in den letzten sieben Tagen wegen Ihrer gesundheitlichen Probleme der Arbeit ferngeblieben?">
-					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet.
-Geben Sie auch die Stunden an, die Sie aufgrund von Krankheitstagen versäumt haben, sowie die Zeiten, in denen Sie wegen Ihrer Gesundheitsprobleme zu spät gekommen sind, früher gegangen sind usw. Berücksichtigen Sie nicht die Zeit, die Sie für die Teilnahme an dieser Studie versäumt haben.">
+					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of problems associated with your Crohn’s disease?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+Include hours you missed on sick days, times you went in late, left early, etc., because of your Crohn’s disease. Do not include time you missed in order to participate in this study.  (en)">
 				>
 				["at0008"] = <
 					text = <"Fernbleiben von der Arbeit aus anderen Gründen">
-					description = <"Wie viele Stunden haben Sie in den letzten sieben Tagen aus anderen Gründen nicht gearbeitet, z. B. wegen Urlaub, Feiertagen, Freistellung für die Teilnahme an dieser Studie?">
+					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?\" (en)">
 					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, ohne den heutigen Tag.">
 				>
 				["at0009"] = <
 					text = <"Tatsächlich geleistete Arbeitsstunden">
-					description = <"Wie viele Stunden haben Sie in den letzten sieben Tagen tatsächlich gearbeitet?">
+					description = <"*Original question: \"During the past seven days, how many hours did you actually work?\" (en)">
 					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, ohne den heutigen Tag.
 Wenn \"0\", übergehen Sie zu Frage 6 (Auswirkung von Gesundheitsproblemen auf die täglichen Aktivitäten).">
 				>
 				["at0010"] = <
 					text = <"Befürchtung von Gesundheitsproblemen">
-					description = <"Wie stark haben sich Ihre gesundheitlichen Probleme in den letzten sieben Tagen auf Ihre Produktivität bei der Arbeit ausgewirkt? Dabei bedeutet eine Bewertung von 0 \"Gesundheitsprobleme hatten keine Auswirkungen auf meine Arbeit\" und eine Bewertung von 10 \"Gesundheitsprobleme haben mich vollständig an der Arbeit gehindert\".">
-					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet.
-Denken Sie an Tage, an denen Sie in der Menge oder Art Ihrer Arbeit eingeschränkt waren, an Tage, an denen Sie weniger geschafft haben, als Sie wollten, oder an Tage, an denen Sie Ihre Arbeit nicht so sorgfältig wie sonst erledigen konnten. Wenn gesundheitliche Probleme Ihre Arbeit nur wenig beeinträchtigt haben, wählen Sie eine niedrige Zahl. Wählen Sie eine hohe Zahl, wenn gesundheitliche Probleme Ihre Arbeit stark beeinträchtigt haben.">
+					description = <"*Original question: \"During the past seven days, how much did your health problems affect your productivity while you were working?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.
+Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".
+Consider only how much Crohn’s disease affected productivity while you were working.  (en)">
 				>
 				["at0011"] = <
 					text = <"Beeinträchtigung der täglichen Aktivitäten durch gesundheitliche Probleme">
-					description = <"Wie sehr haben Ihre Gesundheitsprobleme in den letzten sieben Tagen Ihre Fähigkeit beeinträchtigt, Ihren normalen täglichen Aktivitäten nachzugehen, außer der Arbeit in einem Job?
-Dabei bedeutet eine Bewertung von 0 \"Gesundheitsprobleme hatten keine Auswirkungen auf meine täglichen Aktivitäten\" und eine Bewertung von 10 \"Gesundheitsprobleme haben mich vollständig daran gehindert, meinen täglichen Aktivitäten nachzugehen\".
-
-">
-					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet.
-Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie ausüben, z. B. Arbeiten im Haushalt, Einkaufen, Kinderbetreuung, Sport treiben, lernen usw. Denken Sie an Zeiten, in denen Sie in der Anzahl oder Art Ihrer Aktivitäten eingeschränkt waren und in denen Sie weniger geschafft haben, als Sie wollten. Wenn gesundheitliche Probleme Ihre Aktivitäten nur wenig beeinträchtigt haben, wählen Sie eine niedrige Zahl. Wählen Sie eine hohe Zahl, wenn gesundheitliche Probleme Ihre Aktivitäten sehr stark beeinträchtigt haben.
-
-">
+					description = <"*Original question: \"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".
+Consider only how much Crohn’s disease affected your ability to perform your normal daily activities, excluding your job. (en)">
 				>
 				["at0012"] = <
 					text = <"Item tree">
@@ -311,7 +325,7 @@ Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie a
 			items = <
 				["at0000"] = <
 					text = <"*Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI-CD) (en)">
-					description = <"*WPAI-CD (en)">
+					description = <"*The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -327,7 +341,7 @@ Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie a
 				>
 				["at0004"] = <
 					text = <"*Currently employed (en)">
-					description = <"*Are you currently employed (working for pay)? (en)">
+					description = <"*Original question: \"Are you currently employed (working for pay)?\" (en)">
 					comment = <"*If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities). (en)">
 				>
 				["at0005"] = <
@@ -340,33 +354,36 @@ Mit regelmäßigen Aktivitäten meinen wir die üblichen Tätigkeiten, die Sie a
 				>
 				["at0007"] = <
 					text = <"*Miss from work due to health problems (en)">
-					description = <"*During the past seven days, how many hours did you miss from work because of your health problems? (en)">
+					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of problems associated with your Crohn’s disease?\" (en)">
 					comment = <"*This question is about the past seven days, not including today.
-Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study. (en)">
+Include hours you missed on sick days, times you went in late, left early, etc., because of your Crohn’s disease. Do not include time you missed in order to participate in this study.  (en)">
 				>
 				["at0008"] = <
 					text = <"*Miss from work due to other reasons (en)">
-					description = <"*During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study? (en)">
+					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?\" (en)">
 					comment = <"*This question is about the past seven days, not including today. (en)">
 				>
 				["at0009"] = <
 					text = <"*Hours actually working (en)">
-					description = <"*During the past seven days, how many hours did you actually work? (en)">
+					description = <"*Original question: \"During the past seven days, how many hours did you actually work?\" (en)">
 					comment = <"*This question is about the past seven days, not including today.
 If “0”, skip to question 6 (Affection of health problems on daily activities). (en)">
 				>
 				["at0010"] = <
 					text = <"*Affection of health problems (en)">
-					description = <"*During the past seven days, how much did your health problems affect your productivity while you were working? Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\". (en)">
+					description = <"*Original question: \"During the past seven days, how much did your health problems affect your productivity while you were working?\" (en)">
 					comment = <"*This question is about the past seven days, not including today.
-Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal. (en)">
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.
+Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".
+Consider only how much Crohn’s disease affected productivity while you were working.  (en)">
 				>
 				["at0011"] = <
 					text = <"*Affection of health problems on daily activities (en)">
-					description = <"*During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?
-Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\". (en)">
+					description = <"*Original question: \"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?\" (en)">
 					comment = <"*This question is about the past seven days, not including today.
-By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal. (en)">
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".
+Consider only how much Crohn’s disease affected your ability to perform your normal daily activities, excluding your job. (en)">
 				>
 				["at0012"] = <
 					text = <"Item tree">
