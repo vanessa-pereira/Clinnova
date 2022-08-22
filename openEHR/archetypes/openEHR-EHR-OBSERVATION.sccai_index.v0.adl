@@ -1,0 +1,279 @@
+archetype (adl_version=1.4; uid=d5122f97-f05d-41aa-bdd9-0fdf9691eaaf)
+	openEHR-EHR-OBSERVATION.sccai_index.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-08-22">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"c04df22a-d644-3ea6-9c7a-538d1a5e723e">
+		["references"] = <"Walmsley R, Ayres R, Pounder R, Allan R. A simple clinical colitis activity index. Gut. 1998;43(1):29-32
+
+Bewtra M, Brensinger CM, Tomov VT, et al. An optimized patient-reported ulcerative colitis disease activity measure derived from the Mayo score and the simple clinical colitis activity index. Inflamm Bowel Dis. 2014;20(6):1070-1078. doi:10.1097/MIB.0000000000000053">
+		["MD5-CAM-1.0.1"] = <"bb6d79c0936d166bfd83ba73911f485f">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Simple Clinical Colitis Activity Index (SCCAI)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Over the past 3 days
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Bowel motions during daytime
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009]
+										}
+									}
+									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Bowel motions during night time
+										value matches {
+											1|[local::at0011],
+											2|[local::at0012]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Degree of urgency of defecation
+										value matches {
+											0|[local::at0014],
+											1|[local::at0015],
+											2|[local::at0016],
+											3|[local::at0017]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Blood in stool
+										value matches {
+											0|[local::at0019],
+											1|[local::at0020],
+											2|[local::at0021],
+											3|[local::at0022]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- General well being
+										value matches {
+											0|[local::at0024],
+											1|[local::at0025],
+											2|[local::at0026],
+											3|[local::at0027],
+											4|[local::at0028]
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Other symptoms
+										value matches {
+											1|[local::at0030],
+											1|[local::at0031],
+											1|[local::at0032],
+											1|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P3D}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Simple Clinical Colitis Activity Index (SCCAI)">
+					description = <"sccai index">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Over the past 3 days">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Bowel motions during daytime">
+					description = <"Original question: \"How many bowel motions have you been passing during the daytime, i.e. from waking up till going to bed to sleep for the last 3 days?\"">
+				>
+				["at0006"] = <
+					text = <"1 to 3 times">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"4 to 6 times">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"7 to 9 times">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"More than 9 times">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Bowel motions during night time">
+					description = <"Original question: \"How many bowel motions have you been passing during night time, i.e. after going to bed, for the last 3 nights?\"">
+				>
+				["at0011"] = <
+					text = <"1 to 3 times">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"4 to 6 times">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Degree of urgency of defecation">
+					description = <"Original question: \"What degree of Urgency of defecation do you experience? i.e. When you feel the need to open your bowel, how quickly do you need to go?\"">
+				>
+				["at0014"] = <
+					text = <"I have no urgency at all (i.e. just as normal)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"I have to hurry to the toilet">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"I have to go immediately">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"I have incontinence (unable to control the urge and had an accident)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Blood in stool">
+					description = <"Original question: \"How much blood has been in your stool?\"">
+				>
+				["at0019"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Trace (a hint or a tiny amount)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Moderate (occasional obvious/frank blood)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Severe (Usually obvious/frank blood)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"General well being">
+					description = <"Original question: \"General well being – How do you feel about your general health?\"">
+				>
+				["at0024"] = <
+					text = <"Very well">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Slightly below par">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Very poor">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Terrible">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Other symptoms">
+					description = <"Original question: \"Do you have any of the following symptoms apart from your bowels?\"
+
+For each single value there's a question associated.
+- Joint problems; have you had painful, red or swollen joints? The most common joints affected are the knees, ankles or toes.
+- Eye problems; have you had sore, red and swollen eyes? Other symptoms include blurry vision, sensitivity to light, floaters or increased tear production? 
+- Mouth problems; The most common problems are round or oval mouth ulcers which usually appear as round yellowish elevated spots surrounded by a red halo.
+-  Skin problems: Do you have any deep, purple ulcers, often painful, which usually develop suddenly?
+-  Skin problems: Do you have any tender, hot and red bumps which most often affect the skin on the shins, arms and legs?
+- Perianal problems. Do you have any tears or breakdown (crack/ cleft) in the skin of the anus or tender lumps (abscesses) surrounding it?">
+					comment = <"Note on eye problems: If you have a painful red eye or if you have been diagnosed with uveitis, episcleritis or scleritis and recognize a flare of your symptoms. Seek medical help urgently.">
+				>
+				["at0030"] = <
+					text = <"Joint problems">
+					description = <"Had painful, red or swollen joints? The most common joints affected are the knees, ankles or toes.">
+				>
+				["at0031"] = <
+					text = <"Eye problems">
+					description = <"Had sore, red and swollen eyes? Other symptoms include blurry vision, sensitivity to light, floaters or increased tear production?">
+				>
+				["at0032"] = <
+					text = <"Mouth problems">
+					description = <"The most common problems are round or oval mouth ulcers which usually appear as round yellowish elevated spots surrounded by a red halo.">
+				>
+				["at0033"] = <
+					text = <"Skin problems - deep purple ulcers">
+					description = <"Had any deep, purple ulcers, often painful, which usually develop suddenly?">
+				>
+				["at0034"] = <
+					text = <"Skin problems - hot and red bumps in shins, arms and legs">
+					description = <"Had any tender, hot and red bumps which most often affect the skin on the shins, arms and legs?">
+				>
+				["at0035"] = <
+					text = <"Perianal problems">
+					description = <"Had any tears or breakdown (crack/ cleft) in the skin of the anus or tender lumps (abscesses) surrounding it?">
+				>
+				["at0036"] = <
+					text = <"Total score">
+					description = <"">
+				>
+			>
+		>
+	>
