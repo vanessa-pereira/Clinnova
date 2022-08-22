@@ -22,7 +22,7 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Ulcerative Colitis - Patient reported outcome (UC-PRO-2) |Vanessa Pereira|[OBSERVATION.uc_pro_2.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.uc_pro_2.v0.adl)|in progress  | PROM /             |
 | Simple Endoscopic Score for Crohn Disease (SES-CD)       |              |             |              |                    |
 | Ulcerative Colitis Endoscopic Index of Severity (UCEIS)  |              |             |              |                    |
-| Simple Clinical Colitis Activity Index (SCCAI)           |              |             |              | PROM / No          |
+| Simple Clinical Colitis Activity Index (SCCAI)           |Vanessa Pereira|[OBSERVATION.sccai.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sccai.v0.adl)|in progress  | PROM / No |
 | The Montreal classification for Crohn disease and ulcerative colitis    |             |              |                    |
 | Nancy histological index for ulcerative colitis          |              |             |              |                    |
 | 5-item Medication adherence Scale (MARS-5)               |              |             |              | PROM / Yes         |
