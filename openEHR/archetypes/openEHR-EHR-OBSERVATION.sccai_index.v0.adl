@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=d5122f97-f05d-41aa-bdd9-0fdf9691eaaf)
-	openEHR-EHR-OBSERVATION.sccai_index.v0
+	openEHR-EHR-OBSERVATION.sccai.v0
 
 concept
 	[at0000]
@@ -23,14 +23,14 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["build_uid"] = <"c04df22a-d644-3ea6-9c7a-538d1a5e723e">
 		["references"] = <"Walmsley R, Ayres R, Pounder R, Allan R. A simple clinical colitis activity index. Gut. 1998;43(1):29-32
 
 Bewtra M, Brensinger CM, Tomov VT, et al. An optimized patient-reported ulcerative colitis disease activity measure derived from the Mayo score and the simple clinical colitis activity index. Inflamm Bowel Dis. 2014;20(6):1070-1078. doi:10.1097/MIB.0000000000000053">
-		["MD5-CAM-1.0.1"] = <"bb6d79c0936d166bfd83ba73911f485f">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b3585fcdb7c8e39004d53a7876ce2a14">
+		["build_uid"] = <"c04df22a-d644-3ea6-9c7a-538d1a5e723e">
 	>
 
 definition
