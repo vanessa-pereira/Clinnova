@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"0773c088-553a-3598-bf0a-3ffea583e291">
-		["MD5-CAM-1.0.1"] = <"bf862e732bae1ac98313be85259850f4">
+		["MD5-CAM-1.0.1"] = <"d1586bdf94499b31fcea88d4d1a501c2">
 	>
 
 definition
@@ -138,9 +138,10 @@ definition
 											7|[local::at0011]
 										}
 									}
-									allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {    -- Visual Analogue Fatigue Scale (VAFS)
-										include
-											archetype_id/value matches {/.*/}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Visual Analogue Fatigue Scale (VAFS)
+										value matches {
+											DV_COUNT matches {*}
+										}
 									}
 									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Comment
 										value matches {
@@ -252,7 +253,7 @@ ontology
 				>
 				["at0020"] = <
 					text = <"Visual Analogue Fatigue Scale (VAFS)">
-					description = <"Allow the addition of a VAS archetype, if necessary. This should be constrained at the template level.">
+					description = <"">
 				>
 				["at0021"] = <
 					text = <"Item tree">
