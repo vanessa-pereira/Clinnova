@@ -18,7 +18,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To develop and to prospectively validate a simpler endoscopic score of disease activity.">
+			purpose = <"Assess the size of mucosal ulcers, the ulcerated surface, the endoscopic extension and the presence of stenosis and give a score for interpretation of the stage of the disease.">
 			keywords = <"Simplified Endoscopic Disease Severity Score for Crohn’s Disease, SES-CD, SESCD, Crohn’s Disease, Endoscopic, Score", ...>
 			use = <"Copyright: No information">
 		>
@@ -26,11 +26,6 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4e72688c836e7304aa511baf399c0ccf">
-		["build_uid"] = <"7c3c221d-8449-3b5f-bd28-6039f3292361">
 		["references"] = <"Daperno M, D'Haens G, Van Assche G, Baert F, Bulois P, Maunoury V, Sostegni R, Rocca R, Pera A, Gevers A, Mary JY, Colombel JF, Rutgeerts P. Development and validation of a new, simplified endoscopic activity score for Crohn's disease: the SES-CD. Gastrointest Endosc. 2004 Oct;60(4):505-12
 
 Koutroumpakis E, Katsanos KH. Implementation of the simple endoscopic activity score in crohn's disease. Saudi J Gastroenterol. 2016;22(3):183-191. doi:10.4103/1319-3767.182455
@@ -38,6 +33,11 @@ Koutroumpakis E, Katsanos KH. Implementation of the simple endoscopic activity s
 Daperno M, D'Haens G, Van Assche G, Baert F, Bulois P, Maunoury V, Sostegni R, Rocca R, Pera A, Gevers A, Mary JY, Colombel JF, Rutgeerts P. Development and validation of a new, simplified endoscopic activity score for Crohn's disease: the SES-CD. Gastrointest Endosc. 2004 Oct;60(4):505-12. doi: 10.1016/s0016-5107(04)01878-4. PMID: 15472670.
 
 ">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e73fc3cd53cbb123af3acae9ebc45182">
+		["build_uid"] = <"7c3c221d-8449-3b5f-bd28-6039f3292361">
 	>
 
 definition
@@ -344,9 +344,24 @@ definition
 											}
 										}
 									}
+									ELEMENT[at0140] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0138] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0139] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -359,7 +374,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Simplified Endoscopic Disease Severity Score for Crohn’s Disease (SES-CD)">
-					description = <"SESCD">
+					description = <"The Simple Endoscopic Score for Crohn Disease (SES-CD) assesses the size of mucosal ulcers, the ulcerated surface, the endoscopic extension and the presence of stenosis.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -604,6 +619,18 @@ ontology
 				["at0137"] = <
 					text = <"Severe endoscopic activity">
 					description = <"A total score bigger than 15.">
+				>
+				["at0138"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0139"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0140"] = <
+					text = <"Comment">
+					description = <"">
 				>
 			>
 		>
