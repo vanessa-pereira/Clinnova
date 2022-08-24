@@ -18,6 +18,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To develop and to prospectively validate a simpler endoscopic score of disease activity.">
+			keywords = <"Simplified Endoscopic Disease Severity Score for Crohn’s Disease, SES-CD, SESCD, Crohn’s Disease, Endoscopic, Score", ...>
+			use = <"Copyright: No information">
 		>
 	>
 	other_details = <
@@ -28,6 +31,13 @@ description
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"4e72688c836e7304aa511baf399c0ccf">
 		["build_uid"] = <"7c3c221d-8449-3b5f-bd28-6039f3292361">
+		["references"] = <"Daperno M, D'Haens G, Van Assche G, Baert F, Bulois P, Maunoury V, Sostegni R, Rocca R, Pera A, Gevers A, Mary JY, Colombel JF, Rutgeerts P. Development and validation of a new, simplified endoscopic activity score for Crohn's disease: the SES-CD. Gastrointest Endosc. 2004 Oct;60(4):505-12
+
+Koutroumpakis E, Katsanos KH. Implementation of the simple endoscopic activity score in crohn's disease. Saudi J Gastroenterol. 2016;22(3):183-191. doi:10.4103/1319-3767.182455
+
+Daperno M, D'Haens G, Van Assche G, Baert F, Bulois P, Maunoury V, Sostegni R, Rocca R, Pera A, Gevers A, Mary JY, Colombel JF, Rutgeerts P. Development and validation of a new, simplified endoscopic activity score for Crohn's disease: the SES-CD. Gastrointest Endosc. 2004 Oct;60(4):505-12. doi: 10.1016/s0016-5107(04)01878-4. PMID: 15472670.
+
+">
 	>
 
 definition
