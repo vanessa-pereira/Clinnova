@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"7c3c221d-8449-3b5f-bd28-6039f3292361">
-		["MD5-CAM-1.0.1"] = <"0b5863cb851c34ff110ba5229988761e">
+		["MD5-CAM-1.0.1"] = <"8cd56c6f80cd9a5cc38d7f7723924d2b">
 	>
 
 definition
@@ -59,6 +59,22 @@ definition
 													1|[local::at0011],
 													2|[local::at0012],
 													3|[local::at0013]
+												}
+											}
+											ELEMENT[at0014] occurrences matches {0..1} matches {    -- Extent of ulcerated surface
+												value matches {
+													0|[local::at0010],
+													1|[local::at0015],
+													2|[local::at0016],
+													3|[local::at0017]
+												}
+											}
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Extent of affected surface
+												value matches {
+													0|[local::at0019],
+													1|[local::at0020],
+													2|[local::at0021],
+													3|[local::at0022]
 												}
 											}
 										}
@@ -130,6 +146,42 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Very large ulcers (bigger than 2 cm)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Extent of ulcerated surface">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"10%">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"10 to 30%">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"30%">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Extent of affected surface">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Unaffected segment">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Less than 50%">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"50% to 75%">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Equals or more than 75%">
 					description = <"">
 				>
 			>
