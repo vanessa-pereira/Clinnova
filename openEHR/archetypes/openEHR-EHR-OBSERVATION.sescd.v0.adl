@@ -36,7 +36,7 @@ Daperno M, D'Haens G, Van Assche G, Baert F, Bulois P, Maunoury V, Sostegni R, R
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e73fc3cd53cbb123af3acae9ebc45182">
+		["MD5-CAM-1.0.1"] = <"bcddd6cba0e671954678433b157f1c13">
 		["build_uid"] = <"7c3c221d-8449-3b5f-bd28-6039f3292361">
 	>
 
@@ -106,7 +106,7 @@ definition
 									}
 									CLUSTER[at0028] occurrences matches {0..1} matches {    -- Left Colon
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0029] occurrences matches {0..1} matches {    -- Examination status
+											ELEMENT[at0029] matches {    -- Examination status
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -161,7 +161,7 @@ definition
 									}
 									CLUSTER[at0054] occurrences matches {0..1} matches {    -- Transverse Colon
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0055] occurrences matches {0..1} matches {    -- Examination status
+											ELEMENT[at0055] matches {    -- Examination status
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -216,7 +216,7 @@ definition
 									}
 									CLUSTER[at0080] occurrences matches {0..1} matches {    -- Right Colon
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0081] occurrences matches {0..1} matches {    -- Examination status
+											ELEMENT[at0081] matches {    -- Examination status
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -271,7 +271,7 @@ definition
 									}
 									CLUSTER[at0106] occurrences matches {0..1} matches {    -- Ileum
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0107] occurrences matches {0..1} matches {    -- Examination status
+											ELEMENT[at0107] matches {    -- Examination status
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
