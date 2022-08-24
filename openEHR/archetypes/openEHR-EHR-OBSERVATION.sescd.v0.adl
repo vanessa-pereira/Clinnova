@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4e72688c836e7304aa511baf399c0ccf">
 		["build_uid"] = <"7c3c221d-8449-3b5f-bd28-6039f3292361">
-		["MD5-CAM-1.0.1"] = <"906f95278a789a5d52d64eaac58458fe">
 	>
 
 definition
@@ -41,7 +41,7 @@ definition
 								items cardinality matches {0..*; unordered} matches {
 									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Rectum
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Examination status
+											ELEMENT[at0005] matches {    -- Examination status
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
@@ -266,43 +266,43 @@ definition
 													DV_CODED_TEXT matches {
 														defining_code matches {
 															[local::
-															at0108,    -- Evaluated
-															at0109,    -- Resected
-															at0110]    -- Inaccessible
+															at0006,    -- Evaluated
+															at0007,    -- Resected
+															at0008]    -- Inaccessible
 														}
 													}
 												}
 											}
 											ELEMENT[at0111] occurrences matches {0..1} matches {    -- Presence and size of ulcers
 												value matches {
-													0|[local::at0112],
-													1|[local::at0113],
-													2|[local::at0114],
-													3|[local::at0115]
+													0|[local::at0010],
+													1|[local::at0011],
+													2|[local::at0012],
+													3|[local::at0013]
 												}
 											}
 											ELEMENT[at0116] occurrences matches {0..1} matches {    -- Extent of ulcerated surface
 												value matches {
-													0|[local::at0117],
-													1|[local::at0118],
-													2|[local::at0119],
-													3|[local::at0120]
+													0|[local::at0010],
+													1|[local::at0015],
+													2|[local::at0016],
+													3|[local::at0017]
 												}
 											}
 											ELEMENT[at0121] occurrences matches {0..1} matches {    -- Extent of affected surface
 												value matches {
-													0|[local::at0122],
-													1|[local::at0123],
-													2|[local::at0124],
-													3|[local::at0125]
+													0|[local::at0019],
+													1|[local::at0020],
+													2|[local::at0021],
+													3|[local::at0022]
 												}
 											}
 											ELEMENT[at0126] occurrences matches {0..1} matches {    -- Presence and type of narrowing
 												value matches {
-													0|[local::at0127],
-													1|[local::at0128],
-													2|[local::at0129],
-													3|[local::at0130]
+													0|[local::at0010],
+													1|[local::at0024],
+													2|[local::at0025],
+													3|[local::at0026]
 												}
 											}
 											ELEMENT[at0131] occurrences matches {0..1} matches {    -- Total score
@@ -310,6 +310,26 @@ definition
 													DV_COUNT matches {
 														magnitude matches {|0..12|}
 													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0132] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..60|}
+											}
+										}
+									}
+									ELEMENT[at0133] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0134,    -- Remission
+													at0135,    -- Mild endoscopic activity
+													at0136,    -- Moderate endoscopic activity
+													at0137]    -- Severe endoscopic activity
 												}
 											}
 										}
@@ -372,7 +392,7 @@ ontology
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"Aphthous ulcers (0.1 to 0.5 cm)">
+					text = <"Aphthous ulcers (less than 0.5 cm)">
 					description = <"">
 				>
 				["at0012"] = <
@@ -531,101 +551,49 @@ ontology
 					text = <"Examination status">
 					description = <"">
 				>
-				["at0108"] = <
-					text = <"Evaluated">
-					description = <"">
-				>
-				["at0109"] = <
-					text = <"Resected">
-					description = <"">
-				>
-				["at0110"] = <
-					text = <"Inaccessible">
-					description = <"">
-				>
 				["at0111"] = <
 					text = <"Presence and size of ulcers">
-					description = <"">
-				>
-				["at0112"] = <
-					text = <"None">
-					description = <"">
-				>
-				["at0113"] = <
-					text = <"Aphthous ulcers (0.1 to 0.5 cm)">
-					description = <"">
-				>
-				["at0114"] = <
-					text = <"Large ulcers (bigger than 0.5 to 2 cm)">
-					description = <"">
-				>
-				["at0115"] = <
-					text = <"Very large ulcers (bigger than 2 cm)">
 					description = <"">
 				>
 				["at0116"] = <
 					text = <"Extent of ulcerated surface">
 					description = <"">
 				>
-				["at0117"] = <
-					text = <"None">
-					description = <"">
-				>
-				["at0118"] = <
-					text = <"10%">
-					description = <"">
-				>
-				["at0119"] = <
-					text = <"10 to 30%">
-					description = <"">
-				>
-				["at0120"] = <
-					text = <"30%">
-					description = <"">
-				>
 				["at0121"] = <
 					text = <"Extent of affected surface">
-					description = <"">
-				>
-				["at0122"] = <
-					text = <"Unaffected segment">
-					description = <"">
-				>
-				["at0123"] = <
-					text = <"Less than 50%">
-					description = <"">
-				>
-				["at0124"] = <
-					text = <"50% to 75%">
-					description = <"">
-				>
-				["at0125"] = <
-					text = <"Equals or more than 75%">
 					description = <"">
 				>
 				["at0126"] = <
 					text = <"Presence and type of narrowing">
 					description = <"">
 				>
-				["at0127"] = <
-					text = <"None">
-					description = <"">
-				>
-				["at0128"] = <
-					text = <"Single, can be passed">
-					description = <"">
-				>
-				["at0129"] = <
-					text = <"Multiple, can be passed">
-					description = <"">
-				>
-				["at0130"] = <
-					text = <"Cannot be passed">
-					description = <"">
-				>
 				["at0131"] = <
 					text = <"Total score">
 					description = <"">
+				>
+				["at0132"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"Remission">
+					description = <"A total score from 0 to 2.">
+				>
+				["at0135"] = <
+					text = <"Mild endoscopic activity">
+					description = <"A total score from 3 to 6.">
+				>
+				["at0136"] = <
+					text = <"Moderate endoscopic activity">
+					description = <"A total score from 7 to 15.">
+				>
+				["at0137"] = <
+					text = <"Severe endoscopic activity">
+					description = <"A total score bigger than 15.">
 				>
 			>
 		>
