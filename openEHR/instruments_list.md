@@ -11,12 +11,12 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
-| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No          |
-| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes          |
+| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No |
+| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes |
 | Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No        |
-| Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              |             |
-| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|[OBSERVATION.cdai.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl) | in progress  | CROM / Yes         |
-| Lémann Index (bowel damage)                              |              |             |              | PROM /             |
+| Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              | PROM / Yes  |
+| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|[OBSERVATION.cdai.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl) | in progress  | CROM / Yes |
+| Lémann Index (bowel damage)                              |              |             |              | CROM / No information   |
 | Harvey Bradshaw Index Crohn's activity index (HBI)       |              |             |              | PROM / No          |
 | Crohn Disease - Patient reported outcome (CD-PRO-2)      |Vanessa Pereira|[OBSERVATION.cd_pro_2.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.cd_pro_2.v0.adl)|in progress  | PROM /             |
 | Ulcerative Colitis - Patient reported outcome (UC-PRO-2) |Vanessa Pereira|[OBSERVATION.uc_pro_2.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.uc_pro_2.v0.adl)|in progress  | PROM /             |
@@ -27,7 +27,7 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Nancy histological index for ulcerative colitis          |              |             |              |                    |
 | 5-item Medication adherence Scale (MARS-5)               |Vanessa Pereira|[OBSERVATION.mars_5.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.mars_5.v0.adl)|in progress  | PROM / Yes         |
 | Pittsburgh Sleep Quality Index (PSQI)                    |              |             |              | PROM / Yes         |
-| Health questionnaire (EQ-5D-5L)                          |Ian McNicoll  |             | in progress  | PROM /             |
+| Health questionnaire (EQ-5D-5L)                          |Ian McNicoll  |             | in progress  | PROM / Yes         |
 | Food questionnaire (FQ)                                  |              |             |              | PROM / No, trademark of LIH|
 | Environmental questionnaire (EQ)                         |              |             |              | PROM / No, trademark of LIH|
 | Standardized voice collection                            |              |             |              | PROM / No, trademark of LIH|
