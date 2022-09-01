@@ -48,16 +48,16 @@ While openEHR archetypes are all freely available under an open license, the spe
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["build_uid"] = <"db99022c-f96d-3fc8-a064-db7507688d69">
 		["references"] = <"Chan, A., Horne, R., Hankins, M., & Chisari, C. (2020). The Medication Adherence Report Scale: A measurement tool for eliciting patients' reports of nonadherence. British journal of clinical pharmacology, 86(7), 1281–1288. https://doi.org/10.1111/bcp.14193
 
 Chan, A.H.Y., Vervloet, M., Lycett, H., Brabers, A., Dijk, L. van, Home, R. Development and validation of a self-report measure of practical barriers to medication adherence - the Medication Practical barriers to Adherence Questionnaire (MPRAQ). British Journal of Clinical Pharmacology: 2021, 87(11), p. 4197-4211 DOI : 10.1111/bcp.14744
 
 ">
-		["MD5-CAM-1.0.1"] = <"e5521d7ff531247ea8cacb8bfa7ce6c7">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"83c158f0b57ce27f4b10c0e3dabd7ca1">
+		["build_uid"] = <"db99022c-f96d-3fc8-a064-db7507688d69">
 	>
 
 definition
@@ -69,7 +69,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] matches {    -- I forgot to take them
+									ELEMENT[at0004] matches {    -- I forget to take them
 										value matches {
 											1|[local::at0005],
 											2|[local::at0006],
@@ -167,7 +167,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"I forgot to take them">
+					text = <"I forget to take them">
 					description = <"">
 				>
 				["at0005"] = <
@@ -244,7 +244,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*I forgot to take them (en)">
+					text = <"*I forget to take them (en)">
 					description = <"">
 				>
 				["at0005"] = <
@@ -321,7 +321,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*I forgot to take them (en)">
+					text = <"*I forget to take them (en)">
 					description = <"">
 				>
 				["at0005"] = <
