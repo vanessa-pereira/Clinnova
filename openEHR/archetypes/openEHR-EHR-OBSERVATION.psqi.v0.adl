@@ -29,12 +29,12 @@ While openEHR archetypes are all freely available under an open license, the spe
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Buysse, DJ, Reynolds CF, Monk TH, Berman SR, Kupfer DJ: The Pittsburgh Sleep Quality Index (PSQI): A new instrument for psychiatric research and practice. Psychiatry Research 28:193-213, 1989 ">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"31bc8d92afa8d3536eb781fe85ca99fe">
+		["MD5-CAM-1.0.1"] = <"31e92f98f6d27be7717ed5fffe95237c">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
-		["references"] = <"Buysse, DJ, Reynolds CF, Monk TH, Berman SR, Kupfer DJ: The Pittsburgh Sleep Quality Index (PSQI): A new instrument for psychiatric research and practice. Psychiatry Research 28:193-213, 1989 ">
 	>
 
 definition
@@ -42,9 +42,51 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- During the past month
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- What time have you usually gone to bed at night?
+										value matches {
+											DV_TIME matches {*}
+										}
+									}
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- How long has it usually taken you to fall asleep each night?
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"min">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- What time have you usually gotten up in the morning?
+										value matches {
+											DV_TIME matches {*}
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- How many hours of actual sleep did you get at night?
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"h">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P1M}
+							}
 						}
 					}
 				}
@@ -65,12 +107,28 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
+					text = <"During the past month">
 					description = <"">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"What time have you usually gone to bed at night?">
+					description = <"Original question: \"During the past month, what time have you usually gone to bed at night?\"">
+				>
+				["at0005"] = <
+					text = <"How long has it usually taken you to fall asleep each night?">
+					description = <"Original question: \"During the past month, how long (in minutes) has it usually taken you to fall asleep each night?\"">
+				>
+				["at0006"] = <
+					text = <"What time have you usually gotten up in the morning?">
+					description = <"Original question: \"During the past month, what time have you usually gotten up in the morning?\"">
+				>
+				["at0007"] = <
+					text = <"How many hours of actual sleep did you get at night?">
+					description = <"Original question: \"During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)\"">
 				>
 			>
 		>
