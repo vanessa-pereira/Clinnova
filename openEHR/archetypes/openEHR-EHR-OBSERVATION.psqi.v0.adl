@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2ce855b76801793283ecceb624f3a2b3">
+		["MD5-CAM-1.0.1"] = <"3a6b6ebee9c7af36ae5d5d8aa4278aa8">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -303,6 +303,16 @@ definition
 				}
 			}
 		}
+		protocol matches {
+			ITEM_TREE[at0061] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0062] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
 	}
 
 ontology
@@ -539,6 +549,14 @@ ontology
 				>
 				["at0060"] = <
 					text = <"Three or more times a week">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0062"] = <
+					text = <"Extension">
 					description = <"">
 				>
 			>
