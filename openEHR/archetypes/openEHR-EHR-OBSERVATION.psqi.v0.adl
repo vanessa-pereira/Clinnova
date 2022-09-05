@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7ff70b5dd2633b58487f1e918d3bf039">
+		["MD5-CAM-1.0.1"] = <"e905a517762ef9d1adbb3db2a395cb2c">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -377,17 +377,33 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0068] occurrences matches {0..1} matches {    -- Component 6 - Use of sleeping medication
+									ELEMENT[at0068] occurrences matches {0..1} matches {    -- Component 6  score - Use of sleeping medication
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..3|}
 											}
 										}
 									}
-									ELEMENT[at0069] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+									CLUSTER[at0079] occurrences matches {0..1} matches {    -- Component 7 - Daytime dysfunction
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0080] occurrences matches {0..1} matches {    -- Sum of questions 8 and 9
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+											ELEMENT[at0069] occurrences matches {0..1} matches {    -- Component 7 score - Daytime dysfunction
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0081] occurrences matches {0..1} matches {    -- Global PSQI score
 										value matches {
 											DV_COUNT matches {
-												magnitude matches {|0..3|}
+												magnitude matches {|0..21|}
 											}
 										}
 									}
@@ -702,7 +718,7 @@ Sum of Q5b to Q5j: 19 to 27 -> score: 3
 This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0068"] = <
-					text = <"Component 6 - Use of sleeping medication">
+					text = <"Component 6  score - Use of sleeping medication">
 					description = <"Examine question 7 and assign scores as follows:
 Response: Not during the past month -> Component 6 score: 0
 Response: Less than once a week -> Component 6 score: 1
@@ -712,8 +728,14 @@ Response: Three or more times a week -> Component 6 score: 3
 This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0069"] = <
-					text = <"Component 1 score - Subjective sleep quality">
-					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+					text = <"Component 7 score - Daytime dysfunction">
+					description = <"Assign component 7 score as follows:
+Sum of Q8 and Q9: 0 -> Component 7 score: 0
+Sum of Q8 and Q9: 1 to 2 -> Component 7 score: 1
+Sum of Q8 and Q9: 3 to 4 -> Component 7 score: 2
+Sum of Q8 and Q9: 5 to 6 -> Component 7 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0070"] = <
 					text = <"Component 2 - Sleep latency">
@@ -770,6 +792,20 @@ This element has a range of 0-3 points. In case of a score of 0 indicates no dif
 				["at0078"] = <
 					text = <"Sum of questions 5b to 5j">
 					description = <"The sum of all values (magnitude) from questions 5b to 5j.">
+				>
+				["at0079"] = <
+					text = <"Component 7 - Daytime dysfunction">
+					description = <"In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 7 score - Daytime dysfunction\"">
+				>
+				["at0080"] = <
+					text = <"Sum of questions 8 and 9">
+					description = <"The sum of all values (magnitude) from questions 8 and 9.">
+				>
+				["at0081"] = <
+					text = <"Global PSQI score">
+					description = <"Sum of all 7 component scores (\"Component 1 score - Subjective sleep quality\", \"Component 2 score - Sleep latency\", \"Component 3 score - Sleep duration\", \"Component 4 score - Habitual sleep efficiency\", \"Component 5 score - Sleep disturbances\", \"Component 6  score - Use of sleeping medication\", \"Component 7 score - Daytime dysfunction\" ).
+
+This element has a range of 0 to 21 points, 0 indicating no difficulty and 21 indicating severe difficulties in all areas.">
 				>
 			>
 		>
