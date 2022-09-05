@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e905a517762ef9d1adbb3db2a395cb2c">
+		["MD5-CAM-1.0.1"] = <"dd63850adec7a8f6e0f72188f38f9f00">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -407,6 +407,11 @@ definition
 											}
 										}
 									}
+									ELEMENT[at0082] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -673,7 +678,8 @@ ontology
 				>
 				["at0062"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 				["at0063"] = <
 					text = <"Question 2 score">
@@ -806,6 +812,10 @@ This element has a range of 0-3 points. In case of a score of 0 indicates no dif
 					description = <"Sum of all 7 component scores (\"Component 1 score - Subjective sleep quality\", \"Component 2 score - Sleep latency\", \"Component 3 score - Sleep duration\", \"Component 4 score - Habitual sleep efficiency\", \"Component 5 score - Sleep disturbances\", \"Component 6  score - Use of sleeping medication\", \"Component 7 score - Daytime dysfunction\" ).
 
 This element has a range of 0 to 21 points, 0 indicating no difficulty and 21 indicating severe difficulties in all areas.">
+				>
+				["at0082"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the clinical instrument not captured in other fields.">
 				>
 			>
 		>
