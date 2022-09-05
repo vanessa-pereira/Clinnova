@@ -26,8 +26,8 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | The Montreal classification for Crohn disease and ulcerative colitis    |             |              |                    |
 | Nancy histological index for ulcerative colitis          |              |             |              |                    |
 | 5-item Medication adherence Scale (MARS-5)               |Vanessa Pereira|[OBSERVATION.mars_5.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.mars_5.v0.adl)|in progress  | PROM / Yes         |
-| Pittsburgh Sleep Quality Index (PSQI)                    |              |             |              | PROM / Yes         |
-| Health questionnaire (EQ-5D-5L)                          |Ian McNicoll  |             | in progress  | PROM / Yes         |
+| Pittsburgh Sleep Quality Index (PSQI)                    |Vanessa Pereira|[OBSERVATION.psqi.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.psqi.v0.adl)|in progress  | PROM / Yes         |
+| Health questionnaire (EQ-5D-5L)                          |Ian McNicoll/Vanessa| [OBSERVATION.eq_5d_5l.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.eq_5d_5l.v0.adl)|in progress  | PROM / Yes         |
 | Food questionnaire (FQ)                                  |              |             |              | PROM / No, trademark of LIH|
 | Environmental questionnaire (EQ)                         |              |             |              | PROM / No, trademark of LIH|
 | Standardized voice collection                            |              |             |              | PROM / No, trademark of LIH|
