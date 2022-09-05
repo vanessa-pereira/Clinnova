@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"621d40f383ee74bfd20b6a42958e4c28">
+		["MD5-CAM-1.0.1"] = <"3e2cc70824f27e335a5d93f0bee7a12e">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -359,10 +359,21 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0067] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
-										value matches {
-											DV_COUNT matches {
-												magnitude matches {|0..3|}
+									CLUSTER[at0077] occurrences matches {0..1} matches {    -- Component 5 - Sleep disturbances
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0078] occurrences matches {0..1} matches {    -- Sum of questions 5b to 5j
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..27|}
+													}
+												}
+											}
+											ELEMENT[at0067] occurrences matches {0..1} matches {    -- Component 5 score - Sleep disturbances
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
 											}
 										}
 									}
@@ -681,7 +692,7 @@ This element has a range of 0-3 points. In case of a score of 0 indicates no dif
 					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0067"] = <
-					text = <"Component 1 score - Subjective sleep quality">
+					text = <"Component 5 score - Sleep disturbances">
 					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0068"] = <
@@ -734,6 +745,20 @@ Number of hours spent in bed = getting up time (question 3) - bedtime (question 
 				["at0076"] = <
 					text = <"Component 4 score - Habitual sleep efficiency">
 					description = <"">
+				>
+				["at0077"] = <
+					text = <"Component 5 - Sleep disturbances">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Sum of questions 5b to 5j">
+					description = <"Assign component 5 score as follows:
+Sum of Q5b to Q5j: 0 -> score: 0
+Sum of Q5b to Q5j: 1 to 9 -> score: 1
+Sum of Q5b to Q5j: 10 to 11 -> score: 2
+Sum of Q5b to Q5j: 19 to 27 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 			>
 		>
