@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"13d2f7d6dbd1e6cd90ca98967f3caa35">
+		["MD5-CAM-1.0.1"] = <"621d40f383ee74bfd20b6a42958e4c28">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -291,14 +291,14 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0064] occurrences matches {0..1} matches {    -- Component 1 score - Sleep latency
+									ELEMENT[at0064] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..3|}
 											}
 										}
 									}
-									CLUSTER[at0070] occurrences matches {0..1} matches {    -- Component 2 score - Sleep latency
+									CLUSTER[at0070] occurrences matches {0..1} matches {    -- Component 2 - Sleep latency
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0063] occurrences matches {0..1} matches {    -- Question 2 score
 												value matches {
@@ -321,24 +321,41 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Component 2 total score
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Component 2 score - Sleep latency
 												value matches {
 													DV_COUNT matches {*}
 												}
 											}
 										}
 									}
-									ELEMENT[at0065] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+									ELEMENT[at0065] occurrences matches {0..1} matches {    -- Component 3 score - Sleep duration
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..3|}
 											}
 										}
 									}
-									ELEMENT[at0066] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
-										value matches {
-											DV_COUNT matches {
-												magnitude matches {|0..3|}
+									CLUSTER[at0074] occurrences matches {0..1} matches {    -- Component 4 - Habitual sleep efficiency
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0066] occurrences matches {0..1} matches {    -- Number of hours spent in bed
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+											ELEMENT[at0075] occurrences matches {0..1} matches {    -- Habitual sleep efficiency
+												value matches {
+													DV_PROPORTION matches {
+														type matches {2}
+														precision matches {|0|}
+													}
+												}
+											}
+											ELEMENT[at0076] occurrences matches {0..1} matches {    -- Component 4 score - Habitual sleep efficiency
+												value matches {
+													DV_COUNT matches {*}
+												}
 											}
 										}
 									}
@@ -634,18 +651,33 @@ ontology
 				["at0063"] = <
 					text = <"Question 2 score">
 					description = <"Examine question 2 and assign scores as follows:
-Response: less or equal than 15 minutes -> score: 0">
+Response: less or equal than 15 minutes -> score: 0
+Response: 16 to 30 minutes -> score: 1
+Response: 31 to 60 minutes -> score: 2
+Response: more than 60 minutes -> score: 3">
 				>
 				["at0064"] = <
-					text = <"Component 1 score - Sleep latency">
-					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"Examine question 6, and assign scores as follows:
+Response: \"Very good\" -> score: 0
+Response: \"Fairly good\" -> score: 1
+Response: \"Fairly bad\" -> score: 2
+Response: \"Very bad\" -> score: 3             
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0065"] = <
-					text = <"Component 1 score - Subjective sleep quality">
-					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+					text = <"Component 3 score - Sleep duration">
+					description = <"Examine question 4 and assign scores as follows:
+Response: Bigger than 7 hours -> score: 0
+Response: 6 to 7 hours -> score: 1
+Response: 5 to 6 hours -> score: 2
+Response: Less than 5 hours -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0066"] = <
-					text = <"Component 1 score - Subjective sleep quality">
+					text = <"Number of hours spent in bed">
 					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0067"] = <
@@ -661,19 +693,46 @@ Response: less or equal than 15 minutes -> score: 0">
 					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
 				>
 				["at0070"] = <
-					text = <"Component 2 score - Sleep latency">
+					text = <"Component 2 - Sleep latency">
 					description = <"">
 				>
 				["at0071"] = <
 					text = <"Question 5a score">
-					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+					description = <"Examine question 5a and assign scores as follows:
+Response: Not during the past month -> score: 0
+Response: Less than once a week -> score: 1
+Response: Once or twice a week -> score: 2
+Response: Three or more times a week -> score: 3">
 				>
 				["at0072"] = <
 					text = <"Sum of question 2 and question 5a scores">
-					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+					description = <"Add question 2 and question 5a score">
 				>
 				["at0073"] = <
-					text = <"Component 2 total score">
+					text = <"Component 2 score - Sleep latency">
+					description = <"Assign component 2 score as follows:
+Sum of Q2 and Q5a: 0 -> score: 0
+Sum of Q2 and Q5a: 1 to 2 -> score: 1
+Sum of Q2 and Q5a: 3 to 4 -> score: 2
+Sum of Q2 and Q5a: 5 to 6 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0074"] = <
+					text = <"Component 4 - Habitual sleep efficiency">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Habitual sleep efficiency">
+					description = <"Calculate the Habitual sleep efficiency as follows:
+((Number of hours sleep / Number of hours spent in bed) * 100)
+
+Number of hours slept -> use magnitude value from question 4
+
+Number of hours spent in bed = getting up time (question 3) - bedtime (question 2)">
+				>
+				["at0076"] = <
+					text = <"Component 4 score - Habitual sleep efficiency">
 					description = <"">
 				>
 			>
