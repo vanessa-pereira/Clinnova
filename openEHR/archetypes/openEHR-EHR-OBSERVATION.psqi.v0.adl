@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3a6b6ebee9c7af36ae5d5d8aa4278aa8">
+		["MD5-CAM-1.0.1"] = <"13d2f7d6dbd1e6cd90ca98967f3caa35">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -42,16 +42,16 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- During the past month
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Interval
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- 1. What time have you usually gone to bed at night?
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- 1. During the past month, when have you usually gone to bed at night?
 										value matches {
 											DV_TIME matches {*}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- 2. How long has it usually taken you to fall asleep each night?
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- 2. During the past month, how long has it usually taken you to fall asleep each night?
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::128]>
@@ -63,12 +63,12 @@ definition
 											>
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- 3. What time have you usually gotten up in the morning?
+									ELEMENT[at0006] occurrences matches {0..1} matches {    -- 3. During the past month, when have you usually gotten up in the morning?
 										value matches {
 											DV_TIME matches {*}
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {    -- 4. How many hours of actual sleep did you get at night?
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- 4. During the past month, how many hours of actual sleep did you get at night?
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::128]>
@@ -80,7 +80,7 @@ definition
 											>
 										}
 									}
-									CLUSTER[at0008] occurrences matches {0..1} matches {    -- 5. How often have you had trouble sleeping because you
+									CLUSTER[at0008] occurrences matches {0..1} matches {    -- 5. During the past month, how often have you had trouble sleeping because you:
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0009] occurrences matches {0..1} matches {    -- a. Cannot get to sleep within 30 minutes
 												value matches {
@@ -161,7 +161,7 @@ definition
 															DV_TEXT matches {*}
 														}
 													}
-													ELEMENT[at0027] occurrences matches {0..1} matches {    -- How often have you had trouble sleeping because of this?
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- How often during the past month have you had trouble sleeping because of this?
 														value matches {
 															0|[local::at0018],
 															1|[local::at0019],
@@ -173,7 +173,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- 6. How would you rate your sleep quality overall?
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- 6. During the past month, how would you rate your sleep quality overall?
 										value matches {
 											0|[local::at0032],
 											1|[local::at0033],
@@ -181,7 +181,7 @@ definition
 											3|[local::at0035]
 										}
 									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {    -- 7. How often have you taken medicine to help you sleep (prescribed or “over the counter”)?
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- 7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep?
 										value matches {
 											0|[local::at0018],
 											1|[local::at0019],
@@ -189,7 +189,7 @@ definition
 											3|[local::at0021]
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {    -- 8. How often have you had trouble staying awake while driving, eating meals, or engaging in social activity?
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- 8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?
 										value matches {
 											0|[local::at0018],
 											1|[local::at0019],
@@ -197,7 +197,7 @@ definition
 											3|[local::at0021]
 										}
 									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {    -- 9. How much of a problem has it been for you to keep up enough enthusiasm to get things done?
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- 9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?
 										value matches {
 											0|[local::at0036],
 											1|[local::at0037],
@@ -218,8 +218,25 @@ definition
 											}
 										}
 									}
-									CLUSTER[at0045] occurrences matches {0..1} matches {    -- If you have a roommate or bed partner, how often you have had
+									CLUSTER[at0045] occurrences matches {0..1} matches {    -- If you have a roommate or bed partner, ask him/her how often in the past month you have had
 										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0054] occurrences matches {0..1} matches {    -- e. Other restlessness while you sleep
+												items cardinality matches {2..2; unordered} matches {
+													ELEMENT[at0055] occurrences matches {0..1} matches {    -- Restlessness description
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0056] occurrences matches {0..1} matches {    -- How often you partner had noticed
+														value matches {
+															0|[local::at0057],
+															1|[local::at0058],
+															2|[local::at0059],
+															3|[local::at0060]
+														}
+													}
+												}
+											}
 											ELEMENT[at0046] occurrences matches {0..1} matches {    -- a. Loud snoring
 												value matches {
 													DV_CODED_TEXT matches {
@@ -272,22 +289,77 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0054] occurrences matches {0..1} matches {    -- e. Other restlessness while you sleep
-												items cardinality matches {2..2; unordered} matches {
-													ELEMENT[at0055] occurrences matches {0..1} matches {    -- Restlessness description
-														value matches {
-															DV_TEXT matches {*}
-														}
-													}
-													ELEMENT[at0056] occurrences matches {0..1} matches {    -- How often you partner had noticed
-														value matches {
-															0|[local::at0057],
-															1|[local::at0058],
-															2|[local::at0059],
-															3|[local::at0060]
-														}
+										}
+									}
+									ELEMENT[at0064] occurrences matches {0..1} matches {    -- Component 1 score - Sleep latency
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									CLUSTER[at0070] occurrences matches {0..1} matches {    -- Component 2 score - Sleep latency
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0063] occurrences matches {0..1} matches {    -- Question 2 score
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
 													}
 												}
+											}
+											ELEMENT[at0071] occurrences matches {0..1} matches {    -- Question 5a score
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+											ELEMENT[at0072] occurrences matches {0..1} matches {    -- Sum of question 2 and question 5a scores
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..6|}
+													}
+												}
+											}
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Component 2 total score
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0065] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									ELEMENT[at0066] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									ELEMENT[at0067] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									ELEMENT[at0068] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									ELEMENT[at0069] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
 											}
 										}
 									}
@@ -328,7 +400,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"During the past month">
+					text = <"Interval">
 					description = <"">
 				>
 				["at0003"] = <
@@ -336,23 +408,23 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"1. What time have you usually gone to bed at night?">
-					description = <"Original question: \"During the past month, what time have you usually gone to bed at night?\"">
+					text = <"1. During the past month, when have you usually gone to bed at night?">
+					description = <"Original question: \"During the past month, when have you usually gone to bed at night?\"">
 				>
 				["at0005"] = <
-					text = <"2. How long has it usually taken you to fall asleep each night?">
+					text = <"2. During the past month, how long has it usually taken you to fall asleep each night?">
 					description = <"Original question: \"During the past month, how long (in minutes) has it usually taken you to fall asleep each night?\"">
 				>
 				["at0006"] = <
-					text = <"3. What time have you usually gotten up in the morning?">
-					description = <"Original question: \"During the past month, what time have you usually gotten up in the morning?\"">
+					text = <"3. During the past month, when have you usually gotten up in the morning?">
+					description = <"Original question: \"During the past month, when have you usually gotten up in the morning?\"">
 				>
 				["at0007"] = <
-					text = <"4. How many hours of actual sleep did you get at night?">
+					text = <"4. During the past month, how many hours of actual sleep did you get at night?">
 					description = <"Original question: \"During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)\"">
 				>
 				["at0008"] = <
-					text = <"5. How often have you had trouble sleeping because you">
+					text = <"5. During the past month, how often have you had trouble sleeping because you:">
 					description = <"">
 				>
 				["at0009"] = <
@@ -416,23 +488,23 @@ ontology
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"How often have you had trouble sleeping because of this?">
+					text = <"How often during the past month have you had trouble sleeping because of this?">
 					description = <"">
 				>
 				["at0028"] = <
-					text = <"6. How would you rate your sleep quality overall?">
+					text = <"6. During the past month, how would you rate your sleep quality overall?">
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"7. How often have you taken medicine to help you sleep (prescribed or “over the counter”)?">
+					text = <"7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep?">
 					description = <"">
 				>
 				["at0030"] = <
-					text = <"8. How often have you had trouble staying awake while driving, eating meals, or engaging in social activity?">
+					text = <"8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?">
 					description = <"">
 				>
 				["at0031"] = <
-					text = <"9. How much of a problem has it been for you to keep up enough enthusiasm to get things done?">
+					text = <"9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?">
 					description = <"">
 				>
 				["at0032"] = <
@@ -488,7 +560,7 @@ ontology
 					description = <"">
 				>
 				["at0045"] = <
-					text = <"If you have a roommate or bed partner, how often you have had">
+					text = <"If you have a roommate or bed partner, ask him/her how often in the past month you have had">
 					description = <"">
 				>
 				["at0046"] = <
@@ -557,6 +629,51 @@ ontology
 				>
 				["at0062"] = <
 					text = <"Extension">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"Question 2 score">
+					description = <"Examine question 2 and assign scores as follows:
+Response: less or equal than 15 minutes -> score: 0">
+				>
+				["at0064"] = <
+					text = <"Component 1 score - Sleep latency">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0065"] = <
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0066"] = <
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0067"] = <
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0068"] = <
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0069"] = <
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0070"] = <
+					text = <"Component 2 score - Sleep latency">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Question 5a score">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0072"] = <
+					text = <"Sum of question 2 and question 5a scores">
+					description = <"This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0073"] = <
+					text = <"Component 2 total score">
 					description = <"">
 				>
 			>
