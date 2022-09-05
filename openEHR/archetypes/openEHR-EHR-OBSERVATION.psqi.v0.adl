@@ -33,7 +33,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"dd63850adec7a8f6e0f72188f38f9f00">
+		["MD5-CAM-1.0.1"] = <"b2a83b8fe09e0f40a9669d1d0623ff42">
 		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
 	>
 
@@ -46,12 +46,12 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- 1. During the past month, when have you usually gone to bed at night?
+									ELEMENT[at0004] matches {    -- 1. During the past month, when have you usually gone to bed at night?
 										value matches {
 											DV_TIME matches {*}
 										}
 									}
-									ELEMENT[at0005] occurrences matches {0..1} matches {    -- 2. During the past month, how long has it usually taken you to fall asleep each night?
+									ELEMENT[at0005] matches {    -- 2. During the past month, how long has it usually taken you to fall asleep each night?
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::128]>
@@ -63,12 +63,12 @@ definition
 											>
 										}
 									}
-									ELEMENT[at0006] occurrences matches {0..1} matches {    -- 3. During the past month, when have you usually gotten up in the morning?
+									ELEMENT[at0006] matches {    -- 3. During the past month, when have you usually gotten up in the morning?
 										value matches {
 											DV_TIME matches {*}
 										}
 									}
-									ELEMENT[at0007] occurrences matches {0..1} matches {    -- 4. During the past month, how many hours of actual sleep did you get at night?
+									ELEMENT[at0007] matches {    -- 4. During the past month, how many hours of actual sleep did you get at night?
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::128]>
@@ -80,9 +80,9 @@ definition
 											>
 										}
 									}
-									CLUSTER[at0008] occurrences matches {0..1} matches {    -- 5. During the past month, how often have you had trouble sleeping because you:
-										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0009] occurrences matches {0..1} matches {    -- a. Cannot get to sleep within 30 minutes
+									CLUSTER[at0008] matches {    -- 5. During the past month, how often have you had trouble sleeping because you:
+										items cardinality matches {9..*; unordered} matches {
+											ELEMENT[at0009] matches {    -- a. Cannot get to sleep within 30 minutes
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -90,7 +90,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0010] occurrences matches {0..1} matches {    -- b. Wake up in the middle of the night or early morning
+											ELEMENT[at0010] matches {    -- b. Wake up in the middle of the night or early morning
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -98,7 +98,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0011] occurrences matches {0..1} matches {    -- c. Have to get up to use the bathroom
+											ELEMENT[at0011] matches {    -- c. Have to get up to use the bathroom
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -106,7 +106,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0012] occurrences matches {0..1} matches {    -- d. Cannot breathe comfortably
+											ELEMENT[at0012] matches {    -- d. Cannot breathe comfortably
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -114,7 +114,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0013] occurrences matches {0..1} matches {    -- e. Cough or snore loudly
+											ELEMENT[at0013] matches {    -- e. Cough or snore loudly
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -122,7 +122,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0014] occurrences matches {0..1} matches {    -- f. Feel too cold
+											ELEMENT[at0014] matches {    -- f. Feel too cold
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -130,7 +130,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0015] occurrences matches {0..1} matches {    -- g. Feel too hot
+											ELEMENT[at0015] matches {    -- g. Feel too hot
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -138,7 +138,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0016] occurrences matches {0..1} matches {    -- h. Have bad dreams
+											ELEMENT[at0016] matches {    -- h. Have bad dreams
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -146,7 +146,7 @@ definition
 													3|[local::at0021]
 												}
 											}
-											ELEMENT[at0017] occurrences matches {0..1} matches {    -- i. Have pain
+											ELEMENT[at0017] matches {    -- i. Have pain
 												value matches {
 													0|[local::at0018],
 													1|[local::at0019],
@@ -173,7 +173,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- 6. During the past month, how would you rate your sleep quality overall?
+									ELEMENT[at0028] matches {    -- 6. During the past month, how would you rate your sleep quality overall?
 										value matches {
 											0|[local::at0032],
 											1|[local::at0033],
@@ -181,7 +181,7 @@ definition
 											3|[local::at0035]
 										}
 									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {    -- 7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep?
+									ELEMENT[at0029] matches {    -- 7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep?
 										value matches {
 											0|[local::at0018],
 											1|[local::at0019],
@@ -189,7 +189,7 @@ definition
 											3|[local::at0021]
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {    -- 8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?
+									ELEMENT[at0030] matches {    -- 8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?
 										value matches {
 											0|[local::at0018],
 											1|[local::at0019],
@@ -197,7 +197,7 @@ definition
 											3|[local::at0021]
 										}
 									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {    -- 9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?
+									ELEMENT[at0031] matches {    -- 9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?
 										value matches {
 											0|[local::at0036],
 											1|[local::at0037],
@@ -205,7 +205,7 @@ definition
 											3|[local::at0039]
 										}
 									}
-									ELEMENT[at0040] occurrences matches {0..1} matches {    -- 10. Do you have a bed partner or roommate?
+									ELEMENT[at0040] matches {    -- 10. Do you have a bed partner or roommate?
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
@@ -291,15 +291,15 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0064] occurrences matches {0..1} matches {    -- Component 1 score - Subjective sleep quality
+									ELEMENT[at0064] matches {    -- Component 1 score - Subjective sleep quality
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..3|}
 											}
 										}
 									}
-									CLUSTER[at0070] occurrences matches {0..1} matches {    -- Component 2 - Sleep latency
-										items cardinality matches {1..*; unordered} matches {
+									CLUSTER[at0070] matches {    -- Component 2 - Sleep latency
+										items cardinality matches {4..4; unordered} matches {
 											ELEMENT[at0063] occurrences matches {0..1} matches {    -- Question 2 score
 												value matches {
 													DV_COUNT matches {
@@ -323,7 +323,9 @@ definition
 											}
 											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Component 2 score - Sleep latency
 												value matches {
-													DV_COUNT matches {*}
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
 												}
 											}
 										}
@@ -336,7 +338,7 @@ definition
 										}
 									}
 									CLUSTER[at0074] occurrences matches {0..1} matches {    -- Component 4 - Habitual sleep efficiency
-										items cardinality matches {1..*; unordered} matches {
+										items cardinality matches {3..3; unordered} matches {
 											ELEMENT[at0066] occurrences matches {0..1} matches {    -- Number of hours spent in bed
 												value matches {
 													DV_COUNT matches {
@@ -347,6 +349,7 @@ definition
 											ELEMENT[at0075] occurrences matches {0..1} matches {    -- Habitual sleep efficiency
 												value matches {
 													DV_PROPORTION matches {
+														numerator matches {|0.0..100.0|}
 														type matches {2}
 														precision matches {|0|}
 													}
@@ -354,13 +357,15 @@ definition
 											}
 											ELEMENT[at0076] occurrences matches {0..1} matches {    -- Component 4 score - Habitual sleep efficiency
 												value matches {
-													DV_COUNT matches {*}
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
 												}
 											}
 										}
 									}
 									CLUSTER[at0077] occurrences matches {0..1} matches {    -- Component 5 - Sleep disturbances
-										items cardinality matches {1..*; unordered} matches {
+										items cardinality matches {2..2; unordered} matches {
 											ELEMENT[at0078] occurrences matches {0..1} matches {    -- Sum of questions 5b to 5j
 												value matches {
 													DV_COUNT matches {
@@ -377,7 +382,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0068] occurrences matches {0..1} matches {    -- Component 6  score - Use of sleeping medication
+									ELEMENT[at0068] matches {    -- Component 6  score - Use of sleeping medication
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..3|}
@@ -385,10 +390,12 @@ definition
 										}
 									}
 									CLUSTER[at0079] occurrences matches {0..1} matches {    -- Component 7 - Daytime dysfunction
-										items cardinality matches {1..*; unordered} matches {
+										items cardinality matches {2..2; unordered} matches {
 											ELEMENT[at0080] occurrences matches {0..1} matches {    -- Sum of questions 8 and 9
 												value matches {
-													DV_COUNT matches {*}
+													DV_COUNT matches {
+														magnitude matches {|0..6|}
+													}
 												}
 											}
 											ELEMENT[at0069] occurrences matches {0..1} matches {    -- Component 7 score - Daytime dysfunction
@@ -400,7 +407,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0081] occurrences matches {0..1} matches {    -- Global PSQI score
+									ELEMENT[at0081] matches {    -- Global PSQI score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..21|}
@@ -450,7 +457,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Interval">
-					description = <"">
+					description = <"The following questions relate to your usual sleep habits during the past month only. Your answers should indicate the most accurate reply for the majority of days and night in the past month.">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -458,7 +465,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"1. During the past month, when have you usually gone to bed at night?">
-					description = <"Original question: \"During the past month, when have you usually gone to bed at night?\"">
+					description = <"">
 				>
 				["at0005"] = <
 					text = <"2. During the past month, how long has it usually taken you to fall asleep each night?">
@@ -466,7 +473,7 @@ ontology
 				>
 				["at0006"] = <
 					text = <"3. During the past month, when have you usually gotten up in the morning?">
-					description = <"Original question: \"During the past month, when have you usually gotten up in the morning?\"">
+					description = <"">
 				>
 				["at0007"] = <
 					text = <"4. During the past month, how many hours of actual sleep did you get at night?">
@@ -530,7 +537,7 @@ ontology
 				>
 				["at0025"] = <
 					text = <"j. Other reason(s)">
-					description = <"">
+					description = <"Original question: \"Other reason(s), please describe\"">
 				>
 				["at0026"] = <
 					text = <"Reason description">
@@ -646,7 +653,7 @@ ontology
 				>
 				["at0054"] = <
 					text = <"e. Other restlessness while you sleep">
-					description = <"">
+					description = <"Original question: \"e. Other restlessness while you sleep, please describe\"">
 				>
 				["at0055"] = <
 					text = <"Restlessness description">
