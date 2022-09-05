@@ -1,0 +1,1612 @@
+archetype (adl_version=1.4; uid=9b5dde87-c68f-4c47-9a04-b6d30b7efbc7)
+	openEHR-EHR-OBSERVATION.psqi.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-09-01">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To assesses patient sleep quality and disturbances over a 1-month time interval.">
+			keywords = <"Pittsburgh Sleep Quality Index, PSQI, Sleep, Sleep quality, Questionnaire, depression, sleep disorders", ...>
+			use = <"The 19 items are grouped in seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction, each weighted equally on a 0 to 3 scale. The sum of scores are between 0 to 21 points.
+
+A total score of “5” or greater is indicative of poor sleep quality. If you scored “5” or more it is suggested that you discuss your sleep habits with a healthcare provider.
+
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The Pittsburgh Sleep Quality Index (PSQI) is copyrighted by Daniel J. Buysse, M.D.  Permission has been granted to reproduce the scale on this website for clinicians to use in their practice and for researchers to use in non-industry studies. For other uses of the scale, the owner of the copyright should be contacted.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Buysse, DJ, Reynolds CF, Monk TH, Berman SR, Kupfer DJ: The Pittsburgh Sleep Quality Index (PSQI): A new instrument for psychiatric research and practice. Psychiatry Research 28:193-213, 1989 ">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"ce4e4a7714b1f06cb5d89f9770784b3c">
+		["build_uid"] = <"fd110e21-f002-3cec-ae18-5e941a001ec6">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Pittsburgh Sleep Quality Index (PSQI)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Interval
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] matches {    -- 1. During the past month, when have you usually gone to bed at night?
+										value matches {
+											DV_TIME matches {*}
+										}
+									}
+									ELEMENT[at0005] matches {    -- 2. During the past month, how long has it usually taken you to fall asleep each night?
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"min">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0006] matches {    -- 3. During the past month, when have you usually gotten up in the morning?
+										value matches {
+											DV_TIME matches {*}
+										}
+									}
+									ELEMENT[at0007] matches {    -- 4. During the past month, how many hours of actual sleep did you get at night?
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::128]>
+												list = <
+													["1"] = <
+														units = <"h">
+													>
+												>
+											>
+										}
+									}
+									CLUSTER[at0008] matches {    -- 5. During the past month, how often have you had trouble sleeping because you:
+										items cardinality matches {9..*; unordered} matches {
+											ELEMENT[at0009] matches {    -- a. Cannot get to sleep within 30 minutes
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0010] matches {    -- b. Wake up in the middle of the night or early morning
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0011] matches {    -- c. Have to get up to use the bathroom
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0012] matches {    -- d. Cannot breathe comfortably
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0013] matches {    -- e. Cough or snore loudly
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0014] matches {    -- f. Feel too cold
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0015] matches {    -- g. Feel too hot
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0016] matches {    -- h. Have bad dreams
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											ELEMENT[at0017] matches {    -- i. Have pain
+												value matches {
+													0|[local::at0018],
+													1|[local::at0019],
+													2|[local::at0020],
+													3|[local::at0021]
+												}
+											}
+											CLUSTER[at0025] occurrences matches {0..*} matches {    -- j. Other reason(s)
+												items cardinality matches {2..2; unordered} matches {
+													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Reason description
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- How often during the past month have you had trouble sleeping because of this?
+														value matches {
+															0|[local::at0018],
+															1|[local::at0019],
+															2|[local::at0020],
+															3|[local::at0021]
+														}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0028] matches {    -- 6. During the past month, how would you rate your sleep quality overall?
+										value matches {
+											0|[local::at0032],
+											1|[local::at0033],
+											2|[local::at0034],
+											3|[local::at0035]
+										}
+									}
+									ELEMENT[at0029] matches {    -- 7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep?
+										value matches {
+											0|[local::at0018],
+											1|[local::at0019],
+											2|[local::at0020],
+											3|[local::at0021]
+										}
+									}
+									ELEMENT[at0030] matches {    -- 8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?
+										value matches {
+											0|[local::at0018],
+											1|[local::at0019],
+											2|[local::at0020],
+											3|[local::at0021]
+										}
+									}
+									ELEMENT[at0031] matches {    -- 9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?
+										value matches {
+											0|[local::at0036],
+											1|[local::at0037],
+											2|[local::at0038],
+											3|[local::at0039]
+										}
+									}
+									ELEMENT[at0040] matches {    -- 10. Do you have a bed partner or roommate?
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0041,    -- No bed partner or roommate
+													at0042,    -- Partner/roommate in other room
+													at0043,    -- Partner in same room, but not same bed
+													at0044]    -- Partner in same bed
+												}
+											}
+										}
+									}
+									CLUSTER[at0045] occurrences matches {0..1} matches {    -- If you have a roommate or bed partner, ask him/her how often in the past month you have had
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0054] occurrences matches {0..1} matches {    -- e. Other restlessness while you sleep
+												items cardinality matches {2..2; unordered} matches {
+													ELEMENT[at0055] occurrences matches {0..1} matches {    -- Restlessness description
+														value matches {
+															DV_TEXT matches {*}
+														}
+													}
+													ELEMENT[at0056] occurrences matches {0..1} matches {    -- How often you partner had noticed
+														value matches {
+															0|[local::at0057],
+															1|[local::at0058],
+															2|[local::at0059],
+															3|[local::at0060]
+														}
+													}
+												}
+											}
+											ELEMENT[at0046] occurrences matches {0..1} matches {    -- a. Loud snoring
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Not during the past month
+															at0048,    -- Less than once a week
+															at0049,    -- Once or twice a week
+															at0050]    -- Three or more times a week
+														}
+													}
+												}
+											}
+											ELEMENT[at0051] occurrences matches {0..1} matches {    -- b. Long pauses between breaths while asleep
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Not during the past month
+															at0048,    -- Less than once a week
+															at0049,    -- Once or twice a week
+															at0050]    -- Three or more times a week
+														}
+													}
+												}
+											}
+											ELEMENT[at0052] occurrences matches {0..1} matches {    -- c. Legs twitching or jerking while you sleep
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Not during the past month
+															at0048,    -- Less than once a week
+															at0049,    -- Once or twice a week
+															at0050]    -- Three or more times a week
+														}
+													}
+												}
+											}
+											ELEMENT[at0053] occurrences matches {0..1} matches {    -- d. Episodes of disorientation or confusion during sleep
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0047,    -- Not during the past month
+															at0048,    -- Less than once a week
+															at0049,    -- Once or twice a week
+															at0050]    -- Three or more times a week
+														}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0064] matches {    -- Component 1 score - Subjective sleep quality
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									CLUSTER[at0070] matches {    -- Component 2 - Sleep latency
+										items cardinality matches {4..4; unordered} matches {
+											ELEMENT[at0063] occurrences matches {0..1} matches {    -- Question 2 score
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+											ELEMENT[at0071] occurrences matches {0..1} matches {    -- Question 5a score
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+											ELEMENT[at0072] occurrences matches {0..1} matches {    -- Sum of question 2 and question 5a scores
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..6|}
+													}
+												}
+											}
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Component 2 score - Sleep latency
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0065] occurrences matches {0..1} matches {    -- Component 3 score - Sleep duration
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									CLUSTER[at0074] occurrences matches {0..1} matches {    -- Component 4 - Habitual sleep efficiency
+										items cardinality matches {3..3; unordered} matches {
+											ELEMENT[at0066] occurrences matches {0..1} matches {    -- Number of hours spent in bed
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+											ELEMENT[at0075] occurrences matches {0..1} matches {    -- Habitual sleep efficiency
+												value matches {
+													DV_PROPORTION matches {
+														numerator matches {|0.0..100.0|}
+														type matches {2}
+														precision matches {|0|}
+													}
+												}
+											}
+											ELEMENT[at0076] occurrences matches {0..1} matches {    -- Component 4 score - Habitual sleep efficiency
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0077] occurrences matches {0..1} matches {    -- Component 5 - Sleep disturbances
+										items cardinality matches {2..2; unordered} matches {
+											ELEMENT[at0078] occurrences matches {0..1} matches {    -- Sum of questions 5b to 5j
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..27|}
+													}
+												}
+											}
+											ELEMENT[at0067] occurrences matches {0..1} matches {    -- Component 5 score - Sleep disturbances
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0068] matches {    -- Component 6  score - Use of sleeping medication
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..3|}
+											}
+										}
+									}
+									CLUSTER[at0079] occurrences matches {0..1} matches {    -- Component 7 - Daytime dysfunction
+										items cardinality matches {2..2; unordered} matches {
+											ELEMENT[at0080] occurrences matches {0..1} matches {    -- Sum of questions 8 and 9
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..6|}
+													}
+												}
+											}
+											ELEMENT[at0069] occurrences matches {0..1} matches {    -- Component 7 score - Daytime dysfunction
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..3|}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0081] matches {    -- Global PSQI score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..21|}
+											}
+										}
+									}
+									ELEMENT[at0082] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P1M}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0061] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0062] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Pittsburgh Sleep Quality Index (PSQI)">
+					description = <"The Pittsburgh Sleep Quality Index (PSQI) is a self-rated questionnaire which assesses sleep quality and disturbances over a 1-month time interval. Nineteen individual items generate seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction. The sum of scores for these seven components yields one global score.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Interval">
+					description = <"The following questions relate to your usual sleep habits during the past month only. Your answers should indicate the most accurate reply for the majority of days and night in the past month.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"1. During the past month, when have you usually gone to bed at night?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"2. During the past month, how long has it usually taken you to fall asleep each night?">
+					description = <"Original question: \"During the past month, how long (in minutes) has it usually taken you to fall asleep each night?\"">
+				>
+				["at0006"] = <
+					text = <"3. During the past month, when have you usually gotten up in the morning?">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"4. During the past month, how many hours of actual sleep did you get at night?">
+					description = <"Original question: \"During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)\"">
+				>
+				["at0008"] = <
+					text = <"5. During the past month, how often have you had trouble sleeping because you:">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"a. Cannot get to sleep within 30 minutes">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"b. Wake up in the middle of the night or early morning">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"c. Have to get up to use the bathroom">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"d. Cannot breathe comfortably">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"e. Cough or snore loudly">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"f. Feel too cold">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"g. Feel too hot">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"h. Have bad dreams">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"i. Have pain">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Not during the past month">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Less than once a week">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Once or twice a week">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Three or more times a week">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"j. Other reason(s)">
+					description = <"Original question: \"Other reason(s), please describe\"">
+				>
+				["at0026"] = <
+					text = <"Reason description">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"How often during the past month have you had trouble sleeping because of this?">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"6. During the past month, how would you rate your sleep quality overall?">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep?">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Fairly good">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Fairly bad">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Very bad">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"No problem at all">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Only a very slight problem">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Somewhat of a problem">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"A very big problem">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"10. Do you have a bed partner or roommate?">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"No bed partner or roommate">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Partner/roommate in other room">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Partner in same room, but not same bed">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Partner in same bed">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"If you have a roommate or bed partner, ask him/her how often in the past month you have had">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"a. Loud snoring">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Not during the past month">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Less than once a week">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Once or twice a week">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Three or more times a week">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"b. Long pauses between breaths while asleep">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"c. Legs twitching or jerking while you sleep">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"d. Episodes of disorientation or confusion during sleep">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"e. Other restlessness while you sleep">
+					description = <"Original question: \"e. Other restlessness while you sleep, please describe\"">
+				>
+				["at0055"] = <
+					text = <"Restlessness description">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"How often you partner had noticed">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Not during the past month">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Less than once a week">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Once or twice a week">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Three or more times a week">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0062"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0063"] = <
+					text = <"Question 2 score">
+					description = <"Examine question 2 and assign scores as follows:
+Response: less or equal than 15 minutes -> score: 0
+Response: 16 to 30 minutes -> score: 1
+Response: 31 to 60 minutes -> score: 2
+Response: more than 60 minutes -> score: 3">
+				>
+				["at0064"] = <
+					text = <"Component 1 score - Subjective sleep quality">
+					description = <"Examine question 6, and assign scores as follows:
+Response: \"Very good\" -> score: 0
+Response: \"Fairly good\" -> score: 1
+Response: \"Fairly bad\" -> score: 2
+Response: \"Very bad\" -> score: 3             
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0065"] = <
+					text = <"Component 3 score - Sleep duration">
+					description = <"Examine question 4 and assign scores as follows:
+Response: Bigger than 7 hours -> score: 0
+Response: 6 to 7 hours -> score: 1
+Response: 5 to 6 hours -> score: 2
+Response: Less than 5 hours -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0066"] = <
+					text = <"Number of hours spent in bed">
+					description = <"Number of hours spent in bed = getting up time (question 3) - bedtime (question 2)">
+				>
+				["at0067"] = <
+					text = <"Component 5 score - Sleep disturbances">
+					description = <"Assign component 5 score as follows:
+Sum of Q5b to Q5j: 0 -> score: 0
+Sum of Q5b to Q5j: 1 to 9 -> score: 1
+Sum of Q5b to Q5j: 10 to 11 -> score: 2
+Sum of Q5b to Q5j: 19 to 27 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0068"] = <
+					text = <"Component 6  score - Use of sleeping medication">
+					description = <"Examine question 7 and assign scores as follows:
+Response: Not during the past month -> Component 6 score: 0
+Response: Less than once a week -> Component 6 score: 1
+Response: Once or twice a week -> Component 6 score: 2
+Response: Three or more times a week -> Component 6 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0069"] = <
+					text = <"Component 7 score - Daytime dysfunction">
+					description = <"Assign component 7 score as follows:
+Sum of Q8 and Q9: 0 -> Component 7 score: 0
+Sum of Q8 and Q9: 1 to 2 -> Component 7 score: 1
+Sum of Q8 and Q9: 3 to 4 -> Component 7 score: 2
+Sum of Q8 and Q9: 5 to 6 -> Component 7 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0070"] = <
+					text = <"Component 2 - Sleep latency">
+					description = <"In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 2 score - Sleep latency\"">
+				>
+				["at0071"] = <
+					text = <"Question 5a score">
+					description = <"Examine question 5a and assign scores as follows:
+Response: Not during the past month -> score: 0
+Response: Less than once a week -> score: 1
+Response: Once or twice a week -> score: 2
+Response: Three or more times a week -> score: 3">
+				>
+				["at0072"] = <
+					text = <"Sum of question 2 and question 5a scores">
+					description = <"Add (sum) question 2 and question 5a score">
+				>
+				["at0073"] = <
+					text = <"Component 2 score - Sleep latency">
+					description = <"Assign component 2 score as follows:
+Sum of Q2 and Q5a: 0 -> score: 0
+Sum of Q2 and Q5a: 1 to 2 -> score: 1
+Sum of Q2 and Q5a: 3 to 4 -> score: 2
+Sum of Q2 and Q5a: 5 to 6 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.">
+				>
+				["at0074"] = <
+					text = <"Component 4 - Habitual sleep efficiency">
+					description = <"In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 4 score - Habitual sleep efficiency\"">
+				>
+				["at0075"] = <
+					text = <"Habitual sleep efficiency">
+					description = <"Calculate the Habitual sleep efficiency as follows:
+((Number of hours sleep / Number of hours spent in bed) * 100)
+
+Number of hours slept -> use magnitude value from question 4">
+				>
+				["at0076"] = <
+					text = <"Component 4 score - Habitual sleep efficiency">
+					description = <"Assign component 4 score as follows:
+Habitual sleep efficiency %: more than 85% -> Component 4 score: 0
+Habitual sleep efficiency %: 75 to 84% -> Component 4 score: 1
+Habitual sleep efficiency %: 65 to 74% -> Component 4 score: 2
+Habitual sleep efficiency %: less than 65% -> Component 4 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.
+			">
+				>
+				["at0077"] = <
+					text = <"Component 5 - Sleep disturbances">
+					description = <"In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 5 score - Sleep disturbances\"">
+				>
+				["at0078"] = <
+					text = <"Sum of questions 5b to 5j">
+					description = <"The sum of all values (magnitude) from questions 5b to 5j.">
+				>
+				["at0079"] = <
+					text = <"Component 7 - Daytime dysfunction">
+					description = <"In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 7 score - Daytime dysfunction\"">
+				>
+				["at0080"] = <
+					text = <"Sum of questions 8 and 9">
+					description = <"The sum of all values (magnitude) from questions 8 and 9.">
+				>
+				["at0081"] = <
+					text = <"Global PSQI score">
+					description = <"Sum of all 7 component scores (\"Component 1 score - Subjective sleep quality\", \"Component 2 score - Sleep latency\", \"Component 3 score - Sleep duration\", \"Component 4 score - Habitual sleep efficiency\", \"Component 5 score - Sleep disturbances\", \"Component 6  score - Use of sleeping medication\", \"Component 7 score - Daytime dysfunction\" ).
+
+This element has a range of 0 to 21 points, 0 indicating no difficulty and 21 indicating severe difficulties in all areas.">
+				>
+				["at0082"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the clinical instrument not captured in other fields.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Pittsburgh Sleep Quality Index (PSQI) (en)">
+					description = <"*The Pittsburgh Sleep Quality Index (PSQI) is a self-rated questionnaire which assesses sleep quality and disturbances over a 1-month time interval. Nineteen individual items generate seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction. The sum of scores for these seven components yields one global score. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Interval (en)">
+					description = <"*The following questions relate to your usual sleep habits during the past month only. Your answers should indicate the most accurate reply for the majority of days and night in the past month. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*1. During the past month, when have you usually gone to bed at night? (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*2. During the past month, how long has it usually taken you to fall asleep each night? (en)">
+					description = <"*Original question: \"During the past month, how long (in minutes) has it usually taken you to fall asleep each night?\" (en)">
+				>
+				["at0006"] = <
+					text = <"*3. During the past month, when have you usually gotten up in the morning? (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*4. During the past month, how many hours of actual sleep did you get at night? (en)">
+					description = <"*Original question: \"During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)\" (en)">
+				>
+				["at0008"] = <
+					text = <"*5. During the past month, how often have you had trouble sleeping because you: (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*a. Cannot get to sleep within 30 minutes (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*b. Wake up in the middle of the night or early morning (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*c. Have to get up to use the bathroom (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*d. Cannot breathe comfortably (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*e. Cough or snore loudly (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*f. Feel too cold (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*g. Feel too hot (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*h. Have bad dreams (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*i. Have pain (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Not during the past month (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Once or twice a week (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Three or more times a week (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*j. Other reason(s) (en)">
+					description = <"*Original question: \"Other reason(s), please describe\" (en)">
+				>
+				["at0026"] = <
+					text = <"*Reason description (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*How often during the past month have you had trouble sleeping because of this? (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*6. During the past month, how would you rate your sleep quality overall? (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep? (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity? (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done? (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Very good (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Fairly good (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Fairly bad (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Very bad (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*No problem at all (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Only a very slight problem (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Somewhat of a problem (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*A very big problem (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*10. Do you have a bed partner or roommate? (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*No bed partner or roommate (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Partner/roommate in other room (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Partner in same room, but not same bed (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Partner in same bed (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*If you have a roommate or bed partner, ask him/her how often in the past month you have had (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*a. Loud snoring (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Not during the past month (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Once or twice a week (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Three or more times a week (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*b. Long pauses between breaths while asleep (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*c. Legs twitching or jerking while you sleep (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*d. Episodes of disorientation or confusion during sleep (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*e. Other restlessness while you sleep (en)">
+					description = <"*Original question: \"e. Other restlessness while you sleep, please describe\" (en)">
+				>
+				["at0055"] = <
+					text = <"*Restlessness description (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*How often you partner had noticed (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Not during the past month (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Once or twice a week (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Three or more times a week (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0062"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+				["at0063"] = <
+					text = <"*Question 2 score (en)">
+					description = <"*Examine question 2 and assign scores as follows:
+Response: less or equal than 15 minutes -> score: 0
+Response: 16 to 30 minutes -> score: 1
+Response: 31 to 60 minutes -> score: 2
+Response: more than 60 minutes -> score: 3 (en)">
+				>
+				["at0064"] = <
+					text = <"*Component 1 score - Subjective sleep quality (en)">
+					description = <"*Examine question 6, and assign scores as follows:
+Response: \"Very good\" -> score: 0
+Response: \"Fairly good\" -> score: 1
+Response: \"Fairly bad\" -> score: 2
+Response: \"Very bad\" -> score: 3             
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0065"] = <
+					text = <"*Component 3 score - Sleep duration (en)">
+					description = <"*Examine question 4 and assign scores as follows:
+Response: Bigger than 7 hours -> score: 0
+Response: 6 to 7 hours -> score: 1
+Response: 5 to 6 hours -> score: 2
+Response: Less than 5 hours -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0066"] = <
+					text = <"*Number of hours spent in bed (en)">
+					description = <"*Number of hours spent in bed = getting up time (question 3) - bedtime (question 2) (en)">
+				>
+				["at0067"] = <
+					text = <"*Component 5 score - Sleep disturbances (en)">
+					description = <"*Assign component 5 score as follows:
+Sum of Q5b to Q5j: 0 -> score: 0
+Sum of Q5b to Q5j: 1 to 9 -> score: 1
+Sum of Q5b to Q5j: 10 to 11 -> score: 2
+Sum of Q5b to Q5j: 19 to 27 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0068"] = <
+					text = <"*Component 6  score - Use of sleeping medication (en)">
+					description = <"*Examine question 7 and assign scores as follows:
+Response: Not during the past month -> Component 6 score: 0
+Response: Less than once a week -> Component 6 score: 1
+Response: Once or twice a week -> Component 6 score: 2
+Response: Three or more times a week -> Component 6 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0069"] = <
+					text = <"*Component 7 score - Daytime dysfunction (en)">
+					description = <"*Assign component 7 score as follows:
+Sum of Q8 and Q9: 0 -> Component 7 score: 0
+Sum of Q8 and Q9: 1 to 2 -> Component 7 score: 1
+Sum of Q8 and Q9: 3 to 4 -> Component 7 score: 2
+Sum of Q8 and Q9: 5 to 6 -> Component 7 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0070"] = <
+					text = <"*Component 2 - Sleep latency (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 2 score - Sleep latency\" (en)">
+				>
+				["at0071"] = <
+					text = <"*Question 5a score (en)">
+					description = <"*Examine question 5a and assign scores as follows:
+Response: Not during the past month -> score: 0
+Response: Less than once a week -> score: 1
+Response: Once or twice a week -> score: 2
+Response: Three or more times a week -> score: 3 (en)">
+				>
+				["at0072"] = <
+					text = <"*Sum of question 2 and question 5a scores (en)">
+					description = <"*Add (sum) question 2 and question 5a score (en)">
+				>
+				["at0073"] = <
+					text = <"*Component 2 score - Sleep latency (en)">
+					description = <"*Assign component 2 score as follows:
+Sum of Q2 and Q5a: 0 -> score: 0
+Sum of Q2 and Q5a: 1 to 2 -> score: 1
+Sum of Q2 and Q5a: 3 to 4 -> score: 2
+Sum of Q2 and Q5a: 5 to 6 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0074"] = <
+					text = <"*Component 4 - Habitual sleep efficiency (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 4 score - Habitual sleep efficiency\" (en)">
+				>
+				["at0075"] = <
+					text = <"*Habitual sleep efficiency (en)">
+					description = <"*Calculate the Habitual sleep efficiency as follows:
+((Number of hours sleep / Number of hours spent in bed) * 100)
+
+Number of hours slept -> use magnitude value from question 4 (en)">
+				>
+				["at0076"] = <
+					text = <"*Component 4 score - Habitual sleep efficiency (en)">
+					description = <"*Assign component 4 score as follows:
+Habitual sleep efficiency %: more than 85% -> Component 4 score: 0
+Habitual sleep efficiency %: 75 to 84% -> Component 4 score: 1
+Habitual sleep efficiency %: 65 to 74% -> Component 4 score: 2
+Habitual sleep efficiency %: less than 65% -> Component 4 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.
+			 (en)">
+				>
+				["at0077"] = <
+					text = <"*Component 5 - Sleep disturbances (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 5 score - Sleep disturbances\" (en)">
+				>
+				["at0078"] = <
+					text = <"*Sum of questions 5b to 5j (en)">
+					description = <"*The sum of all values (magnitude) from questions 5b to 5j. (en)">
+				>
+				["at0079"] = <
+					text = <"*Component 7 - Daytime dysfunction (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 7 score - Daytime dysfunction\" (en)">
+				>
+				["at0080"] = <
+					text = <"*Sum of questions 8 and 9 (en)">
+					description = <"*The sum of all values (magnitude) from questions 8 and 9. (en)">
+				>
+				["at0081"] = <
+					text = <"*Global PSQI score (en)">
+					description = <"*Sum of all 7 component scores (\"Component 1 score - Subjective sleep quality\", \"Component 2 score - Sleep latency\", \"Component 3 score - Sleep duration\", \"Component 4 score - Habitual sleep efficiency\", \"Component 5 score - Sleep disturbances\", \"Component 6  score - Use of sleeping medication\", \"Component 7 score - Daytime dysfunction\" ).
+
+This element has a range of 0 to 21 points, 0 indicating no difficulty and 21 indicating severe difficulties in all areas. (en)">
+				>
+				["at0082"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the clinical instrument not captured in other fields. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Pittsburgh Sleep Quality Index (PSQI) (en)">
+					description = <"*The Pittsburgh Sleep Quality Index (PSQI) is a self-rated questionnaire which assesses sleep quality and disturbances over a 1-month time interval. Nineteen individual items generate seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction. The sum of scores for these seven components yields one global score. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Interval (en)">
+					description = <"*The following questions relate to your usual sleep habits during the past month only. Your answers should indicate the most accurate reply for the majority of days and night in the past month. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*1. During the past month, when have you usually gone to bed at night? (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*2. During the past month, how long has it usually taken you to fall asleep each night? (en)">
+					description = <"*Original question: \"During the past month, how long (in minutes) has it usually taken you to fall asleep each night?\" (en)">
+				>
+				["at0006"] = <
+					text = <"*3. During the past month, when have you usually gotten up in the morning? (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*4. During the past month, how many hours of actual sleep did you get at night? (en)">
+					description = <"*Original question: \"During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)\" (en)">
+				>
+				["at0008"] = <
+					text = <"*5. During the past month, how often have you had trouble sleeping because you: (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*a. Cannot get to sleep within 30 minutes (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*b. Wake up in the middle of the night or early morning (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*c. Have to get up to use the bathroom (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*d. Cannot breathe comfortably (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*e. Cough or snore loudly (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*f. Feel too cold (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*g. Feel too hot (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*h. Have bad dreams (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*i. Have pain (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Not during the past month (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Once or twice a week (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Three or more times a week (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*j. Other reason(s) (en)">
+					description = <"*Original question: \"Other reason(s), please describe\" (en)">
+				>
+				["at0026"] = <
+					text = <"*Reason description (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*How often during the past month have you had trouble sleeping because of this? (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*6. During the past month, how would you rate your sleep quality overall? (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*7. During the past month, how often have you taken medicine to help you sleep (prescribed or “over the counter”) to help you sleep? (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*8. During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity? (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*9. During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done? (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Very good (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Fairly good (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Fairly bad (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Very bad (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*No problem at all (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Only a very slight problem (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Somewhat of a problem (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*A very big problem (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*10. Do you have a bed partner or roommate? (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*No bed partner or roommate (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Partner/roommate in other room (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Partner in same room, but not same bed (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Partner in same bed (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*If you have a roommate or bed partner, ask him/her how often in the past month you have had (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*a. Loud snoring (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Not during the past month (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Once or twice a week (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Three or more times a week (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*b. Long pauses between breaths while asleep (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*c. Legs twitching or jerking while you sleep (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*d. Episodes of disorientation or confusion during sleep (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*e. Other restlessness while you sleep (en)">
+					description = <"*Original question: \"e. Other restlessness while you sleep, please describe\" (en)">
+				>
+				["at0055"] = <
+					text = <"*Restlessness description (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*How often you partner had noticed (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Not during the past month (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Once or twice a week (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Three or more times a week (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0062"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+				["at0063"] = <
+					text = <"*Question 2 score (en)">
+					description = <"*Examine question 2 and assign scores as follows:
+Response: less or equal than 15 minutes -> score: 0
+Response: 16 to 30 minutes -> score: 1
+Response: 31 to 60 minutes -> score: 2
+Response: more than 60 minutes -> score: 3 (en)">
+				>
+				["at0064"] = <
+					text = <"*Component 1 score - Subjective sleep quality (en)">
+					description = <"*Examine question 6, and assign scores as follows:
+Response: \"Very good\" -> score: 0
+Response: \"Fairly good\" -> score: 1
+Response: \"Fairly bad\" -> score: 2
+Response: \"Very bad\" -> score: 3             
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0065"] = <
+					text = <"*Component 3 score - Sleep duration (en)">
+					description = <"*Examine question 4 and assign scores as follows:
+Response: Bigger than 7 hours -> score: 0
+Response: 6 to 7 hours -> score: 1
+Response: 5 to 6 hours -> score: 2
+Response: Less than 5 hours -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0066"] = <
+					text = <"*Number of hours spent in bed (en)">
+					description = <"*Number of hours spent in bed = getting up time (question 3) - bedtime (question 2) (en)">
+				>
+				["at0067"] = <
+					text = <"*Component 5 score - Sleep disturbances (en)">
+					description = <"*Assign component 5 score as follows:
+Sum of Q5b to Q5j: 0 -> score: 0
+Sum of Q5b to Q5j: 1 to 9 -> score: 1
+Sum of Q5b to Q5j: 10 to 11 -> score: 2
+Sum of Q5b to Q5j: 19 to 27 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0068"] = <
+					text = <"*Component 6  score - Use of sleeping medication (en)">
+					description = <"*Examine question 7 and assign scores as follows:
+Response: Not during the past month -> Component 6 score: 0
+Response: Less than once a week -> Component 6 score: 1
+Response: Once or twice a week -> Component 6 score: 2
+Response: Three or more times a week -> Component 6 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0069"] = <
+					text = <"*Component 7 score - Daytime dysfunction (en)">
+					description = <"*Assign component 7 score as follows:
+Sum of Q8 and Q9: 0 -> Component 7 score: 0
+Sum of Q8 and Q9: 1 to 2 -> Component 7 score: 1
+Sum of Q8 and Q9: 3 to 4 -> Component 7 score: 2
+Sum of Q8 and Q9: 5 to 6 -> Component 7 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0070"] = <
+					text = <"*Component 2 - Sleep latency (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 2 score - Sleep latency\" (en)">
+				>
+				["at0071"] = <
+					text = <"*Question 5a score (en)">
+					description = <"*Examine question 5a and assign scores as follows:
+Response: Not during the past month -> score: 0
+Response: Less than once a week -> score: 1
+Response: Once or twice a week -> score: 2
+Response: Three or more times a week -> score: 3 (en)">
+				>
+				["at0072"] = <
+					text = <"*Sum of question 2 and question 5a scores (en)">
+					description = <"*Add (sum) question 2 and question 5a score (en)">
+				>
+				["at0073"] = <
+					text = <"*Component 2 score - Sleep latency (en)">
+					description = <"*Assign component 2 score as follows:
+Sum of Q2 and Q5a: 0 -> score: 0
+Sum of Q2 and Q5a: 1 to 2 -> score: 1
+Sum of Q2 and Q5a: 3 to 4 -> score: 2
+Sum of Q2 and Q5a: 5 to 6 -> score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty. (en)">
+				>
+				["at0074"] = <
+					text = <"*Component 4 - Habitual sleep efficiency (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 4 score - Habitual sleep efficiency\" (en)">
+				>
+				["at0075"] = <
+					text = <"*Habitual sleep efficiency (en)">
+					description = <"*Calculate the Habitual sleep efficiency as follows:
+((Number of hours sleep / Number of hours spent in bed) * 100)
+
+Number of hours slept -> use magnitude value from question 4 (en)">
+				>
+				["at0076"] = <
+					text = <"*Component 4 score - Habitual sleep efficiency (en)">
+					description = <"*Assign component 4 score as follows:
+Habitual sleep efficiency %: more than 85% -> Component 4 score: 0
+Habitual sleep efficiency %: 75 to 84% -> Component 4 score: 1
+Habitual sleep efficiency %: 65 to 74% -> Component 4 score: 2
+Habitual sleep efficiency %: less than 65% -> Component 4 score: 3
+
+This element has a range of 0-3 points. In case of a score of 0 indicates no difficulty, while a score of 3 points indicates severe difficulty.
+			 (en)">
+				>
+				["at0077"] = <
+					text = <"*Component 5 - Sleep disturbances (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 5 score - Sleep disturbances\" (en)">
+				>
+				["at0078"] = <
+					text = <"*Sum of questions 5b to 5j (en)">
+					description = <"*The sum of all values (magnitude) from questions 5b to 5j. (en)">
+				>
+				["at0079"] = <
+					text = <"*Component 7 - Daytime dysfunction (en)">
+					description = <"*In order to calculate the total score of this component, the subelements should be calculated. Add the result of the total score in the element \"Component 7 score - Daytime dysfunction\" (en)">
+				>
+				["at0080"] = <
+					text = <"*Sum of questions 8 and 9 (en)">
+					description = <"*The sum of all values (magnitude) from questions 8 and 9. (en)">
+				>
+				["at0081"] = <
+					text = <"*Global PSQI score (en)">
+					description = <"*Sum of all 7 component scores (\"Component 1 score - Subjective sleep quality\", \"Component 2 score - Sleep latency\", \"Component 3 score - Sleep duration\", \"Component 4 score - Habitual sleep efficiency\", \"Component 5 score - Sleep disturbances\", \"Component 6  score - Use of sleeping medication\", \"Component 7 score - Daytime dysfunction\" ).
+
+This element has a range of 0 to 21 points, 0 indicating no difficulty and 21 indicating severe difficulties in all areas. (en)">
+				>
+				["at0082"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative about the clinical instrument not captured in other fields. (en)">
+				>
+			>
+		>
+	>
