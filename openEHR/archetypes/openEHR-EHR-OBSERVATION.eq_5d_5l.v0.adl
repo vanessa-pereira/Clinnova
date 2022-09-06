@@ -15,10 +15,12 @@ description
 		["email"] = <"hildi@freshehr.com">
 	>
 	lifecycle_state = <"Initial">
+	other_contributors = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>", ...>
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"For the capture and reporting of EQ-5D-5L questionnaire information.">
+			keywords = <"EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol", ...>
 			use = <"Use to record EQ-5D-5L questionnaire information.
 
 While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
@@ -29,8 +31,8 @@ userinformationservice@euroqol.org.">
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"8e60cebb72e3e939fef92d5850494aac">
+		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
+		["MD5-CAM-1.0.1"] = <"b9955b47d8d0b9f01b48aa6f9fe080ff">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -139,7 +141,11 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"EQ-5D-5L questionnaire">
-					description = <"EQ-5D-5L questionnaire.">
+					description = <"The 5-level EQ-5D version (EQ-5D-5L) was introduced by the EuroQol Group in 2009 to improve the instrument’s sensitivity and to reduce ceiling effects, as compared to the EQ-5D-3L. The EQ-5D-5L essentially consists of 2 pages: the EQ-5D descriptive system and the EQ visual analogue scale (EQ VAS).
+
+The descriptive system comprises five dimensions: mobility, self-care, usual activities, pain/discomfort and anxiety/depression. Each dimension has 5 levels: no problems, slight problems, moderate problems, severe problems and extreme problems. The patient is asked to indicate his/her health state by ticking the box next to the most appropriate statement in each of the five dimensions. This decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient’s health state.
+
+The EQ VAS records the patient’s self-rated health on a vertical visual analogue scale, where the endpoints are labelled ‘The best health you can imagine’ and ‘The worst health you can imagine’. The VAS can be used as a quantitative measure of health outcome that reflect the patient’s own judgement.">
 					comment = <"Licensed_question_instruction:
 Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
