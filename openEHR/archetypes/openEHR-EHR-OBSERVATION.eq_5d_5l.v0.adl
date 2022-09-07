@@ -23,11 +23,11 @@ description
 			keywords = <"EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol", ...>
 			use = <"Use to record EQ-5D-5L questionnaire information.
 
-This instrument have strict design guidelines (UI) that needs to be followed at the application level. For detailed information, please check the EQ-5D Digital Representation Universal Guidelines https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/ (last update 28MAR2022)
+This instrument has strict design guidelines (UI) that need to be followed at the application level. For detailed information, please check the EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)
 
 While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. © EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. (Please note: For each language version, the copyright year and corresponding version number are added to the copyright notice as presented in the footer of the questionnaire)
 
-For more information please check https://euroqol.org/support/documents/eq-5d-user-license-policy/ (last update 06APR2022). 
+For more information please check EQ-5D User License Policy (https://euroqol.org/support/documents/eq-5d-user-license-policy/) and EQ-5D Registration (https://registration.euroqol.org/)
 For any questions regarding the EQ-5D User License Policy, please contact the EuroQol Office at the following address and contact details:
 EuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890
 E: userinformationservice@euroqol.org
@@ -48,7 +48,7 @@ Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Bu
 
 van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"ef56d394ada73c04a9274ceb4c58d2dd">
+		["MD5-CAM-1.0.1"] = <"b43acbbaf96fa2ab9ec8156bf139d204">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -113,7 +113,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Health state
+									ELEMENT[at0030] matches {    -- Health state
 										value matches {
 											DV_TEXT matches {*}
 										}
