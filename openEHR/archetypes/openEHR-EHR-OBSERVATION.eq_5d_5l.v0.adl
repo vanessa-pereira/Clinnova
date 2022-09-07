@@ -68,7 +68,7 @@ Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Bu
 
 van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"577769c4c7d005921cf9d83f69b1cec8">
+		["MD5-CAM-1.0.1"] = <"ccff001a540632f06d0d3ea67048b177">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -397,32 +397,32 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Mobility (en)">
+					text = <"Mobilität">
 					description = <"*Dimension: MOBILITY (en)">
-					comment = <"*Under each heading, please tick the ONE box that best describes your health TODAY.  (en)">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt">
 				>
 				["at0005"] = <
-					text = <"*I have no problems in walking about (en)">
+					text = <"Ich habe keine Probleme herumzugehen">
 					description = <"*The patient reports no problems walking about. (en)">
 				>
 				["at0006"] = <
-					text = <"*I have some problems in walking about (en)">
+					text = <"Ich habe leichte Probleme herumzugehen">
 					description = <"*The patient reports slight problems walking about. (en)">
 				>
 				["at0007"] = <
-					text = <"*I have moderate problems in walking about (en)">
+					text = <"Ich habe mäßige Probleme herumzugehen">
 					description = <"*The patient reports moderate problems walking about. (en)">
 				>
 				["at0008"] = <
-					text = <"*I have severe problems in walking about (en)">
+					text = <"Ich habe große Probleme herumzugehen">
 					description = <"*The patient reports severe problems walking about. (en)">
 				>
 				["at0009"] = <
-					text = <"*I am unable to walk about (en)">
+					text = <"Ich bin nicht in der Lage herumzugehen">
 					description = <"*The patient reports being unable to walk about. (en)">
 				>
 				["at0010"] = <
-					text = <"*Self-care (en)">
+					text = <"Für sich selbst sorgen">
 					description = <"*Dimension: SELF-CARE (en)">
 					comment = <"*Under each heading, please tick the ONE box that best describes your health TODAY.  (en)">
 				>
