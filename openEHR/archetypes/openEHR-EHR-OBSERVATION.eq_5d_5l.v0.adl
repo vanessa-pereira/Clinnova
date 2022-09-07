@@ -48,7 +48,7 @@ Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Bu
 
 van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"b43acbbaf96fa2ab9ec8156bf139d204">
+		["MD5-CAM-1.0.1"] = <"319b59117ac54d6ce51fb0f99ee38f9d">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -88,7 +88,7 @@ definition
 											5|[local::at0021]
 										}
 									}
-									ELEMENT[at0022] matches {    -- Pain / discomfort
+									ELEMENT[at0022] matches {    -- Pain or discomfort
 										value matches {
 											1|[local::at0023],
 											2|[local::at0024],
@@ -97,7 +97,7 @@ definition
 											5|[local::at0027]
 										}
 									}
-									ELEMENT[at0028] matches {    -- Anxiety / depression
+									ELEMENT[at0028] matches {    -- Anxiety or depression
 										value matches {
 											1|[local::at0031],
 											2|[local::at0032],
@@ -256,7 +256,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					description = <"The patient reports being unable to do their usual activities.">
 				>
 				["at0022"] = <
-					text = <"Pain / discomfort">
+					text = <"Pain or discomfort">
 					description = <"Dimension: PAIN / DISCOMFORT ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 					Dimension = <"Pain/Discomfort">
@@ -282,7 +282,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					description = <"The patient reports having extreme pain or discomfort.">
 				>
 				["at0028"] = <
-					text = <"Anxiety / depression">
+					text = <"Anxiety or depression">
 					description = <"Dimension: ANXIETY / DEPRESSION ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 					Dimension = <"Anxiety/depression">
