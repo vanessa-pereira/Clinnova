@@ -19,20 +19,36 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"For the capture and reporting of EQ-5D-5L questionnaire information.">
+			purpose = <"For the capture and reporting of EQ-5D-5L questionnaire information in order to assess health outcome from a wide variety of interventions on a common scale, for purposes of evaluation, allocation and monitoring.">
 			keywords = <"EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol", ...>
 			use = <"Use to record EQ-5D-5L questionnaire information.
 
-While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+This instrument have strict design guidelines (UI) that needs to be followed at the application level. For detailed information, please check the EQ-5D Digital Representation Universal Guidelines https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/ (last update 28MAR2022)
 
-userinformationservice@euroqol.org.">
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. © EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. (Please note: For each language version, the copyright year and corresponding version number are added to the copyright notice as presented in the footer of the questionnaire)
+
+For more information please check https://euroqol.org/support/documents/eq-5d-user-license-policy/ (last update 06APR2022). 
+For any questions regarding the EQ-5D User License Policy, please contact the EuroQol Office at the following address and contact details:
+EuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890
+E: userinformationservice@euroqol.org
+
+">
 			misuse = <"Not to be used unless the terms of copyright have been observed.">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["references"] = <"The EuroQol Group (1990). EuroQol-a new facility for the measurement of health-related quality of life. Health Policy 16(3):199-208 (https://pubmed.ncbi.nlm.nih.gov/10109801/)
+
+Brooks R (1996). EuroQol: the current state of play. Health Policy 37(1):53-72 (https://pubmed.ncbi.nlm.nih.gov/10158943/)
+
+Herdman M, Gudex C, Lloyd A, Janssen M, Kind P, Parkin D, Bonsel G, Badia X. Development and preliminary testing of the new five-level version of EQ-5D (EQ-5D-5L). Qual Life Res. 2011 Dec;20(10):1727-36 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3220807/pdf/11136_2011_Article_9903.pdf)
+
+Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Busschbach J. Measurement properties of the EQ-5D-5L compared to the EQ-5D-3L across eight patient groups: a multi-country study. Qual Life Res. 2013 Sep;22(7):1717-27 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3764313/pdf/11136_2012_Article_322.pdf)
+
+van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"e0341b03773ace4ebf1cafffc0d8ea2a">
+		["MD5-CAM-1.0.1"] = <"ef56d394ada73c04a9274ceb4c58d2dd">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -165,6 +181,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					text = <"Mobility">
 					description = <"Dimension: MOBILITY">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Mobility">
 				>
 				["at0005"] = <
 					text = <"I have no problems in walking about">
@@ -190,6 +207,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					text = <"Self-care">
 					description = <"Dimension: SELF-CARE">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Self-care">
 				>
 				["at0011"] = <
 					text = <"I have no problems washing or dressing myself">
@@ -215,6 +233,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					text = <"Usual activities">
 					description = <"Dimension: USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Usual activities">
 				>
 				["at0017"] = <
 					text = <"I have no problems doing my usual activities">
@@ -240,6 +259,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					text = <"Pain / discomfort">
 					description = <"Dimension: PAIN / DISCOMFORT ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Pain/Discomfort">
 				>
 				["at0023"] = <
 					text = <"I have no pain or discomfort">
@@ -265,6 +285,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					text = <"Anxiety / depression">
 					description = <"Dimension: ANXIETY / DEPRESSION ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Anxiety/depression">
 				>
 				["at0029"] = <
 					text = <"EQ VAS">
@@ -318,7 +339,16 @@ A unique health state is defined by combining one level from each of the five di
 				>
 				["at0038"] = <
 					text = <"Index Value">
-					description = <"">
+					description = <"Deriving an EQ-5D index value - Many different terms are in use for these index values, such as preference weights, preference-based values, utilities, QALY weights, etc. Here, we use the term 'index value'. EQ-5D-5L health states can be summarised using the 5-digit code (like element \"Health state\") or represented by a single summary number (index value), which reflects how good or bad a health state is according to the preferences of the general population of a country/region.
+Index values are a major feature of the EQ-5D instrument, facilitating the calculation of quality-adjusted life years (QALYs) that are used to inform economic evaluations of healthcare interventions. The preferences of the general the population of a country/region for different health states represent the societal perspective which, in general, is considered the preferred perspective in health economic analysis.
+
+An EQ-5D summary index is derived by applying a formula that attaches values (weights) to each of the levels in each dimension. The index is calculated by deducting the appropriate weights from 1, the value for full health (i.e. state 11111).
+The collection of index values (weights) for all possible EQ-5D health states is called a value set. Most EQ-5D value sets have been obtained from a standardised valuation exercise, in which a representative sample of the general population in a country/region is asked to place a value on EQ-5D health states. The standardised valuation study protocol, EQ-VT, was developed by the EuroQol Group to create standard value sets for the EQ-5D-5L. This protocol is based on the use of the composite time trade-off (cTTO) valuation technique, supplemented by a discrete-choice experiment (DCE). Using value sets produced with the EuroQol Group’s standardised valuation technology, EQ-VT ensures that results are derived using the most state-of-the-art valuation techniques while also facilitating international comparability.
+
+The latest status of the standardized EQ-5D-5L valuation studies can be viewed on the EuroQol website at https://euroqol.org/eq-5d-instruments/eq-5d-5l-about/valuation-standard-value-sets/
+
+If a standard EQ-5D-5L value set is not available for your country, an option may be to select an EQ-5D-5L value set for a country/region that most closely approximates yours.">
+					comment = <"Note: It is advisable to contact authorities about national value set requirements.">
 				>
 			>
 		>
