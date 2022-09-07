@@ -32,7 +32,7 @@ userinformationservice@euroqol.org.">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"b9955b47d8d0b9f01b48aa6f9fe080ff">
+		["MD5-CAM-1.0.1"] = <"e0341b03773ace4ebf1cafffc0d8ea2a">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -45,7 +45,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Mobility
+									ELEMENT[at0004] matches {    -- Mobility
 										value matches {
 											1|[local::at0005],
 											2|[local::at0006],
@@ -54,7 +54,7 @@ definition
 											5|[local::at0009]
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Self care
+									ELEMENT[at0010] matches {    -- Self-care
 										value matches {
 											1|[local::at0011],
 											2|[local::at0012],
@@ -63,7 +63,7 @@ definition
 											5|[local::at0015]
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Usual activities
+									ELEMENT[at0016] matches {    -- Usual activities
 										value matches {
 											1|[local::at0017],
 											2|[local::at0018],
@@ -72,7 +72,7 @@ definition
 											5|[local::at0021]
 										}
 									}
-									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Pain or discomfort
+									ELEMENT[at0022] matches {    -- Pain / discomfort
 										value matches {
 											1|[local::at0023],
 											2|[local::at0024],
@@ -81,7 +81,7 @@ definition
 											5|[local::at0027]
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Anxiety or depression
+									ELEMENT[at0028] matches {    -- Anxiety / depression
 										value matches {
 											1|[local::at0031],
 											2|[local::at0032],
@@ -90,7 +90,7 @@ definition
 											5|[local::at0035]
 										}
 									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Health VAS
+									ELEMENT[at0029] matches {    -- EQ VAS
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..100|}
@@ -146,8 +146,6 @@ ontology
 The descriptive system comprises five dimensions: mobility, self-care, usual activities, pain/discomfort and anxiety/depression. Each dimension has 5 levels: no problems, slight problems, moderate problems, severe problems and extreme problems. The patient is asked to indicate his/her health state by ticking the box next to the most appropriate statement in each of the five dimensions. This decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient’s health state.
 
 The EQ VAS records the patient’s self-rated health on a vertical visual analogue scale, where the endpoints are labelled ‘The best health you can imagine’ and ‘The worst health you can imagine’. The VAS can be used as a quantitative measure of health outcome that reflect the patient’s own judgement.">
-					comment = <"Licensed_question_instruction:
-Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -155,7 +153,9 @@ Under each heading, please tick the ONE box that best describes your health TODA
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"*">
+					description = <"Licensed_question_instruction: Under each heading, please tick the ONE box that best describes your health TODAY.">
+					comment = <"This version refers to the English version for the UK.
+© EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. UK (English) v1.0">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -163,7 +163,7 @@ Under each heading, please tick the ONE box that best describes your health TODA
 				>
 				["at0004"] = <
 					text = <"Mobility">
-					description = <"MOBILITY">
+					description = <"Dimension: MOBILITY">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
 				["at0005"] = <
@@ -187,16 +187,16 @@ Under each heading, please tick the ONE box that best describes your health TODA
 					description = <"The patient reports being unable to walk about.">
 				>
 				["at0010"] = <
-					text = <"Self care">
-					description = <"SELF-CARE">
+					text = <"Self-care">
+					description = <"Dimension: SELF-CARE">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
 				["at0011"] = <
-					text = <"I have no problems with self care">
+					text = <"I have no problems washing or dressing myself">
 					description = <"The patient reports no problems washing or dressing themselves.">
 				>
 				["at0012"] = <
-					text = <"I have some problems washing or dressing myself">
+					text = <"I have slight problems washing or dressing myself">
 					description = <"The patient reports slight problems washing or dressing themselves.">
 				>
 				["at0013"] = <
@@ -213,15 +213,15 @@ Under each heading, please tick the ONE box that best describes your health TODA
 				>
 				["at0016"] = <
 					text = <"Usual activities">
-					description = <"USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)">
+					description = <"Dimension: USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
 				["at0017"] = <
-					text = <"I have no problems with performing my usual activities">
+					text = <"I have no problems doing my usual activities">
 					description = <"The patient reports no problem doing usual activities.">
 				>
 				["at0018"] = <
-					text = <"I have some problems with performing my usual activities">
+					text = <"I have some problems doing my usual activities">
 					description = <"The patient reports slight problems doing usual activities.">
 				>
 				["at0019"] = <
@@ -233,12 +233,12 @@ Under each heading, please tick the ONE box that best describes your health TODA
 					description = <"The patient reports severe problems doing usual activities.">
 				>
 				["at0021"] = <
-					text = <"I am unable to do y usual activities">
+					text = <"I am unable to do my usual activities">
 					description = <"The patient reports being unable to do their usual activities.">
 				>
 				["at0022"] = <
-					text = <"Pain or discomfort">
-					description = <"PAIN / DISCOMFORT ">
+					text = <"Pain / discomfort">
+					description = <"Dimension: PAIN / DISCOMFORT ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
 				["at0023"] = <
@@ -262,24 +262,31 @@ Under each heading, please tick the ONE box that best describes your health TODA
 					description = <"The patient reports having extreme pain or discomfort.">
 				>
 				["at0028"] = <
-					text = <"Anxiety or depression">
-					description = <"ANXIETY / DEPRESSION ">
+					text = <"Anxiety / depression">
+					description = <"Dimension: ANXIETY / DEPRESSION ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
 				>
 				["at0029"] = <
-					text = <"Health VAS">
-					description = <"
-">
-					comment = <"Licensed_question_instruction:
-We would like to know how good or bad your health is TODAY. 
-This scale is numbered from 0 to 100. 
-100 means the best health you can imagine. 0 means the worst health you can imagine. 
-Mark an X on the scale to indicate how your health is TODAY 
-Now, please write the number you marked on the scale in the below.">
+					text = <"EQ VAS">
+					description = <"Licensed_question_instruction:
+- We would like to know how good or bad your health is TODAY. 
+- You will see a scale numbered from 0 to 100. 
+- 100 means the best health you can imagine. 0 means the worst health you can imagine. 
+- Please indicate on the scale to indicate how your health is TODAY.">
 				>
 				["at0030"] = <
 					text = <"Health state">
-					description = <"YOUR HEALTH TODAY">
+					description = <"This field does not appear in the patient interface.
+
+What is a health state?
+Each of the five dimensions (Mobility, Self-care, Usual Activities, Pain/Discomfort, Anxiety/Depression) comprising the EQ-5D descriptive system is divided into five levels of perceived problems:
+- LEVEL 1: indicating no problem
+- LEVEL 2: indicating slight problems
+- LEVEL 3: indicating moderate problems
+- LEVEL 4: indicating severe problems
+- LEVEL 5: indicating unable to/extreme problems
+
+A unique health state is defined by combining one level from each of the five dimensions. A total of 3125 possible health states is defined in this way. Each state is referred to by a 5-digit code. For example, working clockwise from the top of the diagram, state 12345 indicates no problems with mobility, slight problems with washing or dressing, moderate problems with doing usual activities, severe pain or discomfort and extreme anxiety or depression, while state 11111 indicates no problems on any of the five dimensions.">
 				>
 				["at0031"] = <
 					text = <"I am not anxious or depressed">
