@@ -68,7 +68,7 @@ Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Bu
 
 van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"0e61c2ea2d24467ed0d1b89827e65051">
+		["MD5-CAM-1.0.1"] = <"38e5b93e6517bcc69a4a600c8959a57d">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -150,6 +150,11 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0039] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -355,7 +360,8 @@ A unique health state is defined by combining one level from each of the five di
 				>
 				["at0037"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 				["at0038"] = <
 					text = <"Index Value">
@@ -369,6 +375,10 @@ The latest status of the standardized EQ-5D-5L valuation studies can be viewed o
 
 If a standard EQ-5D-5L value set is not available for your country, an option may be to select an EQ-5D-5L value set for a country/region that most closely approximates yours.">
 					comment = <"Note: It is advisable to contact authorities about national value set requirements.">
+				>
+				["at0039"] = <
+					text = <"Comment">
+					description = <"Additional narrative on the EQ-5D-5L questionnaire.">
 				>
 			>
 		>
@@ -503,11 +513,11 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 				>
 				["at0029"] = <
 					text = <"EQ VAS">
-					description = <"*Licensed_question_instruction:
-- We would like to know how good or bad your health is TODAY. 
-- You will see a scale numbered from 0 to 100. 
-- 100 means the best health you can imagine. 0 means the worst health you can imagine. 
-- Please indicate on the scale to indicate how your health is TODAY. (en)">
+					description = <"Licensed_question_instruction:
+- Wir wollen herausfinden, wie gut oder schlecht Ihre Gesundheit HEUTE ist. 
+- Diese Skala ist mitZahlen von 0 bis 100 versehen. 100 ist die <u>beste</u> Gesundheit, die Sie sich vorstellen können.
+- (Null) ist die <u>schlechteste</u> Gesundheit, die Sie sich vorstellen können. 
+- Bitte klicken Sie den Punkt auf der Skala an, der Ihre Gesundheit HEUTE am besten beschreibt.">
 				>
 				["at0030"] = <
 					text = <"Gesundheitszustand">
@@ -548,8 +558,9 @@ A unique health state is defined by combining one level from each of the five di
 					description = <"@ internal @">
 				>
 				["at0037"] = <
-					text = <"*Extension (en)">
-					description = <"">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Information, die für die Erfassung des lokalen Kontexts oder für die Anpassung an andere Referenzmodelle/Formalismen benötigt wird.">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 				["at0038"] = <
 					text = <"Indexwert">
@@ -563,6 +574,10 @@ The latest status of the standardized EQ-5D-5L valuation studies can be viewed o
 
 If a standard EQ-5D-5L value set is not available for your country, an option may be to select an EQ-5D-5L value set for a country/region that most closely approximates yours. (en)">
 					comment = <"*Note: It is advisable to contact authorities about national value set requirements. (en)">
+				>
+				["at0039"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Angaben zum EQ-5D-5L-Fragebogen.">
 				>
 			>
 		>
@@ -743,7 +758,8 @@ A unique health state is defined by combining one level from each of the five di
 				>
 				["at0037"] = <
 					text = <"*Extension (en)">
-					description = <"">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 				["at0038"] = <
 					text = <"*Index Value (en)">
@@ -757,6 +773,10 @@ The latest status of the standardized EQ-5D-5L valuation studies can be viewed o
 
 If a standard EQ-5D-5L value set is not available for your country, an option may be to select an EQ-5D-5L value set for a country/region that most closely approximates yours. (en)">
 					comment = <"*Note: It is advisable to contact authorities about national value set requirements. (en)">
+				>
+				["at0039"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative on the EQ-5D-5L questionnaire. (en)">
 				>
 			>
 		>
