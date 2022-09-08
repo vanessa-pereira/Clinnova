@@ -46,14 +46,14 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b694f010f6861310edb16f408bec4dcc">
-		["build_uid"] = <"4b1a3cb2-cf67-3267-8988-a98e624de10d">
 		["references"] = <"Reilly MC, Zbrozek AS, Dukes EM. The Validity and Reproducibility of a Work Productivity and Activity Impairment Instrument. PharmacoEconomics 1993;4(5):353-365 (PubMed Abstract)
 
 Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instruments. Validation studies in allergic rhinitis. Clin Drug Invest 1996;11(5):278-288">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0bb8dfc6c3c73fa42c65ece968011631">
+		["build_uid"] = <"4b1a3cb2-cf67-3267-8988-a98e624de10d">
 	>
 
 definition
@@ -237,7 +237,8 @@ Consider only how much ulcerative colitis affected your ability to perform your 
 				>
 				["at0014"] = <
 					text = <"Extension">
-					description = <"Additional narrative, not captured in other fields.">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 			>
 		>
@@ -323,7 +324,8 @@ Consider only how much ulcerative colitis affected your ability to perform your 
 				>
 				["at0014"] = <
 					text = <"Erweiterung">
-					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 			>
 		>
