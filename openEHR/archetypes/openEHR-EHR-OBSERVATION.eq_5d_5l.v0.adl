@@ -68,7 +68,7 @@ Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Bu
 
 van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"ccff001a540632f06d0d3ea67048b177">
+		["MD5-CAM-1.0.1"] = <"0e61c2ea2d24467ed0d1b89827e65051">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -397,9 +397,9 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"Mobilität">
+					text = <"Beweglichkeit / Mobilität">
 					description = <"*Dimension: MOBILITY (en)">
-					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
 				>
 				["at0005"] = <
 					text = <"Ich habe keine Probleme herumzugehen">
@@ -424,32 +424,32 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 				["at0010"] = <
 					text = <"Für sich selbst sorgen">
 					description = <"*Dimension: SELF-CARE (en)">
-					comment = <"*Under each heading, please tick the ONE box that best describes your health TODAY.  (en)">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
 				>
 				["at0011"] = <
-					text = <"*I have no problems washing or dressing myself (en)">
+					text = <"Ich habe keine Probleme herumzugehen">
 					description = <"*The patient reports no problems washing or dressing themselves. (en)">
 				>
 				["at0012"] = <
-					text = <"*I have slight problems washing or dressing myself (en)">
+					text = <"Ich habe keine Probleme herumzugehen">
 					description = <"*The patient reports slight problems washing or dressing themselves. (en)">
 				>
 				["at0013"] = <
-					text = <"*I have moderate problems washing or dressing myself (en)">
+					text = <"Ich habe mäßige Probleme herumzugehen">
 					description = <"*The patient reports moderate problems washing or dressing themselves. (en)">
 				>
 				["at0014"] = <
-					text = <"*I have severe problems washing or dressing myself (en)">
+					text = <"Ich habe große Probleme herumzugehen">
 					description = <"*The patient reports severe problems washing or dressing themselves. (en)">
 				>
 				["at0015"] = <
-					text = <"*I am unable to wash or dress myself (en)">
+					text = <"Ich bin nicht in der Lage herumzugehen">
 					description = <"*The patient reports being unable to wash or dress themselves. (en)">
 				>
 				["at0016"] = <
-					text = <"*Usual activities (en)">
-					description = <"*Dimension: USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities) (en)">
-					comment = <"*Under each heading, please tick the ONE box that best describes your health TODAY.  (en)">
+					text = <"Alltägliche tätigkeiten">
+					description = <"Dimension: Alltägliche tätigkeiten (z.B. Arbeit, Studium, Hausarbeit, Familien-oder Freizeitaktivitäten)">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
 				>
 				["at0017"] = <
 					text = <"*I have no problems doing my usual activities (en)">
@@ -472,7 +472,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					description = <"*The patient reports being unable to do their usual activities. (en)">
 				>
 				["at0022"] = <
-					text = <"*Pain or discomfort (en)">
+					text = <"Schmerzen / unbehag">
 					description = <"*Dimension: PAIN / DISCOMFORT  (en)">
 					comment = <"*Under each heading, please tick the ONE box that best describes your health TODAY.  (en)">
 				>
@@ -497,12 +497,12 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 					description = <"*The patient reports having extreme pain or discomfort. (en)">
 				>
 				["at0028"] = <
-					text = <"*Anxiety or depression (en)">
+					text = <"Angst / niedergeschlagenheit">
 					description = <"*Dimension: ANXIETY / DEPRESSION  (en)">
 					comment = <"*Under each heading, please tick the ONE box that best describes your health TODAY.  (en)">
 				>
 				["at0029"] = <
-					text = <"*EQ VAS (en)">
+					text = <"EQ VAS">
 					description = <"*Licensed_question_instruction:
 - We would like to know how good or bad your health is TODAY. 
 - You will see a scale numbered from 0 to 100. 
@@ -510,7 +510,7 @@ The EQ VAS records the patient’s self-rated health on a vertical visual analog
 - Please indicate on the scale to indicate how your health is TODAY. (en)">
 				>
 				["at0030"] = <
-					text = <"*Health state (en)">
+					text = <"Gesundheitszustand">
 					description = <"*This field does not appear in the patient interface.
 
 What is a health state?
@@ -552,7 +552,7 @@ A unique health state is defined by combining one level from each of the five di
 					description = <"">
 				>
 				["at0038"] = <
-					text = <"*Index Value (en)">
+					text = <"Indexwert">
 					description = <"*Deriving an EQ-5D index value - Many different terms are in use for these index values, such as preference weights, preference-based values, utilities, QALY weights, etc. Here, we use the term 'index value'. EQ-5D-5L health states can be summarised using the 5-digit code (like element \"Health state\") or represented by a single summary number (index value), which reflects how good or bad a health state is according to the preferences of the general population of a country/region.
 Index values are a major feature of the EQ-5D instrument, facilitating the calculation of quality-adjusted life years (QALYs) that are used to inform economic evaluations of healthcare interventions. The preferences of the general the population of a country/region for different health states represent the societal perspective which, in general, is considered the preferred perspective in health economic analysis.
 
