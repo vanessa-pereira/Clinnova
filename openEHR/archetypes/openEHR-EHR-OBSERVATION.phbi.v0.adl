@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,9 +28,17 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw", ...>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -31,7 +51,7 @@ Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 19
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
-		["MD5-CAM-1.0.1"] = <"636c5de0757f205a795c27b5c48402dc">
+		["MD5-CAM-1.0.1"] = <"7a9eea26c0221bddd9c18e3bc4a1345f">
 	>
 
 definition
@@ -183,6 +203,9 @@ definition
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0046] matches {*}    -- Item tree
 		}
 	}
 
@@ -384,6 +407,416 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 				["at0045"] = <
 					text = <"Total score">
 					description = <"">
+				>
+				["at0046"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Patient Harvey Bradshaw Index (P-HBI) (en)">
+					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*During the previous week (en)">
+					description = <"*Original statement: 
+The following questions concern your Crohn’s Disease.
+These questions refer to your symptoms during the PREVIOUS WEEK.
+ (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*General well-being (en)">
+					description = <"*Original question: \"If you would have to rate your general well-being by giving it a number, what number would you choose? (1 = terrible, 10 = very well)\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Terrible (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*9 (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Very well (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Abdominal pain (en)">
+					description = <"*Original question: \"To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.\" (en)">
+				>
+				["at0016"] = <
+					text = <"*No abdominal pain (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*1 (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*9 (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Worst imaginable abdominal pain (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Diarrhoea frequency (en)">
+					description = <"*Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\" (en)">
+				>
+				["1/d"] = <
+					text = <"per day">
+					description = <"@ units @">
+				>
+				["at0028"] = <
+					text = <"*Has a stoma? (en)">
+					description = <"*Original question: \"Do you have a stoma?\" (en)">
+				>
+				["at0029"] = <
+					text = <"*Frequency of stoma bag changes (en)">
+					description = <"*Original question: \"If so, please indicate how often you changed the bag on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\" (en)">
+					comment = <"*x stands for the number of times (en)">
+				>
+				["at0030"] = <
+					text = <"*Has a pouch? (en)">
+					description = <"*Original question \"Do you have a pouch?\" (en)">
+				>
+				["at0031"] = <
+					text = <"*Frequency of stools in pouch (en)">
+					description = <"*If so, please indicate how often you had stools on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day) (en)">
+					comment = <"*x stands for the number of times (en)">
+				>
+				["at0032"] = <
+					text = <"*Joint pain (not caused by strain on sports, work or accident) (en)">
+					description = <"*Original question: \"Have you had joint pain during the previous week that was not caused by a strain during sports, work or an accident?\" (en)">
+				>
+				["at0033"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*I do not know (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Eye inflammation (Uveitis) (en)">
+					description = <"*Original question: \"Do you momentarily have an eye inflammation, for which you have seen an eye-specialist and which your treating specialist diagnosed as uveitis?\" (en)">
+				>
+				["at0037"] = <
+					text = <"*I have an eye inflammation but have not seen an eye specialist for it or do not know what the infection is called (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Skin disorder (Erythema) (en)">
+					description = <"*Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as erythema nodosum by your treating specialist?\" (en)">
+				>
+				["at0039"] = <
+					text = <"*I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Skin disorder (Pyoderma) (en)">
+					description = <"*Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as pyoderma by your treating specialist?\" (en)">
+				>
+				["at0041"] = <
+					text = <"*Momentarily aphthous ulcers in mouth (en)">
+					description = <"*Original question: \"Do you momentarily have aphthous ulcers (i.e. sores or blister-like spots) in your mouth?\" (en)">
+				>
+				["at0042"] = <
+					text = <"*Anal pain (fissure) while excrement (en)">
+					description = <"*Original question: \"Have you had anal pain (a fissure) during the previous week during excrement? Here we are referring to pain in the anus during the passage of stools.\" (en)">
+				>
+				["at0043"] = <
+					text = <"*Painful fistula with puss (en)">
+					description = <"*Original question: \"Have you had a fistula during the previous week that was painful and produced puss from the fistula opening? Fistulas are connections or passageways between the skin and intestines. Usually, fistulas are located around the anus, abdomen or buttocks.\" (en)">
+				>
+				["at0044"] = <
+					text = <"*Momentarily abscess (painful sore from anus) (en)">
+					description = <"*Original question: \"Do you momentarily have an abscess (i.e. a painful sore by your anus)?\" (en)">
+				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Patient Harvey Bradshaw Index (P-HBI) (en)">
+					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*During the previous week (en)">
+					description = <"*Original statement: 
+The following questions concern your Crohn’s Disease.
+These questions refer to your symptoms during the PREVIOUS WEEK.
+ (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*General well-being (en)">
+					description = <"*Original question: \"If you would have to rate your general well-being by giving it a number, what number would you choose? (1 = terrible, 10 = very well)\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Terrible (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*9 (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Very well (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Abdominal pain (en)">
+					description = <"*Original question: \"To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.\" (en)">
+				>
+				["at0016"] = <
+					text = <"*No abdominal pain (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*1 (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*7 (en)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"*8 (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*9 (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Worst imaginable abdominal pain (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Diarrhoea frequency (en)">
+					description = <"*Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\" (en)">
+				>
+				["1/d"] = <
+					text = <"per day">
+					description = <"@ units @">
+				>
+				["at0028"] = <
+					text = <"*Has a stoma? (en)">
+					description = <"*Original question: \"Do you have a stoma?\" (en)">
+				>
+				["at0029"] = <
+					text = <"*Frequency of stoma bag changes (en)">
+					description = <"*Original question: \"If so, please indicate how often you changed the bag on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\" (en)">
+					comment = <"*x stands for the number of times (en)">
+				>
+				["at0030"] = <
+					text = <"*Has a pouch? (en)">
+					description = <"*Original question \"Do you have a pouch?\" (en)">
+				>
+				["at0031"] = <
+					text = <"*Frequency of stools in pouch (en)">
+					description = <"*If so, please indicate how often you had stools on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day) (en)">
+					comment = <"*x stands for the number of times (en)">
+				>
+				["at0032"] = <
+					text = <"*Joint pain (not caused by strain on sports, work or accident) (en)">
+					description = <"*Original question: \"Have you had joint pain during the previous week that was not caused by a strain during sports, work or an accident?\" (en)">
+				>
+				["at0033"] = <
+					text = <"*No (en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Yes (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*I do not know (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Eye inflammation (Uveitis) (en)">
+					description = <"*Original question: \"Do you momentarily have an eye inflammation, for which you have seen an eye-specialist and which your treating specialist diagnosed as uveitis?\" (en)">
+				>
+				["at0037"] = <
+					text = <"*I have an eye inflammation but have not seen an eye specialist for it or do not know what the infection is called (en)">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"*Skin disorder (Erythema) (en)">
+					description = <"*Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as erythema nodosum by your treating specialist?\" (en)">
+				>
+				["at0039"] = <
+					text = <"*I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Skin disorder (Pyoderma) (en)">
+					description = <"*Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as pyoderma by your treating specialist?\" (en)">
+				>
+				["at0041"] = <
+					text = <"*Momentarily aphthous ulcers in mouth (en)">
+					description = <"*Original question: \"Do you momentarily have aphthous ulcers (i.e. sores or blister-like spots) in your mouth?\" (en)">
+				>
+				["at0042"] = <
+					text = <"*Anal pain (fissure) while excrement (en)">
+					description = <"*Original question: \"Have you had anal pain (a fissure) during the previous week during excrement? Here we are referring to pain in the anus during the passage of stools.\" (en)">
+				>
+				["at0043"] = <
+					text = <"*Painful fistula with puss (en)">
+					description = <"*Original question: \"Have you had a fistula during the previous week that was painful and produced puss from the fistula opening? Fistulas are connections or passageways between the skin and intestines. Usually, fistulas are located around the anus, abdomen or buttocks.\" (en)">
+				>
+				["at0044"] = <
+					text = <"*Momentarily abscess (painful sore from anus) (en)">
+					description = <"*Original question: \"Do you momentarily have an abscess (i.e. a painful sore by your anus)?\" (en)">
+				>
+				["at0045"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
 				>
 			>
 		>
