@@ -18,16 +18,20 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw", ...>
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Bennebroek Evertsz, Floor & Hoeks, Céline & Nieuwkerk, Pythia & Stokkers, Pieter & Ponsioen, Cyriel & Bockting, Claudi & Sanderman, Robbert & Sprangers, Mirjam. (2013). Development of the Patient Harvey Bradshaw Index (P-HBI) and a Comparison With a Clinician-based Harvey Bradshaw Index Assessment of Crohn's Disease Activity.. Journal of clinical gastroenterology. 47. 10.1097/MCG.0b013e31828b2196. 
+
+Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 1980;315(8167):514">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
-		["MD5-CAM-1.0.1"] = <"3146696faca5647257a78e34894b18ae">
+		["MD5-CAM-1.0.1"] = <"7b9633cb333f71068dd5de2822bd90d5">
 	>
 
 definition
@@ -95,9 +99,72 @@ definition
 											DV_BOOLEAN matches {*}
 										}
 									}
-									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Frequency of stools
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Frequency of stools in pouch
 										value matches {
-											DV_QUANTITY matches {*}
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0032] occurrences matches {0..1} matches {    -- Joint pain (not caused by strain on sports, work or accident)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0036] occurrences matches {0..1} matches {    -- Eye inflammation (Uveitis)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0037]
+										}
+									}
+									ELEMENT[at0038] occurrences matches {0..1} matches {    -- Skin disorder (Erythema)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0039]
+										}
+									}
+									ELEMENT[at0040] occurrences matches {0..1} matches {    -- Skin disorder (Pyoderma)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0039]
+										}
+									}
+									ELEMENT[at0041] occurrences matches {0..1} matches {    -- Momentarily aphthous ulcers in mouth
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0042] occurrences matches {0..1} matches {    -- Anal pain (fissure) while excrement
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0043] occurrences matches {0..1} matches {    -- Painful fistula with puss
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Momentarily abscess (painful sore from anus)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
 										}
 									}
 								}
@@ -120,7 +187,9 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Patient Harvey Bradshaw Index (P-HBI)">
-					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology">
+					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index. ">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -236,18 +305,72 @@ ontology
 				>
 				["at0028"] = <
 					text = <"Has a stoma?">
-					description = <"">
+					description = <"Original question: \"Do you have a stoma?\"">
 				>
 				["at0029"] = <
 					text = <"Frequency of stoma bag changes">
-					description = <"">
+					description = <"Original question: \"If so, please indicate how often you changed the bag on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\"">
+					comment = <"x stands for the number of times">
 				>
 				["at0030"] = <
 					text = <"Has a pouch?">
-					description = <"">
+					description = <"Original question \"Do you have a pouch?\"">
 				>
 				["at0031"] = <
-					text = <"Frequency of stools">
+					text = <"Frequency of stools in pouch">
+					description = <"If so, please indicate how often you had stools on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)">
+					comment = <"x stands for the number of times">
+				>
+				["at0032"] = <
+					text = <"Joint pain (not caused by strain on sports, work or accident)">
+					description = <"Original question: \"Have you had joint pain during the previous week that was not caused by a strain during sports, work or an accident?\"">
+				>
+				["at0033"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"I do not know">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Eye inflammation (Uveitis)">
+					description = <"Original question: \"Do you momentarily have an eye inflammation, for which you have seen an eye-specialist and which your treating specialist diagnosed as uveitis?\"">
+				>
+				["at0037"] = <
+					text = <"I have an eye inflammation but have not seen an eye specialist for it or do not know what the infection is called">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Skin disorder (Erythema)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Skin disorder (Pyoderma)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Momentarily aphthous ulcers in mouth">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Anal pain (fissure) while excrement">
+					description = <"Original question: \"Have you had anal pain (a fissure) during the previous week during excrement? Here we are referring to pain in the anus during the passage of stools.\"">
+				>
+				["at0043"] = <
+					text = <"Painful fistula with puss">
+					description = <"Original question: \"Have you had a fistula during the previous week that was painful and produced puss from the fistula opening? Fistulas are connections or passageways between the skin and intestines. Usually, fistulas are located around the anus, abdomen or buttocks.\"">
+				>
+				["at0044"] = <
+					text = <"Momentarily abscess (painful sore from anus)">
 					description = <"">
 				>
 			>
