@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-09-12">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
-		["email"] = <"vanessapereira@pm.com">
-		["date"] = <"2022-09-12">
+		["email"] = <"vanessapereira@pm.me">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,8 +26,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"faa711d33928b0fe8bc64514bf158a84">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
+		["MD5-CAM-1.0.1"] = <"4915bcb4fb34f16c563733f51d49eb63">
 	>
 
 definition
@@ -35,9 +35,58 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- During the previous week
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- General well-being
+										value matches {
+											1|[local::at0005],
+											2|[local::at0006],
+											3|[local::at0007],
+											4|[local::at0008],
+											5|[local::at0009],
+											6|[local::at0010],
+											7|[local::at0011],
+											8|[local::at0012],
+											9|[local::at0013],
+											10|[local::at0014]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Abdominal pain
+										value matches {
+											0|[local::at0016],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023],
+											8|[local::at0024],
+											9|[local::at0025],
+											10|[local::at0026]
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Diarrhoea frequency
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+													>
+												>
+											>
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P7D}
+							}
 						}
 					}
 				}
@@ -51,19 +100,115 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Patient Harvey Bradshaw Index (P-HBI)">
-					description = <"PHBI">
+					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
+					text = <"During the previous week">
 					description = <"">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"General well-being">
+					description = <"Original question: \"If you would have to rate your general well-being by giving it a number, what number would you choose? (1 = terrible, 10 = very well)\"">
+				>
+				["at0005"] = <
+					text = <"Terrible">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Very well">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Abdominal pain">
+					description = <"Original question: \"To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.\"">
+				>
+				["at0016"] = <
+					text = <"No abdominal pain">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Worst imaginable abdominal pain">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Diarrhoea frequency">
+					description = <"Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\"">
 				>
 			>
 		>
