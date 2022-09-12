@@ -31,7 +31,7 @@ Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 19
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
-		["MD5-CAM-1.0.1"] = <"b9561577018d0534dce4806d4f302450">
+		["MD5-CAM-1.0.1"] = <"636c5de0757f205a795c27b5c48402dc">
 	>
 
 definition
@@ -202,7 +202,10 @@ The response option ‘I do not know’ is only added for the patient-modified H
 				>
 				["at0002"] = <
 					text = <"During the previous week">
-					description = <"">
+					description = <"Original statement: 
+The following questions concern your Crohn’s Disease.
+These questions refer to your symptoms during the PREVIOUS WEEK.
+">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -352,7 +355,7 @@ The response option ‘I do not know’ is only added for the patient-modified H
 				>
 				["at0038"] = <
 					text = <"Skin disorder (Erythema)">
-					description = <"">
+					description = <"Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as erythema nodosum by your treating specialist?\"">
 				>
 				["at0039"] = <
 					text = <"I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called">
@@ -360,11 +363,11 @@ The response option ‘I do not know’ is only added for the patient-modified H
 				>
 				["at0040"] = <
 					text = <"Skin disorder (Pyoderma)">
-					description = <"">
+					description = <"Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as pyoderma by your treating specialist?\"">
 				>
 				["at0041"] = <
 					text = <"Momentarily aphthous ulcers in mouth">
-					description = <"">
+					description = <"Original question: \"Do you momentarily have aphthous ulcers (i.e. sores or blister-like spots) in your mouth?\"">
 				>
 				["at0042"] = <
 					text = <"Anal pain (fissure) while excrement">
@@ -376,7 +379,7 @@ The response option ‘I do not know’ is only added for the patient-modified H
 				>
 				["at0044"] = <
 					text = <"Momentarily abscess (painful sore from anus)">
-					description = <"">
+					description = <"Original question: \"Do you momentarily have an abscess (i.e. a painful sore by your anus)?\"">
 				>
 				["at0045"] = <
 					text = <"Total score">
