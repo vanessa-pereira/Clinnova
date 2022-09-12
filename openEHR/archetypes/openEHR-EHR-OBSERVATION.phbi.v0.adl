@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
-		["MD5-CAM-1.0.1"] = <"4915bcb4fb34f16c563733f51d49eb63">
+		["MD5-CAM-1.0.1"] = <"3146696faca5647257a78e34894b18ae">
 	>
 
 definition
@@ -78,6 +78,26 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Has a stoma?
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Frequency of stoma bag changes
+										value matches {
+											DV_QUANTITY matches {*}
+										}
+									}
+									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Has a pouch?
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Frequency of stools
+										value matches {
+											DV_QUANTITY matches {*}
 										}
 									}
 								}
@@ -209,6 +229,26 @@ ontology
 				["at0027"] = <
 					text = <"Diarrhoea frequency">
 					description = <"Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\"">
+				>
+				["1/d"] = <
+					text = <"per day">
+					description = <"@ units @">
+				>
+				["at0028"] = <
+					text = <"Has a stoma?">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Frequency of stoma bag changes">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Has a pouch?">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Frequency of stools">
+					description = <"">
 				>
 			>
 		>
