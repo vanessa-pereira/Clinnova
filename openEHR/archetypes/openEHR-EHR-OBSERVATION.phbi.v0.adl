@@ -31,7 +31,7 @@ Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 19
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
-		["MD5-CAM-1.0.1"] = <"7b9633cb333f71068dd5de2822bd90d5">
+		["MD5-CAM-1.0.1"] = <"b9561577018d0534dce4806d4f302450">
 	>
 
 definition
@@ -165,6 +165,11 @@ definition
 											0|[local::at0033],
 											1|[local::at0034],
 											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
 										}
 									}
 								}
@@ -371,6 +376,10 @@ The response option ‘I do not know’ is only added for the patient-modified H
 				>
 				["at0044"] = <
 					text = <"Momentarily abscess (painful sore from anus)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Total score">
 					description = <"">
 				>
 			>
