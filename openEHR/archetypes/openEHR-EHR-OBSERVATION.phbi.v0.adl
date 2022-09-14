@@ -30,29 +30,35 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			keywords = <"*Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw (en)", ...>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
 			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw", ...>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw", ...>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
 			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Bennebroek Evertsz, Floor & Hoeks, Céline & Nieuwkerk, Pythia & Stokkers, Pieter & Ponsioen, Cyriel & Bockting, Claudi & Sanderman, Robbert & Sprangers, Mirjam. (2013). Development of the Patient Harvey Bradshaw Index (P-HBI) and a Comparison With a Clinician-based Harvey Bradshaw Index Assessment of Crohn's Disease Activity.. Journal of clinical gastroenterology. 47. 10.1097/MCG.0b013e31828b2196. 
+		["references"] = <"Bennebroek Evertsz’, F. (2017). Quality of life, anxiety, depression in patients with inflammatory bowel disease: From screening to the effect of a cognitive behavioural intervention. https://pure.uva.nl/ws/files/19622695/Chapter_5.pdf
 
-Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 1980;315(8167):514">
+Bennebroek Evertsz, Floor & Hoeks, Céline & Nieuwkerk, Pythia & Stokkers, Pieter & Ponsioen, Cyriel & Bockting, Claudi & Sanderman, Robbert & Sprangers, Mirjam. (2013). Development of the Patient Harvey Bradshaw Index (P-HBI) and a Comparison With a Clinician-based Harvey Bradshaw Index Assessment of Crohn's Disease Activity.. Journal of clinical gastroenterology. 47. 10.1097/MCG.0b013e31828b2196. 
+
+Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 1980;315(8167):514
+
+British Columbia Ministry of Health Services. Worksheet based on the Harvey-Bradshaw Index. British Columbia Ministry of Health Services, website https://www.health.gov.bc.ca/exforms/pharmacare/5374fil.pdf
+
+Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and efficacy endpoints for clinical trials of medical therapy in adults with Crohn's disease. Gastroenterology 2002; 122: 512-530.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"82df0732f322ca5a20eee2d769b652ae">
+		["MD5-CAM-1.0.1"] = <"1678d46d5cdf22ec0642022478cb79fc">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -101,6 +107,7 @@ definition
 												list = <
 													["1"] = <
 														units = <"1/d">
+														magnitude = <|1.0..25.0|>
 													>
 												>
 											>
@@ -201,6 +208,19 @@ definition
 											DV_COUNT matches {*}
 										}
 									}
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0050,    -- Remission
+													at0051,    -- Mild disease
+													at0052,    -- Moderate disease
+													at0053]    -- Severe disease
+												}
+											}
+										}
+									}
 									ELEMENT[at0048] occurrences matches {0..1} matches {    -- Comment
 										value matches {
 											DV_TEXT matches {*}
@@ -258,6 +278,7 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 				["at0004"] = <
 					text = <"General well-being">
 					description = <"Original question: \"If you would have to rate your general well-being by giving it a number, what number would you choose? (1 = terrible, 10 = very well)\"">
+					comment = <"Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point.">
 				>
 				["at0005"] = <
 					text = <"Terrible">
@@ -302,6 +323,7 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 				["at0015"] = <
 					text = <"Abdominal pain">
 					description = <"Original question: \"To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.\"">
+					comment = <"Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point.">
 				>
 				["at0016"] = <
 					text = <"No abdominal pain">
@@ -350,6 +372,8 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 				["at0027"] = <
 					text = <"Diarrhoea frequency">
 					description = <"Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\"">
+					comment = <"For calculation of the Total score, each number of liquid stools counts x1.
+In case of a stoma or pouch please score deviation in comparison to its normal state.">
 				>
 				["1/d"] = <
 					text = <"per day">
@@ -427,7 +451,20 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 				>
 				["at0045"] = <
 					text = <"Total score">
-					description = <"">
+					description = <"Harvey-Bradshaw Index Score is the sum of all the points added together, excluding the frequency of stoma bag changes and frequency of stools in pouch. For the number of stools (Diarrhoea frequency), count the number of occurrences for the total score. For the general well-being and abdominal pain, the following points mapping should be used:
+
+General well-being: 
+- if ordinal points are bigger or equal to 7, the score of that element is 0
+- if ordinal points equals 6, the score of that element is 1
+- if ordinal points equals 5, the score of that element is 2
+- if ordinal points equals 4, the score of that element is 3
+- if ordinal points is less than 4, the score of that element is 4
+
+Abdominal pain: 
+- if ordinal points equals 0, the score of that element is 0
+- if ordinal points equals 1 to 3, the score of that element is 1
+- if ordinal points equals 4 to 7, the score of that element is 2
+- if ordinal points equals 8 to 10, the score of that element is 3">
 				>
 				["at0046"] = <
 					text = <"Item tree">
@@ -441,15 +478,35 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					text = <"Comment">
 					description = <"">
 				>
+				["at0049"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Remission">
+					description = <"Total score less than 5 points">
+				>
+				["at0051"] = <
+					text = <"Mild disease">
+					description = <"Total score from 5 to 7 points">
+				>
+				["at0052"] = <
+					text = <"Moderate disease">
+					description = <"Total score from 8 to 16 points">
+				>
+				["at0053"] = <
+					text = <"Severe disease">
+					description = <"Total score bigger than 16 points">
+				>
 			>
 		>
 		["fr"] = <
 			items = <
 				["at0000"] = <
 					text = <"Indice de Harvey Bradshaw modifié par le patient (P-HBI)">
-					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+					description = <"Tous les éléments du P-HBI font référence aux symptômes de la semaine précédente et la terminologie médicale et les symptômes de la maladie ont été clarifiés. Le premier item sur le bien-être général est formulé comme suit : « Si vous deviez évaluer votre bien-être général en lui donnant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bien). Le deuxième élément concernant les douleurs abdominales est : « Dans quelle mesure avez-vous ressenti des douleurs abdominales au cours de la semaine précédente ? Veuillez l'indiquer sur une échelle de 0 à 10, où 0 signifie aucune douleur abdominale et 10 la pire douleur abdominale imaginable. Le troisième élément sur l'examen physique de la masse abdominale a été omis, car nous avons supposé que les patients ne peuvent pas s'examiner physiquement de manière adéquate. Par conséquent, le HBI modifié par le patient se compose de 11 éléments, au lieu des 12 éléments du HBI basé sur le clinicien. Le quatrième item est la question concernant le nombre de selles liquides quotidiennes : « Combien de fois en moyenne par jour avez-vous eu la diarrhée au cours de la semaine précédente ? La diarrhée est une selle liquide qui ne peut pas être ramassée (par exemple avec une fourchette). » Pour les questions sur les 8 manifestations extra-intestinales bien connues, les options de réponse pour le patient étaient de 3 : « oui », « non, \" et je ne sais pas.\" Cette troisième option de réponse a été ajoutée, car les patients peuvent ne pas savoir s'ils ont une manifestation spécifique ou peuvent ne pas être familiers avec sa terminologie médicale spécifique.
 
-The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
+L'option de réponse « Je ne sais pas » n'est ajoutée que pour l'indice Harvey Bradshaw modifié par le patient.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -469,6 +526,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				["at0004"] = <
 					text = <"Bien-être général">
 					description = <"Original question: \"Si vous deviez évaluer votre bien-être général en lui attribuant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bon)\"">
+					comment = <"*Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point. (en)">
 				>
 				["at0005"] = <
 					text = <"Terrible">
@@ -513,6 +571,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				["at0015"] = <
 					text = <"Douleurs abdominales">
 					description = <"Original question: \"Dans quelle mesure avez-vous ressenti des douleurs abdominales au cours de la semaine précédente ? Veuillez indiquer cela sur une échelle de 0 à 10, 0 signifiant aucune douleur abdominale et 10 la pire douleur abdominale imaginable.\"">
+					comment = <"Notez qu'il existe un mappage spécial pour le calcul du score total dans l'élément \"Score total\" concernant ce point de données.">
 				>
 				["at0016"] = <
 					text = <"Aucune douleur abdominale">
@@ -561,6 +620,8 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				["at0027"] = <
 					text = <"Fréquence de la diarrhée">
 					description = <"Original question: \"En moyenne, combien de fois par jour avez-vous eu de la diarrhée au cours de la semaine précédente ? La diarrhée désigne des selles liquides qui ne peuvent pas être ramassées (par exemple avec une fourchette).\"">
+					comment = <"Pour le calcul du score Total, chaque nombre de selles liquides compte x1.
+Dans le cas d'une stomie ou d'une poche, veuillez noter l'écart par rapport à son état normal.">
 				>
 				["1/d"] = <
 					text = <"par jour">
@@ -577,7 +638,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				>
 				["at0030"] = <
 					text = <"A une pochette?">
-					description = <"Original question \"Avez-vous une poche ?\"">
+					description = <"Original question \"Avez-vous une poche?\"">
 				>
 				["at0031"] = <
 					text = <"Fréquence des selles en poche">
@@ -638,7 +699,20 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				>
 				["at0045"] = <
 					text = <"Score total">
-					description = <"">
+					description = <"Le score de l'indice Harvey-Bradshaw est la somme de tous les points additionnés, à l'exclusion de la fréquence des changements de sac de stomie et de la fréquence des selles dans la poche. Pour le nombre de selles (fréquence des diarrhées), compter le nombre d'occurrences pour le score total. Pour le bien-être général et les douleurs abdominales, la cartographie des points suivants doit être utilisée :
+
+Bien-être général:
+- si les points ordinaux sont supérieurs ou égaux à 7, le score de cet élément est 0
+- si les points ordinaux sont égaux à 6, le score de cet élément est 1
+- si les points ordinaux sont égaux à 5, le score de cet élément est 2
+- si les points ordinaux sont égaux à 4, le score de cet élément est 3
+- si les points ordinaux sont inférieurs à 4, le score de cet élément est 4
+
+Douleur abdominale:
+- si les points ordinaux sont égaux à 0, le score de cet élément est 0
+- si les points ordinaux sont égaux de 1 à 3, le score de cet élément est 1
+- si les points ordinaux sont égaux de 4 à 7, le score de cet élément est 2
+- si les points ordinaux valent 8 à 10, le score de cet élément est 3">
 				>
 				["at0046"] = <
 					text = <"Item tree">
@@ -653,15 +727,35 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					text = <"Commentaire">
 					description = <"Informations supplémentaires sur l'état général des P-HBI qui ne sont pas saisies dans d'autres champs">
 				>
+				["at0049"] = <
+					text = <"Interprétation du score total">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Rémission">
+					description = <"Score total inférieure à 5 points">
+				>
+				["at0051"] = <
+					text = <"Maladie bénigne">
+					description = <"Score total de 5 à 7 points">
+				>
+				["at0052"] = <
+					text = <"Maladie modérée">
+					description = <"Score total de 8 à 16 points">
+				>
+				["at0053"] = <
+					text = <"Maladie grave">
+					description = <"Score total supérieur à 16 points">
+				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
 					text = <"Patientenmodifizierter Harvey-Bradshaw-Index (P-HBI)">
-					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+					description = <"Alle Items innerhalb des P-HBI beziehen sich auf Symptome während der Vorwoche und medizinische Terminologie und Krankheitssymptome wurden geklärt. Das erste Item zum allgemeinen Wohlbefinden ist wie folgt formuliert: „Wenn Sie Ihr allgemeines Wohlbefinden mit einer Zahl bewerten müssten, welche Zahl würden Sie wählen?“ (1 = schrecklich, 10 = sehr gut). Das zweite Item zu Bauchschmerzen lautet: „Inwieweit hatten Sie in der Vorwoche Bauchschmerzen? Bitte geben Sie dies auf einer Skala von 0 bis 10 an, wobei 0 für keine Bauchschmerzen und 10 für die stärksten vorstellbaren Bauchschmerzen steht.“ Der dritte Punkt zur körperlichen Untersuchung der Abdominalmasse wurde ausgelassen, da wir davon ausgingen, dass Patienten sich selbst nicht ausreichend körperlich untersuchen können. Folglich besteht der patientenmodifizierte HBI aus 11 Items anstelle der 12 Items im klinikbasierten HBI. Das vierte Item ist die Frage nach der Anzahl der täglichen flüssigen Stuhlgänge: „Wie oft hatten Sie in der vergangenen Woche durchschnittlich pro Tag Durchfall? Durchfall ist ein flüssiger Stuhl, der nicht (z. B. mit einer Gabel) aufgenommen werden kann.“ Bei den Fragen zu den 8 bekannten extraintestinalen Manifestationen gab es 3 Antwortmöglichkeiten für den Patienten: „ja“, „nein“, \" und ich weiß es nicht.\" Diese dritte Antwortoption wurde hinzugefügt, da Patienten möglicherweise nicht wissen, ob sie eine bestimmte Manifestation haben oder mit der spezifischen medizinischen Terminologie nicht vertraut sind.
 
-The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
+Die Antwortoption „Ich weiß nicht“ wird nur für den patientenmodifizierten Harvey-Bradshaw-Index hinzugefügt.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -681,6 +775,7 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 				["at0004"] = <
 					text = <"Allgemeines Wohlbefinden">
 					description = <"Original question: \"Wenn Sie Ihr Allgemeinbefinden mit einer Zahl bewerten müssten, welche Zahl würden Sie wählen? (1 = unerträglich, 10 = sehr gut)\"">
+					comment = <"*Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point. (en)">
 				>
 				["at0005"] = <
 					text = <"Unerträglich">
@@ -725,6 +820,7 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 				["at0015"] = <
 					text = <"Bauchschmerzen">
 					description = <"Original question: \"Wie sehr litten Sie in der vergangenen Woche an Bauchschmerzen? Bitte geben Sie das Ausmaß der Bauchschmerzen auf einer Skala von 0 bis 10 an, wobei 0 für keine Bauchschmerzen und 10 für unvorstellbar starke Bauchschmerzen steht.\"">
+					comment = <"Beachten Sie, dass es für diesen Datenpunkt eine spezielle Zuordnung für die Berechnung der Gesamtpunktzahl im Element \"Gesamtpunktzahl\" gibt.">
 				>
 				["at0016"] = <
 					text = <"Keine Bauchschmerzen">
@@ -773,6 +869,8 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 				["at0027"] = <
 					text = <"Häufigkeit von Durchfall">
 					description = <"Original question: \"Wie oft hatten Sie in der vergangenen Woche Durchfall pro Tag? Durchfall bedeutet flüssiger Stuhl, der nicht aufgehoben werden könnte (etwa mit einer Gabel).\"">
+					comment = <"Für die Berechnung der Gesamtpunktzahl zählt jede Anzahl flüssiger Stühle x1.
+Im Falle eines Stomas oder Pouches bewerten Sie bitte die Abweichung im Vergleich zum Normalzustand.">
 				>
 				["1/d"] = <
 					text = <"pro tag">
@@ -850,7 +948,20 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 				>
 				["at0045"] = <
 					text = <"Gesamtpunktzahl">
-					description = <"">
+					description = <"Der Harvey-Bradshaw-Index-Score ist die Summe aller addierten Punkte, ausgenommen die Häufigkeit von Stomabeutelwechseln und die Häufigkeit von Stuhlgängen im Beutel. Zählen Sie für die Anzahl der Stuhlgänge (Durchfallhäufigkeit) die Anzahl der Vorkommnisse für die Gesamtpunktzahl. Für das allgemeine Wohlbefinden und Bauchschmerzen sollten die folgenden Punkte Mapping verwendet werden:
+
+Allgemeines Wohlbefinden:
+- Wenn Ordnungspunkte größer oder gleich 7 sind, ist die Punktzahl dieses Elements 0
+- Wenn die Ordnungspunkte gleich 6 sind, ist die Punktzahl dieses Elements 1
+- Wenn die Ordnungspunkte gleich 5 sind, ist die Punktzahl dieses Elements 2
+- Wenn die Ordnungspunkte gleich 4 sind, ist die Punktzahl dieses Elements 3
+- Wenn die Ordnungspunktzahl weniger als 4 beträgt, ist die Punktzahl dieses Elements 4
+
+Bauchschmerzen:
+- Wenn Ordnungspunkte gleich 0 sind, ist die Punktzahl dieses Elements 0
+- Wenn die Ordnungspunkte 1 bis 3 betragen, ist die Punktzahl dieses Elements 1
+- Wenn die Ordnungspunkte 4 bis 7 betragen, ist die Punktzahl dieses Elements 2
+- Wenn die Ordnungspunkte 8 bis 10 betragen, ist die Punktzahl dieses Elements 3">
 				>
 				["at0046"] = <
 					text = <"Item tree">
@@ -864,6 +975,26 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 					text = <"Kommentar">
 					description = <"Zusätzliche Angaben zum P-HBI
 ">
+				>
+				["at0049"] = <
+					text = <"Interpretation der Gesamtpunktzahl">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Remission">
+					description = <"Gesamtpunktzahl weniger als 5 Punkte">
+				>
+				["at0051"] = <
+					text = <"Leichte Krankheit">
+					description = <"Gesamtpunktzahl von 5 bis 7 Punkten">
+				>
+				["at0052"] = <
+					text = <"Mittelschwere Erkrankung">
+					description = <"Gesamtpunktzahl von 8 bis 16 Punkten">
+				>
+				["at0053"] = <
+					text = <"Schlimme Krankheit">
+					description = <"Gesamtpunktzahl größer als 16 Punkte">
 				>
 			>
 		>
