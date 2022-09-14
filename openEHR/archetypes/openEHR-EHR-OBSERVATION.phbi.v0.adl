@@ -64,7 +64,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d871bf8cbc1e4b9155a5ef397b60efad">
+		["MD5-CAM-1.0.1"] = <"6fdb612b5ed9a7dcd30c4bb6fdb42087">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -211,7 +211,9 @@ definition
 									}
 									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Total score
 										value matches {
-											DV_COUNT matches {*}
+											DV_COUNT matches {
+												magnitude matches {|0..45|}
+											}
 										}
 									}
 									ELEMENT[at0049] occurrences matches {0..1} matches {    -- Total score interpretation
