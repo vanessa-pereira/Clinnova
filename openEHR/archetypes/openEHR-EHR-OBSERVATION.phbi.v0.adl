@@ -64,7 +64,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c36d07d403924581f04b8c39fd31bcda">
+		["MD5-CAM-1.0.1"] = <"3d5a5bdea630b21e8db299a1c23614be">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -481,7 +481,7 @@ Abdominal pain:
 				["at0047"] = <
 					text = <"Extension">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
-					comment = <"For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 				["at0048"] = <
 					text = <"Comment">
@@ -730,7 +730,7 @@ Douleur abdominale:
 				["at0047"] = <
 					text = <"Extension">
 					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
-					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 				["at0048"] = <
 					text = <"Commentaire">
@@ -979,6 +979,7 @@ Bauchschmerzen:
 				["at0047"] = <
 					text = <"Erweiterung">
 					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 				["at0048"] = <
 					text = <"Kommentar">
