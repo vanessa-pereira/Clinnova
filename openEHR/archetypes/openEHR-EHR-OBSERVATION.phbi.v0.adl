@@ -64,7 +64,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"10da44dfc61baa381cc39f5ad76e7f78">
+		["MD5-CAM-1.0.1"] = <"c36d07d403924581f04b8c39fd31bcda">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -480,7 +480,8 @@ Abdominal pain:
 				>
 				["at0047"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 				["at0048"] = <
 					text = <"Comment">
