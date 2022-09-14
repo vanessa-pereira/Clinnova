@@ -19,7 +19,7 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"The Montreal classification for Crohn’s disease addresses aspects of clinical definition and classification for Crohn’s disease for use in clinical practice as well as for future genetic and serologic studies.">
-			keywords = <"Montreal classification for Crohn’s disease, Montreal, classification, Crohn’s disease, UC", ...>
+			keywords = <"Montreal classification for Crohn’s disease, Montreal, classification, Crohn’s disease, CD, IBD", ...>
 		>
 	>
 	other_details = <
@@ -31,8 +31,8 @@ Freeman H. J. (2007). Application of the Montreal classification for Crohn's dis
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["build_uid"] = <"2e76a54d-d8f1-3ec7-a03d-6af6f29a86d7">
 		["MD5-CAM-1.0.1"] = <"b1cd71ee5ed8b760e88af59fc7499fe3">
+		["build_uid"] = <"2e76a54d-d8f1-3ec7-a03d-6af6f29a86d7">
 	>
 
 definition
