@@ -64,7 +64,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7034ea62110911256dde5e87fe6b0829">
+		["MD5-CAM-1.0.1"] = <"10da44dfc61baa381cc39f5ad76e7f78">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -484,7 +484,7 @@ Abdominal pain:
 				>
 				["at0048"] = <
 					text = <"Comment">
-					description = <"">
+					description = <"Additional information about P-HBI not captured in other fields">
 				>
 				["at0049"] = <
 					text = <"Total score interpretation">
@@ -733,7 +733,7 @@ Douleur abdominale:
 				>
 				["at0048"] = <
 					text = <"Commentaire">
-					description = <"Informations supplémentaires sur l'état général des P-HBI qui ne sont pas saisies dans d'autres champs">
+					description = <"*Additional information about P-HBI not captured in other fields (en)">
 				>
 				["at0049"] = <
 					text = <"Interprétation du score total">
@@ -981,8 +981,7 @@ Bauchschmerzen:
 				>
 				["at0048"] = <
 					text = <"Kommentar">
-					description = <"Zusätzliche Angaben zum P-HBI
-">
+					description = <"*Additional information about P-HBI not captured in other fields (en)">
 				>
 				["at0049"] = <
 					text = <"Interpretation der Gesamtpunktzahl">
