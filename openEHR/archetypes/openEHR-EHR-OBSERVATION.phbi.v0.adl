@@ -64,7 +64,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9812a0ca7e609771e7adb009989be818">
+		["MD5-CAM-1.0.1"] = <"7034ea62110911256dde5e87fe6b0829">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -289,7 +289,7 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					comment = <"Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point.">
 				>
 				["at0005"] = <
-					text = <"Terrible">
+					text = <"1 - Terrible">
 					description = <"">
 				>
 				["at0006"] = <
@@ -325,7 +325,7 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"Very well">
+					text = <"10 - Very well">
 					description = <"">
 				>
 				["at0015"] = <
@@ -334,7 +334,7 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					comment = <"Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point.">
 				>
 				["at0016"] = <
-					text = <"No abdominal pain">
+					text = <"0 - No abdominal pain">
 					description = <"">
 				>
 				["at0017"] = <
@@ -374,7 +374,7 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"Worst imaginable abdominal pain">
+					text = <"10 - Worst imaginable abdominal pain">
 					description = <"">
 				>
 				["at0027"] = <
@@ -537,7 +537,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					comment = <"*Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point. (en)">
 				>
 				["at0005"] = <
-					text = <"Terrible">
+					text = <"1 - Terrible">
 					description = <"">
 				>
 				["at0006"] = <
@@ -573,7 +573,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"Très bon">
+					text = <"10 - Très bon">
 					description = <"">
 				>
 				["at0015"] = <
@@ -582,7 +582,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					comment = <"Notez qu'il existe un mappage spécial pour le calcul du score total dans l'élément \"Score total\" concernant ce point de données.">
 				>
 				["at0016"] = <
-					text = <"Aucune douleur abdominale">
+					text = <"0 - Aucune douleur abdominale">
 					description = <"">
 				>
 				["at0017"] = <
@@ -622,7 +622,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"Pire douleur abdominale imaginable">
+					text = <"10 - Pire douleur abdominale imaginable">
 					description = <"">
 				>
 				["at0027"] = <
@@ -786,7 +786,7 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 					comment = <"*Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point. (en)">
 				>
 				["at0005"] = <
-					text = <"Unerträglich">
+					text = <"1 - Unerträglich">
 					description = <"">
 				>
 				["at0006"] = <
@@ -822,7 +822,7 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"Sehr gut">
+					text = <"10 - Sehr gut">
 					description = <"">
 				>
 				["at0015"] = <
@@ -831,7 +831,7 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 					comment = <"Beachten Sie, dass es für diesen Datenpunkt eine spezielle Zuordnung für die Berechnung der Gesamtpunktzahl im Element \"Gesamtpunktzahl\" gibt.">
 				>
 				["at0016"] = <
-					text = <"Keine Bauchschmerzen">
+					text = <"0 - Keine Bauchschmerzen">
 					description = <"">
 				>
 				["at0017"] = <
@@ -871,7 +871,7 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"Unvorstellbar starke Bauchschmerzen">
+					text = <"10 - Unvorstellbar starke Bauchschmerzen">
 					description = <"">
 				>
 				["at0027"] = <
