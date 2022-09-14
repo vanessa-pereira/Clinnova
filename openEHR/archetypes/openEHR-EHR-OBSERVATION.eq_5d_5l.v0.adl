@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -14,23 +26,75 @@ description
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"hildi@freshehr.com">
 	>
-	lifecycle_state = <"Initial">
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>", ...>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Für die Erfassung und Berichterstattung von EQ-5D-5L-Fragebogeninformationen, um die Gesundheitsergebnisse einer Vielzahl von Interventionen auf einer gemeinsamen Skala zu Bewertungs-, Zuordnungs- und Überwachungszwecken zu bewerten.">
+			keywords = <"EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Zum Aufzeichnen von EQ-5D-5L-Fragebogeninformationen.
+
+Dieses Instrument hat strenge Designrichtlinien (UI), die auf Anwendungsebene befolgt werden müssen. Detaillierte Informationen finden Sie in den EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)
+
+Während openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen. © EuroQol-Forschungsstiftung. EQ-5D™ ist eine Marke der EuroQol Research Foundation. (Bitte beachten Sie: Für jede Sprachversion werden das Urheberrechtsjahr und die entsprechende Versionsnummer zum Urheberrechtsvermerk hinzugefügt, der in der Fußzeile des Fragebogens angezeigt wird.)
+
+Weitere Informationen finden Sie in der EQ-5D-Benutzerlizenzrichtlinie (https://euroqol.org/support/documents/eq-5d-user-license-policy/) und der EQ-5D-Registrierung (https://registration.euroqol.org /)
+Bei Fragen zur EQ-5D-Benutzerlizenzrichtlinie wenden Sie sich bitte an das EuroQol-Büro unter der folgenden Adresse und Kontaktdaten:
+EuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890
+E: userinformationservice@euroqol.org">
+			misuse = <"Darf nicht verwendet werden, es sei denn, die Bestimmungen des Urheberrechts wurden eingehalten.">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"For the capture and reporting of EQ-5D-5L questionnaire information.">
+			purpose = <"For the capture and reporting of EQ-5D-5L questionnaire information in order to assess health outcome from a wide variety of interventions on a common scale, for purposes of evaluation, allocation and monitoring.">
+			keywords = <"EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol", ...>
 			use = <"Use to record EQ-5D-5L questionnaire information.
 
-While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+This instrument has strict design guidelines (UI) that need to be followed at the application level. For detailed information, please check the EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)
 
-userinformationservice@euroqol.org.">
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. © EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. (Please note: For each language version, the copyright year and corresponding version number are added to the copyright notice as presented in the footer of the questionnaire)
+
+For more information please check EQ-5D User License Policy (https://euroqol.org/support/documents/eq-5d-user-license-policy/) and EQ-5D Registration (https://registration.euroqol.org/)
+For any questions regarding the EQ-5D User License Policy, please contact the EuroQol Office at the following address and contact details:
+EuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890
+E: userinformationservice@euroqol.org
+
+">
 			misuse = <"Not to be used unless the terms of copyright have been observed.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Pour la saisie et la communication des informations du questionnaire EQ-5D-5L afin d'évaluer les résultats pour la santé d'une grande variété d'interventions sur une échelle commune, à des fins d'évaluation, d'attribution et de suivi.">
+			keywords = <"EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Utilisez pour enregistrer les informations du questionnaire EQ-5D-5L.
+
+Cet instrument a des directives de conception (UI) strictes qui doivent être suivies au niveau de l'application. Pour des informations détaillées, veuillez consulter les directives universelles de représentation numérique EQ-5D (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)
+
+Alors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur. © Fondation de recherche EuroQol. EQ-5D™ est une marque déposée de la Fondation de recherche EuroQol. (Veuillez noter : pour chaque version linguistique, l'année du copyright et le numéro de version correspondant sont ajoutés à l'avis de copyright tel que présenté dans le pied de page du questionnaire)
+
+Pour plus d'informations, veuillez consulter la politique de licence utilisateur EQ-5D (https://euroqol.org/support/documents/eq-5d-user-license-policy/) et l'enregistrement EQ-5D (https://registration.euroqol.org /)
+Pour toute question concernant la politique de licence utilisateur EQ-5D, veuillez contacter le bureau EuroQol à l'adresse et aux coordonnées suivantes:
+EuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890
+E: userinformationservice@euroqol.org">
+			misuse = <"Ne pas utiliser à moins que les termes du droit d'auteur aient été respectés.">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
-		["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
-		["MD5-CAM-1.0.1"] = <"8e60cebb72e3e939fef92d5850494aac">
+		["references"] = <"The EuroQol Group (1990). EuroQol-a new facility for the measurement of health-related quality of life. Health Policy 16(3):199-208 (https://pubmed.ncbi.nlm.nih.gov/10109801/)
+
+Brooks R (1996). EuroQol: the current state of play. Health Policy 37(1):53-72 (https://pubmed.ncbi.nlm.nih.gov/10158943/)
+
+Herdman M, Gudex C, Lloyd A, Janssen M, Kind P, Parkin D, Bonsel G, Badia X. Development and preliminary testing of the new five-level version of EQ-5D (EQ-5D-5L). Qual Life Res. 2011 Dec;20(10):1727-36 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3220807/pdf/11136_2011_Article_9903.pdf)
+
+Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Busschbach J. Measurement properties of the EQ-5D-5L compared to the EQ-5D-3L across eight patient groups: a multi-country study. Qual Life Res. 2013 Sep;22(7):1717-27 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3764313/pdf/11136_2012_Article_322.pdf)
+
+van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
+		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
+		["MD5-CAM-1.0.1"] = <"96628f21e41de22d632b9928db470358">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -43,7 +107,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Mobility
+									ELEMENT[at0004] matches {    -- Mobility
 										value matches {
 											1|[local::at0005],
 											2|[local::at0006],
@@ -52,7 +116,7 @@ definition
 											5|[local::at0009]
 										}
 									}
-									ELEMENT[at0010] occurrences matches {0..1} matches {    -- Self care
+									ELEMENT[at0010] matches {    -- Self-care
 										value matches {
 											1|[local::at0011],
 											2|[local::at0012],
@@ -61,7 +125,7 @@ definition
 											5|[local::at0015]
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Usual activities
+									ELEMENT[at0016] matches {    -- Usual activities
 										value matches {
 											1|[local::at0017],
 											2|[local::at0018],
@@ -70,7 +134,7 @@ definition
 											5|[local::at0021]
 										}
 									}
-									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Pain or discomfort
+									ELEMENT[at0022] matches {    -- Pain / discomfort
 										value matches {
 											1|[local::at0023],
 											2|[local::at0024],
@@ -79,7 +143,7 @@ definition
 											5|[local::at0027]
 										}
 									}
-									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Anxiety or depression
+									ELEMENT[at0028] matches {    -- Anxiety / depression
 										value matches {
 											1|[local::at0031],
 											2|[local::at0032],
@@ -88,14 +152,14 @@ definition
 											5|[local::at0035]
 										}
 									}
-									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Health VAS
+									ELEMENT[at0029] matches {    -- EQ VAS
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..100|}
 											}
 										}
 									}
-									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Health state
+									ELEMENT[at0030] matches {    -- Health state
 										value matches {
 											DV_TEXT matches {*}
 										}
@@ -112,6 +176,11 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0039] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
 										}
 									}
 								}
@@ -139,9 +208,11 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"EQ-5D-5L questionnaire">
-					description = <"EQ-5D-5L questionnaire.">
-					comment = <"Licensed_question_instruction:
-Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					description = <"The 5-level EQ-5D version (EQ-5D-5L) was introduced by the EuroQol Group in 2009 to improve the instrument’s sensitivity and to reduce ceiling effects, as compared to the EQ-5D-3L. The EQ-5D-5L essentially consists of 2 pages: the EQ-5D descriptive system and the EQ visual analogue scale (EQ VAS).
+
+The descriptive system comprises five dimensions: mobility, self-care, usual activities, pain/discomfort and anxiety/depression. Each dimension has 5 levels: no problems, slight problems, moderate problems, severe problems and extreme problems. The patient is asked to indicate his/her health state by ticking the box next to the most appropriate statement in each of the five dimensions. This decision results in a 1-digit number that expresses the level selected for that dimension. The digits for the five dimensions can be combined into a 5-digit number that describes the patient’s health state.
+
+The EQ VAS records the patient’s self-rated health on a vertical visual analogue scale, where the endpoints are labelled ‘The best health you can imagine’ and ‘The worst health you can imagine’. The VAS can be used as a quantitative measure of health outcome that reflect the patient’s own judgement.">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -149,7 +220,9 @@ Under each heading, please tick the ONE box that best describes your health TODA
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"*">
+					description = <"Licensed_question_instruction: Under each heading, please tick the ONE box that best describes your health TODAY.">
+					comment = <"This version refers to the English version for the UK.
+© EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. UK (English) v1.2">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -157,8 +230,9 @@ Under each heading, please tick the ONE box that best describes your health TODA
 				>
 				["at0004"] = <
 					text = <"Mobility">
-					description = <"MOBILITY">
+					description = <"Dimension: MOBILITY">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Mobility">
 				>
 				["at0005"] = <
 					text = <"I have no problems in walking about">
@@ -181,16 +255,17 @@ Under each heading, please tick the ONE box that best describes your health TODA
 					description = <"The patient reports being unable to walk about.">
 				>
 				["at0010"] = <
-					text = <"Self care">
-					description = <"SELF-CARE">
+					text = <"Self-care">
+					description = <"Dimension: SELF-CARE">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Self-care">
 				>
 				["at0011"] = <
-					text = <"I have no problems with self care">
+					text = <"I have no problems washing or dressing myself">
 					description = <"The patient reports no problems washing or dressing themselves.">
 				>
 				["at0012"] = <
-					text = <"I have some problems washing or dressing myself">
+					text = <"I have slight problems washing or dressing myself">
 					description = <"The patient reports slight problems washing or dressing themselves.">
 				>
 				["at0013"] = <
@@ -207,15 +282,16 @@ Under each heading, please tick the ONE box that best describes your health TODA
 				>
 				["at0016"] = <
 					text = <"Usual activities">
-					description = <"USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)">
+					description = <"Dimension: USUAL ACTIVITIES (e.g. work, study, housework, family or leisure activities)">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Usual activities">
 				>
 				["at0017"] = <
-					text = <"I have no problems with performing my usual activities">
+					text = <"I have no problems doing my usual activities">
 					description = <"The patient reports no problem doing usual activities.">
 				>
 				["at0018"] = <
-					text = <"I have some problems with performing my usual activities">
+					text = <"I have some problems doing my usual activities">
 					description = <"The patient reports slight problems doing usual activities.">
 				>
 				["at0019"] = <
@@ -227,13 +303,14 @@ Under each heading, please tick the ONE box that best describes your health TODA
 					description = <"The patient reports severe problems doing usual activities.">
 				>
 				["at0021"] = <
-					text = <"I am unable to do y usual activities">
+					text = <"I am unable to do my usual activities">
 					description = <"The patient reports being unable to do their usual activities.">
 				>
 				["at0022"] = <
-					text = <"Pain or discomfort">
-					description = <"PAIN / DISCOMFORT ">
+					text = <"Pain / discomfort">
+					description = <"Dimension: PAIN / DISCOMFORT ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Pain/Discomfort">
 				>
 				["at0023"] = <
 					text = <"I have no pain or discomfort">
@@ -256,24 +333,32 @@ Under each heading, please tick the ONE box that best describes your health TODA
 					description = <"The patient reports having extreme pain or discomfort.">
 				>
 				["at0028"] = <
-					text = <"Anxiety or depression">
-					description = <"ANXIETY / DEPRESSION ">
+					text = <"Anxiety / depression">
+					description = <"Dimension: ANXIETY / DEPRESSION ">
 					comment = <"Under each heading, please tick the ONE box that best describes your health TODAY. ">
+					Dimension = <"Anxiety/depression">
 				>
 				["at0029"] = <
-					text = <"Health VAS">
-					description = <"
-">
-					comment = <"Licensed_question_instruction:
-We would like to know how good or bad your health is TODAY. 
-This scale is numbered from 0 to 100. 
-100 means the best health you can imagine. 0 means the worst health you can imagine. 
-Mark an X on the scale to indicate how your health is TODAY 
-Now, please write the number you marked on the scale in the below.">
+					text = <"EQ VAS">
+					description = <"Licensed_question_instruction:
+- We would like to know how good or bad your health is TODAY. 
+- You will see a scale numbered from 0 to 100. 
+- 100 means the best health you can imagine. 0 means the worst health you can imagine. 
+- Please indicate on the scale to indicate how your health is TODAY.">
 				>
 				["at0030"] = <
 					text = <"Health state">
-					description = <"YOUR HEALTH TODAY">
+					description = <"This field does not appear in the patient interface.
+
+What is a health state?
+Each of the five dimensions (Mobility, Self-care, Usual Activities, Pain/Discomfort, Anxiety/Depression) comprising the EQ-5D descriptive system is divided into five levels of perceived problems:
+- LEVEL 1: indicating no problem
+- LEVEL 2: indicating slight problems
+- LEVEL 3: indicating moderate problems
+- LEVEL 4: indicating severe problems
+- LEVEL 5: indicating unable to/extreme problems
+
+A unique health state is defined by combining one level from each of the five dimensions. A total of 3125 possible health states is defined in this way. Each state is referred to by a 5-digit code. For example, working clockwise from the top of the diagram, state 12345 indicates no problems with mobility, slight problems with washing or dressing, moderate problems with doing usual activities, severe pain or discomfort and extreme anxiety or depression, while state 11111 indicates no problems on any of the five dimensions.">
 				>
 				["at0031"] = <
 					text = <"I am not anxious or depressed">
@@ -301,11 +386,426 @@ Now, please write the number you marked on the scale in the below.">
 				>
 				["at0037"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 				["at0038"] = <
 					text = <"Index Value">
-					description = <"">
+					description = <"Deriving an EQ-5D index value - Many different terms are in use for these index values, such as preference weights, preference-based values, utilities, QALY weights, etc. Here, we use the term 'index value'. EQ-5D-5L health states can be summarised using the 5-digit code (like element \"Health state\") or represented by a single summary number (index value), which reflects how good or bad a health state is according to the preferences of the general population of a country/region.
+Index values are a major feature of the EQ-5D instrument, facilitating the calculation of quality-adjusted life years (QALYs) that are used to inform economic evaluations of healthcare interventions. The preferences of the general the population of a country/region for different health states represent the societal perspective which, in general, is considered the preferred perspective in health economic analysis.
+
+An EQ-5D summary index is derived by applying a formula that attaches values (weights) to each of the levels in each dimension. The index is calculated by deducting the appropriate weights from 1, the value for full health (i.e. state 11111).
+The collection of index values (weights) for all possible EQ-5D health states is called a value set. Most EQ-5D value sets have been obtained from a standardised valuation exercise, in which a representative sample of the general population in a country/region is asked to place a value on EQ-5D health states. The standardised valuation study protocol, EQ-VT, was developed by the EuroQol Group to create standard value sets for the EQ-5D-5L. This protocol is based on the use of the composite time trade-off (cTTO) valuation technique, supplemented by a discrete-choice experiment (DCE). Using value sets produced with the EuroQol Group’s standardised valuation technology, EQ-VT ensures that results are derived using the most state-of-the-art valuation techniques while also facilitating international comparability.
+
+The latest status of the standardized EQ-5D-5L valuation studies can be viewed on the EuroQol website at https://euroqol.org/eq-5d-instruments/eq-5d-5l-about/valuation-standard-value-sets/
+
+If a standard EQ-5D-5L value set is not available for your country, an option may be to select an EQ-5D-5L value set for a country/region that most closely approximates yours.">
+					comment = <"Note: It is advisable to contact authorities about national value set requirements.">
+				>
+				["at0039"] = <
+					text = <"Comment">
+					description = <"Additional narrative on the EQ-5D-5L questionnaire.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ-5D-5L gesundheitsfragebogen">
+					description = <"Die 5-stufige EQ-5D-Version (EQ-5D-5L) wurde 2009 von der EuroQol Group eingeführt, um die Empfindlichkeit des Instruments zu verbessern und Deckeneffekte im Vergleich zum EQ-5D-3L zu reduzieren. Der EQ-5D-5L besteht im Wesentlichen aus 2 Seiten: dem EQ-5D-Beschreibungssystem und der visuellen EQ-Analogskala (EQ VAS).
+
+Das Beschreibungssystem umfasst fünf Dimensionen: Mobilität, Selbstversorgung, gewöhnliche Aktivitäten, Schmerzen/Beschwerden und Angst/Depression. Jede Dimension hat 5 Stufen: keine Probleme, leichte Probleme, mittlere Probleme, schwere Probleme und extreme Probleme. Der Patient wird gebeten, seinen Gesundheitszustand anzugeben, indem er das Kästchen neben der zutreffendsten Aussage in jeder der fünf Dimensionen ankreuzt. Diese Entscheidung führt zu einer einstelligen Zahl, die die für diese Dimension ausgewählte Ebene ausdrückt. Die Ziffern für die fünf Dimensionen können zu einer 5-stelligen Zahl kombiniert werden, die den Gesundheitszustand des Patienten beschreibt.
+
+Das EQ VAS zeichnet die selbst eingeschätzte Gesundheit des Patienten auf einer vertikalen visuellen Analogskala auf, wobei die Endpunkte mit „Die beste Gesundheit, die Sie sich vorstellen können“ und „Die schlechteste Gesundheit, die Sie sich vorstellen können“ gekennzeichnet sind. Die VAS kann als quantitatives Maß für das Gesundheitsergebnis verwendet werden, das die eigene Einschätzung des Patienten widerspiegelt.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Jedes Ereignis">
+					description = <"Licensed_question_instruction: Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
+					comment = <"Gesundheitsfragebogen - Deutsche Version für Deutschland
+© 2009 EuroQol Research Foundation. EQ-5D™is a trade mark of the EuroQol Research Foundation. German (Germany)
+">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Beweglichkeit / Mobilität">
+					description = <"Dimension: BEWEGLICHKEIT / MOBILITÄT">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
+				>
+				["at0005"] = <
+					text = <"Ich habe keine Probleme herumzugehen">
+					description = <"*The patient reports no problems walking about. (en)">
+				>
+				["at0006"] = <
+					text = <"Ich habe leichte Probleme herumzugehen">
+					description = <"*The patient reports slight problems walking about. (en)">
+				>
+				["at0007"] = <
+					text = <"Ich habe mäßige Probleme herumzugehen">
+					description = <"*The patient reports moderate problems walking about. (en)">
+				>
+				["at0008"] = <
+					text = <"Ich habe große Probleme herumzugehen">
+					description = <"*The patient reports severe problems walking about. (en)">
+				>
+				["at0009"] = <
+					text = <"Ich bin nicht in der Lage herumzugehen">
+					description = <"*The patient reports being unable to walk about. (en)">
+				>
+				["at0010"] = <
+					text = <"Für sich selbst sorgen">
+					description = <"Dimension: FÜR SICH SELBST SORGEN">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
+				>
+				["at0011"] = <
+					text = <"Ich habe keine Probleme herumzugehen">
+					description = <"*The patient reports no problems washing or dressing themselves. (en)">
+				>
+				["at0012"] = <
+					text = <"Ich habe keine Probleme herumzugehen">
+					description = <"*The patient reports slight problems washing or dressing themselves. (en)">
+				>
+				["at0013"] = <
+					text = <"Ich habe mäßige Probleme herumzugehen">
+					description = <"*The patient reports moderate problems washing or dressing themselves. (en)">
+				>
+				["at0014"] = <
+					text = <"Ich habe große Probleme herumzugehen">
+					description = <"*The patient reports severe problems washing or dressing themselves. (en)">
+				>
+				["at0015"] = <
+					text = <"Ich bin nicht in der Lage herumzugehen">
+					description = <"*The patient reports being unable to wash or dress themselves. (en)">
+				>
+				["at0016"] = <
+					text = <"Alltägliche tätigkeiten">
+					description = <"Dimension: ALLTÄGLICHE TÄTIGKEITEN (z.B. Arbeit, Studium, Hausarbeit, Familien-oder Freizeitaktivitäten)">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
+				>
+				["at0017"] = <
+					text = <"*I have no problems doing my usual activities (en)">
+					description = <"*The patient reports no problem doing usual activities. (en)">
+				>
+				["at0018"] = <
+					text = <"*I have some problems doing my usual activities (en)">
+					description = <"*The patient reports slight problems doing usual activities. (en)">
+				>
+				["at0019"] = <
+					text = <"*I have moderate problems doing my usual activities (en)">
+					description = <"*The patient reports moderate problems doing usual activities. (en)">
+				>
+				["at0020"] = <
+					text = <"*I have severe problems doing my usual activities (en)">
+					description = <"*The patient reports severe problems doing usual activities. (en)">
+				>
+				["at0021"] = <
+					text = <"*I am unable to do my usual activities (en)">
+					description = <"*The patient reports being unable to do their usual activities. (en)">
+				>
+				["at0022"] = <
+					text = <"Schmerzen / unbehag">
+					description = <"Dimension: SCHMERZEN / UNBEHAG">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
+				>
+				["at0023"] = <
+					text = <"*I have no pain or discomfort (en)">
+					description = <"*The patient reports having no pain or discomfort. (en)">
+				>
+				["at0024"] = <
+					text = <"*I have slight pain or discomfort (en)">
+					description = <"*The patient reports having slight pain or discomfort. (en)">
+				>
+				["at0025"] = <
+					text = <"*I have moderate pain or discomfort (en)">
+					description = <"*The patient reports having moderate pain or discomfort. (en)">
+				>
+				["at0026"] = <
+					text = <"*I have severe pain or discomfort (en)">
+					description = <"*The patient reports having severe pain or discomfort. (en)">
+				>
+				["at0027"] = <
+					text = <"*I have extreme pain or discomfort (en)">
+					description = <"*The patient reports having extreme pain or discomfort. (en)">
+				>
+				["at0028"] = <
+					text = <"Angst / niedergeschlagenheit">
+					description = <"Dimension: ANGST / NIEDERGESCHLAGENHEIT">
+					comment = <"Bitte klicken Sie DAS Kästchen an, das Ihre Gesundheit HEUTE am besten beschreibt.">
+				>
+				["at0029"] = <
+					text = <"EQ VAS">
+					description = <"Licensed_question_instruction:
+- Wir wollen herausfinden, wie gut oder schlecht Ihre Gesundheit HEUTE ist. 
+- Diese Skala ist mitZahlen von 0 bis 100 versehen. 100 ist die <u>beste</u> Gesundheit, die Sie sich vorstellen können.
+- (Null) ist die <u>schlechteste</u> Gesundheit, die Sie sich vorstellen können. 
+- Bitte klicken Sie den Punkt auf der Skala an, der Ihre Gesundheit HEUTE am besten beschreibt.">
+				>
+				["at0030"] = <
+					text = <"Gesundheitszustand">
+					description = <"Dieses Feld erscheint nicht in der Patientenschnittstelle.
+
+Was ist ein Gesundheitszustand?
+Jede der fünf Dimensionen (Mobilität, Selbstfürsorge, übliche Aktivitäten, Schmerz/Unbehagen, Angst/Depression), aus denen das EQ-5D-Beschreibungssystem besteht, ist in fünf Ebenen wahrgenommener Probleme unterteilt:
+- LEVEL 1: Kein Problem
+- STUFE 2: Zeigt leichte Probleme an
+- STUFE 3: Zeigt mittelschwere Probleme an
+- STUFE 4: Zeigt schwerwiegende Probleme an
+- STUFE 5: zeigt Unfähigkeit/extreme Probleme an
+
+Ein eindeutiger Gesundheitszustand wird durch die Kombination einer Ebene aus jeder der fünf Dimensionen definiert. Auf diese Weise werden insgesamt 3125 mögliche Gesundheitszustände definiert. Jeder Staat wird durch einen 5-stelligen Code bezeichnet. Zum Beispiel zeigt Zustand 12345 im Uhrzeigersinn vom oberen Rand des Diagramms an, dass keine Probleme mit der Mobilität, leichte Probleme beim Waschen oder Anziehen, mäßige Probleme mit gewöhnlichen Aktivitäten, starke Schmerzen oder Beschwerden und extreme Angst oder Depression auftreten, während Zustand 11111 keine Probleme anzeigt auf einer der fünf Dimensionen.">
+				>
+				["at0031"] = <
+					text = <"*I am not anxious or depressed (en)">
+					description = <"*The patient reports not feeling anxious or depressed. (en)">
+				>
+				["at0032"] = <
+					text = <"*I am slightly anxious or depressed (en)">
+					description = <"*The patient reports feeling slightly anxious or depressed. (en)">
+				>
+				["at0033"] = <
+					text = <"*I am moderately anxious or depressed (en)">
+					description = <"*The patient reports feeling moderately anxious or depressed. (en)">
+				>
+				["at0034"] = <
+					text = <"*I am severely anxious or depressed (en)">
+					description = <"*The patient reports feeling severely anxious or depressed. (en)">
+				>
+				["at0035"] = <
+					text = <"*I am extremely anxious or depressed (en)">
+					description = <"*The patient reports feeling extremely anxious or depressed. (en)">
+				>
+				["at0036"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0037"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Information, die für die Erfassung des lokalen Kontexts oder für die Anpassung an andere Referenzmodelle/Formalismen benötigt wird.">
+					comment = <"Zum Beispiel: Informationen zu lokalen Krankenhausabteilungen oder zusätzliche Metadaten zum Abgleich mit FHIR- oder CIMI-Äquivalenten.">
+				>
+				["at0038"] = <
+					text = <"Indexwert">
+					description = <"*Ableitung eines EQ-5D-Indexwerts - Für diese Indexwerte werden viele verschiedene Begriffe verwendet, wie z. B. Präferenzgewichte, präferenzbasierte Werte, Nutzen, QALY-Gewichte usw. Wir verwenden hier den Begriff \"Indexwert\". EQ-5D-5L-Gesundheitszustände können mithilfe des 5-stelligen Codes (wie Element „Gesundheitszustand“) zusammengefasst oder durch eine einzelne Summenzahl (Indexwert) dargestellt werden, die widerspiegelt, wie gut oder schlecht ein Gesundheitszustand gemäß den Präferenzen ist der allgemeinen Bevölkerung eines Landes/einer Region.
+Indexwerte sind ein Hauptmerkmal des EQ-5D-Instruments und erleichtern die Berechnung von qualitätsbereinigten Lebensjahren (QALYs), die verwendet werden, um wirtschaftliche Bewertungen von Gesundheitsinterventionen zu informieren. Die Präferenzen der Bevölkerung eines Landes/einer Region für unterschiedliche Gesundheitszustände stellen die gesellschaftliche Perspektive dar, die im Allgemeinen als bevorzugte Perspektive in der gesundheitsökonomischen Analyse gilt.
+
+Ein zusammenfassender EQ-5D-Index wird abgeleitet, indem eine Formel angewendet wird, die Werte (Gewichte) zu jeder der Ebenen in jeder Dimension hinzufügt. Der Index wird berechnet, indem die entsprechenden Gewichte von 1, dem Wert für volle Gesundheit (d. h. Zustand 11111), abgezogen werden.
+Die Sammlung von Indexwerten (Gewichten) für alle möglichen EQ-5D-Gesundheitszustände wird als Wertesatz bezeichnet. Die meisten EQ-5D-Wertesätze wurden aus einer standardisierten Bewertungsübung gewonnen, bei der eine repräsentative Stichprobe der allgemeinen Bevölkerung in einem Land/einer Region gebeten wird, den EQ-5D-Gesundheitszustand zu bewerten. Das standardisierte Bewertungsstudienprotokoll EQ-VT wurde von der EuroQol Group entwickelt, um Standardwertsätze für den EQ-5D-5L zu erstellen. Dieses Protokoll basiert auf der Verwendung der Bewertungstechnik Composite Time Trade-off (cTTO), ergänzt durch ein Discrete-Choice-Experiment (DCE). Durch den Einsatz von Wertesets, die mit der standardisierten Bewertungstechnologie der EuroQol-Gruppe erstellt wurden, stellt EQ-VT sicher, dass die Ergebnisse mit den modernsten Bewertungstechniken abgeleitet werden, und erleichtert gleichzeitig die internationale Vergleichbarkeit.
+
+Der aktuelle Stand der standardisierten EQ-5D-5L-Bewertungsstudien kann auf der EuroQol-Website unter https://euroqol.org/eq-5d-instruments/eq-5d-5l-about/valuation-standard-value-sets eingesehen werden /
+
+Wenn für Ihr Land kein standardmäßiger EQ-5D-5L-Wertesatz verfügbar ist, besteht eine Option darin, einen EQ-5D-5L-Wertesatz für ein Land/eine Region auszuwählen, der Ihrem Land/Ihrer Region am nächsten kommt.">
+					comment = <"Hinweis: Es ist ratsam, sich bezüglich nationaler Wertesatzanforderungen an die Behörden zu wenden.">
+				>
+				["at0039"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Angaben zum EQ-5D-5L-Fragebogen.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"EQ-5D-5L questionnaire">
+					description = <"La version EQ-5D à 5 niveaux (EQ-5D-5L) a été introduite par le groupe EuroQol en 2009 pour améliorer la sensibilité de l'instrument et réduire les effets de plafond, par rapport à l'EQ-5D-3L. L'EQ-5D-5L se compose essentiellement de 2 pages : le système descriptif EQ-5D et l'échelle visuelle analogique EQ (EQ VAS).
+
+Le système descriptif comprend cinq dimensions : mobilité, soins personnels, activités habituelles, douleur/inconfort et anxiété/dépression. Chaque dimension comporte 5 niveaux : aucun problème, problèmes légers, problèmes modérés, problèmes graves et problèmes extrêmes. Le patient est invité à indiquer son état de santé en cochant la case à côté de l'énoncé le plus approprié dans chacune des cinq dimensions. Cette décision se traduit par un nombre à 1 chiffre qui exprime le niveau sélectionné pour cette dimension. Les chiffres des cinq dimensions peuvent être combinés en un nombre à 5 chiffres qui décrit l'état de santé du patient.
+
+L'EQ VAS enregistre l'état de santé auto-évalué du patient sur une échelle visuelle analogique verticale, où les paramètres sont étiquetés « La meilleure santé que vous puissiez imaginer » et « La pire santé que vous puissiez imaginer ». L’EVA peut être utilisée comme une mesure quantitative des résultats de santé reflétant le propre jugement du patient.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Tout événement">
+					description = <"Licensed_question_instruction: Veuillez cliquer sur UNE case, celle qui décrit le mieux votre santé AUJOURD'HUI.">
+					comment = <"Questionnaire de santé - Version française pour la France
+© 2009 EuroQol Research Foundation. EQ-5D™is a trade mark of the EuroQol Research Foundation. French(France)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Mobilité">
+					description = <"Dimension: MOBILITÉ">
+					comment = <"Veuillez cliquer sur UNE case, celle qui décrit le mieux votre santé AUJOURD'HUI.">
+				>
+				["at0005"] = <
+					text = <"Je n'ai aucun problème pour me déplacer à pied">
+					description = <"*The patient reports no problems walking about. (en)">
+				>
+				["at0006"] = <
+					text = <"J'ai des problèmes légers pour me déplacer à pied">
+					description = <"*The patient reports slight problems walking about. (en)">
+				>
+				["at0007"] = <
+					text = <"J'ai des problèmes modérés pour me déplacer à pied">
+					description = <"*The patient reports moderate problems walking about. (en)">
+				>
+				["at0008"] = <
+					text = <"J'ai des problèmes sévères pour me déplacer à pied">
+					description = <"*The patient reports severe problems walking about. (en)">
+				>
+				["at0009"] = <
+					text = <"Je suis incapable de me déplacer à pied">
+					description = <"*The patient reports being unable to walk about. (en)">
+				>
+				["at0010"] = <
+					text = <"Autonomie de la personne">
+					description = <"Dimension: AUTONOMIE DE LA PERSONNE">
+					comment = <"Veuillez cliquer sur UNE case, celle qui décrit le mieux votre santé AUJOURD'HUI.">
+				>
+				["at0011"] = <
+					text = <"Je n'ai aucun problème pour me laver ou m'habiller tout(e) seul(e)">
+					description = <"*The patient reports no problems washing or dressing themselves. (en)">
+				>
+				["at0012"] = <
+					text = <"J'ai des problèmes légers pour me laver ou m'habiller tout(e) seul(e)">
+					description = <"*The patient reports slight problems washing or dressing themselves. (en)">
+				>
+				["at0013"] = <
+					text = <"J'ai des problèmes modérés pour me laver ou m'habiller tout(e) seul(e)">
+					description = <"*The patient reports moderate problems washing or dressing themselves. (en)">
+				>
+				["at0014"] = <
+					text = <"J'ai des problèmes sévères pour me laver ou m'habiller tout(e) seul(e)">
+					description = <"*The patient reports severe problems washing or dressing themselves. (en)">
+				>
+				["at0015"] = <
+					text = <"Je suis incapable de me laver ou de m'habiller tout(e) seul(e)">
+					description = <"*The patient reports being unable to wash or dress themselves. (en)">
+				>
+				["at0016"] = <
+					text = <"Activités courantes">
+					description = <"Dimension: ACTIVITÉS COURANTES (p. ex., travail, études, travaux domestiques, activités familiales ou loisirs)">
+					comment = <"Veuillez cliquer sur UNE case, celle qui décrit le mieux votre santé AUJOURD'HUI.">
+				>
+				["at0017"] = <
+					text = <"Je n'ai aucun problème pour accomplir mes activités courantes">
+					description = <"*The patient reports no problem doing usual activities. (en)">
+				>
+				["at0018"] = <
+					text = <"J'ai des problèmes légers pour accomplir mes activités courantes">
+					description = <"*The patient reports slight problems doing usual activities. (en)">
+				>
+				["at0019"] = <
+					text = <"J'ai des problèmes modérés pour accomplir mes activités courantes">
+					description = <"*The patient reports moderate problems doing usual activities. (en)">
+				>
+				["at0020"] = <
+					text = <"J'ai des problèmes sévères pour accomplir mes activités courantes">
+					description = <"*The patient reports severe problems doing usual activities. (en)">
+				>
+				["at0021"] = <
+					text = <"Je suis incapable d'accomplir mes activités courantes">
+					description = <"*The patient reports being unable to do their usual activities. (en)">
+				>
+				["at0022"] = <
+					text = <"Douleurs / gêne">
+					description = <"Dimension: DOULEURS / GÊNE">
+					comment = <"Veuillez cliquer sur UNE case, celle qui décrit le mieux votre santé AUJOURD'HUI.">
+				>
+				["at0023"] = <
+					text = <"Je n'ai ni douleur ni gene">
+					description = <"*The patient reports having no pain or discomfort. (en)">
+				>
+				["at0024"] = <
+					text = <"J'ai des douleurs ou une gêne légère(s)">
+					description = <"*The patient reports having slight pain or discomfort. (en)">
+				>
+				["at0025"] = <
+					text = <"J'ai des douleurs ou une gêne modérée(s)">
+					description = <"*The patient reports having moderate pain or discomfort. (en)">
+				>
+				["at0026"] = <
+					text = <"J'ai des douleurs ou une gêne sévère(s)">
+					description = <"*The patient reports having severe pain or discomfort. (en)">
+				>
+				["at0027"] = <
+					text = <"J'ai des douleurs ou une gêne extrême(s)">
+					description = <"*The patient reports having extreme pain or discomfort. (en)">
+				>
+				["at0028"] = <
+					text = <"Anxiété / dépression">
+					description = <"Dimension: ANXIÉTÉ / DÉPRESSION">
+					comment = <"Veuillez cliquer sur UNE case, celle qui décrit le mieux votre santé AUJOURD'HUI.">
+				>
+				["at0029"] = <
+					text = <"EQ VAS">
+					description = <"Licensed_question_instruction:
+Nous aimerions savoir dans quelle mesure votre santé est bonne ou mauvaise AUJOURD'HUI. 
+- Cette échelle est numérotée de 0 à 100.
+- 100 correspond à la meilleure santé que vous puissiez imaginer. 0 correspond à la pire santé que vous puissiez imaginer.
+- Veuillez cliquer sur l'échelle afin d'indiquer votre état de santé AUJOURD'HU">
+				>
+				["at0030"] = <
+					text = <"État de santé">
+					description = <"Ce champ n'apparaît pas dans l'interface patient.
+
+Qu'est-ce qu'un état de santé ?
+Chacune des cinq dimensions (Mobilité, Soins personnels, Activités habituelles, Douleur/Inconfort, Anxiété/Dépression) composant le système descriptif EQ-5D est divisée en cinq niveaux de problèmes perçus :
+- NIVEAU 1 : indiquant aucun problème
+- NIVEAU 2 : indiquant de légers problèmes
+- NIVEAU 3 : indiquant des problèmes modérés
+- NIVEAU 4 : indiquant des problèmes graves
+- NIVEAU 5 : indiquant incapable de/problèmes extrêmes
+
+Un état de santé unique est défini en combinant un niveau de chacune des cinq dimensions. Un total de 3125 états de santé possibles est ainsi défini. Chaque état est désigné par un code à 5 chiffres. Par exemple, en travaillant dans le sens des aiguilles d'une montre à partir du haut du diagramme, l'état 12345 n'indique aucun problème de mobilité, de légers problèmes de toilette ou d'habillage, des problèmes modérés dans l'exécution des activités habituelles, une douleur ou un inconfort intense et une anxiété ou une dépression extrême, tandis que l'état 11111 n'indique aucun problème. sur l'une des cinq dimensions.">
+				>
+				["at0031"] = <
+					text = <"Je ne suis ni anxieux(se) ni déprimé(e)">
+					description = <"*The patient reports not feeling anxious or depressed. (en)">
+				>
+				["at0032"] = <
+					text = <"Je suis légèrement anxieux(se) ou déprimé(e)">
+					description = <"*The patient reports feeling slightly anxious or depressed. (en)">
+				>
+				["at0033"] = <
+					text = <"Je suis modérément anxieux(se) ou déprimé(e)">
+					description = <"*The patient reports feeling moderately anxious or depressed. (en)">
+				>
+				["at0034"] = <
+					text = <"Je suis sévèrement anxieux(se) ou déprimé(e)">
+					description = <"*The patient reports feeling severely anxious or depressed. (en)">
+				>
+				["at0035"] = <
+					text = <"Je suis extrêmement anxieux(se) ou déprimé(e)">
+					description = <"*The patient reports feeling extremely anxious or depressed. (en)">
+				>
+				["at0036"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0037"] = <
+					text = <"Extension">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+				>
+				["at0038"] = <
+					text = <"Valeur de l'indice">
+					description = <"Ce champ n'apparaît pas dans l'interface patient.
+
+Dérivation d'une valeur d'indice EQ-5D - De nombreux termes différents sont utilisés pour ces valeurs d'indice, tels que les pondérations de préférence, les valeurs basées sur les préférences, les utilités, les pondérations QALY, etc. Ici, nous utilisons le terme « valeur d'indice ». Les états de santé EQ-5D-5L peuvent être résumés à l'aide du code à 5 chiffres (comme l'élément \"État de santé\") ou représentés par un seul numéro récapitulatif (valeur d'index), qui reflète à quel point un état de santé est bon ou mauvais selon les préférences de la population générale d'un pays/d'une région.
+Les valeurs de l'indice sont une caractéristique majeure de l'instrument EQ-5D, facilitant le calcul des années de vie ajustées sur la qualité (QALY) qui sont utilisées pour éclairer les évaluations économiques des interventions de soins de santé. Les préférences de la population générale d'un pays/d'une région pour différents états de santé représentent la perspective sociétale qui, en général, est considérée comme la perspective préférée dans l'analyse économique de la santé.
+
+Un indice récapitulatif EQ-5D est dérivé en appliquant une formule qui attache des valeurs (pondérations) à chacun des niveaux de chaque dimension. L'indice est calculé en déduisant les poids appropriés de 1, la valeur de la pleine santé (c'est-à-dire l'état 11111).
+La collection de valeurs d'index (pondérations) pour tous les états de santé possibles de l'EQ-5D est appelée un ensemble de valeurs. La plupart des ensembles de valeurs EQ-5D ont été obtenus à partir d'un exercice d'évaluation standardisé, dans lequel un échantillon représentatif de la population générale d'un pays/d'une région est invité à attribuer une valeur aux états de santé EQ-5D. Le protocole d'étude d'évaluation standardisé, EQ-VT, a été développé par le groupe EuroQol pour créer des ensembles de valeurs standard pour l'EQ-5D-5L. Ce protocole est basé sur l'utilisation de la technique d'évaluation composite time trade-off (cTTO), complétée par une expérience à choix discret (DCE). En utilisant des ensembles de valeurs produits avec la technologie d'évaluation standardisée du groupe EuroQol, EQ-VT garantit que les résultats sont dérivés à l'aide des techniques d'évaluation les plus avancées tout en facilitant la comparabilité internationale.
+
+Le dernier état des études d'évaluation standardisées EQ-5D-5L peut être consulté sur le site Web d'EuroQol à l'adresse https://euroqol.org/eq-5d-instruments/eq-5d-5l-about/valuation-standard-value-sets
+
+Si un ensemble de valeurs EQ-5D-5L standard n'est pas disponible pour votre pays, une option peut être de sélectionner un ensemble de valeurs EQ-5D-5L pour un pays/une région qui se rapproche le plus du vôtre.">
+					comment = <"Remarque : Il est conseillé de contacter les autorités au sujet des exigences nationales en matière d'ensemble de valeurs.">
+				>
+				["at0039"] = <
+					text = <"Commentaire">
+					description = <"Récit supplémentaire sur le questionnaire EQ-5D-5L.">
 				>
 			>
 		>

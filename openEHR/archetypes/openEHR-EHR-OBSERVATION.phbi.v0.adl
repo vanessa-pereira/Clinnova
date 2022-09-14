@@ -1,0 +1,1010 @@
+archetype (adl_version=1.4; uid=5a446e91-5685-43c1-8e51-976c2302f4e9)
+	openEHR-EHR-OBSERVATION.phbi.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@pm.me">
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@pm.me">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2022-09-12">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Bennebroek Evertsz’, F. (2017). Quality of life, anxiety, depression in patients with inflammatory bowel disease: From screening to the effect of a cognitive behavioural intervention. https://pure.uva.nl/ws/files/19622695/Chapter_5.pdf
+
+Bennebroek Evertsz, Floor & Hoeks, Céline & Nieuwkerk, Pythia & Stokkers, Pieter & Ponsioen, Cyriel & Bockting, Claudi & Sanderman, Robbert & Sprangers, Mirjam. (2013). Development of the Patient Harvey Bradshaw Index (P-HBI) and a Comparison With a Clinician-based Harvey Bradshaw Index Assessment of Crohn's Disease Activity.. Journal of clinical gastroenterology. 47. 10.1097/MCG.0b013e31828b2196. 
+
+Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 1980;315(8167):514
+
+British Columbia Ministry of Health Services. Worksheet based on the Harvey-Bradshaw Index. British Columbia Ministry of Health Services, website https://www.health.gov.bc.ca/exforms/pharmacare/5374fil.pdf
+
+Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and efficacy endpoints for clinical trials of medical therapy in adults with Crohn's disease. Gastroenterology 2002; 122: 512-530.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3d5a5bdea630b21e8db299a1c23614be">
+		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Patient Harvey Bradshaw Index (P-HBI)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- During the previous week
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] matches {    -- General well-being
+										value matches {
+											1|[local::at0005],
+											2|[local::at0006],
+											3|[local::at0007],
+											4|[local::at0008],
+											5|[local::at0009],
+											6|[local::at0010],
+											7|[local::at0011],
+											8|[local::at0012],
+											9|[local::at0013],
+											10|[local::at0014]
+										}
+									}
+									ELEMENT[at0015] matches {    -- Abdominal pain
+										value matches {
+											0|[local::at0016],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019],
+											4|[local::at0020],
+											5|[local::at0021],
+											6|[local::at0022],
+											7|[local::at0023],
+											8|[local::at0024],
+											9|[local::at0025],
+											10|[local::at0026]
+										}
+									}
+									ELEMENT[at0027] matches {    -- Diarrhoea frequency
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+														magnitude = <|1.0..25.0|>
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0028] matches {    -- Has a stoma?
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Frequency of stoma bag changes
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0030] matches {    -- Has a pouch?
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									ELEMENT[at0031] occurrences matches {0..1} matches {    -- Frequency of stools in pouch
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0032] matches {    -- Joint pain (not caused by strain on sports, work or accident)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0036] matches {    -- Eye inflammation (Uveitis)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0037]
+										}
+									}
+									ELEMENT[at0038] matches {    -- Skin disorder (Erythema)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0039]
+										}
+									}
+									ELEMENT[at0040] matches {    -- Skin disorder (Pyoderma)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0039]
+										}
+									}
+									ELEMENT[at0041] matches {    -- Momentarily aphthous ulcers in mouth
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0042] matches {    -- Anal pain (fissure) while excrement
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0043] matches {    -- Painful fistula with puss
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0044] matches {    -- Momentarily abscess (painful sore from anus)
+										value matches {
+											0|[local::at0033],
+											1|[local::at0034],
+											1|[local::at0035]
+										}
+									}
+									ELEMENT[at0045] matches {    -- Total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..45|}
+											}
+										}
+									}
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0050,    -- Remission
+													at0051,    -- Mild disease
+													at0052,    -- Moderate disease
+													at0053]    -- Severe disease
+												}
+											}
+										}
+									}
+									ELEMENT[at0048] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P7D}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0046] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0047] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patient Harvey Bradshaw Index (P-HBI)">
+					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index. ">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"During the previous week">
+					description = <"Original statement: 
+The following questions concern your Crohn’s Disease.
+These questions refer to your symptoms during the PREVIOUS WEEK.
+">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"General well-being">
+					description = <"Original question: \"If you would have to rate your general well-being by giving it a number, what number would you choose? (1 = terrible, 10 = very well)\"">
+					comment = <"Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point.">
+				>
+				["at0005"] = <
+					text = <"1 - Terrible">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"10 - Very well">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Abdominal pain">
+					description = <"Original question: \"To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.\"">
+					comment = <"Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point.">
+				>
+				["at0016"] = <
+					text = <"0 - No abdominal pain">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"10 - Worst imaginable abdominal pain">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Diarrhoea frequency">
+					description = <"Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\"">
+					comment = <"For calculation of the Total score, each number of liquid stools counts x1.
+In case of a stoma or pouch please score deviation in comparison to its normal state.">
+				>
+				["1/d"] = <
+					text = <"per day">
+					description = <"@ units @">
+				>
+				["at0028"] = <
+					text = <"Has a stoma?">
+					description = <"Original question: \"Do you have a stoma?\"">
+				>
+				["at0029"] = <
+					text = <"Frequency of stoma bag changes">
+					description = <"Original question: \"If so, please indicate how often you changed the bag on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\"">
+					comment = <"x stands for the number of times">
+				>
+				["at0030"] = <
+					text = <"Has a pouch?">
+					description = <"Original question \"Do you have a pouch?\"">
+				>
+				["at0031"] = <
+					text = <"Frequency of stools in pouch">
+					description = <"Original question: \"If so, please indicate how often you had stools on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\"">
+					comment = <"x stands for the number of times">
+				>
+				["at0032"] = <
+					text = <"Joint pain (not caused by strain on sports, work or accident)">
+					description = <"Original question: \"Have you had joint pain during the previous week that was not caused by a strain during sports, work or an accident?\"">
+				>
+				["at0033"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"I do not know">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Eye inflammation (Uveitis)">
+					description = <"Original question: \"Do you momentarily have an eye inflammation, for which you have seen an eye-specialist and which your treating specialist diagnosed as uveitis?\"">
+				>
+				["at0037"] = <
+					text = <"I have an eye inflammation but have not seen an eye specialist for it or do not know what the infection is called">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Skin disorder (Erythema)">
+					description = <"Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as erythema nodosum by your treating specialist?\"">
+				>
+				["at0039"] = <
+					text = <"I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Skin disorder (Pyoderma)">
+					description = <"Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as pyoderma by your treating specialist?\"">
+				>
+				["at0041"] = <
+					text = <"Momentarily aphthous ulcers in mouth">
+					description = <"Original question: \"Do you momentarily have aphthous ulcers (i.e. sores or blister-like spots) in your mouth?\"">
+				>
+				["at0042"] = <
+					text = <"Anal pain (fissure) while excrement">
+					description = <"Original question: \"Have you had anal pain (a fissure) during the previous week during excrement? Here we are referring to pain in the anus during the passage of stools.\"">
+				>
+				["at0043"] = <
+					text = <"Painful fistula with puss">
+					description = <"Original question: \"Have you had a fistula during the previous week that was painful and produced puss from the fistula opening? Fistulas are connections or passageways between the skin and intestines. Usually, fistulas are located around the anus, abdomen or buttocks.\"">
+				>
+				["at0044"] = <
+					text = <"Momentarily abscess (painful sore from anus)">
+					description = <"Original question: \"Do you momentarily have an abscess (i.e. a painful sore by your anus)?\"">
+				>
+				["at0045"] = <
+					text = <"Total score">
+					description = <"Harvey-Bradshaw Index Score is the sum of all the points added together, excluding the frequency of stoma bag changes and frequency of stools in pouch. For the number of stools (Diarrhoea frequency), count the number of occurrences for the total score. For the general well-being and abdominal pain, the following points mapping should be used:
+
+General well-being: 
+- if ordinal points are bigger or equal to 7, the score of that element is 0
+- if ordinal points equals 6, the score of that element is 1
+- if ordinal points equals 5, the score of that element is 2
+- if ordinal points equals 4, the score of that element is 3
+- if ordinal points is less than 4, the score of that element is 4
+
+Abdominal pain: 
+- if ordinal points equals 0, the score of that element is 0
+- if ordinal points equals 1 to 3, the score of that element is 1
+- if ordinal points equals 4 to 7, the score of that element is 2
+- if ordinal points equals 8 to 10, the score of that element is 3">
+				>
+				["at0046"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0047"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0048"] = <
+					text = <"Comment">
+					description = <"Additional information about P-HBI not captured in other fields">
+				>
+				["at0049"] = <
+					text = <"Total score interpretation">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Remission">
+					description = <"Total score less than 5 points">
+				>
+				["at0051"] = <
+					text = <"Mild disease">
+					description = <"Total score from 5 to 7 points">
+				>
+				["at0052"] = <
+					text = <"Moderate disease">
+					description = <"Total score from 8 to 16 points">
+				>
+				["at0053"] = <
+					text = <"Severe disease">
+					description = <"Total score bigger than 16 points">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Indice de Harvey Bradshaw modifié par le patient (P-HBI)">
+					description = <"Tous les éléments du P-HBI font référence aux symptômes de la semaine précédente et la terminologie médicale et les symptômes de la maladie ont été clarifiés. Le premier item sur le bien-être général est formulé comme suit : « Si vous deviez évaluer votre bien-être général en lui donnant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bien). Le deuxième élément concernant les douleurs abdominales est : « Dans quelle mesure avez-vous ressenti des douleurs abdominales au cours de la semaine précédente ? Veuillez l'indiquer sur une échelle de 0 à 10, où 0 signifie aucune douleur abdominale et 10 la pire douleur abdominale imaginable. Le troisième élément sur l'examen physique de la masse abdominale a été omis, car nous avons supposé que les patients ne peuvent pas s'examiner physiquement de manière adéquate. Par conséquent, le HBI modifié par le patient se compose de 11 éléments, au lieu des 12 éléments du HBI basé sur le clinicien. Le quatrième item est la question concernant le nombre de selles liquides quotidiennes : « Combien de fois en moyenne par jour avez-vous eu la diarrhée au cours de la semaine précédente ? La diarrhée est une selle liquide qui ne peut pas être ramassée (par exemple avec une fourchette). » Pour les questions sur les 8 manifestations extra-intestinales bien connues, les options de réponse pour le patient étaient de 3 : « oui », « non, \" et je ne sais pas.\" Cette troisième option de réponse a été ajoutée, car les patients peuvent ne pas savoir s'ils ont une manifestation spécifique ou peuvent ne pas être familiers avec sa terminologie médicale spécifique.
+
+L'option de réponse « Je ne sais pas » n'est ajoutée que pour l'indice Harvey Bradshaw modifié par le patient.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Au cours de la semaine précédente">
+					description = <"Original statement: 
+Les questions suivantes concernent votre maladie de Crohn.
+Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAINE PRÉCÉDENTE
+">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Bien-être général">
+					description = <"Original question: \"Si vous deviez évaluer votre bien-être général en lui attribuant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bon)\"">
+					comment = <"*Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point. (en)">
+				>
+				["at0005"] = <
+					text = <"1 - Terrible">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"10 - Très bon">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Douleurs abdominales">
+					description = <"Original question: \"Dans quelle mesure avez-vous ressenti des douleurs abdominales au cours de la semaine précédente ? Veuillez indiquer cela sur une échelle de 0 à 10, 0 signifiant aucune douleur abdominale et 10 la pire douleur abdominale imaginable.\"">
+					comment = <"Notez qu'il existe un mappage spécial pour le calcul du score total dans l'élément \"Score total\" concernant ce point de données.">
+				>
+				["at0016"] = <
+					text = <"0 - Aucune douleur abdominale">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"10 - Pire douleur abdominale imaginable">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Fréquence de la diarrhée">
+					description = <"Original question: \"En moyenne, combien de fois par jour avez-vous eu de la diarrhée au cours de la semaine précédente ? La diarrhée désigne des selles liquides qui ne peuvent pas être ramassées (par exemple avec une fourchette).\"">
+					comment = <"Pour le calcul du score Total, chaque nombre de selles liquides compte x1.
+Dans le cas d'une stomie ou d'une poche, veuillez noter l'écart par rapport à son état normal.">
+				>
+				["1/d"] = <
+					text = <"par jour">
+					description = <"@ units @">
+				>
+				["at0028"] = <
+					text = <"A une stomie?">
+					description = <"Original question: \"Avez-vous une stomie ?\"">
+				>
+				["at0029"] = <
+					text = <"Fréquence des changements de sac de stomie">
+					description = <"Original question: \"Si oui, veuillez indiquer à quelle fréquence vous avez changé la poche en moyenne par jour au cours de la semaine précédente, par rapport à une semaine normale (0 = pas plus fréquemment, x = fois supplémentaires par jour)\"">
+					comment = <"x représente le nombre de fois">
+				>
+				["at0030"] = <
+					text = <"A une pochette?">
+					description = <"Original question \"Avez-vous une poche?\"">
+				>
+				["at0031"] = <
+					text = <"Fréquence des selles en poche">
+					description = <"Original question: \"Si oui, veuillez indiquer combien de selles supplémentaires vous avez eu en moyenne par jour au cours de la semaine précédente, par rapport à une semaine normale (0 = pas plus fréquemment, x = fois supplémentaires par jour)\"">
+					comment = <"x représente le nombre de fois">
+				>
+				["at0032"] = <
+					text = <"Douleurs articulaires (non causées par des efforts sportifs, professionnels ou accidentels)">
+					description = <"Original question: \"Avez-vous eu des douleurs articulaires au cours de la semaine précédente qui n’étaient pas causées par un traumatisme lié au sport, au travail ou à un accident ?\"">
+				>
+				["at0033"] = <
+					text = <"Oui">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Non">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Je ne sais pas">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Inflammation oculaire (Uvéite)">
+					description = <"Original question: \"Souffrez-vous momentanément d’une inflammation oculaire, pour laquelle vous avez vu un ophtalmologiste et que votre spécialiste traitant a diagnostiquée comme uvéite ?\"">
+				>
+				["at0037"] = <
+					text = <"J’ai une inflammation oculaire, mais je n’ai pas consulté d’ophtalmologiste ou je ne sais pas comment s’appelle l’infection">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Trouble cutané (Érythème)">
+					description = <"Original question: \"Avez-vous eu un trouble cutané au cours de la semaine précédente, que votre spécialiste traitant a diagnostiqué comme érythème noueux ?\"">
+				>
+				["at0039"] = <
+					text = <"Je souffre d’un trouble cutané, mais je n’ai pas consulté mon spécialiste ou je ne sais pas comment s’appelle ce trouble">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Trouble cutané (Pyodermite)">
+					description = <"Original question: \"Avez-vous eu un trouble cutané au cours de la semaine précédente, que votre spécialiste traitant a diagnostiqué comme pyodermie ?\"">
+				>
+				["at0041"] = <
+					text = <"Ulcères momentanément aphteux dans la bouche">
+					description = <"Original question: \"Avez-vous momentanément des ulcères aphteux (c.-à-d. des plaies ou des taches semblables à des cloques) dans la bouche ?\"">
+				>
+				["at0042"] = <
+					text = <"Douleur anale (fissure) pendant les excréments">
+					description = <"Original question: \"Avez-vous ressenti une douleur (une fissure) anale au cours de la semaine précédente pendant la défécation ? Nous parlons ici de douleur dans l’anus pendant le passage des selles.\"">
+				>
+				["at0043"] = <
+					text = <"Fistule douloureuse avec pus">
+					description = <"Original question: \"Avez-vous eu une fistule au cours de la semaine précédente qui était douloureuse et qui a produit du pus de l’ouverture de la fistule ? Les fistules sont des jonctions ou des passages situés entre la peau et les intestins. Généralement, les fistules sont situées autour de l’anus, de l’abdomen ou des fesses.\"">
+				>
+				["at0044"] = <
+					text = <"Abcès momentané (douleur douloureuse de l'anus)">
+					description = <"Original question: \"Souffrez-vous momentanément d’un abcès (c.-à-d. d’une plaie douloureuse au niveau de l’anus) ?\"">
+				>
+				["at0045"] = <
+					text = <"Score total">
+					description = <"Le score de l'indice Harvey-Bradshaw est la somme de tous les points additionnés, à l'exclusion de la fréquence des changements de sac de stomie et de la fréquence des selles dans la poche. Pour le nombre de selles (fréquence des diarrhées), compter le nombre d'occurrences pour le score total. Pour le bien-être général et les douleurs abdominales, la cartographie des points suivants doit être utilisée :
+
+Bien-être général:
+- si les points ordinaux sont supérieurs ou égaux à 7, le score de cet élément est 0
+- si les points ordinaux sont égaux à 6, le score de cet élément est 1
+- si les points ordinaux sont égaux à 5, le score de cet élément est 2
+- si les points ordinaux sont égaux à 4, le score de cet élément est 3
+- si les points ordinaux sont inférieurs à 4, le score de cet élément est 4
+
+Douleur abdominale:
+- si les points ordinaux sont égaux à 0, le score de cet élément est 0
+- si les points ordinaux sont égaux de 1 à 3, le score de cet élément est 1
+- si les points ordinaux sont égaux de 4 à 7, le score de cet élément est 2
+- si les points ordinaux valent 8 à 10, le score de cet élément est 3">
+				>
+				["at0046"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0047"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+				>
+				["at0048"] = <
+					text = <"Commentaire">
+					description = <"*Additional information about P-HBI not captured in other fields (en)">
+				>
+				["at0049"] = <
+					text = <"Interprétation du score total">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Rémission">
+					description = <"Score total inférieure à 5 points">
+				>
+				["at0051"] = <
+					text = <"Maladie bénigne">
+					description = <"Score total de 5 à 7 points">
+				>
+				["at0052"] = <
+					text = <"Maladie modérée">
+					description = <"Score total de 8 à 16 points">
+				>
+				["at0053"] = <
+					text = <"Maladie grave">
+					description = <"Score total supérieur à 16 points">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Patientenmodifizierter Harvey-Bradshaw-Index (P-HBI)">
+					description = <"Alle Items innerhalb des P-HBI beziehen sich auf Symptome während der Vorwoche und medizinische Terminologie und Krankheitssymptome wurden geklärt. Das erste Item zum allgemeinen Wohlbefinden ist wie folgt formuliert: „Wenn Sie Ihr allgemeines Wohlbefinden mit einer Zahl bewerten müssten, welche Zahl würden Sie wählen?“ (1 = schrecklich, 10 = sehr gut). Das zweite Item zu Bauchschmerzen lautet: „Inwieweit hatten Sie in der Vorwoche Bauchschmerzen? Bitte geben Sie dies auf einer Skala von 0 bis 10 an, wobei 0 für keine Bauchschmerzen und 10 für die stärksten vorstellbaren Bauchschmerzen steht.“ Der dritte Punkt zur körperlichen Untersuchung der Abdominalmasse wurde ausgelassen, da wir davon ausgingen, dass Patienten sich selbst nicht ausreichend körperlich untersuchen können. Folglich besteht der patientenmodifizierte HBI aus 11 Items anstelle der 12 Items im klinikbasierten HBI. Das vierte Item ist die Frage nach der Anzahl der täglichen flüssigen Stuhlgänge: „Wie oft hatten Sie in der vergangenen Woche durchschnittlich pro Tag Durchfall? Durchfall ist ein flüssiger Stuhl, der nicht (z. B. mit einer Gabel) aufgenommen werden kann.“ Bei den Fragen zu den 8 bekannten extraintestinalen Manifestationen gab es 3 Antwortmöglichkeiten für den Patienten: „ja“, „nein“, \" und ich weiß es nicht.\" Diese dritte Antwortoption wurde hinzugefügt, da Patienten möglicherweise nicht wissen, ob sie eine bestimmte Manifestation haben oder mit der spezifischen medizinischen Terminologie nicht vertraut sind.
+
+Die Antwortoption „Ich weiß nicht“ wird nur für den patientenmodifizierten Harvey-Bradshaw-Index hinzugefügt.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Während der vergangenen woche">
+					description = <"Original statement: 
+Die folgenden Fragen betreffen Ihre Erkrankung an Morbus Crohn.
+Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
+">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Allgemeines Wohlbefinden">
+					description = <"Original question: \"Wenn Sie Ihr Allgemeinbefinden mit einer Zahl bewerten müssten, welche Zahl würden Sie wählen? (1 = unerträglich, 10 = sehr gut)\"">
+					comment = <"*Note there's a special mapping for calculation of total score in the \"Total score\" element regarding this data point. (en)">
+				>
+				["at0005"] = <
+					text = <"1 - Unerträglich">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"10 - Sehr gut">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Bauchschmerzen">
+					description = <"Original question: \"Wie sehr litten Sie in der vergangenen Woche an Bauchschmerzen? Bitte geben Sie das Ausmaß der Bauchschmerzen auf einer Skala von 0 bis 10 an, wobei 0 für keine Bauchschmerzen und 10 für unvorstellbar starke Bauchschmerzen steht.\"">
+					comment = <"Beachten Sie, dass es für diesen Datenpunkt eine spezielle Zuordnung für die Berechnung der Gesamtpunktzahl im Element \"Gesamtpunktzahl\" gibt.">
+				>
+				["at0016"] = <
+					text = <"0 - Keine Bauchschmerzen">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"1">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"2">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"3">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"4">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"5">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"6">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"7">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"8">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"9">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"10 - Unvorstellbar starke Bauchschmerzen">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Häufigkeit von Durchfall">
+					description = <"Original question: \"Wie oft hatten Sie in der vergangenen Woche Durchfall pro Tag? Durchfall bedeutet flüssiger Stuhl, der nicht aufgehoben werden könnte (etwa mit einer Gabel).\"">
+					comment = <"Für die Berechnung der Gesamtpunktzahl zählt jede Anzahl flüssiger Stühle x1.
+Im Falle eines Stomas oder Pouches bewerten Sie bitte die Abweichung im Vergleich zum Normalzustand.">
+				>
+				["1/d"] = <
+					text = <"pro tag">
+					description = <"@ units @">
+				>
+				["at0028"] = <
+					text = <"Hat ein Stoma?">
+					description = <"Original question: \"Haben Sie ein Stoma?\"">
+				>
+				["at0029"] = <
+					text = <"Häufigkeit des Stomabeutelwechsels">
+					description = <"Original question: \"Wenn ja, geben Sie bitte an, wie viele zusätzliche Male Sie den Stomabeutel in der vergangenen Woche im Durchschnitt pro Tag gewechselt haben, im Vergleich zu einer regulären Woche (0 = nicht häufiger, x = zusätzliche Male pro Tag)\"">
+					comment = <"x steht für die Anzahl der Male">
+				>
+				["at0030"] = <
+					text = <"Hat einen Pouch?">
+					description = <"Original question \"Haben Sie einen Pouch?\"">
+				>
+				["at0031"] = <
+					text = <"Stuhlhäufigkeit im Pouch">
+					description = <"Original question: \"Wenn ja, geben Sie bitte an, wie viele zusätzliche Stuhlgänge Sie in der vergangenen Woche im Durchschnitt pro Tag hatten, und zwar im Vergleich zu einer regulären Woche (0 = nicht häufiger, x = zusätzliche Male pro Tag)\"">
+					comment = <"x steht für die Anzahl der Male">
+				>
+				["at0032"] = <
+					text = <"Gelenkschmerzen (nicht durch sportliche, berufliche oder unfallbedingte Belastung)">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche Gelenkschmerzen, die nicht durch eine Belastung beim Sport, bei der Arbeit oder durch einen Unfall verursacht wurden?\"">
+				>
+				["at0033"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Nein">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Ich weiß es nicht">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Augenentzündung (Uveitis)">
+					description = <"Original question: \"Haben Sie momentan eine Augenentzündung, aufgrund der Sie einen Augenarzt aufgesucht haben und die Ihr behandelnder Facharzt als Uveitis diagnostiziert hat?\"">
+				>
+				["at0037"] = <
+					text = <"Ich habe eine Augenentzündung, habe deswegen aber keinen Augenarzt aufgesucht oder weiß nicht, wie die Infektion heißt.">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Hauterkrankung (Erythem)">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche eine Hauterkrankung, die von Ihrem behandelnden Facharzt als Erythema nodosum diagnostiziert wurde?\"">
+				>
+				["at0039"] = <
+					text = <"Ich habe eine Hauterkrankung, habe deswegen aber keinen Facharzt aufgesucht oder weiß nicht, wie die Erkrankung heißt.">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Hauterkrankung (Pyodermie)">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche eine Hauterkrankung, die von Ihrem behandelnden Facharzt als Pyodermie diagnostiziert wurde?\"">
+				>
+				["at0041"] = <
+					text = <"Momentan aphthöse Geschwüre im Mund">
+					description = <"Original question: \"Haben Sie momentan aphthöse Geschwüre (d. h. wunde Stellen oder blasenartige Flecken) im Mund?\"">
+				>
+				["at0042"] = <
+					text = <"Analschmerz (Fissur) beim Kot">
+					description = <"Original question: \"Hatten Sie während der vergangenen Woche beim Exkrementieren Analschmerzen (eine Fissur)? Hierbei geht es um Schmerzen im After beim Stuhlgang.\"">
+				>
+				["at0043"] = <
+					text = <"Schmerzhafte Fistel mit Eiter">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche eine Fistel, die schmerzhaft war, mit Eiterproduktion aus der Fistelöffnung? Fisteln sind Verbindungen oder Durchgänge zwischen Haut und Darm. Fisteln treten in der Regel um den After, den Bauch oder das Gesäß auf.\"">
+				>
+				["at0044"] = <
+					text = <"Momentarily abscess (painful sore from anus)">
+					description = <"Original question: \"Haben Sie momentan einen Abszess (d. h. eine schmerzhafte Wunde am After)?\"">
+				>
+				["at0045"] = <
+					text = <"Gesamtpunktzahl">
+					description = <"Der Harvey-Bradshaw-Index-Score ist die Summe aller addierten Punkte, ausgenommen die Häufigkeit von Stomabeutelwechseln und die Häufigkeit von Stuhlgängen im Beutel. Zählen Sie für die Anzahl der Stuhlgänge (Durchfallhäufigkeit) die Anzahl der Vorkommnisse für die Gesamtpunktzahl. Für das allgemeine Wohlbefinden und Bauchschmerzen sollten die folgenden Punkte Mapping verwendet werden:
+
+Allgemeines Wohlbefinden:
+- Wenn Ordnungspunkte größer oder gleich 7 sind, ist die Punktzahl dieses Elements 0
+- Wenn die Ordnungspunkte gleich 6 sind, ist die Punktzahl dieses Elements 1
+- Wenn die Ordnungspunkte gleich 5 sind, ist die Punktzahl dieses Elements 2
+- Wenn die Ordnungspunkte gleich 4 sind, ist die Punktzahl dieses Elements 3
+- Wenn die Ordnungspunktzahl weniger als 4 beträgt, ist die Punktzahl dieses Elements 4
+
+Bauchschmerzen:
+- Wenn Ordnungspunkte gleich 0 sind, ist die Punktzahl dieses Elements 0
+- Wenn die Ordnungspunkte 1 bis 3 betragen, ist die Punktzahl dieses Elements 1
+- Wenn die Ordnungspunkte 4 bis 7 betragen, ist die Punktzahl dieses Elements 2
+- Wenn die Ordnungspunkte 8 bis 10 betragen, ist die Punktzahl dieses Elements 3">
+				>
+				["at0046"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0047"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+				>
+				["at0048"] = <
+					text = <"Kommentar">
+					description = <"*Additional information about P-HBI not captured in other fields (en)">
+				>
+				["at0049"] = <
+					text = <"Interpretation der Gesamtpunktzahl">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Remission">
+					description = <"Gesamtpunktzahl weniger als 5 Punkte">
+				>
+				["at0051"] = <
+					text = <"Leichte Krankheit">
+					description = <"Gesamtpunktzahl von 5 bis 7 Punkten">
+				>
+				["at0052"] = <
+					text = <"Mittelschwere Erkrankung">
+					description = <"Gesamtpunktzahl von 8 bis 16 Punkten">
+				>
+				["at0053"] = <
+					text = <"Schlimme Krankheit">
+					description = <"Gesamtpunktzahl größer als 16 Punkte">
+				>
+			>
+		>
+	>

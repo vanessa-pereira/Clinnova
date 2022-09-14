@@ -1,0 +1,200 @@
+archetype (adl_version=1.4; uid=a117a7e4-3117-40aa-96dc-95d67e785740)
+	openEHR-EHR-OBSERVATION.montreal_classification_uc.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-09-14">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"The Montreal classification for ulcerative colitis addresses aspects of clinical definition and classification for ulcerative colitis for use in clinical practice as well as for future genetic and serologic studies.">
+			keywords = <"Montreal classification for ulcerative colitis, Montreal, classification, ulcerative colitis, UC", ...>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"b378e98f-da5a-3fb0-8807-61af2f173420">
+		["references"] = <"Satsangi, J, Silverberg, MS, Vermeire, S & Colombel, J-F 2006, 'The Montreal classification of inflammatory bowel disease: controversies, consensus, and implications', Gut, vol. 55, no. 6, pp. 749-53. https://doi.org/10.1136/gut.2005.082909
+
+Freeman H. J. (2007). Application of the Montreal classification for Crohn's disease to a single clinician database of 1015 patients. Canadian journal of gastroenterology = Journal canadien de gastroenterologie, 21(6), 363–366. https://doi.org/10.1155/2007/951526">
+		["MD5-CAM-1.0.1"] = <"fde565d4557c497fad6dfcfb447a74c7">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Montreal classification for ulcerative colitis
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Severity
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- S0: Remission, no symptoms
+													at0006,    -- S1: Mild symptoms
+													at0007,    -- S2: Moderate symptoms
+													at0008]    -- S3: Severe symptoms
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Extensity
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0010,    -- E1: Ulcerative proctitis
+													at0011,    -- E2: Left-sided UC (distal colitis)
+													at0012]    -- E3: extensive UC (pancolitis)
+												}
+											}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Behaviour
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0014,    -- B1: Non-stricturing, non-penetrating
+													at0015,    -- B2: Stricturing
+													at0016,    -- B3: Penetrating
+													at0017]    -- P: Perianal disease modifiers, such as B1p, B2p, B3p
+												}
+											}
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0020] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0021] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Montreal classification for ulcerative colitis">
+					description = <"The Montreal Classification for ulcerative colitis was proposed in 2005 as an effort to characterize UC patients according to recent clinical and research advances in the field of inflammatory bowel disease.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Severity">
+					description = <"The level of severity">
+				>
+				["at0005"] = <
+					text = <"S0: Remission, no symptoms">
+					description = <"Asymptomatic">
+				>
+				["at0006"] = <
+					text = <"S1: Mild symptoms">
+					description = <"Passage of four or fewer stools/day (with or without blood), absence of any systemic illness, and normal inflammatory markers (ESR)">
+				>
+				["at0007"] = <
+					text = <"S2: Moderate symptoms">
+					description = <"Passage of more than four stools per day but with minimal signs of systemic toxicity">
+				>
+				["at0008"] = <
+					text = <"S3: Severe symptoms">
+					description = <"Passage of at least six bloody stools daily, pulse rate of at least 90 beats per minute, temperature of at least 37.5˚C, haemoglobin of less than 10.5 g/100 ml, and ESR of at least 30 mm/h">
+				>
+				["at0009"] = <
+					text = <"Extensity">
+					description = <"The extent of ulcerative colitis">
+				>
+				["at0010"] = <
+					text = <"E1: Ulcerative proctitis">
+					description = <"Involvement limited to the rectum (that is, proximal extent of inflammation is distal to the rectosigmoid junction)">
+				>
+				["at0011"] = <
+					text = <"E2: Left-sided UC (distal colitis)">
+					description = <"Involvement limited to a proportion of the colorectum distal to the splenic flexure">
+				>
+				["at0012"] = <
+					text = <"E3: extensive UC (pancolitis)">
+					description = <"Involvement extends proximal to the splenic flexure">
+				>
+				["at0013"] = <
+					text = <"Behaviour">
+					description = <"Disease behaviour">
+				>
+				["at0014"] = <
+					text = <"B1: Non-stricturing, non-penetrating">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"B2: Stricturing">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"B3: Penetrating">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"P: Perianal disease modifiers, such as B1p, B2p, B3p">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Comment">
+					description = <"Additional information about Montreal classification for Crohn’s disease not captured in other fields">
+				>
+				["at0020"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0021"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+			>
+		>
+	>
