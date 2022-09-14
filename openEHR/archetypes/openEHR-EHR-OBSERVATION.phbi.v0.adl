@@ -30,6 +30,7 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			keywords = <"*Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw (en)", ...>
 			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
@@ -38,6 +39,7 @@ description
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
+			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw", ...>
 			copyright = <"© openEHR Foundation">
 		>
 	>
@@ -50,7 +52,7 @@ Harvey R, Bradshaw J. A simple index of Crohn's-disease activity. The Lancet. 19
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f593029aca537130c79025dbbc8e17b0">
+		["MD5-CAM-1.0.1"] = <"82df0732f322ca5a20eee2d769b652ae">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -111,7 +113,14 @@ definition
 									}
 									ELEMENT[at0029] occurrences matches {0..1} matches {    -- Frequency of stoma bag changes
 										value matches {
-											DV_QUANTITY matches {*}
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+													>
+												>
+											>
 										}
 									}
 									ELEMENT[at0030] occurrences matches {0..1} matches {    -- Has a pouch?
@@ -192,6 +201,11 @@ definition
 											DV_COUNT matches {*}
 										}
 									}
+									ELEMENT[at0048] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
@@ -207,7 +221,7 @@ definition
 		protocol matches {
 			ITEM_TREE[at0046] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0047] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+					allow_archetype CLUSTER[at0047] occurrences matches {0..*} matches {    -- Extension
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -222,7 +236,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Patient Harvey Bradshaw Index (P-HBI)">
-					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
 
 The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index. ">
 				>
@@ -420,7 +434,11 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					description = <"@ internal @">
 				>
 				["at0047"] = <
-					text = <"CLUSTER_SLOT">
+					text = <"Extension">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Comment">
 					description = <"">
 				>
 			>
@@ -428,8 +446,8 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"Patient Harvey Bradshaw Index (P-HBI)">
-					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+					text = <"Indice de Harvey Bradshaw modifié par le patient (P-HBI)">
+					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
 
 The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
 				>
@@ -450,7 +468,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				>
 				["at0004"] = <
 					text = <"Bien-être général">
-					description = <"Original question: \"Si vous deviez évaluer votre bien-être général en lui attribuant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bon)">
+					description = <"Original question: \"Si vous deviez évaluer votre bien-être général en lui attribuant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bon)\"">
 				>
 				["at0005"] = <
 					text = <"Terrible">
@@ -545,7 +563,7 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					description = <"Original question: \"En moyenne, combien de fois par jour avez-vous eu de la diarrhée au cours de la semaine précédente ? La diarrhée désigne des selles liquides qui ne peuvent pas être ramassées (par exemple avec une fourchette).\"">
 				>
 				["1/d"] = <
-					text = <"per day">
+					text = <"par jour">
 					description = <"@ units @">
 				>
 				["at0028"] = <
@@ -628,15 +646,20 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 				>
 				["at0047"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
+				>
+				["at0048"] = <
+					text = <"Commentaire">
+					description = <"Informations supplémentaires sur l'état général des P-HBI qui ne sont pas saisies dans d'autres champs">
 				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Patient Harvey Bradshaw Index (P-HBI) (en)">
-					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves.As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+					text = <"Patientenmodifizierter Harvey-Bradshaw-Index (P-HBI)">
+					description = <"*All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
 
 The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
 				>
@@ -645,188 +668,188 @@ The response option ‘I do not know’ is only added for the patient-modified H
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*During the previous week (en)">
-					description = <"*Original statement: 
-The following questions concern your Crohn’s Disease.
-These questions refer to your symptoms during the PREVIOUS WEEK.
- (en)">
+					text = <"Während der vergangenen woche">
+					description = <"Original statement: 
+Die folgenden Fragen betreffen Ihre Erkrankung an Morbus Crohn.
+Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
+">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*General well-being (en)">
-					description = <"*Original question: \"If you would have to rate your general well-being by giving it a number, what number would you choose? (1 = terrible, 10 = very well)\" (en)">
+					text = <"Allgemeines Wohlbefinden">
+					description = <"Original question: \"Wenn Sie Ihr Allgemeinbefinden mit einer Zahl bewerten müssten, welche Zahl würden Sie wählen? (1 = unerträglich, 10 = sehr gut)\"">
 				>
 				["at0005"] = <
-					text = <"*Terrible (en)">
+					text = <"Unerträglich">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"*2 (en)">
+					text = <"2">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*3 (en)">
+					text = <"3">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*4 (en)">
+					text = <"4">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*5 (en)">
+					text = <"5">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*6 (en)">
+					text = <"6">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*7 (en)">
+					text = <"7">
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"*8 (en)">
+					text = <"8">
 					description = <"">
 				>
 				["at0013"] = <
-					text = <"*9 (en)">
+					text = <"9">
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"*Very well (en)">
+					text = <"Sehr gut">
 					description = <"">
 				>
 				["at0015"] = <
-					text = <"*Abdominal pain (en)">
-					description = <"*Original question: \"To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.\" (en)">
+					text = <"Bauchschmerzen">
+					description = <"Original question: \"Wie sehr litten Sie in der vergangenen Woche an Bauchschmerzen? Bitte geben Sie das Ausmaß der Bauchschmerzen auf einer Skala von 0 bis 10 an, wobei 0 für keine Bauchschmerzen und 10 für unvorstellbar starke Bauchschmerzen steht.\"">
 				>
 				["at0016"] = <
-					text = <"*No abdominal pain (en)">
+					text = <"Keine Bauchschmerzen">
 					description = <"">
 				>
 				["at0017"] = <
-					text = <"*1 (en)">
+					text = <"1">
 					description = <"">
 				>
 				["at0018"] = <
-					text = <"*2 (en)">
+					text = <"2">
 					description = <"">
 				>
 				["at0019"] = <
-					text = <"*3 (en)">
+					text = <"3">
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"*4 (en)">
+					text = <"4">
 					description = <"">
 				>
 				["at0021"] = <
-					text = <"*5 (en)">
+					text = <"5">
 					description = <"">
 				>
 				["at0022"] = <
-					text = <"*6 (en)">
+					text = <"6">
 					description = <"">
 				>
 				["at0023"] = <
-					text = <"*7 (en)">
+					text = <"7">
 					description = <"">
 				>
 				["at0024"] = <
-					text = <"*8 (en)">
+					text = <"8">
 					description = <"">
 				>
 				["at0025"] = <
-					text = <"*9 (en)">
+					text = <"9">
 					description = <"">
 				>
 				["at0026"] = <
-					text = <"*Worst imaginable abdominal pain (en)">
+					text = <"Unvorstellbar starke Bauchschmerzen">
 					description = <"">
 				>
 				["at0027"] = <
-					text = <"*Diarrhoea frequency (en)">
-					description = <"*Original question: \"How many times on average per day did you have diarrhoea during the previous week? Diarrhoea is liquid stool that cannot be picked up (for instance with a fork).\" (en)">
+					text = <"Häufigkeit von Durchfall">
+					description = <"Original question: \"Wie oft hatten Sie in der vergangenen Woche Durchfall pro Tag? Durchfall bedeutet flüssiger Stuhl, der nicht aufgehoben werden könnte (etwa mit einer Gabel).\"">
 				>
 				["1/d"] = <
-					text = <"per day">
+					text = <"pro tag">
 					description = <"@ units @">
 				>
 				["at0028"] = <
-					text = <"*Has a stoma? (en)">
-					description = <"*Original question: \"Do you have a stoma?\" (en)">
+					text = <"Hat ein Stoma?">
+					description = <"Original question: \"Haben Sie ein Stoma?\"">
 				>
 				["at0029"] = <
-					text = <"*Frequency of stoma bag changes (en)">
-					description = <"*Original question: \"If so, please indicate how often you changed the bag on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\" (en)">
-					comment = <"*x stands for the number of times (en)">
+					text = <"Häufigkeit des Stomabeutelwechsels">
+					description = <"Original question: \"Wenn ja, geben Sie bitte an, wie viele zusätzliche Male Sie den Stomabeutel in der vergangenen Woche im Durchschnitt pro Tag gewechselt haben, im Vergleich zu einer regulären Woche (0 = nicht häufiger, x = zusätzliche Male pro Tag)\"">
+					comment = <"x steht für die Anzahl der Male">
 				>
 				["at0030"] = <
-					text = <"*Has a pouch? (en)">
-					description = <"*Original question \"Do you have a pouch?\" (en)">
+					text = <"Hat einen Pouch?">
+					description = <"Original question \"Haben Sie einen Pouch?\"">
 				>
 				["at0031"] = <
-					text = <"*Frequency of stools in pouch (en)">
-					description = <"*Original question: \"If so, please indicate how often you had stools on average per day during the previous week, compared to a regular week (0 = not more frequently, x = additional times a day)\" (en)">
-					comment = <"*x stands for the number of times (en)">
+					text = <"Stuhlhäufigkeit im Pouch">
+					description = <"Original question: \"Wenn ja, geben Sie bitte an, wie viele zusätzliche Stuhlgänge Sie in der vergangenen Woche im Durchschnitt pro Tag hatten, und zwar im Vergleich zu einer regulären Woche (0 = nicht häufiger, x = zusätzliche Male pro Tag)\"">
+					comment = <"x steht für die Anzahl der Male">
 				>
 				["at0032"] = <
-					text = <"*Joint pain (not caused by strain on sports, work or accident) (en)">
-					description = <"*Original question: \"Have you had joint pain during the previous week that was not caused by a strain during sports, work or an accident?\" (en)">
+					text = <"Gelenkschmerzen (nicht durch sportliche, berufliche oder unfallbedingte Belastung)">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche Gelenkschmerzen, die nicht durch eine Belastung beim Sport, bei der Arbeit oder durch einen Unfall verursacht wurden?\"">
 				>
 				["at0033"] = <
-					text = <"*No (en)">
+					text = <"Ja">
 					description = <"">
 				>
 				["at0034"] = <
-					text = <"*Yes (en)">
+					text = <"Nein">
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"*I do not know (en)">
+					text = <"Ich weiß es nicht">
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"*Eye inflammation (Uveitis) (en)">
-					description = <"*Original question: \"Do you momentarily have an eye inflammation, for which you have seen an eye-specialist and which your treating specialist diagnosed as uveitis?\" (en)">
+					text = <"Augenentzündung (Uveitis)">
+					description = <"Original question: \"Haben Sie momentan eine Augenentzündung, aufgrund der Sie einen Augenarzt aufgesucht haben und die Ihr behandelnder Facharzt als Uveitis diagnostiziert hat?\"">
 				>
 				["at0037"] = <
-					text = <"*I have an eye inflammation but have not seen an eye specialist for it or do not know what the infection is called (en)">
+					text = <"Ich habe eine Augenentzündung, habe deswegen aber keinen Augenarzt aufgesucht oder weiß nicht, wie die Infektion heißt.">
 					description = <"">
 				>
 				["at0038"] = <
-					text = <"*Skin disorder (Erythema) (en)">
-					description = <"*Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as erythema nodosum by your treating specialist?\" (en)">
+					text = <"Hauterkrankung (Erythem)">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche eine Hauterkrankung, die von Ihrem behandelnden Facharzt als Erythema nodosum diagnostiziert wurde?\"">
 				>
 				["at0039"] = <
-					text = <"*I have a skin disorder but have not seen my specialist for it or do not know what the disorder is called (en)">
+					text = <"Ich habe eine Hauterkrankung, habe deswegen aber keinen Facharzt aufgesucht oder weiß nicht, wie die Erkrankung heißt.">
 					description = <"">
 				>
 				["at0040"] = <
-					text = <"*Skin disorder (Pyoderma) (en)">
-					description = <"*Original question: \"Did you have a skin disorder during the previous week, that has been diagnosed as pyoderma by your treating specialist?\" (en)">
+					text = <"Hauterkrankung (Pyodermie)">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche eine Hauterkrankung, die von Ihrem behandelnden Facharzt als Pyodermie diagnostiziert wurde?\"">
 				>
 				["at0041"] = <
-					text = <"*Momentarily aphthous ulcers in mouth (en)">
-					description = <"*Original question: \"Do you momentarily have aphthous ulcers (i.e. sores or blister-like spots) in your mouth?\" (en)">
+					text = <"Momentan aphthöse Geschwüre im Mund">
+					description = <"Original question: \"Haben Sie momentan aphthöse Geschwüre (d. h. wunde Stellen oder blasenartige Flecken) im Mund?\"">
 				>
 				["at0042"] = <
-					text = <"*Anal pain (fissure) while excrement (en)">
-					description = <"*Original question: \"Have you had anal pain (a fissure) during the previous week during excrement? Here we are referring to pain in the anus during the passage of stools.\" (en)">
+					text = <"Analschmerz (Fissur) beim Kot">
+					description = <"Original question: \"Hatten Sie während der vergangenen Woche beim Exkrementieren Analschmerzen (eine Fissur)? Hierbei geht es um Schmerzen im After beim Stuhlgang.\"">
 				>
 				["at0043"] = <
-					text = <"*Painful fistula with puss (en)">
-					description = <"*Original question: \"Have you had a fistula during the previous week that was painful and produced puss from the fistula opening? Fistulas are connections or passageways between the skin and intestines. Usually, fistulas are located around the anus, abdomen or buttocks.\" (en)">
+					text = <"Schmerzhafte Fistel mit Eiter">
+					description = <"Original question: \"Hatten Sie in der vergangenen Woche eine Fistel, die schmerzhaft war, mit Eiterproduktion aus der Fistelöffnung? Fisteln sind Verbindungen oder Durchgänge zwischen Haut und Darm. Fisteln treten in der Regel um den After, den Bauch oder das Gesäß auf.\"">
 				>
 				["at0044"] = <
-					text = <"*Momentarily abscess (painful sore from anus) (en)">
-					description = <"*Original question: \"Do you momentarily have an abscess (i.e. a painful sore by your anus)?\" (en)">
+					text = <"Momentarily abscess (painful sore from anus)">
+					description = <"Original question: \"Haben Sie momentan einen Abszess (d. h. eine schmerzhafte Wunde am After)?\"">
 				>
 				["at0045"] = <
-					text = <"*Total score (en)">
+					text = <"Gesamtpunktzahl">
 					description = <"">
 				>
 				["at0046"] = <
@@ -834,8 +857,13 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					description = <"@ internal @">
 				>
 				["at0047"] = <
-					text = <"*CLUSTER_SLOT (en)">
-					description = <"">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Angaben, die nicht in anderen Feldern erfasst sind.">
+				>
+				["at0048"] = <
+					text = <"Kommentar">
+					description = <"Zusätzliche Angaben zum P-HBI
+">
 				>
 			>
 		>
