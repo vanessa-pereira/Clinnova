@@ -10,11 +10,17 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@pm.me">
 			>
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health (LIH)">
+				["email"] = <"vanessapereira@pm.me">
 			>
 		>
 	>
@@ -58,7 +64,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1678d46d5cdf22ec0642022478cb79fc">
+		["MD5-CAM-1.0.1"] = <"d871bf8cbc1e4b9155a5ef397b60efad">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
