@@ -1,0 +1,72 @@
+archetype (adl_version=1.4; uid=d02ce90f-3001-480c-bce4-886d3638c675)
+	openEHR-EHR-OBSERVATION.nancy_index_uc.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+		["date"] = <"2022-09-15">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To assesses the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate.">
+			keywords = <"Nancy histological index for UC, Nancy,  histological, index, UC, Ulcerative colitis, IBD, inflammatory bowel disease", ...>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0852000381cdb30367b50f22079388a1">
+		["build_uid"] = <"95b05c37-1d6e-3434-8240-608b22e67cc2">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Nancy histological index for UC
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Nancy histological index for UC">
+					description = <"Nancy Index assesses, in a sequential form, the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate, using a semi-qualitative scale very easy to understand, which allows a great reproducibility. The Nancy index is defined by a 5-level classification ranging from grade 0 (absence of significant histological disease activity) to grade 4 (severely active disease).">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
