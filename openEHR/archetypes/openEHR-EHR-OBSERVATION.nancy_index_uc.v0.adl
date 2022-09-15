@@ -29,7 +29,10 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"95b05c37-1d6e-3434-8240-608b22e67cc2">
-		["MD5-CAM-1.0.1"] = <"3860665e3dbdcd3323f5e0bbbe97c335">
+		["references"] = <"Marchal-Bressenot, A., Salleron, J., Boulagnon-Rombi, C., Bastien, C., Cahn, V., Cadiot, G., … Peyrin-Biroulet, L. (2015). Development and validation of the Nancy histological index for UC. Gut, 66(1), 43–49. doi:10.1136/gutjnl-2015-310187 
+
+Marchal-Bressenot, A., Scherl, A., Salleron, J., & Peyrin-Biroulet, L. (2016). A practical guide to assess the Nancy histological index for UC. Gut, 65(11), 1919.2–1920. doi:10.1136/gutjnl-2016-312722 ">
+		["MD5-CAM-1.0.1"] = <"7304edbe3849bef8e2a647b6620df89b">
 	>
 
 definition
@@ -41,7 +44,7 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Chronic inflammatory infiltrate
+									ELEMENT[at0004] matches {    -- Chronic inflammatory infiltrate
 										value matches {
 											0|[local::at0005],
 											1|[local::at0006],
@@ -49,20 +52,20 @@ definition
 											3|[local::at0008]
 										}
 									}
-									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Neutrophils in the epithelium
+									ELEMENT[at0009] matches {    -- Neutrophils in the epithelium
 										value matches {
 											0|[local::at0010],
 											1|[local::at0011],
 											2|[local::at0012]
 										}
 									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Ulceration
+									ELEMENT[at0013] matches {    -- Ulceration
 										value matches {
 											0|[local::at0014],
 											1|[local::at0015]
 										}
 									}
-									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Acute inflammatory cell infiltrate
+									ELEMENT[at0016] matches {    -- Acute inflammatory cell infiltrate
 										value matches {
 											0|[local::at0010],
 											1|[local::at0017],
@@ -70,7 +73,7 @@ definition
 											3|[local::at0019]
 										}
 									}
-									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Mucin depletion
+									ELEMENT[at0020] matches {    -- Mucin depletion
 										value matches {
 											0|[local::at0010],
 											1|[local::at0017],
@@ -78,7 +81,7 @@ definition
 											3|[local::at0019]
 										}
 									}
-									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Neutrophils in lamina propria
+									ELEMENT[at0021] matches {    -- Neutrophils in lamina propria
 										value matches {
 											0|[local::at0010],
 											1|[local::at0017],
@@ -86,7 +89,7 @@ definition
 											3|[local::at0019]
 										}
 									}
-									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Basal plasmacytosis
+									ELEMENT[at0022] matches {    -- Basal plasmacytosis
 										value matches {
 											0|[local::at0010],
 											1|[local::at0017],
@@ -94,7 +97,7 @@ definition
 											3|[local::at0019]
 										}
 									}
-									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Serrated architectural abnormalities
+									ELEMENT[at0023] matches {    -- Serrated architectural abnormalities
 										value matches {
 											0|[local::at0010],
 											1|[local::at0024],
@@ -102,7 +105,7 @@ definition
 											3|[local::at0026]
 										}
 									}
-									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Five-grade classification
+									ELEMENT[at0027] matches {    -- Five-grade classification
 										value matches {
 											DV_CODED_TEXT matches {
 												defining_code matches {
@@ -116,9 +119,24 @@ definition
 											}
 										}
 									}
+									ELEMENT[at0035] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0033] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0034] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -245,7 +263,12 @@ tissue granulation.">
 					description = <"The Nancy index is composed of three histological items defining five grades of disease activity: absence of significant histological disease (grade 0), chronic inflammatory infiltrate with no acute inflammatory infiltrate (grade 1), mildly active disease (grade 2), moderately active disease (grade 3) and severely active disease (grade 4). Grade 0 corresponds to the absence of significant histological disease. Grade 1 corresponds to the lack of mucosal neutrophils, a pivotal marker of disease activity, even though moderate or severe chronic inflammation can be present. The last three grades correspond to active disease.
 
 
-The algorithm of the Nancy histological index composed of three histological items resulting in a five-grade classification of histological disease activity for UC.">
+The algorithm of the Nancy histological index composed of three histological items (Ulceration, Acute inflammatory cells infiltrate and Chronic inflammatory infiltrate) resulting in a five-grade classification of histological disease activity for UC that goes as follows:
+- If the element \"Ulceration\" is \"Present\": Grade 4
+- If the element \"Acute inflammatory cells infiltrate\" is \"Moderate\" or \"Severe\": Grade 3
+- If the element \"Acute inflammatory cells infiltrate\" is \"Mild\": Grade 2
+- If \"Chronic inflammatory infiltrate\" is \"Moderate\" or \"Marked increase\": Grade 1
+- If \"Chronic inflammatory infiltrate\" is \"No\" or \"Mild increase\": Grade 0">
 				>
 				["at0028"] = <
 					text = <"Grade 0">
@@ -266,6 +289,18 @@ The algorithm of the Nancy histological index composed of three histological ite
 				["at0032"] = <
 					text = <"Grade 4">
 					description = <"Severe active disease">
+				>
+				["at0033"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0034"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Comment">
+					description = <"">
 				>
 			>
 		>
