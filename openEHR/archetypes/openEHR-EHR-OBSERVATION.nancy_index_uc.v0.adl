@@ -20,6 +20,8 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"To assesses the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate.">
 			keywords = <"Nancy histological index for UC, Nancy,  histological, index, UC, Ulcerative colitis, IBD, inflammatory bowel disease", ...>
+			use = <"The Nancy index is composed of three histological items defining five grades of disease activity: absence of significant histological disease (grade 0), chronic inflammatory infiltrate with no acute inflammatory infiltrate (grade 1), mildly active disease (grade 2), moderately active disease (grade 3) and severely active disease (grade 4). Grade 0 corresponds to the absence of significant histological disease. Grade 1 corresponds to the lack of mucosal neutrophils, a pivotal marker of disease activity, even though moderate or severe chronic inflammation can be present. The last three grades correspond to active disease.
+The calculation of the Nancy index is made by the following algorithm: The presence of ulceration on biopsy specimen corresponds to severely active disease (grade 4 according to the Nancy index). If there is no ulceration on biopsy specimens, acute inflammatory cells infiltrate (presence of neutrophils) is assessed: moderate or severe acute inflammatory cells infiltrate corresponds to grade 3 ‘moderately active disease’ while mild acute inflammatory cells infiltrate correspond to grade 2 ‘mildly active disease’. If there is no acute inflammatory cells infiltrate, assessment of chronic inflammatory infiltrate (lymphocytes and plasmacytes) is made: biopsy specimen showing moderate or marked chronic inflammatory infiltrate corresponds to grade 1 ‘men showing moderate or marked chronic acute inflammatory infiltrate’ and biopsy showing mild or no chronic inflammatory infiltrate corresponds to grade 0 ‘absence of significant histological disease’.">
 		>
 	>
 	other_details = <
@@ -32,7 +34,7 @@ Marchal-Bressenot, A., Scherl, A., Salleron, J., & Peyrin-Biroulet, L. (2016). A
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"95b05c37-1d6e-3434-8240-608b22e67cc2">
-		["MD5-CAM-1.0.1"] = <"52899b4b0722f39a04211c19f4fd6fb5">
+		["MD5-CAM-1.0.1"] = <"346d165402db9afd30274d7d98241a7b">
 	>
 
 definition
@@ -149,8 +151,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Nancy histological index for UC">
-					description = <"Nancy Index assesses, in a sequential form, the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate, using a semi-qualitative scale very easy to understand, which allows a great reproducibility. The Nancy index is defined by a 5-level classification ranging from grade 0 (absence of significant histological disease activity) to grade 4 (severely active disease). 
-The Nancy index is composed of three histological items defining five grades of disease activity: absence of significant histological disease (grade 0), chronic inflammatory infiltrate with no acute inflammatory infiltrate (grade 1), mildly active disease (grade 2), moderately active disease (grade 3) and severely active disease (grade 4). Grade 0 corresponds to the absence of significant histological disease. Grade 1 corresponds to the lack of mucosal neutrophils, a pivotal marker of disease activity, even though moderate or severe chronic inflammation can be present. The last three grades correspond to active disease.">
+					description = <"Nancy Index assesses, in a sequential form, the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate, using a semi-qualitative scale very easy to understand, which allows a great reproducibility. ">
 				>
 				["at0001"] = <
 					text = <"History">
