@@ -25,14 +25,14 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Marchal-Bressenot, A., Salleron, J., Boulagnon-Rombi, C., Bastien, C., Cahn, V., Cadiot, G., … Peyrin-Biroulet, L. (2015). Development and validation of the Nancy histological index for UC. Gut, 66(1), 43–49. doi:10.1136/gutjnl-2015-310187 
+
+Marchal-Bressenot, A., Scherl, A., Salleron, J., & Peyrin-Biroulet, L. (2016). A practical guide to assess the Nancy histological index for UC. Gut, 65(11), 1919.2–1920. doi:10.1136/gutjnl-2016-312722 ">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"95b05c37-1d6e-3434-8240-608b22e67cc2">
-		["references"] = <"Marchal-Bressenot, A., Salleron, J., Boulagnon-Rombi, C., Bastien, C., Cahn, V., Cadiot, G., … Peyrin-Biroulet, L. (2015). Development and validation of the Nancy histological index for UC. Gut, 66(1), 43–49. doi:10.1136/gutjnl-2015-310187 
-
-Marchal-Bressenot, A., Scherl, A., Salleron, J., & Peyrin-Biroulet, L. (2016). A practical guide to assess the Nancy histological index for UC. Gut, 65(11), 1919.2–1920. doi:10.1136/gutjnl-2016-312722 ">
-		["MD5-CAM-1.0.1"] = <"7304edbe3849bef8e2a647b6620df89b">
+		["MD5-CAM-1.0.1"] = <"52899b4b0722f39a04211c19f4fd6fb5">
 	>
 
 definition
@@ -296,11 +296,12 @@ The algorithm of the Nancy histological index composed of three histological ite
 				>
 				["at0034"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 				["at0035"] = <
 					text = <"Comment">
-					description = <"">
+					description = <"Additional information about Nancy histological index for UC not captured in other fields.">
 				>
 			>
 		>
