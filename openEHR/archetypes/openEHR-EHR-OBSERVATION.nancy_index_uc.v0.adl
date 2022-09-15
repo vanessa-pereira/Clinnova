@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-09-15">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2022-09-15">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -28,8 +28,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0852000381cdb30367b50f22079388a1">
 		["build_uid"] = <"95b05c37-1d6e-3434-8240-608b22e67cc2">
+		["MD5-CAM-1.0.1"] = <"3860665e3dbdcd3323f5e0bbbe97c335">
 	>
 
 definition
@@ -39,7 +39,85 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Chronic inflammatory infiltrate
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006],
+											2|[local::at0007],
+											3|[local::at0008]
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- Neutrophils in the epithelium
+										value matches {
+											0|[local::at0010],
+											1|[local::at0011],
+											2|[local::at0012]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Ulceration
+										value matches {
+											0|[local::at0014],
+											1|[local::at0015]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Acute inflammatory cell infiltrate
+										value matches {
+											0|[local::at0010],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Mucin depletion
+										value matches {
+											0|[local::at0010],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Neutrophils in lamina propria
+										value matches {
+											0|[local::at0010],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Basal plasmacytosis
+										value matches {
+											0|[local::at0010],
+											1|[local::at0017],
+											2|[local::at0018],
+											3|[local::at0019]
+										}
+									}
+									ELEMENT[at0023] occurrences matches {0..1} matches {    -- Serrated architectural abnormalities
+										value matches {
+											0|[local::at0010],
+											1|[local::at0024],
+											2|[local::at0025],
+											3|[local::at0026]
+										}
+									}
+									ELEMENT[at0027] occurrences matches {0..1} matches {    -- Five-grade classification
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0028,    -- Grade 0
+													at0029,    -- Grade 1
+													at0030,    -- Grade 2
+													at0031,    -- Grade 3
+													at0032]    -- Grade 4
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -53,7 +131,8 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Nancy histological index for UC">
-					description = <"Nancy Index assesses, in a sequential form, the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate, using a semi-qualitative scale very easy to understand, which allows a great reproducibility. The Nancy index is defined by a 5-level classification ranging from grade 0 (absence of significant histological disease activity) to grade 4 (severely active disease).">
+					description = <"Nancy Index assesses, in a sequential form, the presence of ulceration, acute inflammatory infiltrate (presence of neutrophils and eosinophils in lamina propria and in epithelium) and chronic inflammatory infiltrate, using a semi-qualitative scale very easy to understand, which allows a great reproducibility. The Nancy index is defined by a 5-level classification ranging from grade 0 (absence of significant histological disease activity) to grade 4 (severely active disease). 
+The Nancy index is composed of three histological items defining five grades of disease activity: absence of significant histological disease (grade 0), chronic inflammatory infiltrate with no acute inflammatory infiltrate (grade 1), mildly active disease (grade 2), moderately active disease (grade 3) and severely active disease (grade 4). Grade 0 corresponds to the absence of significant histological disease. Grade 1 corresponds to the lack of mucosal neutrophils, a pivotal marker of disease activity, even though moderate or severe chronic inflammation can be present. The last three grades correspond to active disease.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -66,6 +145,127 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Chronic inflammatory infiltrate">
+					description = <"Defined as the quantity of lymphocytes and plasmacytes in the biopsy specimen.">
+				>
+				["at0005"] = <
+					text = <"No increase">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Mild but unequivocal increcase">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Moderate increase">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Marked increase">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Neutrophils in the epithelium">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"None">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Less than 50% crypt involved">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"More than 50% crypt involved">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Ulceration">
+					description = <"Defined as visible epithelial injury and
+regeneration and/or fibrin and neutrophils and/or
+tissue granulation.">
+				>
+				["at0014"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Present">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Acute inflammatory cell infiltrate">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Mild">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Moderate">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Severe">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Mucin depletion">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Neutrophils in lamina propria">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Basal plasmacytosis">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Serrated architectural abnormalities">
+					description = <"Defined as the presence of dilated crypts showing a scalloped lumen.">
+				>
+				["at0024"] = <
+					text = <"Less than 5% crypt involved">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Less than 50% crypt involved">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"More than 5% crypt involved">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Five-grade classification">
+					description = <"The Nancy index is composed of three histological items defining five grades of disease activity: absence of significant histological disease (grade 0), chronic inflammatory infiltrate with no acute inflammatory infiltrate (grade 1), mildly active disease (grade 2), moderately active disease (grade 3) and severely active disease (grade 4). Grade 0 corresponds to the absence of significant histological disease. Grade 1 corresponds to the lack of mucosal neutrophils, a pivotal marker of disease activity, even though moderate or severe chronic inflammation can be present. The last three grades correspond to active disease.
+
+
+The algorithm of the Nancy histological index composed of three histological items resulting in a five-grade classification of histological disease activity for UC.">
+				>
+				["at0028"] = <
+					text = <"Grade 0">
+					description = <"No histological significant disease">
+				>
+				["at0029"] = <
+					text = <"Grade 1">
+					description = <"Chronic inflammatory infiltrate with no acute inflammatory infiltrate">
+				>
+				["at0030"] = <
+					text = <"Grade 2">
+					description = <"Mildly active disease">
+				>
+				["at0031"] = <
+					text = <"Grade 3">
+					description = <"Moderately active disease">
+				>
+				["at0032"] = <
+					text = <"Grade 4">
+					description = <"Severe active disease">
 				>
 			>
 		>
