@@ -33,7 +33,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
-		["MD5-CAM-1.0.1"] = <"d38366bf7245069f2f2d88ec2750af5a">
+		["MD5-CAM-1.0.1"] = <"051a3d87f16a8d0105e01890752d3a66">
 	>
 
 definition
@@ -43,11 +43,122 @@ definition
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Structuring lesions
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0011] occurrences matches {0..1} matches {    -- Upper track
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0005] occurrences matches {0..1} matches {    -- Organ
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0007;at0007]    -- Upper track
+																}
+															}
+														}
+													}
+													ELEMENT[at0015] occurrences matches {0..1} matches {    -- Segment
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0016,    -- Esophagus
+																	at0017,    -- Stomach
+																	at0018]    -- Duodenum
+																}
+															}
+														}
+													}
+													ELEMENT[at0006] occurrences matches {0..1} matches {    -- Investigational method
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0013,    -- Endoscopy
+																	at0014]    -- MRI or CT
+																}
+															}
+														}
+													}
+													ELEMENT[at0019] occurrences matches {0..1} matches {    -- Endoscopy grades
+														value matches {
+															1|[local::at0029],
+															2|[local::at0030],
+															3|[local::at0031]
+														}
+													}
+													ELEMENT[at0032] occurrences matches {0..1} matches {    -- MRI or CT grades
+														value matches {
+															1|[local::at0020],
+															2|[local::at0021],
+															3|[local::at0022]
+														}
+													}
+												}
+											}
+											CLUSTER[at0023] occurrences matches {0..1} matches {    -- Small bowel
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0024] occurrences matches {0..1} matches {    -- Organ
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0025;at0025]    -- Small bowel
+																}
+															}
+														}
+													}
+													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0014]    -- MRI or CT
+																}
+															}
+														}
+													}
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Segment
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0033]    -- Each 20-cm segment
+																}
+															}
+														}
+													}
+													ELEMENT[at0028] occurrences matches {0..1} matches {    -- Grades
+														value matches {
+															1|[local::at0020],
+															2|[local::at0021],
+															3|[local::at0022]
+														}
+													}
+												}
+											}
+											CLUSTER[at0034] occurrences matches {0..1} matches {    -- Colon / Rectum
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0035] occurrences matches {0..1} matches {    -- Organ
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0036;at0036]    -- Colon / Rectum
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0012] matches {*}    -- Item tree
 		}
 	}
 
@@ -70,6 +181,126 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Structuring lesions">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Organ">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Investigational method">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Upper track">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Upper track">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Endoscopy">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"MRI or CT">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Segment">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Esophagus">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Stomach">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Duodenum">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Endoscopy grades">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Grade 1">
+					description = <"Wall thickening less than 3 mm or segmental enhancement without prestenotic dilatation">
+				>
+				["at0021"] = <
+					text = <"Grade 2">
+					description = <"Wall thickening major or equal to 3 mm or mural stratification without prestenotic dilatation">
+				>
+				["at0022"] = <
+					text = <"Grade 3">
+					description = <"Stricture with prestenotic dilatation">
+				>
+				["at0023"] = <
+					text = <"Small bowel">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Organ">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Small bowel">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Investigational method">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Segment">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Grades">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Grade 1">
+					description = <"None">
+				>
+				["at0030"] = <
+					text = <"Grade 2">
+					description = <"Lumen narrowing, passable">
+				>
+				["at0031"] = <
+					text = <"Grade 3">
+					description = <"Stricture, nonpassable">
+				>
+				["at0032"] = <
+					text = <"MRI or CT grades">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Each 20-cm segment">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Colon / Rectum">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Organ">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Colon / Rectum">
+					description = <"">
 				>
 			>
 		>
