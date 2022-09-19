@@ -1,0 +1,76 @@
+archetype (adl_version=1.4; uid=35fe51cd-0ad1-444b-9104-4744c893123a)
+	openEHR-EHR-OBSERVATION.lemann_index.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-09-19">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			use = <"Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.
+Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Development of the Lémann Index to Assess Digestive Tract Damage in Patients With Crohn's Disease - Pariente, Benjamin et al., Gastroenterology, Volume 148, Issue 1, 52 - 63.e3
+DOI: https://doi.org/10.1053/j.gastro.2014.09.015
+
+Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lukosevicius, S., & Kupcinskas, L. (2019). Lemann Index for Assessment of Crohn's Disease: Correlation with the Quality of Life, Endoscopic Disease Activity, Magnetic Resonance Index of Activity and C- Reactive Protein. Open medicine (Warsaw, Poland), 14, 785–791. https://doi.org/10.1515/med-2019-0092">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
+		["MD5-CAM-1.0.1"] = <"d38366bf7245069f2f2d88ec2750af5a">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Lémann Index
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Lémann Index">
+					description = <"The Lémann Index is the first global CD damage index assessing cumulative structural bowel damage in CD.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
