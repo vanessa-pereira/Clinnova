@@ -32,8 +32,8 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4e0fbdf3cc4895737008f04c2b369a4f">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
-		["MD5-CAM-1.0.1"] = <"051a3d87f16a8d0105e01890752d3a66">
 	>
 
 definition
@@ -108,20 +108,20 @@ definition
 															}
 														}
 													}
-													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0014]    -- MRI or CT
-																}
-															}
-														}
-													}
 													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Segment
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
 																	[local::at0033]    -- Each 20-cm segment
+																}
+															}
+														}
+													}
+													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0014]    -- MRI or CT
 																}
 															}
 														}
@@ -142,6 +142,24 @@ definition
 															DV_CODED_TEXT matches {
 																defining_code matches {
 																	[local::at0036;at0036]    -- Colon / Rectum
+																}
+															}
+														}
+													}
+													ELEMENT[at0037] occurrences matches {0..1} matches {    -- Segment
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0038]    -- Each segment
+																}
+															}
+														}
+													}
+													ELEMENT[at0039] occurrences matches {0..1} matches {    -- Investigational method
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0040]    -- Colonoscopy
 																}
 															}
 														}
@@ -300,6 +318,22 @@ ontology
 				>
 				["at0036"] = <
 					text = <"Colon / Rectum">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Segment">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Each segment">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Investigational method">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Colonoscopy">
 					description = <"">
 				>
 			>
