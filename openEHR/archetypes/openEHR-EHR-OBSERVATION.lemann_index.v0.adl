@@ -32,7 +32,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"95943b1106983cb64aa614930f05fedb">
+		["MD5-CAM-1.0.1"] = <"18c0c62ce83ee64764c9e3a5cb924bb1">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -305,7 +305,7 @@ definition
 													}
 													ELEMENT[at0074] occurrences matches {0..1} matches {    -- Grades
 														value matches {
-															1|[local::at0067],
+															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
 														}
@@ -316,27 +316,92 @@ definition
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0076] occurrences matches {0..1} matches {    -- Organ
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0036;at0036]    -- Colon / Rectum
+																}
+															}
 														}
 													}
 													ELEMENT[at0077] occurrences matches {0..1} matches {    -- Segment
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0038]    -- Each segment
+																}
+															}
 														}
 													}
 													ELEMENT[at0078] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0040,    -- Colonoscopy
+																	at0014]    -- MRI or CT
+																}
+															}
 														}
 													}
 													ELEMENT[at0079] occurrences matches {0..1} matches {    -- Colonoscopy grades
 														value matches {
-															DV_ORDINAL matches {*}
+															1|[local::at0063],
+															2|[local::at0064],
+															3|[local::at0065]
 														}
 													}
 													ELEMENT[at0080] occurrences matches {0..1} matches {    -- MRI or CT grades
 														value matches {
-															DV_ORDINAL matches {*}
+															1|[local::at0029],
+															2|[local::at0081],
+															3|[local::at0069]
+														}
+													}
+												}
+											}
+											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Anus
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0083] occurrences matches {0..1} matches {    -- Organ
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0047;at0047]    -- Anus
+																}
+															}
+														}
+													}
+													ELEMENT[at0084] occurrences matches {0..1} matches {    -- Segment
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0047;at0047]    -- Anus
+																}
+															}
+														}
+													}
+													ELEMENT[at0085] occurrences matches {0..1} matches {    -- Investigational method
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0051,    -- Clinical examination
+																	at0014]    -- MRI or CT
+																}
+															}
+														}
+													}
+													ELEMENT[at0086] occurrences matches {0..1} matches {    -- Clinical examination grade
+														value matches {
+															1|[local::at0088],
+															2|[local::at0089],
+															3|[local::at0090]
+														}
+													}
+													ELEMENT[at0087] occurrences matches {0..1} matches {    -- MRI or CT grades
+														value matches {
+															1|[local::at0091],
+															2|[local::at0092],
+															3|[local::at0093]
 														}
 													}
 												}
@@ -428,15 +493,15 @@ ontology
 					description = <"">
 				>
 				["at0020"] = <
-					text = <"Grade 1">
+					text = <"Grade 1 - Wall thickening less than 3 mm or segmental enhancement without prestenotic dilatation">
 					description = <"Wall thickening less than 3 mm or segmental enhancement without prestenotic dilatation">
 				>
 				["at0021"] = <
-					text = <"Grade 2">
+					text = <"Grade 2 - Wall thickening major or equal to 3 mm or mural stratification without prestenotic dilatation">
 					description = <"Wall thickening major or equal to 3 mm or mural stratification without prestenotic dilatation">
 				>
 				["at0022"] = <
-					text = <"Grade 3">
+					text = <"Grade 3 - Stricture with prestenotic dilatation">
 					description = <"Stricture with prestenotic dilatation">
 				>
 				["at0023"] = <
@@ -464,15 +529,15 @@ ontology
 					description = <"">
 				>
 				["at0029"] = <
-					text = <"Grade 1">
+					text = <"Grade 1 - None">
 					description = <"None">
 				>
 				["at0030"] = <
-					text = <"Grade 2">
+					text = <"Grade 2 - Lumen narrowing, passable">
 					description = <"Lumen narrowing, passable">
 				>
 				["at0031"] = <
-					text = <"Grade 3">
+					text = <"Grade 3 - Stricture, nonpassable">
 					description = <"Stricture, nonpassable">
 				>
 				["at0032"] = <
@@ -520,11 +585,11 @@ ontology
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"Grade 2">
+					text = <"Grade 2 - Wall thickening more or equal than 3 mm or mural stratification without prestenotic dilatation or less than 50% of the lumen">
 					description = <"Wall thickening more or equal than 3 mm or mural stratification without prestenotic dilatation or less than 50% of the lumen">
 				>
 				["at0044"] = <
-					text = <"Grade 3">
+					text = <"Grade 3 - Stricture with prestenotic dilatation or more than 50% of the lumen">
 					description = <"Stricture with prestenotic dilatation or more than 50% of the lumen">
 				>
 				["at0045"] = <
@@ -560,15 +625,15 @@ ontology
 					description = <"">
 				>
 				["at0053"] = <
-					text = <"Grade 1">
+					text = <"Grade 1 - Mild stricture">
 					description = <"Mild stricture">
 				>
 				["at0054"] = <
-					text = <"Grade 2">
+					text = <"Grade 2 - Frank stricture, passable">
 					description = <"Frank stricture, passable">
 				>
 				["at0055"] = <
-					text = <"Grade 3">
+					text = <"Grade 3 - Frank stricture, non passable">
 					description = <"Frank stricture, non passable">
 				>
 				["at0056"] = <
@@ -596,31 +661,27 @@ ontology
 					description = <"">
 				>
 				["at0063"] = <
-					text = <"Grade 1">
+					text = <"Grade 1 - Superficial ulceration">
 					description = <"Superficial ulceration">
 				>
 				["at0064"] = <
-					text = <"Grade 2">
+					text = <"Grade 2 - Deep ulceration">
 					description = <"Deep ulceration">
 				>
 				["at0065"] = <
-					text = <"Grade 3">
+					text = <"Grade 3 - Fistula">
 					description = <"Fistula">
 				>
 				["at0066"] = <
 					text = <"MRI or CT grades">
 					description = <"">
 				>
-				["at0067"] = <
-					text = <"Grade 1">
-					description = <"None">
-				>
 				["at0068"] = <
-					text = <"Grade 2">
+					text = <"Grade 2 - Deep transmural ulceration">
 					description = <"Deep transmural ulceration">
 				>
 				["at0069"] = <
-					text = <"Grade 3">
+					text = <"Grade 3 - Phlegmon or any type of fistula">
 					description = <"Phlegmon or any type of fistula">
 				>
 				["at0070"] = <
@@ -666,6 +727,58 @@ ontology
 				["at0080"] = <
 					text = <"MRI or CT grades">
 					description = <"">
+				>
+				["at0081"] = <
+					text = <"Grade 2 - Transmural ulceration">
+					description = <"Transmural ulceration">
+				>
+				["at0082"] = <
+					text = <"Anus">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Organ">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Segment">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Investigational method">
+					description = <"MRI or CT should only be used in case of abnormality at clinical examination.">
+				>
+				["at0086"] = <
+					text = <"Clinical examination grade">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"MRI or CT grades">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Grade 1 - Anal ulceration">
+					description = <"Anal ulceration">
+				>
+				["at0089"] = <
+					text = <"Grade 2 - Multiple fistulae">
+					description = <"Multiple fistulae">
+				>
+				["at0090"] = <
+					text = <"Grade 3 - Multiple fistulae with extensive anal and perianal tissue destruction">
+					description = <"Multiple fistulae with extensive anal and perianal tissue destruction">
+				>
+				["at0091"] = <
+					text = <"Grade 1 - Simple fistula">
+					description = <"Fistula extending from the anal canal to the perianal skin, but involving only the lowermost, or none, of the anal sphincter muscles, and without any secondary tracks).">
+				>
+				["at0092"] = <
+					text = <"Grade 2 - Branching fistula, multiple fistulae, or any type of abscess more than 1 cm">
+					description = <"Branching fistula, multiple fistulae, or any type of abscess more than 1 cm">
+				>
+				["at0093"] = <
+					text = <"Grade 3 - Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
+					description = <"Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
 				>
 			>
 		>
