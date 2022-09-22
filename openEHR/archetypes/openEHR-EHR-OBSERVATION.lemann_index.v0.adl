@@ -34,7 +34,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f656b56bcb3f61977a0316989b65c8b0">
+		["MD5-CAM-1.0.1"] = <"0b7d1101e251d386f041a1bb535b0d9a">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -359,6 +359,11 @@ definition
 															>
 														}
 													}
+													ELEMENT[at0115] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															DV_QUANTITY matches {*}
+														}
+													}
 												}
 											}
 											CLUSTER[at0070] occurrences matches {0..1} matches {    -- Small bowel
@@ -412,6 +417,11 @@ definition
 																	>
 																>
 															>
+														}
+													}
+													ELEMENT[at0114] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															DV_QUANTITY matches {*}
 														}
 													}
 												}
@@ -549,7 +559,7 @@ definition
 									ELEMENT[at0113] occurrences matches {0..1} matches {    -- Lémann Index
 										value matches {
 											C_DV_QUANTITY <
-												property = <[openehr::380]>
+												property = <[openehr::507]>
 												list = <
 													["1"] = <
 														units = <"1">
@@ -996,7 +1006,16 @@ ontology
 				>
 				["at0113"] = <
 					text = <"Lémann Index">
-					description = <"">
+					description = <"The weight of each organ in the Lémann Index is obtained by multiplying each organ index by its final coefficient">
+				>
+				["at0114"] = <
+					text = <"Index calculation per segment">
+					description = <"For index calculation per segment, please see rounded coefficients.
+(sum of segmental indexes / 20)">
+				>
+				["at0115"] = <
+					text = <"Index calculation per segment">
+					description = <"(sum of segmental indexes / 3)">
 				>
 			>
 		>
