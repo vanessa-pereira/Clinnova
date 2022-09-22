@@ -32,7 +32,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3e01341a06570755077bdbc1d1b5fcc6">
+		["MD5-CAM-1.0.1"] = <"47b10dabbdf9746f6464ac35b6d422f7">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -155,6 +155,18 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
+													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0034] occurrences matches {0..1} matches {    -- Colon / Rectum
@@ -207,6 +219,18 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
+													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0045] occurrences matches {0..1} matches {    -- Anus
@@ -248,6 +272,18 @@ definition
 													ELEMENT[at0098] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -309,6 +345,18 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
+													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0070] occurrences matches {0..1} matches {    -- Small bowel
@@ -350,6 +398,18 @@ definition
 													ELEMENT[at0100] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -404,6 +464,18 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
+													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Anus
@@ -454,6 +526,18 @@ definition
 													ELEMENT[at0102] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -866,6 +950,34 @@ ontology
 				>
 				["at0102"] = <
 					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"Final coefficient">
 					description = <"">
 				>
 			>
