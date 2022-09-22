@@ -32,7 +32,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"18c0c62ce83ee64764c9e3a5cb924bb1">
+		["MD5-CAM-1.0.1"] = <"3e01341a06570755077bdbc1d1b5fcc6">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -95,6 +95,23 @@ definition
 															3|[local::at0022]
 														}
 													}
+													ELEMENT[at0094] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0095] occurrences matches {0..1} matches {    -- Final coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::507]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0023] occurrences matches {0..1} matches {    -- Small bowel
@@ -131,6 +148,11 @@ definition
 															1|[local::at0020],
 															2|[local::at0021],
 															3|[local::at0022]
+														}
+													}
+													ELEMENT[at0096] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
 														}
 													}
 												}
@@ -180,6 +202,11 @@ definition
 															3|[local::at0044]
 														}
 													}
+													ELEMENT[at0097] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
+														}
+													}
 												}
 											}
 											CLUSTER[at0045] occurrences matches {0..1} matches {    -- Anus
@@ -216,6 +243,11 @@ definition
 															1|[local::at0053],
 															2|[local::at0054],
 															3|[local::at0055]
+														}
+													}
+													ELEMENT[at0098] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
 														}
 													}
 												}
@@ -272,6 +304,11 @@ definition
 															3|[local::at0069]
 														}
 													}
+													ELEMENT[at0099] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
+														}
+													}
 												}
 											}
 											CLUSTER[at0070] occurrences matches {0..1} matches {    -- Small bowel
@@ -308,6 +345,11 @@ definition
 															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
+														}
+													}
+													ELEMENT[at0100] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
 														}
 													}
 												}
@@ -357,6 +399,11 @@ definition
 															3|[local::at0069]
 														}
 													}
+													ELEMENT[at0101] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
+														}
+													}
 												}
 											}
 											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Anus
@@ -402,6 +449,11 @@ definition
 															1|[local::at0091],
 															2|[local::at0092],
 															3|[local::at0093]
+														}
+													}
+													ELEMENT[at0102] occurrences matches {0..1} matches {    -- Grade of severity
+														value matches {
+															DV_COUNT matches {*}
 														}
 													}
 												}
@@ -779,6 +831,42 @@ ontology
 				["at0093"] = <
 					text = <"Grade 3 - Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
 					description = <"Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
+				>
+				["at0094"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Grade of severity">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Grade of severity">
+					description = <"">
 				>
 			>
 		>
