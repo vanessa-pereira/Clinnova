@@ -19,7 +19,9 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			use = <"Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.
-Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.">
+Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.
+
+The calculation of the final coefficients and grade of severity can be found at https://www.gastrojournal.org/action/showPdf?pii=S0016-5085%2814%2901137-8 in table 4 for a better view.">
 		>
 	>
 	other_details = <
@@ -32,7 +34,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"47b10dabbdf9746f6464ac35b6d422f7">
+		["MD5-CAM-1.0.1"] = <"f656b56bcb3f61977a0316989b65c8b0">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -544,6 +546,18 @@ definition
 											}
 										}
 									}
+									ELEMENT[at0113] occurrences matches {0..1} matches {    -- Lémann Index
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
 								}
 							}
 						}
@@ -978,6 +992,10 @@ ontology
 				>
 				["at0112"] = <
 					text = <"Final coefficient">
+					description = <"">
+				>
+				["at0113"] = <
+					text = <"Lémann Index">
 					description = <"">
 				>
 			>
