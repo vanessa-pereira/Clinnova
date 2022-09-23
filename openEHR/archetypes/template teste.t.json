@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.3.0",
+      "sem_ver" : "0.3.1",
       "build_uid" : "cf20290b-34a3-4776-aa31-855f389fb551",
-      "MD5-CAM-1.0.1" : "16f7a4ba1e637e1c6a88fce9c3cf90b9",
+      "MD5-CAM-1.0.1" : "7c7a6e11d44eb6070050fb3253ab4d4b",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -3030,9 +3030,23 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "82c69ed9b4b46b16af0d53f09cd8f3c4"
+        "PARENT:MD5-CAM-1.0.1" : "d48b040dad9b4365b6ab084f7fd091a6"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ "Lémann Index, CD, Crohn’s disease, CDAI, Crohn’s Disease Activity Index" ],
+          "use" : "Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.\nExclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.\n\nThe calculation of the final coefficients and grade of severity can be found at https://www.gastrojournal.org/action/showPdf?pii=S0016-5085%2814%2901137-8 in table 4 for a better view.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.lemann_index.v0",
     "differential" : true,
