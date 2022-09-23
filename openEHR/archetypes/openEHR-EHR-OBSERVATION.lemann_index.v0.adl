@@ -34,7 +34,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"26a9a7f8213db36e7cb7d3736c373f9b">
+		["MD5-CAM-1.0.1"] = <"c91edf44a545917a6736b15984c975b8">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -161,7 +161,13 @@ definition
 													}
 													ELEMENT[at0119] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
@@ -233,7 +239,13 @@ definition
 													}
 													ELEMENT[at0120] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0039] occurrences matches {0..1} matches {    -- Investigational method
@@ -314,7 +326,13 @@ definition
 													}
 													ELEMENT[at0121] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0050] occurrences matches {0..1} matches {    -- Investigational method
@@ -393,7 +411,13 @@ definition
 													}
 													ELEMENT[at0122] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0061] occurrences matches {0..1} matches {    -- Investigational method
@@ -416,7 +440,7 @@ definition
 													}
 													ELEMENT[at0066] occurrences matches {0..1} matches {    -- MRI or CT grades
 														value matches {
-															1|[local::at0067],
+															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
 														}
@@ -474,7 +498,13 @@ definition
 													}
 													ELEMENT[at0123] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0073] occurrences matches {0..1} matches {    -- Investigational method
@@ -546,7 +576,13 @@ definition
 													}
 													ELEMENT[at0124] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0078] occurrences matches {0..1} matches {    -- Investigational method
@@ -627,7 +663,13 @@ definition
 													}
 													ELEMENT[at0125] occurrences matches {0..1} matches {    -- Resection
 														value matches {
-															DV_CODED_TEXT matches {*}
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
 														}
 													}
 													ELEMENT[at0085] occurrences matches {0..1} matches {    -- Investigational method
@@ -691,7 +733,7 @@ definition
 									ELEMENT[at0113] occurrences matches {0..1} matches {    -- Lémann Index
 										value matches {
 											C_DV_QUANTITY <
-												property = <[openehr::507]>
+												property = <[openehr::380]>
 												list = <
 													["1"] = <
 														units = <"1">
@@ -1138,7 +1180,13 @@ ontology
 				>
 				["at0113"] = <
 					text = <"Lémann Index">
-					description = <"The weight of each organ in the Lémann Index is obtained by multiplying each organ index by its final coefficient">
+					description = <"The weight of each organ in the Lémann Index is obtained by multiplying each organ index by its final coefficient.
+Lémann Index = (2.0*U+5.0*S+3.5*C+3.5*A)
+
+U: Upper tract (sum of segmental indexes / 3)
+S: Small bowel (sum of segmental indexes / 20)
+C: Colon/rectum (sum of segmental indexes / 6)
+A: Anus (1 segment)">
 				>
 				["at0114"] = <
 					text = <"Index calculation per segment">
