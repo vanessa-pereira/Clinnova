@@ -18,6 +18,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"Lémann Index, CD, Crohn’s disease, CDAI, Crohn’s Disease Activity Index", ...>
 			use = <"Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.
 Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.
 
@@ -34,7 +35,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c91edf44a545917a6736b15984c975b8">
+		["MD5-CAM-1.0.1"] = <"82c69ed9b4b46b16af0d53f09cd8f3c4">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -49,13 +50,16 @@ definition
 								items cardinality matches {0..*; unordered} matches {
 									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Structuring lesions
 										items cardinality matches {1..*; unordered} matches {
-											CLUSTER[at0011] occurrences matches {0..1} matches {    -- Upper tract
+											CLUSTER[at0011] occurrences matches {0..3} matches {    -- Upper tract
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0005] occurrences matches {0..1} matches {    -- Organ
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0007;at0007]    -- Upper track
+																	[local::
+																	at0007,    -- Esophagus
+																	at0137,    -- Stomach
+																	at0138]    -- Duodenum
 																}
 															}
 														}
@@ -113,18 +117,6 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0131] occurrences matches {0..1} matches {    -- Index calculation per segment
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
 													ELEMENT[at0095] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
@@ -137,9 +129,21 @@ definition
 															>
 														}
 													}
+													ELEMENT[at0131] occurrences matches {0..1} matches {    -- Upper tract index calculation
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
-											CLUSTER[at0023] occurrences matches {0..1} matches {    -- Small bowel
+											CLUSTER[at0023] occurrences matches {0..20} matches {    -- Small bowel
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0024] occurrences matches {0..1} matches {    -- Organ
 														value matches {
@@ -191,7 +195,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0130] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -203,7 +207,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0130] occurrences matches {0..1} matches {    -- Small bowel index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -217,13 +221,19 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0034] occurrences matches {0..1} matches {    -- Colon / Rectum
+											CLUSTER[at0034] occurrences matches {0..6} matches {    -- Colon / Rectum
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0035] occurrences matches {0..1} matches {    -- Organ
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0036;at0036]    -- Colon / Rectum
+																	[local::
+																	at0036,    -- Cecum
+																	at0132,    -- Ascending colon
+																	at0133,    -- Transverse colon
+																	at0134,    -- Descending colon
+																	at0135,    -- Sigmoid colon
+																	at0136]    -- Rectum
 																}
 															}
 														}
@@ -278,7 +288,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0129] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -290,7 +300,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0129] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -319,7 +329,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0049]    -- Anus
+																	[local::at0047]    -- Anus
 																}
 															}
 														}
@@ -356,7 +366,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0128] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -368,7 +378,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0128] occurrences matches {0..1} matches {    -- Anus index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -392,7 +402,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0007;at0007]    -- Upper track
+																	[local::at0007;at0007]    -- Esophagus
 																}
 															}
 														}
@@ -450,7 +460,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0115] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -462,7 +472,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0115] occurrences matches {0..1} matches {    -- Upper tract index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -528,7 +538,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0114] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -540,7 +550,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0114] occurrences matches {0..1} matches {    -- Small bowel index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -560,7 +570,13 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0036;at0036]    -- Colon / Rectum
+																	[local::
+																	at0036,    -- Cecum
+																	at0132,    -- Ascending colon
+																	at0133,    -- Transverse colon
+																	at0134,    -- Descending colon
+																	at0135,    -- Sigmoid colon
+																	at0136]    -- Rectum
 																}
 															}
 														}
@@ -615,7 +631,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0126] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -627,7 +643,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0126] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -702,7 +718,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0127] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -714,7 +730,7 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0127] occurrences matches {0..1} matches {    -- Anus index calculation
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -787,7 +803,7 @@ ontology
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"Upper track">
+					text = <"Esophagus">
 					description = <"">
 				>
 				["at0011"] = <
@@ -891,7 +907,7 @@ ontology
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"Colon / Rectum">
+					text = <"Cecum">
 					description = <"">
 				>
 				["at0037"] = <
@@ -940,10 +956,6 @@ ontology
 				>
 				["at0048"] = <
 					text = <"Segment">
-					description = <"">
-				>
-				["at0049"] = <
-					text = <"Anus">
 					description = <"">
 				>
 				["at0050"] = <
@@ -1189,13 +1201,14 @@ C: Colon/rectum (sum of segmental indexes / 6)
 A: Anus (1 segment)">
 				>
 				["at0114"] = <
-					text = <"Index calculation per segment">
+					text = <"Small bowel index calculation">
 					description = <"For index calculation per segment, please see rounded coefficients.
-(sum of segmental indexes / 20)">
+Index calculation per segment = (sum of segmental indexes / 20)">
 				>
 				["at0115"] = <
-					text = <"Index calculation per segment">
-					description = <"(sum of segmental indexes / 3)">
+					text = <"Upper tract index calculation">
+					description = <"For index calculation per segment, please see rounded coefficients.
+Index calculation per segment = (sum of segmental indexes / 3)">
 				>
 				["at0116"] = <
 					text = <"Resection">
@@ -1238,27 +1251,55 @@ A: Anus (1 segment)">
 					description = <"">
 				>
 				["at0126"] = <
-					text = <"Index calculation per segment">
+					text = <"Colon / Rectum index calculation">
 					description = <"">
 				>
 				["at0127"] = <
-					text = <"Index calculation per segment">
+					text = <"Anus index calculation">
 					description = <"">
 				>
 				["at0128"] = <
-					text = <"Index calculation per segment">
+					text = <"Anus index calculation">
 					description = <"">
 				>
 				["at0129"] = <
-					text = <"Index calculation per segment">
+					text = <"Colon / Rectum index calculation">
 					description = <"">
 				>
 				["at0130"] = <
-					text = <"Index calculation per segment">
+					text = <"Small bowel index calculation">
 					description = <"">
 				>
 				["at0131"] = <
-					text = <"Index calculation per segment">
+					text = <"Upper tract index calculation">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"Ascending colon">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"Transverse colon">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"Descending colon">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"Sigmoid colon">
+					description = <"">
+				>
+				["at0136"] = <
+					text = <"Rectum">
+					description = <"">
+				>
+				["at0137"] = <
+					text = <"Stomach">
+					description = <"">
+				>
+				["at0138"] = <
+					text = <"Duodenum">
 					description = <"">
 				>
 			>
