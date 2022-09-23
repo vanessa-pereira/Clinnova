@@ -34,7 +34,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0b7d1101e251d386f041a1bb535b0d9a">
+		["MD5-CAM-1.0.1"] = <"26a9a7f8213db36e7cb7d3736c373f9b">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -72,6 +72,17 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0116] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0117,    -- No
+																	at0118]    -- Yes
+																}
+															}
+														}
+													}
 													ELEMENT[at0006] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -100,6 +111,18 @@ definition
 													ELEMENT[at0094] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0131] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 													ELEMENT[at0095] occurrences matches {0..1} matches {    -- Final coefficient
@@ -136,6 +159,11 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0119] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
+														}
+													}
 													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -155,6 +183,18 @@ definition
 													ELEMENT[at0096] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0130] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Final coefficient
@@ -191,6 +231,11 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0120] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
+														}
+													}
 													ELEMENT[at0039] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -219,6 +264,18 @@ definition
 													ELEMENT[at0097] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0129] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Final coefficient
@@ -255,6 +312,11 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0121] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
+														}
+													}
 													ELEMENT[at0050] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -274,6 +336,18 @@ definition
 													ELEMENT[at0098] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0128] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Final coefficient
@@ -317,6 +391,11 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0122] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
+														}
+													}
 													ELEMENT[at0061] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -347,7 +426,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0115] occurrences matches {0..1} matches {    -- Index calculation per segment
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -359,9 +438,16 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0115] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
-															DV_QUANTITY matches {*}
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -386,6 +472,11 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0123] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
+														}
+													}
 													ELEMENT[at0073] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -407,7 +498,7 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Final coefficient
+													ELEMENT[at0114] occurrences matches {0..1} matches {    -- Index calculation per segment
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -419,9 +510,16 @@ definition
 															>
 														}
 													}
-													ELEMENT[at0114] occurrences matches {0..1} matches {    -- Index calculation per segment
+													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Final coefficient
 														value matches {
-															DV_QUANTITY matches {*}
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -444,6 +542,11 @@ definition
 																	[local::at0038]    -- Each segment
 																}
 															}
+														}
+													}
+													ELEMENT[at0124] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
 														}
 													}
 													ELEMENT[at0078] occurrences matches {0..1} matches {    -- Investigational method
@@ -474,6 +577,18 @@ definition
 													ELEMENT[at0101] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0126] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Final coefficient
@@ -510,6 +625,11 @@ definition
 															}
 														}
 													}
+													ELEMENT[at0125] occurrences matches {0..1} matches {    -- Resection
+														value matches {
+															DV_CODED_TEXT matches {*}
+														}
+													}
 													ELEMENT[at0085] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -538,6 +658,18 @@ definition
 													ELEMENT[at0102] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
+														}
+													}
+													ELEMENT[at0127] occurrences matches {0..1} matches {    -- Index calculation per segment
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Final coefficient
@@ -1016,6 +1148,70 @@ ontology
 				["at0115"] = <
 					text = <"Index calculation per segment">
 					description = <"(sum of segmental indexes / 3)">
+				>
+				["at0116"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0117"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0118"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0119"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0120"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0123"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0124"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0125"] = <
+					text = <"Resection">
+					description = <"">
+				>
+				["at0126"] = <
+					text = <"Index calculation per segment">
+					description = <"">
+				>
+				["at0127"] = <
+					text = <"Index calculation per segment">
+					description = <"">
+				>
+				["at0128"] = <
+					text = <"Index calculation per segment">
+					description = <"">
+				>
+				["at0129"] = <
+					text = <"Index calculation per segment">
+					description = <"">
+				>
+				["at0130"] = <
+					text = <"Index calculation per segment">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"Index calculation per segment">
+					description = <"">
 				>
 			>
 		>
