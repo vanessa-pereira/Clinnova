@@ -35,7 +35,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"82c69ed9b4b46b16af0d53f09cd8f3c4">
+		["MD5-CAM-1.0.1"] = <"d48b040dad9b4365b6ab084f7fd091a6">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -396,7 +396,7 @@ definition
 									}
 									CLUSTER[at0056] occurrences matches {0..1} matches {    -- Penetrating lesions
 										items cardinality matches {1..*; unordered} matches {
-											CLUSTER[at0057] occurrences matches {0..1} matches {    -- Upper tract
+											CLUSTER[at0057] occurrences matches {0..3} matches {    -- Upper tract
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0058] occurrences matches {0..1} matches {    -- Organ
 														value matches {
@@ -486,7 +486,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0070] occurrences matches {0..1} matches {    -- Small bowel
+											CLUSTER[at0070] occurrences matches {0..20} matches {    -- Small bowel
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0071] occurrences matches {0..1} matches {    -- Organ
 														value matches {
@@ -564,7 +564,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0075] occurrences matches {0..1} matches {    -- Colon / Rectum
+											CLUSTER[at0075] occurrences matches {0..6} matches {    -- Colon / Rectum
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0076] occurrences matches {0..1} matches {    -- Organ
 														value matches {
@@ -746,7 +746,7 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0113] occurrences matches {0..1} matches {    -- Lémann Index
+									ELEMENT[at0113] matches {    -- Lémann Index
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::380]>
