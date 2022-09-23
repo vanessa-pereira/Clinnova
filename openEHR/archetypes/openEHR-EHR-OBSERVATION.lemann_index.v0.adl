@@ -35,7 +35,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d48b040dad9b4365b6ab084f7fd091a6">
+		["MD5-CAM-1.0.1"] = <"ab30eade591dd5f5c663a22be1c4daf5">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -56,10 +56,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::
-																	at0007,    -- Esophagus
-																	at0137,    -- Stomach
-																	at0138]    -- Duodenum
+																	[local::at0007]    -- Upper gastrointestinal tract
 																}
 															}
 														}
@@ -156,11 +153,7 @@ definition
 													}
 													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Segment
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0033]    -- Each 20-cm segment
-																}
-															}
+															DV_TEXT matches {*}
 														}
 													}
 													ELEMENT[at0119] occurrences matches {0..1} matches {    -- Resection
@@ -227,13 +220,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::
-																	at0036,    -- Cecum
-																	at0132,    -- Ascending colon
-																	at0133,    -- Transverse colon
-																	at0134,    -- Descending colon
-																	at0135,    -- Sigmoid colon
-																	at0136]    -- Rectum
+																	[local::at0036]    -- Colon / Rectum
 																}
 															}
 														}
@@ -242,7 +229,13 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0038]    -- Each segment
+																	[local::
+																	at0132,    -- Ascending colon
+																	at0133,    -- Transverse colon
+																	at0134,    -- Descending colon
+																	at0135,    -- Sigmoid colon
+																	at0136,    -- Rectum
+																	at0137]    -- Cecum
 																}
 															}
 														}
@@ -402,7 +395,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0007;at0007]    -- Esophagus
+																	[local::at0007;at0007]    -- Upper gastrointestinal tract
 																}
 															}
 														}
@@ -499,11 +492,7 @@ definition
 													}
 													ELEMENT[at0072] occurrences matches {0..1} matches {    -- Segment
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0033]    -- Each 20-cm segment
-																}
-															}
+															DV_TEXT matches {*}
 														}
 													}
 													ELEMENT[at0123] occurrences matches {0..1} matches {    -- Resection
@@ -571,7 +560,7 @@ definition
 															DV_CODED_TEXT matches {
 																defining_code matches {
 																	[local::
-																	at0036,    -- Cecum
+																	at0036,    -- Colon / Rectum
 																	at0132,    -- Ascending colon
 																	at0133,    -- Transverse colon
 																	at0134,    -- Descending colon
@@ -803,7 +792,7 @@ ontology
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"Esophagus">
+					text = <"Upper gastrointestinal tract">
 					description = <"">
 				>
 				["at0011"] = <
@@ -872,7 +861,7 @@ ontology
 				>
 				["at0027"] = <
 					text = <"Segment">
-					description = <"">
+					description = <"Each 20-cm segment">
 				>
 				["at0028"] = <
 					text = <"Grades">
@@ -894,10 +883,6 @@ ontology
 					text = <"MRI or CT grades">
 					description = <"">
 				>
-				["at0033"] = <
-					text = <"Each 20-cm segment">
-					description = <"">
-				>
 				["at0034"] = <
 					text = <"Colon / Rectum">
 					description = <"">
@@ -907,7 +892,7 @@ ontology
 					description = <"">
 				>
 				["at0036"] = <
-					text = <"Cecum">
+					text = <"Colon / Rectum">
 					description = <"">
 				>
 				["at0037"] = <
@@ -1040,7 +1025,7 @@ ontology
 				>
 				["at0072"] = <
 					text = <"Segment">
-					description = <"">
+					description = <"Each 20-cm segment">
 				>
 				["at0073"] = <
 					text = <"Investigational method">
@@ -1295,11 +1280,7 @@ Index calculation per segment = (sum of segmental indexes / 3)">
 					description = <"">
 				>
 				["at0137"] = <
-					text = <"Stomach">
-					description = <"">
-				>
-				["at0138"] = <
-					text = <"Duodenum">
+					text = <"Cecum">
 					description = <"">
 				>
 			>
