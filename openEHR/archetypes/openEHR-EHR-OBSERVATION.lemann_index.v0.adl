@@ -35,7 +35,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5f1d45b59259c21a04ffc12f2180fe73">
+		["MD5-CAM-1.0.1"] = <"9668e5fd3e6a6af218229102d11a96b2">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -56,7 +56,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0007]    -- Upper gastrointestinal tract
+																	[local::at0007]    -- Upper digestive tract
 																}
 															}
 														}
@@ -114,18 +114,6 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0095] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::507]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
 												}
 											}
 											CLUSTER[at0023] occurrences matches {0..20} matches {    -- Small bowel
@@ -174,18 +162,6 @@ definition
 													ELEMENT[at0096] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
-														}
-													}
-													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
 														}
 													}
 												}
@@ -257,18 +233,6 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
 												}
 											}
 											CLUSTER[at0045] occurrences matches {0..1} matches {    -- Anus
@@ -323,18 +287,82 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
+												}
+											}
+											ELEMENT[at0095] occurrences matches {0..1} matches {    -- Upper digestive tract final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
 															>
-														}
-													}
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <2.0>
+															precision = <1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0105] occurrences matches {0..1} matches {    -- Small bowel final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <5.0>
+															precision = <1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0106] occurrences matches {0..1} matches {    -- Colon / Rectum final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <3.5>
+															precision = <1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0108] occurrences matches {0..1} matches {    -- Anus final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <3.5>
+															precision = <1>
+														>
+													>
 												}
 											}
 											ELEMENT[at0131] occurrences matches {0..1} matches {    -- Upper tract index calculation
@@ -395,7 +423,7 @@ definition
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0007;at0007]    -- Upper gastrointestinal tract
+																	[local::at0007;at0007]    -- Upper digestive tract
 																}
 															}
 														}
@@ -453,18 +481,6 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
 												}
 											}
 											CLUSTER[at0070] occurrences matches {0..20} matches {    -- Small bowel
@@ -513,18 +529,6 @@ definition
 													ELEMENT[at0100] occurrences matches {0..1} matches {    -- Grade of severity
 														value matches {
 															DV_COUNT matches {*}
-														}
-													}
-													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
 														}
 													}
 												}
@@ -596,18 +600,6 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
 												}
 											}
 											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Anus
@@ -671,18 +663,82 @@ definition
 															DV_COUNT matches {*}
 														}
 													}
-													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Final coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
+												}
+											}
+											ELEMENT[at0109] occurrences matches {0..1} matches {    -- Upper tract final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
 															>
-														}
-													}
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <2.0>
+															precision = <1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0112] occurrences matches {0..1} matches {    -- Small bowel final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <5.0>
+															precision = <1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0110] occurrences matches {0..1} matches {    -- Colon / Rectum final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <3.5>
+															precision = <1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0111] occurrences matches {0..1} matches {    -- Anus final coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+																precision = <|1|>
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <3.5>
+															precision = <1>
+														>
+													>
 												}
 											}
 											ELEMENT[at0115] occurrences matches {0..1} matches {    -- Upper tract index calculation
@@ -792,7 +848,7 @@ ontology
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"Upper gastrointestinal tract">
+					text = <"Upper digestive tract">
 					description = <"">
 				>
 				["at0011"] = <
@@ -1116,7 +1172,7 @@ ontology
 					description = <"">
 				>
 				["at0095"] = <
-					text = <"Final coefficient">
+					text = <"Upper digestive tract final coefficient">
 					description = <"">
 				>
 				["at0096"] = <
@@ -1148,31 +1204,31 @@ ontology
 					description = <"">
 				>
 				["at0105"] = <
-					text = <"Final coefficient">
+					text = <"Small bowel final coefficient">
 					description = <"">
 				>
 				["at0106"] = <
-					text = <"Final coefficient">
+					text = <"Colon / Rectum final coefficient">
 					description = <"">
 				>
 				["at0108"] = <
-					text = <"Final coefficient">
+					text = <"Anus final coefficient">
 					description = <"">
 				>
 				["at0109"] = <
-					text = <"Final coefficient">
+					text = <"Upper tract final coefficient">
 					description = <"">
 				>
 				["at0110"] = <
-					text = <"Final coefficient">
+					text = <"Colon / Rectum final coefficient">
 					description = <"">
 				>
 				["at0111"] = <
-					text = <"Final coefficient">
+					text = <"Anus final coefficient">
 					description = <"">
 				>
 				["at0112"] = <
-					text = <"Final coefficient">
+					text = <"Small bowel final coefficient">
 					description = <"">
 				>
 				["at0113"] = <
@@ -1183,7 +1239,9 @@ Lémann Index = (2.0*U+5.0*S+3.5*C+3.5*A)
 U: Upper tract (sum of segmental indexes / 3)
 S: Small bowel (sum of segmental indexes / 20)
 C: Colon/rectum (sum of segmental indexes / 6)
-A: Anus (1 segment)">
+A: Anus (1 segment)
+
+the values 2.0, 5.0, 3.5 and 3.5 comes from Upper tract final coefficient, Small bowel final coefficient, Colon / Rectum final coefficient and Anus final coefficient data elements respectively.">
 				>
 				["at0114"] = <
 					text = <"Small bowel index calculation">
