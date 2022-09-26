@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a910e12cd2cec79366231ecee7da82d4">
+		["MD5-CAM-1.0.1"] = <"3f583c0d9a060c53c9b6bc0edc4546cf">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -111,11 +111,6 @@ definition
 															3|[local::at0022]
 														}
 													}
-													ELEMENT[at0094] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
-														}
-													}
 													ELEMENT[at0095] occurrences matches {0..1} matches {    -- Upper tract segment coefficient
 														value matches {
 															C_DV_QUANTITY <
@@ -178,11 +173,6 @@ definition
 															1|[local::at0020],
 															2|[local::at0021],
 															3|[local::at0022]
-														}
-													}
-													ELEMENT[at0096] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
 														}
 													}
 													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Small bowel segment coefficient
@@ -268,11 +258,6 @@ definition
 															3|[local::at0044]
 														}
 													}
-													ELEMENT[at0097] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
-														}
-													}
 													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Colon / Rectum segment coefficient
 														value matches {
 															C_DV_QUANTITY <
@@ -339,11 +324,6 @@ definition
 															1|[local::at0053],
 															2|[local::at0054],
 															3|[local::at0055]
-														}
-													}
-													ELEMENT[at0098] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
 														}
 													}
 													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Anus segment coefficient
@@ -478,23 +458,6 @@ definition
 															3|[local::at0069]
 														}
 													}
-													ELEMENT[at0099] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
-														}
-													}
-													ELEMENT[at0109] occurrences matches {0..1} matches {    -- Upper tract segment coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
 												}
 											}
 											CLUSTER[at0070] occurrences matches {0..20} matches {    -- Small bowel
@@ -538,11 +501,6 @@ definition
 															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
-														}
-													}
-													ELEMENT[at0100] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
 														}
 													}
 													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Small bowel segment coefficient
@@ -621,11 +579,6 @@ definition
 															3|[local::at0069]
 														}
 													}
-													ELEMENT[at0101] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
-														}
-													}
 													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Colon / Rectum segment coefficient
 														value matches {
 															C_DV_QUANTITY <
@@ -694,11 +647,6 @@ definition
 															1|[local::at0091],
 															2|[local::at0092],
 															3|[local::at0093]
-														}
-													}
-													ELEMENT[at0102] occurrences matches {0..1} matches {    -- Grade of severity
-														value matches {
-															DV_COUNT matches {*}
 														}
 													}
 													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Anus segment coefficient
@@ -1141,42 +1089,10 @@ ontology
 					text = <"Grade 3 - Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
 					description = <"Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
 				>
-				["at0094"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
 				["at0095"] = <
 					text = <"Upper tract segment coefficient">
 					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
 If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
-				>
-				["at0096"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
-				["at0097"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
-				["at0098"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
-				["at0099"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
-				["at0100"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
-				["at0101"] = <
-					text = <"Grade of severity">
-					description = <"">
-				>
-				["at0102"] = <
-					text = <"Grade of severity">
-					description = <"">
 				>
 				["at0105"] = <
 					text = <"Small bowel segment coefficient">
@@ -1194,21 +1110,21 @@ If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coeffi
 					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 1.5
 If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
-				["at0109"] = <
-					text = <"Upper tract segment coefficient">
-					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 2.0">
-				>
 				["at0110"] = <
 					text = <"Colon / Rectum segment coefficient">
-					description = <"">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 1, then \"coefficient\" = 1.0
+If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.5">
 				>
 				["at0111"] = <
 					text = <"Anus segment coefficient">
-					description = <"">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
 				["at0112"] = <
 					text = <"Small bowel segment coefficient">
-					description = <"">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 1.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.0">
 				>
 				["at0113"] = <
 					text = <"Lémann Index">
@@ -1219,23 +1135,21 @@ U: Upper tract (sum of segmental indexes / 3)
 S: Small bowel (sum of segmental indexes / 20)
 C: Colon/rectum (sum of segmental indexes / 6)
 A: Anus (1 segment)
-
-the values 2.0, 5.0, 3.5 and 3.5 comes from Upper tract final coefficient, Small bowel final coefficient, Colon / Rectum final coefficient and Anus final coefficient data elements respectively.">
+">
 					comment = <"Example: Patient with multiple anal ﬁstulae (grade 2); 2 segments with stricture and prestenotic dilatation (grade 3), one with a ﬁstula (grade 3), of the small bowel; 1 segments with deep transmural ulceration (grade 2), of the colon. The Lémann Index = 5.0*0.7+3.5*0.4+3.5*2.5) 
 
 In detail: (2.0*U+5.0*S+3.5*C+3.5*A)
 U = 5*[(2segments*5 + 1segment*4)/20]
-5 and 4 comes from the verification of the grades (e.g. Clinical examination or MRI or CT grades) and respective coefficients where the later is used for the calculation. ">
+Segmental indexes = number of segments * segment coefficient = 2segments*5 + 1segment*4
+5 and 4 come from the verification of the grades (e.g. Clinical examination or MRI or CT grades) with the respective segment coefficients that are used for the calculation. For example in the case of \"2 segments with stricture and prestenotic dilatation (grade 3)\" the \"type of lesion\" = stricturing and \"grade of severity\" = 3, then the \"coefficient\" = 5.0. Due to having 2 segments, the calculation should be 2*5.0.">
 				>
 				["at0114"] = <
 					text = <"Small bowel index calculation">
-					description = <"For index calculation per segment, please see rounded coefficients.
-Index calculation per segment = (sum of segmental indexes / 20)">
+					description = <"Small bowel index calculation = (sum of segmental indexes / 20)">
 				>
 				["at0115"] = <
 					text = <"Upper tract index calculation">
-					description = <"For index calculation per segment, please see rounded coefficients.
-Index calculation per segment = (sum of segmental indexes / 3)">
+					description = <"Upper tract index calculation = (sum of segmental indexes / 3)">
 				>
 				["at0116"] = <
 					text = <"Resection">
@@ -1279,11 +1193,12 @@ Index calculation per segment = (sum of segmental indexes / 3)">
 				>
 				["at0126"] = <
 					text = <"Colon / Rectum index calculation">
-					description = <"">
+					description = <"Colon / Rectum index calculation  = (sum of segmental indexes / 6)">
 				>
 				["at0127"] = <
 					text = <"Anus index calculation">
-					description = <"">
+					description = <"Anus index calculation = 1 single segment result
+Will have the same value as \"Anus segment coefficient\" data element.">
 				>
 				["at0128"] = <
 					text = <"Anus index calculation">
