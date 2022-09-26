@@ -18,11 +18,13 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To assess cumulative structural bowel damage in Crohn disease.">
 			keywords = <"Lémann Index, CD, Crohn’s disease, CDAI, Crohn’s Disease Activity Index", ...>
-			use = <"Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.
-Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.
+			use = <"Criteria for inclusion and exclusion:
+- Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.
+- Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.
 
-The calculation of the final coefficients and grade of severity can be found at https://www.gastrojournal.org/action/showPdf?pii=S0016-5085%2814%2901137-8 in table 4 for a better view.">
+The calculation of the final coefficients and grade of severity can be found at https://www.gastrojournal.org/action/showPdf?pii=S0016-5085%2814%2901137-8 in Table 4 for a better view.">
 		>
 	>
 	other_details = <
@@ -35,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9668e5fd3e6a6af218229102d11a96b2">
+		["MD5-CAM-1.0.1"] = <"9ce19bdbd496f61c52ef25dd2888903c">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -1217,7 +1219,8 @@ ontology
 				>
 				["at0109"] = <
 					text = <"Upper tract final coefficient">
-					description = <"">
+					description = <"
+">
 				>
 				["at0110"] = <
 					text = <"Colon / Rectum final coefficient">
@@ -1242,6 +1245,7 @@ C: Colon/rectum (sum of segmental indexes / 6)
 A: Anus (1 segment)
 
 the values 2.0, 5.0, 3.5 and 3.5 comes from Upper tract final coefficient, Small bowel final coefficient, Colon / Rectum final coefficient and Anus final coefficient data elements respectively.">
+					comment = <"Example: Patient with multiple anal ﬁstulae (grade 2); 2 segments with stricture and prestenotic dilatation (grade 3), one with a ﬁstula (grade 3), of the small bowel; 1 segments with deep transmural ulceration (grade 2), of the colon. The Lémann Index = 5.0*0.7+3.5*0.4+3.5*2.5)">
 				>
 				["at0114"] = <
 					text = <"Small bowel index calculation">
