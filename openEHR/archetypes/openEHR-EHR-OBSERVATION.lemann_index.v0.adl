@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3f583c0d9a060c53c9b6bc0edc4546cf">
+		["MD5-CAM-1.0.1"] = <"32d580d7b2d3c28b92bcd122839cb179">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -720,6 +720,7 @@ definition
 												list = <
 													["1"] = <
 														units = <"1">
+														magnitude = <|0.0..140.0|>
 													>
 												>
 											>
@@ -733,7 +734,14 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0012] matches {*}    -- Item tree
+			ITEM_TREE[at0012] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0141] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
 		}
 	}
 
@@ -1135,7 +1143,11 @@ U: Upper tract (sum of segmental indexes / 3)
 S: Small bowel (sum of segmental indexes / 20)
 C: Colon/rectum (sum of segmental indexes / 6)
 A: Anus (1 segment)
-">
+
+
+Note that Lémann Index is ranged between:
+- 0: No Damage
+- 140: Maximal Damage">
 					comment = <"Example: Patient with multiple anal ﬁstulae (grade 2); 2 segments with stricture and prestenotic dilatation (grade 3), one with a ﬁstula (grade 3), of the small bowel; 1 segments with deep transmural ulceration (grade 2), of the colon. The Lémann Index = 5.0*0.7+3.5*0.4+3.5*2.5) 
 
 In detail: (2.0*U+5.0*S+3.5*C+3.5*A)
@@ -1202,19 +1214,20 @@ Will have the same value as \"Anus segment coefficient\" data element.">
 				>
 				["at0128"] = <
 					text = <"Anus index calculation">
-					description = <"">
+					description = <"Anus index calculation = 1 single segment result
+Will have the same value as \"Anus segment coefficient\" data element.">
 				>
 				["at0129"] = <
 					text = <"Colon / Rectum index calculation">
-					description = <"">
+					description = <"Colon / Rectum index calculation  = (sum of segmental indexes / 6)">
 				>
 				["at0130"] = <
 					text = <"Small bowel index calculation">
-					description = <"">
+					description = <"Small bowel index calculation = (sum of segmental indexes / 20)">
 				>
 				["at0131"] = <
 					text = <"Upper tract index calculation">
-					description = <"">
+					description = <"Upper tract index calculation = (sum of segmental indexes / 3)">
 				>
 				["at0132"] = <
 					text = <"Ascending colon">
@@ -1238,6 +1251,10 @@ Will have the same value as \"Anus segment coefficient\" data element.">
 				>
 				["at0137"] = <
 					text = <"Cecum">
+					description = <"">
+				>
+				["at0141"] = <
+					text = <"Extension">
 					description = <"">
 				>
 			>
