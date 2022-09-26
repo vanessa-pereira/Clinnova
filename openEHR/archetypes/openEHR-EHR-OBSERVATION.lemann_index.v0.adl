@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"fd75ea5f0b52e6165886003a8ea560a4">
+		["MD5-CAM-1.0.1"] = <"e4d599cf221fd41c8b9dd18b2f562d08">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -118,14 +118,7 @@ definition
 																list = <
 																	["1"] = <
 																		units = <"1">
-																		precision = <|1|>
 																	>
-																>
-
-																assumed_value = <
-																	units = <"1">
-																	magnitude = <2.0>
-																	precision = <1>
 																>
 															>
 														}
@@ -182,14 +175,7 @@ definition
 																list = <
 																	["1"] = <
 																		units = <"1">
-																		precision = <|1|>
 																	>
-																>
-
-																assumed_value = <
-																	units = <"1">
-																	magnitude = <5.0>
-																	precision = <1>
 																>
 															>
 														}
@@ -265,14 +251,7 @@ definition
 																list = <
 																	["1"] = <
 																		units = <"1">
-																		precision = <|1|>
 																	>
-																>
-
-																assumed_value = <
-																	units = <"1">
-																	magnitude = <3.5>
-																	precision = <1>
 																>
 															>
 														}
@@ -333,14 +312,7 @@ definition
 																list = <
 																	["1"] = <
 																		units = <"1">
-																		precision = <|1|>
 																	>
-																>
-
-																assumed_value = <
-																	units = <"1">
-																	magnitude = <3.5>
-																	precision = <1>
 																>
 															>
 														}
@@ -456,6 +428,18 @@ definition
 															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
+														}
+													}
+													ELEMENT[at0142] occurrences matches {0..1} matches {    -- Upper tract segment coefficient
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -1257,6 +1241,10 @@ Will have the same value as \"Anus segment coefficient\" data element.">
 					text = <"Extension">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+				["at0142"] = <
+					text = <"Upper tract segment coefficient">
+					description = <"">
 				>
 			>
 		>
