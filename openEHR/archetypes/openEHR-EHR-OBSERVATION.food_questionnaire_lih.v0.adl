@@ -1,0 +1,101 @@
+archetype (adl_version=1.4; uid=9b7fcf1c-539f-4766-8e1f-685eda49608d)
+	openEHR-EHR-OBSERVATION.food_questionnaire_lih.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+		["date"] = <"2022-09-27">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e7ba394b35d9df3a6b9b94abd390b2db">
+		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Food questionnaire (LIH)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Type of eater
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- Omnivore
+													at0006,    -- Vegetarian
+													at0007]    -- Vegan
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Food questionnaire (LIH)">
+					description = <"food questionnaire lih">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Type of eater">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Omnivore">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Vegetarian">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Vegan">
+					description = <"">
+				>
+			>
+		>
+	>
