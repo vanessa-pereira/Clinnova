@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e7ba394b35d9df3a6b9b94abd390b2db">
+		["MD5-CAM-1.0.1"] = <"1133415509eb461ec90ae3fabc5a0a9e">
 		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
 	>
 
@@ -47,6 +47,32 @@ definition
 													at0005,    -- Omnivore
 													at0006,    -- Vegetarian
 													at0007]    -- Vegan
+												}
+											}
+										}
+									}
+									CLUSTER[at0008] occurrences matches {0..1} matches {    -- Food consumption during last month
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- Frequency of eaten fruits (80-100g)
+												value matches {
+													1|[local::at0010],
+													2|[local::at0011],
+													3|[local::at0012],
+													4|[local::at0013],
+													5|[local::at0014],
+													6|[local::at0015]
+												}
+											}
+											ELEMENT[at0016] occurrences matches {0..1} matches {    -- Fruits (80-100g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 										}
@@ -95,6 +121,43 @@ ontology
 				["at0007"] = <
 					text = <"Vegan">
 					description = <"">
+				>
+				["at0008"] = <
+					text = <"Food consumption during last month">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Frequency of eaten fruits (80-100g)">
+					description = <"">
+					comment = <"If once a day or more fill up how many times or units per day in the fruits quantity data element">
+				>
+				["at0010"] = <
+					text = <"Never or hardly ever">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Less than once a week">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"About once a week">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"2 to 3 times a week">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"4 to 6 times a week">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Once a day or more">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Fruits (80-100g)">
+					description = <"If once a day or more, how many times or units per day">
 				>
 			>
 		>
