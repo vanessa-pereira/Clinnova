@@ -16,6 +16,11 @@ language
 				["notes"] = <"Generated automatically by Adl Designer">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -42,6 +47,10 @@ description
 			keywords = <"Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC), WPAI-UC, PROM, PRO, Ulcerative Colitis, UC", ...>
 			use = <"Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -52,7 +61,7 @@ Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instrum
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0bb8dfc6c3c73fa42c65ece968011631">
+		["MD5-CAM-1.0.1"] = <"6b170bd5d224e91d67d282441ba7e384">
 		["build_uid"] = <"4b1a3cb2-cf67-3267-8988-a98e624de10d">
 	>
 
@@ -324,6 +333,93 @@ Consider only how much ulcerative colitis affected your ability to perform your 
 				>
 				["at0014"] = <
 					text = <"Erweiterung">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC) (en)">
+					description = <"*The WPAI is a 6-item self-reported questionnaire. It assesses absenteeism and presenteeism due to health problems. The WPAI assessed four domains, all related to health: missed work time, impairment while working, overall work impairment, and activity impairment. (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Currently employed (en)">
+					description = <"*Original question: \"Are you currently employed (working for pay)?\" (en)">
+					comment = <"*If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities). (en)">
+				>
+				["at0005"] = <
+					text = <"*Yes (en)">
+					description = <"*Yes (en)">
+				>
+				["at0006"] = <
+					text = <"*No (en)">
+					description = <"*No (en)">
+				>
+				["at0007"] = <
+					text = <"*Miss from work due to health problems (en)">
+					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of problems associated with your ulcerative colitis?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+
+Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study. (en)">
+				>
+				["at0008"] = <
+					text = <"*Miss from work due to other reasons (en)">
+					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?\" (en)">
+					comment = <"*This question is about the past seven days, not including today. (en)">
+				>
+				["at0009"] = <
+					text = <"*Hours actually working (en)">
+					description = <"*Original question: \"During the past seven days, how many hours did you actually work?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+
+If “0”, skip to question 6 (Affection of health problems on daily activities). (en)">
+				>
+				["at0010"] = <
+					text = <"*Affection of health problems (en)">
+					description = <"*Original question: \"During the past seven days, how much did your health problems affect your productivity while you were working?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+
+Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.
+
+Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".
+
+Consider only how much ulcerative colitis affected productivity while you were working.  (en)">
+				>
+				["at0011"] = <
+					text = <"*Affection of health problems on daily activities (en)">
+					description = <"*Original question: \"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?\" (en)">
+					comment = <"*This question is about the past seven days, not including today.
+
+By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.
+
+Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".
+
+Consider only how much ulcerative colitis affected your ability to perform your normal daily activities, excluding your job. (en)">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"*Comment (en)">
+					description = <"*Additional narrative on the WPAI Questionnaire. (en)">
+				>
+				["at0014"] = <
+					text = <"*Extension (en)">
 					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
 					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>

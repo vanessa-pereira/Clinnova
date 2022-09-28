@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,10 +28,18 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			keywords = <"2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2), UC-PRO-2, UC, PROM", ...>
 			use = <"The UC-PRO-2 questionnaire consists of two separate questions (stool frequency and rectal bleeding), with four response options each, scored from normal (no disease symptoms) to most severe symptoms (0–3). A PRO2 score of 0 indicates inactive UC and a score of 6 indicates active disease and spontaneous bleeding.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -29,8 +49,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9f9ff30ac1a8c4a30ac95143f4633660">
 		["build_uid"] = <"30a099c2-b83f-356b-b7b1-67a40bae65ee">
-		["MD5-CAM-1.0.1"] = <"857d37b68477d16fa3b668eea4e6b0f6">
 	>
 
 definition
@@ -103,7 +123,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2)">
-					description = <"uc_pro_2">
+					description = <"2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -174,6 +194,162 @@ last 3 days)\"">
 				["at0017"] = <
 					text = <"Active Ulcerative Colitis">
 					description = <"A score of 6 indicates active disease and spontaneous bleeding.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2) (en)">
+					description = <"*2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2) (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*In the last 3 days (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Stool frequency (en)">
+					description = <"*Original question: \"Please indicate how you perceive your stool frequency (Based on the
+last 3 days)\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Normal (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*1 to 2 more stools than normal (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*3 to 4 stools more than normal (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*5 or more stools than normal (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Severity of rectal bleeding (en)">
+					description = <"*Original question: \"Please indicate the severity of your rectal bleeding (Based on the last
+3 days)\" (en)">
+				>
+				["at0010"] = <
+					text = <"*No blood seen (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Streaks of blood seen with stools for half of the time (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Obvious blood with stool most of the time (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Blood alone passed (with no stool) (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Total score interpretation (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Inactive Ulcerative Colitis (en)">
+					description = <"*A score of 0 indicates inactive UC. (en)">
+				>
+				["at0017"] = <
+					text = <"*Active Ulcerative Colitis (en)">
+					description = <"*A score of 6 indicates active disease and spontaneous bleeding. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2) (en)">
+					description = <"*2 Item Ulcerative Colitis - Patient reported outcome (UC-PRO-2) (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*In the last 3 days (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Stool frequency (en)">
+					description = <"*Original question: \"Please indicate how you perceive your stool frequency (Based on the
+last 3 days)\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Normal (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*1 to 2 more stools than normal (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*3 to 4 stools more than normal (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*5 or more stools than normal (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Severity of rectal bleeding (en)">
+					description = <"*Original question: \"Please indicate the severity of your rectal bleeding (Based on the last
+3 days)\" (en)">
+				>
+				["at0010"] = <
+					text = <"*No blood seen (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Streaks of blood seen with stools for half of the time (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Obvious blood with stool most of the time (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Blood alone passed (with no stool) (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Total score interpretation (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Inactive Ulcerative Colitis (en)">
+					description = <"*A score of 0 indicates inactive UC. (en)">
+				>
+				["at0017"] = <
+					text = <"*Active Ulcerative Colitis (en)">
+					description = <"*A score of 6 indicates active disease and spontaneous bleeding. (en)">
 				>
 			>
 		>

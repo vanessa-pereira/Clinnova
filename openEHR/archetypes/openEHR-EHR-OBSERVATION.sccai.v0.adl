@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,8 +28,16 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -29,7 +49,7 @@ Bewtra M, Brensinger CM, Tomov VT, et al. An optimized patient-reported ulcerati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b3585fcdb7c8e39004d53a7876ce2a14">
+		["MD5-CAM-1.0.1"] = <"0ab48ebec65bc3c069acc9cb71b0c42e">
 		["build_uid"] = <"c04df22a-d644-3ea6-9c7a-538d1a5e723e">
 	>
 
@@ -272,6 +292,328 @@ For each single value there's a question associated.
 				>
 				["at0036"] = <
 					text = <"Total score">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Simple Clinical Colitis Activity Index (SCCAI) (en)">
+					description = <"*sccai index (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Over the past 3 days (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Bowel motions during daytime (en)">
+					description = <"*Original question: \"How many bowel motions have you been passing during the daytime, i.e. from waking up till going to bed to sleep for the last 3 days?\" (en)">
+				>
+				["at0006"] = <
+					text = <"*1 to 3 times (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*4 to 6 times (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*7 to 9 times (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*More than 9 times (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Bowel motions during night time (en)">
+					description = <"*Original question: \"How many bowel motions have you been passing during night time, i.e. after going to bed, for the last 3 nights?\" (en)">
+				>
+				["at0011"] = <
+					text = <"*1 to 3 times (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*4 to 6 times (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Degree of urgency of defecation (en)">
+					description = <"*Original question: \"What degree of Urgency of defecation do you experience? i.e. When you feel the need to open your bowel, how quickly do you need to go?\" (en)">
+				>
+				["at0014"] = <
+					text = <"*I have no urgency at all (i.e. just as normal) (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*I have to hurry to the toilet (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*I have to go immediately (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*I have incontinence (unable to control the urge and had an accident) (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Blood in stool (en)">
+					description = <"*Original question: \"How much blood has been in your stool?\" (en)">
+				>
+				["at0019"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Trace (a hint or a tiny amount) (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Moderate (occasional obvious/frank blood) (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Severe (Usually obvious/frank blood) (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*General well being (en)">
+					description = <"*Original question: \"General well being – How do you feel about your general health?\" (en)">
+				>
+				["at0024"] = <
+					text = <"*Very well (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Slightly below par (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Poor (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Very poor (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Terrible (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Other symptoms (en)">
+					description = <"*Original question: \"Do you have any of the following symptoms apart from your bowels?\"
+
+For each single value there's a question associated.
+- Joint problems; have you had painful, red or swollen joints? The most common joints affected are the knees, ankles or toes.
+- Eye problems; have you had sore, red and swollen eyes? Other symptoms include blurry vision, sensitivity to light, floaters or increased tear production? 
+- Mouth problems; The most common problems are round or oval mouth ulcers which usually appear as round yellowish elevated spots surrounded by a red halo.
+-  Skin problems: Do you have any deep, purple ulcers, often painful, which usually develop suddenly?
+-  Skin problems: Do you have any tender, hot and red bumps which most often affect the skin on the shins, arms and legs?
+- Perianal problems. Do you have any tears or breakdown (crack/ cleft) in the skin of the anus or tender lumps (abscesses) surrounding it? (en)">
+					comment = <"*Note on eye problems: If you have a painful red eye or if you have been diagnosed with uveitis, episcleritis or scleritis and recognize a flare of your symptoms. Seek medical help urgently. (en)">
+				>
+				["at0030"] = <
+					text = <"*Joint problems (en)">
+					description = <"*Had painful, red or swollen joints? The most common joints affected are the knees, ankles or toes. (en)">
+				>
+				["at0031"] = <
+					text = <"*Eye problems (en)">
+					description = <"*Had sore, red and swollen eyes? Other symptoms include blurry vision, sensitivity to light, floaters or increased tear production? (en)">
+				>
+				["at0032"] = <
+					text = <"*Mouth problems (en)">
+					description = <"*The most common problems are round or oval mouth ulcers which usually appear as round yellowish elevated spots surrounded by a red halo. (en)">
+				>
+				["at0033"] = <
+					text = <"*Skin problems - deep purple ulcers (en)">
+					description = <"*Had any deep, purple ulcers, often painful, which usually develop suddenly? (en)">
+				>
+				["at0034"] = <
+					text = <"*Skin problems - hot and red bumps in shins, arms and legs (en)">
+					description = <"*Had any tender, hot and red bumps which most often affect the skin on the shins, arms and legs? (en)">
+				>
+				["at0035"] = <
+					text = <"*Perianal problems (en)">
+					description = <"*Had any tears or breakdown (crack/ cleft) in the skin of the anus or tender lumps (abscesses) surrounding it? (en)">
+				>
+				["at0036"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Simple Clinical Colitis Activity Index (SCCAI) (en)">
+					description = <"*sccai index (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Over the past 3 days (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Bowel motions during daytime (en)">
+					description = <"*Original question: \"How many bowel motions have you been passing during the daytime, i.e. from waking up till going to bed to sleep for the last 3 days?\" (en)">
+				>
+				["at0006"] = <
+					text = <"*1 to 3 times (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*4 to 6 times (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*7 to 9 times (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*More than 9 times (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Bowel motions during night time (en)">
+					description = <"*Original question: \"How many bowel motions have you been passing during night time, i.e. after going to bed, for the last 3 nights?\" (en)">
+				>
+				["at0011"] = <
+					text = <"*1 to 3 times (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*4 to 6 times (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Degree of urgency of defecation (en)">
+					description = <"*Original question: \"What degree of Urgency of defecation do you experience? i.e. When you feel the need to open your bowel, how quickly do you need to go?\" (en)">
+				>
+				["at0014"] = <
+					text = <"*I have no urgency at all (i.e. just as normal) (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*I have to hurry to the toilet (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*I have to go immediately (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*I have incontinence (unable to control the urge and had an accident) (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Blood in stool (en)">
+					description = <"*Original question: \"How much blood has been in your stool?\" (en)">
+				>
+				["at0019"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Trace (a hint or a tiny amount) (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Moderate (occasional obvious/frank blood) (en)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"*Severe (Usually obvious/frank blood) (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*General well being (en)">
+					description = <"*Original question: \"General well being – How do you feel about your general health?\" (en)">
+				>
+				["at0024"] = <
+					text = <"*Very well (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Slightly below par (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*Poor (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Very poor (en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Terrible (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Other symptoms (en)">
+					description = <"*Original question: \"Do you have any of the following symptoms apart from your bowels?\"
+
+For each single value there's a question associated.
+- Joint problems; have you had painful, red or swollen joints? The most common joints affected are the knees, ankles or toes.
+- Eye problems; have you had sore, red and swollen eyes? Other symptoms include blurry vision, sensitivity to light, floaters or increased tear production? 
+- Mouth problems; The most common problems are round or oval mouth ulcers which usually appear as round yellowish elevated spots surrounded by a red halo.
+-  Skin problems: Do you have any deep, purple ulcers, often painful, which usually develop suddenly?
+-  Skin problems: Do you have any tender, hot and red bumps which most often affect the skin on the shins, arms and legs?
+- Perianal problems. Do you have any tears or breakdown (crack/ cleft) in the skin of the anus or tender lumps (abscesses) surrounding it? (en)">
+					comment = <"*Note on eye problems: If you have a painful red eye or if you have been diagnosed with uveitis, episcleritis or scleritis and recognize a flare of your symptoms. Seek medical help urgently. (en)">
+				>
+				["at0030"] = <
+					text = <"*Joint problems (en)">
+					description = <"*Had painful, red or swollen joints? The most common joints affected are the knees, ankles or toes. (en)">
+				>
+				["at0031"] = <
+					text = <"*Eye problems (en)">
+					description = <"*Had sore, red and swollen eyes? Other symptoms include blurry vision, sensitivity to light, floaters or increased tear production? (en)">
+				>
+				["at0032"] = <
+					text = <"*Mouth problems (en)">
+					description = <"*The most common problems are round or oval mouth ulcers which usually appear as round yellowish elevated spots surrounded by a red halo. (en)">
+				>
+				["at0033"] = <
+					text = <"*Skin problems - deep purple ulcers (en)">
+					description = <"*Had any deep, purple ulcers, often painful, which usually develop suddenly? (en)">
+				>
+				["at0034"] = <
+					text = <"*Skin problems - hot and red bumps in shins, arms and legs (en)">
+					description = <"*Had any tender, hot and red bumps which most often affect the skin on the shins, arms and legs? (en)">
+				>
+				["at0035"] = <
+					text = <"*Perianal problems (en)">
+					description = <"*Had any tears or breakdown (crack/ cleft) in the skin of the anus or tender lumps (abscesses) surrounding it? (en)">
+				>
+				["at0036"] = <
+					text = <"*Total score (en)">
 					description = <"">
 				>
 			>
