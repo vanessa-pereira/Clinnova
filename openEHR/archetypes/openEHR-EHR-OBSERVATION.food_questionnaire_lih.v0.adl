@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3df2a41ea0de86cca49aea26ffcf5697">
+		["MD5-CAM-1.0.1"] = <"85062207257cc7d7e87bfea09d747320">
 		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
 	>
 
@@ -160,7 +160,14 @@ definition
 											}
 											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Meat (100-150g)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0029] occurrences matches {0..1} matches {    -- Frequency of eaten egg and egg products (~100g)
@@ -170,7 +177,14 @@ definition
 											}
 											ELEMENT[at0030] occurrences matches {0..1} matches {    -- Egg and egg products (~100g)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0031] occurrences matches {0..1} matches {    -- Frequency of eaten fish and seafood (100-150g)
@@ -180,7 +194,14 @@ definition
 											}
 											ELEMENT[at0032] occurrences matches {0..1} matches {    -- Fish and seafood (100-150g)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0033] occurrences matches {0..1} matches {    -- Frequency of eaten processed meat (~50g)
@@ -190,7 +211,14 @@ definition
 											}
 											ELEMENT[at0034] occurrences matches {0..1} matches {    -- Processed meat (~50g)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Frequency of eaten deep-fried or higher fat foods (100-150g)
@@ -200,7 +228,14 @@ definition
 											}
 											ELEMENT[at0036] occurrences matches {0..1} matches {    -- Deep-fried or higher fat foods (100-150g)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0037] occurrences matches {0..1} matches {    -- Frequency of eaten cheeses (50g or 2 slices)
@@ -210,17 +245,31 @@ definition
 											}
 											ELEMENT[at0038] occurrences matches {0..1} matches {    -- Cheese (50g or 2 slices)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
-											ELEMENT[at0039] occurrences matches {0..1} matches {    -- Frequency of eaten sweet products (50g or 2 bars - 100 g)
+											ELEMENT[at0039] occurrences matches {0..1} matches {    -- Frequency of eaten sweet products (50g or 2 bars - 100g)
 												value matches {
 													DV_ORDINAL matches {*}
 												}
 											}
 											ELEMENT[at0040] occurrences matches {0..1} matches {    -- Sweet products (50g or 2 bars - 100 g)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0041] occurrences matches {0..1} matches {    -- Frequency of drunk soft drinks (200ml-300ml)
@@ -230,7 +279,14 @@ definition
 											}
 											ELEMENT[at0042] occurrences matches {0..1} matches {    -- Soft drinks (200ml-300ml)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 											ELEMENT[at0043] occurrences matches {0..1} matches {    -- Frequency of drunk alcoholic beverages (1 unit, 8g of alcohol)
@@ -240,7 +296,133 @@ definition
 											}
 											ELEMENT[at0044] occurrences matches {0..1} matches {    -- Alcoholic beverages (1 unit, 8g of alcohol)
 												value matches {
-													DV_QUANTITY matches {*}
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0045] occurrences matches {0..1} matches {    -- Frequency of eaten salt (~1g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0046] occurrences matches {0..1} matches {    -- Salt (~1g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0047] occurrences matches {0..1} matches {    -- Frequency of eaten convenient and processed foods (1 portion - 200ml)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0048] occurrences matches {0..1} matches {    -- Convenient and processed foods (1 portion - 200ml)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0049] occurrences matches {0..1} matches {    -- Frequency of eaten nuts (40-50g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0050] occurrences matches {0..1} matches {    -- Eaten nuts (40-50g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0051] occurrences matches {0..1} matches {    -- Frequency of eaten snacks (~50g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0052] occurrences matches {0..1} matches {    -- Snacks (~50g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0053] occurrences matches {0..1} matches {    -- Frequency of eaten fats or oils (5-10g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0054] occurrences matches {0..1} matches {    -- Fats or oils (5-10g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0055] occurrences matches {0..1} matches {    -- Frequency of eaten food condiments (~5g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0056] occurrences matches {0..1} matches {    -- Food condiments (~5g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0057] occurrences matches {0..1} matches {    -- Frequency of eaten fast food
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0058] occurrences matches {0..1} matches {    -- Fast food
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
 												}
 											}
 										}
@@ -296,7 +478,7 @@ ontology
 				>
 				["at0009"] = <
 					text = <"Frequency of eaten fruits (80-100g)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Fruits, 80-100g">
 					comment = <"If once a day or more fill up how many times or units per day in the fruits quantity data element">
 				>
 				["at0010"] = <
@@ -329,7 +511,7 @@ ontology
 				>
 				["at0017"] = <
 					text = <"Frequency of eaten vegetables (80-100g)">
-					description = <"Vegetables (e.g. tomatoes, green beans, carrots, corn, cabbage, bean sprouts, collard greens, broccoli, mushrooms., 80-100g)">
+					description = <"Frequency consumed by patient during last month of Vegetables (e.g. tomatoes, green beans, carrots, corn, cabbage, bean sprouts, collard greens, broccoli, mushrooms., 80-100g)">
 				>
 				["at0018"] = <
 					text = <"Vegetables (80-100g)">
@@ -338,7 +520,7 @@ ontology
 				>
 				["at0019"] = <
 					text = <"Frequency of eaten pulses (80-100g)">
-					description = <"Pulses (lentils, beans, peas, 80-100g)">
+					description = <"Frequency consumed by patient during last month of Pulses (lentils, beans, peas, 80-100g)">
 				>
 				["at0020"] = <
 					text = <"Pulses (80-100g)">
@@ -346,7 +528,7 @@ ontology
 				>
 				["at0021"] = <
 					text = <"Frequency of eaten bread (~100g)">
-					description = <"Bread, (breakfast) cereals, white rice potatoes, ~100 g)">
+					description = <"Frequency consumed by patient during last month of Bread, (breakfast) cereals, white rice potatoes, ~100 g)">
 				>
 				["at0022"] = <
 					text = <"Bread (~100g)">
@@ -354,7 +536,7 @@ ontology
 				>
 				["at0023"] = <
 					text = <"Frequency of eaten whole grain products (75-100g)">
-					description = <"Whole grain products (e.g. brown rice or other cooked whole grainssuch as bulgur, corn, cracked wheat, or millet, wholemeal pasta, 75-100 g)">
+					description = <"Frequency consumed by patient during last month of Whole grain products (e.g. brown rice or other cooked whole grainssuch as bulgur, corn, cracked wheat, or millet, wholemeal pasta, 75-100 g)">
 				>
 				["at0024"] = <
 					text = <"Whole grain products (75-100g)">
@@ -362,7 +544,7 @@ ontology
 				>
 				["at0025"] = <
 					text = <"Frequency of eaten milk products (~200g)">
-					description = <"Milk, fermented milk, lactose-free milk, buttermilk, chocolate milk, ice-cream, a small glass (~200 ml), yoghourt (~100 g), white cheese (~50 g)">
+					description = <"Frequency consumed by patient during last month of Milk, fermented milk, lactose-free milk, buttermilk, chocolate milk, ice-cream, a small glass (~200 ml), yoghourt (~100 g), white cheese (~50 g)">
 				>
 				["at0026"] = <
 					text = <"Milk products">
@@ -370,7 +552,7 @@ ontology
 				>
 				["at0027"] = <
 					text = <"Frequency of eaten meat (100-150g)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Meat, poultry (100-150 g)">
 				>
 				["at0028"] = <
 					text = <"Meat (100-150g)">
@@ -378,7 +560,7 @@ ontology
 				>
 				["at0029"] = <
 					text = <"Frequency of eaten egg and egg products (~100g)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Eggs and egg products, ~100g">
 				>
 				["at0030"] = <
 					text = <"Egg and egg products (~100g)">
@@ -386,7 +568,7 @@ ontology
 				>
 				["at0031"] = <
 					text = <"Frequency of eaten fish and seafood (100-150g)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Fish and seafood, 100-150g">
 				>
 				["at0032"] = <
 					text = <"Fish and seafood (100-150g)">
@@ -394,15 +576,15 @@ ontology
 				>
 				["at0033"] = <
 					text = <"Frequency of eaten processed meat (~50g)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Processed meat (e.g. ham, bacon, pastrami, salami, sausages, bratwursts, frankfurters, hot dogs, ~50 g)">
 				>
 				["at0034"] = <
 					text = <"Processed meat (~50g)">
-					description = <"Processed meat (e.g. ham, bacon, pastrami, salami, sausages, bratwursts, frankfurters, hot dogs, ~50 g)">
+					description = <"">
 				>
 				["at0035"] = <
 					text = <"Frequency of eaten deep-fried or higher fat foods (100-150g)">
-					description = <"Deep-fried/higher fat foods (french fries,100-150)">
+					description = <"Frequency consumed by patient during last month of Deep-fried/higher fat foods (french fries,100-150g)">
 				>
 				["at0036"] = <
 					text = <"Deep-fried or higher fat foods (100-150g)">
@@ -410,15 +592,15 @@ ontology
 				>
 				["at0037"] = <
 					text = <"Frequency of eaten cheeses (50g or 2 slices)">
-					description = <"Cheeses (e.g. hard cheese, fermented cheese, ~50g or 2 slides">
+					description = <"Frequency consumed by patient during last month of Cheeses (e.g. hard cheese, fermented cheese, ~50g or 2 slices">
 				>
 				["at0038"] = <
 					text = <"Cheese (50g or 2 slices)">
 					description = <"">
 				>
 				["at0039"] = <
-					text = <"Frequency of eaten sweet products (50g or 2 bars - 100 g)">
-					description = <"Sweet products (e.g. doughnuts, sweet rolls, muffins ~100 g, chocolates, sweets, sweet desserts ~50 g or 2 bars)">
+					text = <"Frequency of eaten sweet products (50g or 2 bars - 100g)">
+					description = <"Frequency consumed by patient during last month of Sweet products (e.g. doughnuts, sweet rolls, muffins ~100 g, chocolates, sweets, sweet desserts ~50 g or 2 bars)">
 				>
 				["at0040"] = <
 					text = <"Sweet products (50g or 2 bars - 100 g)">
@@ -426,7 +608,7 @@ ontology
 				>
 				["at0041"] = <
 					text = <"Frequency of drunk soft drinks (200ml-300ml)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Soft drinks (sugared and artificially sweetened beverages, 200-300 ml)">
 				>
 				["at0042"] = <
 					text = <"Soft drinks (200ml-300ml)">
@@ -434,10 +616,66 @@ ontology
 				>
 				["at0043"] = <
 					text = <"Frequency of drunk alcoholic beverages (1 unit, 8g of alcohol)">
-					description = <"">
+					description = <"Frequency consumed by patient during last month of Alcoholic beverages (1 unit, 8 g alcohol, equal to ca. 250 ml of beer, 100 ml of wine, 4 cl of spirits)">
 				>
 				["at0044"] = <
 					text = <"Alcoholic beverages (1 unit, 8g of alcohol)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Frequency of eaten salt (~1g)">
+					description = <"Frequency consumed by patient during last month of Salt (added table salt, a pinch of salt, ~1 g)">
+				>
+				["at0046"] = <
+					text = <"Salt (~1g)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"Frequency of eaten convenient and processed foods (1 portion - 200ml)">
+					description = <"Frequency consumed by patient during last month of Convenient and processed foods (maggie 5-minute soup, bouillon, 1 portion, ~200 ml prepared)">
+				>
+				["at0048"] = <
+					text = <"Convenient and processed foods (1 portion - 200ml)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Frequency of eaten nuts (40-50g)">
+					description = <"Frequency consumed by patient during last month of Nuts (peanuts, tree nuts and seeds 40-50 g)">
+				>
+				["at0050"] = <
+					text = <"Eaten nuts (40-50g)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Frequency of eaten snacks (~50g)">
+					description = <"Frequency consumed by patient during last month of Snacks (popcorns, chips, pretzel and pretzel sticks, ~50 g)">
+				>
+				["at0052"] = <
+					text = <"Snacks (~50g)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Frequency of eaten fats or oils (5-10g)">
+					description = <"Frequency consumed by patient during last month of Fats/oils (olive oil, butter, margarine, 5-10 g)">
+				>
+				["at0054"] = <
+					text = <"Fats or oils (5-10g)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Frequency of eaten food condiments (~5g)">
+					description = <"Frequency consumed by patient during last month of Food condiments (ketchup, horseradish, mustard, ~5 g)">
+				>
+				["at0056"] = <
+					text = <"Food condiments (~5g)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Frequency of eaten fast food">
+					description = <"Frequency consumed by patient during last month of \"Fast food\" such as burgers and pizza">
+				>
+				["at0058"] = <
+					text = <"Fast food">
 					description = <"">
 				>
 			>
