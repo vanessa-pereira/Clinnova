@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-09-27">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2022-09-27">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1133415509eb461ec90ae3fabc5a0a9e">
+		["MD5-CAM-1.0.1"] = <"dfbfed18b60c7c6c53afc53330609e90">
 		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
 	>
 
@@ -73,6 +73,104 @@ definition
 															>
 														>
 													>
+												}
+											}
+											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Frequency of eaten vegetables (80-100g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Vegetables (80-100g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0019] occurrences matches {0..1} matches {    -- Frequency of eaten pulses (80-100g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0020] occurrences matches {0..1} matches {    -- Pulses (80-100g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..1} matches {    -- Frequency of eaten bread (~100g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0022] occurrences matches {0..1} matches {    -- Bread (~100g)
+												value matches {
+													DV_QUANTITY matches {*}
+												}
+											}
+											ELEMENT[at0023] occurrences matches {0..1} matches {    -- Frequency of eaten whole grain products (75-100g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0024] occurrences matches {0..1} matches {    -- Whole grain products (75-100g)
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0025] occurrences matches {0..1} matches {    -- Frequency of eaten milk products (~200g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0026] occurrences matches {0..1} matches {    -- Milk products
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0027] occurrences matches {0..1} matches {    -- Frequency of eaten meat (100-150g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0028] occurrences matches {0..1} matches {    -- Meat (100-150g)
+												value matches {
+													DV_QUANTITY matches {*}
+												}
+											}
+											ELEMENT[at0029] occurrences matches {0..1} matches {    -- Frequency of eaten egg and egg products (~100g)
+												value matches {
+													DV_ORDINAL matches {*}
+												}
+											}
+											ELEMENT[at0030] occurrences matches {0..1} matches {    -- Egg and egg products (~100g)
+												value matches {
+													DV_QUANTITY matches {*}
 												}
 											}
 										}
@@ -157,7 +255,64 @@ ontology
 				>
 				["at0016"] = <
 					text = <"Fruits (80-100g)">
-					description = <"If once a day or more, how many times or units per day">
+					description = <"If once a day or more, in this element save how many times or units per day.">
+				>
+				["at0017"] = <
+					text = <"Frequency of eaten vegetables (80-100g)">
+					description = <"Vegetables (e.g. tomatoes, green beans, carrots, corn, cabbage, bean sprouts, collard greens, broccoli, mushrooms., 80-100g)">
+				>
+				["at0018"] = <
+					text = <"Vegetables (80-100g)">
+					description = <"If once a day or more, in this element save how many times or units per day.
+">
+				>
+				["at0019"] = <
+					text = <"Frequency of eaten pulses (80-100g)">
+					description = <"Pulses (lentils, beans, peas, 80-100g)">
+				>
+				["at0020"] = <
+					text = <"Pulses (80-100g)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Frequency of eaten bread (~100g)">
+					description = <"Bread, (breakfast) cereals, white rice potatoes, ~100 g)">
+				>
+				["at0022"] = <
+					text = <"Bread (~100g)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Frequency of eaten whole grain products (75-100g)">
+					description = <"Whole grain products (e.g. brown rice or other cooked whole grainssuch as bulgur, corn, cracked wheat, or millet, wholemeal pasta, 75-100 g)">
+				>
+				["at0024"] = <
+					text = <"Whole grain products (75-100g)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Frequency of eaten milk products (~200g)">
+					description = <"Milk, fermented milk, lactose-free milk, buttermilk, chocolate milk, ice-cream, a small glass (~200 ml), yoghourt (~100 g), white cheese (~50 g)">
+				>
+				["at0026"] = <
+					text = <"Milk products">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Frequency of eaten meat (100-150g)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Meat (100-150g)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Frequency of eaten egg and egg products (~100g)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Egg and egg products (~100g)">
+					description = <"">
 				>
 			>
 		>
