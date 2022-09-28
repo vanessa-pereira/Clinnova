@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,9 +28,17 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			keywords = <"Food questionnaire, Food, questionnaire, PROM, LIH, Luxembourg", ...>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -27,7 +47,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ab734b6214641903da342e2670c0c21d">
+		["MD5-CAM-1.0.1"] = <"e8525bb44cdc191f458a41911e61672b">
 		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
 	>
 
@@ -1044,6 +1064,726 @@ ontology
 					text = <"Extension">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Food questionnaire (LIH) (en)">
+					description = <"*The food questionnaire is a self-reported questionnaire and consists of 45 questions assessed in four parts. The first part is about vegetarianism (3 questions); the second part consists of 20 questions about food habits and food frequency intake; the third part consists of 15 questions about avoiding food because of symptoms, and the fourth part consists of seven questions about nutritional supplements. There is no cut-off.  This questionnaire is made by the Luxembourg Institute of Health (LIH). (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Type of eater (en)">
+					description = <"*Original question: \"Are you (please, choose only one answer):\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Omnivore (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Vegetarian (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*Vegan (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Food consumption during last month (en)">
+					description = <"*Original question: \"During the past month, how often did you usually consume the following foods or beverages, regardless of how they were stored (fresh, canned or frozen), when they were consumed (within main meals or as a snack) and the location (home or away from home)?\" (en)">
+				>
+				["at0009"] = <
+					text = <"*Frequency of eaten fruits (80-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Fruits, 80-100g (en)">
+					comment = <"*If once a day or more fill up how many times or units per day in the fruits quantity data element (en)">
+				>
+				["at0010"] = <
+					text = <"*Never or hardly ever (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*About once a week (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*2 to 3 times a week (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*4 to 6 times a week (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Once a day or more (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Fruits (80-100g) (en)">
+					description = <"*If once a day or more, in this element save how many times or units per day. (en)">
+				>
+				["at0017"] = <
+					text = <"*Frequency of eaten vegetables (80-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Vegetables (e.g. tomatoes, green beans, carrots, corn, cabbage, bean sprouts, collard greens, broccoli, mushrooms., 80-100g) (en)">
+				>
+				["at0018"] = <
+					text = <"*Vegetables (80-100g) (en)">
+					description = <"*If once a day or more, in this element save how many times or units per day.
+ (en)">
+				>
+				["at0019"] = <
+					text = <"*Frequency of eaten pulses (80-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Pulses (lentils, beans, peas, 80-100g) (en)">
+				>
+				["at0020"] = <
+					text = <"*Pulses (80-100g) (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Frequency of eaten bread (~100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Bread, (breakfast) cereals, white rice potatoes, ~100 g) (en)">
+				>
+				["at0022"] = <
+					text = <"*Bread (~100g) (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Frequency of eaten whole grain products (75-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Whole grain products (e.g. brown rice or other cooked whole grainssuch as bulgur, corn, cracked wheat, or millet, wholemeal pasta, 75-100 g) (en)">
+				>
+				["at0024"] = <
+					text = <"*Whole grain products (75-100g) (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Frequency of eaten milk products (~200g) (en)">
+					description = <"*Frequency consumed by patient during last month of Milk, fermented milk, lactose-free milk, buttermilk, chocolate milk, ice-cream, a small glass (~200 ml), yoghourt (~100 g), white cheese (~50 g) (en)">
+				>
+				["at0026"] = <
+					text = <"*Milk products (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Frequency of eaten meat (100-150g) (en)">
+					description = <"*Frequency consumed by patient during last month of Meat, poultry (100-150 g) (en)">
+				>
+				["at0028"] = <
+					text = <"*Meat (100-150g) (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Frequency of eaten egg and egg products (~100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Eggs and egg products, ~100g (en)">
+				>
+				["at0030"] = <
+					text = <"*Egg and egg products (~100g) (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Frequency of eaten fish and seafood (100-150g) (en)">
+					description = <"*Frequency consumed by patient during last month of Fish and seafood, 100-150g (en)">
+				>
+				["at0032"] = <
+					text = <"*Fish and seafood (100-150g) (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Frequency of eaten processed meat (~50g) (en)">
+					description = <"*Frequency consumed by patient during last month of Processed meat (e.g. ham, bacon, pastrami, salami, sausages, bratwursts, frankfurters, hot dogs, ~50 g) (en)">
+				>
+				["at0034"] = <
+					text = <"*Processed meat (~50g) (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Frequency of eaten deep-fried or higher fat foods (100-150g) (en)">
+					description = <"*Frequency consumed by patient during last month of Deep-fried/higher fat foods (french fries,100-150g) (en)">
+				>
+				["at0036"] = <
+					text = <"*Deep-fried or higher fat foods (100-150g) (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Frequency of eaten cheeses (50g or 2 slices) (en)">
+					description = <"*Frequency consumed by patient during last month of Cheeses (e.g. hard cheese, fermented cheese, ~50g or 2 slices (en)">
+				>
+				["at0038"] = <
+					text = <"*Cheese (50g or 2 slices) (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*Frequency of eaten sweet products (50g or 2 bars - 100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Sweet products (e.g. doughnuts, sweet rolls, muffins ~100 g, chocolates, sweets, sweet desserts ~50 g or 2 bars) (en)">
+				>
+				["at0040"] = <
+					text = <"*Sweet products (50g or 2 bars - 100 g) (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Frequency of drunk soft drinks (200ml-300ml) (en)">
+					description = <"*Frequency consumed by patient during last month of Soft drinks (sugared and artificially sweetened beverages, 200-300 ml) (en)">
+				>
+				["at0042"] = <
+					text = <"*Soft drinks (200ml-300ml) (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Frequency of drunk alcoholic beverages (1 unit, 8g of alcohol) (en)">
+					description = <"*Frequency consumed by patient during last month of Alcoholic beverages (1 unit, 8 g alcohol, equal to ca. 250 ml of beer, 100 ml of wine, 4 cl of spirits) (en)">
+				>
+				["at0044"] = <
+					text = <"*Alcoholic beverages (1 unit, 8g of alcohol) (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Frequency of eaten salt (~1g) (en)">
+					description = <"*Frequency consumed by patient during last month of Salt (added table salt, a pinch of salt, ~1 g) (en)">
+				>
+				["at0046"] = <
+					text = <"*Salt (~1g) (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Frequency of eaten convenient and processed foods (1 portion - 200ml) (en)">
+					description = <"*Frequency consumed by patient during last month of Convenient and processed foods (maggie 5-minute soup, bouillon, 1 portion, ~200 ml prepared) (en)">
+				>
+				["at0048"] = <
+					text = <"*Convenient and processed foods (1 portion - 200ml) (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Frequency of eaten nuts (40-50g) (en)">
+					description = <"*Frequency consumed by patient during last month of Nuts (peanuts, tree nuts and seeds 40-50 g) (en)">
+				>
+				["at0050"] = <
+					text = <"*Eaten nuts (40-50g) (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*Frequency of eaten snacks (~50g) (en)">
+					description = <"*Frequency consumed by patient during last month of Snacks (popcorns, chips, pretzel and pretzel sticks, ~50 g) (en)">
+				>
+				["at0052"] = <
+					text = <"*Snacks (~50g) (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Frequency of eaten fats or oils (5-10g) (en)">
+					description = <"*Frequency consumed by patient during last month of Fats/oils (olive oil, butter, margarine, 5-10 g) (en)">
+				>
+				["at0054"] = <
+					text = <"*Fats or oils (5-10g) (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Frequency of eaten food condiments (~5g) (en)">
+					description = <"*Frequency consumed by patient during last month of Food condiments (ketchup, horseradish, mustard, ~5 g) (en)">
+				>
+				["at0056"] = <
+					text = <"*Food condiments (~5g) (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Frequency of eaten fast food (en)">
+					description = <"*Frequency consumed by patient during last month of \"Fast food\" such as burgers and pizza (en)">
+				>
+				["at0058"] = <
+					text = <"*Fast food (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Food avoidance due to allergy or fear of negative health effects (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*Avoidance of eating certain foods do to fear of having an allergy or negative health effects? (en)">
+					description = <"*Do you avoid certain foods because of fear of having negative health effects or allergy?   (en)">
+					comment = <"*If \"yes\", fill up the list of foods avoided (en)">
+				>
+				["at0062"] = <
+					text = <"*Nuts and seeds (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Salad or raw vegetables of any type (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Legumes (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*Tomato produts (en)">
+					description = <"*tomato products (sauce, juice, or ketchup)  (en)">
+				>
+				["at0066"] = <
+					text = <"*Raw fruit (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*Milk and dairy products (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*Foods containing lactose (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*Processed, luncheon or deli meat (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Tea or coffee (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"*Drinks containing alcohol (en)">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"*Popcorn (en)">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"*Red meat (en)">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"*Food containing gluten (en)">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"*Other avoided foods (en)">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"*Food supplements or vitamins (en)">
+					description = <"*Do you regularly take food supplements or vitamins rich in: (en)">
+				>
+				["at0077"] = <
+					text = <"*Vitamin D (en)">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"*Vitamin C (en)">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"*Vitamin E (en)">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"*Fish oils (en)">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"*Antioxidants (en)">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"*Zinc (en)">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"*Iron (en)">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"*Magnesium (en)">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"*Multivitamins (en)">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"*Other supplements (en)">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0088"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Food questionnaire (LIH) (en)">
+					description = <"*The food questionnaire is a self-reported questionnaire and consists of 45 questions assessed in four parts. The first part is about vegetarianism (3 questions); the second part consists of 20 questions about food habits and food frequency intake; the third part consists of 15 questions about avoiding food because of symptoms, and the fourth part consists of seven questions about nutritional supplements. There is no cut-off.  This questionnaire is made by the Luxembourg Institute of Health (LIH). (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Type of eater (en)">
+					description = <"*Original question: \"Are you (please, choose only one answer):\" (en)">
+				>
+				["at0005"] = <
+					text = <"*Omnivore (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Vegetarian (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*Vegan (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Food consumption during last month (en)">
+					description = <"*Original question: \"During the past month, how often did you usually consume the following foods or beverages, regardless of how they were stored (fresh, canned or frozen), when they were consumed (within main meals or as a snack) and the location (home or away from home)?\" (en)">
+				>
+				["at0009"] = <
+					text = <"*Frequency of eaten fruits (80-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Fruits, 80-100g (en)">
+					comment = <"*If once a day or more fill up how many times or units per day in the fruits quantity data element (en)">
+				>
+				["at0010"] = <
+					text = <"*Never or hardly ever (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Less than once a week (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*About once a week (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*2 to 3 times a week (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*4 to 6 times a week (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Once a day or more (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*Fruits (80-100g) (en)">
+					description = <"*If once a day or more, in this element save how many times or units per day. (en)">
+				>
+				["at0017"] = <
+					text = <"*Frequency of eaten vegetables (80-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Vegetables (e.g. tomatoes, green beans, carrots, corn, cabbage, bean sprouts, collard greens, broccoli, mushrooms., 80-100g) (en)">
+				>
+				["at0018"] = <
+					text = <"*Vegetables (80-100g) (en)">
+					description = <"*If once a day or more, in this element save how many times or units per day.
+ (en)">
+				>
+				["at0019"] = <
+					text = <"*Frequency of eaten pulses (80-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Pulses (lentils, beans, peas, 80-100g) (en)">
+				>
+				["at0020"] = <
+					text = <"*Pulses (80-100g) (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"*Frequency of eaten bread (~100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Bread, (breakfast) cereals, white rice potatoes, ~100 g) (en)">
+				>
+				["at0022"] = <
+					text = <"*Bread (~100g) (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Frequency of eaten whole grain products (75-100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Whole grain products (e.g. brown rice or other cooked whole grainssuch as bulgur, corn, cracked wheat, or millet, wholemeal pasta, 75-100 g) (en)">
+				>
+				["at0024"] = <
+					text = <"*Whole grain products (75-100g) (en)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"*Frequency of eaten milk products (~200g) (en)">
+					description = <"*Frequency consumed by patient during last month of Milk, fermented milk, lactose-free milk, buttermilk, chocolate milk, ice-cream, a small glass (~200 ml), yoghourt (~100 g), white cheese (~50 g) (en)">
+				>
+				["at0026"] = <
+					text = <"*Milk products (en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Frequency of eaten meat (100-150g) (en)">
+					description = <"*Frequency consumed by patient during last month of Meat, poultry (100-150 g) (en)">
+				>
+				["at0028"] = <
+					text = <"*Meat (100-150g) (en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Frequency of eaten egg and egg products (~100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Eggs and egg products, ~100g (en)">
+				>
+				["at0030"] = <
+					text = <"*Egg and egg products (~100g) (en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Frequency of eaten fish and seafood (100-150g) (en)">
+					description = <"*Frequency consumed by patient during last month of Fish and seafood, 100-150g (en)">
+				>
+				["at0032"] = <
+					text = <"*Fish and seafood (100-150g) (en)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"*Frequency of eaten processed meat (~50g) (en)">
+					description = <"*Frequency consumed by patient during last month of Processed meat (e.g. ham, bacon, pastrami, salami, sausages, bratwursts, frankfurters, hot dogs, ~50 g) (en)">
+				>
+				["at0034"] = <
+					text = <"*Processed meat (~50g) (en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"*Frequency of eaten deep-fried or higher fat foods (100-150g) (en)">
+					description = <"*Frequency consumed by patient during last month of Deep-fried/higher fat foods (french fries,100-150g) (en)">
+				>
+				["at0036"] = <
+					text = <"*Deep-fried or higher fat foods (100-150g) (en)">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"*Frequency of eaten cheeses (50g or 2 slices) (en)">
+					description = <"*Frequency consumed by patient during last month of Cheeses (e.g. hard cheese, fermented cheese, ~50g or 2 slices (en)">
+				>
+				["at0038"] = <
+					text = <"*Cheese (50g or 2 slices) (en)">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"*Frequency of eaten sweet products (50g or 2 bars - 100g) (en)">
+					description = <"*Frequency consumed by patient during last month of Sweet products (e.g. doughnuts, sweet rolls, muffins ~100 g, chocolates, sweets, sweet desserts ~50 g or 2 bars) (en)">
+				>
+				["at0040"] = <
+					text = <"*Sweet products (50g or 2 bars - 100 g) (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Frequency of drunk soft drinks (200ml-300ml) (en)">
+					description = <"*Frequency consumed by patient during last month of Soft drinks (sugared and artificially sweetened beverages, 200-300 ml) (en)">
+				>
+				["at0042"] = <
+					text = <"*Soft drinks (200ml-300ml) (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Frequency of drunk alcoholic beverages (1 unit, 8g of alcohol) (en)">
+					description = <"*Frequency consumed by patient during last month of Alcoholic beverages (1 unit, 8 g alcohol, equal to ca. 250 ml of beer, 100 ml of wine, 4 cl of spirits) (en)">
+				>
+				["at0044"] = <
+					text = <"*Alcoholic beverages (1 unit, 8g of alcohol) (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Frequency of eaten salt (~1g) (en)">
+					description = <"*Frequency consumed by patient during last month of Salt (added table salt, a pinch of salt, ~1 g) (en)">
+				>
+				["at0046"] = <
+					text = <"*Salt (~1g) (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Frequency of eaten convenient and processed foods (1 portion - 200ml) (en)">
+					description = <"*Frequency consumed by patient during last month of Convenient and processed foods (maggie 5-minute soup, bouillon, 1 portion, ~200 ml prepared) (en)">
+				>
+				["at0048"] = <
+					text = <"*Convenient and processed foods (1 portion - 200ml) (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Frequency of eaten nuts (40-50g) (en)">
+					description = <"*Frequency consumed by patient during last month of Nuts (peanuts, tree nuts and seeds 40-50 g) (en)">
+				>
+				["at0050"] = <
+					text = <"*Eaten nuts (40-50g) (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*Frequency of eaten snacks (~50g) (en)">
+					description = <"*Frequency consumed by patient during last month of Snacks (popcorns, chips, pretzel and pretzel sticks, ~50 g) (en)">
+				>
+				["at0052"] = <
+					text = <"*Snacks (~50g) (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Frequency of eaten fats or oils (5-10g) (en)">
+					description = <"*Frequency consumed by patient during last month of Fats/oils (olive oil, butter, margarine, 5-10 g) (en)">
+				>
+				["at0054"] = <
+					text = <"*Fats or oils (5-10g) (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Frequency of eaten food condiments (~5g) (en)">
+					description = <"*Frequency consumed by patient during last month of Food condiments (ketchup, horseradish, mustard, ~5 g) (en)">
+				>
+				["at0056"] = <
+					text = <"*Food condiments (~5g) (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Frequency of eaten fast food (en)">
+					description = <"*Frequency consumed by patient during last month of \"Fast food\" such as burgers and pizza (en)">
+				>
+				["at0058"] = <
+					text = <"*Fast food (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Food avoidance due to allergy or fear of negative health effects (en)">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"*Avoidance of eating certain foods do to fear of having an allergy or negative health effects? (en)">
+					description = <"*Do you avoid certain foods because of fear of having negative health effects or allergy?   (en)">
+					comment = <"*If \"yes\", fill up the list of foods avoided (en)">
+				>
+				["at0062"] = <
+					text = <"*Nuts and seeds (en)">
+					description = <"">
+				>
+				["at0063"] = <
+					text = <"*Salad or raw vegetables of any type (en)">
+					description = <"">
+				>
+				["at0064"] = <
+					text = <"*Legumes (en)">
+					description = <"">
+				>
+				["at0065"] = <
+					text = <"*Tomato produts (en)">
+					description = <"*tomato products (sauce, juice, or ketchup)  (en)">
+				>
+				["at0066"] = <
+					text = <"*Raw fruit (en)">
+					description = <"">
+				>
+				["at0067"] = <
+					text = <"*Milk and dairy products (en)">
+					description = <"">
+				>
+				["at0068"] = <
+					text = <"*Foods containing lactose (en)">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"*Processed, luncheon or deli meat (en)">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"*Tea or coffee (en)">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"*Drinks containing alcohol (en)">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"*Popcorn (en)">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"*Red meat (en)">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"*Food containing gluten (en)">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"*Other avoided foods (en)">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"*Food supplements or vitamins (en)">
+					description = <"*Do you regularly take food supplements or vitamins rich in: (en)">
+				>
+				["at0077"] = <
+					text = <"*Vitamin D (en)">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"*Vitamin C (en)">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"*Vitamin E (en)">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"*Fish oils (en)">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"*Antioxidants (en)">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"*Zinc (en)">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"*Iron (en)">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"*Magnesium (en)">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"*Multivitamins (en)">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"*Other supplements (en)">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0088"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
+					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
 				>
 			>
 		>
