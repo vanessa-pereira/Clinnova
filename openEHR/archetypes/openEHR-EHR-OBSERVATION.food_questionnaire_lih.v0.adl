@@ -18,6 +18,7 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"Food questionnaire, Food, questionnaire, PROM, LIH, Luxembourg", ...>
 		>
 	>
 	other_details = <
@@ -26,7 +27,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0fe1b06a59504330390ad40dcf1c35ef">
+		["MD5-CAM-1.0.1"] = <"ab734b6214641903da342e2670c0c21d">
 		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
 	>
 
@@ -690,7 +691,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Food questionnaire (LIH)">
-					description = <"food questionnaire lih">
+					description = <"The food questionnaire is a self-reported questionnaire and consists of 45 questions assessed in four parts. The first part is about vegetarianism (3 questions); the second part consists of 20 questions about food habits and food frequency intake; the third part consists of 15 questions about avoiding food because of symptoms, and the fourth part consists of seven questions about nutritional supplements. There is no cut-off.  This questionnaire is made by the Luxembourg Institute of Health (LIH).">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -1041,7 +1042,8 @@ ontology
 				>
 				["at0088"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 			>
 		>
