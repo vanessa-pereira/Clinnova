@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,8 +28,16 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -26,8 +46,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"41f8140a35aa1971a126ff4ff25088a9">
 		["build_uid"] = <"0773c088-553a-3598-bf0a-3ffea583e291">
-		["MD5-CAM-1.0.1"] = <"d1586bdf94499b31fcea88d4d1a501c2">
 	>
 
 definition
@@ -265,6 +285,206 @@ ontology
 				>
 				["at0023"] = <
 					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Fatigue Severity Scale (FSS) (en)">
+					description = <"*fss (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*My motivation is lower when I am fatigued (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Strongly disagree (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Strongly agree (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Exercise brings on my fatigue (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*I am easily fatigued (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Fatigue interferes with my physical functioning (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Fatigue causes frequent problems for me (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*My fatigue prevents sustained physical functioning (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Fatigue interferes with carrying out certain duties and responsibilities (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Fatigue is among my most disabling symptoms (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Fatigue interferes with my work, family, or social life (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Visual Analogue Fatigue Scale (VAFS) (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Comment (en)">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Fatigue Severity Scale (FSS) (en)">
+					description = <"*fss (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*My motivation is lower when I am fatigued (en)">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"*Strongly disagree (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*2 (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*3 (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*4 (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*5 (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*6 (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Strongly agree (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*Exercise brings on my fatigue (en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*I am easily fatigued (en)">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"*Fatigue interferes with my physical functioning (en)">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"*Fatigue causes frequent problems for me (en)">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"*My fatigue prevents sustained physical functioning (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Fatigue interferes with carrying out certain duties and responsibilities (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Fatigue is among my most disabling symptoms (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Fatigue interferes with my work, family, or social life (en)">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"*Visual Analogue Fatigue Scale (VAFS) (en)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0022"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"*Comment (en)">
 					description = <"">
 				>
 			>
