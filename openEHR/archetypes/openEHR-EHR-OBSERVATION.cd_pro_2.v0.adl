@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,10 +28,18 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			keywords = <"2 Item Crohn's Disease, Patient reported outcome, CD-PRO-2, PROM", ...>
 			use = <"This archetype represents a patient assessment that needs to be filled up everyday and when getting the total days necessary to do the calculation for the total scores, a final composition submission must be present. This means that in order to achieve the total score, multi submissions must be sent to the database and in order to achieve this the composition should have different versions during his lifecycle. This archetype includes several single point events which include the total scores for each abdominal pain and number of stools. In the 7 days point events these elements should be constrained to 0 at the template level or in the run time, being only filled in on the interval events for 7 days average and total score where the count and ordinals for number of stools and abdominal pain should be constrained to 0.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -29,7 +49,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c85756fecaf0f1aed06295bfee932d9c">
+		["MD5-CAM-1.0.1"] = <"a9c5668c2ee199abec663d5d9aa8ed33">
 		["build_uid"] = <"b5304988-1401-3114-bdc6-6e8695624772">
 	>
 
@@ -300,6 +320,214 @@ ontology
 				>
 				["at0188"] = <
 					text = <"Total score">
+					description = <"">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2) (en)">
+					description = <"*2-item Crohn Disease Patient-Reported Outcome (CDPRO2) is a self-reported questionnaire and consists of two questions. The patient has to answer these questions daily for seven days. Cut-offs are mean daily stool frequency ≤1.5, abdominal pain ≤1, and general well-being score of ≤1. The Crohn's Disease Activity Index (CDAI) is a measure of disease activity based on symptoms, signs and a laboratory test. The US Food and Drug Administration has indicated that patient reported outcomes (PROs) should be the primary outcome in randomised controlled trials for Crohn's disease (CD). (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Day 1 (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Number of liquid or very soft stools (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Abdominal pain (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*7 days average number of liquid or very soft stools (en)">
+					description = <"*Sum of number of liquid or very soft stools from all 7 days dividing by 7 (en)">
+				>
+				["at0013"] = <
+					text = <"*Total score number of liquid or very soft stools (en)">
+					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of liquid or very soft stools) by a weighting factor of x2, then summing the total scores for all eight items. (en)">
+				>
+				["at0016"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Mild (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Moderate (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Severe (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*7 day average abdominal pain (en)">
+					description = <"*Sum of number of abdominal pains ordinals from all 7 days dividing by 7 (en)">
+				>
+				["at0027"] = <
+					text = <"*Total score abdominal pain (en)">
+					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of abdominal pain) by a weighting factor of x5, then summing the total scores for all eight items. (en)">
+				>
+				["at0028"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0029"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*CD-PRO-2 total score (en)">
+					description = <"*Sum of the total score element from \"Number of liquid or very soft stools\" cluster and total score element from \"Abdominal pain\" cluster. (en)">
+				>
+				["at0109"] = <
+					text = <"*Day 2 (en)">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"*Day 3 (en)">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"*Day 4 (en)">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"*Day 5 (en)">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"*Day 6 (en)">
+					description = <"">
+				>
+				["at0174"] = <
+					text = <"*Day 7 (en)">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"*Average 7 days (en)">
+					description = <"">
+				>
+				["at0188"] = <
+					text = <"*Total score (en)">
+					description = <"">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2) (en)">
+					description = <"*2-item Crohn Disease Patient-Reported Outcome (CDPRO2) is a self-reported questionnaire and consists of two questions. The patient has to answer these questions daily for seven days. Cut-offs are mean daily stool frequency ≤1.5, abdominal pain ≤1, and general well-being score of ≤1. The Crohn's Disease Activity Index (CDAI) is a measure of disease activity based on symptoms, signs and a laboratory test. The US Food and Drug Administration has indicated that patient reported outcomes (PROs) should be the primary outcome in randomised controlled trials for Crohn's disease (CD). (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Day 1 (en)">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Number of liquid or very soft stools (en)">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"*Abdominal pain (en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*7 days average number of liquid or very soft stools (en)">
+					description = <"*Sum of number of liquid or very soft stools from all 7 days dividing by 7 (en)">
+				>
+				["at0013"] = <
+					text = <"*Total score number of liquid or very soft stools (en)">
+					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of liquid or very soft stools) by a weighting factor of x2, then summing the total scores for all eight items. (en)">
+				>
+				["at0016"] = <
+					text = <"*None (en)">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"*Mild (en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Moderate (en)">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"*Severe (en)">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"*7 day average abdominal pain (en)">
+					description = <"*Sum of number of abdominal pains ordinals from all 7 days dividing by 7 (en)">
+				>
+				["at0027"] = <
+					text = <"*Total score abdominal pain (en)">
+					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of abdominal pain) by a weighting factor of x5, then summing the total scores for all eight items. (en)">
+				>
+				["at0028"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0029"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*CD-PRO-2 total score (en)">
+					description = <"*Sum of the total score element from \"Number of liquid or very soft stools\" cluster and total score element from \"Abdominal pain\" cluster. (en)">
+				>
+				["at0109"] = <
+					text = <"*Day 2 (en)">
+					description = <"">
+				>
+				["at0122"] = <
+					text = <"*Day 3 (en)">
+					description = <"">
+				>
+				["at0135"] = <
+					text = <"*Day 4 (en)">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"*Day 5 (en)">
+					description = <"">
+				>
+				["at0161"] = <
+					text = <"*Day 6 (en)">
+					description = <"">
+				>
+				["at0174"] = <
+					text = <"*Day 7 (en)">
+					description = <"">
+				>
+				["at0175"] = <
+					text = <"*Average 7 days (en)">
+					description = <"">
+				>
+				["at0188"] = <
+					text = <"*Total score (en)">
 					description = <"">
 				>
 			>
