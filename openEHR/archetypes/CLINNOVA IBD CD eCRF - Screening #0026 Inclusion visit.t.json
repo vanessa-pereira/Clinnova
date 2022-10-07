@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.1",
+      "sem_ver" : "0.1.2",
       "build_uid" : "caec0a4f-a0ab-464d-a670-a699a7176722",
-      "MD5-CAM-1.0.1" : "b6284ce7f5755723659f7ee0fd3c66db",
+      "MD5-CAM-1.0.1" : "cd8c6581507aa0444f7cbcc521d5eadd",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -265,6 +265,15 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-ACTION.ovl-informed_consent-001.v0",
         "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.4",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-inclusion_exclusion_criteria_clinnova_ibd-001.v0",
+        "referenceType" : "archetypeOverlay"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -402,7 +411,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d8294e5bcd86a7ce65de991e2b013cba"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Register into openEHR composition the encounter context - id, type and reason of encounter. ",
+          "keywords" : [ "Encounter, appointment" ],
+          "use" : "Demographic mappings are available on the annotations for each archetype attribute.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -501,9 +551,37 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "3e0931dd5dda2e42d6f0b9f272ff49d4"
+        "PARENT:MD5-CAM-1.0.1" : "37ad344d0e478e8079ab4f32f40ca4a5"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To save the cohort name and timeline moment assessment (baseline to follow-up).",
+          "keywords" : [ ],
+          "use" : "To be used under the Pathfinder - Medtronic registries.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.research_information.v0",
     "differential" : true,
@@ -527,21 +605,16 @@
             "rmAttributeName" : "value",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
+              "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
-                "value" : "CLINNOVA IBD CD",
-                "@type" : "DV_TEXT"
+                "defining_code" : {
+                  "code_string" : "IBDCD",
+                  "@type" : "CODE_PHRASE"
+                },
+                "value" : "CLINNOVA IBD Crohn Disease",
+                "@type" : "DV_CODED_TEXT"
               },
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_STRING",
-                  "rmTypeName" : "STRING",
-                  "constraint" : [ "CLINNOVA IBD CD" ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -638,7 +711,49 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c26eef7785cac0baee13626f94afc9a2"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "©Clinical Models UK",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -711,7 +826,66 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "7229DFAFA43B2D9ABD13B0228E2F0181"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Statusdarstellung einer Anforderung oder Aufzeichnung der Einwilligungserklärung vor der Durchführung einer Prozedur, einer klinischen Studie/Prüfung oder einer Aktivität im Zusammenhang mit dem Gesundheitswesen.",
+          "keywords" : [ "Einwilligung", "Einverständnis", "Einverständniserklärung", "Aufklärung", "Zustimmung", "informiert", "Vorbehalt" ],
+          "use" : "Zur Statusdarstellung einer Anforderung, um eine Einverständniserklärung zu erhalten, einschließlich was geplant, angefordert, bereitgestellt oder zurückgezogen wurde.\r\n\r\nDieser Archetyp wurde als Framework entwickelt, das zum Anfordern und Aufzeichnen einer einfachen Einwilligung geeignet ist, es jedoch zulässt, dass zusätzliche Details optional im SLOT \"Details\" hinzugefügt werden, um die spezifischen Anforderungen eines komplexeren klinischen Szenarios zu erfüllen. Beispielsweise können zusätzliche Zustimmungsdetails unter Verwendung des Archetyps CLUSTER.consent_details eingefügt werden. Andere Archetypen können entwickelt und optional im selben SLOT enthalten sein, um spezifische Details über das Verfahren, den Versuch oder die Aktivität aufzuzeichnen.\r\n\r\nDer Status der Einwilligungserklärung spiegelt sich in den einzelnen Schritten wider - angefordert, abgelehnt, bereitgestellt, zurückgezogen usw.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Записать необходимость или наличие информированного согласия на выполнение процедуры, клинического теста или другой связанной со сдоровьем активности",
+          "keywords" : [ "согласие", "информированное", "отказ" ],
+          "use" : "Используется для записи статуса информированного согласия, включая планируемое, назначенное, запрошенное, предложенное, полученное. \r\nЭтот архетип разработан как рабочая зона, достаточная для того, чтобы  запросить и записать простое согласие, но, в то же время, позволяющая добавить специфические детали в слоте \"Детали\" при  необходимости более сложного клинического сценария. Например, такие детали могут содержать архетип КЛАСТЕР.детали_согласия. В этот же слот могут быть добавлены другие архетипы для описания процедуры, исследования или активности.\r\nСтатус информированного согласия отражает этапы его получения: необходимость, запрос, отказ, подписание и т.д.       ",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere informert samtykke eller status på en forespørsel om informert samtykke før en prosedyre, klinisk utprøving eller helserelatert aktivitet utføres.",
+          "keywords" : [ "samtykke", "informert", "cave" ],
+          "use" : "Brukes for å registrere status på forespørsel om informert samtykke, inkludert hva som er planlagt, forespurt, avgitt eller tilbaketrukket.\r\n\r\nDenne arketypen er utformet for å være et rammeverk som vil være tilstrekkelig for å be om og registrere et enkelt samtykke, men tillater også registrering av ytterligere detaljer i \"Detaljer\"-SLOTet for å møte de spesifikke kravene til et mer komplekst klinisk scenario. For eksempel kan ytterligere detaljer inkluderes ved å bruke arketypen CLUSTER.consent_details. Andre arketyper kan utvikles og eventuelt inkluderes i det samme SLOTet med formålet om å registrere spesifikke detaljer om prosedyren, utprøvingen eller aktiviteten.\r\n\r\nStatus til det informerte samtykket reflekteres av prosesstrinnene - forespurt, avslått, avgitt, tilbaketrukket.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the status of a request for, or record of, informed consent prior to performing a procedure, clinical trial or healthcare-related activity.",
+          "keywords" : [ "consent", "informed", "caveat" ],
+          "use" : "Use to record the status of an order to obtain informed consent, including what is planned, scheduled, requested, provided, or withdrawn.\r\n\r\nThis archetype has been designed to be a framework that will be adequate for requesting and recording a simple consent, but allow for additional details to be optionally added within the 'Details' SLOT to meet the specific requirements of a more complex clinical scenario.  For example, additional consent details can be included using the CLUSTER.consent_details archetype. Other archetypes can be developed and optionally included in the same SLOT for the purpose of recording specific details about the procedure, trial or activity. \r\n\r\nThe status of the informed consent is reflected by the pathway steps - requested, refused, provided, withdrawn etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-ACTION.informed_consent.v0",
     "differential" : true,
@@ -794,6 +968,138 @@
       },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "53a2e81a-ae94-4e5b-a525-5ac1a8a8d2f8",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "c8bb2ff044d662be6a55ca9811e127ec"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.inclusion_exclusion_criteria_clinnova_ibd.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-inclusion_exclusion_criteria_clinnova_ibd-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0013",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0014.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-screening_eligibility_clinnova-001.v0",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Inclusion and exclusion criteria",
+            "description" : "inclusion exclusion criteria clinnova ibd"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "af45c506-628d-3710-9345-4028a14a8329",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "861e5c38-df35-4a7d-8411-5a8dc8a78ad4",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "e7e022270f8b398348f9e6502e3e6b07"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.screening_eligibility_clinnova.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-screening_eligibility_clinnova-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "f5df62c1-7f34-3acb-a95c-22b66145c313",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
