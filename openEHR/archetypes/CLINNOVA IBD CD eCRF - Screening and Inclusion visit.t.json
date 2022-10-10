@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.5",
+      "sem_ver" : "0.1.6",
       "build_uid" : "caec0a4f-a0ab-464d-a670-a699a7176722",
-      "MD5-CAM-1.0.1" : "9e5a27952a1bf85c90a2c6bcb9a94e73",
+      "MD5-CAM-1.0.1" : "ec526d5ddb77f02320e836f842074d40",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -620,7 +620,24 @@
                 "value" : "CLINNOVA IBD Crohn Disease",
                 "@type" : "DV_CODED_TEXT"
               },
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "local_terms"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "local_terms" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "local_terms",
+                    "code" : "IBDCD",
+                    "value" : "CLINNOVA IBD Crohn Disease"
+                  } ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
