@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.7",
+      "sem_ver" : "0.1.8",
       "build_uid" : "caec0a4f-a0ab-464d-a670-a699a7176722",
-      "MD5-CAM-1.0.1" : "c104748cb69074a0e2e056f5c08db947",
+      "MD5-CAM-1.0.1" : "8d4b62aff7126ff4f777216b2d9fdd3e",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -294,7 +294,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "CLINNOVA IBD CD eCRF - Screening and Inclusion visit",
+          "text" : "CLINNOVA IBD UC eCRF - Screening and Inclusion visit",
           "description" : "Interaction, contact or care event between a subject of care and healthcare provider(s)."
         }
       },
