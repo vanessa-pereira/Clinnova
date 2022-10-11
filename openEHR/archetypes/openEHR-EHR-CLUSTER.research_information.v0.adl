@@ -42,7 +42,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"37ad344d0e478e8079ab4f32f40ca4a5">
+		["MD5-CAM-1.0.1"] = <"debcd9a41bccb34943c394557c620c42">
 		["build_uid"] = <"e7a889a7-c53d-35a5-b5cf-d4649b58920a">
 	>
 
@@ -54,7 +54,7 @@ definition
 					DV_CODED_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..2} matches {    -- Assessment timeline
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Assessment timeline
 				value matches {
 					DV_CODED_TEXT matches {*}
 				}
