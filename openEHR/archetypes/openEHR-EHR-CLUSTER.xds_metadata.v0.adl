@@ -1,0 +1,302 @@
+archetype (adl_version=1.4; uid=ae65fb8f-e6ed-4bf6-88d1-271bb55f58cb)
+	openEHR-EHR-CLUSTER.xds_metadata.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2017-11-08">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics UK">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"in_development">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.">
+			keywords = <"Document, metadata","IHE","XDS">
+			copyright = <"©Clinical Models UK">
+			use = <"Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"UK Clinical Models">
+		["original_namespace"] = <"uk.org.clinicalmodels">
+		["original_publisher"] = <"UK Clinical Models">
+		["custodian_namespace"] = <"uk.org.clinicalmodels">
+		["MD5-CAM-1.0.1"] = <"c26eef7785cac0baee13626f94afc9a2">
+		["build_uid"] = <"5e6379f0-14f8-4d4a-8722-788a72b935b1">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- XDS Metadata
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Author specialty
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Class code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Document type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Confidentiality code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Health care facility type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Practice setting code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..*} matches {    -- Event code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Document_media
+				value matches {
+					DV_MULTIMEDIA matches {
+						media_type matches {
+							[openEHR::
+							406,
+							407,
+							408,
+							414,
+							415,
+							416,
+							417,
+							418,
+							419,
+							420,
+							421,
+							422,
+							423,
+							424,
+							427,
+							429,
+							517,
+							518,
+							387,
+							388,
+							389,
+							390,
+							391,
+							392,
+							393,
+							394,
+							395,
+							396,
+							397,
+							398,
+							399,
+							400,
+							409,
+							410,
+							411,
+							412,
+							413,
+							401,
+							402,
+							404,
+							405,
+							519,
+							637,
+							682,
+							683]
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"XDS Metadata">
+					description = <"Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.">
+				>
+				["at0001"] = <
+					text = <"Author specialty">
+					description = <"The speciality of the author/composer of the document.">
+				>
+				["at0002"] = <
+					text = <"Class code">
+					description = <"A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain.">
+					comment = <"For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
+These codes are specific to an XDS Affinity Domain.">
+				>
+				["at0003"] = <
+					text = <"Document type">
+					description = <"The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard.">
+					comment = <"for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
+These codes are specific to an XDS Affinity Domain.">
+				>
+				["at0004"] = <
+					text = <"Confidentiality code">
+					description = <"A term specifying the level of confidentiality of the XDS Document.">
+					comment = <"Coded text is preferred, normally specific to an XDS Affinity Domain.">
+				>
+				["at0007"] = <
+					text = <"Health care facility type">
+					description = <"A term defining the healthcare facility type.">
+					comment = <"Coded text is preferred. The codes are specific to an XDS Affinity Domain.">
+				>
+				["at0009"] = <
+					text = <"Practice setting code">
+					description = <"The code specifying the clinical specialty where the act that resulted in the document was performed.">
+					comment = <"For example: Family Practice, Laboratory, Radiology.
+Coded text is preferred, normally specific to an XDS Affinity Domain.">
+				>
+				["at0010"] = <
+					text = <"Document_media">
+					description = <"Additional metadata about the document itself, including size, url.">
+				>
+				["at0011"] = <
+					text = <"Event code">
+					description = <"This list of codes represents the main clinical acts.">
+					comment = <"For example: Colonoscopy or appendicectomy.">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"XDS Metadata">
+					description = <"*Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class. (en)">
+				>
+				["at0001"] = <
+					text = <"Especialidade do autor">
+					description = <"*The speciality of the author/composer of the document. (en)">
+				>
+				["at0002"] = <
+					text = <"Código da classe">
+					description = <"*A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain. (en)">
+					comment = <"*For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0003"] = <
+					text = <"Tipo de documento">
+					description = <"*The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard. (en)">
+					comment = <"*for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.
+These codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0004"] = <
+					text = <"Código de confidencialidade">
+					description = <"*A term specifying the level of confidentiality of the XDS Document. (en)">
+					comment = <"*Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0007"] = <
+					text = <"Tipo de estabelecimento de saúde">
+					description = <"*A term defining the healthcare facility type. (en)">
+					comment = <"*Coded text is preferred. The codes are specific to an XDS Affinity Domain. (en)">
+				>
+				["at0009"] = <
+					text = <"Código do praticante de saúde">
+					description = <"*The code specifying the clinical specialty where the act that resulted in the document was performed. (en)">
+					comment = <"*For example: Family Practice, Laboratory, Radiology.
+Coded text is preferred, normally specific to an XDS Affinity Domain. (en)">
+				>
+				["at0010"] = <
+					text = <"Tipo de documento">
+					description = <"*Additional metadata about the document itself, including size, url. (en)">
+				>
+				["at0011"] = <
+					text = <"Código de evento">
+					description = <"*This list of codes represents the main clinical acts. (en)">
+					comment = <"*For example: Colonoscopy or appendicectomy. (en)">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"XDS Metadata">
+					description = <"Métadonnées de composition supplémentaires alignées sur l'IHE-XDS qui ne sont pas déjà disponibles dans la classe COMPOSITION du modèle de référence.">
+				>
+				["at0001"] = <
+					text = <"Spécialité de l'auteur">
+					description = <"La spécialité de l'auteur/compositeur du document. ">
+				>
+				["at0002"] = <
+					text = <"Code de classe">
+					description = <"Un code de classe de document de haut niveau, normalement sélectionné à partir d'un ensemble de valeurs fournies par le domaine d'affinité IHE-XDS. ">
+					comment = <"Par exemple : Rapport, Résumé, Images, Plan, Préférences du patient, Workflow.
+Ces codes sont spécifiques à un domaine d'affinité XDS.">
+				>
+				["at0003"] = <
+					text = <"Type de document">
+					description = <"Le code spécifiant le type précis de document du point de vue de l'utilisateur. Normalement sélectionné à partir d'un ensemble de valeurs fournies par le domaine d'affinité local de l'IHE-XDS ou la norme nationale.">
+					comment = <"Par exemple :  Historique pulmonaire et physique, résumé de décharge, rapport d'échographie.
+Ces codes sont spécifiques à un domaine d'affinité XDS. (en)">
+				>
+				["at0004"] = <
+					text = <"Code de confidentialité">
+					description = <"Terme précisant le niveau de confidentialité du document XDS.">
+					comment = <"Le texte codé est préféré, normalement spécifique à un domaine d'affinité XDS.">
+				>
+				["at0007"] = <
+					text = <"Type de l'établissement de soin">
+					description = <"Terme définissant le type d'établissement de soin. ">
+					comment = <"Le texte codé est préférable. Les codes sont spécifiques à un domaine d'affinité XDS.">
+				>
+				["at0009"] = <
+					text = <"Code de spécialité clinique">
+					description = <"Le code précisant la spécialité clinique où l'acte qui a donné lieu au document a été faite.">
+					comment = <"Par exemple : Pratique familiale, laboratoire, radiologie.
+Le texte codé est préféré, normalement spécifique à un domaine d'affinité XDS. ">
+				>
+				["at0010"] = <
+					text = <"Document_media">
+					description = <"Métadonnées supplémentaires sur le document lui-même, y compris la taille, l'url. ">
+				>
+				["at0011"] = <
+					text = <"Code de l'acte">
+					description = <"Cette liste de codes représente les principaux actes cliniques. ">
+					comment = <"Par exemple : Colonoscopie ou appendicectomie.">
+				>
+			>
+		>
+	>

@@ -1,0 +1,99 @@
+archetype (adl_version=1.4; uid=777b2e4a-135e-45b2-b7e9-344aa6306a4c)
+	openEHR-EHR-CLUSTER.research_information.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Bassem Khouzam">
+				["organisation"] = <"Medtronic">
+				["email"] = <"bassem.khouzam@medtronic.com">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2020-04-06">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To save the cohort name and timeline moment assessment (baseline to follow-up).">
+			use = <"To be used under the Pathfinder - Medtronic registries.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"debcd9a41bccb34943c394557c620c42">
+		["build_uid"] = <"e7a889a7-c53d-35a5-b5cf-d4649b58920a">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Research information
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Cohort study name
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Assessment timeline
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Research information">
+					description = <"Research information for the cancer registries from Medtronic VBHC IHU.">
+				>
+				["at0001"] = <
+					text = <"Cohort study name">
+					description = <"Name of the cohort/study for the registry.">
+				>
+				["at0002"] = <
+					text = <"Assessment timeline">
+					description = <"Moment of the assessment, baseline, follow up.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Informations sur la recherche">
+					description = <"Informations sur la recherche pour les registres du cancer de Medtronic VBHC IHU.">
+				>
+				["at0001"] = <
+					text = <"Nom de l'étude de la cohorte">
+					description = <"Nom de la cohorte/étude pour le registre.">
+				>
+				["at0002"] = <
+					text = <"Moment de l'évaluation">
+					description = <"Moment de l'évaluation, baseline, suivi. ">
+				>
+			>
+		>
+	>

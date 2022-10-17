@@ -1,0 +1,168 @@
+archetype (adl_version=1.4; uid=ba25fbdf-c05d-49d0-86e8-48f8900e7f24)
+	openEHR-EHR-CLUSTER.encounter_context.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Bassem Khouzam">
+				["email"] = <"bassem.khouzam@medtronic.com">
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2018-10-17">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better by Marand">
+		["email"] = <"vanessa.pereira@marand.si">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			copyright = <"© openEHR Foundation">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Register into openEHR composition the encounter context - id, type and reason of encounter. ">
+			keywords = <"Encounter, appointment", ...>
+			use = <"Demographic mappings are available on the annotations for each archetype attribute.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"FHIR encounter (https://www.hl7.org/fhir/encounter.html) and appointment (https://www.hl7.org/fhir/appointment.html) resources.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d8294e5bcd86a7ce65de991e2b013cba">
+		["build_uid"] = <"7c4e5b92-2c96-4cbb-b575-22126d197b29">
+		["revision"] = <"0.0.1">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Encounter Context
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..*} matches {    -- Encounter id
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..*} matches {    -- Encounter type
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..*} matches {    -- Encounter reason
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0001] occurrences matches {0..*} matches {    -- Appointment id
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Encounter Context">
+					description = <"Provides extra information about the encounter context, regarding the internal cases used at Pathfinder for encounter types and reasons, along with an appointment and encounter id. Terminology should be loaded from the Think!EHR terminology adapter.">
+				>
+				["at0001"] = <
+					text = <"Appointment id">
+					description = <"Unique identifier for each appointment process.">
+					FHIR_mapping = <"Appointment.identifier">
+					HL7v2_mapping = <"SCH-1 / SCH-2">
+				>
+				["at0002"] = <
+					text = <"Encounter id">
+					description = <"Unique identifier for each encounter process.">
+					FHIR_mapping = <"Encounter.identifier">
+					HL7v2_mapping = <"PV1.19 ">
+				>
+				["at0003"] = <
+					text = <"Encounter type">
+					description = <"Type of encounter, should be provided by terminology server.">
+					FHIR_mapping = <"Encounter.type">
+					HL7v2_mapping = <" PV1.4 / PV1.18">
+				>
+				["at0004"] = <
+					text = <"Encounter reason">
+					description = <"Reason for encounter, should be provided by terminology server.">
+					FHIR_mapping = <"Encounter.reason">
+					HL7v2_mapping = <"EVN.4 / PV2.3">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"Contexto de encontro">
+					description = <"Fornece informações extras sobre o contexto do encontro, sobre os casos internos usados no Pathfinder por tipos e razões para a consulta entre pessoal médico e paciente, juntamente com a identificação de marcação de consulta e ID de consulta. A terminologia deve ser carregada a partir do adaptador de terminologia.">
+				>
+				["at0001"] = <
+					text = <"ID de marcação de consulta">
+					description = <"Indentificador único de marcação de consulta.">
+				>
+				["at0002"] = <
+					text = <"ID de consulta">
+					description = <"Identificador único de consulta.">
+				>
+				["at0003"] = <
+					text = <"Tipo de consulta">
+					description = <"Tipo de consulta, deve ser fornecido por um servidor de terminologia.">
+				>
+				["at0004"] = <
+					text = <"Razão para consulta">
+					description = <"Razão para a consulta, deve ser fornecido por um servidor de terminologia.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Contexte de la rencontre">
+					description = <"Fournit des informations supplémentaires sur le contexte de la rencontre, concernant les cas internes utilisés par Pathfinder pour les types et les raisons de la rencontre, ainsi qu'un rendez-vous et un numéro d'identification de la rencontre. La terminologie doit être chargée à partir de l'adaptateur terminologique de Think!EHR.">
+				>
+				["at0001"] = <
+					text = <"Id de rendez-vous">
+					description = <"Identifiant unique pour chaque processus de rendez-vous.">
+				>
+				["at0002"] = <
+					text = <"Id de rencontre">
+					description = <"Identifiant unique pour chaque processus de rencontre.">
+				>
+				["at0003"] = <
+					text = <"Type de rencontre">
+					description = <"Type de rencontre, doit être fourni par le serveur de terminologie. ">
+				>
+				["at0004"] = <
+					text = <"Raison de la rencontre">
+					description = <"Raison de la rencontre, doit être fournie par le serveur de terminologie.">
+				>
+			>
+		>
+	>
