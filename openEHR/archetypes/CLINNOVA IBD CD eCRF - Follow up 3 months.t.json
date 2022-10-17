@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.11",
+      "sem_ver" : "0.1.12",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "9de6797d885f0a1cbfa34e6b07d015de",
+      "MD5-CAM-1.0.1" : "565d441721b2e38dae3ea6908ea54c61",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -14116,6 +14116,9 @@
           },
           "/data[at0001]/items[at0002]" : {
             "redcap_mapping" : "other_sucat"
+          },
+          "/data[at0001]/items[at0009]" : {
+            "redcap_mapping" : "regular_alcohol_suyn"
           }
         }
       }
