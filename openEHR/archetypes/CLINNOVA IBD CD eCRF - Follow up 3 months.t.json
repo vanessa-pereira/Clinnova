@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.19",
+      "sem_ver" : "0.1.20",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "bb5f825dd2608cd9d14c7bf6e9b4ac04",
+      "MD5-CAM-1.0.1" : "aea9ec3b411f9e638a9bc0ce98806430",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -579,10 +579,6 @@
             "FHIR_mapping" : "Encounter.identifier",
             "HL7v2_mapping" : "PV1.19 "
           },
-          "/items[at0001]" : {
-            "FHIR_mapping" : "Appointment.identifier",
-            "HL7v2_mapping" : "SCH-1 / SCH-2"
-          },
           "/items[at0004]" : {
             "FHIR_mapping" : "Encounter.reason",
             "HL7v2_mapping" : "EVN.4 / PV2.3"
@@ -590,6 +586,10 @@
           "/items[at0003]" : {
             "FHIR_mapping" : "Encounter.type",
             "HL7v2_mapping" : " PV1.4 / PV1.18"
+          },
+          "/items[at0001.1]" : {
+            "FHIR_mapping" : "Appointment.identifier",
+            "HL7v2_mapping" : "SCH-1 / SCH-2"
           }
         },
         "pt-pt" : { },
@@ -606,14 +606,33 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Visit number",
+            "description" : "Unique identifier for each appointment process.",
+            "FHIR_mapping" : "Appointment.identifier",
+            "HL7v2_mapping" : "SCH-1 / SCH-2"
+          }
+        },
         "pt-pt" : { },
         "fr" : { }
       },
@@ -17698,7 +17717,72 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "60834FB342B68A169ADF87DE620BC29D"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "*To create a framework for recording answers to pre-defined screening questions about the use of any specified substance or a grouping of substances. (en)",
+          "keywords" : [ "*substance, screening, questionnaire, drug (en)" ],
+          "use" : "*Use to create a framework for recording answers to pre-defined screening questions about the use of any specified substance or a grouping of substances.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation, for example:\r\n--- Do you smoke? Yes, No, Unknown\r\n--- For how long have you been smoking?\r\n--- Do you use any illegal substances? Yes, No, Unknown.\r\n--- Have you been drinking alcohol the last four weeks? Yes, No, Unknown.\r\n- Specific questioning related to substance use.\r\n\r\n\t\r\nUse to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage, for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a medication that has been used at any time in the past and information about a medication used within a specified time interval - for example the difference between \"Do you drink alcohol?\" compared to \"Have you been drinking any alcohol during the last four weeks?\". \r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a substance it is recommended that clinical system record and persist the specific details about the substance using a relevant archetype, for example the EVALUATION.tobacco_smoking_summary or the EVALUATION.substance_use_summary. (en)",
+          "misuse" : "*Not to be used for recording a summary of use of a substance over the lifetime of the individual - use EVALUATION.substance_use_summary for this purpose.\r\n\r\nNot to be used for recording a summary of use of tobacco over the lifetime of the individual - use EVALUATION.smokeless_tobacco_summary or EVALUATION.tobacco_smoking_summary for this purpose.\r\n\r\nNot to be used for recording a summary of use of alcohol over the lifetime of the individual - use EVALUATION.alcohol_consumption_summary for this purpose.\r\n\r\nNot to be used for recording information about the use of a medication. Use a relevant medication archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om skadelig eller farlig bruk av legemidler og andre lovlige og ulovlige stoffer.",
+          "keywords" : [ "intervjuskjema, kartleggingskjema, spørreskjema, dop" ],
+          "use" : "Brukes for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om skadelig eller farlig bruk av legemidler og andre lovlige og ulovlige stoffer.\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematiske spørsmål ved konsultasjoner, for eksempel:\r\n--- Røyker du? Ja, Nei, Usikker.\r\n--- Hvor lenge har du røyket?\r\n--- Har du noen sinne injisert rusmidler? Ja, Nei, Usikker.\r\n--- Bruker du prestasjonsfremmende substanser? Ja, Nei, Usikker.\r\n--- Har du drukket alkohol de siste fire ukene? Ja, Nei, Usikker.\r\n- Spørsmål relatert til bruken av spesifikke substanser.\r\n\r\nSemantikken til denne arketypen er med vilje løst definert, og spørringer etter data i denne arketypen vil normalt bare være hensiktsmessig eller sikkert i konteksten av det spesifikke templatet. I et templat vil hvert dataelement vanligvis døpes om til det (spesifikke) spørsmålet man ønsker svar på. Flere steder er det foreslått verdisett som passer til de vanligste bruksområder, men det er allikevel mulig å tilpasse/endre verdisett for lokal bruk ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN for å harmonere verdisettet til hvert enkelt brukstilfelle.\r\n\r\nEVENT-strukturen fra arketypens referansemodell kan brukes for å spesifisere om spørsmålene relateres til et tidspunkt eller til et tidsintervall.\r\nBruk egne instanser av denne arketypen for å skille mellom spørsmål om prosedyrer som er gjennomførte på et hvilket som helst tidspunkt og spørsmål om prosedyrer som er gjennomført i et tidsintervall. For eksempel; \"Bruker du rusmidler?\" sammenlignet med \"Har du brukt rusmidler de siste fire ukene?\".\r\n\r\nKilden til informasjonen i et spørreskjema kan variere i ulike kontekster, men kan identifiseres spesifikt ved å benytte \"Information provider\" elementet i openEHR referansemodellen.\r\n\r\nDenne arketypen er laget for å bli brukt i et spørreskjema eller for å registrere enkle strukturerte data til for eksempel et sykdomsregister. Dersom det i spørreskjemaet identifiseres at bruken av en substans er tilstede, anbefales det at spesifikke detaljer om substansen registreres og lagres i pasientjournalen i en relevant arketype, for eksempel i arketypene EVALUATION.tobacco_smoking_summary eller EVALUATION.substance_use_summary.",
+          "misuse" : "Brukes ikke for å registrere et sammendrag av bruken av en substans over et individs livstid, bruk arketypen EVALUATION.substance_use_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere et sammendrag av bruken av tobakk over et individs livstid, bruk arketypen EVALUATION.smokeless_tobacco_summary eller EVALUATION.tobacco_smoking_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere et sammendrag av bruken av tobakk over et individs livstid, bruk arketypen EVALUATION.alcohol_consumption_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere hendelses- eller periodebasert informasjon om bruken av en substans utenfor konteksten av kartleggingen. Bruke en relevant OBSERVATION-arketype for dette formålet.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To create a framework for recording answers to pre-defined screening questions about the harmful or hazardous use of medications, and other legal and illegal substances.\r\n",
+          "keywords" : [ "substance, screening, questionnaire, drug" ],
+          "use" : "Use to create a framework for recording answers to pre-defined screening questions about the use of any specified substance or a grouping of substances without a prescription or beyond its intended scope or expected use.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation, for example:\r\n--- Do you smoke? Yes, No, Unknown\r\n--- For how long have you been smoking?\r\n--- Have you ever injected drugs? Yes, No, Unknown.\r\n--- Do you use performance enhancing substances? Yes, No, Unknown.\r\n--- Have you been drinking alcohol the last four weeks? Yes, No, Unknown.\r\n- Questions related to use of specific substances.\t\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a medication that has been used at any time in the past and information about a medication used within a specified time interval - for example the difference between \"Do you drink alcohol?\" compared to \"Have you been drinking any alcohol during the last four weeks?\". \r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a substance it is recommended that clinical system record and persist the specific details about the substance using a relevant archetype, for example the EVALUATION.tobacco_smoking_summary or the EVALUATION.substance_use_summary archetypes.",
+          "misuse" : "Not to be used for recording a summary of use of a substance over the lifetime of the individual - use EVALUATION.substance_use_summary for this purpose.\r\n\r\nNot to be used for recording a summary of use of tobacco over the lifetime of the individual - use EVALUATION.smokeless_tobacco_summary or EVALUATION.tobacco_smoking_summary for this purpose.\r\n\r\nNot to be used for recording a summary of use of alcohol over the lifetime of the individual - use EVALUATION.alcohol_consumption_summary for this purpose.\r\n\r\nNot to be used to record event-or period-based information about the use of a substance, outside of a screening context - use a relevant OBSERVATION.archetype for this purpose.\r\n\r\nNot to be used for recording information about the use of a medication, putside of a screening context. Use a relevant medication archetype for this purpose.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "*To create a framework for recording answers to pre-defined screening questions about the use of any specified substance or a grouping of substances. (en)",
+          "keywords" : [ "*substance, screening, questionnaire, drug (en)" ],
+          "use" : "*Use to create a framework for recording answers to pre-defined screening questions about the use of any specified substance or a grouping of substances.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation, for example:\r\n--- Do you smoke? Yes, No, Unknown\r\n--- For how long have you been smoking?\r\n--- Do you use any illegal substances? Yes, No, Unknown.\r\n--- Have you been drinking alcohol the last four weeks? Yes, No, Unknown.\r\n- Specific questioning related to substance use.\r\n\r\n\t\r\nUse to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage, for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a medication that has been used at any time in the past and information about a medication used within a specified time interval - for example the difference between \"Do you drink alcohol?\" compared to \"Have you been drinking any alcohol during the last four weeks?\". \r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a substance it is recommended that clinical system record and persist the specific details about the substance using a relevant archetype, for example the EVALUATION.tobacco_smoking_summary or the EVALUATION.substance_use_summary. (en)",
+          "misuse" : "*Not to be used for recording a summary of use of a substance over the lifetime of the individual - use EVALUATION.substance_use_summary for this purpose.\r\n\r\nNot to be used for recording a summary of use of tobacco over the lifetime of the individual - use EVALUATION.smokeless_tobacco_summary or EVALUATION.tobacco_smoking_summary for this purpose.\r\n\r\nNot to be used for recording a summary of use of alcohol over the lifetime of the individual - use EVALUATION.alcohol_consumption_summary for this purpose.\r\n\r\nNot to be used for recording information about the use of a medication. Use a relevant medication archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -18251,6 +18335,34 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0027.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.6" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
                       "nodeId" : "at0042.1",
                       "attributes" : [ ],
@@ -18337,34 +18449,6 @@
                               "rmTypeName" : "DV_DATE_TIME",
                               "attributes" : [ ],
                               "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0027.2",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.6" ],
-                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -18602,7 +18686,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ED4B4306720942258EBFA6E298DEEAE4"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Aussage über die Schwangerschaft einer Person, n der Regel eine zeitpunktbezogene Bestimmung zum Zeitpunkt der Aufzeichnung in der Krankenakte.",
+          "keywords" : [ "Schwangerschaft", "Schwanger", "Vorsorge", "Alarm", "Warnung", "Schwerwiegend" ],
+          "use" : "Der Archetyp wird verwendet, um eine Behauptung über den Schwangerschaftszustand einer Person darzustellen, in der Regel eine zeitpunktbezogene Bestimmung zum Zeitpunkt der Aufzeichnung in der Krankenakte.\r\n\r\nDieser Archetyp wurde entwickelt, um sowohl die Feststellung eines nachgewiesenen oder möglichen Vorliegen einer Schwangerschaft zu erfassen als auch die Beweise zu dokumentieren, die die Feststellung stützen.\r\n\r\nDieser Archetyp sollte von jedem klinischen Entscheidungsunterstützungssystem als kritischer Archetyp angesehen werden, der das Vorliegen oder den Ausschluss einer Schwangerschaft prüft, beispielsweise vor der Verschreibung fruchtschädigender Medikamente oder zum Ausschluss schwangerschaftsbedingter Komplikationen bei der Diagnose von Kollaps oder Bauchschmerzen bei Frauen im gebärfähigen Alter.",
+          "misuse" : "Nicht zur Darstellung zusammenfassender Informationen über eine einzelne Schwangerschaft. Verwenden Sie dafür den Archetyp EVALUATION.pregnancy_summary.\r\n\r\nDarf nicht verwendet werden, um Details über während einer Schwangerschaft durchgeführte Eingriffe darzustellen, z. B. Abtreibungen oder Entbindungen. Verwenden Sie zu diesem Zweck die ACTION.procedure oder andere relevante Archetypen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record an assertion about the pregnant condition of an individual, usually a point-in-time determination at the time of recording in the health record.",
+          "keywords" : [ "pregnancy, pregnant, caution, alert, warning, gravid" ],
+          "use" : "Use to record an assertion about the pregnant condition of an individual, usually a point-in-time determination at the time of recording in the health record.\r\n\r\nThis archetype has been designed to capture both the determination of a proven or possible presence of a pregnancy, as well as documenting the evidence supporting the determination. \r\n\r\nThis archetype should be regarded as a critical archetype by any clinical decision support system testing for presence or exclusion of a pregnancy, for example, prior to prescribing teratogenic medications or to exclude pregnancy related complications in the diagnosis of collapse or abdominal pain in women of child-bearing years.",
+          "misuse" : "Not for recording summary information about a single pregnancy. Use the EVALUATION.pregnancy_summary for this purpose.\r\n\r\nNot to be used to record details about procedures performed during a pregnancy, for example terminations or deliveries. Use the ACTION.procedure or other relevant archetypes for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
