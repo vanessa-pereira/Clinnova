@@ -2,7 +2,7 @@ archetype (adl_version=1.4; uid=ea200cd8-65da-48a2-ba86-4710e749a415)
 	openEHR-EHR-CLUSTER.exam_lungs.v0
 
 concept
-	[at0000]
+	[at0000.1]
 
 language
 	original_language = <[ISO_639-1::en]>
@@ -74,14 +74,23 @@ Not to be used to record stand-alone clinical observations or measurements or te
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0DC8A1C072AD71D7974A21619CF40C17">
+		["MD5-CAM-1.0.1"] = <"c0f1346c83a3b9bf988671143affa99a">
 		["build_uid"] = <"d9694876-bc27-4c25-81df-fd3ec0341854">
 		["revision"] = <"0.0.1">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Examination of both lungs
+	CLUSTER[at0000.1] matches {    -- Examination of both lungs
 		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001.1] matches {    -- System or structure examined
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::at0.1]    -- Both lungs
+						}
+					}
+				}
+			}
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- No abnormality detected
 				value matches {
 					DV_BOOLEAN matches {
@@ -123,6 +132,16 @@ ontology
 	term_definitions = <
 		["en"] = <
 			items = <
+				["at0001"] = <
+					text = <"System or structure examined">
+					description = <"Identification of the examined body system or anatomical structure.">
+					comment = <"Coding of the system or structure examined with a terminology is preferred, where possible.">
+				>
+				["at0001.1"] = <
+					text = <"System or structure examined">
+					description = <"Identification of the examined body system or anatomical structure.">
+					comment = <"For example: the very generic term \"skin\", which will likely require additional qualification using one of the 'Body site' data elements, or the complete phrase \"skin of right knee\". Coding of the system or structure examined with a terminology is preferred, where possible.">
+				>
 				["at0000"] = <
 					text = <"Examination of both lungs">
 					description = <"Findings observed during the physical examination of both lungs.">
@@ -155,6 +174,14 @@ ontology
 				["at0008"] = <
 					text = <"Examination not done">
 					description = <"Details to explicitly record that this examination was not performed.">
+				>
+				["at0000.1"] = <
+					text = <"Examination of both lungs">
+					description = <"*">
+				>
+				["at0.1"] = <
+					text = <"Both lungs">
+					description = <"">
 				>
 			>
 		>
@@ -192,6 +219,24 @@ ontology
 				["at0008"] = <
 					text = <"Undersøkelse ikke gjennomført">
 					description = <"Detaljer for eksplisitt dokumentasjon av at undersøkelsen ikke ble gjennomført.">
+				>
+				["at0001"] = <
+					text = <"*System or structure examined(en)">
+					description = <"*Identification of the examined body system or anatomical structure.(en)">
+					comment = <"*Coding of the system or structure examined with a terminology is preferred, where possible.(en)">
+				>
+				["at0001.1"] = <
+					text = <"*System or structure examined(en)">
+					description = <"*Identification of the examined body system or anatomical structure.(en)">
+					comment = <"*For example: the very generic term \"skin\", which will likely require additional qualification using one of the 'Body site' data elements, or the complete phrase \"skin of right knee\". Coding of the system or structure examined with a terminology is preferred, where possible.(en)">
+				>
+				["at0000.1"] = <
+					text = <"Examination of both lungs">
+					description = <"*">
+				>
+				["at0.1"] = <
+					text = <"*Both lungs (en)">
+					description = <"">
 				>
 			>
 		>
