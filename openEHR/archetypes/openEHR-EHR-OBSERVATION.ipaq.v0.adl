@@ -56,12 +56,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"20c07eee016f0f96ef8977a7a6824d41">
+		["MD5-CAM-1.0.1"] = <"2319dee02d10d8ec94df7fd18a5f4e2b">
 		["build_uid"] = <"3354b9ad-56ec-3273-9b5b-901e9324e72c">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- International physical activity questionnaire (IPAQ)
+	OBSERVATION[at0000] matches {    -- International physical activity questionnaire - short form (IPAQ - SF)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -251,7 +251,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"International physical activity questionnaire (IPAQ)">
+					text = <"International physical activity questionnaire - short form (IPAQ - SF)">
 					description = <"FOR USE WITH YOUNG AND MIDDLE-AGED ADULTS (15-69 years)
 The International Physical Activity Questionnaires (IPAQ) comprises a set of 4 questionnaires. Long (5 activity domains asked independently) and short (4 generic items) versions for use by either telephone or self-administered methods are available.
 
@@ -370,7 +370,7 @@ If this is true, skip to question 7 (Sitting)">
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"Questionnaire International Sur L’activité Physique (IPAQ)">
+					text = <"International Physical Activity Questionnaires - version abrégée (IPAQ-SF)">
 					description = <"À UTILISER CHEZ L’ADULTE JEUNE ET L’ADULTE D’ÂGE MÛR (15 à 69 ans)
 Les questionnaires internationaux sur l’activité physique (International Physical Activity Questionnaires, IPAQ) comprennent une série de 4 questionnaires. Il existe des versions complètes (5 domaines d’activité évalués de manière indépendante) et abrégées (4 items génériques) à utiliser par téléphone ou par des méthodes auto-administrées. 
 
@@ -489,7 +489,7 @@ If this is true, skip to question 7 (Sitting) (en)">
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"Internationaler Fragebogen zur körperlichen Aktivität (IPAQ)">
+					text = <"Internationaler Fragebogen zur körperlichen Aktivität - Kurzform (IPAQ - SF)">
 					description = <"Die International Physical Activity Questionnaires (IPAQ) umfassen einen Satz von 4 Fragebögen. Langversionen (5 Aktivitätsdomänen werden unabhängig voneinander abgefragt) und Kurzversionen (4 generische Elemente) zur Verwendung per Telefon oder selbstverwalteten Methoden sind verfügbar.
 
 Dieser Archetyp bezieht sich auf die SHORT LAST 7 DAYS SELF-ADMINISTED-Version des IPAQ. Überarbeitet August 2002.">
