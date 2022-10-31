@@ -49,7 +49,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e78f944656b02ccebc8c2c04b02a79fe">
+		["MD5-CAM-1.0.1"] = <"6e0742e57c466b1339d3f595a7bd79d5">
 		["build_uid"] = <"3354b9ad-56ec-3273-9b5b-901e9324e72c">
 		["references"] = <"More detailed information on the IPAQ process and the research methods used in the development of IPAQ instruments is available at www.ipaq.ki.se and Booth, M.L. (2000).  Assessment of Physical Activity: An International Perspective.  Research Quarterly for Exercise and Sport, 71 (2): s114-20.  Other scientific publications and presentations on the use of IPAQ are summarized on the website.">
 	>
@@ -356,7 +356,8 @@ If this is true, skip to question 7 (Sitting)">
 				>
 				["at0025"] = <
 					text = <"Extension">
-					description = <"">
+					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
 			>
 		>
@@ -474,14 +475,15 @@ If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0025"] = <
 					text = <"*Extension (en)">
-					description = <"">
+					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
 				>
 			>
 		>
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*International physical activity questionnaire (IPAQ) (en)">
+					text = <"Internationaler Fragebogen zur körperlichen Aktivität (IPAQ)">
 					description = <"*FOR USE WITH YOUNG AND MIDDLE-AGED ADULTS (15-69 years)
 The International Physical Activity Questionnaires (IPAQ) comprises a set of 4 questionnaires. Long (5 activity domains asked independently) and short (4 generic items) versions for use by either telephone or self-administered methods are available.
 
@@ -492,7 +494,7 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*During the last 7 days (en)">
+					text = <"In den letzten 7 Tagen">
 					description = <"">
 				>
 				["at0003"] = <
@@ -500,41 +502,41 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Vigorous physical activity (en)">
-					description = <"*Section introduction: \"Think about all the vigorous activities that you did in the last 7 days.  Vigorous physical activities refer to activities that take hard physical effort and make you breathe much harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
+					text = <"Kräftige körperliche Aktivität">
+					description = <"Abschnitt Einführung: \"Denken Sie an all Ihre anstrengenden und moderaten Aktivitäten in den vergangenen 7 Tagen. Anstrengende Aktivitäten bezeichnen Aktivitäten, die starke körperliche Anstrengungen erfordern und bei denen Sie deutlich stärker atmen als normal. Moderate Aktivitäten bezeichnen Aktivitäten mit moderater körperlicher Anstrengung bei denen Sie ein wenig stärker atmen als normal.\"">
 				>
 				["at0005"] = <
-					text = <"*How many days per week doing vigorous physical activities (en)">
-					description = <"*Original question: \"1. During the last 7 days, on how many days did you do vigorous physical activities like heavy lifting, digging, aerobics, or fast bicycling?\"  (en)">
+					text = <"Wie viele Tage pro Woche mit intensiven körperlichen Aktivitäten">
+					description = <"Ursprüngliche Frage: \"1. Denken sie nur an die körperlichen Aktivitäten die Sie für mindestens 10 Minuten ohne Unterbrechung verrichtet haben. An wie vielen der vergangenen 7 Tage haben Sie anstrengende körperliche Aktivitäten wie Aerobic, Laufen, schnelles Fahrradfahren oder schnelles Schwimmen verrichtet?\" ">
 				>
 				["at0006"] = <
-					text = <"*No vigorous physical activities (en)">
+					text = <"Keine anstrengende Aktivität">
 					description = <"*in case of no vigorous physical activities, this element should be set as true.
 If this is true, skip to question 3 (Moderate physical activities) (en)">
 				>
 				["at0007"] = <
-					text = <"*Time spent doing vigorous physical activities (en)">
+					text = <"Zeit, die mit intensiven körperlichen Aktivitäten verbracht wird">
 					description = <"*Original question: \"2. How much time did you usually spend doing vigorous physical activities on one of those days?\" (en)">
 				>
 				["at0008"] = <
-					text = <"*Don't know/not sure about time spent in activities (en)">
+					text = <"Ich weiß nicht/ bin nicht sicher">
 					description = <"*in unknown or not sure about the time spent in vigorous physical activities this element should be set as true (en)">
 				>
 				["d/wk"] = <
-					text = <"days per week">
+					text = <"Tage pro Woche">
 					description = <"@ units @">
 				>
 				["h/d"] = <
-					text = <"hours per day">
+					text = <"Stunden pro Tag">
 					description = <"@ units @">
 				>
 				["min/d"] = <
-					text = <"minutes per day">
+					text = <"Minuten pro Tag">
 					description = <"@ units @">
 				>
 				["at0009"] = <
-					text = <"*Moderate physical activity (en)">
-					description = <"*Section introduction: \"Think about all the moderate activities that you did in the last 7 days. Moderate activities refer to activities that take moderate physical effort and make you breathe somewhat harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
+					text = <"Mäßige körperliche Aktivität">
+					description = <"Abschnitt Einführung: \"Think about all the moderate activities that you did in the last 7 days. Moderate activities refer to activities that take moderate physical effort and make you breathe somewhat harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
 				>
 				["at0010"] = <
 					text = <"*How many days per week doing moderate physical activities (en)">
@@ -550,19 +552,19 @@ If this is true, skip to question 5 (Walking activities) (en)">
 					description = <"*Original question: \"4. How much time did you usually spend doing moderate physical activities on one of those days?\" (en)">
 				>
 				["at0013"] = <
-					text = <"*Don't know/not sure about time spent in activities (en)">
+					text = <"Ich weiß nicht/ bin nicht sicher">
 					description = <"*if unknown or not sure about the time spent in moderate physical activities, this element should be set as true (en)">
 				>
 				["at0014"] = <
-					text = <"*Walking (en)">
-					description = <"*Section introduction: \"Think about the time you spent walking in the last 7 days. This includes at work and at home, walking to travel from place to place, and any other walking that you have done solely for recreation, sport, exercise, or leisure.\"  (en)">
+					text = <"Gehen">
+					description = <"Abschnitt Einführung: \"Think about the time you spent walking in the last 7 days. This includes at work and at home, walking to travel from place to place, and any other walking that you have done solely for recreation, sport, exercise, or leisure.\"  (en)">
 				>
 				["at0015"] = <
 					text = <"*How many days per week did walking at least 10 minutes (en)">
 					description = <"*Original question: \"5. During the last 7 days, on how many days did you walk for at least 10 minutes at a time?\"  (en)">
 				>
 				["at0016"] = <
-					text = <"*No moderate physical activities (en)">
+					text = <"Ich weiß nicht/ bin nicht sicher">
 					description = <"*in case of no walking this element should be set as true
 If this is true, skip to question 7 (Sitting) (en)">
 				>
@@ -575,8 +577,8 @@ If this is true, skip to question 7 (Sitting) (en)">
 					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
 				>
 				["at0019"] = <
-					text = <"*Sitting (en)">
-					description = <"*Section introduction: \"The last question is about the time you spent sitting on weekdays during the last 7 days.  Include time spent at work, at home, while doing course work and during leisure time.  This may include time spent sitting at a desk, visiting friends, reading, or sitting or lying down to watch television.\"  (en)">
+					text = <"Sitzend">
+					description = <"Abschnitt Einführung: \"7. Wie viel Zeit haben Sie in den vergangenen 7 Tagen an einem Wochentag mit Sitzen verbracht? Dies kann Zeit beinhalten wie Sitzen am Schreibtisch, Besuchen von Freunden, vor dem Fernseher sitzen oder liegen und auch sitzen in einem öffentlichen Verkehrsmittel.\"">
 				>
 				["at0022"] = <
 					text = <"*Time spent sitting on a week day (en)">
@@ -591,8 +593,9 @@ If this is true, skip to question 7 (Sitting) (en)">
 					description = <"@ internal @">
 				>
 				["at0025"] = <
-					text = <"*Extension (en)">
-					description = <"">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Information, die für die Erfassung des lokalen Kontexts oder für die Anpassung an andere Referenzmodelle/Formalismen benötigt wird.">
+					comment = <"Zum Beispiel: Informationen zu lokalen Krankenhausabteilungen oder zusätzliche Metadaten zum Abgleich mit FHIR- oder CIMI-Äquivalenten.">
 				>
 			>
 		>
