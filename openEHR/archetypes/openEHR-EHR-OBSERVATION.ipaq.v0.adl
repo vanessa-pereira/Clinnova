@@ -50,7 +50,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"328109480828a84df81c4deb9a6c2f70">
+		["MD5-CAM-1.0.1"] = <"8f4dc1f50868e804f720068787a28988">
 		["build_uid"] = <"3354b9ad-56ec-3273-9b5b-901e9324e72c">
 	>
 
@@ -163,14 +163,14 @@ definition
 													>
 												}
 											}
-											ELEMENT[at0016] occurrences matches {0..1} matches {    -- No moderate physical activities
+											ELEMENT[at0016] occurrences matches {0..1} matches {    -- No walking
 												value matches {
 													DV_BOOLEAN matches {
 														value matches {true}
 													}
 												}
 											}
-											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Time spent doing moderate physical activities
+											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Time spent walking
 												value matches {
 													C_DV_QUANTITY <
 														
@@ -185,7 +185,7 @@ definition
 													>
 												}
 											}
-											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Don't know/not sure about time spent in activities
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Don't know/not sure about time spent walking
 												value matches {
 													DV_BOOLEAN matches {*}
 												}
@@ -257,7 +257,7 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 				>
 				["at0002"] = <
 					text = <"During the last 7 days">
-					description = <"">
+					description = <"Section introduction: \"We are interested in finding out about the kinds of physical activities that people do as part of their everyday lives.  The questions will ask you about the time you spent being physically active in the last 7 days.  Please answer each question even if you do not consider yourself to be an active person.  Please think about the activities you do at work, as part of your house and yard work, to get from place to place, and in your spare time for recreation, exercise or sport.\"">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -326,16 +326,16 @@ If this is true, skip to question 5 (Walking activities)">
 					description = <"Original question: \"5. During the last 7 days, on how many days did you walk for at least 10 minutes at a time?\" ">
 				>
 				["at0016"] = <
-					text = <"No moderate physical activities">
+					text = <"No walking">
 					description = <"in case of no walking this element should be set as true
 If this is true, skip to question 7 (Sitting)">
 				>
 				["at0017"] = <
-					text = <"Time spent doing moderate physical activities">
+					text = <"Time spent walking">
 					description = <"Original question: \"6. How much time did you usually spend walking on one of those days?\"">
 				>
 				["at0018"] = <
-					text = <"Don't know/not sure about time spent in activities">
+					text = <"Don't know/not sure about time spent walking">
 					description = <"if unknown or not sure about the time spent walking, this element should be set as true">
 				>
 				["at0019"] = <
@@ -376,7 +376,7 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 				>
 				["at0002"] = <
 					text = <"*During the last 7 days (en)">
-					description = <"">
+					description = <"*Section introduction: \"We are interested in finding out about the kinds of physical activities that people do as part of their everyday lives.  The questions will ask you about the time you spent being physically active in the last 7 days.  Please answer each question even if you do not consider yourself to be an active person.  Please think about the activities you do at work, as part of your house and yard work, to get from place to place, and in your spare time for recreation, exercise or sport.\" (en)">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -445,16 +445,16 @@ If this is true, skip to question 5 (Walking activities) (en)">
 					description = <"*Original question: \"5. During the last 7 days, on how many days did you walk for at least 10 minutes at a time?\"  (en)">
 				>
 				["at0016"] = <
-					text = <"*No moderate physical activities (en)">
+					text = <"*No walking (en)">
 					description = <"*in case of no walking this element should be set as true
 If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0017"] = <
-					text = <"*Time spent doing moderate physical activities (en)">
+					text = <"*Time spent walking (en)">
 					description = <"*Original question: \"6. How much time did you usually spend walking on one of those days?\" (en)">
 				>
 				["at0018"] = <
-					text = <"*Don't know/not sure about time spent in activities (en)">
+					text = <"*Don't know/not sure about time spent walking (en)">
 					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
 				>
 				["at0019"] = <
@@ -495,7 +495,7 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 				>
 				["at0002"] = <
 					text = <"In den letzten 7 Tagen">
-					description = <"">
+					description = <"Abschnitt Einführung: \"Wir sind daran interessiert herauszufinden, welche Arten von körperlichen Aktivitäten Menschen in ihrem alltäglichen Leben vollziehen. Die Befragung bezieht sich auf die Zeit die Sie während der letzten 7 Tage in körperlicher Aktivität verbracht haben. Bitte beantworten Sie alle Fragen (auch wenn Sie sich selbst nicht als aktive Person ansehen). Bitte berücksichtigen Sie die Aktivitäten im Rahmen Ihrer Arbeit, in Haus und Garten, um von einem Ort zum anderen zu kommen und in Ihrer Freizeit für Erholung, Leibesübungen und Sport.\"">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -511,12 +511,12 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 				>
 				["at0006"] = <
 					text = <"Keine intensiven körperlichen Aktivitäten">
-					description = <"*in case of no vigorous physical activities, this element should be set as true.
-If this is true, skip to question 3 (Moderate physical activities) (en)">
+					description = <"wenn keine intensiven körperlichen Aktivitäten vorhanden sind, sollte dieses Element auf wahr gesetzt werden.
+Wenn dies zutrifft, fahren Sie mit Frage 3 fort (Mäßige körperliche Aktivitäten">
 				>
 				["at0007"] = <
 					text = <"Zeit, die mit intensiven körperlichen Aktivitäten verbracht wird">
-					description = <"*Original question: \"2. How much time did you usually spend doing vigorous physical activities on one of those days?\" (en)">
+					description = <"*Ursprüngliche Frage: \"2. How much time did you usually spend doing vigorous physical activities on one of those days?\" (en)">
 				>
 				["at0008"] = <
 					text = <"Weiß nicht/nicht sicher über die Zeit, die für Aktivitäten aufgewendet wird">
@@ -539,8 +539,8 @@ If this is true, skip to question 3 (Moderate physical activities) (en)">
 					description = <"Abschnitt Einführung: \"Think about all the moderate activities that you did in the last 7 days. Moderate activities refer to activities that take moderate physical effort and make you breathe somewhat harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
 				>
 				["at0010"] = <
-					text = <"*How many days per week doing moderate physical activities (en)">
-					description = <"*Original question: \"3. During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.\"  (en)">
+					text = <"Wie viele Tage pro Woche mit moderater körperlicher Aktivität">
+					description = <"Ursprüngliche Frage: \"3. During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.\"  (en)">
 				>
 				["at0011"] = <
 					text = <"Keine mäßigen körperlichen Aktivitäten">
@@ -548,8 +548,8 @@ If this is true, skip to question 3 (Moderate physical activities) (en)">
 If this is true, skip to question 5 (Walking activities) (en)">
 				>
 				["at0012"] = <
-					text = <"*Time spent doing moderate physical activities (en)">
-					description = <"*Original question: \"4. How much time did you usually spend doing moderate physical activities on one of those days?\" (en)">
+					text = <"Zeitaufwand für moderate körperliche Aktivitäten">
+					description = <"Ursprüngliche Frage: \"4.Wie viel Zeit haben Sie für gewöhnlich an einem dieser Tage mit moderater körperlicher Aktivität verbracht?\"">
 				>
 				["at0013"] = <
 					text = <"Weiß nicht/nicht sicher über die Zeit, die für Aktivitäten aufgewendet wird">
@@ -560,20 +560,20 @@ If this is true, skip to question 5 (Walking activities) (en)">
 					description = <"Abschnitt Einführung: \"Think about the time you spent walking in the last 7 days. This includes at work and at home, walking to travel from place to place, and any other walking that you have done solely for recreation, sport, exercise, or leisure.\"  (en)">
 				>
 				["at0015"] = <
-					text = <"*How many days per week did walking at least 10 minutes (en)">
-					description = <"*Original question: \"5. During the last 7 days, on how many days did you walk for at least 10 minutes at a time?\"  (en)">
+					text = <"An wie vielen Tagen pro Woche sind Sie mindestens 10 Minuten zu Fuß gegangen?">
+					description = <"Ursprüngliche Frage: \"5. An wie vielen der vergangenen 7 Tage sind Sie mindestens 10 Minuten ohne Unterbrechung zu Fuß gegangen? Dieses beinhaltet Gehstrecken daheim oder in der Arbeit, gehen um von einem Ort zu einem anderen zu gelangen, sowie alles andere Gehen zur Erholung, Bewegung oder Freizeit\"">
 				>
 				["at0016"] = <
-					text = <"Ich weiß nicht/ bin nicht sicher">
+					text = <"Kein Gehen">
 					description = <"*in case of no walking this element should be set as true
 If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0017"] = <
-					text = <"*Time spent doing moderate physical activities (en)">
-					description = <"*Original question: \"6. How much time did you usually spend walking on one of those days?\" (en)">
+					text = <"Zeit, die mit Gehen verbracht wird">
+					description = <"Ursprüngliche Frage: \"6. Wie viel Zeit haben Sie für gewöhnlich an einem dieser Tage mit Gehen verbracht?\"">
 				>
 				["at0018"] = <
-					text = <"Weiß nicht/nicht sicher über die Zeit, die für Aktivitäten aufgewendet wird">
+					text = <"Weiß nicht/nicht sicher, wie viel Zeit mit Gehen verbracht wird">
 					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
 				>
 				["at0019"] = <
@@ -581,11 +581,11 @@ If this is true, skip to question 7 (Sitting) (en)">
 					description = <"Abschnitt Einführung: \"7. Wie viel Zeit haben Sie in den vergangenen 7 Tagen an einem Wochentag mit Sitzen verbracht? Dies kann Zeit beinhalten wie Sitzen am Schreibtisch, Besuchen von Freunden, vor dem Fernseher sitzen oder liegen und auch sitzen in einem öffentlichen Verkehrsmittel.\"">
 				>
 				["at0022"] = <
-					text = <"*Time spent sitting on a week day (en)">
-					description = <"*Original question: \"7. During the last 7 days, how much time did you spend sitting on a week day?\" (en)">
+					text = <"Zeit, die an einem Wochentag im Sitzen verbracht wird">
+					description = <"Ursprüngliche Frage: \"7. Wie viel Zeit haben Sie in den vergangenen 7 Tagen an einem Wochentag mit Sitzen verbracht? Dies kann Zeit beinhalten wie Sitzen am Schreibtisch, Besuchen von Freunden, vor dem Fernseher sitzen oder liegen und auch sitzen in einem öffentlichen Verkehrsmittel.\"">
 				>
 				["at0023"] = <
-					text = <"*Don't know/not sure about time spent sitting (en)">
+					text = <"Weiß nicht/nicht sicher über die im Sitzen verbrachte Zeit">
 					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
 				>
 				["at0024"] = <
