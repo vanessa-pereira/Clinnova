@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "eba6ee4b-6010-42e4-a8f7-bccf464c2eb3",
-      "MD5-CAM-1.0.1" : "9e4b0488896b85c15f19411848513761",
+      "MD5-CAM-1.0.1" : "9b2e879acbd237dc91a9c1742353c11c",
       "PARENT:MD5-CAM-1.0.1" : "F56C24081D5D4E5CAF0AB1D658AD3A0D"
     },
     "details" : {
@@ -342,7 +342,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d8294e5bcd86a7ce65de991e2b013cba"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Register into openEHR composition the encounter context - id, type and reason of encounter. ",
+          "keywords" : [ "Encounter, appointment" ],
+          "use" : "Demographic mappings are available on the annotations for each archetype attribute.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -462,7 +503,35 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "debcd9a41bccb34943c394557c620c42"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To save the cohort name and timeline moment assessment (baseline to follow-up).",
+          "keywords" : [ ],
+          "use" : "To be used under the Pathfinder - Medtronic registries.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.research_information.v0",
     "differential" : true,
@@ -612,7 +681,49 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c26eef7785cac0baee13626f94afc9a2"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "©Clinical Models UK",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -685,7 +796,55 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "55628380c785e72b57357284a830562d"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Für die Erfassung und Berichterstattung von EQ-5D-5L-Fragebogeninformationen, um die Gesundheitsergebnisse einer Vielzahl von Interventionen auf einer gemeinsamen Skala zu Bewertungs-, Zuordnungs- und Überwachungszwecken zu bewerten.",
+          "keywords" : [ "EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol" ],
+          "use" : "Zum Aufzeichnen von EQ-5D-5L-Fragebogeninformationen.\n\nDieses Instrument hat strenge Designrichtlinien (UI), die auf Anwendungsebene befolgt werden müssen. Detaillierte Informationen finden Sie in den EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)\n\nWährend openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen. © EuroQol-Forschungsstiftung. EQ-5D™ ist eine Marke der EuroQol Research Foundation. (Bitte beachten Sie: Für jede Sprachversion werden das Urheberrechtsjahr und die entsprechende Versionsnummer zum Urheberrechtsvermerk hinzugefügt, der in der Fußzeile des Fragebogens angezeigt wird.)\n\nWeitere Informationen finden Sie in der EQ-5D-Benutzerlizenzrichtlinie (https://euroqol.org/support/documents/eq-5d-user-license-policy/) und der EQ-5D-Registrierung (https://registration.euroqol.org /)\nBei Fragen zur EQ-5D-Benutzerlizenzrichtlinie wenden Sie sich bitte an das EuroQol-Büro unter der folgenden Adresse und Kontaktdaten:\nEuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890\nE: userinformationservice@euroqol.org",
+          "misuse" : "Darf nicht verwendet werden, es sei denn, die Bestimmungen des Urheberrechts wurden eingehalten.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the capture and reporting of EQ-5D-5L questionnaire information in order to assess health outcome from a wide variety of interventions on a common scale, for purposes of evaluation, allocation and monitoring.",
+          "keywords" : [ "EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol" ],
+          "use" : "Use to record EQ-5D-5L questionnaire information.\n\nThis instrument has strict design guidelines (UI) that need to be followed at the application level. For detailed information, please check the EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)\n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. © EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. (Please note: For each language version, the copyright year and corresponding version number are added to the copyright notice as presented in the footer of the questionnaire)\n\nFor more information please check EQ-5D User License Policy (https://euroqol.org/support/documents/eq-5d-user-license-policy/) and EQ-5D Registration (https://registration.euroqol.org/)\nFor any questions regarding the EQ-5D User License Policy, please contact the EuroQol Office at the following address and contact details:\nEuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890\nE: userinformationservice@euroqol.org\n\n",
+          "misuse" : "Not to be used unless the terms of copyright have been observed.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Pour la saisie et la communication des informations du questionnaire EQ-5D-5L afin d'évaluer les résultats pour la santé d'une grande variété d'interventions sur une échelle commune, à des fins d'évaluation, d'attribution et de suivi.",
+          "keywords" : [ "EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol" ],
+          "use" : "Utilisez pour enregistrer les informations du questionnaire EQ-5D-5L.\n\nCet instrument a des directives de conception (UI) strictes qui doivent être suivies au niveau de l'application. Pour des informations détaillées, veuillez consulter les directives universelles de représentation numérique EQ-5D (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)\n\nAlors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur. © Fondation de recherche EuroQol. EQ-5D™ est une marque déposée de la Fondation de recherche EuroQol. (Veuillez noter : pour chaque version linguistique, l'année du copyright et le numéro de version correspondant sont ajoutés à l'avis de copyright tel que présenté dans le pied de page du questionnaire)\n\nPour plus d'informations, veuillez consulter la politique de licence utilisateur EQ-5D (https://euroqol.org/support/documents/eq-5d-user-license-policy/) et l'enregistrement EQ-5D (https://registration.euroqol.org /)\nPour toute question concernant la politique de licence utilisateur EQ-5D, veuillez contacter le bureau EuroQol à l'adresse et aux coordonnées suivantes:\nEuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890\nE: userinformationservice@euroqol.org",
+          "misuse" : "Ne pas utiliser à moins que les termes du droit d'auteur aient été respectés.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -782,7 +941,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6a2b074ef129ab0ae6d9b8be74149c76"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.ibd_di_sr.v0",
     "differential" : true,
@@ -855,7 +1053,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "3d5a5bdea630b21e8db299a1c23614be"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ "Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease" ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ "Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease" ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ "Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease" ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.phbi.v0",
     "differential" : true,
@@ -936,7 +1173,55 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "9fbb26b810a5ba463cb6373ef0c1d691"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Um die kognitiven und emotionalen Repräsentationen von Krankheiten schnell zu beurteilen.",
+          "keywords" : [ "Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM, Fragebogen zur Krankheitswahrnehmung, Kurzform IPQ, IPQ" ],
+          "use" : "Alle Items außer der Kausalfrage werden anhand einer Antwortskala von 0 bis 10 bewertet. Fünf der Items bewerten kognitive Krankheitsrepräsentationen: Folgen (Item 1), Zeitachse (Item 2), persönliche Kontrolle (Item 3), Behandlungskontrolle (Item 4) und Identität (Item 5). Zwei der Items erfassen emotionale Repräsentationen: Sorge (Item 6) und Emotionen (Item 8). Ein Item erfasst die Krankheitsverständlichkeit (Item 7). Die Items 1–5 bewerten die kognitiven Dimensionen, die sich auf das Verständnis von Krankheit, ihre Ursachen und die Wirkung der Behandlung beziehen, während die Items 6 bis 8 die emotionalen Dimensionen bewerten, die sich auf Emotionen wie Stimmung, Angst, Angst oder Wut beziehen.\r\nDie Beurteilung der kausalen Repräsentation erfolgt durch ein Open-Ended-Response-Item, das die Patienten auffordert, die drei wichtigsten kausalen Faktoren ihrer Erkrankung anzugeben (Item 9). Der Gesamtscore der Krankheitswahrnehmung wird durch Invertieren des Scores für die Items 3, 4 und 8 berechnet und zum Score der anderen Items addiert. Die maximale Gesamtpunktzahl beträgt 80 und die minimale Gesamtpunktzahl 0. Eine höhere Punktzahl weist auf eine bedrohlichere Sichtweise des Patienten hin, während eine niedrigere Punktzahl auf eine optimistischere Einstellung gegenüber der Krankheit hinweist.\r\n\r\nDie allgemeinste Version des Brief IPQ verwendet das Wort \"Krankheit\", aber es ist möglich, dieses durch den Namen einer bestimmten Krankheit wie Diabetes oder Asthma zu ersetzen. In ähnlicher Weise verwendet das Behandlungskontrollelement das Wort „Behandlung“, aber dieses kann durch eine bestimmte Behandlung wie „Operation“ oder „Inhalator“ ersetzt werden, wenn Forscher an einer bestimmten Behandlung interessiert sind. Dies kann in diesem Archetyp ggf. mit den Datenpunkten „Name der ausgewerteten Krankheit“ und „Name der Behandlung“ ergänzt werden.\r\n\r\n\r\nWährend openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.\r\n\r\nCopyright-Erklärung: © Alle Rechte vorbehalten. Für die Erlaubnis zur Nutzung der Waage wenden Sie sich bitte an: lizbroadbent@clear.net.nz",
+          "misuse" : "Um die kognitiven und emotionalen Repräsentationen von Krankheiten schnell zu beurteilen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To rapidly assess the cognitive and emotional representations of illness.",
+          "keywords" : [ "Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM" ],
+          "use" : "All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. \r\nAssessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. \r\n\r\nThe most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be added in this archetype using the data points \"name of illness evaluated\" and \"name of treatment\", if necessary.\r\n\r\n\r\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.\r\n\r\nCopyright statement: © All rights reserved. For permission to use the scale please contact: lizbroadbent@clear.net.nz",
+          "misuse" : "Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–\r\nRevised (IPQ-R).",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Évaluer rapidement les représentations cognitives et émotionnelles de la maladie.",
+          "keywords" : [ "Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM, IPQ" ],
+          "use" : "Tous les items, à l'exception de la question causale, sont évalués à l'aide d'une échelle de réponse de 0 à 10. Cinq des items évaluent les représentations des maladies cognitives : conséquences (Item 1), chronologie (Item 2), contrôle personnel (Item 3), contrôle du traitement (Item 4) et identité (Item 5). Deux des items évaluent les représentations émotionnelles : l'inquiétude (item 6) et les émotions (item 8). Un item évalue la compréhensibilité de la maladie (item 7). Les éléments 1 à 5 évaluent les dimensions cognitives liées à la compréhension de la maladie, de ses causes et de l'effet du traitement, tandis que les éléments 6 à 8 évaluent les dimensions émotionnelles liées aux émotions telles que l'humeur, la peur, l'anxiété ou la colère.\r\nL'évaluation de la représentation causale se fait par un item de réponse ouvert, qui demande aux patients d'énumérer les trois facteurs causaux les plus importants de leur maladie (item 9). Le score total de perception de la maladie est calculé en inversant le score des items 3, 4 et 8 et additionné au score des autres items. Le score total maximum est de 80 et le score total minimum est de 0. Un score plus élevé indique une vision plus menaçante du patient, tandis qu'un score inférieur indique une vision plus optimiste de la maladie.\r\n\r\nLa version la plus générale du Brief IPQ utilise le mot \"maladie\", mais il est possible de le remplacer par le nom d'une maladie particulière comme le diabète ou l'asthme. De même, l'item de contrôle du traitement utilise le mot « traitement », mais celui-ci peut être remplacé par un traitement particulier tel que « chirurgie » ou « inhalateur » si les chercheurs sont intéressés par un traitement particulier. Cela peut être ajouté dans cet archétype en utilisant les points de données \"nom de la maladie évaluée\" et \"nom du traitement\", si nécessaire.\r\n\r\n\r\nAlors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur.\r\n\r\nDéclaration de copyright : © Tous droits réservés. Pour obtenir l'autorisation d'utiliser la balance, veuillez contacter : lizbroadbent@clear.net.nz",
+          "misuse" : "Ne doit pas être utilisé pour enregistrer le questionnaire de perception de la maladie (IPQ) et le questionnaire de perception de la maladie–\r\nRévisé (IPQ-R).",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -1059,7 +1344,52 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "9e1f41d0ab0d40c7026c4f613387df86"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Bewertet das Ausmaß, in dem eine Person das Leben im vergangenen Monat als unvorhersehbar, unkontrollierbar und überlastend empfunden hat.",
+          "keywords" : [ "Perceived Stress Scale, PSS, PROM, Scale, Stress, Fragen zum thema stress" ],
+          "use" : "Die Fragen in dieser Skala fragen nach Gefühlen und Gedanken des Patienten während des letzten Monats. In jedem Fall wird der Patient gebeten anzugeben, wie oft er auf eine bestimmte Weise gefühlt oder gedacht hat. Obwohl einige der Fragen ähnlich sind, gibt es Unterschiede zwischen ihnen und der Patient sollte jede Frage als separate Frage behandeln. Der beste Ansatz ist, ziemlich schnell zu antworten.\r\n\r\nNach Umkehrung der Punktzahlen bei den vier positiv angegebenen Items (Items 4, 5, 7 und 8 - (d.h. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - bereits in diesem Archetyp wiederhergestellt), wird die PSS-10-Gesamtpunktzahl durch Summieren aller 10 Punkte ermittelt. Höhere Werte zeigten ein höheres Maß an wahrgenommenem Stress an.\r\n\r\n\r\nWährend openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen. Beachten Sie, dass keine Nutzungserlaubnis erforderlich ist, wenn es für gemeinnützige akademische Forschung oder Bildung verwendet wird. Wenden Sie sich für andere Zwecke an Ellen Conser unter conser@andrew.cmu.edu.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month.",
+          "keywords" : [ "Perceived Stress Scale, PSS, PROM, Scale, Stress" ],
+          "use" : "The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.\r\n\r\nAfter reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 -  (i.e. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.\r\n\r\n\r\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. Note that permission for use is not necessary when used for nonprofit academic research or education. For other use contact Ellen Conser at conser@andrew.cmu.edu.  \r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Évalue le degré auquel un individu a perçu la vie comme imprévisible, incontrôlable et surchargée au cours du mois précédent.",
+          "keywords" : [ "Perceived Stress Scale, PSS, PROM, Scale, Stress" ],
+          "use" : "Les questions de cette échelle portent sur les sentiments et les pensées du patient au cours du dernier mois. Dans chaque cas, il sera demandé au patient d'indiquer à quelle fréquence il a ressenti ou pensé d'une certaine manière. Bien que certaines questions soient similaires, il existe des différences entre elles et le patient doit traiter chacune comme une question distincte. La meilleure approche est de répondre assez rapidement.\r\n\r\nAprès avoir inversé les scores des quatre items positifs (items 4, 5, 7 et 8 - (c'est-à-dire 0 => 4 ; 1 => 3 ; 2 => 2 ; 3 => 1 ; 4 => 0) - déjà inversé dans cet archétype), le score total PSS-10 est obtenu en additionnant les 10 items. Des scores plus élevés indiquaient un niveau plus élevé de stress perçu.\r\n\r\n\r\nAlors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur. Notez que l'autorisation d'utilisation n'est pas nécessaire lorsqu'elle est utilisée pour la recherche universitaire ou l'éducation à but non lucratif. Pour toute autre utilisation, contactez Ellen Conser à conser@andrew.cmu.edu.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pss.v0",
     "differential" : true,
@@ -1132,7 +1462,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "41f8140a35aa1971a126ff4ff25088a9"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.fss.v0",
     "differential" : true,
@@ -1205,7 +1574,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "02cab25e5c0b087f59d14bac715b9155"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.wexner_score.v0",
     "differential" : true,
@@ -1278,7 +1686,53 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "33e4821dc13bfa61ba2e555a781abcc3"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "*To assess the impact of Crohn's Disease (CD) on work and activity. (en)",
+          "keywords" : [ "*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO (en)" ],
+          "use" : "*Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : {
+            "notes" : "Generated automatically by Adl Designer"
+          }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assess the impact of Crohn's Disease (CD) on work and activity.",
+          "keywords" : [ "Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO" ],
+          "use" : "Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To assess the impact of Crohn's Disease (CD) on work and activity. (en)",
+          "keywords" : [ "*Work Productivity and Activity Impairment Questionnaire, Crohn's disease, WPAI-CD, PROM, PRO (en)" ],
+          "use" : "*Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.wpai_cd.v0",
     "differential" : true,
@@ -1351,7 +1805,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "83c158f0b57ce27f4b10c0e3dabd7ca1"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "The MARS-5 assesses a patient’s typical medication adherence through 5 questions (eg, “I forget to take my medication”; “I alter the dose of my medication”), using a 5-level response format (1—always, 2—often, 3—sometimes, 4—rarely, and 5—never). Responses are summed for a total score ranging between 5 and 25, with higher scores indicating a higher level of adherence. Using the MARS-5, a score of ≥20 has previously been used as a cutoff for adherence in an IBD population, while other chronic diseases have defined adherence at a cutoff as high as 25",
+          "keywords" : [ "Medication Adherence Report Scale 5, MARS-5, MARS5, PROM, PRO, Medication" ],
+          "use" : "Use to record the results for each component from the MARS-5 questionnaire. \n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The MARS is copyrighted and permission to use the scale can be obtained from Professor Rob Horne University of Brighton (r.horne@bton.ac.uk)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.mars_5.v0",
     "differential" : true,
@@ -1424,7 +1919,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ce4e4a7714b1f06cb5d89f9770784b3c"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assesses patient sleep quality and disturbances over a 1-month time interval.",
+          "keywords" : [ "Pittsburgh Sleep Quality Index, PSQI, Sleep, Sleep quality, Questionnaire, depression, sleep disorders" ],
+          "use" : "The 19 items are grouped in seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction, each weighted equally on a 0 to 3 scale. The sum of scores are between 0 to 21 points.\n\nA total score of “5” or greater is indicative of poor sleep quality. If you scored “5” or more it is suggested that you discuss your sleep habits with a healthcare provider.\n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The Pittsburgh Sleep Quality Index (PSQI) is copyrighted by Daniel J. Buysse, M.D.  Permission has been granted to reproduce the scale on this website for clinicians to use in their practice and for researchers to use in non-industry studies. For other uses of the scale, the owner of the copyright should be contacted.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.psqi.v0",
     "differential" : true,
@@ -1497,7 +2033,51 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "3FCD1BF5007BEC7E97A62E070FA10E5C"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Aufzeichnung der Ergebnisse des Patient Health Questionnaire-9 (PHQ-9) und seiner Subset-Bewertung PHQ-2.",
+          "keywords" : [ "Screening", "Depression", "Stimmung", "Bewertung", "Psychische Gesundheit" ],
+          "use" : "Zur Aufzeichnung der Ergebnisse des Patient Health Questionnaire-9 (PHQ-9) und seiner Subset-Bewertung PHQ-2.\r\n\r\nDer Archetyp ist so konzipiert, dass die eigentlichen PHQ-Fragen als Beschreibung für jedes Datenelement des Fragebogens erfasst werden. Der Name des Datenelements ist eine pragmatische Beschreibung, die auf die Absicht der Frage hinweist.\r\n\r\nDas ursprüngliche PHQ-9-Tool wurde von Dr. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke und Kollegen, mit einem Bildungsstipendium von Pfizer Inc. Von der PHQ Screeners-Website (http://www.phqscreeners.com/overview.aspx): „Alle PHQ-, GAD-7-Screener und -Übersetzungen können hier heruntergeladen werden Website und es ist keine Genehmigung erforderlich, um sie zu reproduzieren, zu übersetzen, anzuzeigen oder zu verteilen.\" Und von der PHQ-Webseite (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"Keine Erlaubnis erforderlich, um zu reproduzieren, zu übersetzen, anzuzeigen oder zu verteilen\".",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results of the Patient Health Questionnaire-9 (PHQ-9) and its subset assessment PHQ-2.",
+          "keywords" : [ "screening", "depression", "mood", "assessment", "mental health" ],
+          "use" : "Use to record the results of the Patient Health Questionnaire-9 (PHQ-9) and its subset assessment PHQ-2.\r\n\r\nThe archetype has been designed such that the actual PHQ questions are recorded as the description for each questionnaire data element. The data element name is a pragmatic description that is indicative of the question intent.\r\n\r\nThe original PHQ‐9 tool was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. From the PHQ Screeners website (http://www.phqscreeners.com/overview.aspx): \"All PHQ, GAD-7 screeners and translations are downloadable from this website and no permission is required to reproduce, translate, display or distribute them.\" And from the PHQ webpage (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"No permission required to reproduce, translate, display or distribute\". \r\n\r\nThe Australian indigenous adaptation for the PHQ-9 subset assessing mood was developed by Dr. Alex Brown, Baker IDI Heart and Diabetes Institute, Alice Springs, 2009. The adapted questions are expressed within the Comments area for each questionnaire data element. Used with permission.",
+          "copyright" : "© Northern Territory Department of Health (Australia), openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Pour enregistrer les résultats du Questionnaire sur la santé du patient-9 (PHQ-9) et son évaluation de sous-ensemble PHQ-2.",
+          "keywords" : [ "projection", "dépression", "humeur", "évaluation", "santé mentale" ],
+          "use" : "Utilisez-le pour enregistrer les résultats du Questionnaire sur la santé du patient-9 (PHQ-9) et de son sous-ensemble d'évaluation PHQ-2.\r\n\r\nL'archétype a été conçu de telle sorte que les questions réelles du PHQ soient enregistrées comme description pour chaque élément de données du questionnaire. Le nom de l'élément de données est une description pragmatique qui indique l'intention de la question.\r\n\r\nL'outil original PHQ‐9 a été développé par les Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke et ses collègues, avec une bourse d'études de Pfizer Inc. Sur le site Web PHQ Screeners (http://www.phqscreeners.com/overview.aspx) : \"Tous les filtres PHQ, GAD-7 et les traductions sont téléchargeables à partir de ce site Web et aucune autorisation n'est requise pour les reproduire, les traduire, les afficher ou les distribuer.\" Et sur la page Web de PHQ (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf) : \"Aucune autorisation requise pour reproduire, traduire, afficher ou distribuer\".",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.phq_9.v0",
     "differential" : true,
@@ -1576,9 +2156,54 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8183617e56733a50c99494b693c8d057"
+        "PARENT:MD5-CAM-1.0.1" : "73a6c523d34c4ff92c6a5180b03d9cc2"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Ziel der Fragebögen ist es, gemeinsame Instrumente bereitzustellen, mit denen international vergleichbare Daten zur gesundheitsbezogenen körperlichen Aktivität erhoben werden können.",
+          "keywords" : [ "International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO (en)" ],
+          "use" : "Die Verwendung der IPAQ-Instrumente für Überwachungs- und Forschungszwecke wird empfohlen. Es wird empfohlen, die Reihenfolge oder den Wortlaut der Fragen nicht zu ändern, da dies die psychometrischen Eigenschaften der Instrumente beeinflusst. Die ursprünglichen Fragen aus dem IPAQ sind in den Elementbeschreibungen nach dem Tag „ursprüngliche Frage“ und dem, was in der nach vorne gerichteten App angezeigt werden soll, zu sehen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "The purpose of the questionnaires is to provide common instruments that can be used to obtain internationally comparable data on health–related physical activity.",
+          "keywords" : [ "International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO" ],
+          "use" : "Use of the IPAQ instruments for monitoring and research purposes is encouraged. It is recommended that no changes be made to the order or wording of the questions as this will affect the psychometric properties of the instruments. The original questions from the IPAQ can be seen at the element descriptions after \"original question\" tag and its what should be shown in the front facing app.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "L’objectif des questionnaires est de fournir des instruments communs utilisables pour obtenir des données sur l’activité physique liée à la santé comparables au niveau international.",
+          "keywords" : [ "International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO, Questionnaire International Sur L’activité Physique" ],
+          "use" : "Le recours aux instruments IPAQ pour la surveillance et la recherche est encouragé. Il est recommandé de ne pas modifier l’ordre ou la formulation des questions, car cela affectera les propriétés psychométriques des instruments. Les questions d'origine de l'IPAQ peuvent être vues dans les descriptions des éléments après la balise \"question d'origine\" et ce qui doit être affiché dans l'application frontale.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.ipaq_sf.v0",
     "differential" : true,
