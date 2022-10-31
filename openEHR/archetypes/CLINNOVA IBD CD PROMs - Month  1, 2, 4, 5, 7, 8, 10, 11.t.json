@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "81174b27-ceb9-4c12-bc67-5f67e56ea444",
-      "MD5-CAM-1.0.1" : "8db7c393231ce99f0b312552317a2493",
+      "MD5-CAM-1.0.1" : "96ce5fe9a91109d2baa3fa23fa7b8ce4",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -292,6 +292,15 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-psqi-001.v0",
         "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.10",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-ipaq_sf-001.v0",
+        "referenceType" : "archetypeOverlay"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -429,7 +438,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "d8294e5bcd86a7ce65de991e2b013cba"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Register into openEHR composition the encounter context - id, type and reason of encounter. ",
+          "keywords" : [ "Encounter, appointment" ],
+          "use" : "Demographic mappings are available on the annotations for each archetype attribute.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -549,7 +599,35 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "debcd9a41bccb34943c394557c620c42"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To save the cohort name and timeline moment assessment (baseline to follow-up).",
+          "keywords" : [ ],
+          "use" : "To be used under the Pathfinder - Medtronic registries.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.research_information.v0",
     "differential" : true,
@@ -725,7 +803,49 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c26eef7785cac0baee13626f94afc9a2"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "©Clinical Models UK",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -798,7 +918,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "3d5a5bdea630b21e8db299a1c23614be"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ "Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease" ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ "Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease" ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ "Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease" ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.phbi.v0",
     "differential" : true,
@@ -879,7 +1038,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "41f8140a35aa1971a126ff4ff25088a9"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.fss.v0",
     "differential" : true,
@@ -952,7 +1150,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "83c158f0b57ce27f4b10c0e3dabd7ca1"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "The MARS-5 assesses a patient’s typical medication adherence through 5 questions (eg, “I forget to take my medication”; “I alter the dose of my medication”), using a 5-level response format (1—always, 2—often, 3—sometimes, 4—rarely, and 5—never). Responses are summed for a total score ranging between 5 and 25, with higher scores indicating a higher level of adherence. Using the MARS-5, a score of ≥20 has previously been used as a cutoff for adherence in an IBD population, while other chronic diseases have defined adherence at a cutoff as high as 25",
+          "keywords" : [ "Medication Adherence Report Scale 5, MARS-5, MARS5, PROM, PRO, Medication" ],
+          "use" : "Use to record the results for each component from the MARS-5 questionnaire. \n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The MARS is copyrighted and permission to use the scale can be obtained from Professor Rob Horne University of Brighton (r.horne@bton.ac.uk)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.mars_5.v0",
     "differential" : true,
@@ -1025,7 +1264,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ce4e4a7714b1f06cb5d89f9770784b3c"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assesses patient sleep quality and disturbances over a 1-month time interval.",
+          "keywords" : [ "Pittsburgh Sleep Quality Index, PSQI, Sleep, Sleep quality, Questionnaire, depression, sleep disorders" ],
+          "use" : "The 19 items are grouped in seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction, each weighted equally on a 0 to 3 scale. The sum of scores are between 0 to 21 points.\n\nA total score of “5” or greater is indicative of poor sleep quality. If you scored “5” or more it is suggested that you discuss your sleep habits with a healthcare provider.\n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The Pittsburgh Sleep Quality Index (PSQI) is copyrighted by Daniel J. Buysse, M.D.  Permission has been granted to reproduce the scale on this website for clinicians to use in their practice and for researchers to use in non-industry studies. For other uses of the scale, the owner of the copyright should be contacted.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.psqi.v0",
     "differential" : true,
@@ -1054,6 +1334,79 @@
     },
     "adlVersion" : "1.4",
     "buildUid" : "fd110e21-f002-3cec-ae18-5e941a001ec6",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "f0214da8-04d7-4f37-9c48-72db55892808",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "8183617e56733a50c99494b693c8d057"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.ipaq_sf.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-ipaq_sf-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "fr" : { },
+        "de" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "3354b9ad-56ec-3273-9b5b-901e9324e72c",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
