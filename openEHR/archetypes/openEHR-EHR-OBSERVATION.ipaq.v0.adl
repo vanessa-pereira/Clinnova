@@ -30,7 +30,10 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"Ziel der Fragebögen ist es, gemeinsame Instrumente bereitzustellen, mit denen international vergleichbare Daten zur gesundheitsbezogenen körperlichen Aktivität erhoben werden können.">
+			keywords = <"International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"Die Verwendung der IPAQ-Instrumente für Überwachungs- und Forschungszwecke wird empfohlen. Es wird empfohlen, die Reihenfolge oder den Wortlaut der Fragen nicht zu ändern, da dies die psychometrischen Eigenschaften der Instrumente beeinflusst. Die ursprünglichen Fragen aus dem IPAQ sind in den Elementbeschreibungen nach dem Tag „ursprüngliche Frage“ und dem, was in der nach vorne gerichteten App angezeigt werden soll, zu sehen.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -40,17 +43,20 @@ description
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
+			purpose = <"L’objectif des questionnaires est de fournir des instruments communs utilisables pour obtenir des données sur l’activité physique liée à la santé comparables au niveau international.">
+			keywords = <"International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO, Questionnaire International Sur L’activité Physique", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"Le recours aux instruments IPAQ pour la surveillance et la recherche est encouragé. Il est recommandé de ne pas modifier l’ordre ou la formulation des questions, car cela affectera les propriétés psychométriques des instruments. Les questions d'origine de l'IPAQ peuvent être vues dans les descriptions des éléments après la balise \"question d'origine\" et ce qui doit être affiché dans l'application frontale.">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"More detailed information on the IPAQ process and the research methods used in the development of IPAQ instruments is available at www.ipaq.ki.se and Booth, M.L. (2000).  Assessment of Physical Activity: An International Perspective.  Research Quarterly for Exercise and Sport, 71 (2): s114-20.  Other scientific publications and presentations on the use of IPAQ are summarized on the website.">
+		["references"] = <"Des informations détaillées sur la procédure de l’IPAQ et les méthodes de recherche utilisées lors du développement d’instruments IPAQ sont disponibles sur le site www.ipaq.ki.se et dans l’article de Booth, M.L. (2000). Assessment of Physical Activity: An International Perspective. Research Quarterly for Exercise and Sport, 71 (2): s114-20. D’autres publications et présentations scientifiques sur l’utilisation de l’IPAQ sont résumées sur le site web.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"60cdfccdd32684171588674ef328aa84">
+		["MD5-CAM-1.0.1"] = <"adf11b6600cda9f10bf7bd7a88163859">
 		["build_uid"] = <"3354b9ad-56ec-3273-9b5b-901e9324e72c">
 	>
 
@@ -364,11 +370,11 @@ If this is true, skip to question 7 (Sitting)">
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*International physical activity questionnaire (IPAQ) (en)">
-					description = <"*FOR USE WITH YOUNG AND MIDDLE-AGED ADULTS (15-69 years)
-The International Physical Activity Questionnaires (IPAQ) comprises a set of 4 questionnaires. Long (5 activity domains asked independently) and short (4 generic items) versions for use by either telephone or self-administered methods are available.
+					text = <"Questionnaire International Sur L’activité Physique (IPAQ)">
+					description = <"À UTILISER CHEZ L’ADULTE JEUNE ET L’ADULTE D’ÂGE MÛR (15 à 69 ans)
+Les questionnaires internationaux sur l’activité physique (International Physical Activity Questionnaires, IPAQ) comprennent une série de 4 questionnaires. Il existe des versions complètes (5 domaines d’activité évalués de manière indépendante) et abrégées (4 items génériques) à utiliser par téléphone ou par des méthodes auto-administrées. 
 
-This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the IPAQ.  Revised August 2002. (en)">
+FORMAT ABRÉGÉ AUTO-ADMINISTRÉ PORTANT SUR LES 7 DERNIERS JOURS.  Revised août 2002.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -376,19 +382,19 @@ This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the 
 				>
 				["at0002"] = <
 					text = <"*During the last 7 days (en)">
-					description = <"*Section introduction: \"We are interested in finding out about the kinds of physical activities that people do as part of their everyday lives.  The questions will ask you about the time you spent being physically active in the last 7 days.  Please answer each question even if you do not consider yourself to be an active person.  Please think about the activities you do at work, as part of your house and yard work, to get from place to place, and in your spare time for recreation, exercise or sport.\" (en)">
+					description = <"Introduction de la rubrique: \"Nous souhaitons en savoir plus sur les types d’activité physique que les gens pratiquent dans leur vie quotidienne. Les questions porteront sur le temps que vous avez passé à pratiquer une activité physique au cours des 7 derniers jours. Répondez à chaque question même si vous ne vous considérez pas comme une personne physiquement active. Pensez aux activités que vous pratiquez au travail, lors des tâches ménagères et du jardinage, pour vous rendre dans certains lieux, et pendant votre temps libre pour vous divertir et faire de l’exercice ou du sport.\" ">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Vigorous physical activity (en)">
-					description = <"*Section introduction: \"Think about all the vigorous activities that you did in the last 7 days.  Vigorous physical activities refer to activities that take hard physical effort and make you breathe much harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
+					text = <"Activité physique intense">
+					description = <"Introduction de la rubrique: \"Pensez à toutes les activités intenses que vous avez effectuées au cours des 7 derniers jours. Les activités physiques intenses désignent des activités nécessitant un effort physique important et vous font respirer beaucoup plus fort que d’habitude. Ne pensez qu’aux activités physiques que vous avez effectuées pendant au moins 10 minutes d’affilée.\" ">
 				>
 				["at0005"] = <
-					text = <"*How many days per week doing vigorous physical activities (en)">
-					description = <"*Original question: \"1. During the last 7 days, on how many days did you do vigorous physical activities like heavy lifting, digging, aerobics, or fast bicycling?\"  (en)">
+					text = <"Combien de jours par semaine faire des activités physiques vigoureuses">
+					description = <"Question d'origine: \"1. Au cours des 7 derniers jours, au cours de combien de jours avez-vous effectué des activités physiques intenses comme soulever des objets lourds, creuser, faire de la gym ou pédaler rapidement ?\"  ">
 				>
 				["at0006"] = <
 					text = <"*No vigorous physical activities (en)">
@@ -397,31 +403,31 @@ If this is true, skip to question 3 (Moderate physical activities) (en)">
 				>
 				["at0007"] = <
 					text = <"*Time spent doing vigorous physical activities (en)">
-					description = <"*Original question: \"2. How much time did you usually spend doing vigorous physical activities on one of those days?\" (en)">
+					description = <"Question d'origine: \"2. En général, combien de temps avez-vous passé à pratiquer ces activités physiques intenses ces jours-là?\"">
 				>
 				["at0008"] = <
 					text = <"*Don't know/not sure about time spent in activities (en)">
 					description = <"*in unknown or not sure about the time spent in vigorous physical activities this element should be set as true (en)">
 				>
 				["d/wk"] = <
-					text = <"days per week">
+					text = <"jours par semaine">
 					description = <"@ units @">
 				>
 				["h/d"] = <
-					text = <"hours per day">
+					text = <"heures par jour">
 					description = <"@ units @">
 				>
 				["min/d"] = <
-					text = <"minutes per day">
+					text = <"minutes par jour">
 					description = <"@ units @">
 				>
 				["at0009"] = <
-					text = <"*Moderate physical activity (en)">
-					description = <"*Section introduction: \"Think about all the moderate activities that you did in the last 7 days. Moderate activities refer to activities that take moderate physical effort and make you breathe somewhat harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
+					text = <"Activité physique modérée">
+					description = <"Introduction de la rubrique: \"Pensez à toutes les activités modérées que vous avez effectuées au cours des 7 derniers jours. Les activités physiques modérées désignent des activités nécessitant un effort physique modéré et qui vous font respirer un peu plus fort que d’habitude. Ne pensez qu’aux activités physiques que vous avez effectuées pendant au moins 10 minutes d’affilée.\"">
 				>
 				["at0010"] = <
 					text = <"*How many days per week doing moderate physical activities (en)">
-					description = <"*Original question: \"3. During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.\"  (en)">
+					description = <"Question d'origine: \"3. Au cours des 7 derniers jours, au cours de combien de jours avez-vous pratiqué des activités physiques modérées comme porter des charges légères, pédaler à un rythme régulier ou jouer en double au tennis ? N’incluez pas la marche.\"">
 				>
 				["at0011"] = <
 					text = <"*No moderate physical activities (en)">
@@ -430,19 +436,19 @@ If this is true, skip to question 5 (Walking activities) (en)">
 				>
 				["at0012"] = <
 					text = <"*Time spent doing moderate physical activities (en)">
-					description = <"*Original question: \"4. How much time did you usually spend doing moderate physical activities on one of those days?\" (en)">
+					description = <"Question d'origine: \"4. En général, combien de temps avez-vous passé à pratiquer ces activités physiques modérées ces jours-là?\"">
 				>
 				["at0013"] = <
 					text = <"*Don't know/not sure about time spent in activities (en)">
 					description = <"*if unknown or not sure about the time spent in moderate physical activities, this element should be set as true (en)">
 				>
 				["at0014"] = <
-					text = <"*Walking (en)">
-					description = <"*Section introduction: \"Think about the time you spent walking in the last 7 days. This includes at work and at home, walking to travel from place to place, and any other walking that you have done solely for recreation, sport, exercise, or leisure.\"  (en)">
+					text = <"Marche">
+					description = <"Introduction de la rubrique: \"Pensez au temps que vous avez passé à marcher au cours des 7 derniers jours. Cela comprend la marche au travail et à la maison, la marche pour se rendre d’un endroit à un autre et toutes les autres fois où vous avez marché uniquement par plaisir, pour faire du sport, de l’exercice ou des loisirs.\"">
 				>
 				["at0015"] = <
 					text = <"*How many days per week did walking at least 10 minutes (en)">
-					description = <"*Original question: \"5. During the last 7 days, on how many days did you walk for at least 10 minutes at a time?\"  (en)">
+					description = <"Question d'origine: \"5. Au cours des 7 derniers jours, lors de combien de jours avez-vous marché pendant au moins 10 minutes d’affilée?\"">
 				>
 				["at0016"] = <
 					text = <"*No walking (en)">
@@ -451,19 +457,19 @@ If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0017"] = <
 					text = <"*Time spent walking (en)">
-					description = <"*Original question: \"6. How much time did you usually spend walking on one of those days?\" (en)">
+					description = <"Question d'origine: \"6. En général, combien de temps avez-vous passé à marcher ces jours-là?\"">
 				>
 				["at0018"] = <
 					text = <"*Don't know/not sure about time spent walking (en)">
 					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
 				>
 				["at0019"] = <
-					text = <"*Sitting (en)">
-					description = <"*Section introduction: \"The last question is about the time you spent sitting on weekdays during the last 7 days.  Include time spent at work, at home, while doing course work and during leisure time.  This may include time spent sitting at a desk, visiting friends, reading, or sitting or lying down to watch television.\"  (en)">
+					text = <"Séance">
+					description = <"Introduction de la rubrique: \"La dernière question porte sur le temps que vous avez passé en position assise les jours de la semaine au cours des 7 derniers jours. Incluez le temps passé en position assise au travail, à la maison, pendant les cours et les loisirs. Cela peut comprendre le temps passé assis à un bureau, à lire, en rendant visite à des amis, ou assis ou allongé pour regarder la télévision.\"">
 				>
 				["at0022"] = <
 					text = <"*Time spent sitting on a week day (en)">
-					description = <"*Original question: \"7. During the last 7 days, how much time did you spend sitting on a week day?\" (en)">
+					description = <"Question d'origine: \"7. Au cours des 7 derniers jours, combien de temps avez-vous passé en position assise lors d’un jour de la semaine?\"">
 				>
 				["at0023"] = <
 					text = <"*Don't know/not sure about time spent sitting (en)">
@@ -474,7 +480,7 @@ If this is true, skip to question 7 (Sitting) (en)">
 					description = <"@ internal @">
 				>
 				["at0025"] = <
-					text = <"*Extension (en)">
+					text = <"Extension">
 					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
 					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
 				>
@@ -484,10 +490,9 @@ If this is true, skip to question 7 (Sitting) (en)">
 			items = <
 				["at0000"] = <
 					text = <"Internationaler Fragebogen zur körperlichen Aktivität (IPAQ)">
-					description = <"*FOR USE WITH YOUNG AND MIDDLE-AGED ADULTS (15-69 years)
-The International Physical Activity Questionnaires (IPAQ) comprises a set of 4 questionnaires. Long (5 activity domains asked independently) and short (4 generic items) versions for use by either telephone or self-administered methods are available.
+					description = <"Die International Physical Activity Questionnaires (IPAQ) umfassen einen Satz von 4 Fragebögen. Langversionen (5 Aktivitätsdomänen werden unabhängig voneinander abgefragt) und Kurzversionen (4 generische Elemente) zur Verwendung per Telefon oder selbstverwalteten Methoden sind verfügbar.
 
-This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the IPAQ.  Revised August 2002. (en)">
+Dieser Archetyp bezieht sich auf die SHORT LAST 7 DAYS SELF-ADMINISTED-Version des IPAQ. Überarbeitet August 2002.">
 				>
 				["at0001"] = <
 					text = <"History">
