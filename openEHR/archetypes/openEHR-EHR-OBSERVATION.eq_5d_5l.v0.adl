@@ -94,7 +94,7 @@ Janssen MF, Pickard AS, Golicki D, Gudex C, Niewada M, Scalone L, Swinburn P, Bu
 
 van Hout B, Janssen MF, Feng YS, Kohlmann T, Busschbach J, Golicki D, Lloyd A, Scalone L, Kind P, Pickard AS. Interim scoring for the EQ-5D-5L: mapping the EQ-5D-5L to EQ-5D-3L value sets. Value in Health. 2012 Jul-Aug;15(5):708-15 (https://www.valueinhealthjournal.com/article/S1098-3015(12)00058-7/pdf)">
 		["current_contact"] = <"Vanessa Pereira, Luxembourg Institute of Health <vanessapereira@pm.com>">
-		["MD5-CAM-1.0.1"] = <"96628f21e41de22d632b9928db470358">
+		["MD5-CAM-1.0.1"] = <"55628380c785e72b57357284a830562d">
 		["build_uid"] = <"9959fdab-51f4-3a82-96b3-95c6f237aa05">
 	>
 
@@ -785,8 +785,8 @@ Un état de santé unique est défini en combinant un niveau de chacune des cinq
 				>
 				["at0037"] = <
 					text = <"Extension">
-					description = <"*Additional information required to capture local context or to align with other reference models/formalisms. (en)">
-					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
+					comment = <"Par exemple: les informations sur les services hospitaliers locaux ou des métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
 				>
 				["at0038"] = <
 					text = <"Valeur de l'indice">
