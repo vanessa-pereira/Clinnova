@@ -9,15 +9,18 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-10-28">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2022-10-28">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"The purpose of the questionnaires is to provide common instruments that can be used to obtain internationally comparable data on health–related physical activity.">
+			keywords = <"International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO", ...>
+			use = <"Use of the IPAQ instruments for monitoring and research purposes is encouraged. It is recommended that no changes be made to the order or wording of the questions as this will affect the psychometric properties of the instruments. The original questions from the IPAQ can be seen at the element descriptions after \"original question\" tag and its what should be shown in the front facing app.">
 		>
 	>
 	other_details = <
@@ -26,8 +29,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a13845903c9fe1ae958fd4de684a5602">
+		["MD5-CAM-1.0.1"] = <"f2fcc37ffcf59e3fd14bc9c707d053ce">
 		["build_uid"] = <"3354b9ad-56ec-3273-9b5b-901e9324e72c">
+		["references"] = <"More detailed information on the IPAQ process and the research methods used in the development of IPAQ instruments is available at www.ipaq.ki.se and Booth, M.L. (2000).  Assessment of Physical Activity: An International Perspective.  Research Quarterly for Exercise and Sport, 71 (2): s114-20.  Other scientific publications and presentations on the use of IPAQ are summarized on the website.">
 	>
 
 definition
@@ -127,7 +131,7 @@ definition
 									}
 									CLUSTER[at0014] occurrences matches {0..1} matches {    -- Walking
 										items cardinality matches {1..*; unordered} matches {
-											ELEMENT[at0015] occurrences matches {0..1} matches {    -- How many days per week doing moderate physical activities
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- How many days per week did walking at least 10 minutes
 												value matches {
 													C_DV_QUANTITY <
 														
@@ -168,6 +172,30 @@ definition
 											}
 										}
 									}
+									CLUSTER[at0019] occurrences matches {0..1} matches {    -- Sitting
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0022] occurrences matches {0..1} matches {    -- Time spent sitting on a week day
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"h/d">
+															>
+															["2"] = <
+																units = <"min/d">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0023] occurrences matches {0..1} matches {    -- Don't know/not sure about time spent sitting
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -180,6 +208,16 @@ definition
 				}
 			}
 		}
+		protocol matches {
+			ITEM_TREE[at0024] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0025] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
 	}
 
 ontology
@@ -188,7 +226,10 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"International physical activity questionnaire (IPAQ)">
-					description = <"ipaq">
+					description = <"FOR USE WITH YOUNG AND MIDDLE-AGED ADULTS (15-69 years)
+The International Physical Activity Questionnaires (IPAQ) comprises a set of 4 questionnaires. Long (5 activity domains asked independently) and short (4 generic items) versions for use by either telephone or self-administered methods are available.
+
+This archetype refers to the SHORT LAST 7 DAYS SELF-ADMINISTERED version of the IPAQ.  Revised August 2002.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -261,21 +302,41 @@ If this is true, skip to question 5 (Walking activities)">
 					description = <"Section introduction: \"Think about the time you spent walking in the last 7 days. This includes at work and at home, walking to travel from place to place, and any other walking that you have done solely for recreation, sport, exercise, or leisure.\" ">
 				>
 				["at0015"] = <
-					text = <"How many days per week doing moderate physical activities">
-					description = <"Original question: \"3. During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.\" ">
+					text = <"How many days per week did walking at least 10 minutes">
+					description = <"Original question: \"5. During the last 7 days, on how many days did you walk for at least 10 minutes at a time?\" ">
 				>
 				["at0016"] = <
 					text = <"No moderate physical activities">
-					description = <"in case of no vigorous physical activities this element should be set as true
-If this is true, skip to question 5 (Walking activities)">
+					description = <"in case of no walking this element should be set as true
+If this is true, skip to question 7 (Sitting)">
 				>
 				["at0017"] = <
 					text = <"Time spent doing moderate physical activities">
-					description = <"Original question: \"4. How much time did you usually spend doing moderate physical activities on one of those days?\"">
+					description = <"Original question: \"6. How much time did you usually spend walking on one of those days?\"">
 				>
 				["at0018"] = <
 					text = <"Don't know/not sure about time spent in activities">
-					description = <"if unknown or not sure about the time spent in moderate physical activities, this element should be set as true">
+					description = <"if unknown or not sure about the time spent walking, this element should be set as true">
+				>
+				["at0019"] = <
+					text = <"Sitting">
+					description = <"Section introduction: \"The last question is about the time you spent sitting on weekdays during the last 7 days.  Include time spent at work, at home, while doing course work and during leisure time.  This may include time spent sitting at a desk, visiting friends, reading, or sitting or lying down to watch television.\" ">
+				>
+				["at0022"] = <
+					text = <"Time spent sitting on a week day">
+					description = <"Original question: \"7. During the last 7 days, how much time did you spend sitting on a week day?\"">
+				>
+				["at0023"] = <
+					text = <"Don't know/not sure about time spent sitting">
+					description = <"if unknown or not sure about the time spent walking, this element should be set as true">
+				>
+				["at0024"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0025"] = <
+					text = <"Extension">
+					description = <"">
 				>
 			>
 		>
