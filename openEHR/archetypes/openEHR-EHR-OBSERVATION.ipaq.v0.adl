@@ -50,7 +50,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8f4dc1f50868e804f720068787a28988">
+		["MD5-CAM-1.0.1"] = <"60cdfccdd32684171588674ef328aa84">
 		["build_uid"] = <"3354b9ad-56ec-3273-9b5b-901e9324e72c">
 	>
 
@@ -348,7 +348,7 @@ If this is true, skip to question 7 (Sitting)">
 				>
 				["at0023"] = <
 					text = <"Don't know/not sure about time spent sitting">
-					description = <"if unknown or not sure about the time spent walking, this element should be set as true">
+					description = <"if unknown or not sure about the time spent sitting, this element should be set as true">
 				>
 				["at0024"] = <
 					text = <"Item tree">
@@ -467,7 +467,7 @@ If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0023"] = <
 					text = <"*Don't know/not sure about time spent sitting (en)">
-					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
+					description = <"*if unknown or not sure about the time spent sitting, this element should be set as true (en)">
 				>
 				["at0024"] = <
 					text = <"Item tree">
@@ -516,11 +516,11 @@ Wenn dies zutrifft, fahren Sie mit Frage 3 fort (Mäßige körperliche Aktivitä
 				>
 				["at0007"] = <
 					text = <"Zeit, die mit intensiven körperlichen Aktivitäten verbracht wird">
-					description = <"*Ursprüngliche Frage: \"2. How much time did you usually spend doing vigorous physical activities on one of those days?\" (en)">
+					description = <"Ursprüngliche Frage: \"2.	Wie viel Zeit haben Sie für gewöhnlich an einem dieser Tage mit anstrengender körperlicher Aktivität verbracht?\"">
 				>
 				["at0008"] = <
 					text = <"Weiß nicht/nicht sicher über die Zeit, die für Aktivitäten aufgewendet wird">
-					description = <"*in unknown or not sure about the time spent in vigorous physical activities this element should be set as true (en)">
+					description = <"bei unbekannter oder unsicherer Zeit, die mit intensiven körperlichen Aktivitäten verbracht wird, sollte dieses Element auf wahr gesetzt werden">
 				>
 				["d/wk"] = <
 					text = <"Tage pro Woche">
@@ -536,28 +536,28 @@ Wenn dies zutrifft, fahren Sie mit Frage 3 fort (Mäßige körperliche Aktivitä
 				>
 				["at0009"] = <
 					text = <"Mäßige körperliche Aktivität">
-					description = <"Abschnitt Einführung: \"Think about all the moderate activities that you did in the last 7 days. Moderate activities refer to activities that take moderate physical effort and make you breathe somewhat harder than normal.  Think only about those physical activities that you did for at least 10 minutes at a time.\"  (en)">
+					description = <"Abschnitt Einführung: \"Denken Sie erneut nur an die körperlichen Aktivitäten die Sie für mindestens 10 Minuten ohne Unterbrechung verrichtet haben.\"">
 				>
 				["at0010"] = <
 					text = <"Wie viele Tage pro Woche mit moderater körperlicher Aktivität">
-					description = <"Ursprüngliche Frage: \"3. During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.\"  (en)">
+					description = <"Ursprüngliche Frage: \"3.	An wie vielen der vergangenen 7 Tage haben sie moderate körperliche Aktivitäten, wie das Tragen leichter Lasten, Fahrradfahren bei gewöhnlicher Geschwindigkeit oder Schwimmen bei gewöhnlicher Geschwindigkeit verrichtet? Hierzu zählt nicht zu Fuß gehen.\"">
 				>
 				["at0011"] = <
 					text = <"Keine mäßigen körperlichen Aktivitäten">
-					description = <"*in case of no vigorous physical activities this element should be set as true
-If this is true, skip to question 5 (Walking activities) (en)">
+					description = <"wenn keine intensiven körperlichen Aktivitäten vorhanden sind, sollte dieses Element auf wahr gesetzt werden
+Wenn dies zutrifft, fahren Sie mit Frage 5 (Wanderaktivitäten) fort.">
 				>
 				["at0012"] = <
 					text = <"Zeitaufwand für moderate körperliche Aktivitäten">
-					description = <"Ursprüngliche Frage: \"4.Wie viel Zeit haben Sie für gewöhnlich an einem dieser Tage mit moderater körperlicher Aktivität verbracht?\"">
+					description = <"Ursprüngliche Frage: \"4. Wie viel Zeit haben Sie für gewöhnlich an einem dieser Tage mit moderater körperlicher Aktivität verbracht?\"">
 				>
 				["at0013"] = <
 					text = <"Weiß nicht/nicht sicher über die Zeit, die für Aktivitäten aufgewendet wird">
-					description = <"*if unknown or not sure about the time spent in moderate physical activities, this element should be set as true (en)">
+					description = <"wenn die Zeit, die mit mäßigen körperlichen Aktivitäten verbracht wird, unbekannt oder nicht sicher ist, sollte dieses Element auf wahr gesetzt werden">
 				>
 				["at0014"] = <
 					text = <"Gehen">
-					description = <"Abschnitt Einführung: \"Think about the time you spent walking in the last 7 days. This includes at work and at home, walking to travel from place to place, and any other walking that you have done solely for recreation, sport, exercise, or leisure.\"  (en)">
+					description = <"Abschnitt Einführung: \"Denken Sie an die Zeit, die Sie in den letzten 7 Tagen zu Fuß verbracht haben. Dazu gehören bei der Arbeit und zu Hause, Gehen, um von Ort zu Ort zu reisen, und alle anderen Spaziergänge, die Sie ausschließlich zur Erholung, zum Sport, zur Bewegung oder zur Freizeit unternommen haben.\"">
 				>
 				["at0015"] = <
 					text = <"An wie vielen Tagen pro Woche sind Sie mindestens 10 Minuten zu Fuß gegangen?">
@@ -565,8 +565,8 @@ If this is true, skip to question 5 (Walking activities) (en)">
 				>
 				["at0016"] = <
 					text = <"Kein Gehen">
-					description = <"*in case of no walking this element should be set as true
-If this is true, skip to question 7 (Sitting) (en)">
+					description = <"im Falle von Nicht-Gehen sollte dieses Element auf wahr gesetzt werden
+Wenn dies zutrifft, fahren Sie mit Frage 7 (Sitzen) fort.">
 				>
 				["at0017"] = <
 					text = <"Zeit, die mit Gehen verbracht wird">
@@ -574,7 +574,7 @@ If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0018"] = <
 					text = <"Weiß nicht/nicht sicher, wie viel Zeit mit Gehen verbracht wird">
-					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
+					description = <"wenn die Gehzeit unbekannt oder nicht sicher ist, sollte dieses Element auf wahr gesetzt werden">
 				>
 				["at0019"] = <
 					text = <"Sitzend">
@@ -586,7 +586,7 @@ If this is true, skip to question 7 (Sitting) (en)">
 				>
 				["at0023"] = <
 					text = <"Weiß nicht/nicht sicher über die im Sitzen verbrachte Zeit">
-					description = <"*if unknown or not sure about the time spent walking, this element should be set as true (en)">
+					description = <"Wenn die Sitzzeit unbekannt oder nicht sicher ist, sollte dieses Element auf wahr gesetzt werden">
 				>
 				["at0024"] = <
 					text = <"Item tree">
