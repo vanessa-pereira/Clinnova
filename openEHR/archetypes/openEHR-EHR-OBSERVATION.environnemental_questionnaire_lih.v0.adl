@@ -1,0 +1,777 @@
+archetype (adl_version=1.4; uid=b96c1174-0f54-457a-a194-ba2a77e1ad6c)
+	openEHR-EHR-OBSERVATION.environnemental_questionnaire_lih.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-11-02">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
+		["MD5-CAM-1.0.1"] = <"164a3ecf5f92c57f8907ca547451a522">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- CLINNOVA Environnemental Questionnaire (EQ)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Pesticides in non-work settings
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0006] occurrences matches {0..1} matches {    -- Ever used chemicals to kill organisms in or around home
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0007,    -- Yes
+															at0008,    -- No
+															at0009,    -- Don't know
+															at0010]    -- Refused
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- Pesticides at work
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0011] occurrences matches {0..1} matches {    -- Ever had a job where used or was exposed to pesticide
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0007,    -- Yes
+															at0008,    -- No
+															at0009,    -- Don't know
+															at0010]    -- Refused
+														}
+													}
+												}
+											}
+										}
+									}
+									CLUSTER[at0013] occurrences matches {0..1} matches {    -- Residential history
+										items cardinality matches {1..*; unordered} matches {
+											CLUSTER[at0014] occurrences matches {0..1} matches {    -- Longest from birth to age 17y
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0030] occurrences matches {0..1} matches {    -- Address data
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0015] occurrences matches {0..1} matches {    -- City/Town
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0017] occurrences matches {0..1} matches {    -- Zip code
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0016] occurrences matches {0..1} matches {    -- State
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0018] occurrences matches {0..1} matches {    -- Country
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													ELEMENT[at0019] occurrences matches {0..1} matches {    -- Location size
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0020,    -- Large city (>250,000 people)
+																	at0021,    -- Suburb of a large city
+																	at0022,    -- Midsized city (100,000-250,000 people)
+																	at0023,    -- Large town (25,000-99,999 people)
+																	at0024,    -- Small  town (2,500-24,999 people)
+																	at0025,    -- Rural, farm
+																	at0026]    -- Rural, non-farm
+																}
+															}
+														}
+													}
+													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Main source of water in residence was from private well?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0028] occurrences matches {0..1} matches {    -- Residence located near farm fields (within 1/4 mile)?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0029] occurrences matches {0..1} matches {    -- Pesticide spraying at or around this residence?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0031] occurrences matches {0..1} matches {    -- How often did the spraying happen?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0032,    -- <1 time per year
+																	at0033,    -- 1-3 times per year
+																	at0034,    -- 4-10 times per year
+																	at0035,    -- >10 times per year
+																	at0036]    -- Don’t know
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0037] occurrences matches {0..1} matches {    -- Longest from age 18 to 25y
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0038] occurrences matches {0..1} matches {    -- Address data
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0039] occurrences matches {0..1} matches {    -- City/Town
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0040] occurrences matches {0..1} matches {    -- Zip code
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0041] occurrences matches {0..1} matches {    -- State
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0042] occurrences matches {0..1} matches {    -- Country
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													ELEMENT[at0043] occurrences matches {0..1} matches {    -- Location size
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0020,    -- Large city (>250,000 people)
+																	at0021,    -- Suburb of a large city
+																	at0022,    -- Midsized city (100,000-250,000 people)
+																	at0023,    -- Large town (25,000-99,999 people)
+																	at0024,    -- Small  town (2,500-24,999 people)
+																	at0025,    -- Rural, farm
+																	at0026]    -- Rural, non-farm
+																}
+															}
+														}
+													}
+													ELEMENT[at0051] occurrences matches {0..1} matches {    -- Main source of water in residence was from private well?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0056] occurrences matches {0..1} matches {    -- Residence located near farm fields (within 1/4 mile)?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0061] occurrences matches {0..1} matches {    -- Pesticide spraying at or around this residence?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0066] occurrences matches {0..1} matches {    -- How often did the spraying happen?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0032,    -- <1 time per year
+																	at0033,    -- 1-3 times per year
+																	at0034,    -- 4-10 times per year
+																	at0035,    -- >10 times per year
+																	at0036]    -- Don’t know
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0067] occurrences matches {0..1} matches {    -- Longest from age 26 to 35y
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0068] occurrences matches {0..1} matches {    -- Address data
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0069] occurrences matches {0..1} matches {    -- City/Town
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0070] occurrences matches {0..1} matches {    -- Zip code
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0071] occurrences matches {0..1} matches {    -- State
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0072] occurrences matches {0..1} matches {    -- Country
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													ELEMENT[at0073] occurrences matches {0..1} matches {    -- Location size
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0020,    -- Large city (>250,000 people)
+																	at0021,    -- Suburb of a large city
+																	at0022,    -- Midsized city (100,000-250,000 people)
+																	at0023,    -- Large town (25,000-99,999 people)
+																	at0024,    -- Small  town (2,500-24,999 people)
+																	at0025,    -- Rural, farm
+																	at0026]    -- Rural, non-farm
+																}
+															}
+														}
+													}
+													ELEMENT[at0081] occurrences matches {0..1} matches {    -- Main source of water in residence was from private well?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0086] occurrences matches {0..1} matches {    -- Residence located near farm fields (within 1/4 mile)?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0091] occurrences matches {0..1} matches {    -- Pesticide spraying at or around this residence?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0096] occurrences matches {0..1} matches {    -- How often did the spraying happen?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0032,    -- <1 time per year
+																	at0033,    -- 1-3 times per year
+																	at0034,    -- 4-10 times per year
+																	at0035,    -- >10 times per year
+																	at0036]    -- Don’t know
+																}
+															}
+														}
+													}
+												}
+											}
+											CLUSTER[at0097] occurrences matches {0..1} matches {    -- Longest from age 36 to 45y
+												items cardinality matches {1..*; unordered} matches {
+													CLUSTER[at0098] occurrences matches {0..1} matches {    -- Address data
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0099] occurrences matches {0..1} matches {    -- City/Town
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0100] occurrences matches {0..1} matches {    -- Zip code
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0101] occurrences matches {0..1} matches {    -- State
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0102] occurrences matches {0..1} matches {    -- Country
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													ELEMENT[at0103] occurrences matches {0..1} matches {    -- Location size
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0020,    -- Large city (>250,000 people)
+																	at0021,    -- Suburb of a large city
+																	at0022,    -- Midsized city (100,000-250,000 people)
+																	at0023,    -- Large town (25,000-99,999 people)
+																	at0024,    -- Small  town (2,500-24,999 people)
+																	at0025,    -- Rural, farm
+																	at0026]    -- Rural, non-farm
+																}
+															}
+														}
+													}
+													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Main source of water in residence was from private well?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0116] occurrences matches {0..1} matches {    -- Residence located near farm fields (within 1/4 mile)?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0121] occurrences matches {0..1} matches {    -- Pesticide spraying at or around this residence?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0126] occurrences matches {0..1} matches {    -- How often did the spraying happen?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0032,    -- <1 time per year
+																	at0033,    -- 1-3 times per year
+																	at0034,    -- 4-10 times per year
+																	at0035,    -- >10 times per year
+																	at0036]    -- Don’t know
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0012] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"CLINNOVA Environnemental Questionnaire (EQ)">
+					description = <"environnemental_questionnaire_lih">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Pesticides in non-work settings">
+					description = <"Section introduction: \"The following questions ask about chemicals you may have used at home during different periods of your life.  Please answer these questions to the best of your ability.\"">
+				>
+				["at0005"] = <
+					text = <"Pesticides at work">
+					description = <"Section introduction: \"The following questions ask about chemicals you may have used at work during different periods of your life. Please answer these questions to the best of your ability.\"">
+				>
+				["at0006"] = <
+					text = <"Ever used chemicals to kill organisms in or around home">
+					description = <"Original question: \"1. During your lifetime, did you or someone else ever use chemicals to kill insects, other pests, plants, weeds, mold, or mildew in or around any house or apartment where you lived?  Include chemicals used in the house, on the lawn or garden, or on pets.\"">
+					EQ = <"PHIntro">
+				>
+				["at0007"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Don't know">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Refused">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Ever had a job where used or was exposed to pesticide">
+					description = <"Original question: \"2. Over your lifetime, have you ever had a JOB in which you mixed, applied, or were exposed in some other way to any type of pesticide, including herbicides (kill weeds), fungicides (kill fungus/mold), insecticides (kill insects), rodenticides (kill rats/mice), or fumigants (gas used to kill fungus/mold or insects)?\"">
+					EQ = <"PWIntro">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Residential history">
+					description = <"Section introduction: \"The following questions ask you about the places you have lived throughout your lifetime.  Please provide just one residence for each age period listed. If you moved during the age period, answer the questions for the residence at which you lived the longest.\"">
+				>
+				["at0014"] = <
+					text = <"Longest from birth to age 17y">
+					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+				>
+				["at0015"] = <
+					text = <"City/Town">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"State">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Zip code">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Country">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Location size">
+					description = <"">
+					EQ = <"RsA2">
+				>
+				["at0020"] = <
+					text = <"Large city (>250,000 people)">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Suburb of a large city">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Midsized city (100,000-250,000 people)">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Large town (25,000-99,999 people)">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Small  town (2,500-24,999 people)">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Rural, farm">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Rural, non-farm">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Main source of water in residence was from private well?">
+					description = <"">
+					EQ = <"RsA3">
+				>
+				["at0028"] = <
+					text = <"Residence located near farm fields (within 1/4 mile)?">
+					description = <"">
+					EQ = <"RsA4">
+				>
+				["at0029"] = <
+					text = <"Pesticide spraying at or around this residence?">
+					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					EQ = <"RsA5">
+				>
+				["at0030"] = <
+					text = <"Address data">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"How often did the spraying happen?">
+					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+					EQ = <"RsA5a">
+				>
+				["at0032"] = <
+					text = <"<1 time per year">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"1-3 times per year">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"4-10 times per year">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <">10 times per year">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Don’t know">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Longest from age 18 to 25y">
+					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+				>
+				["at0038"] = <
+					text = <"Address data">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"City/Town">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Zip code">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"State">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Country">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Location size">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Main source of water in residence was from private well?">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Residence located near farm fields (within 1/4 mile)?">
+					description = <"">
+				>
+				["at0061"] = <
+					text = <"Pesticide spraying at or around this residence?">
+					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+				>
+				["at0066"] = <
+					text = <"How often did the spraying happen?">
+					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+				>
+				["at0067"] = <
+					text = <"Longest from age 26 to 35y">
+					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+				>
+				["at0068"] = <
+					text = <"Address data">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"City/Town">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Zip code">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"State">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Country">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Location size">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Main source of water in residence was from private well?">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Residence located near farm fields (within 1/4 mile)?">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Pesticide spraying at or around this residence?">
+					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+				>
+				["at0096"] = <
+					text = <"How often did the spraying happen?">
+					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+				>
+				["at0097"] = <
+					text = <"Longest from age 36 to 45y">
+					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+				>
+				["at0098"] = <
+					text = <"Address data">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"City/Town">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Zip code">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"State">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Country">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Location size">
+					description = <"">
+				>
+				["at0111"] = <
+					text = <"Main source of water in residence was from private well?">
+					description = <"">
+				>
+				["at0116"] = <
+					text = <"Residence located near farm fields (within 1/4 mile)?">
+					description = <"">
+				>
+				["at0121"] = <
+					text = <"Pesticide spraying at or around this residence?">
+					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+				>
+				["at0126"] = <
+					text = <"How often did the spraying happen?">
+					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+				>
+			>
+		>
+	>
