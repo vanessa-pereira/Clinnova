@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
-		["MD5-CAM-1.0.1"] = <"164a3ecf5f92c57f8907ca547451a522">
+		["MD5-CAM-1.0.1"] = <"29f8e391512b545c92a4b9d1d9969d9d">
 	>
 
 definition
@@ -368,6 +368,11 @@ definition
 											}
 											CLUSTER[at0097] occurrences matches {0..1} matches {    -- Longest from age 36 to 45y
 												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0127] occurrences matches {0..1} matches {    -- Age less than 36y?
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
 													CLUSTER[at0098] occurrences matches {0..1} matches {    -- Address data
 														items cardinality matches {1..*; unordered} matches {
 															ELEMENT[at0099] occurrences matches {0..1} matches {    -- City/Town
@@ -463,6 +468,108 @@ definition
 													}
 												}
 											}
+											CLUSTER[at0128] occurrences matches {0..1} matches {    -- Longest from age 46 to 55y
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0129] occurrences matches {0..1} matches {    -- Age less than 46y?
+														value matches {
+															DV_BOOLEAN matches {*}
+														}
+													}
+													CLUSTER[at0130] occurrences matches {0..1} matches {    -- Address data
+														items cardinality matches {1..*; unordered} matches {
+															ELEMENT[at0131] occurrences matches {0..1} matches {    -- City/Town
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0132] occurrences matches {0..1} matches {    -- Zip code
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0133] occurrences matches {0..1} matches {    -- State
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+															ELEMENT[at0134] occurrences matches {0..1} matches {    -- Country
+																value matches {
+																	DV_TEXT matches {*}
+																}
+															}
+														}
+													}
+													ELEMENT[at0135] occurrences matches {0..1} matches {    -- Location size
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0020,    -- Large city (>250,000 people)
+																	at0021,    -- Suburb of a large city
+																	at0022,    -- Midsized city (100,000-250,000 people)
+																	at0023,    -- Large town (25,000-99,999 people)
+																	at0024,    -- Small  town (2,500-24,999 people)
+																	at0025,    -- Rural, farm
+																	at0026]    -- Rural, non-farm
+																}
+															}
+														}
+													}
+													ELEMENT[at0143] occurrences matches {0..1} matches {    -- Main source of water in residence was from private well?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0148] occurrences matches {0..1} matches {    -- Residence located near farm fields (within 1/4 mile)?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0153] occurrences matches {0..1} matches {    -- Pesticide spraying at or around this residence?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0158] occurrences matches {0..1} matches {    -- How often did the spraying happen?
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0032,    -- <1 time per year
+																	at0033,    -- 1-3 times per year
+																	at0034,    -- 4-10 times per year
+																	at0035,    -- >10 times per year
+																	at0036]    -- Don’t know
+																}
+															}
+														}
+													}
+												}
+											}
 										}
 									}
 								}
@@ -483,7 +590,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"CLINNOVA Environnemental Questionnaire (EQ)">
-					description = <"environnemental_questionnaire_lih">
+					description = <"CLINNOVA Environnemental Questionnaire (EQ)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -771,6 +878,60 @@ ontology
 					text = <"How often did the spraying happen?">
 					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
 					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+				>
+				["at0127"] = <
+					text = <"Age less than 36y?">
+					description = <"Original question: \"If current age is less than 36, check this box 0 and SKIP TO QUESTION 38.\"">
+					EQ = <"RsLT36">
+				>
+				["at0128"] = <
+					text = <"Longest from age 46 to 55y">
+					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+				>
+				["at0129"] = <
+					text = <"Age less than 46y?">
+					description = <"Original question: \"If current age is less than 36, check this box 0 and SKIP TO QUESTION 38.\"">
+				>
+				["at0130"] = <
+					text = <"Address data">
+					description = <"">
+				>
+				["at0131"] = <
+					text = <"City/Town">
+					description = <"">
+				>
+				["at0132"] = <
+					text = <"Zip code">
+					description = <"">
+				>
+				["at0133"] = <
+					text = <"State">
+					description = <"">
+				>
+				["at0134"] = <
+					text = <"Country">
+					description = <"">
+				>
+				["at0143"] = <
+					text = <"Main source of water in residence was from private well?">
+					description = <"">
+				>
+				["at0148"] = <
+					text = <"Residence located near farm fields (within 1/4 mile)?">
+					description = <"">
+				>
+				["at0153"] = <
+					text = <"Pesticide spraying at or around this residence?">
+					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+				>
+				["at0158"] = <
+					text = <"How often did the spraying happen?">
+					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+				>
+				["at0135"] = <
+					text = <"Location size">
+					description = <"">
 				>
 			>
 		>
