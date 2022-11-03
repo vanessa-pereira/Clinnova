@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"55c8abc64e22a09157da5829377b6199">
+		["MD5-CAM-1.0.1"] = <"f94ea0f0049ce0ffccdd984b735b9f26">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -1187,6 +1187,7 @@ ontology
 				["at0132"] = <
 					text = <"Zip code">
 					description = <"">
+					EQ = <"RsE1Zip">
 				>
 				["at0133"] = <
 					text = <"State">
@@ -1196,27 +1197,29 @@ ontology
 				["at0134"] = <
 					text = <"Country">
 					description = <"">
+					EQ = <"RsE1Country">
 				>
 				["at0143"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"Original question: \" \"">
+					description = <"Original question: \"25. Was your main source of drinking water at this residence a private well?\"">
 				>
 				["at0148"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"Original question: \" \"">
+					description = <"Original question: \"26. Was this residence located near farm fields (within 1/4 mile)?\"">
 				>
 				["at0153"] = <
 					text = <"Pesticide spraying at or around this residence?">
-					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					description = <"Original question:\"27. Was there pesticide spraying at or around this residence when you lived there?\"">
 				>
 				["at0158"] = <
 					text = <"How often did the spraying happen?">
-					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
-					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+					description = <"Original question: \"E5a)  How often did the spraying happen?\"">
+					comment = <"Only to be filled up if the question \"27. Was there pesticide spraying at or around this residence when you lived there?  [RsE5]\" was replied as \"Yes\".">
 				>
 				["at0135"] = <
 					text = <"Location size">
-					description = <"Original question: \" \"">
+					description = <"Original question: \"24. At the time you lived there, was this residence located in a … \"">
+					EQ = <"RsE2">
 				>
 				["at0159"] = <
 					text = <"Longest from age 56 to 65y">
