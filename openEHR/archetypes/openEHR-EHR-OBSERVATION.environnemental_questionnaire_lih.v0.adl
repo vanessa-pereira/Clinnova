@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"744c963652433d40335b85c7ef132506">
+		["MD5-CAM-1.0.1"] = <"7f620a5221469232ad5c20de39f71719">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -806,6 +806,11 @@ definition
 																	>
 																>
 															>
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::at0009]    -- Don't know
+																}
+															}
 														}
 													}
 												}
