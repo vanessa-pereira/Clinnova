@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ad3dfc36812cf4be877268edf6ddd6aa">
+		["MD5-CAM-1.0.1"] = <"744c963652433d40335b85c7ef132506">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -774,6 +774,42 @@ definition
 													}
 												}
 											}
+											CLUSTER[at0221] occurrences matches {0..1} matches {    -- Group living situation
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0222] occurrences matches {0..1} matches {    -- During childhood and young adulthoold (25y) ever lived in a group living situation
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0007,    -- Yes
+																	at0008,    -- No
+																	at0009,    -- Don't know
+																	at0010]    -- Refused
+																}
+															}
+														}
+													}
+													ELEMENT[at0223] occurrences matches {0..1} matches {    -- For how long lived in that situation
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::128]>
+																list = <
+																	["1"] = <
+																		units = <"mo">
+																		units_system = <"http://unitsofmeasure.org">
+																		units_display_name = <"mo">
+																	>
+																	["2"] = <
+																		units = <"a">
+																		units_system = <"http://unitsofmeasure.org">
+																		units_display_name = <"yr">
+																	>
+																>
+															>
+														}
+													}
+												}
+											}
 										}
 									}
 								}
@@ -1234,6 +1270,26 @@ ontology
 					text = <"How often did the spraying happen?">
 					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
 					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+				>
+				["at0221"] = <
+					text = <"Group living situation">
+					description = <"">
+				>
+				["at0222"] = <
+					text = <"During childhood and young adulthoold (25y) ever lived in a group living situation">
+					description = <"">
+				>
+				["at0223"] = <
+					text = <"For how long lived in that situation">
+					description = <"">
+				>
+				["mo"] = <
+					text = <"months">
+					description = <"month">
+				>
+				["a"] = <
+					text = <"years">
+					description = <"year">
 				>
 			>
 		>
