@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7f620a5221469232ad5c20de39f71719">
+		["MD5-CAM-1.0.1"] = <"55c8abc64e22a09157da5829377b6199">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -84,12 +84,12 @@ definition
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0017] occurrences matches {0..1} matches {    -- Zip code
+															ELEMENT[at0016] occurrences matches {0..1} matches {    -- State
 																value matches {
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0016] occurrences matches {0..1} matches {    -- State
+															ELEMENT[at0017] occurrences matches {0..1} matches {    -- Zip code
 																value matches {
 																	DV_TEXT matches {*}
 																}
@@ -181,12 +181,12 @@ definition
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0040] occurrences matches {0..1} matches {    -- Zip code
+															ELEMENT[at0041] occurrences matches {0..1} matches {    -- State
 																value matches {
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0041] occurrences matches {0..1} matches {    -- State
+															ELEMENT[at0040] occurrences matches {0..1} matches {    -- Zip code
 																value matches {
 																	DV_TEXT matches {*}
 																}
@@ -278,12 +278,12 @@ definition
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0070] occurrences matches {0..1} matches {    -- Zip code
+															ELEMENT[at0071] occurrences matches {0..1} matches {    -- State
 																value matches {
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0071] occurrences matches {0..1} matches {    -- State
+															ELEMENT[at0070] occurrences matches {0..1} matches {    -- Zip code
 																value matches {
 																	DV_TEXT matches {*}
 																}
@@ -380,12 +380,12 @@ definition
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0100] occurrences matches {0..1} matches {    -- Zip code
+															ELEMENT[at0101] occurrences matches {0..1} matches {    -- State
 																value matches {
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0101] occurrences matches {0..1} matches {    -- State
+															ELEMENT[at0100] occurrences matches {0..1} matches {    -- Zip code
 																value matches {
 																	DV_TEXT matches {*}
 																}
@@ -482,12 +482,12 @@ definition
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0132] occurrences matches {0..1} matches {    -- Zip code
+															ELEMENT[at0133] occurrences matches {0..1} matches {    -- State
 																value matches {
 																	DV_TEXT matches {*}
 																}
 															}
-															ELEMENT[at0133] occurrences matches {0..1} matches {    -- State
+															ELEMENT[at0132] occurrences matches {0..1} matches {    -- Zip code
 																value matches {
 																	DV_TEXT matches {*}
 																}
@@ -825,7 +825,14 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0012] matches {*}    -- Item tree
+			ITEM_TREE[at0012] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0224] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
 		}
 	}
 
@@ -898,22 +905,26 @@ ontology
 				["at0015"] = <
 					text = <"City/Town">
 					description = <"">
+					EQ = <"RsA1City">
 				>
 				["at0016"] = <
 					text = <"State">
 					description = <"">
+					EQ = <"RsA1State">
 				>
 				["at0017"] = <
 					text = <"Zip code">
 					description = <"">
+					EQ = <"RsA1Zip">
 				>
 				["at0018"] = <
 					text = <"Country">
 					description = <"">
+					EQ = <"RsA1Country">
 				>
 				["at0019"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \"4. At the time you lived there, was this residence located in a …\"">
 					EQ = <"RsA2">
 				>
 				["at0020"] = <
@@ -946,12 +957,12 @@ ontology
 				>
 				["at0027"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \"5. Was your main source of drinking water at this residence a private well\"">
 					EQ = <"RsA3">
 				>
 				["at0028"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \"6. Was this residence located near farm fields (within 1/4 mile)?\"">
 					EQ = <"RsA4">
 				>
 				["at0029"] = <
@@ -965,7 +976,7 @@ ontology
 				>
 				["at0031"] = <
 					text = <"How often did the spraying happen?">
-					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					description = <"Original question: \"B5a) How often did the spraying happen?\"\"">
 					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
 					EQ = <"RsA5a">
 				>
@@ -991,7 +1002,7 @@ ontology
 				>
 				["at0037"] = <
 					text = <"Longest from age 18 to 25y">
-					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+					description = <"Original question:\"8. From age 18 through age 25, where did you live for the longest time? \"">
 				>
 				["at0038"] = <
 					text = <"Address data">
@@ -1000,43 +1011,52 @@ ontology
 				["at0039"] = <
 					text = <"City/Town">
 					description = <"">
+					EQ = <"RsB1City">
 				>
 				["at0040"] = <
 					text = <"Zip code">
 					description = <"">
+					EQ = <"RsB1Zip">
 				>
 				["at0041"] = <
 					text = <"State">
 					description = <"">
+					EQ = <"RsB1State">
 				>
 				["at0042"] = <
 					text = <"Country">
 					description = <"">
+					EQ = <"RsB1Country">
 				>
 				["at0043"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \"9. At the time you lived there, was this residence located in a … \"">
+					EQ = <"RsB2">
 				>
 				["at0051"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \"10. Was your main source of drinking water at this residence a private well?  \"">
+					EQ = <"RsB3">
 				>
 				["at0056"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \"11. Was this residence located near farm fields (within 1/4 mile)?\"">
+					EQ = <"RsB4">
 				>
 				["at0061"] = <
 					text = <"Pesticide spraying at or around this residence?">
-					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					description = <"Original question:\"12. Was there pesticide spraying at or around this residence when you lived there?\"">
+					EQ = <"RsB4">
 				>
 				["at0066"] = <
 					text = <"How often did the spraying happen?">
-					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
-					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+					description = <"Original question: \"B5a) How often did the spraying happen?\"">
+					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsB5]\" was replied as \"Yes\".">
+					EQ = <"RsB5">
 				>
 				["at0067"] = <
 					text = <"Longest from age 26 to 35y">
-					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+					description = <"Original question:\"13. From age 26 through age 35, where did you live for the longest time?\"">
 				>
 				["at0068"] = <
 					text = <"Address data">
@@ -1045,43 +1065,52 @@ ontology
 				["at0069"] = <
 					text = <"City/Town">
 					description = <"">
+					EQ = <"RsC1City">
 				>
 				["at0070"] = <
 					text = <"Zip code">
 					description = <"">
+					EQ = <"RsC1Zip">
 				>
 				["at0071"] = <
 					text = <"State">
 					description = <"">
+					EQ = <"RsC1State">
 				>
 				["at0072"] = <
 					text = <"Country">
 					description = <"">
+					EQ = <"RsC1Country">
 				>
 				["at0073"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \"14. At the time you lived there, was this residence located in a …\"">
+					EQ = <"RsC2">
 				>
 				["at0081"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \"14. At the time you lived there, was this residence located in a …\"">
+					EQ = <"RsC3">
 				>
 				["at0086"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \"16. Was this residence located near farm fields (within 1/4 mile)?\"">
+					EQ = <"RsC4">
 				>
 				["at0091"] = <
 					text = <"Pesticide spraying at or around this residence?">
-					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					description = <"Original question:\"17. Was there pesticide spraying at or around this residence when you lived there?\"">
+					EQ = <"RsC5">
 				>
 				["at0096"] = <
 					text = <"How often did the spraying happen?">
-					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
-					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+					description = <"Original question: \"C5a)  How often did the spraying happen?\"">
+					comment = <"Only to be filled up if the question \"17. Was there pesticide spraying at or around this residence when you lived there?  [RsC5]\" was replied as \"Yes\".">
+					EQ = <"RsC5a">
 				>
 				["at0097"] = <
 					text = <"Longest from age 36 to 45y">
-					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+					description = <"Original question:\"18. From age 36 through age 45, where did you live for the longest time?\"">
 				>
 				["at0098"] = <
 					text = <"Address data">
@@ -1090,52 +1119,61 @@ ontology
 				["at0099"] = <
 					text = <"City/Town">
 					description = <"">
+					EQ = <"RsD1City">
 				>
 				["at0100"] = <
 					text = <"Zip code">
 					description = <"">
+					EQ = <"RsD1Zip">
 				>
 				["at0101"] = <
 					text = <"State">
 					description = <"">
+					EQ = <"RsD1State">
 				>
 				["at0102"] = <
 					text = <"Country">
 					description = <"">
+					EQ = <"RsD1Country">
 				>
 				["at0103"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \"19. At the time you lived there, was this residence located in a …\"">
+					EQ = <"RsD2">
 				>
 				["at0111"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \"20. Was your main source of drinking water at this residence a private well?\"">
+					EQ = <"RsD3">
 				>
 				["at0116"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \"21. Was this residence located near farm fields (within 1/4 mile)\"">
+					EQ = <"RsD4">
 				>
 				["at0121"] = <
 					text = <"Pesticide spraying at or around this residence?">
-					description = <"Original question:\"7. Was there pesticide spraying at or around this residence when you lived there?\"">
+					description = <"Original question: \"22. Was there pesticide spraying at or around this residence when you lived there?\"">
+					EQ = <"RsD5">
 				>
 				["at0126"] = <
 					text = <"How often did the spraying happen?">
-					description = <"Original question: \"7. Was there pesticide spraying at or around this residence when you lived there?\"">
-					comment = <"Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\".">
+					description = <"Original question: \"D5a)  How often did the spraying happen\"">
+					comment = <"Only to be filled up if the question \"22. Was there pesticide spraying at or around this residence when you lived there?  [RsD5]\" was replied as \"Yes\".">
+					EQ = <"RsD5a">
 				>
 				["at0127"] = <
 					text = <"Age less than 36y?">
-					description = <"Original question: \"If current age is less than 36, check this box 0 and SKIP TO QUESTION 38.\"">
+					description = <"Original question: \"If current age is less than 36, check this box and SKIP TO QUESTION 38.\"">
 					EQ = <"RsLT36">
 				>
 				["at0128"] = <
 					text = <"Longest from age 46 to 55y">
-					description = <"Original question:\"3. From birth through age 17, where did you live for the longest time?\"">
+					description = <"Original question:\"23. From age 46 to 55, where did you live for the longest time? \"">
 				>
 				["at0129"] = <
 					text = <"Age less than 46y?">
-					description = <"Original question: \"If current age is less than 36, check this box 0 and SKIP TO QUESTION 38.\"">
+					description = <"Original question: \"If current age is less than 46, check this box and SKIP TO QUESTION 38.\"">
 				>
 				["at0130"] = <
 					text = <"Address data">
@@ -1144,6 +1182,7 @@ ontology
 				["at0131"] = <
 					text = <"City/Town">
 					description = <"">
+					EQ = <"RsE1City">
 				>
 				["at0132"] = <
 					text = <"Zip code">
@@ -1152,6 +1191,7 @@ ontology
 				["at0133"] = <
 					text = <"State">
 					description = <"">
+					EQ = <"RsE1State">
 				>
 				["at0134"] = <
 					text = <"Country">
@@ -1159,11 +1199,11 @@ ontology
 				>
 				["at0143"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0148"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0153"] = <
 					text = <"Pesticide spraying at or around this residence?">
@@ -1176,7 +1216,7 @@ ontology
 				>
 				["at0135"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0159"] = <
 					text = <"Longest from age 56 to 65y">
@@ -1208,15 +1248,15 @@ ontology
 				>
 				["at0166"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0174"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0179"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0184"] = <
 					text = <"Pesticide spraying at or around this residence?">
@@ -1257,15 +1297,15 @@ ontology
 				>
 				["at0197"] = <
 					text = <"Location size">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0205"] = <
 					text = <"Main source of water in residence was from private well?">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0210"] = <
 					text = <"Residence located near farm fields (within 1/4 mile)?">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0215"] = <
 					text = <"Pesticide spraying at or around this residence?">
@@ -1278,15 +1318,15 @@ ontology
 				>
 				["at0221"] = <
 					text = <"Group living situation">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0222"] = <
 					text = <"During childhood and young adulthoold (25y) ever lived in a group living situation">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["at0223"] = <
 					text = <"For how long lived in that situation">
-					description = <"">
+					description = <"Original question: \" \"">
 				>
 				["mo"] = <
 					text = <"months">
@@ -1295,6 +1335,10 @@ ontology
 				["a"] = <
 					text = <"years">
 					description = <"year">
+				>
+				["at0224"] = <
+					text = <"Extension">
+					description = <"">
 				>
 			>
 		>
