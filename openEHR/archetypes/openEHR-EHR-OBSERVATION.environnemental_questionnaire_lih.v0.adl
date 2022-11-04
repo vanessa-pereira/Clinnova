@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=b96c1174-0f54-457a-a194-ba2a77e1ad6c)
-	openEHR-EHR-OBSERVATION.environnemental_questionnaire_lih.v0
+	openEHR-EHR-OBSERVATION.environmental_questionnaire_lih.v0
 
 concept
 	[at0000]
@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -46,12 +46,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a08a199de0d45e0d78fbf056085c8856">
+		["MD5-CAM-1.0.1"] = <"8695d514def4e32a4a5f5c0727814bb6">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- CLINNOVA Environnemental Questionnaire (EQ)
+	OBSERVATION[at0000] matches {    -- CLINNOVA Environmental Questionnaire (EQ)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -861,7 +861,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"CLINNOVA Environnemental Questionnaire (EQ)">
+					text = <"CLINNOVA Environmental Questionnaire (EQ)">
 					description = <"CLINNOVA Environnemental Questionnaire (EQ)">
 				>
 				["at0001"] = <
@@ -1395,7 +1395,7 @@ ontology
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*CLINNOVA Environnemental Questionnaire (EQ) (en)">
+					text = <"*CLINNOVA Environmental Questionnaire (EQ) (en)">
 					description = <"*CLINNOVA Environnemental Questionnaire (EQ) (en)">
 				>
 				["at0001"] = <
@@ -1858,7 +1858,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*CLINNOVA Environnemental Questionnaire (EQ) (en)">
+					text = <"*CLINNOVA Environmental Questionnaire (EQ) (en)">
 					description = <"*CLINNOVA Environnemental Questionnaire (EQ) (en)">
 				>
 				["at0001"] = <
