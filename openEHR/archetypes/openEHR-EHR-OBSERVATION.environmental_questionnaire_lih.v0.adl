@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"51a13f39f2d02f799f424d5b5d2623f6">
+		["MD5-CAM-1.0.1"] = <"0092209f912380d269095dd906047221">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -1918,15 +1918,15 @@ ontology
 					description = <"Ursprüngliche Frage: \"3. Wo haben Sie von Geburt bis zum Alter von 17 Jahren am längsten gewohnt?\"">
 				>
 				["at0015"] = <
-					text = <"Postleitzahl">
-					description = <"">
-				>
-				["at0016"] = <
 					text = <"Stadt/Ort">
 					description = <"">
 				>
-				["at0017"] = <
+				["at0016"] = <
 					text = <"Bundesland/Provinz">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Postleitzahl">
 					description = <"">
 				>
 				["at0018"] = <
