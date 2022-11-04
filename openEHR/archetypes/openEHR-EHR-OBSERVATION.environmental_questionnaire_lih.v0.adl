@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"951c0e9fb817ede603aaefe4ef5faa40">
+		["MD5-CAM-1.0.1"] = <"4d8a2e805cde2f638baa312282a7ae59">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -1866,7 +1866,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*Any event (en)">
+					text = <"Jedes Ereignis">
 					description = <"">
 				>
 				["at0003"] = <
@@ -1975,7 +1975,7 @@ ontology
 				>
 				["at0029"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage: \"7. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage: \"7. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0030"] = <
 					text = <"Adressdaten">
@@ -1983,8 +1983,8 @@ ontology
 				>
 				["at0031"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage: \"B5a) How often did the spraying happen?\"">
-					comment = <"*Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsA5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage: \"B5a) Wie oft wurde gesprüht?\"">
+					comment = <"Nur auszufüllen, wenn die Frage \"7. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsA5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0032"] = <
 					text = <"<1 Mal pro Jahr">
@@ -2008,7 +2008,7 @@ ontology
 				>
 				["at0037"] = <
 					text = <"Am längsten im Alter von 18 bis 25 Jahren">
-					description = <"Ursprüngliche Frage: \"8. Wo haben Sie im Alter von 18 bis 25 am längsten gewohnt? \" (en)">
+					description = <"Ursprüngliche Frage: \"8. Wo haben Sie im Alter von 18 bis 25 am längsten gewohnt? \"">
 				>
 				["at0038"] = <
 					text = <"Adressdaten">
@@ -2031,25 +2031,25 @@ ontology
 					description = <"">
 				>
 				["at0043"] = <
-					text = <"*Location size (en)">
-					description = <"*Ursprüngliche Frage: \"9. Als Sie dort wohnten, war der Ort… (en)">
+					text = <"Standortgröße">
+					description = <"Ursprüngliche Frage: \"9. Als Sie dort wohnten, war der Ort… ">
 				>
 				["at0051"] = <
-					text = <"*Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen? (en)">
+					text = <"Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen?">
 					description = <"Ursprüngliche Frage:  \"10. Stammte an diesem Wohnort Ihre Trinkwasserversorgung in erster Linie aus einem eigenen Brunnen??  \" (en)">
 				>
 				["at0056"] = <
-					text = <"*Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)? (en)">
+					text = <"Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?">
 					description = <"Ursprüngliche Frage:  \"11. Was this Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?\" (en)">
 				>
 				["at0061"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage: \"12. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage: \"12. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0066"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage:  \"B5a) How often did the spraying happen?\" (en)">
-					comment = <"*Only to be filled up if the question \"7. Was there pesticide spraying at or around this residence when you lived there?  [RsB5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage:  \"B5a) Wie oft wurde gesprüht?\"">
+					comment = <"Nur auszufüllen, wenn die Frage \"12. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsB5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0067"] = <
 					text = <"*Longest from age 26 to 35y (en)">
@@ -2076,28 +2076,28 @@ ontology
 					description = <"">
 				>
 				["at0073"] = <
-					text = <"*Location size (en)">
-					description = <"Ursprüngliche Frage:  \"14. Als Sie dort wohnten, war der Ort… (en)">
+					text = <"Standortgröße">
+					description = <"Ursprüngliche Frage:  \"14. Als Sie dort wohnten, war der Ort…">
 				>
 				["at0081"] = <
-					text = <"*Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen? (en)">
+					text = <"Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen?">
 					description = <"Ursprüngliche Frage:  \"14. At the time you lived there, was this residence located in a …\" (en)">
 				>
 				["at0086"] = <
-					text = <"*Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)? (en)">
+					text = <"Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?">
 					description = <"Ursprüngliche Frage:  \"16. Was this Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?\" (en)">
 				>
 				["at0091"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage: \"17. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage: \"17. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0096"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage:  \"C5a)  How often did the spraying happen?\" (en)">
-					comment = <"*Only to be filled up if the question \"17. Was there pesticide spraying at or around this residence when you lived there?  [RsC5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage: \"C5a)  How often did the spraying happen?\"">
+					comment = <"Nur auszufüllen, wenn die Frage \"17. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsC5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0097"] = <
-					text = <"*Longest from age 36 to 45y (en)">
+					text = <"Am längsten im Alter von 36 bis 45 Jahren">
 					description = <"Ursprüngliche Frage: \"18. From age 36 through age 45, where did you live for the longest time?\" (en)">
 				>
 				["at0098"] = <
@@ -2121,36 +2121,36 @@ ontology
 					description = <"">
 				>
 				["at0103"] = <
-					text = <"*Location size (en)">
-					description = <"Ursprüngliche Frage: \"19. Als Sie dort wohnten, war der Ort… (en)">
+					text = <"Standortgröße">
+					description = <"Ursprüngliche Frage: \"19. Als Sie dort wohnten, war der Ort…">
 				>
 				["at0111"] = <
-					text = <"*Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen? (en)">
+					text = <"Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen?">
 					description = <"Ursprüngliche Frage:  \"20. Stammte an diesem Wohnort Ihre Trinkwasserversorgung in erster Linie aus einem eigenen Brunnen??\" (en)">
 				>
 				["at0116"] = <
-					text = <"*Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)? (en)">
+					text = <"Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?">
 					description = <"*Ursprüngliche Frage:  \"21. Was this residence located near farm fields (within 1/4 mile)\" (en)">
 				>
 				["at0121"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage:  \"22. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage:  \"22. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0126"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage:  \"D5a)  How often did the spraying happen\" (en)">
-					comment = <"*Only to be filled up if the question \"22. Was there pesticide spraying at or around this residence when you lived there?  [RsD5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage:  \"D5a) Wie oft wurde gesprüht?\" ">
+					comment = <"Nur auszufüllen, wenn die Frage \"22. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsD5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0127"] = <
-					text = <"*Age less than 36y? (en)">
+					text = <"Alter unter 36 Jahre?">
 					description = <"Ursprüngliche Frage:  \"If current age is less than 36, check this box and SKIP TO QUESTION 38.\" (en)">
 				>
 				["at0128"] = <
-					text = <"*Longest from age 46 to 55y (en)">
+					text = <"Am längsten im Alter von 46 bis 55 Jahren">
 					description = <"Ursprüngliche Frage: \"23. From age 46 to 55, where did you live for the longest time? \" (en)">
 				>
 				["at0129"] = <
-					text = <"*Age less than 46y? (en)">
+					text = <"Alter unter 46 Jahre?">
 					description = <"Ursprüngliche Frage:  \"If current age is less than 46, check this box and SKIP TO QUESTION 38.\" (en)">
 				>
 				["at0130"] = <
@@ -2174,32 +2174,32 @@ ontology
 					description = <"">
 				>
 				["at0143"] = <
-					text = <"*Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen? (en)">
+					text = <"Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen?">
 					description = <"Ursprüngliche Frage:  \"25. Stammte an diesem Wohnort Ihre Trinkwasserversorgung in erster Linie aus einem eigenen Brunnen??\" (en)">
 				>
 				["at0148"] = <
-					text = <"*Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)? (en)">
+					text = <"Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?">
 					description = <"Ursprüngliche Frage:  \"26. Was this Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?\" (en)">
 				>
 				["at0153"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage: \"27. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage: \"27. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0158"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage:  \"E5a)  How often did the spraying happen?\" (en)">
-					comment = <"*Only to be filled up if the question \"27. Was there pesticide spraying at or around this residence when you lived there?  [RsE5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage:  \"E5a)  Wie oft wurde gesprüht?\" ">
+					comment = <"Nur auszufüllen, wenn die Frage \"22. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsE5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0135"] = <
-					text = <"*Location size (en)">
+					text = <"Standortgröße">
 					description = <"Ursprüngliche Frage: \"24. Als Sie dort wohnten, war der Ort… (en)">
 				>
 				["at0159"] = <
-					text = <"*Longest from age 56 to 65y (en)">
+					text = <"Am längsten im Alter von 56 bis 65 Jahren">
 					description = <"Ursprüngliche Frage: \"28. From age 56 to 65, where did you live for the longest time?\" (en)">
 				>
 				["at0160"] = <
-					text = <"*Age less than 56y? (en)">
+					text = <"Alter unter 56 Jahren?">
 					description = <"Ursprüngliche Frage:  \"If current age is less than 56, check this box 0 and SKIP TO QUESTION 38.\" (en)">
 				>
 				["at0161"] = <
@@ -2223,32 +2223,32 @@ ontology
 					description = <"">
 				>
 				["at0166"] = <
-					text = <"*Location size (en)">
-					description = <"Ursprüngliche Frage:  \"29. Als Sie dort wohnten, war der Ort… (en)">
+					text = <"Standortgröße">
+					description = <"Ursprüngliche Frage:  \"29. Als Sie dort wohnten, war der Ort…">
 				>
 				["at0174"] = <
-					text = <"*Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen? (en)">
+					text = <"Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen?">
 					description = <"Ursprüngliche Frage:  \"30. Stammte an diesem Wohnort Ihre Trinkwasserversorgung in erster Linie aus einem eigenen Brunnen??\" (en)">
 				>
 				["at0179"] = <
-					text = <"*Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)? (en)">
+					text = <"Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?">
 					description = <"Ursprüngliche Frage:  \"31. Was this Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?\" (en)">
 				>
 				["at0184"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage: \"32. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage: \"32. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0189"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage:  \"F5a)  How often did the spraying happen?\" (en)">
-					comment = <"*Only to be filled up if the question \"32. Was there pesticide spraying at or around this residence when you lived there?  [RsF5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage:  \"F5a) Wie oft wurde gesprüht?\"">
+					comment = <"Nur auszufüllen, wenn die Frage \"32. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsF5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0190"] = <
-					text = <"*Longest from age 66 and above (en)">
+					text = <"Am längsten ab 66 Jahren">
 					description = <"Ursprüngliche Frage: \"33. From age 66 and above, where did you live for the longest time?  \" (en)">
 				>
 				["at0191"] = <
-					text = <"*Age less than 66y? (en)">
+					text = <"Alter unter 66 Jahren?">
 					description = <"Ursprüngliche Frage: \"If current age is less than 66, check this box and SKIP TO QUESTION 38.\" (en)">
 				>
 				["at0192"] = <
@@ -2272,37 +2272,37 @@ ontology
 					description = <"">
 				>
 				["at0197"] = <
-					text = <"*Location size (en)">
-					description = <"Ursprüngliche Frage:  \"34. Als Sie dort wohnten, war der Ort… (en)">
+					text = <"Standortgröße">
+					description = <"Ursprüngliche Frage:  \"34. Als Sie dort wohnten, war der Ort…">
 				>
 				["at0205"] = <
-					text = <"*Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen? (en)">
+					text = <"Die Hauptwasserquelle im Haus stammte aus einem privaten Brunnen?">
 					description = <"Ursprüngliche Frage:  \"35. Stammte an diesem Wohnort Ihre Trinkwasserversorgung in erster Linie aus einem eigenen Brunnen??\" (en)">
 				>
 				["at0210"] = <
-					text = <"*Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)? (en)">
+					text = <"Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?">
 					description = <"Ursprüngliche Frage:  \"36. Was this Residenz in der Nähe von Feldern (innerhalb von 1/4 Meile)?\" (en)">
 				>
 				["at0215"] = <
 					text = <"Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?">
-					description = <"Ursprüngliche Frage: \"37. Was there pesticide spraying at or around this residence when you lived there?\" (en)">
+					description = <"Ursprüngliche Frage: \"37. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?\" (en)">
 				>
 				["at0220"] = <
 					text = <"Wie oft wurde gesprüht?">
-					description = <"Ursprüngliche Frage:  \"G5a) How often did the spraying happen? \" (en)">
-					comment = <"*Only to be filled up if the question \"37. Was there pesticide spraying at or around this residence when you lived there?  [RsG5]\" was replied as \"Yes\". (en)">
+					description = <"Ursprüngliche Frage:  \"G5a) Wie oft wurde gesprüht?\"">
+					comment = <"Nur auszufüllen, wenn die Frage \"37. Wurde in oder um Ihre Wohnung Pestizid gesprüht, als Sie dort wohnten?  [RsG5]\" wurde mit „Ja“ beantwortet.">
 				>
 				["at0221"] = <
-					text = <"*Group living situation (en)">
-					description = <"Ursprüngliche Frage:  \" \" (en)">
+					text = <"Gruppenwohnsituation">
+					description = <"">
 				>
 				["at0222"] = <
-					text = <"*During childhood and young adulthoold (25y) ever lived in a group living situation (en)">
-					description = <"Ursprüngliche Frage: \"38. During childhood and young adulthood (up to age 25), did you ever live in a group living situation, such as a dormitory or military barracks, for longer than 1 month?\" (en)">
+					text = <"Während der Kindheit und im jungen Erwachsenenalter (25 Jahre) jemals in einer Wohngemeinschaft gelebt">
+					description = <"Ursprüngliche Frage:  \"38 Wohnten Sie als Kind oder junger Erwachsener (bis zum Alter von 25) jemals länger als 1 Monat in einem Gruppenwohnraum, wie z. B. Schlafsaal, Militärkaserne usw.?\"">
 				>
 				["at0223"] = <
-					text = <"*For how long lived in that situation (en)">
-					description = <"Ursprüngliche Frage: \"How many months or years in total did you live in a group living situation?\" (en)">
+					text = <"Wie lange lebte in dieser Situation">
+					description = <"Ursprüngliche Frage: \"Wie viele Monate oder Jahre insgesamt wohnten Sie ein einem Gruppenwohnraum?\"">
 				>
 				["mo"] = <
 					text = <"monate">
