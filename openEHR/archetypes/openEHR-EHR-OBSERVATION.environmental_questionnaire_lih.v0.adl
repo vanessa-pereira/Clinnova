@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8695d514def4e32a4a5f5c0727814bb6">
+		["MD5-CAM-1.0.1"] = <"5cfbf749359cef26e2e8b66427ec4dd1">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -1858,7 +1858,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*CLINNOVA Environmental Questionnaire (EQ) (en)">
+					text = <"CLINNOVA – Questionnaire Environnemental (QE)">
 					description = <"*CLINNOVA Environnemental Questionnaire (EQ) (en)">
 				>
 				["at0001"] = <
@@ -1874,16 +1874,16 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Pesticides in non-work settings (en)">
-					description = <"*Section introduction: \"The following questions ask about chemicals you may have used at home during different periods of your life.  Please answer these questions to the best of your ability.\" (en)">
+					text = <"Pesticides dans le cadre non professionnel">
+					description = <"Introduction de rubrique: \"Les questions suivantes concernent les produits chimiques que vous pouvez avoir utilisés chez vous au cours des différentes périodes de votre vie. Veuillez répondre à ces questions du mieux que vous pouvez.\"">
 				>
 				["at0005"] = <
-					text = <"*Pesticides at work (en)">
-					description = <"*Section introduction: \"The following questions ask about chemicals you may have used at work during different periods of your life. Please answer these questions to the best of your ability.\" (en)">
+					text = <"Pesticides au travail">
+					description = <"Introduction de rubrique:\"Les questions suivantes concernent les produits chimiques que vous pouvez avoir utilisé au travail au cours des différentes périodes de votre vie.  Veuillez répondre à ces questions du mieux que vous pouvez.\"">
 				>
 				["at0006"] = <
-					text = <"*Ever used chemicals to kill organisms in or around home (en)">
-					description = <"*Original question: \"1. During your lifetime, did you or someone else ever use chemicals to kill insects, other pests, plants, weeds, mold, or mildew in or around any house or apartment where you lived?  Include chemicals used in the house, on the lawn or garden, or on pets.\" (en)">
+					text = <"A déjà utilisé des produits chimiques pour tuer des organismes à l'intérieur ou autour de la maison">
+					description = <"Question originale: \"1. Au cours de votre vie, avez-vous ou quelqu'un d'autre a-t-il utilisé des produits chimiques pour tuer/détruire des insectes, la vermine, des plantes, des mauvaises herbes, des moisissures ou le mildiou dans ou autour de la maison ou de l'appartement dans lequel vous viviez ?  Prenez en compte les produits chimiques utilisés dans la maison, sur le gazon ou dans le jardin, ou sur les animaux de la famille.\"">
 				>
 				["at0007"] = <
 					text = <"*Yes (en)">
@@ -1902,16 +1902,16 @@ ontology
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Ever had a job where used or was exposed to pesticide (en)">
-					description = <"*Original question: \"2. Over your lifetime, have you ever had a JOB in which you mixed, applied, or were exposed in some other way to any type of pesticide, including herbicides (kill weeds), fungicides (kill fungus/mold), insecticides (kill insects), rodenticides (kill rats/mice), or fumigants (gas used to kill fungus/mold or insects)?\" (en)">
+					text = <"A déjà eu un emploi où utilisé ou été exposé à des pesticides">
+					description = <"Question originale: \"2 Au cours de votre vie, avez-vous jamais eu un EMPLOI dans lequel vous avez mélangé, appliqué ou été exposé(e) d'une manière ou d'une autre à un type quelconque de pesticide, y compris les herbicides (pour tuer les mauvaises herbes), les fongicides (pour détruire les champignons/moisissures), les insecticides (pour tuer les insectes), les raticides ou souricides (pour tuer rats et souris), ou les insecticides gazeux (gaz utilisés pour détruire les champignons/moisissures ou les insectes)?\"">
 				>
 				["at0012"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
 				["at0013"] = <
-					text = <"*Residential history (en)">
-					description = <"*Section introduction: \"The following questions ask you about the places you have lived throughout your lifetime.  Please provide just one residence for each age period listed. If you moved during the age period, answer the questions for the residence at which you lived the longest.\" (en)">
+					text = <"Historique résidentiel">
+					description = <"Introduction de rubrique: \"Les questions suivantes concernent les endroits où vous avez vécu tout au long de votre vie. N'indiquez qu'un seul lieu de résidence pour chaque période figurant dans la liste. Si vous avez déménagé au cours de cette période, répondez aux questions pour la résidence dans laquelle vous avez vécu le plus longtemps.\"">
 				>
 				["at0014"] = <
 					text = <"*Longest from birth to age 17y (en)">
