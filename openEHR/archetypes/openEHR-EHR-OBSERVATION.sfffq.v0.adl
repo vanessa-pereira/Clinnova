@@ -30,7 +30,7 @@ Any third party wishing to use the SFFFQ in any way must fully acknowledge the U
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5afa02e34f60b18fbbe50fabbabb6cef">
+		["MD5-CAM-1.0.1"] = <"8aba8bd4a9547941624e25500a96a240">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
@@ -138,6 +138,7 @@ definition
 											}
 										}
 									}
+									CLUSTER[at0020] occurrences matches {0..1} matches {*}    -- Food and drinks
 								}
 							}
 						}
@@ -263,6 +264,10 @@ The first questions ask about your lifestyle and general health. The questions t
 				["at0019"] = <
 					text = <"Doctor ever told patient had a heart attack?">
 					description = <"Original question: \"7. Has a doctor ever told you that you have had a heart attack?\"">
+				>
+				["at0020"] = <
+					text = <"Food and drinks">
+					description = <"">
 				>
 			>
 		>
