@@ -9,15 +9,19 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-11-08">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2022-11-08">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			use = <"SFDietQuest. V1.0 December 2009
+Copyright © 2008 University of Leeds. All rights reserved.
+Any third party wishing to use the SFFFQ in any way must fully acknowledge the University of Leeds in all relevant publications as the owner of the copyright in the Work. The University of Leeds gives no warranties in respect of the SFFFQ and, to the fullest extent permitted by law, accepts no liability in relation to it.
+">
 		>
 	>
 	other_details = <
@@ -26,18 +30,116 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5a510a9fdfe74487975b845ebb15343d">
+		["MD5-CAM-1.0.1"] = <"5afa02e34f60b18fbbe50fabbabb6cef">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- SFFFQ
+	OBSERVATION[at0000] matches {    -- Short Form Dietary Questionnaire (SFFFQ)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
-							ITEM_TREE[at0003] matches {*}    -- Tree
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0004] occurrences matches {0..1} matches {    -- About you
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Sex
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0006,    -- Male
+															at0007]    -- Female
+														}
+													}
+												}
+											}
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- Age
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::128]>
+														list = <
+															["1"] = <
+																units = <"a">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"yr">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0009] occurrences matches {0..1} matches {    -- Height
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::122]>
+														list = <
+															["1"] = <
+																units = <"cm">
+															>
+															["2"] = <
+																units = <"m">
+															>
+															["3"] = <
+																units = <"[in_i]">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0010] occurrences matches {0..1} matches {    -- Weight
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::124]>
+														list = <
+															["1"] = <
+																units = <"kg">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"kg">
+															>
+															["2"] = <
+																units = <"[lb_av]">
+																units_system = <"http://unitsofmeasure.org">
+																units_display_name = <"lbm">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0011] occurrences matches {0..1} matches {    -- Over last 12 month, on the whole, how is health status
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0012,    -- Excelent
+															at0013,    -- Very good
+															at0014,    -- Good
+															at0015,    -- Fair
+															at0016]    -- Poor
+														}
+													}
+												}
+											}
+											ELEMENT[at0017] occurrences matches {0..1} matches {    -- Ever had diabetes?
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0018] occurrences matches {0..1} matches {    -- Ever had high blood pressure?
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+											ELEMENT[at0019] occurrences matches {0..1} matches {    -- Doctor ever told patient had a heart attack?
+												value matches {
+													DV_BOOLEAN matches {*}
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -50,7 +152,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"SFFFQ">
+					text = <"Short Form Dietary Questionnaire (SFFFQ)">
 					description = <"SFFFQ">
 				>
 				["at0001"] = <
@@ -59,11 +161,108 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Any event">
-					description = <"">
+					description = <"Short Form Dietary Questionnaire
+
+Thank you for helping us with our research to help improve the health of local people. 
+
+Our research aims to develop simple methods to obtain information on the diets of local people. What people eat can have a major impact on their current and future health. The information will help us to identify what dietary support is needed in the community.
+
+The questionnaire is filled in by placing a tick in the box next to your answer. If you are unsure about any answer, give the best answer you can. Do not spend too long thinking about each answer –what comes into your mind straight away is often the most accurate response.
+
+The first questions ask about your lifestyle and general health. The questions then focus specifically on things you might eat or drink in a typical week during the past month or so. This is most likely to be last week, but you can select a different week if you have been poorly or on holiday. Please remember to sign and return the Consent Form with this Survey.">
 				>
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"About you">
+					description = <"">
+					comment = <"IMPORTANT NOTE: We recommend the \"about you\" section question from 1 to 4 to be modeled using the archetypes weight, height, gender, age in the template stage in order to maintain semantic interoperability with other systems. These data elements have been added here so they are not lost from the original questionnaire format.">
+				>
+				["at0005"] = <
+					text = <"Sex">
+					description = <"Original question: \"1. What sex are you?\"">
+				>
+				["at0006"] = <
+					text = <"Male">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Female">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Age">
+					description = <"Original question: \"2. What is your age?\"">
+				>
+				["a"] = <
+					text = <"Years">
+					description = <"year">
+				>
+				["at0009"] = <
+					text = <"Height">
+					description = <"Original question: \"3. How tall are you?\"">
+				>
+				["[in_i]"] = <
+					text = <"inches">
+					description = <"inch">
+				>
+				["m"] = <
+					text = <"meters">
+					description = <"meter">
+				>
+				["cm"] = <
+					text = <"centimeters">
+					description = <"centimeter">
+				>
+				["at0010"] = <
+					text = <"Weight">
+					description = <"Original question: \"4. What is your weight?\"">
+				>
+				["[lb_av]"] = <
+					text = <"pounds">
+					description = <"pound mass">
+				>
+				["kg"] = <
+					text = <"kilograms">
+					description = <"kilogram">
+				>
+				["at0011"] = <
+					text = <"Over last 12 month, on the whole, how is health status">
+					description = <"Original question: \"5.Over the last 12 months, would you say that on the whole, your health has been:\"">
+				>
+				["at0012"] = <
+					text = <"Excelent">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Very good">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Good">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Fair">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Poor">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Ever had diabetes?">
+					description = <"Original question: \"Do you now, or have you ever had: Diabetes\"">
+				>
+				["at0018"] = <
+					text = <"Ever had high blood pressure?">
+					description = <"Original question: \"Do you now, or have you ever had: High blood pressure\"">
+				>
+				["at0019"] = <
+					text = <"Doctor ever told patient had a heart attack?">
+					description = <"Original question: \"7. Has a doctor ever told you that you have had a heart attack?\"">
 				>
 			>
 		>
