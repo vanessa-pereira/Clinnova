@@ -30,7 +30,7 @@ Any third party wishing to use the SFFFQ in any way must fully acknowledge the U
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8aba8bd4a9547941624e25500a96a240">
+		["MD5-CAM-1.0.1"] = <"8a274359945fad85ad981bb1ca161f3c">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
@@ -138,7 +138,305 @@ definition
 											}
 										}
 									}
-									CLUSTER[at0020] occurrences matches {0..1} matches {*}    -- Food and drinks
+									CLUSTER[at0020] occurrences matches {0..1} matches {    -- Food and drinks
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0021] matches {    -- Fruit (tinned / fresh)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0030] matches {    -- Fruit juice (not cordial or squash)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0031] matches {    -- Salad (not garnish added to sandwiches)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0032] matches {    -- Vegetables (tinned / frozen / fresh but not potatoes)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0033] matches {    -- Chips / fried potatoes
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0034] matches {    -- Beans or pulses like baked beans, chick peas, dahl
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0035] matches {    -- Fibre-rich breakfast cereal, like Weetabix, Fruit ‘n Fibre, Porridge, Muesli
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0036] matches {    -- Wholemeal bread or chapattis
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0037] matches {    -- Cheese / yoghurt
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0038] matches {    -- Crisps / savoury snacks
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0039] matches {    -- Sweet biscuits, cakes, chocolate, sweets
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0040] matches {    -- Ice cream / cream
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0041] matches {    -- Non alcoholic fizzy drinks/pop (not sugar free or diet)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0042] matches {    -- Beef, Lamb, Pork, Ham - steaks, roasts, joints, mince or chops
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0043] matches {    -- Chicken or Turkey – steaks, roasts, joints, mince or portions (not in batter or breadcrumbs)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0044] matches {    -- Sausages, bacon, corned beef, meat pies/pasties, burgers
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0045] matches {    -- Chicken/turkey nuggets/twizzlers, turkey burgers, chicken pies, or in batter or breadcrumbs
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0046] matches {    -- White fish in batter or breadcrumbs – like ‘fish ‘n chips’
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0047] matches {    -- White fish not in batter or breadcrumbs
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+											ELEMENT[at0048] matches {    -- Oily fish – like herrings, sardines, salmon, trout, mackerel, fresh tuna (not tinned tuna)
+												value matches {
+													0|[local::at0022],
+													1|[local::at0023],
+													2|[local::at0024],
+													3|[local::at0025],
+													4|[local::at0026],
+													5|[local::at0027],
+													6|[local::at0028],
+													7|[local::at0029]
+												}
+											}
+										}
+									}
+									ELEMENT[at0049] occurrences matches {0..1} matches {    -- Portions of food eaten per day
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"1/d">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0050] occurrences matches {0..1} matches {    -- Portions of vegetables eaten per day
+										value matches {
+											C_DV_QUANTITY <
+												
+												list = <
+													["1"] = <
+														units = <"1/d">
+														units_system = <"http://unitsofmeasure.org">
+														units_display_name = <"1/d">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..*} matches {    -- Type of milk patient usually drinks or puts on cereal
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0052,    -- Whole / full-fat milk
+													at0053,    -- Semi-skimmed milk
+													at0054,    -- Skimmed milk
+													at0055]    -- Rarely/never use milk
+												}
+											}
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0056] occurrences matches {0..1} matches {    -- Quantity of alcohol patient drinks in a complete week
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0057,    -- I rarely/never drink alcohol
+													at0058,    -- Less than 14 units
+													at0059,    -- Between 14 & 21 units
+													at0060]    -- More than 21 units
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -184,6 +482,7 @@ The first questions ask about your lifestyle and general health. The questions t
 				["at0005"] = <
 					text = <"Sex">
 					description = <"Original question: \"1. What sex are you?\"">
+					comment = <"MPORTANT NOTE: We recommend the \"about you\" section question from 1 to 4 to be modeled using the archetypes weight, height, gender, age in the template stage in order to maintain semantic interoperability with other systems. These data elements have been added here so they are not lost from the original questionnaire format.">
 				>
 				["at0006"] = <
 					text = <"Male">
@@ -196,6 +495,7 @@ The first questions ask about your lifestyle and general health. The questions t
 				["at0008"] = <
 					text = <"Age">
 					description = <"Original question: \"2. What is your age?\"">
+					comment = <"MPORTANT NOTE: We recommend the \"about you\" section question from 1 to 4 to be modeled using the archetypes weight, height, gender, age in the template stage in order to maintain semantic interoperability with other systems. These data elements have been added here so they are not lost from the original questionnaire format.">
 				>
 				["a"] = <
 					text = <"Years">
@@ -204,6 +504,7 @@ The first questions ask about your lifestyle and general health. The questions t
 				["at0009"] = <
 					text = <"Height">
 					description = <"Original question: \"3. How tall are you?\"">
+					comment = <"MPORTANT NOTE: We recommend the \"about you\" section question from 1 to 4 to be modeled using the archetypes weight, height, gender, age in the template stage in order to maintain semantic interoperability with other systems. These data elements have been added here so they are not lost from the original questionnaire format.">
 				>
 				["[in_i]"] = <
 					text = <"inches">
@@ -220,6 +521,7 @@ The first questions ask about your lifestyle and general health. The questions t
 				["at0010"] = <
 					text = <"Weight">
 					description = <"Original question: \"4. What is your weight?\"">
+					comment = <"MPORTANT NOTE: We recommend the \"about you\" section question from 1 to 4 to be modeled using the archetypes weight, height, gender, age in the template stage in order to maintain semantic interoperability with other systems. These data elements have been added here so they are not lost from the original questionnaire format.">
 				>
 				["[lb_av]"] = <
 					text = <"pounds">
@@ -267,6 +569,176 @@ The first questions ask about your lifestyle and general health. The questions t
 				>
 				["at0020"] = <
 					text = <"Food and drinks">
+					description = <"Section introduction:\"The following questions ask about some foods & drinks you might have during a ‘typical’ week, over the past month or so. Do not be concerned if some things you eat or drink are not mentioned. \"
+
+Original question: \"8. Please tick how often you eat at least ONE portion of the following foods & drinks: (a portion includes: a handful of grapes, an orange, a serving of carrots, a side salad, a slice of bread, a glass of pop).
+(Please only put one tick, but answer EVERY line)\"
+">
+				>
+				["at0021"] = <
+					text = <"Fruit (tinned / fresh)">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Rarely or never">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Less than 1 a week">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Once a week">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"2 to 3 times a week">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"4 to 6 times a week">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"1 to 2 times a day">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"3 to 4 times a day">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"5 or more times a day">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Fruit juice (not cordial or squash)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Salad (not garnish added to sandwiches)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Vegetables (tinned / frozen / fresh but not potatoes)">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Chips / fried potatoes">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Beans or pulses like baked beans, chick peas, dahl">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Fibre-rich breakfast cereal, like Weetabix, Fruit ‘n Fibre, Porridge, Muesli">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Wholemeal bread or chapattis">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Cheese / yoghurt">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Crisps / savoury snacks">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Sweet biscuits, cakes, chocolate, sweets">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Ice cream / cream">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Non alcoholic fizzy drinks/pop (not sugar free or diet)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Beef, Lamb, Pork, Ham - steaks, roasts, joints, mince or chops">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Chicken or Turkey – steaks, roasts, joints, mince or portions (not in batter or breadcrumbs)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Sausages, bacon, corned beef, meat pies/pasties, burgers">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Chicken/turkey nuggets/twizzlers, turkey burgers, chicken pies, or in batter or breadcrumbs">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"White fish in batter or breadcrumbs – like ‘fish ‘n chips’">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"White fish not in batter or breadcrumbs">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Oily fish – like herrings, sardines, salmon, trout, mackerel, fresh tuna (not tinned tuna)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"Portions of food eaten per day">
+					description = <"Original question: \"9. On average, how many portions of FRUIT do you eat a day? 
+(examples include a handful of grapes, an orange, a glass of fruit juice, a handful of dried fruits). \"">
+				>
+				["1/d"] = <
+					text = <"per day">
+					description = <"@ units @">
+				>
+				["at0050"] = <
+					text = <"Portions of vegetables eaten per day">
+					description = <"Original question: \"10. On average, how many portions of VEGETABLES do you eat a day? (examples include: 3 heaped tablespoons of carrots, a side salad, 2 spears of broccoli). \"">
+				>
+				["at0051"] = <
+					text = <"Type of milk patient usually drinks or puts on cereal">
+					description = <"Original question: \"11. What milk do you usually use or drink, such as in hot & cold drinks or on cereal? (including tea, coffee, hot milk, milk shakes, or on cereal)\"">
+				>
+				["at0052"] = <
+					text = <"Whole / full-fat milk">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Semi-skimmed milk">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Skimmed milk">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Rarely/never use milk">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Quantity of alcohol patient drinks in a complete week">
+					description = <"Original question: \"12. On average, how much alcohol do you drink over a complete seven day week?
+(One unit is a standard glass of wine, half a pint of beer or lager, a single measure of spirits, a measure of sherry)\"">
+				>
+				["at0057"] = <
+					text = <"I rarely/never drink alcohol">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Less than 14 units">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Between 14 & 21 units">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"More than 21 units">
 					description = <"">
 				>
 			>
