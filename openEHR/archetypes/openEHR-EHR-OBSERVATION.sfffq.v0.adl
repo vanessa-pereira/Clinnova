@@ -18,6 +18,8 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"The purpose of Short Form Dietary Questionnaire (SFFFQ) is to obtain information about the diet of local people and help understanding the dietary support needed in the community.">
+			keywords = <"SFFFQ, PROM, questionnaire, dietary, food", ...>
 			use = <"SFDietQuest. V1.0 December 2009
 Copyright © 2008 University of Leeds. All rights reserved.
 Any third party wishing to use the SFFFQ in any way must fully acknowledge the University of Leeds in all relevant publications as the owner of the copyright in the Work. The University of Leeds gives no warranties in respect of the SFFFQ and, to the fullest extent permitted by law, accepts no liability in relation to it.
@@ -30,8 +32,11 @@ Any third party wishing to use the SFFFQ in any way must fully acknowledge the U
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1321a3491085b0b7d50853211fb7cb9e">
+		["MD5-CAM-1.0.1"] = <"28cd9440533d6a26290e4f674b1a8eb5">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
+		["references"] = <"Cleghorn, C., Harrison, R., Ransley, J., Wilkinson, S., Thomas, J., & Cade, J. (2016). Can a dietary quality score derived from a short-form FFQ assess dietary quality in UK adult population surveys? Public Health Nutrition, 19(16), 2915-2923. doi:10.1017/S1368980016001099
+
+original questionnaire: https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S1368980016001099/resource/name/S1368980016001099sup001.doc">
 	>
 
 definition
@@ -632,7 +637,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Short Form Dietary Questionnaire (SFFFQ)">
-					description = <"SFFFQ">
+					description = <"Short Form Dietary Questionnaire (SFFFQ) is a twenty-item non-quantitative self-form which focuses on fruit, vegetables, fibre-rich foods, high-fat and high-sugar foods, meat, meat products and fish. The SFFFQ asks about foods and drinks respondents ‘might have during a “typical” week, over the past month’ and asks respondents to tick one frequency option (ranging from ‘rarely or never’ to ‘5+ a day’) for each of the twenty items. The tool also contains questions about basic demographic information and questions about alcohol consumption and exercise.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -943,7 +948,7 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0069"] = <
 					text = <"Did exercise over the last week?">
-					description = <"">
+					description = <"Original question: \"">
 				>
 				["at0070"] = <
 					text = <"Physical exercise - moderate">
@@ -987,7 +992,7 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0080"] = <
 					text = <"Smoking status">
-					description = <"">
+					description = <"Original question: \"">
 				>
 				["at0081"] = <
 					text = <"Current smoker">
@@ -1003,7 +1008,7 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0084"] = <
 					text = <"Household status">
-					description = <"">
+					description = <"Original question: \"">
 				>
 				["at0085"] = <
 					text = <"Owns outright">
