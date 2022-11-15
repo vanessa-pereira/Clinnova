@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -49,14 +49,14 @@ Any third party wishing to use the SFFFQ in any way must fully acknowledge the U
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"62eea9bbac95b1e39bad1d1add302892">
-		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 		["references"] = <"Cleghorn, C., Harrison, R., Ransley, J., Wilkinson, S., Thomas, J., & Cade, J. (2016). Can a dietary quality score derived from a short-form FFQ assess dietary quality in UK adult population surveys? Public Health Nutrition, 19(16), 2915-2923. doi:10.1017/S1368980016001099
 
 original questionnaire: https://static.cambridge.org/content/id/urn:cambridge.org:id:article:S1368980016001099/resource/name/S1368980016001099sup001.doc">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2a421626ba67350dcc4b9b2eb180a2a4">
+		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
 definition
@@ -960,15 +960,15 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0067"] = <
 					text = <"Frequency of the exercise">
-					description = <"">
+					description = <"As in the questionnaire: \"I did this ________ times during the week.\"">
 				>
 				["at0068"] = <
 					text = <"Duration of the exercise">
-					description = <"">
+					description = <"As in the questionnaire: \"Each time I did this lasted about ___________ minutes\".">
 				>
 				["at0069"] = <
 					text = <"Did exercise over the last week?">
-					description = <"Original question: \"">
+					description = <"Original question: \"13.	Last week (or a week before that if you have been poorly or on holiday), how much exercise did you do, if any?\"">
 				>
 				["at0070"] = <
 					text = <"Physical exercise - moderate">
@@ -984,11 +984,11 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0073"] = <
 					text = <"Frequency of the exercise">
-					description = <"">
+					description = <"As in the questionnaire: \"I did this ________ times during the week.\"">
 				>
 				["at0074"] = <
 					text = <"Duration of the exercise">
-					description = <"">
+					description = <"As in the questionnaire: \"Each time I did this lasted about ___________ minutes\".">
 				>
 				["at0075"] = <
 					text = <"Physical exercise - vigorous">
@@ -1004,15 +1004,15 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0078"] = <
 					text = <"Frequency of the exercise">
-					description = <"">
+					description = <"As in the questionnaire: \"I did this ________ times during the week.\"">
 				>
 				["at0079"] = <
 					text = <"Duration of the exercise">
-					description = <"">
+					description = <"As in questionnaire: \"Each time I did this lasted about ___________ minutes\".">
 				>
 				["at0080"] = <
 					text = <"Smoking status">
-					description = <"Original question: \"">
+					description = <"Original question: \"14.	Regarding smoking, are you?\"">
 				>
 				["at0081"] = <
 					text = <"Current smoker">
@@ -1028,7 +1028,7 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0084"] = <
 					text = <"Household status">
-					description = <"Original question: \"">
+					description = <"Original question: \"15.  Does your household own or rent the accommodation in which you live?\"">
 				>
 				["at0085"] = <
 					text = <"Owns outright">
@@ -1064,7 +1064,7 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0093"] = <
 					text = <"Ethnic group">
-					description = <"">
+					description = <"Original question: \"16.  What is your ethnic group?\"">
 				>
 				["at0094"] = <
 					text = <"White - British">
