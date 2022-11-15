@@ -30,7 +30,7 @@ Any third party wishing to use the SFFFQ in any way must fully acknowledge the U
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"974e71f8d3bf1f40ccc4cb0adfdeda17">
+		["MD5-CAM-1.0.1"] = <"b537052f2702b3ebf1f1f7a7ad05d15f">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
@@ -437,17 +437,18 @@ definition
 											}
 										}
 									}
-									CLUSTER[at0061] occurrences matches {0..1} matches {    -- Physical exercise
+									ELEMENT[at0069] occurrences matches {0..1} matches {    -- Did exercise over the last week?
+										value matches {
+											DV_BOOLEAN matches {*}
+										}
+									}
+									CLUSTER[at0061] occurrences matches {0..1} matches {    -- Physical exercise - light
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0062] occurrences matches {0..1} matches {    -- Intensity of the exercise last week
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
-															[local::
-															at0063,    -- Didn't do any exercise
-															at0064,    -- Did some light exercise
-															at0065,    -- Did some moderate exercise
-															at0066]    -- Did some vigorous exercise
+															[local::at0077]    -- Light exercise
 														}
 													}
 												}
@@ -478,9 +479,147 @@ definition
 											}
 										}
 									}
+									CLUSTER[at0070] occurrences matches {0..1} matches {    -- Physical exercise - moderate
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0071] occurrences matches {0..1} matches {    -- Intensity of the exercise last week
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0072]    -- Moderate exercise
+														}
+													}
+												}
+											}
+											ELEMENT[at0073] occurrences matches {0..1} matches {    -- Frequency of the exercise
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/wk">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0074] occurrences matches {0..1} matches {    -- Duration of the exercise
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::128]>
+														list = <
+															["1"] = <
+																units = <"min">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0075] occurrences matches {0..1} matches {    -- Physical exercise - vigorous
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0076] occurrences matches {0..1} matches {    -- Intensity of the exercise last week
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0064]    -- Vigorous exercise
+														}
+													}
+												}
+											}
+											ELEMENT[at0078] occurrences matches {0..1} matches {    -- Frequency of the exercise
+												value matches {
+													C_DV_QUANTITY <
+														
+														list = <
+															["1"] = <
+																units = <"1/wk">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0079] occurrences matches {0..1} matches {    -- Duration of the exercise
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::128]>
+														list = <
+															["1"] = <
+																units = <"min">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									ELEMENT[at0080] occurrences matches {0..1} matches {    -- Smoking status
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0081,    -- Current smoker
+													at0082,    -- Ex-smoker
+													at0083]    -- Never smoked more than 100 cigarettes
+												}
+											}
+										}
+									}
+									ELEMENT[at0084] occurrences matches {0..1} matches {    -- Household status
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0085,    -- Owns outright
+													at0086,    -- Owns with a mortgage or loan
+													at0087,    -- Pays part rent and part mortgage (shared ownership)
+													at0088,    -- Rents from council
+													at0089,    -- Rents from a housing association
+													at0090,    -- Rents from a private landlord
+													at0091,    -- Accommodation is a residential home or student halls
+													at0092]    -- Other
+												}
+											}
+										}
+									}
+									ELEMENT[at0093] occurrences matches {0..1} matches {    -- Ethnic group
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0094,    -- White - British
+													at0095,    -- White - Irish
+													at0096,    -- Other white background
+													at0097,    -- Mixed - White and black caribbean
+													at0098,    -- Mixed - White and black african
+													at0099,    -- Mixed - White and asian
+													at0100,    -- Other mixed background
+													at0101,    -- Asian or asian british - Indian
+													at0102,    -- Asian or asian british - Pakistani
+													at0103,    -- Asian or asian british - Bangladeshi
+													at0104,    -- Other Asian background
+													at0105,    -- Black or black british - Caribbean
+													at0106,    -- Black or black british - African
+													at0107,    -- Other Black background
+													at0108,    -- Chinese
+													at0109]    -- Any other group
+												}
+											}
+										}
+									}
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0110] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0111] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -783,27 +922,15 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 					description = <"">
 				>
 				["at0061"] = <
-					text = <"Physical exercise">
+					text = <"Physical exercise - light">
 					description = <"">
 				>
 				["at0062"] = <
 					text = <"Intensity of the exercise last week">
 					description = <"">
 				>
-				["at0063"] = <
-					text = <"Didn't do any exercise">
-					description = <"">
-				>
 				["at0064"] = <
-					text = <"Did some light exercise">
-					description = <"">
-				>
-				["at0065"] = <
-					text = <"Did some moderate exercise">
-					description = <"">
-				>
-				["at0066"] = <
-					text = <"Did some vigorous exercise">
+					text = <"Vigorous exercise">
 					description = <"">
 				>
 				["at0067"] = <
@@ -812,6 +939,178 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0068"] = <
 					text = <"Duration of the exercise">
+					description = <"">
+				>
+				["at0069"] = <
+					text = <"Did exercise over the last week?">
+					description = <"">
+				>
+				["at0070"] = <
+					text = <"Physical exercise - moderate">
+					description = <"">
+				>
+				["at0071"] = <
+					text = <"Intensity of the exercise last week">
+					description = <"">
+				>
+				["at0072"] = <
+					text = <"Moderate exercise">
+					description = <"">
+				>
+				["at0073"] = <
+					text = <"Frequency of the exercise">
+					description = <"">
+				>
+				["at0074"] = <
+					text = <"Duration of the exercise">
+					description = <"">
+				>
+				["at0075"] = <
+					text = <"Physical exercise - vigorous">
+					description = <"">
+				>
+				["at0076"] = <
+					text = <"Intensity of the exercise last week">
+					description = <"">
+				>
+				["at0077"] = <
+					text = <"Light exercise">
+					description = <"">
+				>
+				["at0078"] = <
+					text = <"Frequency of the exercise">
+					description = <"">
+				>
+				["at0079"] = <
+					text = <"Duration of the exercise">
+					description = <"">
+				>
+				["at0080"] = <
+					text = <"Smoking status">
+					description = <"">
+				>
+				["at0081"] = <
+					text = <"Current smoker">
+					description = <"">
+				>
+				["at0082"] = <
+					text = <"Ex-smoker">
+					description = <"">
+				>
+				["at0083"] = <
+					text = <"Never smoked more than 100 cigarettes">
+					description = <"">
+				>
+				["at0084"] = <
+					text = <"Household status">
+					description = <"">
+				>
+				["at0085"] = <
+					text = <"Owns outright">
+					description = <"">
+				>
+				["at0086"] = <
+					text = <"Owns with a mortgage or loan">
+					description = <"">
+				>
+				["at0087"] = <
+					text = <"Pays part rent and part mortgage (shared ownership)">
+					description = <"">
+				>
+				["at0088"] = <
+					text = <"Rents from council">
+					description = <"">
+				>
+				["at0089"] = <
+					text = <"Rents from a housing association">
+					description = <"">
+				>
+				["at0090"] = <
+					text = <"Rents from a private landlord">
+					description = <"">
+				>
+				["at0091"] = <
+					text = <"Accommodation is a residential home or student halls">
+					description = <"">
+				>
+				["at0092"] = <
+					text = <"Other">
+					description = <"">
+				>
+				["at0093"] = <
+					text = <"Ethnic group">
+					description = <"">
+				>
+				["at0094"] = <
+					text = <"White - British">
+					description = <"">
+				>
+				["at0095"] = <
+					text = <"White - Irish">
+					description = <"">
+				>
+				["at0096"] = <
+					text = <"Other white background">
+					description = <"">
+				>
+				["at0097"] = <
+					text = <"Mixed - White and black caribbean">
+					description = <"">
+				>
+				["at0098"] = <
+					text = <"Mixed - White and black african">
+					description = <"">
+				>
+				["at0099"] = <
+					text = <"Mixed - White and asian">
+					description = <"">
+				>
+				["at0100"] = <
+					text = <"Other mixed background">
+					description = <"">
+				>
+				["at0101"] = <
+					text = <"Asian or asian british - Indian">
+					description = <"">
+				>
+				["at0102"] = <
+					text = <"Asian or asian british - Pakistani">
+					description = <"">
+				>
+				["at0103"] = <
+					text = <"Asian or asian british - Bangladeshi">
+					description = <"">
+				>
+				["at0104"] = <
+					text = <"Other Asian background">
+					description = <"">
+				>
+				["at0105"] = <
+					text = <"Black or black british - Caribbean">
+					description = <"">
+				>
+				["at0106"] = <
+					text = <"Black or black british - African">
+					description = <"">
+				>
+				["at0107"] = <
+					text = <"Other Black background">
+					description = <"">
+				>
+				["at0108"] = <
+					text = <"Chinese">
+					description = <"">
+				>
+				["at0109"] = <
+					text = <"Any other group">
+					description = <"">
+				>
+				["at0110"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0111"] = <
+					text = <"Extension">
 					description = <"">
 				>
 			>
