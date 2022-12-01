@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.34",
+      "sem_ver" : "0.1.35",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "362bfea7dfbc04febfd999fddef0a19d",
+      "MD5-CAM-1.0.1" : "f58917d35e658491c14dd64db4880612",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -12252,16 +12252,7 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0007.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -12750,7 +12741,19 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "DV_CODED_TEXT",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "CODE_PHRASE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "at0054", "at0055", "at0056", "at0066", "at0057", "at0062", "at0078", "at0088" ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     } ]
                   } ],
@@ -15797,7 +15800,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.49" ],
+                                  "constraint" : [ "ac0.57" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -15874,10 +15877,10 @@
             "code" : "ac0.21",
             "description" : ""
           },
-          "ac0.49" : {
+          "ac0.57" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.49",
+            "code" : "ac0.57",
             "description" : ""
           }
         },
@@ -15894,10 +15897,10 @@
             "code" : "ac0.21",
             "description" : ""
           },
-          "ac0.49" : {
+          "ac0.57" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.49",
+            "code" : "ac0.57",
             "description" : ""
           }
         },
@@ -15914,10 +15917,10 @@
             "code" : "ac0.21",
             "description" : ""
           },
-          "ac0.49" : {
+          "ac0.57" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.49",
+            "code" : "ac0.57",
             "description" : ""
           }
         },
@@ -15934,10 +15937,10 @@
             "code" : "ac0.21",
             "description" : ""
           },
-          "ac0.49" : {
+          "ac0.57" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.49",
+            "code" : "ac0.57",
             "description" : ""
           }
         }
@@ -16188,6 +16191,46 @@
         "ac0.49" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.49",
+          "members" : [ "at0044" ]
+        },
+        "ac0.50" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.50",
+          "members" : [ "at0044" ]
+        },
+        "ac0.51" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.51",
+          "members" : [ "at0044" ]
+        },
+        "ac0.52" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.52",
+          "members" : [ "at0044" ]
+        },
+        "ac0.53" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.53",
+          "members" : [ "at0044" ]
+        },
+        "ac0.54" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.54",
+          "members" : [ "at0044" ]
+        },
+        "ac0.55" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.55",
+          "members" : [ "at0044" ]
+        },
+        "ac0.56" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.56",
+          "members" : [ "at0044" ]
+        },
+        "ac0.57" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.57",
           "members" : [ "at0044" ]
         }
       }
@@ -32458,10 +32501,23 @@
                               "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
-                                "value" : "local"
+                                "value" : "SNOMED-CT"
                               },
-                              "constraint" : [ "ac0.7" ],
-                              "selectedTerminologies" : [ ]
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "10904000",
+                                "value" : "Standing"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "33586001",
+                                "value" : "Siting"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "102538003",
+                                "value" : "Lying"
+                              } ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -32863,12 +32919,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "ja" : {
@@ -32900,12 +32950,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         },
@@ -32939,12 +32983,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "zh-cn" : {
@@ -32976,12 +33014,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         },
@@ -33015,12 +33047,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "ru" : {
@@ -33052,12 +33078,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         },
@@ -33091,12 +33111,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "ar-sy" : {
@@ -33128,12 +33142,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         },
@@ -33167,12 +33175,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "pt-br" : {
@@ -33204,12 +33206,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         },
@@ -33243,12 +33239,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "es" : {
@@ -33280,12 +33270,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         },
@@ -33319,12 +33303,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "sv" : {
@@ -33357,12 +33335,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
             "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
-            "description" : ""
           }
         },
         "fi" : {
@@ -33394,12 +33366,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.6",
-            "description" : ""
-          },
-          "ac0.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.7",
             "description" : ""
           }
         }
@@ -33446,6 +33412,21 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.7",
           "members" : [ "at1000", "at1001", "at1002", "at1003", "at1014" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at1000", "at1001", "at1002", "at1003", "at1014" ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ ]
         }
       }
     },
@@ -33985,6 +33966,28 @@
                       "nodeId" : "at1023.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.36" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
@@ -34011,28 +34014,6 @@
                                 "code" : "263654008",
                                 "value" : "Abnormal"
                               } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.36" ],
-                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -34078,10 +34059,23 @@
                               "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
-                                "value" : "local"
+                                "value" : "SNOMED-CT"
                               },
-                              "constraint" : [ "ac0.37" ],
-                              "selectedTerminologies" : [ ]
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "10904000",
+                                "value" : "Standing"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "33586001",
+                                "value" : "Siting"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "102538003",
+                                "value" : "Lying"
+                              } ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -34290,12 +34284,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
             "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
-            "description" : ""
           }
         },
         "es-co" : {
@@ -34339,12 +34327,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
-            "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
             "description" : ""
           }
         },
@@ -34390,12 +34372,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.36",
             "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.37",
-            "description" : ""
           }
         },
         "de" : {
@@ -34439,12 +34415,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
-            "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
             "description" : ""
           }
         },
@@ -34490,12 +34460,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
             "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
-            "description" : ""
           }
         },
         "pt-br" : {
@@ -34539,12 +34503,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
-            "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
             "description" : ""
           }
         },
@@ -34590,12 +34548,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
             "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
-            "description" : ""
           }
         },
         "es" : {
@@ -34639,12 +34591,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
-            "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
             "description" : ""
           }
         },
@@ -34690,12 +34636,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
             "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
-            "description" : ""
           }
         },
         "nb" : {
@@ -34740,12 +34680,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
             "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
-            "description" : ""
           }
         },
         "nl" : {
@@ -34789,12 +34723,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.36",
-            "description" : ""
-          },
-          "ac0.37" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.37",
             "description" : ""
           }
         }
@@ -34986,6 +34914,21 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.37",
           "members" : [ "at1003", "at1001", "at1002", "at1000" ]
+        },
+        "ac0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.39",
+          "members" : [ "at1003", "at1001", "at1002", "at1000" ]
+        },
+        "ac0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.40",
+          "members" : [ ]
+        },
+        "ac0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.41",
+          "members" : [ ]
         }
       }
     },
@@ -35490,6 +35433,61 @@
                   } ],
                   "attributeTuples" : [ ]
                 } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0022",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0065.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "10904000",
+                                "value" : "Standing"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "33586001",
+                                "value" : "Siting"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "102538003",
+                                "value" : "Lying"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
               } ],
               "attributeTuples" : [ ]
             } ]
@@ -35750,6 +35748,31 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.3",
           "members" : [ "at0017", "at0018", "at0019", "at0025" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0066", "at0067", "at0068", "at0069", "at0071" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "ac0.4" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "ac0.4" ]
         }
       }
     },
@@ -36410,10 +36433,31 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "1..1",
                       "terminologyId" : {
-                        "value" : "local"
+                        "value" : "SNOMED-CT"
                       },
-                      "constraint" : [ "ac0.9" ],
-                      "selectedTerminologies" : [ ]
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "34402009",
+                        "value" : "Rectum"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "91470000",
+                        "value" : "Axilla"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "279654000",
+                        "value" : "Ear canal"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "52795006",
+                        "value" : "Forehead"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "123851003",
+                        "value" : "Mouth"
+                      } ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -36451,12 +36495,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "ru" : {
@@ -36464,12 +36502,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -36479,12 +36511,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "es-ar" : {
@@ -36492,12 +36518,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -36507,12 +36527,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "pt-br" : {
@@ -36520,12 +36534,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -36541,12 +36549,6 @@
             "code" : "at0063.1",
             "text" : "Clinical interpretation",
             "description" : "Additional comment about the body temperature measurement not captured in other fields."
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "de" : {
@@ -36554,12 +36556,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -36569,12 +36565,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "sv" : {
@@ -36582,12 +36572,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -36597,12 +36581,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "fi" : {
@@ -36610,12 +36588,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         },
@@ -36625,12 +36597,6 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
             "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
-            "description" : ""
           }
         },
         "nl" : {
@@ -36638,12 +36604,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.2",
-            "description" : ""
-          },
-          "ac0.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.9",
             "description" : ""
           }
         }
@@ -36702,6 +36662,21 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.9",
           "members" : [ "at0025", "at0024", "at0023", "at0061", "at0022", "at0026", "at0027", "at0028", "at0043", "at0051", "at0054", "at0055", "at0060" ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ "at0025", "at0024", "at0023", "at0061", "at0022", "at0026", "at0027", "at0028", "at0043", "at0051", "at0054", "at0055", "at0060" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ ]
         }
       }
     },
@@ -36910,7 +36885,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "2DCECCDEA74C4AD5B9B0F6087F57BE61"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation einer nicht durchgeführten körperlichen Untersuchung oder eines nicht durchgeführten klinischen Tests.",
+          "keywords" : [ "Ausschluss", "Behandlung", "Untersuchung", "durchgeführt", "abgeschlossen" ],
+          "use" : "Um zu dokumentieren, dass eine körperliche Untersuchung oder ein klinischer Test nicht durchgeführt wurde. Optional kann der Grund angegeben werden.\r\n\r\nZur Dokumentation einer Untersuchung oder einzelner Komponenten einer Untersuchung die nicht durchgeführt wurde(n). Der Archetyp kann nicht als eigenständiger Archetyp verwendet werden. Er kann innerhalb eines EXAMINATION-Archetyps, der den Kontext für die durchzuführende Untersuchung liefert, verwendet werden. Beispielsweise ermöglicht das Einfügen dieses Archetyps in den EXAMINATION-Detail SLOT innerhalb der OBSERVATION.exam-Klasse, die Dokumentation, dass keine körperliche Untersuchung durchgeführt wurde. Das Einfügen dieses Archetyps in den Details-SLOT eines untersuchungsbezogenen CLUSTER-Archetyps, wie z.B. CLUSTER.exam_eye_pupil, ermöglicht die Dokumentation, dass nur die Untersuchung einer Pupille stattgefunden hat. Die zweite Pupille konnte, z.B. durch eine Gesichtsverletzung, nicht untersucht werden.\r\n\r\nDieser Archetyp kann auch in anderen OBSERVATION- oder CLUSTER-Archetypen verwendet werden, um nicht durchführbare Tests oder Messungen zu dokumentieren. Zum Beispiel OBSERVATION.audiogram oder OBSERVATION.cgas.\r\n\r\nDurch den Einsatz dieses Archetyps kann insbesondere auf die Verwendung von Markierungen oder Terminologien, um eine Negation im Rahmen einer körperlichen Untersuchung auszudrücken, verzichtet werden. \r\n\r\nEs kann davon ausgegangen werden, dass bei unvollständigen Untersuchungen oder klinischen Beurteilungen nur Daten von erfolgreich durchgeführten Maßnahmen dokumentiert werden. \r\n",
+          "misuse" : "Nicht zur Dokumentation von klinischen Befunden, die während der körperlichen Untersuchung oder eines klinischen Tests beobachtet wurden. Für diese Zwecke bitte die vorgesehenen Archetypen verwenden.\r\n\r\nNicht zur Dokumentation von nicht aufgetretenden oder nicht vorhandenen Nebenwirkungen, Familienanamnesen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen - hierfür sollten die Archetypen EVALUATION.exclusion_global oder EVALUATION.exclusion_specific verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record that a physical examination or clinical test was not performed.",
+          "keywords" : [ "exclusion", "exam", "examination", "done", "performed" ],
+          "use" : "Use to record that a physical examination or clinical test was not performed, with an optional statement about the reason for the non-performance.\r\n\r\nThis archetype has been designed to be used to allow recording of 'no examination was done' at multiple levels of the examination process. It will never be used as a stand-alone archetype but always inside an examination archetype that provides the context for the examination being performed. For example, insertion of this archetype into the Examination Detail' SLOT within OBSERVATION.exam allows for recording that no physical examination was performed. Similarly, insertion of this archetype into the Details SLOT of any examination-related CLUSTER archetype, such as CLUSTER.exam_eye_pupil, allows recording that no physical examination was performed only for examination of a specified pupil, perhaps because a facial injury prevented the pupil being visualised.\r\n\r\nThis archetype may also be used within other OBSERVATION, or relevent CLUSTER, archetypes to allow recording of the inability to test or measure other clinical findings. For example: OBSERVATION.audiogram or OBSERVATION.cgas.\r\n\r\nIn particular, this archetype has specifically been designed to avoid the need to use flags or terminology to express negation about a record of physical examination or clinical findings within the health record.\r\n\r\nIt is reasonable to assume that if the examination or clinical assessment was partially performed, then only data about the component successfully performed will be recorded.",
+          "misuse" : "Not to be used to record the details about clinical findings observed on physical examination or during clinical testing. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the exclusion or absence of adverse reactions, family history, medication use, procedures, problems or diagnoses - use EVALUATION.exclusion_global or EVALUATION.exclusion_specific for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.exclusion_exam.v1",
     "differential" : true,
@@ -36976,7 +36983,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "2DCECCDEA74C4AD5B9B0F6087F57BE61"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation einer nicht durchgeführten körperlichen Untersuchung oder eines nicht durchgeführten klinischen Tests.",
+          "keywords" : [ "Ausschluss", "Behandlung", "Untersuchung", "durchgeführt", "abgeschlossen" ],
+          "use" : "Um zu dokumentieren, dass eine körperliche Untersuchung oder ein klinischer Test nicht durchgeführt wurde. Optional kann der Grund angegeben werden.\r\n\r\nZur Dokumentation einer Untersuchung oder einzelner Komponenten einer Untersuchung die nicht durchgeführt wurde(n). Der Archetyp kann nicht als eigenständiger Archetyp verwendet werden. Er kann innerhalb eines EXAMINATION-Archetyps, der den Kontext für die durchzuführende Untersuchung liefert, verwendet werden. Beispielsweise ermöglicht das Einfügen dieses Archetyps in den EXAMINATION-Detail SLOT innerhalb der OBSERVATION.exam-Klasse, die Dokumentation, dass keine körperliche Untersuchung durchgeführt wurde. Das Einfügen dieses Archetyps in den Details-SLOT eines untersuchungsbezogenen CLUSTER-Archetyps, wie z.B. CLUSTER.exam_eye_pupil, ermöglicht die Dokumentation, dass nur die Untersuchung einer Pupille stattgefunden hat. Die zweite Pupille konnte, z.B. durch eine Gesichtsverletzung, nicht untersucht werden.\r\n\r\nDieser Archetyp kann auch in anderen OBSERVATION- oder CLUSTER-Archetypen verwendet werden, um nicht durchführbare Tests oder Messungen zu dokumentieren. Zum Beispiel OBSERVATION.audiogram oder OBSERVATION.cgas.\r\n\r\nDurch den Einsatz dieses Archetyps kann insbesondere auf die Verwendung von Markierungen oder Terminologien, um eine Negation im Rahmen einer körperlichen Untersuchung auszudrücken, verzichtet werden. \r\n\r\nEs kann davon ausgegangen werden, dass bei unvollständigen Untersuchungen oder klinischen Beurteilungen nur Daten von erfolgreich durchgeführten Maßnahmen dokumentiert werden. \r\n",
+          "misuse" : "Nicht zur Dokumentation von klinischen Befunden, die während der körperlichen Untersuchung oder eines klinischen Tests beobachtet wurden. Für diese Zwecke bitte die vorgesehenen Archetypen verwenden.\r\n\r\nNicht zur Dokumentation von nicht aufgetretenden oder nicht vorhandenen Nebenwirkungen, Familienanamnesen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen - hierfür sollten die Archetypen EVALUATION.exclusion_global oder EVALUATION.exclusion_specific verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record that a physical examination or clinical test was not performed.",
+          "keywords" : [ "exclusion", "exam", "examination", "done", "performed" ],
+          "use" : "Use to record that a physical examination or clinical test was not performed, with an optional statement about the reason for the non-performance.\r\n\r\nThis archetype has been designed to be used to allow recording of 'no examination was done' at multiple levels of the examination process. It will never be used as a stand-alone archetype but always inside an examination archetype that provides the context for the examination being performed. For example, insertion of this archetype into the Examination Detail' SLOT within OBSERVATION.exam allows for recording that no physical examination was performed. Similarly, insertion of this archetype into the Details SLOT of any examination-related CLUSTER archetype, such as CLUSTER.exam_eye_pupil, allows recording that no physical examination was performed only for examination of a specified pupil, perhaps because a facial injury prevented the pupil being visualised.\r\n\r\nThis archetype may also be used within other OBSERVATION, or relevent CLUSTER, archetypes to allow recording of the inability to test or measure other clinical findings. For example: OBSERVATION.audiogram or OBSERVATION.cgas.\r\n\r\nIn particular, this archetype has specifically been designed to avoid the need to use flags or terminology to express negation about a record of physical examination or clinical findings within the health record.\r\n\r\nIt is reasonable to assume that if the examination or clinical assessment was partially performed, then only data about the component successfully performed will be recorded.",
+          "misuse" : "Not to be used to record the details about clinical findings observed on physical examination or during clinical testing. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the exclusion or absence of adverse reactions, family history, medication use, procedures, problems or diagnoses - use EVALUATION.exclusion_global or EVALUATION.exclusion_specific for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.exclusion_exam.v1",
     "differential" : true,
@@ -37042,7 +37081,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "2DCECCDEA74C4AD5B9B0F6087F57BE61"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation einer nicht durchgeführten körperlichen Untersuchung oder eines nicht durchgeführten klinischen Tests.",
+          "keywords" : [ "Ausschluss", "Behandlung", "Untersuchung", "durchgeführt", "abgeschlossen" ],
+          "use" : "Um zu dokumentieren, dass eine körperliche Untersuchung oder ein klinischer Test nicht durchgeführt wurde. Optional kann der Grund angegeben werden.\r\n\r\nZur Dokumentation einer Untersuchung oder einzelner Komponenten einer Untersuchung die nicht durchgeführt wurde(n). Der Archetyp kann nicht als eigenständiger Archetyp verwendet werden. Er kann innerhalb eines EXAMINATION-Archetyps, der den Kontext für die durchzuführende Untersuchung liefert, verwendet werden. Beispielsweise ermöglicht das Einfügen dieses Archetyps in den EXAMINATION-Detail SLOT innerhalb der OBSERVATION.exam-Klasse, die Dokumentation, dass keine körperliche Untersuchung durchgeführt wurde. Das Einfügen dieses Archetyps in den Details-SLOT eines untersuchungsbezogenen CLUSTER-Archetyps, wie z.B. CLUSTER.exam_eye_pupil, ermöglicht die Dokumentation, dass nur die Untersuchung einer Pupille stattgefunden hat. Die zweite Pupille konnte, z.B. durch eine Gesichtsverletzung, nicht untersucht werden.\r\n\r\nDieser Archetyp kann auch in anderen OBSERVATION- oder CLUSTER-Archetypen verwendet werden, um nicht durchführbare Tests oder Messungen zu dokumentieren. Zum Beispiel OBSERVATION.audiogram oder OBSERVATION.cgas.\r\n\r\nDurch den Einsatz dieses Archetyps kann insbesondere auf die Verwendung von Markierungen oder Terminologien, um eine Negation im Rahmen einer körperlichen Untersuchung auszudrücken, verzichtet werden. \r\n\r\nEs kann davon ausgegangen werden, dass bei unvollständigen Untersuchungen oder klinischen Beurteilungen nur Daten von erfolgreich durchgeführten Maßnahmen dokumentiert werden. \r\n",
+          "misuse" : "Nicht zur Dokumentation von klinischen Befunden, die während der körperlichen Untersuchung oder eines klinischen Tests beobachtet wurden. Für diese Zwecke bitte die vorgesehenen Archetypen verwenden.\r\n\r\nNicht zur Dokumentation von nicht aufgetretenden oder nicht vorhandenen Nebenwirkungen, Familienanamnesen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen - hierfür sollten die Archetypen EVALUATION.exclusion_global oder EVALUATION.exclusion_specific verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record that a physical examination or clinical test was not performed.",
+          "keywords" : [ "exclusion", "exam", "examination", "done", "performed" ],
+          "use" : "Use to record that a physical examination or clinical test was not performed, with an optional statement about the reason for the non-performance.\r\n\r\nThis archetype has been designed to be used to allow recording of 'no examination was done' at multiple levels of the examination process. It will never be used as a stand-alone archetype but always inside an examination archetype that provides the context for the examination being performed. For example, insertion of this archetype into the Examination Detail' SLOT within OBSERVATION.exam allows for recording that no physical examination was performed. Similarly, insertion of this archetype into the Details SLOT of any examination-related CLUSTER archetype, such as CLUSTER.exam_eye_pupil, allows recording that no physical examination was performed only for examination of a specified pupil, perhaps because a facial injury prevented the pupil being visualised.\r\n\r\nThis archetype may also be used within other OBSERVATION, or relevent CLUSTER, archetypes to allow recording of the inability to test or measure other clinical findings. For example: OBSERVATION.audiogram or OBSERVATION.cgas.\r\n\r\nIn particular, this archetype has specifically been designed to avoid the need to use flags or terminology to express negation about a record of physical examination or clinical findings within the health record.\r\n\r\nIt is reasonable to assume that if the examination or clinical assessment was partially performed, then only data about the component successfully performed will be recorded.",
+          "misuse" : "Not to be used to record the details about clinical findings observed on physical examination or during clinical testing. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the exclusion or absence of adverse reactions, family history, medication use, procedures, problems or diagnoses - use EVALUATION.exclusion_global or EVALUATION.exclusion_specific for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.exclusion_exam.v1",
     "differential" : true,
@@ -37108,7 +37179,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "2DCECCDEA74C4AD5B9B0F6087F57BE61"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation einer nicht durchgeführten körperlichen Untersuchung oder eines nicht durchgeführten klinischen Tests.",
+          "keywords" : [ "Ausschluss", "Behandlung", "Untersuchung", "durchgeführt", "abgeschlossen" ],
+          "use" : "Um zu dokumentieren, dass eine körperliche Untersuchung oder ein klinischer Test nicht durchgeführt wurde. Optional kann der Grund angegeben werden.\r\n\r\nZur Dokumentation einer Untersuchung oder einzelner Komponenten einer Untersuchung die nicht durchgeführt wurde(n). Der Archetyp kann nicht als eigenständiger Archetyp verwendet werden. Er kann innerhalb eines EXAMINATION-Archetyps, der den Kontext für die durchzuführende Untersuchung liefert, verwendet werden. Beispielsweise ermöglicht das Einfügen dieses Archetyps in den EXAMINATION-Detail SLOT innerhalb der OBSERVATION.exam-Klasse, die Dokumentation, dass keine körperliche Untersuchung durchgeführt wurde. Das Einfügen dieses Archetyps in den Details-SLOT eines untersuchungsbezogenen CLUSTER-Archetyps, wie z.B. CLUSTER.exam_eye_pupil, ermöglicht die Dokumentation, dass nur die Untersuchung einer Pupille stattgefunden hat. Die zweite Pupille konnte, z.B. durch eine Gesichtsverletzung, nicht untersucht werden.\r\n\r\nDieser Archetyp kann auch in anderen OBSERVATION- oder CLUSTER-Archetypen verwendet werden, um nicht durchführbare Tests oder Messungen zu dokumentieren. Zum Beispiel OBSERVATION.audiogram oder OBSERVATION.cgas.\r\n\r\nDurch den Einsatz dieses Archetyps kann insbesondere auf die Verwendung von Markierungen oder Terminologien, um eine Negation im Rahmen einer körperlichen Untersuchung auszudrücken, verzichtet werden. \r\n\r\nEs kann davon ausgegangen werden, dass bei unvollständigen Untersuchungen oder klinischen Beurteilungen nur Daten von erfolgreich durchgeführten Maßnahmen dokumentiert werden. \r\n",
+          "misuse" : "Nicht zur Dokumentation von klinischen Befunden, die während der körperlichen Untersuchung oder eines klinischen Tests beobachtet wurden. Für diese Zwecke bitte die vorgesehenen Archetypen verwenden.\r\n\r\nNicht zur Dokumentation von nicht aufgetretenden oder nicht vorhandenen Nebenwirkungen, Familienanamnesen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen - hierfür sollten die Archetypen EVALUATION.exclusion_global oder EVALUATION.exclusion_specific verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record that a physical examination or clinical test was not performed.",
+          "keywords" : [ "exclusion", "exam", "examination", "done", "performed" ],
+          "use" : "Use to record that a physical examination or clinical test was not performed, with an optional statement about the reason for the non-performance.\r\n\r\nThis archetype has been designed to be used to allow recording of 'no examination was done' at multiple levels of the examination process. It will never be used as a stand-alone archetype but always inside an examination archetype that provides the context for the examination being performed. For example, insertion of this archetype into the Examination Detail' SLOT within OBSERVATION.exam allows for recording that no physical examination was performed. Similarly, insertion of this archetype into the Details SLOT of any examination-related CLUSTER archetype, such as CLUSTER.exam_eye_pupil, allows recording that no physical examination was performed only for examination of a specified pupil, perhaps because a facial injury prevented the pupil being visualised.\r\n\r\nThis archetype may also be used within other OBSERVATION, or relevent CLUSTER, archetypes to allow recording of the inability to test or measure other clinical findings. For example: OBSERVATION.audiogram or OBSERVATION.cgas.\r\n\r\nIn particular, this archetype has specifically been designed to avoid the need to use flags or terminology to express negation about a record of physical examination or clinical findings within the health record.\r\n\r\nIt is reasonable to assume that if the examination or clinical assessment was partially performed, then only data about the component successfully performed will be recorded.",
+          "misuse" : "Not to be used to record the details about clinical findings observed on physical examination or during clinical testing. Use specific archetypes for these purposes.\r\n\r\nNot to be used to record the exclusion or absence of adverse reactions, family history, medication use, procedures, problems or diagnoses - use EVALUATION.exclusion_global or EVALUATION.exclusion_specific for this purpose.",
+          "copyright" : "© Australian Digital Health Agency, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.exclusion_exam.v1",
     "differential" : true,
