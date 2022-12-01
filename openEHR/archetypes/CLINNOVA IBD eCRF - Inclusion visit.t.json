@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.32",
+      "sem_ver" : "0.1.33",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "eeb9e93a5cd49be48a0ffe4e37e8246e",
+      "MD5-CAM-1.0.1" : "1f2b8bf3421511b3b6bc59e8496951c4",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -14676,6 +14676,18 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "SNOMED-CT",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "288456005",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Caffeinated Coffee",
+                                "@type" : "DV_CODED_TEXT"
+                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -14684,14 +14696,14 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "caffeineBeverage"
+                                    "value" : "SNOMED-CT"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "caffeineBeverage" ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "caffeineBeverage",
+                                    "terminologyId" : "SNOMED-CT",
                                     "code" : "288456005",
-                                    "value" : "288456005"
+                                    "value" : "Caffeinated Coffee"
                                   } ]
                                 } ]
                               } ],
@@ -14755,18 +14767,37 @@
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
                               "defaultValue" : {
-                                "value" : "Caffeine",
-                                "@type" : "DV_TEXT"
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "SNOMED-CT",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "26476000",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Black tea",
+                                "@type" : "DV_CODED_TEXT"
                               },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "value",
+                                "rmAttributeName" : "defining_code",
                                 "children" : [ {
-                                  "@type" : "C_STRING",
-                                  "rmTypeName" : "STRING",
-                                  "constraint" : [ "Caffeine" ]
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "SNOMED-CT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "26476000",
+                                    "value" : "Black tea"
+                                  } ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -14893,18 +14924,37 @@
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
                               "defaultValue" : {
-                                "value" : "Caffeine",
-                                "@type" : "DV_TEXT"
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "SNOMED-CT",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "412194001",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Green tea",
+                                "@type" : "DV_CODED_TEXT"
                               },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "value",
+                                "rmAttributeName" : "defining_code",
                                 "children" : [ {
-                                  "@type" : "C_STRING",
-                                  "rmTypeName" : "STRING",
-                                  "constraint" : [ "Caffeine" ]
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "SNOMED-CT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "412194001",
+                                    "value" : "Green tea"
+                                  } ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -15024,18 +15074,37 @@
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
                               "defaultValue" : {
-                                "value" : "Caffeine",
-                                "@type" : "DV_TEXT"
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "SNOMED-CT",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "288458006",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Caffeinated soft drinks",
+                                "@type" : "DV_CODED_TEXT"
                               },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "value",
+                                "rmAttributeName" : "defining_code",
                                 "children" : [ {
-                                  "@type" : "C_STRING",
-                                  "rmTypeName" : "STRING",
-                                  "constraint" : [ "Caffeine" ]
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "SNOMED-CT"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "288458006",
+                                    "value" : "Caffeinated soft drinks"
+                                  } ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -15181,7 +15250,7 @@
           "at0024.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0024.1",
-            "text" : "Caffeinated coffee",
+            "text" : "Consumed caffeinated coffee?",
             "description" : "Is there a history of use of a specific substance or group of substances.",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
           },
@@ -15202,7 +15271,7 @@
           "at0024.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0024.2",
-            "text" : "Caffeinated black tea",
+            "text" : "Consumed caffeinated black tea?",
             "description" : "Is there a history of use of a specific substance or group of substances.",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
           },
@@ -15216,7 +15285,7 @@
           "at0024.3" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0024.3",
-            "text" : "Caffeinated green tea",
+            "text" : "Consumed caffeinated green tea?",
             "description" : "Is there a history of use of a specific substance or group of substances.",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
           },
@@ -15230,7 +15299,7 @@
           "at0024.4" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0024.4",
-            "text" : "Caffeinated soda",
+            "text" : "Consumed caffeinated soda?",
             "description" : "Is there a history of use of a specific substance or group of substances.",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
           },
