@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.3",
+      "sem_ver" : "0.1.4",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "2b0730095c568c266e87e916b6cd781e",
+      "MD5-CAM-1.0.1" : "c06174893d282890172f3eba050c3e31",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -186,12 +186,12 @@
       },
       "children" : [ {
         "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
+        "rmTypeName" : "INSTRUCTION",
         "occurrences" : "0..*",
-        "nodeId" : "at0.2",
+        "nodeId" : "at0.6",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-medication_statement-001.v0",
+        "archetypeRef" : "openEHR-EHR-INSTRUCTION.ovl-medication_order-001.v3",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -617,7 +617,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "b200732f-703b-432d-a36b-7415b623d441",
+    "uid" : "605b55c2-5f8f-4098-8e08-2cbe5cf8f2f8",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -626,353 +626,224 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "BB8EA8763582B9C8D5A828DCE3ED5B5B"
+        "PARENT:MD5-CAM-1.0.1" : "E567F68BD0F0BE755DE0F5D504533ED1"
       },
       "details" : { }
     },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.medication_statement.v0",
+    "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-medication_statement-001.v0"
+      "value" : "openEHR-EHR-INSTRUCTION.ovl-medication_order-001.v3"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
+      "rmTypeName" : "INSTRUCTION",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
+        "rmAttributeName" : "activities",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "HISTORY",
+          "rmTypeName" : "ACTIVITY",
           "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "events",
+            "rmAttributeName" : "description",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
+              "rmTypeName" : "ITEM_TREE",
               "nodeId" : "at0002",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
+                "rmAttributeName" : "items",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0091.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
+                    "rmAttributeName" : "value",
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0008.1",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "occurrences" : "1..1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
+                        "rmAttributeName" : "defining_code",
                         "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.1" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "0..1",
+                          "terminologyId" : {
+                            "value" : "SNOMED-CT"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "SNOMED-CT" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "54471007",
+                            "value" : "Buccal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "404820008",
+                            "value" : "Epidural route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "229801003",
+                            "value" : "Intra-arterial"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "12130007",
+                            "value" : "Intra-articular route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "372460008",
+                            "value" : "Intracardiac route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "372464004",
+                            "value" : "Intradermal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "37737002",
+                            "value" : "Intraluminal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "78421000",
+                            "value" : "Intramuscular route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "447694001",
+                            "value" : "Inhalation route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "38239002",
+                            "value" : "Intraperitoneal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "372469009",
+                            "value" : "Intrapleural route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "418418000",
+                            "value" : "Intraspinal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "72607000",
+                            "value" : "Intrathecal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "47625008",
+                            "value" : "Intravenous route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "46713006",
+                            "value" : "Nasal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "127492001",
+                            "value" : "Nasogastric route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "372472002",
+                            "value" : "Ocular route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "10547007",
+                            "value" : "Otic route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "26643006",
+                            "value" : "Oral route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "16857009",
+                            "value" : "Vaginal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "34206005",
+                            "value" : "Subcutaneous route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "37839007",
+                            "value" : "Sublingual route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "45890007",
+                            "value" : "Transdermal route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "6064005",
+                            "value" : "Topical route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "37161004",
+                            "value" : "Rectal route"
+                          } ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
-                    }, {
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0092.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0173.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0018.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0018.1",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "occurrences" : "1..1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
+                        "rmAttributeName" : "defining_code",
                         "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_URI",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "0..1",
+                          "terminologyId" : {
+                            "value" : "indicationConcomitantMedication"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "indicationConcomitantMedication" ],
+                          "limitToList" : false,
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "indicationConcomitantMedication",
+                            "code" : "LIHADVERSEVE",
+                            "value" : "Adverse event"
+                          }, {
+                            "terminologyId" : "indicationConcomitantMedication",
+                            "code" : "LIHMEDHISTO",
+                            "value" : "Medical history"
+                          }, {
+                            "terminologyId" : "indicationConcomitantMedication",
+                            "code" : "LIHDISEASEREL",
+                            "value" : "Disease-related condition"
+                          }, {
+                            "terminologyId" : "indicationConcomitantMedication",
+                            "code" : "LIHPROPHYLA",
+                            "value" : "Prophylaxis"
+                          } ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0019.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DATE_TIME",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0020.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DURATION",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0021.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DATE_TIME",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0031.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0032.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0023.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "indicationConcomitantMedication"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "indicationConcomitantMedication" ],
-                              "limitToList" : false,
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "indicationConcomitantMedication",
-                                "code" : "LIHADVERSEVE",
-                                "value" : "Adverse event"
-                              }, {
-                                "terminologyId" : "indicationConcomitantMedication",
-                                "code" : "LIHMEDHISTO",
-                                "value" : "Medical history"
-                              }, {
-                                "terminologyId" : "indicationConcomitantMedication",
-                                "code" : "LIHDISEASEREL",
-                                "value" : "Disease-related condition"
-                              }, {
-                                "terminologyId" : "indicationConcomitantMedication",
-                                "code" : "LIHPROPHYLA",
-                                "value" : "Prophylaxis"
-                              }, {
-                                "terminologyId" : "indicationConcomitantMedication",
-                                "code" : "LIHOTHER",
-                                "value" : "Other"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0033.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0030.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "54471007",
-                                "value" : "Buccal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "404820008",
-                                "value" : "Epidural route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "229801003",
-                                "value" : "Intra-arterial"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "12130007",
-                                "value" : "Intra-articular route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "372460008",
-                                "value" : "Intracardiac route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "372464004",
-                                "value" : "Intradermal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "37737002",
-                                "value" : "Intraluminal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "78421000",
-                                "value" : "Intramuscular route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "447694001",
-                                "value" : "Inhalation route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "38239002",
-                                "value" : "Intraperitoneal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "372469009",
-                                "value" : "Intrapleural route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "418418000",
-                                "value" : "Intraspinal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "72607000",
-                                "value" : "Intrathecal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "47625008",
-                                "value" : "Intravenous route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "46713006",
-                                "value" : "Nasal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "127492001",
-                                "value" : "Nasogastric route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "372472002",
-                                "value" : "Ocular route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "10547007",
-                                "value" : "Otic route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "26643006",
-                                "value" : "Oral route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "16857009",
-                                "value" : "Vaginal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "34206005",
-                                "value" : "Subcutaneous route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "37839007",
-                                "value" : "Sublingual route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "45890007",
-                                "value" : "Transdermal route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "6064005",
-                                "value" : "Topical route"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "37161004",
-                                "value" : "Rectal route"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_ARCHETYPE_ROOT",
-                      "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0022.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ],
-                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-dosage-001.v2",
-                      "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -991,584 +862,32 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.1" : {
+          "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.1",
-            "description" : ""
+            "code" : "at0000.1",
+            "text" : "Medication list",
+            "description" : "An order for a medication, vaccine, nutritional product or other therapeutic item for an identified individual."
+          },
+          "at0173.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0173.1",
+            "text" : "Frequency",
+            "description" : "A narrative description of a specific part of overall directions.",
+            "comment" : "In some settings, it is common to split overall narrative directions into more specific segments of narrative. For example in hospital settings, it can be common to split the overall directions into 'Dose amount' and 'Dose timing', both as narrative text. These terms can be applied at template or run-time."
           }
         },
-        "de" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
-        "nl" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        },
-        "nb" : {
-          "ac0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.1",
-          "members" : [ "at0009", "at0010", "at0011", "at0012", "at0013", "at0014", "at0015", "at0016", "at0017" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "f839fe92-148c-452c-9785-af267e0478ea",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Natalia Strauch",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "Strauch.Natalia@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Marit Alice Venheim, John Tore Valand",
-        "organisation" : "Helse Vest IKT, Helse Bergen",
-        "email" : "marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-vest-ikt.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nl"
-      },
-      "author" : {
-        "name" : "Joost Holslag",
-        "organisation" : "Nedap",
-        "email" : "joost.holslag@nedap.com"
-      },
-      "accreditation" : "MD",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "4116cd69-f71e-42a1-8622-d05cf73a3f86",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "926B8773E3FBB271F2820D4198B4F63E"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.dosage.v2",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-dosage-001.v2"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0164.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_COUNT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "magnitude",
-                "children" : [ {
-                  "@type" : "C_INTEGER",
-                  "rmTypeName" : "INTEGER",
-                  "occurrences" : "1..1",
-                  "constraint" : [ {
-                    "lower" : 1,
-                    "lowerIncluded" : true,
-                    "upperIncluded" : false,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : true
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0144.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units_system",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units_display_name",
-                  "children" : [ ]
-                } ],
-                "tuples" : [ {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "mL" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "http://unitsofmeasure.org" ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "ml" ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "mg" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "http://unitsofmeasure.org" ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "mg" ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "ug" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "http://unitsofmeasure.org" ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "μg" ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "[iU]" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "http://unitsofmeasure.org" ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "IU" ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "[arb'U]{SQ-T}" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "http://unitsofmeasure.org" ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "SQ-T" ]
-                  } ]
-                } ]
-              } ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0178.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0134.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_QUANTITY",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "property",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "126" ]
-                } ]
-              } ],
-              "attributeTuples" : [ {
-                "@type" : "C_ATTRIBUTE_TUPLE",
-                "members" : [ {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "units",
-                  "children" : [ ]
-                }, {
-                  "@type" : "C_ATTRIBUTE",
-                  "rmAttributeName" : "magnitude",
-                  "children" : [ ]
-                } ],
-                "tuples" : [ {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "l/h" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lower" : 0.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "ml/min" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lower" : 0.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "ml/s" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lower" : 0.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "ml/h" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lower" : 0.0,
-                      "lowerIncluded" : true,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : false,
-                      "upperUnbounded" : true
-                    } ]
-                  } ]
-                } ]
-              } ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0102.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DURATION",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_DURATION",
-                  "rmTypeName" : "DURATION",
-                  "occurrences" : "1..1",
-                  "patternedConstraint" : "PDTHMS",
-                  "constraint" : [ {
-                    "lower" : "PT0S",
-                    "lowerIncluded" : true,
-                    "upperIncluded" : false,
-                    "lowerUnbounded" : false,
-                    "upperUnbounded" : true
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "lower",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DURATION",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_DURATION",
-                      "rmTypeName" : "DURATION",
-                      "occurrences" : "1..1",
-                      "patternedConstraint" : "PDTHMS",
-                      "constraint" : [ {
-                        "lower" : "PT0S",
-                        "lowerIncluded" : true,
-                        "upperIncluded" : false,
-                        "lowerUnbounded" : false,
-                        "upperUnbounded" : true
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "upper",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DURATION",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_DURATION",
-                      "rmTypeName" : "DURATION",
-                      "occurrences" : "1..1",
-                      "patternedConstraint" : "PDTHMS",
-                      "constraint" : [ {
-                        "lower" : "PT0S",
-                        "lowerIncluded" : true,
-                        "upperIncluded" : false,
-                        "lowerUnbounded" : false,
-                        "upperUnbounded" : true
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "[arb'U]{SQ-T}" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "tablet",
-            "description" : "standardized quality unit tablet",
-            "code" : "[arb'U]{SQ-T}"
-          }
-        },
-        "nb" : {
-          "[arb'U]{SQ-T}" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*t (en)",
-            "description" : "*standardized quality unit tablet (en)",
-            "code" : "[arb'U]{SQ-T}"
-          }
-        },
-        "pt-br" : {
-          "[arb'U]{SQ-T}" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*t (en)",
-            "description" : "*standardized quality unit tablet (en)",
-            "code" : "[arb'U]{SQ-T}"
-          }
-        },
-        "de" : {
-          "[arb'U]{SQ-T}" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*t (en)",
-            "description" : "*standardized quality unit tablet (en)",
-            "code" : "[arb'U]{SQ-T}"
-          }
-        },
-        "sv" : {
-          "[arb'U]{SQ-T}" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*t (en)",
-            "description" : "*standardized quality unit tablet (en)",
-            "code" : "[arb'U]{SQ-T}"
-          }
-        }
+        "nb" : { },
+        "pt-br" : { },
+        "es-ar" : { },
+        "de" : { },
+        "sv" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "54847bc3-76e5-48b9-831f-d3002ef5cf63",
+    "buildUid" : "e4fbe115-9dfd-4323-84dc-36fca30c232f",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -1588,9 +907,9 @@
         "codeString" : "de"
       },
       "author" : {
-        "name" : "Nazli Soltani, Natalia Strauch, Alexander Bachmeier",
-        "organisation" : "UMG, Medizinische Schule Hannover (MHH), Medizinische Hochschule Hannover, Heidelberg University Hospital",
-        "email" : "nazli.soltani@med.uni-goettingen.de, strauch.natalia@mh-hannover.de, Strauch.Natalia@mh-hannover.de, alexander.bachmeier@med.uni-heidelberg.de"
+        "name" : "Sarah Ballout",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "ballout.sarah@mh-hannover.de"
       },
       "otherDetails" : { }
     }, {
@@ -1602,9 +921,9 @@
         "codeString" : "sv"
       },
       "author" : {
-        "name" : "Therese Lindberg",
-        "organisation" : "Cambio CDS",
-        "email" : "therese.lindberg@cambio.se"
+        "name" : "Emma Malm",
+        "organisation" : "Karolinska Universitetssjukhuset",
+        "email" : "emma.malm@cambio.se"
       },
       "otherDetails" : { }
     }, {
@@ -1616,10 +935,25 @@
         "codeString" : "nb"
       },
       "author" : {
-        "name" : "Silje Ljosland Bakke",
-        "organisation" : "Nasjonal IKT HF, Helse Vest IKT AS",
+        "name" : "John Tore Valand, Silje Ljosland Bakke",
+        "organisation" : "Helse Vest IKT AS",
         "email" : "silje.ljosland.bakke@helse-vest-ikt.no"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral",
+        "email" : "amarch@cas.austral.edu.ar"
+      },
+      "accreditation" : "MD",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -1630,11 +964,11 @@
         "codeString" : "pt-br"
       },
       "author" : {
-        "name" : "Debora Farage, Fernanda Maia, Laíse Figueiredo",
-        "organisation" : "Core Consulting",
-        "email" : "contato@coreconsulting.com.br"
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
       },
-      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "accreditation" : "R.N.",
       "otherDetails" : { }
     } ]
   } ],
