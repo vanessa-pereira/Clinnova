@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.4",
+      "sem_ver" : "0.1.5",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "c06174893d282890172f3eba050c3e31",
+      "MD5-CAM-1.0.1" : "e093c98d2657bdbe91c8c73b042ddc25",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -847,6 +847,114 @@
                     } ]
                   } ],
                   "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "CLUSTER",
+                  "nodeId" : "at0113.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0012.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0011.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0016.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0060.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_COUNT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "magnitude",
+                            "children" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 0,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0050.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_DURATION",
+                              "rmTypeName" : "DURATION",
+                              "occurrences" : "1..1",
+                              "patternedConstraint" : "PWDTH",
+                              "constraint" : [ {
+                                "lower" : "PT0H",
+                                "lowerIncluded" : true,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -874,6 +982,24 @@
             "text" : "Frequency",
             "description" : "A narrative description of a specific part of overall directions.",
             "comment" : "In some settings, it is common to split overall narrative directions into more specific segments of narrative. For example in hospital settings, it can be common to split the overall directions into 'Dose amount' and 'Dose timing', both as narrative text. These terms can be applied at template or run-time."
+          },
+          "at0113.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0113.1",
+            "text" : "Period details",
+            "description" : "Details about the whole medication order."
+          },
+          "at0012.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0012.1",
+            "text" : "Start date/time",
+            "description" : "The date and optional time to commence use of the ordered item."
+          },
+          "at0013.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0013.1",
+            "text" : "Stop date/time",
+            "description" : "The date and optional time when it is planned to cease use of the ordered item."
           }
         },
         "nb" : { },
