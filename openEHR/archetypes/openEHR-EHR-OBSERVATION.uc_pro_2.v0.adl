@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -49,7 +49,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9f9ff30ac1a8c4a30ac95143f4633660">
+		["MD5-CAM-1.0.1"] = <"cd7767ac9d0bd536e0067a2b68ae0f1a">
 		["build_uid"] = <"30a099c2-b83f-356b-b7b1-67a40bae65ee">
 	>
 
@@ -111,6 +111,16 @@ definition
 								value matches {P3D}
 							}
 						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0018] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0019] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -195,6 +205,14 @@ last 3 days)\"">
 					text = <"Active Ulcerative Colitis">
 					description = <"A score of 6 indicates active disease and spontaneous bleeding.">
 				>
+				["at0018"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0019"] = <
+					text = <"Extension">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
@@ -273,6 +291,14 @@ last 3 days)\" (en)">
 					text = <"*Active Ulcerative Colitis (en)">
 					description = <"*A score of 6 indicates active disease and spontaneous bleeding. (en)">
 				>
+				["at0018"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0019"] = <
+					text = <"*Extension (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -350,6 +376,14 @@ last 3 days)\" (en)">
 				["at0017"] = <
 					text = <"*Active Ulcerative Colitis (en)">
 					description = <"*A score of 6 indicates active disease and spontaneous bleeding. (en)">
+				>
+				["at0018"] = <
+					text = <"*Item tree (en)">
+					description = <"@ internal @">
+				>
+				["at0019"] = <
+					text = <"*Extension (en)">
+					description = <"">
 				>
 			>
 		>
