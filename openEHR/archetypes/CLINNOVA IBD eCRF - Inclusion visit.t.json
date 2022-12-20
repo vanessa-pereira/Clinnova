@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.39",
+      "sem_ver" : "0.1.40",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "d327c4c7359b1aaca6a5e499f0b9aa62",
+      "MD5-CAM-1.0.1" : "dfccb8569fb8549c9222e4d8f9ff22ec",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -22839,9 +22839,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "39937001",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Skin",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -22852,10 +22857,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "39937001",
+                    "value" : "Skin"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -23573,9 +23583,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "45048000",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Neck",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -23586,10 +23601,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "45048000",
+                    "value" : "Neck"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -24305,9 +24325,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "34338003",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Both ears",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -24318,10 +24343,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "34338003",
+                    "value" : "Both ears"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -25045,9 +25075,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "49928004",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Throat",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -25058,10 +25093,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "49928004",
+                    "value" : "Throat"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -25760,9 +25800,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "80891009",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Heart",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -25773,10 +25818,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "80891009",
+                    "value" : "Heart"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -26361,9 +26411,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "818983003",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Abdomen",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -26374,10 +26429,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "818983003",
+                    "value" : "Abdomen"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -27129,9 +27189,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "127954009",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Skeletal muscle",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -27142,10 +27207,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "127954009",
+                    "value" : "Skeletal muscle"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -27844,9 +27914,14 @@
               "rmTypeName" : "DV_CODED_TEXT",
               "defaultValue" : {
                 "defining_code" : {
-                  "code_string" : "at0.1",
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "25087005",
                   "@type" : "CODE_PHRASE"
                 },
+                "value" : "Nervous system",
                 "@type" : "DV_CODED_TEXT"
               },
               "attributes" : [ {
@@ -27857,10 +27932,15 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "1..1",
                   "terminologyId" : {
-                    "value" : "local"
+                    "value" : "SNOMED-CT"
                   },
-                  "constraint" : [ "at0.1" ],
-                  "selectedTerminologies" : [ ]
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "25087005",
+                    "value" : "Nervous system"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -29447,6 +29527,18 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
+              "defaultValue" : {
+                "defining_code" : {
+                  "terminology_id" : {
+                    "value" : "SNOMED-CT",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "45206002",
+                  "@type" : "CODE_PHRASE"
+                },
+                "value" : "Nose",
+                "@type" : "DV_CODED_TEXT"
+              },
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "defining_code",
