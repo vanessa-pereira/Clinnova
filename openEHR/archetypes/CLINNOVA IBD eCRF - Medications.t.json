@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.7",
+      "sem_ver" : "0.1.8",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "60e5835d5199f45474fa0575e749bacf",
+      "MD5-CAM-1.0.1" : "d7abe8a48724b7586159fdce88b0e637",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -333,10 +333,6 @@
             "FHIR_mapping" : "Encounter.identifier",
             "HL7v2_mapping" : "PV1.19 "
           },
-          "/items[at0001]" : {
-            "FHIR_mapping" : "Appointment.identifier",
-            "HL7v2_mapping" : "SCH-1 / SCH-2"
-          },
           "/items[at0004]" : {
             "FHIR_mapping" : "Encounter.reason",
             "HL7v2_mapping" : "EVN.4 / PV2.3"
@@ -344,6 +340,10 @@
           "/items[at0003]" : {
             "FHIR_mapping" : "Encounter.type",
             "HL7v2_mapping" : " PV1.4 / PV1.18"
+          },
+          "/items[at0001.1]" : {
+            "FHIR_mapping" : "Appointment.identifier",
+            "HL7v2_mapping" : "SCH-1 / SCH-2"
           }
         },
         "pt-pt" : { },
@@ -360,14 +360,33 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
+        "en" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Visit number",
+            "description" : "Unique identifier for each appointment process.",
+            "FHIR_mapping" : "Appointment.identifier",
+            "HL7v2_mapping" : "SCH-1 / SCH-2"
+          }
+        },
         "pt-pt" : { },
         "fr" : { }
       },
