@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.9",
+      "sem_ver" : "0.1.10",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "b7c3223a450294905ec053908072e756",
+      "MD5-CAM-1.0.1" : "86ff9d316e0699f199290915a91b3b92",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -866,28 +866,28 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/activities[at0001]/description[at0002]/items[at0018.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0018.1]" : {
             "redcap_mapping" : "cmindc, other_cmindc, sup_cmindc"
           },
-          "/activities[at0001]/description[at0002]/items[at0070.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0070.1]" : {
             "redcap_mapping" : "cmtrt, sup_cmtrt"
           },
-          "/activities[at0001]/description[at0002]/items[at0113.1]/items[at0012.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0012.1]" : {
             "redcap_mapping" : "cmstdat, cmtim, sup_cmstdat"
           },
-          "/activities[at0001]/description[at0002]/items[at0113.1]/items[at0013.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0013.1]" : {
             "redcap_mapping" : "cmendat,  sup_cmendat"
           },
-          "/activities[at0001]/description[at0002]/items[at0091.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0091.1]" : {
             "redcap_mapping" : "cmroute"
           },
-          "/activities[at0001]/description[at0002]/items[at0044.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0044.1]" : {
             "redcap_mapping" : "complement_cmcat"
           },
-          "/activities[at0001]/description[at0002]/items[at0105.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0105.1]" : {
             "redcap_mapping" : "homeopathic_cmscat"
           },
-          "/activities[at0001]/description[at0002]/items[at0113.1]/items[at0011.1]" : {
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0011.1]" : {
             "redcap_mapping" : "cmongo, sup_cmongo"
           }
         }
@@ -909,7 +909,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ACTIVITY",
-          "nodeId" : "at0001",
+          "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "description",
@@ -27426,9 +27426,15 @@
           "at0070.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0070.1",
-            "text" : "Medication item",
+            "text" : "Medication name",
             "description" : "Name of the medication, vaccine or other therapeutic/prescribable item being ordered. ",
             "comment" : "Depending on the prescribing context this field could be used for either generic- or product-based prescribing. This data field can be used to record tightly bound orders of different medications when they are prescribed as a single pack. It is strongly recommended that the 'Medication item' be coded with a terminology capable of triggering decision support, where possible. The extent of coding may vary from the simple name of the medication item through to structured details about the actual medication pack to be used. Free text entry should only be used if there is no appropriate terminology available."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Medication item and details",
+            "description" : "Details of the requested order."
           }
         },
         "nb" : { },
