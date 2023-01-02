@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.11",
+      "sem_ver" : "0.1.12",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "b9a56ce8286b85c834c733de0719e5eb",
+      "MD5-CAM-1.0.1" : "04d001e47872c9758789007929adc9ef",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -880,9 +880,6 @@
           },
           "/activities[at0001.1]/description[at0002]/items[at0091.1]" : {
             "redcap_mapping" : "cmroute"
-          },
-          "/activities[at0001.1]/description[at0002]/items[at0044.1]" : {
-            "redcap_mapping" : "complement_cmcat"
           },
           "/activities[at0001.1]/description[at0002]/items[at0105.1]" : {
             "redcap_mapping" : "homeopathic_cmscat"
@@ -27013,40 +27010,9 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
                   "nodeId" : "at0044.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "HL7_expandedYes-NoIndicator"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "HL7_expandedYes-NoIndicator" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "HL7_expandedYes-NoIndicator",
-                            "code" : "Y",
-                            "value" : "Yes"
-                          }, {
-                            "terminologyId" : "HL7_expandedYes-NoIndicator",
-                            "code" : "N",
-                            "value" : "No"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -27071,6 +27037,7 @@
                           },
                           "constraint" : [ ],
                           "selectedTerminologies" : [ "SNOMED-CT" ],
+                          "limitToList" : false,
                           "includedExternalTerminologyCodes" : [ {
                             "terminologyId" : "SNOMED-CT",
                             "code" : "349363001",
@@ -27415,13 +27382,6 @@
             "text" : "Type of complementary medicine",
             "description" : "An additional instruction directed primarily at the individual/patient or carers.",
             "comment" : "For example: 'To reduce your blood pressure', 'To thin your blood'. This data element allows multiple occurrences and should be coded with a reference terminology, where possible. If required it is possible to use a LINK attribute to associate this element with, for example, the 'original diagnosis' in a separate Problem list composition but the indication should be explicitly recorded here, as the link target may change over time."
-          },
-          "at0044.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044.1",
-            "text" : "Complementary medicine?",
-            "description" : "An additional instruction on how to use or store the ordered item.",
-            "comment" : "For example: precautions as 'take with food', 'Avoid grapefruit', 'Dissolve in water', 'store in a cool, dry place'. This data element allows multiple occurrences and should be coded with a reference terminology, where possible."
           },
           "at0070.1" : {
             "@type" : "ARCHETYPE_TERM",
