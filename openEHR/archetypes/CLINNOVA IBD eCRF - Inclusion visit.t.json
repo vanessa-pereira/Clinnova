@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.52",
+      "sem_ver" : "0.1.53",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "0bc2ab0cc39ac12496a4c5f82edff849",
+      "MD5-CAM-1.0.1" : "e85f2599ebe032b2faf5d7798e4c1c4c",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -46129,7 +46129,7 @@
           "/description[at0001]/items[at0060]" : {
             "redcap_mapping" : "surgery_prstdat"
           },
-          "/description[at0001]/items[at0002]" : {
+          "/description[at0001]/items[at0002.1]" : {
             "redcap_mapping" : "surgery_colon_prtrt, surgery_gi_prtrt"
           }
         }
@@ -46701,6 +46701,126 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT_LIH"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "385432009",
+                        "value" : "Not applicable"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "80146002",
+                        "value" : "Appendectomy"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "738552004",
+                        "value" : "Partial resection of colon with stoma"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "445884009",
+                        "value" : "Wedge resection of colon"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "398740003",
+                        "value" : "Colostomy"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "3183007",
+                        "value" : "Closure of colostomy"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "311414006",
+                        "value" : "Kock pouch"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHCOMPROPOU",
+                        "value" : "Completion proctectomy and pouch"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHCOMPROPOUILE",
+                        "value" : "Completion proctectomy with pouch and ileostomy"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHPROCOL",
+                        "value" : "Proctectomy with colostomy"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHTOTCOLILEANA",
+                        "value" : "Total colectomy with ileorectal anastomosis"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHSTRCOL",
+                        "value" : "Strictureplasty colon"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHPOUCSUR",
+                        "value" : "Revisional pouch surgery"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0065.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "129236007",
+                        "value" : "Open approach"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "51316009",
+                        "value" : "Laparoscopic procedure"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0058.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -46723,7 +46843,7 @@
                       "selectedTerminologies" : [ "SNOMED-CT" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "SNOMED-CT",
-                        "code" : "151008",
+                        "code" : "416151008",
                         "value" : "Scheduled"
                       }, {
                         "terminologyId" : "SNOMED-CT",
