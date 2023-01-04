@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.54",
+      "sem_ver" : "0.1.55",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "dee89fe597be363f7360ee25c36698dc",
+      "MD5-CAM-1.0.1" : "d2c362aecde4197f1fa06fb64bc4c5fc",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -46421,14 +46421,20 @@
           "/description[at0001]/items[at0058.1]" : {
             "redcap_mapping" : "surgery_prcat"
           },
-          "/description[at0001]/items[at0060]" : {
-            "redcap_mapping" : "surgery_prstdat"
-          },
           "/description[at0001]/items[at0002.1]" : {
             "redcap_mapping" : "surgery_colon_prtrt, surgery_gi_prtrt"
           },
           "/description[at0001]/items[at0006.1]" : {
             "redcap_mapping" : "surgery_complic_ceterm"
+          },
+          "/description[at0001]/items[at0006.2]" : {
+            "redcap_mapping" : "late_complic_ceterm"
+          },
+          "/description[at0001]/items[at0060.1]" : {
+            "redcap_mapping" : "surgery_prstdat"
+          },
+          "/description[at0001]/items[at0070.1]" : {
+            "redcap_mapping" : "mhcat_3"
           }
         }
       }
@@ -47022,10 +47028,6 @@
                       "limitToList" : false,
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "SNOMED-CT_LIH",
-                        "code" : "385432009",
-                        "value" : "Not applicable"
-                      }, {
-                        "terminologyId" : "SNOMED-CT_LIH",
                         "code" : "80146002",
                         "value" : "Appendectomy"
                       }, {
@@ -47092,6 +47094,92 @@
                         "terminologyId" : "SNOMED-CT_LIH",
                         "code" : "408479006",
                         "value" : "Upper gastrointestinal surgery"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "118442004",
+                        "value" : "Drainage of abscess"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "307506002",
+                        "value" : "Gastrointestinal fistula procedure"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "64928005",
+                        "value" : "Closure of rectovaginal fistula"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "700071009",
+                        "value" : "Insertion of anal seton"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "449391008",
+                        "value" : "Insertion of seton into high anal fistula"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHMUCADV",
+                        "value" : "Mucosal advancement plasty"
+                      }, {
+                        "terminologyId" : "SNOMED-CT_LIH",
+                        "code" : "LIHLIFT",
+                        "value" : "Ligation of inter sphincteric fistula tract (LIFT)"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0049.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0070.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "limitToList" : false,
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "LIHREFCD",
+                        "value" : "Refractory Crohn's disease"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "LIHULCOL",
+                        "value" : "Refractory Ulcerative Colitis"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "25723000",
+                        "value" : "Dysplasia/cancer"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "72900001",
+                        "value" : "Poliposis coli"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "716318002",
+                        "value" : "Lynch syndromes"
                       } ]
                     } ]
                   } ],
@@ -47178,6 +47266,27 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0063.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0048.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0069.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0006.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -47194,37 +47303,37 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "local_terms"
+                        "value" : "SNOMED-CT"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "local_terms" ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
                       "limitToList" : false,
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "236085004",
                         "value" : "Gastrointestinal anastomotic leak"
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "75100008",
                         "value" : "Intra-abdominal abscess"
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "125643001",
                         "value" : "Open wound"
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "76844004",
                         "value" : "Wound infection"
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "40172005",
                         "value" : "Cardiac complication"
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "128601007",
                         "value" : "Pulmonary infection"
                       }, {
-                        "terminologyId" : "local_terms",
+                        "terminologyId" : "SNOMED-CT",
                         "code" : "371039008",
                         "value" : "Thromboembolic disorder"
                       } ]
@@ -47237,8 +47346,201 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0006.2",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "limitToList" : false,
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "236104004",
+                        "value" : "Gastrointestinal anastomotic stricture"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "236037000",
+                        "value" : "Incisional hernia"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "197247001",
+                        "value" : "Enterocutaneous fistula"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "26629001",
+                        "value" : "Short bowel syndrome (< 120 cm)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "LIHPOUCHITIS",
+                        "value" : "Pouchitis"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "LIHCRODISPOU",
+                        "value" : "Crohn's disease pouch"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "LIHRECCUFINF",
+                        "value" : "Rectal Cuff Inflammation (Cuffitis)"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "LIHLEASINUS",
+                        "value" : "Chronic/late leakage with sinus"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0066.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0060.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0061.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT0S",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : false,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : true
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0067.1",
               "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0014.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0005.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0053",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0054.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0056.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -47251,15 +47553,108 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "pt-br" : { },
-        "sl" : { },
-        "en" : { },
-        "ar-sy" : { },
-        "ru" : { },
-        "nb" : { },
-        "es" : { },
-        "de" : { },
-        "sv" : { }
+        "pt-br" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Complicações (2)",
+            "description" : "Detalhes sobre alguma complicação decorrente do procedimento",
+            "comment" : "Utilize este elemento de dados para gravar termos simples ou complicações . Se as condições de gravação de complicação são mais complexas, é aconselhado usar de um arquétipo CLUSTER específico dentro do campo \"Detalhes do Procedimento\" neste arquétipo e este elemento de dados torna-se redundante."
+          }
+        },
+        "sl" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "*Complication(en) (2)",
+            "description" : "*Details about any complication arising from the procedure.(en)",
+            "comment" : "*Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. (en)"
+          }
+        },
+        "en" : {
+          "at0006.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "In hospital / 30 days complication",
+            "description" : "Details about any complication arising from the procedure.",
+            "comment" : "Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. Examples: Hematuria after a kidney biopsy, tissue irritation after insertion of intravenous catheter."
+          },
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.2",
+            "text" : "Late complication",
+            "description" : "Details about any complication arising from the procedure.",
+            "comment" : "Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. Examples: Hematuria after a kidney biopsy, tissue irritation after insertion of intravenous catheter."
+          },
+          "at0060.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0060.1",
+            "text" : "Surgery date/time",
+            "description" : "The date and/or time when the entire procedure, or the last component of a multicomponent procedure, was finished.",
+            "comment" : "Only for use in association with the 'Procedure performed' pathway step, and in situations where the procedure is repeated on multiple occasions before being completed or there are multiple components to the whole procedure. This may be the same as the RM time attribute for the 'Procedure completed' pathway step."
+          },
+          "at0070.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0070.1",
+            "text" : "Actual diagnosis",
+            "description" : "The clinical or process-related reason for the procedure.",
+            "comment" : "Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'."
+          }
+        },
+        "ar-sy" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "*Complication(en) (2)",
+            "description" : "*Details about any complication arising from the procedure.(en)",
+            "comment" : "*Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. (en)"
+          }
+        },
+        "ru" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "*Complication(en) (2)",
+            "description" : "*Details about any complication arising from the procedure.(en)",
+            "comment" : "*Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. (en)"
+          }
+        },
+        "nb" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Komplikasjon (2)",
+            "description" : "Detaljer om komplikasjoner oppstått under gjennomføring av prosedyren.",
+            "comment" : "Bruk dette dataelementet til å registrere enkle termer eller prekoordinerte komplikasjoner. Dersom registreringskravene for komplikasjoner er mer komplekse er det anbefalt å bruke en spesifikk CLUSTER-arketype i SLOTet \"Prosedyredetaljer\" i denne arketypen, og i disse tilfellene blir dette dataelementet overflødig. Eksempler: Hematuri etter nyrebiopsi, vevsirritasjon etter innleggelse av venekateter."
+          }
+        },
+        "es" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Complicación (2)",
+            "description" : "Detalles de cualquier complicación surgida durante la ejecución del procedimiento",
+            "comment" : "*Use this data element to record simple terms or precoordinated complications. If the requirements for recording complication are more complex then use of a specific CLUSTER archetype within the 'Procedure detail' SLOT in this archetype is advised and this data element becomes redundant. (en)"
+          }
+        },
+        "de" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Komplikationen (2)",
+            "description" : "Details zu allen Komplikationen, die sich aus der Prozedur ergeben haben.",
+            "comment" : "Verwenden Sie dieses Datenelement, um einfache Begriffe oder präkoordinierte Komplikationen zu erfassen. Wenn die Anforderungen an die Erfassung der Komplikationen komplexer sind, wird die Verwendung eines spezifischen CLUSTER-Archetyps innerhalb des Slots \"Details zur Prozedur\" in diesem Archetyp empfohlen. Dieses Datenelement wird dann redundant. Beispiele: Hämaturie nach einer Nierenbiopsie, Reizungen des Gewebes nach dem Legen eines intravenösen Katheters."
+          }
+        },
+        "sv" : {
+          "at0006.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006.1",
+            "text" : "Komplikation (2)",
+            "description" : "Detaljer om eventuella komplikationer som uppstår från proceduren",
+            "comment" : "Använd detta dataelement för att dokumentera enkla termer eller förkoordinerade komplikationer. Om kraven för dokumentation av komplikationen är mer komplexa rekommenderas användning av ett specifikt CLUSTER i öppningen \"Procedur detaljer\", då blir detta dataelement överflödigt. \r\nExempel: Hematuri efter njurbiopsi, vävnadsirritation efter införande av intravenös kateter."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
