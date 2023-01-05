@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.56",
+      "sem_ver" : "0.1.57",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "65ac5b59401909a53338aeb48310d84c",
+      "MD5-CAM-1.0.1" : "e7cf650393eb72f3d77ef602b653b544",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -45141,7 +45141,116 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "nodeId" : "at0070.1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "occurrences" : "1..1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "0..1",
+                          "terminologyId" : {
+                            "value" : "ATC_2021"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "ATC_2021" ],
+                          "limitToList" : false,
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "A07EC02",
+                            "value" : "Mesalazine"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "R01AD05",
+                            "value" : "Budesonide"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "R01AD02",
+                            "value" : "Prednisolone"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "H02AB02",
+                            "value" : "Dexamethasone"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "H02AB07",
+                            "value" : "Prednisone"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AX01",
+                            "value" : "Azathioprine"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L01BB02",
+                            "value" : "Mercaptopurine"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AX03",
+                            "value" : "Methotrexate"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AD01",
+                            "value" : "Ciclosporin"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AD02",
+                            "value" : "Tacrolimus"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AB04",
+                            "value" : "Adalimumab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AB05",
+                            "value" : "Certolizumab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AB06",
+                            "value" : "Golimumab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AB02",
+                            "value" : "Infliximab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AA33",
+                            "value" : "Vedolizumab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AA29",
+                            "value" : "Tofacitinib"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AA45",
+                            "value" : "Filgotinib"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AA44",
+                            "value" : "Updacitinib"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AC05",
+                            "value" : "Ustekinumab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AC18",
+                            "value" : "Rizankizumab"
+                          }, {
+                            "terminologyId" : "ATC_2021",
+                            "code" : "L04AA38",
+                            "value" : "Ozanimod"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -47797,7 +47906,22 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "4bedfd5666d8f6c6598eeee85db0a2fc"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Classify surgical complications during and after a procedure.",
+          "keywords" : [ "Clavien-Dindo classification, Surgical Procedures, Operative, procedure, surgery, postoperative Complication" ],
+          "use" : "This archetype is meant to be used together with the ACTION.procedure or OBSERVATION.procedure_screening archetypes, using the existing slots provided \"procedure details\" or \"additional details\" within those archetypes. \n\nCopyright: Wolters Kluwer Health, Inc. holds the copyright for the Clavien-Dindo Classification",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.clavien_dindo.v0",
     "differential" : true,
