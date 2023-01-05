@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.61",
+      "sem_ver" : "0.1.62",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "dbdf8787c6374c058a75cac79ede2cbe",
+      "MD5-CAM-1.0.1" : "f53dc1513c4afcb4c20856fb82cc6228",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -44721,6 +44721,37 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/activities[at0001.1]/description[at0002]/items[at0070.1]" : {
+            "redcap_mapping" : "ibd_extrt, other_ibd_extrt"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0012.1]" : {
+            "redcap_mapping" : "ibd_exstdat"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0011.1]" : {
+            "redcap_mapping" : "ibd_exongo"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0013.1]" : {
+            "redcap_mapping" : "ibd_exendat"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0016.1]" : {
+            "redcap_mapping" : "ibd_exenreas, ibd_exenreasoth"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0062.1]/items[at0150]/items[at0165.1]" : {
+            "redcap_mapping" : "ibd_exdosadj"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0062.1]/items[at0150]/items[at0151.1]" : {
+            "redcap_mapping" : "ibd_exdostot"
+          },
+          "/activities[at0001.1]/description[at0002]/items[at0091.1]" : {
+            "redcap_mapping" : "ibd_exroute"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
     "differential" : true,
     "archetypeId" : {
@@ -45184,12 +45215,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0013.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0011.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -45224,6 +45249,12 @@
                           "attributeTuples" : [ ]
                         } ]
                       } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -47538,6 +47569,16 @@
           "use" : "This archetype is meant to be used together with the ACTION.procedure or OBSERVATION.procedure_screening archetypes, using the existing slots provided \"procedure details\" or \"additional details\" within those archetypes. \n\nCopyright: Wolters Kluwer Health, Inc. holds the copyright for the Clavien-Dindo Classification",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0001]" : {
+            "redcap_mapping" : "clavien_rsorres"
+          }
         }
       }
     },
