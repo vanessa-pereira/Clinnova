@@ -1,0 +1,111 @@
+archetype (adl_version=1.4; uid=aeca32b0-b3fe-4f47-95be-c7ba8f749206)
+	openEHR-EHR-EVALUATION.sae.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+		["date"] = <"2023-01-06">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"9b9965ce68043308ba0fd241a382cce1">
+		["build_uid"] = <"e5dd8d53-f659-3a59-b285-aaf66923e320">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Seriousness Criteria (SAE)
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Outcome
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Date of event
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Additional information
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Comment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0006] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0007] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Seriousness Criteria (SAE)">
+					description = <"sae">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Outcome">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Date of event">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Additional information">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Comment">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"Extension">
+					description = <"">
+				>
+			>
+		>
+	>
