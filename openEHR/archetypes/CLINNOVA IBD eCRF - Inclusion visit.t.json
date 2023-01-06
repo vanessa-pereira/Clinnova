@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.67",
+      "sem_ver" : "0.1.68",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "64ca3c5530263b4c424db971872afa98",
+      "MD5-CAM-1.0.1" : "42fada46fb4bfe07627781b92c61e77e",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -51461,7 +51461,27 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "SECTION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "0..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-laboratory_test_result-002.v1",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -53305,47 +53325,47 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "718-7",
-                    "value" : "Hemoglobin (HGB)"
+                    "value" : "Hemoglobin [Mass/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "20570-8",
-                    "value" : "Hematocrit (HCT)"
+                    "value" : "Hematocrit [Volume Fraction] of Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26453-1",
-                    "value" : "Erythrocytes"
+                    "value" : "Erythrocytes [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "30428-7",
-                    "value" : "Mean Corpuscular Volume (MCV)"
+                    "value" : "Mean Corpuscular Volume (MCV) (Entitic volume)"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26464-8",
-                    "value" : "Leukocytes"
+                    "value" : "Leukocytes [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26499-4",
-                    "value" : "Neutrophils"
+                    "value" : "Neutrophils [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26474-7",
-                    "value" : "Lymphocytes"
+                    "value" : "Lymphocytes [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26484-6",
-                    "value" : "Monocytes"
+                    "value" : "Monocytes [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26444-0",
-                    "value" : "Basophils"
+                    "value" : "Basophils [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26449-9",
-                    "value" : "Eosinophils"
+                    "value" : "Eosinophils [#/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
                     "code" : "26515-7",
-                    "value" : "Platelets"
+                    "value" : "Platelets [#/volume] in Blood"
                   } ]
                 } ]
               } ],
@@ -53925,6 +53945,1692 @@
         "email" : "contato@coreconsulting.com.br"
       },
       "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "cbd15f77-eab5-43b1-96cf-046d0ac8c927",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "F0EBDC100A16A3A8BE1511BF3715C582"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code",
+            "redcap_mapping" : "biochemistry_lbtest"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]",
+            "redcap_mapping" : "biochemistry_lborres"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0004.1]" : {
+            "redcap_mapping" : "biochemistry_lbstresc"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note",
+            "redcap_mapping" : "biochemistry_lbclsig"
+          }
+        },
+        "nb" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "pt-br" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
+            "fhir_mapping" : "*Observation.code(en)"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "*OBX-11-observation result status(en)",
+            "fhir_mapping" : "*status(en)"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+            "fhir_mapping" : "*Observation.issued(en)"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "*NTE.3(en)",
+            "fhir_mapping" : "*Observation.comments(en)"
+          }
+        },
+        "de" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "nl" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          },
+          "/items[at0006.1]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
+          },
+          "/items[at0003.1]" : {
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "sv" : {
+          "/items[at0024.1]" : {
+            "hl7v2_mapping" : "OBX.3",
+            "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
+          },
+          "/items[at0005.1]" : {
+            "hl7v2_mapping" : "OBX.11",
+            "fhir_mapping" : "Observation.status"
+          }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.laboratory_test_analyte.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0027.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0024.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "LOINC_V2.73"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "LOINC_V2.73" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14937-7",
+                    "value" : "Urea nitrogen [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "3094-0",
+                    "value" : "Urea nitrogen [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "22664-7",
+                    "value" : "Urea [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "3091-6",
+                    "value" : "Urea [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14682-9",
+                    "value" : "Creatinine [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2160-0",
+                    "value" : "Creatinine [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2000-8",
+                    "value" : "Calcium [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "17861-6",
+                    "value" : "Calcium [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2075-0",
+                    "value" : "Chloride [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "19123-9",
+                    "value" : "Magnesium [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2601-3",
+                    "value" : "Magnesium [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2777-1",
+                    "value" : "Phosphate [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14879-1",
+                    "value" : "Phosphate [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2823-3",
+                    "value" : "Potassium [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2951-2",
+                    "value" : "Sodium [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "1742-6",
+                    "value" : "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "1920-8",
+                    "value" : "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2324-2",
+                    "value" : "Gamma glutamyl transferase [Enzymatic activity/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "6768-6",
+                    "value" : "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "1975-2",
+                    "value" : "Bilirubin.total [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14631-6",
+                    "value" : "Bilirubin.total [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "1968-7",
+                    "value" : "Bilirubin.direct [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14629-0",
+                    "value" : "Bilirubin.direct [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "11039-5",
+                    "value" : "C reactive protein [Presence] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "76485-2",
+                    "value" : "C reactive protein [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "1988-5",
+                    "value" : "C reactive protein [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2276-4",
+                    "value" : "Ferritin [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14723-1",
+                    "value" : "Ferritin [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "6796-7",
+                    "value" : "Transferrin saturation in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2132-9",
+                    "value" : "Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14685-2",
+                    "value" : "Cobalamin (Vitamin B12) [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14732-2",
+                    "value" : "Folate [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2284-8",
+                    "value" : "Folate [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "3016-3",
+                    "value" : "Thyrotropin [Units/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "27975-2",
+                    "value" : "25-hydroxyvitamin D3 [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14635-7",
+                    "value" : "25-hydroxyvitamin D3 [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "21197-9",
+                    "value" : "Cholesterol esters/Cholesterol.total in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2085-9",
+                    "value" : "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "27340-9",
+                    "value" : "Cholesterol in HDL [Presence] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14646-4",
+                    "value" : "Cholesterol in HDL [Moles/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "2571-8",
+                    "value" : "Triglyceride [Mass/volume] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "28554-4",
+                    "value" : "Triglyceride [Presence] in Serum or Plasma"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14927-8",
+                    "value" : "Triglyceride [Moles/volume] in Serum or Plasma"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ {
+                "@type" : "C_ATTRIBUTE_TUPLE",
+                "members" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "units",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "magnitude",
+                  "children" : [ ]
+                } ],
+                "tuples" : [ {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "%" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mg/dL" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mmol/L" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "umol/L" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                } ]
+              } ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT_LabResultPresenceQualifier"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT_LabResultPresenceQualifier" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT_LabResultPresenceQualifier",
+                    "code" : "260415000",
+                    "value" : "Not detected"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LabResultPresenceQualifier",
+                    "code" : "10828004",
+                    "value" : "Positive"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LabResultPresenceQualifier",
+                    "code" : "260385009",
+                    "value" : "Negative"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0004.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "17621005",
+                    "value" : "Normal"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "263654008",
+                    "value" : "Abnormal"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0028.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_BOOLEAN",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "occurrences" : "1..1",
+              "defaultValue" : {
+                "@type" : "DV_IDENTIFIER"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_MULTIMEDIA",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_COUNT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TIME",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DURATION",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_ORDINAL",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_SCALE",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_PROPORTION",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_EHR_URI",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_PARSABLE",
+              "occurrences" : "1..1",
+              "defaultValue" : {
+                "@type" : "DV_PARSABLE"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_COUNT>",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_DATE>",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_TIME>",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0025.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.1" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "defaultValue" : {
+                "@type" : "DV_IDENTIFIER"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "386134007",
+                    "value" : "Clinically significant"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "371928007",
+                    "value" : "Not clinically significant"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Significance (if abnormal range)",
+            "description" : "Additional narrative about the analyte result, not captured in other fields.",
+            "hl7v2_mapping" : "NTE.3",
+            "fhir_mapping" : "Observation.note"
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0015", "at0016", "at0017", "at0018", "at0020", "at0019", "at0021", "at0023", "at0022" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "83867942-21bf-4a2e-acaa-d53d02887d2a",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Michael Lieser, Antje Wulff, Natalia Strauch",
+        "organisation" : "Department of Infectious Diseases, Heidelberg University Hospital, Medizinische Hochschule Hannover",
+        "email" : "michael.lieser@med.uni-heidelberg.de, wulff.antje@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Linda Aulin, Linda Aulin Lundeqvist",
+        "organisation" : "Region Stockholm, Karolinska University Hospital, Karolinska University Hospital, Region Stockholm",
+        "email" : "linda.aulin@sll.se, linda.aulin-lundeqvist@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, Liv Laugen",
+        "organisation" : "Nasjonal IKT HF, ​Oslo University Hospital, Norway",
+        "email" : "liv.laugen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "69fbc511-ef44-43fa-98f9-a8db27b0a477",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "D02DE57ACD4A04C1ADAE1F8B28197890"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "ar-sy" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
+            "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0100.1]" : {
+            "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0057.1]" : {
+            "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
+          }
+        },
+        "en" : { },
+        "nb" : { },
+        "zh-cn" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
+            "fhir_mapping" : "*DiagnosticReport.presentedForm(en)"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0100.1]" : {
+            "fhir_mapping" : "*DiagnosticReport.requestDetail.clinicalNotes(en)"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0057.1]" : {
+            "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
+          }
+        },
+        "de" : { },
+        "it" : { },
+        "nl" : { },
+        "sv" : { },
+        "pt-br" : { }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.laboratory_test_result.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-laboratory_test_result-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0002",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_STRING",
+                              "rmTypeName" : "STRING",
+                              "constraint" : [ "Biochemistry" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0073.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0075.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0077.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0100.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0057.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0098.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0101.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0097.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-laboratory_test_analyte-002.v1",
+                      "referenceType" : "archetypeOverlay"
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0112",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0113.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0068.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..0",
+              "nodeId" : "at0094.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0111.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_BOOLEAN",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0121.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_BOOLEAN",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "occurrences" : "1..1",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_MULTIMEDIA",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_QUANTITY",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_COUNT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TIME",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_ORDINAL",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_SCALE",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_PROPORTION",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_URI",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_EHR_URI",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_PARSABLE",
+                  "occurrences" : "1..1",
+                  "defaultValue" : {
+                    "@type" : "DV_PARSABLE"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_COUNT>",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_QUANTITY>",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_DATE>",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_TIME>",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "*Laboratory test result(en) (2)",
+            "description" : "*The result, including findings and interpretation, of a laboratory investigation performed on specimens from individuals or related materials(en)"
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Laboratorieresultat (2)",
+            "description" : "Resultat, inkludert funn og laboratoriets tolkning, av en laboratorieundersøkelse utført på prøvemateriale fra et individ eller relatert til individet."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "zh-cn" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "*Laboratory test result(en) (2)",
+            "description" : "*The result, including findings and interpretation, of a laboratory investigation performed on specimens from individuals or related materials(en)"
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Laborergebnis (2)",
+            "description" : "Das Ergebnis - einschließlich der Befunde und der Interpretation des Labors - einer Untersuchung, die an Proben durchgeführt wurde, die von einer Einzelperson stammen oder mit dieser Person zusammenhängen."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "it" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Risultato di esame di laboratorio (2)",
+            "description" : "L'esito, inclusi i risultati e l'interpretazione, di una indagine di laboratorio effettuata su campioni provenienti da individui o relativi materiali."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "*Laboratory test result(en) (2)",
+            "description" : "*The result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual.(en)"
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Laboratorieresultat (2)",
+            "description" : "Resultatet, inklusive fynd och laboratoriets tolkning, av en undersökning utförd på provmaterial från en individ eller relaterad till individen."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Resultado de exame de laboratório (2)",
+            "description" : "O resultado, incluindo achados e a interpretação do laboratório, de uma investigação realizada em amostras coletadas de um indivíduo ou relacionadas a esse indivíduo."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0107", "at0037", "at0120", "at0038", "at0040", "at0115", "at0119", "at0074", "at0116" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "1718dbb8-7504-43c2-be06-1dc093e74aac",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout",
+        "organisation" : "MHH-Hannover",
+        "email" : "ballout.sarah@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Linda Aulin",
+        "organisation" : "Region Stockholm",
+        "email" : "linda.aulin@sll.se, linda.aulin@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen/Silje Ljosland Bakke/Liv Laugen",
+        "organisation" : "Oslo universitetssykehus HF/Nasjonal IKT HF/Oslo universitetssykehus, Norway"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Clínica Parente Pizzo",
+        "email" : "vrppizzo@gmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "it"
+      },
+      "author" : {
+        "name" : "Alessandro Sulis/Francesca Frexia/Cecilia Mascia",
+        "organisation" : "CRS4 - Center for advanced studies, research and development in Sardinia, Pula (Cagliari), Italy",
+        "email" : "alessandro.sulis@crs4.it/francesca.frexia@crs4.it/cecilia.mascia@crs4.it"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "N/A",
+        "email" : "linforest@163.com"
+      },
+      "accreditation" : "N/A",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
