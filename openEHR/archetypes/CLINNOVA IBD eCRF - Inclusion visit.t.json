@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.62",
+      "sem_ver" : "0.1.63",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "f53dc1513c4afcb4c20856fb82cc6228",
+      "MD5-CAM-1.0.1" : "7b875e10425249731161c040d389a528",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -18528,6 +18528,19 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]" : {
+            "redcap_mapping" : "eventfrq_faorres"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0009]" : {
+            "redcap_mapping" : "hematochezia_sev_faorres"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.uc_pro_2.v0",
     "differential" : true,
     "archetypeId" : {
@@ -19457,14 +19470,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0028.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028.1",
-            "text" : "Finding of an abdominal mass",
-            "description" : ""
-          }
-        }
+        "en" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -31502,6 +31508,25 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0006]/state[at0007.1]/items[at0008.1]" : {
+            "redcap_mapping" : "vspos"
+          },
+          "/data[at0001]/events[at0006]/data[at0003.1]/items[at0004]" : {
+            "redcap_mapping" : "vsorres"
+          },
+          "/data[at0001]/events[at0006]/data[at0003.1]/items[at0005]" : {
+            "redcap_mapping" : "vsorres"
+          },
+          "/data[at0001]/events[at0006]/data[at0003.1]/items[at1059.1]" : {
+            "redcap_mapping" : "vsclsig"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.blood_pressure.v2",
     "differential" : true,
     "archetypeId" : {
@@ -33081,6 +33106,22 @@
         }
       }
     },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0002]/events[at0003]/state[at0012.1]/items[at0013.1]" : {
+            "redcap_mapping" : "vspos"
+          },
+          "/data[at0002]/events[at0003]/data[at0001.1]/items[at0004]" : {
+            "redcap_mapping" : "vsorres"
+          },
+          "/data[at0002]/events[at0003]/data[at0001.1]/items[at1023.1]" : {
+            "redcap_mapping" : "vsclsig"
+          }
+        }
+      }
+    },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pulse.v2",
     "differential" : true,
     "archetypeId" : {
@@ -33222,28 +33263,6 @@
                       "nodeId" : "at1023.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.36" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
@@ -33270,6 +33289,28 @@
                                 "code" : "263654008",
                                 "value" : "Abnormal"
                               } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.43" ],
+                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -33535,10 +33576,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33579,10 +33620,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33623,10 +33664,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33667,10 +33708,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33711,10 +33752,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33755,10 +33796,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33799,10 +33840,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33843,10 +33884,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33887,10 +33928,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33931,10 +33972,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         },
@@ -33975,10 +34016,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.36" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.36",
+            "code" : "ac0.43",
             "description" : ""
           }
         }
@@ -34185,6 +34226,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.41",
           "members" : [ ]
+        },
+        "ac0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.42",
+          "members" : [ "at1057" ]
+        },
+        "ac0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.43",
+          "members" : [ "at1057" ]
         }
       }
     },
@@ -34509,6 +34560,22 @@
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0002]/state[at0022]/items[at0065.1]" : {
+            "redcap_mapping" : "vspos"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]" : {
+            "redcap_mapping" : "vsorres"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0009.1]" : {
+            "redcap_mapping" : "vsclsig"
+          }
         }
       }
     },
@@ -35401,6 +35468,22 @@
           "misuse" : "Dit archetype dient niet gebruikt te worden voor het vastleggen van de temperatuur van een (ander) object.\r\n\r\nDit archetype dient niet gebruikt te worden voor het vastleggen van de temperatuur van een specifiek lichaamsdeel, bijvoorbeeld de temperatuur van de voetzool zoals bij chronische diabeteszorg.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/protocol[at0020]/items[at0021.1]" : {
+            "redcap_mapping" : "vsloc"
+          },
+          "/data[at0002]/events[at0003]/data[at0001]/items[at0004.1]" : {
+            "redcap_mapping" : "vsorres"
+          },
+          "/data[at0002]/events[at0003]/data[at0001]/items[at0063.1]" : {
+            "redcap_mapping" : "vsclsig"
+          }
         }
       }
     },
@@ -45215,6 +45298,12 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
                       "nodeId" : "at0011.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -45249,12 +45338,6 @@
                           "attributeTuples" : [ ]
                         } ]
                       } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0013.1",
-                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -49195,7 +49278,54 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "faf351142d026345356206e285c8db14"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Befunde einer radiologischen Untersuchung einer bestimmten Körperstruktur oder -region und deren Interpretation.",
+          "keywords" : [ "Befund, Ergebnis, Bildgebung, Körper, Organ, System, Struktur, Region, Beobachtung, Diagnostik, Radiologie, Bild" ],
+          "use" : "*Use to record the findings on radiological examination of a specified body structure or region, and their interpretation.\n\nThe intended scope for the CLUSTER.imaging_exam family of archetypes to be used to record all detailed findings on radiological examination. The family of specialised archetypes are derived from this generic parent archetype, CLUSTER.imaging_exam, designed as a universal pattern for recording any findings in any specified body structure or region and using any modality.\n\nThis archetype and its related family of specialisations are designed to be nested within the 'Structured imaging findings' SLOT in the OBSERVATION.imaging_exam_result or within the 'Additional details' SLOT in other relevant CLUSTER.imaging_exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. If this archetype or its specialisations need to be extended with further levels of detailed findings, additional instances of the CLUSTER.imaging_exam or its specialisations can be nested in the 'Additional details' SLOT.\n\nEach structure- or region-specific specialisation of this parent archetype is intended to be inclusive of all reasonably anticipated and relevant findings. For example, the CLUSTER.imaging_exam-ovary will support recording of all findings that would be expected in reporting on imaging of the ovary using any radiological modality, including the size of the ovary, largest follicle size and the diameter and description of specific follicles. Similarly, CLUSTER.imaging_exam-lymph_node_group will contain data elements required to record specific findings of a lymph node group, including its precise or relative location in the body and the number of lymph nodes in the group. \n\nIf an appropriate specialisation is not available for a body structure or region, this generic archetype can be used to record all relevant findings, including identification of the structure or region. (en)",
+          "misuse" : "Nicht zur Darstellung von Befunden verwenden, die außerhalb der identifizierten Körperstruktur oder -region beobachtet wurden. Verwenden Sie zu diesem Zweck eine separate Instanz eines oder mehrerer Archetypen aus der Familie CLUSTER.imaging_exam.\n\nDarf nicht verwendet werden, um Details in Bezug auf die Gesamtbefunde, den Kontext oder technische Details in Bezug auf ein vollständiges Testergebnis einer bildgebenden Untersuchung darzustellen. Verwenden Sie zu diesem Zweck das OBSERVATION.imaging_exam_result. Zum Beispiel Kommentare zur Studienqualität, zu Differenzialdiagnosen und zum Gesamteindruck.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere funn og tolkning av radiologisk undersøkelse av et definert organ eller en kroppsdel.",
+          "keywords" : [ "funn", "observasjon", "bildediagnostikk", "kropp", "organ", "kroppsstruktur", "diagnostisk", "radiologi", "bilde" ],
+          "use" : "Bruk for å registrere funn og tolkning av radiologisk undersøkelse av et definert organ eller en kroppsdel.\n\nDet tiltenkte formålet med hele gruppen av arketyper innen CLUSTER.imaging_exam (Bildediagnostisk undersøkelse - kroppsstruktur) er å kunne registrere alle detaljerte funn og observasjoner ved radiologiske undersøkelser. Gruppen av spesialiserte arketyper er avledet fra denne generiske forelder-arketypen, CLUSTER.imaging_exam (Bildediagnostisk undersøkelse - kroppsstruktur), og har et generelt mønster for å registrere ethvert funn i ethvert organ eller kroppsdel og ved bruk av enhver modalitet.\n\nDenne arketypen og dens tilhørende gruppe av spesialiseringer er utformet for å nøstes i SLOT'et \"Strukturerte funn\" i OBSERVATION.imaging_exam_result (Bildediagnostisk svar), eller i SLOT'et \"Ytterligere detaljer\" i en annen relevant CLUSTER.imaging_exam - arketype (Bildediagnostisk undersøkelse - XYZ, der \"XYZ\" er nærmere angitt organ). Men den kan også brukes i enhver annen ENTRY- eller CLUSTER-arketype der det er klinisk passende. Hvis denne arketypen, eller en spesialisering av denne, må utvides med flere nivåer med detaljerte funn eller observasjoner, kan flere forekomster av arketypen eller dens spesialiseringer nøstes i SLOT'et \"Ytterligere detaljer\".\n\nHver organ- eller regionspesifikk spesialisering av denne overordnede arketypen er ment å inkludere alle rimelig forventede og relevante funn. For eksempel vil CLUSTER.imaging_exam-overy (Bildediagnostisk undersøkelse - eggstokk) dekke registrering av alle funn eller observasjoner som man forventer å finne ved radiologisk undersøkelse av eggstokk, uavhengig av modalitet. Dette inkluderer størrelse av eggstokk, dimensjonen av den største follikkelen og diameter og beskrivelse av spesifikke follikler. På samme måte vil CLUSTER.imaging_exam-lymph_node_group (Bildediagnostisk undersøkelse - lymfeknutegruppe) inneholde dataelementer som er nødvendig for å registrere spesifikke funn av en lymfeknutegruppe, inkludert den nøyaktige eller relative plassering i kroppen og antall lymfeknuter i gruppen.\n\nDersom en passende spesialisering ikke er tilgjengelig for et organ eller kroppsdel, kan denne generiske arketypen brukes for å registrere alle relevante funn, inkludert identifikasjon av organ eller kroppsdel.",
+          "misuse" : "Skal ikke brukes til å registrere funn som er gjort utenom det definerte organet eller den definerte kroppsdelen. Bruk en egen instans av en eller flere arketyper innen gruppen av CLUSTER.imaging_exam - arketyper (Undersøkelsesfunn) for dette formålet.\n\nSkal ikke brukes til å registrere overordnede undersøkelsesfunn, kontekst eller tekniske detaljer relatert til bildeundersøkelsen. Bruk arketypen OBSERVATION.imaging_exam_result (Bildediagnostisk svar) for å registrere for eksempel kommentar om undersøkelseskvalitet, differensialdiagnose og overordnet konklusjon.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the findings on radiological examination of a specified body structure or region, and their interpretation.",
+          "keywords" : [ "finding, imaging, body, system, structure, region, observation, diagnostic, radiology, image" ],
+          "use" : "Use to record the findings on radiological examination of a specified body structure or region, and their interpretation.\n\nThe intended scope for the CLUSTER.imaging_exam family of archetypes to be used to record all detailed findings on radiological examination. The family of specialised archetypes are derived from this generic parent archetype, CLUSTER.imaging_exam, designed as a universal pattern for recording any findings in any specified body structure or region and using any modality.\n\nThis archetype and its related family of specialisations are designed to be nested within the 'Structured imaging findings' SLOT in the OBSERVATION.imaging_exam_result or within the 'Additional details' SLOT in other relevant CLUSTER.imaging_exam archetypes, but can also be used within other ENTRY or CLUSTER archetypes, where clinically appropriate. If this archetype or its specialisations need to be extended with further levels of detailed findings, additional instances of the CLUSTER.imaging_exam or its specialisations can be nested in the 'Additional details' SLOT.\n\nEach structure- or region-specific specialisation of this parent archetype is intended to be inclusive of all reasonably anticipated and relevant findings. For example, the CLUSTER.imaging_exam-ovary will support recording of all findings that would be expected in reporting on imaging of the ovary using any radiological modality, including the size of the ovary, largest follicle size and the diameter and description of specific follicles. Similarly, CLUSTER.imaging_exam-lymph_node_group will contain data elements required to record specific findings of a lymph node group, including its precise or relative location in the body and the number of lymph nodes in the group. \n\nIf an appropriate specialisation is not available for a body structure or region, this generic archetype can be used to record all relevant findings, including identification of the structure or region.",
+          "misuse" : "Not to be used to record findings observed outside the identified body structure or region. Use a separate instance of one or more archetypes from the CLUSTER.imaging_exam family for this purpose.\n\nNot to be used to record details related to the overall findings, context or technical details related to a complete imaging examination test result. Use the OBSERVATION.imaging_exam_result for this purpose. For example, comments on the study quality, differential diagnoses, and overall impression.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.imaging_exam-bowel.v1",
     "differential" : true,
@@ -49280,9 +49410,30 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000.1",
       "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "de" : { }
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Imaging examination of a body structure",
+            "description" : "Findings on radiological examination of a specified body structure or region."
+          }
+        },
+        "nb" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Bildediagnostisk undersøkelse - kroppsstruktur",
+            "description" : "Funn eller observasjoner ved radiologisk undersøkelse av et definert organ eller en kroppsdel."
+          }
+        },
+        "de" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Bildgebende Untersuchung einer Körperstruktur",
+            "description" : "Befunde zur radiologischen Untersuchung einer bestimmten Körperstruktur oder -region."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
