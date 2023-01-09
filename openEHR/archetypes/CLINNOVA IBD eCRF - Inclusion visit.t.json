@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.75",
+      "sem_ver" : "0.1.76",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "30b6767f7e2932752b721125c821135f",
+      "MD5-CAM-1.0.1" : "3b3656df309eca54d611d0d3fe9eaf92",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -62686,7 +62686,162 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte.",
+          "keywords" : [ "Abschnitt", "Template", "Überschrift", "Ad hoc", "Abschnittsüberschrift" ],
+          "use" : "Dieser Archetyp kann für die Erstellung einer Abschnittsüberschrift in einem Template verwendet werden. Die Überschrift kann, passend zu dem jeweiligen klinischen Kontext, umbenannt werden. Zum Beispiel: \"Ad hoc Überschrift\" wird umbenannt in \"Untersuchungsergebnisse\".\r\n\r\n",
+          "misuse" : "Die Überschrift sollte in einem Template nicht unverändert verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.",
+          "keywords" : [ ],
+          "use" : "Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".",
+          "misuse" : "Ska inte lämnas oförändrad i en openEHR-mall.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Базовый заголовок раздела, должен быть переименован в локальном шаблоне ",
+          "keywords" : [ "раздел", "шаблон", "заготовка", "название", "образец" ],
+          "use" : "используется для создания и именования разделов в локальных шаблонах",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.",
+          "keywords" : [ ],
+          "use" : "Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".",
+          "misuse" : "Skal ikke stå med uendret navn i en templat.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Proporcionar un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico.",
+          "keywords" : [ ],
+          "use" : "Utilizar para construir un encabezado de sección en una plantilla y que será renombrado para su empleo en un contexto clínico específico. Por ejemplo, \"Encabezado ad hoc\" puede renombrarse como \"Hallazgos de examen\".",
+          "misuse" : "No debe mantenerse sin cambios en una plantilla.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Oferecer um cabeçalho de uma sessão genérica que será renomeado no template para adequar-se a um contexto clínico específico.",
+          "keywords" : [ "cabeçalho" ],
+          "use" : "Utilize para construir um cabeçalho de uma sessão (de um template) que será renomeada para adequar-se a um contexto clínico específico. Por exemplo: \"cabeçalho Ad hoc\" renomeado para \"Achados de exame\".",
+          "misuse" : "Não deve manter a configuração original no template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a generic section header which will be renamed in a template to suit a specific clinical context.",
+          "keywords" : [ ],
+          "use" : "Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".",
+          "misuse" : "Not to be left unchanged in a template.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Fornire un'intestazione generica della sezione che sarà rinominata in un template per adattarsi ad uno specifico contesto clinico.",
+          "keywords" : [ ],
+          "use" : "Usato per costruire un'intestazione di sezione in un template che sarà rinominato in base al contesto clinico specifico. Per esempio: \"Intestazione ad hoc\" rinominata in \"Risultati dell'esame\".",
+          "misuse" : "Non deve essere lasciato invariato in un template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
     "differential" : true,
@@ -63061,12 +63216,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "drug_lbtest_1, drug_lbtest_2, drug_lbtest_3"
+            "redcap_mapping" : "other_lbtest"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "drug_lborres"
+            "redcap_mapping" : "other_lborres"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
@@ -63077,12 +63232,12 @@
             "fhir_mapping" : "Observation.issued"
           },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "drug_lbnres"
+            "redcap_mapping" : "other_lbnres"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "drug_lbclsig"
+            "redcap_mapping" : "other_lbclsig"
           }
         },
         "nb" : {
@@ -63234,40 +63389,72 @@
                   "selectedTerminologies" : [ "LOINC_V2.73" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "74117-3",
-                    "value" : "Adalimumab [Mass/volume] in Serum or Plasma"
+                    "code" : "53819-9",
+                    "value" : "Thiopurine methyltransferase [Enzymatic activity/volume] in Blood"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "39803-2",
-                    "value" : "inFLIXimab [Mass/volume] in Serum or Plasma"
+                    "code" : "35285-6",
+                    "value" : "Tissue transglutaminase IgA Ab [Presence] in Serum"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "87408-1",
-                    "value" : "Ustekinumab [Mass/volume] in Serum or Plasma by Immunoassay"
+                    "code" : "31017-7",
+                    "value" : "Tissue transglutaminase IgA Ab [Units/volume] in Serum"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "90780-8",
-                    "value" : "inFLIXimab Ab [Units/volume] in Serum by Immunoassay"
+                    "code" : "53026-1",
+                    "value" : "Tissue transglutaminase IgG Ab [Presence] in Serum"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "72623-2",
-                    "value" : "inFLIXimab Ab [Mass/volume] in Serum or Plasma"
+                    "code" : "32998-7",
+                    "value" : "Tissue transglutaminase IgG Ab [Units/volume] in Serum"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "87742-3",
-                    "value" : "Adalimumab Ab [Units/volume] in Serum or Plasma"
+                    "code" : "35880-4",
+                    "value" : "Tissue transglutaminase IgM Ab [Units/volume] in Serum"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "74116-5",
-                    "value" : "Adalimumab Ab [Mass/volume] in Serum or Plasma"
+                    "code" : "57415-2",
+                    "value" : "Baker's yeast IgA Ab [Presence] in Serum by Immunoassay"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "32660-3",
-                    "value" : "6-Thioguanine [Entitic substance] in Red Blood Cells"
+                    "code" : "63331-3",
+                    "value" : "Baker's yeast IgA Ab [Presence] in Serum by Immunofluorescence"
                   }, {
                     "terminologyId" : "LOINC_V2.73",
-                    "code" : "32654-6",
-                    "value" : "6-Methylmercaptopurine [Entitic substance] in Red Blood Cells"
+                    "code" : "31032-6",
+                    "value" : "Baker's yeast IgA Ab [Units/volume] in Serum"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "81421-0",
+                    "value" : "Baker's yeast IgG Ab [Presence] in Serum by Immunoassay"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "63333-9",
+                    "value" : "Baker's yeast IgG Ab [Presence] in Serum by Immunofluorescence"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "6713-2",
+                    "value" : "Baker's yeast IgG Ab [Units/volume] in Serum"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "17357-5",
+                    "value" : "Neutrophil cytoplasmic Ab.perinuclear [Presence] in Serum by Immunofluorescence"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "14278-6",
+                    "value" : "Neutrophil cytoplasmic Ab.perinuclear [Titer] in Serum by Immunofluorescence"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "91143-8",
+                    "value" : "TPMT activity in RBC by production of 6-MTG riboside"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "91142-0",
+                    "value" : "TPMT activity in RBC by production of 6-MMP riboside"
+                  }, {
+                    "terminologyId" : "LOINC_V2.73",
+                    "code" : "4933-8",
+                    "value" : "HLA-DQ1 [Presence]"
                   } ]
                 } ]
               } ],
@@ -63319,7 +63506,7 @@
                   "members" : [ {
                     "@type" : "C_STRING",
                     "rmTypeName" : "STRING",
-                    "constraint" : [ "1" ]
+                    "constraint" : [ "U/mL" ]
                   }, {
                     "@type" : "C_REAL",
                     "rmTypeName" : "REAL",
@@ -63335,7 +63522,7 @@
                   "members" : [ {
                     "@type" : "C_STRING",
                     "rmTypeName" : "STRING",
-                    "constraint" : [ "ug/mL" ]
+                    "constraint" : [ "[arb'U]" ]
                   }, {
                     "@type" : "C_REAL",
                     "rmTypeName" : "REAL",
@@ -63351,7 +63538,23 @@
                   "members" : [ {
                     "@type" : "C_STRING",
                     "rmTypeName" : "STRING",
-                    "constraint" : [ "ng/mL" ]
+                    "constraint" : [ "[arb'U]/L" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "kiU/L" ]
                   }, {
                     "@type" : "C_REAL",
                     "rmTypeName" : "REAL",
@@ -64096,33 +64299,14 @@
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
+                          "rmTypeName" : "DV_TEXT",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
+                            "rmAttributeName" : "value",
                             "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "X",
-                                "value" : "Blood drug level"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "104471003",
-                                "value" : "Adenosine deaminase measurement"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "121449002",
-                                "value" : "Azathioprine measurement"
-                              } ]
+                              "@type" : "C_STRING",
+                              "rmTypeName" : "STRING",
+                              "constraint" : [ "Other laboratory tests (TPMT, ASCA, pANCA, tTG, HLA)" ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -64479,12 +64663,6 @@
             "text" : "(Synthesized)",
             "code" : "ac0.1",
             "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Laboratory test result (2)",
-            "description" : "The result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual."
           }
         },
         "nb" : {
