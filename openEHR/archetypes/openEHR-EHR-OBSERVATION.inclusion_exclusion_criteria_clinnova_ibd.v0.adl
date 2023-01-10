@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2022-10-07">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2022-10-07">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c8bb2ff044d662be6a55ca9811e127ec">
+		["MD5-CAM-1.0.1"] = <"8968cc6baed363e29b204ed5035c15f1">
 		["build_uid"] = <"af45c506-628d-3710-9345-4028a14a8329">
 	>
 
@@ -56,7 +56,7 @@ definition
 													DV_BOOLEAN matches {*}
 												}
 											}
-											ELEMENT[at0008] occurrences matches {0..1} matches {    -- Diagnosed with IBD at least 3 months before the enrolment AND occurrence of significant change in the treatment of the disease
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- Diagnosed with IBD at least 3 months before the enrolment AND occurrence of significant change in the treatment of the disease OR discontinuation of a given treatment or surgery OR discontinuation of a given treatment or surgery
 												value matches {
 													DV_BOOLEAN matches {*}
 												}
@@ -138,8 +138,11 @@ ontology
 					description = <"3. Patients are willing and able to comply with the protocol, including undergoing data and samples collection and scheduled visits and examinations.">
 				>
 				["at0008"] = <
-					text = <"Diagnosed with IBD at least 3 months before the enrolment AND occurrence of significant change in the treatment of the disease">
-					description = <"4. Diagnosed with Inflammatory bowel disease (IBD), either Crohn’s disease or ulcerative colitis, at least 3 months before the enrolment AND occurrence of a significant change in the treatment of the disease (either change of drug dosage OR change of medication within the same treatment class OR change of treatment class OR addition of a drug to a treatment regimen already ongoing).">
+					text = <"Diagnosed with IBD at least 3 months before the enrolment AND occurrence of significant change in the treatment of the disease OR discontinuation of a given treatment or surgery OR discontinuation of a given treatment or surgery">
+					description = <"4. Diagnosed with Inflammatory bowel disease (IBD), either Crohn’s disease or ulcerative colitis, at least 3 months before the enrolment AND occurrence of a significant change in the treatment of the disease (either change of drug dosage OR change of medication within the same treatment class OR change of treatment class OR addition of a drug to a treatment regimen already ongoing) OR discontinuation of a given treatment or surgery.">
+					comment = <"Note: 
+- Patients with ostomy or with short bowel syndrome can be included if they fulfill all the eligibility criteria
+- Bowel resections in patients with Crohn’s disease is considered a change of treatment”">
 				>
 				["at0009"] = <
 					text = <"Exclusion criteria">

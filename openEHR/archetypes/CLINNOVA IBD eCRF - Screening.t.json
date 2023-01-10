@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.10",
+      "sem_ver" : "0.1.12",
       "build_uid" : "caec0a4f-a0ab-464d-a670-a699a7176722",
-      "MD5-CAM-1.0.1" : "252f9caca121298ecced2ccfcb0ff2e8",
+      "MD5-CAM-1.0.1" : "6a2f3d275bea6591edc2f9b4bd34a27f",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -462,17 +462,19 @@
             "FHIR_mapping" : "Encounter.identifier",
             "HL7v2_mapping" : "PV1.19 "
           },
-          "/items[at0004]" : {
-            "FHIR_mapping" : "Encounter.reason",
-            "HL7v2_mapping" : "EVN.4 / PV2.3"
-          },
-          "/items[at0003]" : {
-            "FHIR_mapping" : "Encounter.type",
-            "HL7v2_mapping" : " PV1.4 / PV1.18"
-          },
           "/items[at0001.1]" : {
             "FHIR_mapping" : "Appointment.identifier",
             "HL7v2_mapping" : "SCH-1 / SCH-2"
+          },
+          "/items[at0004.1]" : {
+            "FHIR_mapping" : "Encounter.reason",
+            "HL7v2_mapping" : "EVN.4 / PV2.3",
+            "redcap_mapping" : "visitreas"
+          },
+          "/items[at0003.1]" : {
+            "FHIR_mapping" : "Encounter.type",
+            "HL7v2_mapping" : " PV1.4 / PV1.18",
+            "redcap_mapping" : "visperf"
           }
         },
         "pt-pt" : { },
@@ -495,6 +497,50 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "LIH"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "LIH" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "LIH",
+                    "code" : "VD",
+                    "value" : "Visit done"
+                  }, {
+                    "terminologyId" : "LIH",
+                    "code" : "VND",
+                    "value" : "Visit not done"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -514,6 +560,22 @@
             "description" : "Unique identifier for each appointment process.",
             "FHIR_mapping" : "Appointment.identifier",
             "HL7v2_mapping" : "SCH-1 / SCH-2"
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Visit reason",
+            "description" : "Reason for encounter, should be provided by terminology server.",
+            "FHIR_mapping" : "Encounter.reason",
+            "HL7v2_mapping" : "EVN.4 / PV2.3"
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Visit status",
+            "description" : "Type of encounter, should be provided by terminology server.",
+            "FHIR_mapping" : "Encounter.type",
+            "HL7v2_mapping" : " PV1.4 / PV1.18"
           }
         },
         "pt-pt" : { },
@@ -605,7 +667,11 @@
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
-        "en" : { }
+        "en" : {
+          "/items[at0002.1]" : {
+            "redcap_mapping" : "visit"
+          }
+        }
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.research_information.v0",
@@ -1621,7 +1687,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "c8bb2ff044d662be6a55ca9811e127ec"
+        "PARENT:MD5-CAM-1.0.1" : "8968cc6baed363e29b204ed5035c15f1"
       },
       "details" : {
         "en" : {
@@ -1767,7 +1833,7 @@
           "/items[at0001]" : {
             "redcap_mapping" : "ieyn"
           },
-          "/items[at0002]" : {
+          "/items[at0002.1]" : {
             "redcap_mapping" : "ietest"
           }
         }
@@ -1783,7 +1849,34 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0002.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Inclusion/Exclusion criteria not met", "/.+/" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {

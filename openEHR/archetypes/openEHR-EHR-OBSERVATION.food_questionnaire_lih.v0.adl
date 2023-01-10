@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -47,12 +47,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e8525bb44cdc191f458a41911e61672b">
+		["MD5-CAM-1.0.1"] = <"ded8c9421f3a5f3ac461d9eac8682c9e">
 		["build_uid"] = <"a41356ac-f3fb-30c8-a47b-c4f89cf1a8c5">
 	>
 
 definition
-	OBSERVATION[at0000] matches {    -- Food questionnaire (LIH)
+	OBSERVATION[at0000] matches {    -- CLINNOVA Food questionnaire (LIH)
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
@@ -710,7 +710,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Food questionnaire (LIH)">
+					text = <"CLINNOVA Food questionnaire (LIH)">
 					description = <"The food questionnaire is a self-reported questionnaire and consists of 45 questions assessed in four parts. The first part is about vegetarianism (3 questions); the second part consists of 20 questions about food habits and food frequency intake; the third part consists of 15 questions about avoiding food because of symptoms, and the fourth part consists of seven questions about nutritional supplements. There is no cut-off.  This questionnaire is made by the Luxembourg Institute of Health (LIH).">
 				>
 				["at0001"] = <
@@ -1070,7 +1070,7 @@ ontology
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Food questionnaire (LIH) (en)">
+					text = <"*CLINNOVA Food questionnaire (LIH) (en)">
 					description = <"*The food questionnaire is a self-reported questionnaire and consists of 45 questions assessed in four parts. The first part is about vegetarianism (3 questions); the second part consists of 20 questions about food habits and food frequency intake; the third part consists of 15 questions about avoiding food because of symptoms, and the fourth part consists of seven questions about nutritional supplements. There is no cut-off.  This questionnaire is made by the Luxembourg Institute of Health (LIH). (en)">
 				>
 				["at0001"] = <
@@ -1430,7 +1430,7 @@ ontology
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Food questionnaire (LIH) (en)">
+					text = <"*CLINNOVA Food questionnaire (LIH) (en)">
 					description = <"*The food questionnaire is a self-reported questionnaire and consists of 45 questions assessed in four parts. The first part is about vegetarianism (3 questions); the second part consists of 20 questions about food habits and food frequency intake; the third part consists of 15 questions about avoiding food because of symptoms, and the fourth part consists of seven questions about nutritional supplements. There is no cut-off.  This questionnaire is made by the Luxembourg Institute of Health (LIH). (en)">
 				>
 				["at0001"] = <
