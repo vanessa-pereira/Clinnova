@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"12757e37f87072c7b802047135c84af5">
+		["MD5-CAM-1.0.1"] = <"7f5fb60309b98acf9859910c23e1308a">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -50,19 +50,6 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									ELEMENT[at0113] matches {    -- Lémann Index
-										value matches {
-											C_DV_QUANTITY <
-												property = <[openehr::380]>
-												list = <
-													["1"] = <
-														units = <"1">
-														magnitude = <|0.0..140.0|>
-													>
-												>
-											>
-										}
-									}
 									CLUSTER[at0011] occurrences matches {0..3} matches {    -- Upper tract
 										items cardinality matches {1..*; unordered} matches {
 											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Organ
@@ -397,76 +384,6 @@ definition
 									}
 									CLUSTER[at0045] occurrences matches {0..1} matches {    -- Anus
 										items cardinality matches {1..*; unordered} matches {
-											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Penetrating lesions
-												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0083] occurrences matches {0..1} matches {    -- Organ
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0047;at0047]    -- Anus
-																}
-															}
-														}
-													}
-													ELEMENT[at0084] occurrences matches {0..1} matches {    -- Segment
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0047;at0047]    -- Anus
-																}
-															}
-														}
-													}
-													ELEMENT[at0125] occurrences matches {0..1} matches {    -- Resection
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
-														}
-													}
-													ELEMENT[at0085] occurrences matches {0..1} matches {    -- Investigational method
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0051,    -- Clinical examination
-																	at0014]    -- MRI or CT
-																}
-															}
-														}
-													}
-													ELEMENT[at0086] occurrences matches {0..1} matches {    -- Clinical examination grade
-														value matches {
-															1|[local::at0088],
-															2|[local::at0089],
-															3|[local::at0090]
-														}
-													}
-													ELEMENT[at0087] occurrences matches {0..1} matches {    -- MRI or CT grades
-														value matches {
-															1|[local::at0091],
-															2|[local::at0092],
-															3|[local::at0093]
-														}
-													}
-													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Anus segment coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
-												}
-											}
 											ELEMENT[at0046] occurrences matches {0..1} matches {    -- Organ
 												value matches {
 													DV_CODED_TEXT matches {
@@ -496,18 +413,6 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0108] occurrences matches {0..1} matches {    -- Anus segment coefficient
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
-													>
-												}
-											}
 											CLUSTER[at0146] occurrences matches {0..1} matches {    -- Structuring lesions
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0050] occurrences matches {0..1} matches {    -- Investigational method
@@ -526,6 +431,59 @@ definition
 															3|[local::at0055]
 														}
 													}
+												}
+											}
+											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Penetrating lesions
+												items cardinality matches {1..*; unordered} matches {
+													ELEMENT[at0085] occurrences matches {0..1} matches {    -- Investigational method
+														value matches {
+															DV_CODED_TEXT matches {
+																defining_code matches {
+																	[local::
+																	at0051,    -- Clinical examination
+																	at0014]    -- MRI or CT
+																}
+															}
+														}
+													}
+													ELEMENT[at0086] occurrences matches {0..1} matches {    -- Clinical examination grade
+														value matches {
+															1|[local::at0088],
+															2|[local::at0089],
+															3|[local::at0090]
+														}
+													}
+													ELEMENT[at0087] occurrences matches {0..1} matches {    -- MRI or CT grades
+														value matches {
+															1|[local::at0091],
+															2|[local::at0092],
+															3|[local::at0093]
+														}
+													}
+												}
+											}
+											ELEMENT[at0108] occurrences matches {0..1} matches {    -- Anus segment coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
+												}
+											}
+											ELEMENT[at0111] occurrences matches {0..1} matches {    -- Anus segment index calculation
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
 												}
 											}
 										}
@@ -573,6 +531,19 @@ definition
 												list = <
 													["1"] = <
 														units = <"1">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0113] matches {    -- Lémann Index
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+														magnitude = <|0.0..140.0|>
 													>
 												>
 											>
@@ -873,14 +844,6 @@ ontology
 					text = <"Penetrating lesions">
 					description = <"">
 				>
-				["at0083"] = <
-					text = <"Organ">
-					description = <"">
-				>
-				["at0084"] = <
-					text = <"Segment">
-					description = <"">
-				>
 				["at0085"] = <
 					text = <"Investigational method">
 					description = <"MRI or CT should only be used in case of abnormality at clinical examination.">
@@ -945,7 +908,7 @@ If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coeffi
 If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.5">
 				>
 				["at0111"] = <
-					text = <"Anus segment coefficient">
+					text = <"Anus segment index calculation">
 					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
 If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
@@ -996,10 +959,6 @@ Segmental indexes = number of segments * segment coefficient = 2segments*5 + 1se
 					description = <"">
 				>
 				["at0121"] = <
-					text = <"Resection">
-					description = <"">
-				>
-				["at0125"] = <
 					text = <"Resection">
 					description = <"">
 				>
