@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7f5fb60309b98acf9859910c23e1308a">
+		["MD5-CAM-1.0.1"] = <"21aefec487840d45cbf7725b1e01c1b7">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -111,6 +111,18 @@ definition
 															3|[local::at0022]
 														}
 													}
+													ELEMENT[at0147] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0056] occurrences matches {0..1} matches {    -- Penetrating lesions
@@ -138,6 +150,18 @@ definition
 															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
+														}
+													}
+													ELEMENT[at0148] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -213,6 +237,18 @@ definition
 															3|[local::at0022]
 														}
 													}
+													ELEMENT[at0149] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0070] occurrences matches {0..20} matches {    -- Penetrating lesions
@@ -231,6 +267,18 @@ definition
 															1|[local::at0029],
 															2|[local::at0068],
 															3|[local::at0069]
+														}
+													}
+													ELEMENT[at0150] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -325,6 +373,18 @@ definition
 															3|[local::at0044]
 														}
 													}
+													ELEMENT[at0151] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0075] occurrences matches {0..6} matches {    -- Penetrating lesions
@@ -352,6 +412,18 @@ definition
 															1|[local::at0029],
 															2|[local::at0081],
 															3|[local::at0069]
+														}
+													}
+													ELEMENT[at0152] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -431,6 +503,18 @@ definition
 															3|[local::at0055]
 														}
 													}
+													ELEMENT[at0153] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
 												}
 											}
 											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Penetrating lesions
@@ -458,6 +542,18 @@ definition
 															1|[local::at0091],
 															2|[local::at0092],
 															3|[local::at0093]
+														}
+													}
+													ELEMENT[at0154] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
 												}
@@ -1023,6 +1119,46 @@ Will have the same value as \"Anus segment coefficient\" data element.">
 				["at0146"] = <
 					text = <"Structuring lesions">
 					description = <"">
+				>
+				["at0147"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0148"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0149"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0150"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0151"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0152"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0153"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0154"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
 			>
 		>
