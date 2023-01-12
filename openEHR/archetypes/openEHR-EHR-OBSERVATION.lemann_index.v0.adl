@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"21aefec487840d45cbf7725b1e01c1b7">
+		["MD5-CAM-1.0.1"] = <"e6e0348744b68792888707f4f3ed33f4">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -198,7 +198,7 @@ definition
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
-															[local::at0025;at0025]    -- Small bowel
+															[local::at0025]    -- Small bowel
 														}
 													}
 												}
@@ -460,7 +460,7 @@ definition
 												value matches {
 													DV_CODED_TEXT matches {
 														defining_code matches {
-															[local::at0047;at0047]    -- Anus
+															[local::at0047]    -- Anus
 														}
 													}
 												}
