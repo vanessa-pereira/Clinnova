@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"74fcd421bfc2fd96a792b70ed8527044">
+		["MD5-CAM-1.0.1"] = <"8870cd6966b9ee3d82eed8e194b6e18b">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -1137,28 +1137,29 @@ If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coeffi
 				>
 				["at0150"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 1.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.0">
 				>
 				["at0151"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 2.0
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 5.5">
 				>
 				["at0152"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 1, then \"coefficient\" = 1.0
+If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.5">
 				>
 				["at0153"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 1.5
 If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
 				["at0154"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
 			>
 		>
