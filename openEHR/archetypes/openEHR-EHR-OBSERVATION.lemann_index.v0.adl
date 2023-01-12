@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8dc7d2423468a2354f5c2ca81f445a09">
+		["MD5-CAM-1.0.1"] = <"74fcd421bfc2fd96a792b70ed8527044">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -584,30 +584,6 @@ definition
 											}
 										}
 									}
-									ELEMENT[at0129] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
-										value matches {
-											C_DV_QUANTITY <
-												property = <[openehr::380]>
-												list = <
-													["1"] = <
-														units = <"1">
-													>
-												>
-											>
-										}
-									}
-									ELEMENT[at0128] occurrences matches {0..1} matches {    -- Anus index calculation
-										value matches {
-											C_DV_QUANTITY <
-												property = <[openehr::380]>
-												list = <
-													["1"] = <
-														units = <"1">
-													>
-												>
-											>
-										}
-									}
 									ELEMENT[at0131] occurrences matches {0..1} matches {    -- Upper tract index calculation
 										value matches {
 											C_DV_QUANTITY <
@@ -620,7 +596,31 @@ definition
 											>
 										}
 									}
+									ELEMENT[at0129] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
 									ELEMENT[at0130] occurrences matches {0..1} matches {    -- Small bowel index calculation
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
+										}
+									}
+									ELEMENT[at0128] occurrences matches {0..1} matches {    -- Anus index calculation
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::380]>
@@ -734,7 +734,7 @@ ontology
 				>
 				["at0019"] = <
 					text = <"Endoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0020"] = <
 					text = <"Grade 1 - Wall thickening less than 3 mm or segmental enhancement without prestenotic dilatation">
@@ -770,7 +770,7 @@ ontology
 				>
 				["at0028"] = <
 					text = <"Grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0029"] = <
 					text = <"Grade 1 - None">
@@ -786,7 +786,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0034"] = <
 					text = <"Colon / Rectum">
@@ -814,11 +814,11 @@ ontology
 				>
 				["at0041"] = <
 					text = <"Colonoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0042"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0043"] = <
 					text = <"Grade 2 - Wall thickening more or equal than 3 mm or mural stratification without prestenotic dilatation or less than 50% of the lumen">
@@ -854,7 +854,7 @@ ontology
 				>
 				["at0052"] = <
 					text = <"Grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0053"] = <
 					text = <"Grade 1 - Mild stricture">
@@ -878,7 +878,7 @@ ontology
 				>
 				["at0062"] = <
 					text = <"Endoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0063"] = <
 					text = <"Grade 1 - Superficial ulceration">
@@ -894,7 +894,7 @@ ontology
 				>
 				["at0066"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0068"] = <
 					text = <"Grade 2 - Deep transmural ulceration">
@@ -914,7 +914,7 @@ ontology
 				>
 				["at0074"] = <
 					text = <"Grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0075"] = <
 					text = <"Penetrating lesions">
@@ -926,11 +926,11 @@ ontology
 				>
 				["at0079"] = <
 					text = <"Colonoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0080"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0081"] = <
 					text = <"Grade 2 - Transmural ulceration">
@@ -946,11 +946,11 @@ ontology
 				>
 				["at0086"] = <
 					text = <"Clinical examination grade">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0087"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0088"] = <
 					text = <"Grade 1 - Anal ulceration">
@@ -1127,13 +1127,13 @@ If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coeffi
 				>
 				["at0148"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 2.0">
 				>
 				["at0149"] = <
 					text = <"Index">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 1, then \"coefficient\" = 1.0
+If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 5.0">
 				>
 				["at0150"] = <
 					text = <"Index">
