@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0961979c4d115859328cb696146dc277">
+		["MD5-CAM-1.0.1"] = <"2367cfaec376bbaa3c0c196510926f62">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -694,7 +694,8 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Lémann Index">
-					description = <"The Lémann Index is the first global CD damage index assessing cumulative structural bowel damage in CD.">
+					description = <"The Lémann Index is the first global Crohn's disease damage index tool that measures the cumulative bowel damage by using resections and the extent and severity of lesions in the digestive tract of CD patients. 
+In contrast to other indexes that are based only on clinical or endoscopic data and assess the severity of inflammatory activity at a specific time and fluctuate with time, the Lémann Index is more likely to increase with the longer disease duration by assessing irreversible bowel damage along with accumulation of stricturing lesions, penetrating lesions, and surgical resections.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -710,7 +711,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Structuring lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0005"] = <
 					text = <"Organ">
@@ -894,7 +895,7 @@ ontology
 				>
 				["at0056"] = <
 					text = <"Penetrating lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0061"] = <
 					text = <"Investigational method">
@@ -931,6 +932,7 @@ ontology
 				["at0070"] = <
 					text = <"Penetrating lesions">
 					description = <"">
+					comment = <"Type of lesion">
 				>
 				["at0073"] = <
 					text = <"Investigational method">
@@ -942,7 +944,7 @@ ontology
 				>
 				["at0075"] = <
 					text = <"Penetrating lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0078"] = <
 					text = <"Investigational method">
@@ -962,7 +964,7 @@ ontology
 				>
 				["at0082"] = <
 					text = <"Penetrating lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0085"] = <
 					text = <"Investigational method">
@@ -1006,13 +1008,13 @@ ontology
 				>
 				["at0105"] = <
 					text = <"Small bowel segmental index calculation">
-					description = <"Sum of all index (resection, structuring, penetrating).
-For each resection with \"yes\", sum 10.">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0106"] = <
 					text = <"Colon / Rectum segmental index calculation">
-					description = <"Sum of all index (resection, structuring, penetrating).
-For each resection with \"yes\", sum 10.">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0108"] = <
 					text = <"Anus organ coefficient">
@@ -1024,8 +1026,8 @@ For each resection with \"yes\", sum 10.">
 				>
 				["at0111"] = <
 					text = <"Anus segmental index calculation">
-					description = <"Sum of all index (resection, structuring, penetrating).
-For each resection with \"yes\", sum 10.">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0112"] = <
 					text = <"Small bowel organ coefficient">
@@ -1054,7 +1056,7 @@ Segmental indexes = number of segments * segment coefficient = 2segments*5 + 1se
 				>
 				["at0116"] = <
 					text = <"Resection">
-					description = <"For each resection with \"yes\", sum 10.">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0117"] = <
 					text = <"No">
@@ -1066,15 +1068,15 @@ Segmental indexes = number of segments * segment coefficient = 2segments*5 + 1se
 				>
 				["at0119"] = <
 					text = <"Resection">
-					description = <"">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0120"] = <
 					text = <"Resection">
-					description = <"">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0121"] = <
 					text = <"Resection">
-					description = <"">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0128"] = <
 					text = <"Anus index calculation">
@@ -1125,20 +1127,20 @@ single segment result
 				>
 				["at0143"] = <
 					text = <"Upper tract segmental index calculation">
-					description = <"Sum of all index (resection, structuring, penetrating).
-For each resection with \"yes\", sum 10.">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0144"] = <
 					text = <"Structuring lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0145"] = <
 					text = <"Structuring lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0146"] = <
 					text = <"Structuring lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0147"] = <
 					text = <"Index">
