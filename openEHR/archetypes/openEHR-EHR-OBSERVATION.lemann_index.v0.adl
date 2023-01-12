@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e6e0348744b68792888707f4f3ed33f4">
+		["MD5-CAM-1.0.1"] = <"8dc7d2423468a2354f5c2ca81f445a09">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -251,7 +251,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0070] occurrences matches {0..20} matches {    -- Penetrating lesions
+											CLUSTER[at0070] occurrences matches {0..1} matches {    -- Penetrating lesions
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0073] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
@@ -387,7 +387,7 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0075] occurrences matches {0..6} matches {    -- Penetrating lesions
+											CLUSTER[at0075] occurrences matches {0..1} matches {    -- Penetrating lesions
 												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0078] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
