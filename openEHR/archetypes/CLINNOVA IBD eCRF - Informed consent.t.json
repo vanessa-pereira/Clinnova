@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "5136bb56-3123-4595-bb6c-2ac796b47dd6",
-      "MD5-CAM-1.0.1" : "367961d11b39db3e298ba63ad992119e",
+      "MD5-CAM-1.0.1" : "673128dd0c8154ccc613f6bad9b4cccb",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -1287,6 +1287,7 @@
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
                   "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "LIH"
                   },
@@ -1313,7 +1314,37 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ ],
+              "defaultValue" : {
+                "defining_code" : {
+                  "terminology_id" : {
+                    "value" : "LIH",
+                    "@type" : "TERMINOLOGY_ID"
+                  },
+                  "code_string" : "IC",
+                  "@type" : "CODE_PHRASE"
+                },
+                "value" : "Informed consent",
+                "@type" : "DV_CODED_TEXT"
+              },
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "LIH"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "LIH" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "LIH",
+                    "code" : "IC",
+                    "value" : "Informed consent"
+                  } ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
