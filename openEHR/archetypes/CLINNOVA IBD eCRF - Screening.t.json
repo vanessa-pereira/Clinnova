@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.13",
+      "sem_ver" : "0.1.14",
       "build_uid" : "caec0a4f-a0ab-464d-a670-a699a7176722",
-      "MD5-CAM-1.0.1" : "78f2168cd91062cf216b3a422fe806d0",
+      "MD5-CAM-1.0.1" : "2e0da9de9f86ee94e30767e8e9a346c8",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -761,12 +761,12 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "assessmentsMomentsLIH"
+                    "value" : "LIH"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "assessmentsMomentsLIH" ],
+                  "selectedTerminologies" : [ "LIH" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "assessmentsMomentsLIH",
+                    "terminologyId" : "LIH",
                     "code" : "S",
                     "value" : "Screening"
                   } ]
