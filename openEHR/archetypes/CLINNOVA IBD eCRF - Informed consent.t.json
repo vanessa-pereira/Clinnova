@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.3",
+      "sem_ver" : "0.1.4",
       "build_uid" : "5136bb56-3123-4595-bb6c-2ac796b47dd6",
-      "MD5-CAM-1.0.1" : "6d0b79c4ba9de6dcebfcbde331e3816b",
+      "MD5-CAM-1.0.1" : "f52ff9c1b3cbe20eb03719b3d5939df7",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -460,6 +460,22 @@
           "copyright" : "© openEHR Foundation",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        }
+      }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/description[at0001]/items[at0010.1]" : {
+            "redcap_mapping" : "dsstyn"
+          },
+          "/description[at0001]/items[at0008.1]" : {
+            "redcap_mapping" : "inclusion_dsstdat"
+          },
+          "/protocol[at0024]/items[at0025.1]" : {
+            "redcap_mapping" : "icf_ver"
+          }
         }
       }
     },
@@ -919,6 +935,22 @@
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0008.1",
               "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0009.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -1648,6 +1680,46 @@
         "PARENT:MD5-CAM-1.0.1" : "348bdf9bf9342b203b20492c688a2b7c"
       },
       "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/items[at0001]" : {
+            "redcap_mapping" : "icfq_1"
+          },
+          "/items[at0002]/items[at0012]/items[at0003]" : {
+            "redcap_mapping" : "icfq_2"
+          },
+          "/items[at0002]/items[at0012]/items[at0006]" : {
+            "redcap_mapping" : "physician_name"
+          },
+          "/items[at0002]/items[at0008]/items[at0009]" : {
+            "redcap_mapping" : "icfq_3"
+          },
+          "/items[at0002]/items[at0008]/items[at0010]" : {
+            "redcap_mapping" : "represent_name"
+          },
+          "/items[at0013]" : {
+            "redcap_mapping" : "icfq_4"
+          },
+          "/items[at0014]" : {
+            "redcap_mapping" : "icfq_5"
+          },
+          "/items[at0015]" : {
+            "redcap_mapping" : "icfq_6"
+          },
+          "/items[at0016]" : {
+            "redcap_mapping" : "icfq_7"
+          },
+          "/items[at0017]" : {
+            "redcap_mapping" : "icfq_8"
+          },
+          "/items[at0018]" : {
+            "redcap_mapping" : "icfq_9"
+          }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.clinnova_ibd_icf2.v0",
     "differential" : true,
