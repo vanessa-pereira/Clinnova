@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"348bdf9bf9342b203b20492c688a2b7c">
+		["MD5-CAM-1.0.1"] = <"28058a63ff8d164415662c50dd4caf3d">
 		["build_uid"] = <"2bcf7970-cfbe-3aeb-bc62-812c57ead63e">
 	>
 
@@ -59,12 +59,12 @@ definition
 									}
 								}
 							}
-							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Treating physician contact
+							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Treating physician name
 								value matches {
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Treating physician name
+							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Treating physician contact
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -100,32 +100,68 @@ definition
 			}
 			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other research in the same field
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
 				}
 			}
 			ELEMENT[at0014] occurrences matches {0..1} matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other Clinnova related research in the same field
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
 				}
 			}
 			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Patient agreed to secondary use of his samples for genetic research
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
 				}
 			}
 			ELEMENT[at0016] occurrences matches {0..1} matches {    -- Patient agreed to transfer of his samples/data outside the European Union
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
 				}
 			}
 			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Patient agreed to use the provided smartwatch (Withings ScanWatch) in the condition described in the information sheet
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
 				}
 			}
 			ELEMENT[at0018] occurrences matches {0..1} matches {    -- Patient agreed to be contacted again by the person leading the study with a view to taking part in another study
 				value matches {
-					DV_CODED_TEXT matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
 				}
 			}
 		}
