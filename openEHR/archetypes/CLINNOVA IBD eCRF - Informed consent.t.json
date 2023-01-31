@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.6",
+      "sem_ver" : "0.1.7",
       "build_uid" : "5136bb56-3123-4595-bb6c-2ac796b47dd6",
-      "MD5-CAM-1.0.1" : "60aaa6bc2654ac09cc7ecacbb429fe4c",
+      "MD5-CAM-1.0.1" : "df3f25a69f963c1e1c48634baae93a27",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -948,7 +948,39 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "nodeId" : "at0010.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "HL7_expandedYes-NoIndicator"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "HL7_expandedYes-NoIndicator" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "HL7_expandedYes-NoIndicator",
+                        "code" : "Y",
+                        "value" : "Yes"
+                      }, {
+                        "terminologyId" : "HL7_expandedYes-NoIndicator",
+                        "code" : "N",
+                        "value" : "No"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
