@@ -40,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c34e8881f49be9f782b72334d0aceb01">
+		["MD5-CAM-1.0.1"] = <"d036ccf8c8b4fe18411aef7c5061dd21">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
@@ -285,7 +285,9 @@ ontology
 				>
 				["at0015"] = <
 					text = <"Multiplier result for the number of liquid or soft stools">
-					description = <"Count 14 points per stool from the element/data point \"Average number of liquid or soft stools per day over seven days\" for the final score. ">
+					description = <"Count 14 points per stool from the element/data point \"Average number of liquid or soft stools per day over seven days\" for the final score. 
+">
+					comment = <"E.g.: if the average number of stools per days is 3, then the multiplier result is 3*14=42">
 				>
 				["at0016"] = <
 					text = <"Well">
@@ -357,12 +359,15 @@ ontology
 				>
 				["at0033"] = <
 					text = <"Absolute deviation of hematocrit from 47% in males or 42% in females">
-					description = <"Absolute deviation of hematocrit is the difference in hematocrit from standard. A male patient with a hematocrit of 40% has an absolute deviation of 7.
+					description = <"Absolute deviation of hematocrit is the difference in hematocrit from standard. 
+">
+					comment = <"E.g.: A male patient with a hematocrit of 40% has an absolute deviation of 7. A female patient with a hematocrit of 40% has an absolute deviation of 2.
 ">
 				>
 				["at0034"] = <
 					text = <"Multiplier result for the absolute deviation of hematocrit">
 					description = <"6 points per percent deviation. ">
+					comment = <"E.g.: A male patient with a hematocrit of 40% has an absolute deviation of 7. The multiplier result would be 7*6=42">
 				>
 				["at0035"] = <
 					text = <"Percentage deviation from standard weight">
