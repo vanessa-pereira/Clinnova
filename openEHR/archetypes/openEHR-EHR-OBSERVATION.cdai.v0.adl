@@ -40,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d036ccf8c8b4fe18411aef7c5061dd21">
+		["MD5-CAM-1.0.1"] = <"041c641bd090331e426b822d06b5d04b">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
@@ -371,11 +371,11 @@ ontology
 				>
 				["at0035"] = <
 					text = <"Percentage deviation from standard weight">
-					description = <"1 point per each percent deviation. Percent deviation from standard weight is (1 - weight/standard weight) * 100, thus positive percent deviation represents weight loss, adding points to the CDAI.">
+					description = <"1 point per each percent deviation. Percent deviation from standard weight is (1 - current weight/standard weight) * 100, thus positive percent deviation represents weight loss, adding points to the CDAI.">
 				>
 				["at0036"] = <
 					text = <"Total score">
-					description = <"">
+					description = <"Sum of (Multiplier result for the number of liquid or soft stools + Using diphenoxylate or loperimide for diarrhea + Average abdominal pain rating over seven days + General well being each day over seven days + Complications + Finding of an abdominal mass + Multiplier result for the absolute deviation of hematocrit + Percentage deviation from standard weight)">
 					comment = <"Patients requiring steroids to remain asymptomatic are not considered to be in remission but are referred to as being \"steroid dependent.\"">
 				>
 				["at0037"] = <
