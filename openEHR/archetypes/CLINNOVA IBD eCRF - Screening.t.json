@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.17",
+      "sem_ver" : "0.1.18",
       "build_uid" : "caec0a4f-a0ab-464d-a670-a699a7176722",
-      "MD5-CAM-1.0.1" : "a1a9e34deb284742828aae20a2531b66",
+      "MD5-CAM-1.0.1" : "a681b91d15def567b5752424956a20c6",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -456,12 +456,12 @@
           "/items[at0004.1]" : {
             "FHIR_mapping" : "Encounter.reason",
             "HL7v2_mapping" : "EVN.4 / PV2.3",
-            "redcap_mapping" : "visitreas"
+            "redcap_mapping" : "visitreasnd, visitreasnd_oth"
           },
           "/items[at0003.1]" : {
             "FHIR_mapping" : "Encounter.type",
             "HL7v2_mapping" : " PV1.4 / PV1.18",
-            "redcap_mapping" : "visperf"
+            "redcap_mapping" : "vsstat"
           },
           "/items[at0002.1]" : {
             "FHIR_mapping" : "Encounter.identifier",
