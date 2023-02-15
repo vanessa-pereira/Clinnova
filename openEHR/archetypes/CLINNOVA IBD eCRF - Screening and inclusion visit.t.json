@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.96",
+      "sem_ver" : "0.1.97",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "568031cfd512a028d96e62c451056bf4",
+      "MD5-CAM-1.0.1" : "4a4d83b478e4f1c051b02409379dcf66",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -12078,7 +12078,7 @@
             "redcap_mapping" : "cigarettes_suendat, shisha_sustdat, cigar_sustdat, tobacco_chews_sustdat, ecigarettes_sustdat"
           },
           "/data[at0001]/items[at0029]/items[at0064]/items[at0023]" : {
-            "redcap_mapping" : "tobaccotype_sudosfrq"
+            "redcap_mapping" : "cigarettes_sudosfrq, shisha_sudosfrq, cigar_sudosfrq, tobacco_chews_sudosfrq, ecigarettes_sudosfrq"
           },
           "/data[at0001]/items[at0029]/items[at0095.1]" : {
             "redcap_mapping" : "tobacco_sutrt"
@@ -12088,6 +12088,9 @@
           },
           "/data[at0001]/items[at0080.1]" : {
             "redcap_mapping" : "overall_sustdat"
+          },
+          "/data[at0001]/items[at0029]/items[at0017.1]" : {
+            "redcap_mapping" : "cigarettes_sucdur, shisha_sucdur, cigar_sucdur, tobacco_chews_sucdur, ecigarettes_sucdur"
           }
         }
       }
@@ -12512,7 +12515,6 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
                   "nodeId" : "at0017.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
@@ -12901,6 +12903,13 @@
             "text" : "Overall smoking commenced",
             "description" : "The date or partial date when the individual first started daily smoking of tobacco of any type.",
             "comment" : "Can be a partial date, for example, only a year."
+          },
+          "at0017.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0017.1",
+            "text" : "Number of years smoking",
+            "description" : "Estimate of the cumulative amount of tobacco smoked using the specified type of tobacco.",
+            "comment" : "Commonly used in assessment of cigarette use. It is calculated by multiplying the number of packs of cigarettes smoked per day by the number of years the individual has smoked. One pack year equals 365 packs of cigarettes. Details about how to calculate pack years for other types of tobacco can be found at http://smokingpackyears.com. The definition of a pack can be recorded in the protocol of this archetype using the 'Pack definition' data element."
           }
         },
         "nb" : {
