@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.98",
+      "sem_ver" : "0.1.99",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "f7e61f3f61c2386c0dc01ce2cac9f573",
+      "MD5-CAM-1.0.1" : "16365540e4459887fdea3a1e0b2e9b2c",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -29343,9 +29343,6 @@
           "/protocol[at0042]/items[at0047]" : {
             "source" : "FHIR, openEHR, DAM"
           },
-          "/data[at0001]/items[at0002]" : {
-            "source" : "openEHR,FHIR,DAM"
-          },
           "/data[at0001]/items[at0006]" : {
             "source" : "openEHR"
           },
@@ -29420,14 +29417,18 @@
           },
           "/data[at0001]/items[at0009.1]/items[at0040.1]" : {
             "source" : "openEHR"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR,FHIR,DAM",
+            "redcap_mapping" : "allergy_mhterm"
           }
         },
         "pt-br" : {
-          "/data[at0001]/items[at0002]" : {
-            "source" : "*openEHR,FHIR,DAM(en)"
-          },
           "/data[at0001]/items[at0009.1]/items[at0010.1]" : {
             "source" : "*FHIR, openEHR,DAM(en)"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "*openEHR,FHIR,DAM(en)"
           }
         },
         "nb" : { },
@@ -29438,9 +29439,6 @@
           "/protocol[at0042]/items[at0047]" : {
             "source" : "FHIR, openEHR, DAM"
           },
-          "/data[at0001]/items[at0002]" : {
-            "source" : "openEHR, FHIR, DAM"
-          },
           "/data[at0001]/items[at0006]" : {
             "source" : "openEHR"
           },
@@ -29515,14 +29513,14 @@
           },
           "/data[at0001]/items[at0009.1]/items[at0040.1]" : {
             "source" : "openEHR"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR, FHIR, DAM"
           }
         },
         "sv" : {
           "/protocol[at0042]/items[at0047]" : {
             "source" : "FHIR, openEHR, DAM"
-          },
-          "/data[at0001]/items[at0002]" : {
-            "source" : "openEHR,FHIR,DAM"
           },
           "/data[at0001]/items[at0006]" : {
             "source" : "openEHR"
@@ -29595,6 +29593,9 @@
           },
           "/data[at0001]/items[at0009.1]/items[at0040.1]" : {
             "source" : "openEHR"
+          },
+          "/data[at0001]/items[at0002.1]" : {
+            "source" : "openEHR,FHIR,DAM"
           }
         }
       }
@@ -29620,6 +29621,22 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
