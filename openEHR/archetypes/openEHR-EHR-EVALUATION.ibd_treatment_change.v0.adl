@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2023-02-16">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2023-02-16">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"638ea777436d69164e97f8990d01a280">
+		["MD5-CAM-1.0.1"] = <"d28aeedfad6a351baa7b84e167f939db">
 		["build_uid"] = <"104d12e8-dba8-3b85-a9c4-346e84e82d1e">
 	>
 
@@ -37,22 +37,22 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Treatment change occurred?
 						value matches {
-							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Was the treatment change necessary?
 						value matches {
-							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Reason for treatment change
 						value matches {
-							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Reason for lack of treatment change
 						value matches {
-							DV_CODED_TEXT matches {*}
+							DV_TEXT matches {*}
 						}
 					}
 				}
