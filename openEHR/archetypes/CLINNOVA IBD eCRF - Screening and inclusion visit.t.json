@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.105",
+      "sem_ver" : "0.1.106",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "328b40aef8950e0bd83603e9769ffa76",
+      "MD5-CAM-1.0.1" : "6158020ed5584ed21aa1e16df82f7340",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -53072,7 +53072,11 @@
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           }
         },
-        "en" : { },
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
+            "redcap_mapping" : "hematology_lbdat"
+          }
+        },
         "nb" : { },
         "zh-cn" : {
           "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
@@ -53186,9 +53190,17 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -53801,12 +53813,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "hematology_lbtest"
+            "redcap_mapping" : "lborres_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "hematology_lborresu"
+            "redcap_mapping" : "lborresu_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
@@ -53814,15 +53826,16 @@
           },
           "/items[at0006.1]" : {
             "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
+            "fhir_mapping" : "Observation.issued",
+            "redcap_mapping" : "hematology_lbdat"
           },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "hematology_lbnres"
+            "redcap_mapping" : "lbnres_XXXX"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "hematology_lbclsig"
+            "redcap_mapping" : "lbclsig_XXXX"
           }
         },
         "nb" : {
@@ -54368,9 +54381,17 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -54709,12 +54730,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "biochemistry_lbtest"
+            "redcap_mapping" : "lbtest_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "biochemistry_lborres"
+            "redcap_mapping" : "lborres_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
@@ -54722,15 +54743,16 @@
           },
           "/items[at0006.1]" : {
             "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
+            "fhir_mapping" : "Observation.issued",
+            "redcap_mapping" : "biochemistry_lbdat"
           },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "biochemistry_lbstresc"
+            "redcap_mapping" : "lbstresc_XXXX"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "biochemistry_lbclsig"
+            "redcap_mapping" : "lbclsig_XXXX"
           }
         },
         "nb" : {
@@ -55420,9 +55442,17 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -55813,7 +55843,11 @@
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           }
         },
-        "en" : { },
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
+            "redcap_mapping" : "biochemistry_lbdat"
+          }
+        },
         "nb" : { },
         "zh-cn" : {
           "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
@@ -55927,9 +55961,17 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -56590,12 +56632,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "bacteriology_lbtest"
+            "redcap_mapping" : "lbtest_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "bacteriology_lborres"
+            "redcap_mapping" : "lborres_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
@@ -56603,15 +56645,16 @@
           },
           "/items[at0006.1]" : {
             "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
+            "fhir_mapping" : "Observation.issued",
+            "redcap_mapping" : "bacteriology_lbdat"
           },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "bacteriology_lbstresc"
+            "redcap_mapping" : "lbstresc_XXXX"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "bacteriology_lbclsig"
+            "redcap_mapping" : "bclsig_XXXX"
           }
         },
         "nb" : {
@@ -57133,9 +57176,17 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -57526,7 +57577,11 @@
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           }
         },
-        "en" : { },
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
+            "redcap_mapping" : "bacteriology_lbdat"
+          }
+        },
         "nb" : { },
         "zh-cn" : {
           "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
@@ -57640,9 +57695,17 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -58255,12 +58318,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "virology_lbtest"
+            "redcap_mapping" : "lbperf_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "virology_lborres, virology_lborres_2"
+            "redcap_mapping" : "lborres_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
@@ -58268,15 +58331,16 @@
           },
           "/items[at0006.1]" : {
             "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
+            "fhir_mapping" : "Observation.issued",
+            "redcap_mapping" : "virology_lbdat"
           },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "virology_lbnres"
+            "redcap_mapping" : "lbnres_XXXX"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "virology_lbclsig"
+            "redcap_mapping" : "lbclsig_XXXX"
           }
         },
         "nb" : {
@@ -58898,9 +58962,17 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -59291,7 +59363,11 @@
             "fhir_mapping" : "*DiagnosticReport.conclusion(en)"
           }
         },
-        "en" : { },
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
+            "redcap_mapping" : "virology_lbdat"
+          }
+        },
         "nb" : { },
         "zh-cn" : {
           "/data[at0001]/events[at0002]/data[at0003]/items[at0118]" : {
@@ -59405,9 +59481,17 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -60068,12 +60152,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "drug_lbtest_1, drug_lbtest_2, drug_lbtest_3"
+            "redcap_mapping" : "lbperf_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "drug_lborres"
+            "redcap_mapping" : "lborres_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
@@ -60081,15 +60165,16 @@
           },
           "/items[at0006.1]" : {
             "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
+            "fhir_mapping" : "Observation.issued",
+            "redcap_mapping" : "druglevel_lbdat"
           },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "drug_lbnres"
+            "redcap_mapping" : "lbnres_XXXX"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "drug_lbclsig"
+            "redcap_mapping" : "lbclsig_XXXX"
           }
         },
         "nb" : {
@@ -60659,9 +60744,17 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -61055,6 +61148,9 @@
         "en" : {
           "/data[at0001]/events[at0002]/data[at0003]/items[at0005.1]" : {
             "redcap_mapping" : "drug_lbcat"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
+            "redcap_mapping" : "druglevel_lbdat"
           }
         },
         "nb" : { },
@@ -61189,9 +61285,17 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -62232,28 +62336,29 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "other_lbtest"
+            "redcap_mapping" : "lbperf_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "other_lborres"
+            "redcap_mapping" : "lborresu_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
             "fhir_mapping" : "Observation.status"
           },
-          "/items[at0006.1]" : {
-            "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
-          },
           "/items[at0004.1]" : {
-            "redcap_mapping" : "other_lbnres"
+            "redcap_mapping" : "lbnres_XXXX"
           },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "other_lbclsig"
+            "redcap_mapping" : "lbclsig_XXXX"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued",
+            "redcap_mapping" : "other_lbdat"
           }
         },
         "nb" : {
@@ -62269,13 +62374,13 @@
             "hl7v2_mapping" : "OBX.11",
             "fhir_mapping" : "Observation.status"
           },
-          "/items[at0006.1]" : {
-            "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
-          },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
           }
         },
         "pt-br" : {
@@ -62291,13 +62396,13 @@
             "hl7v2_mapping" : "*OBX-11-observation result status(en)",
             "fhir_mapping" : "*status(en)"
           },
-          "/items[at0006.1]" : {
-            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
-            "fhir_mapping" : "*Observation.issued(en)"
-          },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "*NTE.3(en)",
             "fhir_mapping" : "*Observation.comments(en)"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+            "fhir_mapping" : "*Observation.issued(en)"
           }
         },
         "de" : {
@@ -62313,13 +62418,13 @@
             "hl7v2_mapping" : "OBX.11",
             "fhir_mapping" : "Observation.status"
           },
-          "/items[at0006.1]" : {
-            "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
-          },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
           }
         },
         "nl" : {
@@ -62335,13 +62440,13 @@
             "hl7v2_mapping" : "OBX.11",
             "fhir_mapping" : "Observation.status"
           },
-          "/items[at0006.1]" : {
-            "hl7v2_mapping" : "OBX.19",
-            "fhir_mapping" : "Observation.issued"
-          },
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note"
+          },
+          "/items[at0006]" : {
+            "hl7v2_mapping" : "OBX.19",
+            "fhir_mapping" : "Observation.issued"
           }
         },
         "sv" : {
@@ -62872,13 +62977,6 @@
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0026.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -63267,6 +63365,9 @@
         "en" : {
           "/data[at0001]/events[at0002]/data[at0003]/items[at0005.1]" : {
             "redcap_mapping" : "drug_lbcat"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
+            "redcap_mapping" : "other_lbdat"
           }
         },
         "nb" : { },
@@ -63382,9 +63483,17 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0075.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DATE_TIME",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
