@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.104",
+      "sem_ver" : "0.1.105",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "c9de57975dc8a72b11a8d97a1facdcd6",
+      "MD5-CAM-1.0.1" : "328b40aef8950e0bd83603e9769ffa76",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -19044,6 +19044,12 @@
           },
           "/data[at0001]/events[at0002]/data[at0003]/items[at0037]" : {
             "redcap_mapping" : "cdai_interpretation"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0015]" : {
+            "redcap_mapping" : "cdai_rstestcd_1"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0032]/items[at0035]" : {
+            "redcap_mapping" : "cdai_rstestcd_8"
           }
         }
       }
