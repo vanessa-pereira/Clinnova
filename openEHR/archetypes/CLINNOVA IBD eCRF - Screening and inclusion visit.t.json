@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.107",
+      "sem_ver" : "0.1.108",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "a2abf438c69fea3f44b834264afd9bc0",
+      "MD5-CAM-1.0.1" : "f9b5e322286f295e4c9531353d929d92",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -43661,6 +43661,9 @@
           },
           "/data[at0001]/items[at0009.1]" : {
             "redcap_mapping" : "infection_mhterm"
+          },
+          "/data[at0001]/items[at0078.1]" : {
+            "redcap_mapping" : "infection_proccur"
           }
         }
       }
@@ -43861,15 +43864,50 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0012.1",
-              "attributes" : [ ],
+              "nodeId" : "at0078.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "SNOMED-CT"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "SNOMED-CT" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "281789004",
+                        "value" : "Antibiotic therapy"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "32485007",
+                        "value" : "Hospitalization"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "224459001",
+                        "value" : "On sick leave from work"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
-              "nodeId" : "at0078.1",
+              "nodeId" : "at0012.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
@@ -44098,10 +44136,17 @@
           },
           "at0009.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "Clinical description",
+            "code" : "at0009.1",
+            "text" : "Clinical description (infection)",
             "description" : "Narrative description about the problem or diagnosis. Only to be used for the case of specify disorder due to infection.",
             "comment" : "Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis."
+          },
+          "at0078.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0078.1",
+            "text" : "Action taken (infection)",
+            "description" : "A cause, set of causes, or manner of causation of the problem or diagnosis.",
+            "comment" : "Also known as 'aetiology' or 'etiology'. Coding with an external terminology is preferred, where possible."
           }
         },
         "ar-sy" : {
