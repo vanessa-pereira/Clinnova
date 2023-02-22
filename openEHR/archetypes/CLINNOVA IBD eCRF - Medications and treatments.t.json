@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.15",
+      "sem_ver" : "0.1.16",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "41c8a14b9f2a3df6ac9e3109bae65a5f",
+      "MD5-CAM-1.0.1" : "6c587034a64e44ed4053c2173afa3d6a",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -143,7 +143,7 @@
               "children" : [ {
                 "@type" : "C_ARCHETYPE_ROOT",
                 "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..1",
+                "occurrences" : "0..0",
                 "nodeId" : "at0006.1",
                 "attributes" : [ ],
                 "attributeTuples" : [ ],
@@ -152,7 +152,7 @@
               }, {
                 "@type" : "C_ARCHETYPE_ROOT",
                 "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..1",
+                "occurrences" : "0..0",
                 "nodeId" : "at0006.2",
                 "attributes" : [ ],
                 "attributeTuples" : [ ],
@@ -338,10 +338,6 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/items[at0002]" : {
-            "FHIR_mapping" : "Encounter.identifier",
-            "HL7v2_mapping" : "PV1.19 "
-          },
           "/items[at0004]" : {
             "FHIR_mapping" : "Encounter.reason",
             "HL7v2_mapping" : "EVN.4 / PV2.3"
@@ -353,6 +349,10 @@
           "/items[at0001.1]" : {
             "FHIR_mapping" : "Appointment.identifier",
             "HL7v2_mapping" : "SCH-1 / SCH-2"
+          },
+          "/items[at0002.1]" : {
+            "FHIR_mapping" : "Encounter.identifier",
+            "HL7v2_mapping" : "PV1.19 "
           }
         },
         "pt-pt" : { },
@@ -373,6 +373,12 @@
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
         "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "nodeId" : "at0001.1",
@@ -683,36 +689,32 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "assessmentsMoments"
+                    "value" : "LIH"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "assessmentsMoments" ],
+                  "selectedTerminologies" : [ "LIH" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "assessmentsMoments",
-                    "code" : "S",
-                    "value" : "Screening"
+                    "terminologyId" : "LIH",
+                    "code" : "SIV",
+                    "value" : "Screening and inclusion visit"
                   }, {
-                    "terminologyId" : "assessmentsMoments",
-                    "code" : "IV",
-                    "value" : "Inclusion visit"
-                  }, {
-                    "terminologyId" : "assessmentsMoments",
+                    "terminologyId" : "LIH",
                     "code" : "F3M",
                     "value" : "Follow up 3 months"
                   }, {
-                    "terminologyId" : "assessmentsMoments",
+                    "terminologyId" : "LIH",
                     "code" : "F12M",
                     "value" : "Follow up 12 months"
                   }, {
-                    "terminologyId" : "assessmentsMoments",
+                    "terminologyId" : "LIH",
                     "code" : "LTFU",
                     "value" : "Long term follow up"
                   }, {
-                    "terminologyId" : "assessmentsMoments",
+                    "terminologyId" : "LIH",
                     "code" : "UV",
                     "value" : "Unschedule visit"
                   }, {
-                    "terminologyId" : "assessmentsMoments",
+                    "terminologyId" : "LIH",
                     "code" : "AFU",
                     "value" : "Annual follow up"
                   } ]
