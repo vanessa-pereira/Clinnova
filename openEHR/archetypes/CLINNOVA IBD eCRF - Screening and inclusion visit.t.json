@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.108",
+      "sem_ver" : "0.1.109",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "f9b5e322286f295e4c9531353d929d92",
+      "MD5-CAM-1.0.1" : "9222df8a228682f265f488f8bc0c1831",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -43864,6 +43864,13 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0012.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0078.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -43902,13 +43909,6 @@
                   "attributeTuples" : [ ]
                 } ]
               } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0012.1",
-              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -66803,11 +66803,7 @@
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "LIH",
                         "code" : "LIHPRINONRES",
-                        "value" : "Primary non-response"
-                      }, {
-                        "terminologyId" : "LIH",
-                        "code" : "LIHSECNONRES",
-                        "value" : "Secondary non-response"
+                        "value" : "Non-response to current treatment"
                       }, {
                         "terminologyId" : "LIH",
                         "code" : "LIHADVERSEVE",
