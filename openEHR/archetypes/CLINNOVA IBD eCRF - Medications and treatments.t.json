@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.14",
+      "sem_ver" : "0.1.15",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "4b697a9fc09e69a65b4f53a8fa630a17",
+      "MD5-CAM-1.0.1" : "41c8a14b9f2a3df6ac9e3109bae65a5f",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -29387,11 +29387,7 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "LIH",
                                 "code" : "LIHPRINONRES",
-                                "value" : "Primary non-response"
-                              }, {
-                                "terminologyId" : "LIH",
-                                "code" : "LIHSECNONRES",
-                                "value" : "Secondary non-response"
+                                "value" : "Non-response to current treatment"
                               }, {
                                 "terminologyId" : "LIH",
                                 "code" : "LIHADVERSEVE",
