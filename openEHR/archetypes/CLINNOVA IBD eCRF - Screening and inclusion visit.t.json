@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.109",
+      "sem_ver" : "0.1.110",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "9222df8a228682f265f488f8bc0c1831",
+      "MD5-CAM-1.0.1" : "8f7a1bd766cae352ff1257cc6fc399b3",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -15374,7 +15374,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.72" ],
+                                  "constraint" : [ "ac0.82" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -15522,10 +15522,10 @@
             "code" : "ac0.68",
             "description" : ""
           },
-          "ac0.72" : {
+          "ac0.82" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.72",
+            "code" : "ac0.82",
             "description" : ""
           }
         },
@@ -15554,10 +15554,10 @@
             "code" : "ac0.68",
             "description" : ""
           },
-          "ac0.72" : {
+          "ac0.82" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.72",
+            "code" : "ac0.82",
             "description" : ""
           }
         },
@@ -15586,10 +15586,10 @@
             "code" : "ac0.68",
             "description" : ""
           },
-          "ac0.72" : {
+          "ac0.82" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.72",
+            "code" : "ac0.82",
             "description" : ""
           }
         },
@@ -15618,10 +15618,10 @@
             "code" : "ac0.68",
             "description" : ""
           },
-          "ac0.72" : {
+          "ac0.82" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.72",
+            "code" : "ac0.82",
             "description" : ""
           }
         }
@@ -15987,6 +15987,56 @@
         "ac0.72" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.72",
+          "members" : [ "at0044" ]
+        },
+        "ac0.73" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.73",
+          "members" : [ "at0044" ]
+        },
+        "ac0.74" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.74",
+          "members" : [ "at0044" ]
+        },
+        "ac0.75" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.75",
+          "members" : [ "at0044" ]
+        },
+        "ac0.76" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.76",
+          "members" : [ "at0044" ]
+        },
+        "ac0.77" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.77",
+          "members" : [ "at0044" ]
+        },
+        "ac0.78" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.78",
+          "members" : [ "at0044" ]
+        },
+        "ac0.79" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.79",
+          "members" : [ "at0044" ]
+        },
+        "ac0.80" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.80",
+          "members" : [ "at0044" ]
+        },
+        "ac0.81" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.81",
+          "members" : [ "at0044" ]
+        },
+        "ac0.82" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.82",
           "members" : [ "at0044" ]
         }
       }
@@ -45073,6 +45123,9 @@
           },
           "/description[at0001]/items[at0070.1]" : {
             "redcap_mapping" : "mhcat_3"
+          },
+          "/description[at0001]/items[at0005.1]" : {
+            "redcap_mapping" : "research_pryn"
           }
         }
       }
@@ -46105,7 +46158,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0005.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -46237,6 +46289,12 @@
             "text" : "Actual diagnosis",
             "description" : "The clinical or process-related reason for the procedure.",
             "comment" : "Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. For example: 'Failed bowel preparation' or 'Bowel cancer screening'."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Tissue available for research?",
+            "description" : "Additional narrative about the activity or care pathway step not captured in other fields."
           }
         },
         "ar-sy" : {
@@ -65326,6 +65384,7 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "1..1",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -65719,6 +65778,7 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
               "nodeId" : "at0004.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -65786,7 +65846,15 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { }
+        "en" : {
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Date of birth (DOB)",
+            "description" : "The date/time of birth of the individual.",
+            "comment" : "May also be used to record the assumed or agreed date/time of birth for operational purposes, if the actual date/time is not formally recorded. Possible alternatives for the date/time of birth of the individual can be recorded using the CLUSTER.DOB_alternative archetype 'Date of birth details' SLOT. Partial dates are allowed."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
