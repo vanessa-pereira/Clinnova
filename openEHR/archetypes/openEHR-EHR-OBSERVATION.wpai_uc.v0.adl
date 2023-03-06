@@ -61,7 +61,7 @@ Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instrum
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6b170bd5d224e91d67d282441ba7e384">
+		["MD5-CAM-1.0.1"] = <"36afa61546037dde6a390e2b3206303d">
 		["build_uid"] = <"4b1a3cb2-cf67-3267-8988-a98e624de10d">
 	>
 
@@ -271,7 +271,7 @@ Consider only how much ulcerative colitis affected your ability to perform your 
 				>
 				["at0004"] = <
 					text = <"Derzeit beschäftigt">
-					description = <"*Original question: \"Are you currently employed (working for pay)?\" (en)">
+					description = <"Ursprüngliche Frage: \"Sind Sie derzeit erwerbstätig (gegen Bezahlung)?\"">
 					comment = <"Falls NEIN, kreuzen Sie \"NEIN\" an und gehen Sie zu Frage 6 (Auswirkungen von Gesundheitsproblemen auf die täglichen Aktivitäten) über.">
 				>
 				["at0005"] = <
@@ -284,37 +284,33 @@ Consider only how much ulcerative colitis affected your ability to perform your 
 				>
 				["at0007"] = <
 					text = <"Fernbleiben von der Arbeit aufgrund von Gesundheitsproblemen">
-					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of problems associated with your ulcerative colitis?\" (en)">
-					comment = <"*This question is about the past seven days, not including today.
-
-Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study. (en)">
+					description = <"Ursprüngliche Frage: \"Wie viele Stunden haben Sie in den letzten sieben Tagen aufgrund von Problemen im Zusammenhang mit Ihrer Colitis ulcerosa bei der Arbeit gefehlt?\"">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, den heutigen Tag nicht mitgerechnet. Geben Sie auch die Stunden an, die Sie aufgrund von Krankheitstagen versäumt haben, sowie die Zeiten, in denen Sie wegen Ihrer Gesundheitsprobleme zu spät gekommen sind, früher gegangen sind usw. Berücksichtigen Sie nicht die Zeit, die Sie für die Teilnahme an dieser Studie versäumt haben.">
 				>
 				["at0008"] = <
 					text = <"Fernbleiben von der Arbeit aus anderen Gründen">
-					description = <"*Original question: \"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?\" (en)">
+					description = <"Ursprüngliche Frage: \"Wie viele Stunden haben Sie in den letzten sieben Tagen aus anderen Gründen nicht gearbeitet, z. B. wegen Urlaub, Feiertagen, Freistellung für die Teilnahme an dieser Studie?\"">
 					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, ohne den heutigen Tag.">
 				>
 				["at0009"] = <
 					text = <"Tatsächlich geleistete Arbeitsstunden">
-					description = <"*Original question: \"During the past seven days, how many hours did you actually work?\" (en)">
-					comment = <"*This question is about the past seven days, not including today.
-
-If “0”, skip to question 6 (Affection of health problems on daily activities). (en)">
+					description = <"Ursprüngliche Frage: \"Wie viele Stunden haben Sie in den letzten sieben Tagen tatsächlich gearbeitet?\"">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, ohne den heutigen Tag. Wenn \"0\", übergehen Sie zu Frage 6 (Auswirkung von Gesundheitsproblemen auf die täglichen Aktivitäten).">
 				>
 				["at0010"] = <
 					text = <"Befürchtung von Gesundheitsproblemen">
-					description = <"*Original question: \"During the past seven days, how much did your health problems affect your productivity while you were working?\" (en)">
-					comment = <"*This question is about the past seven days, not including today.
+					description = <"Ursprüngliche Frage: \"Wie stark haben sich Ihre gesundheitlichen Probleme in den letzten sieben Tagen auf Ihre Produktivität bei der Arbeit ausgewirkt?\"">
+					comment = <"Diese Frage bezieht sich auf die letzten sieben Tage, heute nicht eingeschlossen.
 
-Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.
+Denken Sie an Tage, an denen Sie in der Menge oder Art der Arbeit, die Sie erledigen konnten, eingeschränkt waren, Tage, an denen Sie weniger geschafft haben, als Sie wollten, oder Tage, an denen Sie Ihre Arbeit nicht so sorgfältig wie gewöhnlich erledigen konnten. Wenn gesundheitliche Probleme Ihre Arbeit nur wenig beeinträchtigt haben, wählen Sie eine niedrige Zahl. Wählen Sie eine hohe Zahl, wenn gesundheitliche Probleme Ihre Arbeit stark beeinträchtigt haben.
 
-Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".
+Dabei bedeutet eine Bewertung von 0 „Gesundheitliche Probleme hatten keine Auswirkungen auf meine Arbeit“ und eine Bewertung von 10 bedeutet „Gesundheitliche Probleme haben mich vollständig daran gehindert zu arbeiten“.
 
-Consider only how much ulcerative colitis affected productivity while you were working.  (en)">
+Berücksichtigen Sie nur, wie stark die Colitis ulcerosa die Produktivität während der Arbeit beeinträchtigt hat.">
 				>
 				["at0011"] = <
 					text = <"Beeinträchtigung der täglichen Aktivitäten durch gesundheitliche Probleme">
-					description = <"*Original question: \"During the past seven days, how much did your health problems affect your ability to do your regular daily activities, other than work at a job?\" (en)">
+					description = <"Ursprüngliche Frage: \"Wie sehr haben Ihre Gesundheitsprobleme in den letzten sieben Tagen Ihre Fähigkeit beeinträchtigt, Ihren normalen täglichen Aktivitäten nachzugehen, außer der Arbeit in einem Job?\"">
 					comment = <"*This question is about the past seven days, not including today.
 
 By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.
