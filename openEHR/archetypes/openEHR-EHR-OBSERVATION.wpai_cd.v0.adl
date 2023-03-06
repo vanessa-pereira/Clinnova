@@ -54,16 +54,16 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"33e4821dc13bfa61ba2e555a781abcc3">
-		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
 		["references"] = <"Reilly MC, Gerlier L, Brabant Y, Brown M. Validity, reliability, and responsiveness of the work productivity and activity impairment questionnaire in Crohn's disease. Clin Ther. 2008 Feb;30(2):393-404
 
 Reilly MC, Zbrozek AS, Dukes EM. The validity and reproducibility of a work productivity and activity impairment instrument. Pharmacoeconomics. 1993 Nov;4(5):353-65. 
 
 Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instruments. Validation studies in allergic rhinitis. Clin Drug Invest 1996;11(5):278-288">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b12223bc98f78330187d9750a1e5ebcd">
+		["build_uid"] = <"864eaa47-7459-352c-8e2c-0ee6fe9c4d1d">
 	>
 
 definition
