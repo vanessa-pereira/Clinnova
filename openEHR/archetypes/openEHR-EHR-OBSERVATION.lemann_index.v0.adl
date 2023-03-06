@@ -37,7 +37,7 @@ Straksyte, V., Kiudelis, G., Gineikiene, I., Janciauskas, D., Basevicius, A., Lu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e4d599cf221fd41c8b9dd18b2f562d08">
+		["MD5-CAM-1.0.1"] = <"2367cfaec376bbaa3c0c196510926f62">
 		["build_uid"] = <"70045b40-8c22-3ab1-a52f-da937cc619b4">
 	>
 
@@ -50,42 +50,42 @@ definition
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
-									CLUSTER[at0004] occurrences matches {0..1} matches {    -- Structuring lesions
+									CLUSTER[at0011] occurrences matches {0..3} matches {    -- Upper tract
 										items cardinality matches {1..*; unordered} matches {
-											CLUSTER[at0011] occurrences matches {0..3} matches {    -- Upper tract
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Organ
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0007]    -- Upper digestive tract
+														}
+													}
+												}
+											}
+											ELEMENT[at0015] occurrences matches {0..1} matches {    -- Segment
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0016,    -- Esophagus
+															at0017,    -- Stomach
+															at0018]    -- Duodenum
+														}
+													}
+												}
+											}
+											ELEMENT[at0116] occurrences matches {0..1} matches {    -- Resection
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0117,    -- No
+															at0118]    -- Yes
+														}
+													}
+												}
+											}
+											CLUSTER[at0004] occurrences matches {0..1} matches {    -- Structuring lesions
 												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0005] occurrences matches {0..1} matches {    -- Organ
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0007]    -- Upper digestive tract
-																}
-															}
-														}
-													}
-													ELEMENT[at0015] occurrences matches {0..1} matches {    -- Segment
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0016,    -- Esophagus
-																	at0017,    -- Stomach
-																	at0018]    -- Duodenum
-																}
-															}
-														}
-													}
-													ELEMENT[at0116] occurrences matches {0..1} matches {    -- Resection
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
-														}
-													}
 													ELEMENT[at0006] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -111,7 +111,7 @@ definition
 															3|[local::at0022]
 														}
 													}
-													ELEMENT[at0095] occurrences matches {0..1} matches {    -- Upper tract segment coefficient
+													ELEMENT[at0147] occurrences matches {0..1} matches {    -- Index
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -125,286 +125,8 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0023] occurrences matches {0..20} matches {    -- Small bowel
+											CLUSTER[at0056] occurrences matches {0..1} matches {    -- Penetrating lesions
 												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0024] occurrences matches {0..1} matches {    -- Organ
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0025;at0025]    -- Small bowel
-																}
-															}
-														}
-													}
-													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Segment
-														value matches {
-															DV_TEXT matches {*}
-														}
-													}
-													ELEMENT[at0119] occurrences matches {0..1} matches {    -- Resection
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
-														}
-													}
-													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0014]    -- MRI or CT
-																}
-															}
-														}
-													}
-													ELEMENT[at0028] occurrences matches {0..1} matches {    -- Grades
-														value matches {
-															1|[local::at0020],
-															2|[local::at0021],
-															3|[local::at0022]
-														}
-													}
-													ELEMENT[at0105] occurrences matches {0..1} matches {    -- Small bowel segment coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
-												}
-											}
-											CLUSTER[at0034] occurrences matches {0..6} matches {    -- Colon / Rectum
-												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0035] occurrences matches {0..1} matches {    -- Organ
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0036]    -- Colon / Rectum
-																}
-															}
-														}
-													}
-													ELEMENT[at0037] occurrences matches {0..1} matches {    -- Segment
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0132,    -- Ascending colon
-																	at0133,    -- Transverse colon
-																	at0134,    -- Descending colon
-																	at0135,    -- Sigmoid colon
-																	at0136,    -- Rectum
-																	at0137]    -- Cecum
-																}
-															}
-														}
-													}
-													ELEMENT[at0120] occurrences matches {0..1} matches {    -- Resection
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
-														}
-													}
-													ELEMENT[at0039] occurrences matches {0..1} matches {    -- Investigational method
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0040,    -- Colonoscopy
-																	at0014]    -- MRI or CT
-																}
-															}
-														}
-													}
-													ELEMENT[at0041] occurrences matches {0..1} matches {    -- Colonoscopy grades
-														value matches {
-															1|[local::at0029],
-															2|[local::at0030],
-															3|[local::at0031]
-														}
-													}
-													ELEMENT[at0042] occurrences matches {0..1} matches {    -- MRI or CT grades
-														value matches {
-															1|[local::at0020],
-															2|[local::at0043],
-															3|[local::at0044]
-														}
-													}
-													ELEMENT[at0106] occurrences matches {0..1} matches {    -- Colon / Rectum segment coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
-												}
-											}
-											CLUSTER[at0045] occurrences matches {0..1} matches {    -- Anus
-												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0046] occurrences matches {0..1} matches {    -- Organ
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0047;at0047]    -- Anus
-																}
-															}
-														}
-													}
-													ELEMENT[at0048] occurrences matches {0..1} matches {    -- Segment
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0047]    -- Anus
-																}
-															}
-														}
-													}
-													ELEMENT[at0121] occurrences matches {0..1} matches {    -- Resection
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
-														}
-													}
-													ELEMENT[at0050] occurrences matches {0..1} matches {    -- Investigational method
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0051]    -- Clinical examination
-																}
-															}
-														}
-													}
-													ELEMENT[at0052] occurrences matches {0..1} matches {    -- Grades
-														value matches {
-															1|[local::at0053],
-															2|[local::at0054],
-															3|[local::at0055]
-														}
-													}
-													ELEMENT[at0108] occurrences matches {0..1} matches {    -- Anus segment coefficient
-														value matches {
-															C_DV_QUANTITY <
-																property = <[openehr::380]>
-																list = <
-																	["1"] = <
-																		units = <"1">
-																	>
-																>
-															>
-														}
-													}
-												}
-											}
-											ELEMENT[at0131] occurrences matches {0..1} matches {    -- Upper tract index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0130] occurrences matches {0..1} matches {    -- Small bowel index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0129] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
-													>
-												}
-											}
-											ELEMENT[at0128] occurrences matches {0..1} matches {    -- Anus index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
-													>
-												}
-											}
-										}
-									}
-									CLUSTER[at0056] occurrences matches {0..1} matches {    -- Penetrating lesions
-										items cardinality matches {1..*; unordered} matches {
-											CLUSTER[at0057] occurrences matches {0..3} matches {    -- Upper tract
-												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0058] occurrences matches {0..1} matches {    -- Organ
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0007;at0007]    -- Upper digestive tract
-																}
-															}
-														}
-													}
-													ELEMENT[at0060] occurrences matches {0..1} matches {    -- Segment
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0016,    -- Esophagus
-																	at0017,    -- Stomach
-																	at0018]    -- Duodenum
-																}
-															}
-														}
-													}
-													ELEMENT[at0122] occurrences matches {0..1} matches {    -- Resection
-														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
-														}
-													}
 													ELEMENT[at0061] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -430,7 +152,7 @@ definition
 															3|[local::at0069]
 														}
 													}
-													ELEMENT[at0142] occurrences matches {0..1} matches {    -- Upper tract segment coefficient
+													ELEMENT[at0148] occurrences matches {0..1} matches {    -- Index
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -444,33 +166,99 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0070] occurrences matches {0..20} matches {    -- Small bowel
+											ELEMENT[at0095] occurrences matches {0..1} matches {    -- Upper tract organ coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <2.0>
+															precision = <-1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0143] occurrences matches {0..1} matches {    -- Upper tract segmental index calculation
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0023] occurrences matches {0..20} matches {    -- Small bowel
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0024] occurrences matches {0..1} matches {    -- Organ
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0025]    -- Small bowel
+														}
+													}
+												}
+											}
+											ELEMENT[at0027] occurrences matches {0..1} matches {    -- Segment
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0119] occurrences matches {0..1} matches {    -- Resection
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0117,    -- No
+															at0118]    -- Yes
+														}
+													}
+												}
+											}
+											CLUSTER[at0144] occurrences matches {0..1} matches {    -- Structuring lesions
 												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0071] occurrences matches {0..1} matches {    -- Organ
+													ELEMENT[at0026] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0025;at0025]    -- Small bowel
+																	[local::at0014]    -- MRI or CT
 																}
 															}
 														}
 													}
-													ELEMENT[at0072] occurrences matches {0..1} matches {    -- Segment
+													ELEMENT[at0028] occurrences matches {0..1} matches {    -- Grades
 														value matches {
-															DV_TEXT matches {*}
+															1|[local::at0020],
+															2|[local::at0021],
+															3|[local::at0022]
 														}
 													}
-													ELEMENT[at0123] occurrences matches {0..1} matches {    -- Resection
+													ELEMENT[at0149] occurrences matches {0..1} matches {    -- Index
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
+												}
+											}
+											CLUSTER[at0070] occurrences matches {0..1} matches {    -- Penetrating lesions
+												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0073] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -487,7 +275,7 @@ definition
 															3|[local::at0069]
 														}
 													}
-													ELEMENT[at0112] occurrences matches {0..1} matches {    -- Small bowel segment coefficient
+													ELEMENT[at0150] occurrences matches {0..1} matches {    -- Index
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -501,43 +289,118 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0075] occurrences matches {0..6} matches {    -- Colon / Rectum
+											ELEMENT[at0112] occurrences matches {0..1} matches {    -- Small bowel organ coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <5.0>
+															precision = <-1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0105] occurrences matches {0..1} matches {    -- Small bowel segmental index calculation
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0034] occurrences matches {0..6} matches {    -- Colon / Rectum
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Organ
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0036]    -- Colon / Rectum
+														}
+													}
+												}
+											}
+											ELEMENT[at0037] occurrences matches {0..1} matches {    -- Segment
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0132,    -- Ascending colon
+															at0133,    -- Transverse colon
+															at0134,    -- Descending colon
+															at0135,    -- Sigmoid colon
+															at0136,    -- Rectum
+															at0137]    -- Cecum
+														}
+													}
+												}
+											}
+											ELEMENT[at0120] occurrences matches {0..1} matches {    -- Resection
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0117,    -- No
+															at0118]    -- Yes
+														}
+													}
+												}
+											}
+											CLUSTER[at0145] occurrences matches {0..1} matches {    -- Structuring lesions
 												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0076] occurrences matches {0..1} matches {    -- Organ
+													ELEMENT[at0039] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
 																	[local::
-																	at0036,    -- Colon / Rectum
-																	at0132,    -- Ascending colon
-																	at0133,    -- Transverse colon
-																	at0134,    -- Descending colon
-																	at0135,    -- Sigmoid colon
-																	at0136]    -- Rectum
+																	at0040,    -- Colonoscopy
+																	at0014]    -- MRI or CT
 																}
 															}
 														}
 													}
-													ELEMENT[at0077] occurrences matches {0..1} matches {    -- Segment
+													ELEMENT[at0041] occurrences matches {0..1} matches {    -- Colonoscopy grades
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0038]    -- Each segment
-																}
-															}
+															1|[local::at0029],
+															2|[local::at0030],
+															3|[local::at0031]
 														}
 													}
-													ELEMENT[at0124] occurrences matches {0..1} matches {    -- Resection
+													ELEMENT[at0042] occurrences matches {0..1} matches {    -- MRI or CT grades
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
+															1|[local::at0020],
+															2|[local::at0043],
+															3|[local::at0044]
 														}
 													}
+													ELEMENT[at0151] occurrences matches {0..1} matches {    -- Index
+														value matches {
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
+														}
+													}
+												}
+											}
+											CLUSTER[at0075] occurrences matches {0..1} matches {    -- Penetrating lesions
+												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0078] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -563,7 +426,7 @@ definition
 															3|[local::at0069]
 														}
 													}
-													ELEMENT[at0110] occurrences matches {0..1} matches {    -- Colon / Rectum segment coefficient
+													ELEMENT[at0152] occurrences matches {0..1} matches {    -- Index
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -577,37 +440,103 @@ definition
 													}
 												}
 											}
-											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Anus
+											ELEMENT[at0110] occurrences matches {0..1} matches {    -- Colon / Rectum organ coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <3.5>
+															precision = <-1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0106] occurrences matches {0..1} matches {    -- Colon / Rectum segmental index calculation
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+													>
+												}
+											}
+										}
+									}
+									CLUSTER[at0045] occurrences matches {0..1} matches {    -- Anus
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0046] occurrences matches {0..1} matches {    -- Organ
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0047]    -- Anus
+														}
+													}
+												}
+											}
+											ELEMENT[at0048] occurrences matches {0..1} matches {    -- Segment
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::at0047]    -- Anus
+														}
+													}
+												}
+											}
+											ELEMENT[at0121] occurrences matches {0..1} matches {    -- Resection
+												value matches {
+													DV_CODED_TEXT matches {
+														defining_code matches {
+															[local::
+															at0117,    -- No
+															at0118]    -- Yes
+														}
+													}
+												}
+											}
+											CLUSTER[at0146] occurrences matches {0..1} matches {    -- Structuring lesions
 												items cardinality matches {1..*; unordered} matches {
-													ELEMENT[at0083] occurrences matches {0..1} matches {    -- Organ
+													ELEMENT[at0050] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
 																defining_code matches {
-																	[local::at0047;at0047]    -- Anus
+																	[local::at0051]    -- Clinical examination
 																}
 															}
 														}
 													}
-													ELEMENT[at0084] occurrences matches {0..1} matches {    -- Segment
+													ELEMENT[at0052] occurrences matches {0..1} matches {    -- Grades
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::at0047;at0047]    -- Anus
-																}
-															}
+															1|[local::at0053],
+															2|[local::at0054],
+															3|[local::at0055]
 														}
 													}
-													ELEMENT[at0125] occurrences matches {0..1} matches {    -- Resection
+													ELEMENT[at0153] occurrences matches {0..1} matches {    -- Index
 														value matches {
-															DV_CODED_TEXT matches {
-																defining_code matches {
-																	[local::
-																	at0117,    -- No
-																	at0118]    -- Yes
-																}
-															}
+															C_DV_QUANTITY <
+																property = <[openehr::380]>
+																list = <
+																	["1"] = <
+																		units = <"1">
+																	>
+																>
+															>
 														}
 													}
+												}
+											}
+											CLUSTER[at0082] occurrences matches {0..1} matches {    -- Penetrating lesions
+												items cardinality matches {1..*; unordered} matches {
 													ELEMENT[at0085] occurrences matches {0..1} matches {    -- Investigational method
 														value matches {
 															DV_CODED_TEXT matches {
@@ -633,7 +562,7 @@ definition
 															3|[local::at0093]
 														}
 													}
-													ELEMENT[at0111] occurrences matches {0..1} matches {    -- Anus segment coefficient
+													ELEMENT[at0154] occurrences matches {0..1} matches {    -- Index
 														value matches {
 															C_DV_QUANTITY <
 																property = <[openehr::380]>
@@ -647,7 +576,25 @@ definition
 													}
 												}
 											}
-											ELEMENT[at0115] occurrences matches {0..1} matches {    -- Upper tract index calculation
+											ELEMENT[at0108] occurrences matches {0..1} matches {    -- Anus organ coefficient
+												value matches {
+													C_DV_QUANTITY <
+														property = <[openehr::380]>
+														list = <
+															["1"] = <
+																units = <"1">
+															>
+														>
+
+														assumed_value = <
+															units = <"1">
+															magnitude = <3.5>
+															precision = <-1>
+														>
+													>
+												}
+											}
+											ELEMENT[at0111] occurrences matches {0..1} matches {    -- Anus segmental index calculation
 												value matches {
 													C_DV_QUANTITY <
 														property = <[openehr::380]>
@@ -659,42 +606,54 @@ definition
 													>
 												}
 											}
-											ELEMENT[at0114] occurrences matches {0..1} matches {    -- Small bowel index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
+										}
+									}
+									ELEMENT[at0131] occurrences matches {0..1} matches {    -- Upper tract index calculation
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
 													>
-												}
-											}
-											ELEMENT[at0126] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
+												>
+											>
+										}
+									}
+									ELEMENT[at0129] occurrences matches {0..1} matches {    -- Colon / Rectum index calculation
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
 													>
-												}
-											}
-											ELEMENT[at0127] occurrences matches {0..1} matches {    -- Anus index calculation
-												value matches {
-													C_DV_QUANTITY <
-														property = <[openehr::380]>
-														list = <
-															["1"] = <
-																units = <"1">
-															>
-														>
+												>
+											>
+										}
+									}
+									ELEMENT[at0130] occurrences matches {0..1} matches {    -- Small bowel index calculation
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
 													>
-												}
-											}
+												>
+											>
+										}
+									}
+									ELEMENT[at0128] occurrences matches {0..1} matches {    -- Anus index calculation
+										value matches {
+											C_DV_QUANTITY <
+												property = <[openehr::380]>
+												list = <
+													["1"] = <
+														units = <"1">
+													>
+												>
+											>
 										}
 									}
 									ELEMENT[at0113] matches {    -- Lémann Index
@@ -735,7 +694,8 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Lémann Index">
-					description = <"The Lémann Index is the first global CD damage index assessing cumulative structural bowel damage in CD.">
+					description = <"The Lémann Index is the first global Crohn's disease damage index tool that measures the cumulative bowel damage by using resections and the extent and severity of lesions in the digestive tract of CD patients. 
+In contrast to other indexes that are based only on clinical or endoscopic data and assess the severity of inflammatory activity at a specific time and fluctuate with time, the Lémann Index is more likely to increase with the longer disease duration by assessing irreversible bowel damage along with accumulation of stricturing lesions, penetrating lesions, and surgical resections.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -751,7 +711,7 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Structuring lesions">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0005"] = <
 					text = <"Organ">
@@ -799,7 +759,7 @@ ontology
 				>
 				["at0019"] = <
 					text = <"Endoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0020"] = <
 					text = <"Grade 1 - Wall thickening less than 3 mm or segmental enhancement without prestenotic dilatation">
@@ -835,7 +795,7 @@ ontology
 				>
 				["at0028"] = <
 					text = <"Grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0029"] = <
 					text = <"Grade 1 - None">
@@ -851,7 +811,7 @@ ontology
 				>
 				["at0032"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0034"] = <
 					text = <"Colon / Rectum">
@@ -869,10 +829,6 @@ ontology
 					text = <"Segment">
 					description = <"">
 				>
-				["at0038"] = <
-					text = <"Each segment">
-					description = <"">
-				>
 				["at0039"] = <
 					text = <"Investigational method">
 					description = <"">
@@ -883,11 +839,11 @@ ontology
 				>
 				["at0041"] = <
 					text = <"Colonoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0042"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0043"] = <
 					text = <"Grade 2 - Wall thickening more or equal than 3 mm or mural stratification without prestenotic dilatation or less than 50% of the lumen">
@@ -923,7 +879,7 @@ ontology
 				>
 				["at0052"] = <
 					text = <"Grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0053"] = <
 					text = <"Grade 1 - Mild stricture">
@@ -939,19 +895,7 @@ ontology
 				>
 				["at0056"] = <
 					text = <"Penetrating lesions">
-					description = <"">
-				>
-				["at0057"] = <
-					text = <"Upper tract">
-					description = <"">
-				>
-				["at0058"] = <
-					text = <"Organ">
-					description = <"">
-				>
-				["at0060"] = <
-					text = <"Segment">
-					description = <"">
+					description = <"Type of lesion">
 				>
 				["at0061"] = <
 					text = <"Investigational method">
@@ -959,7 +903,7 @@ ontology
 				>
 				["at0062"] = <
 					text = <"Endoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0063"] = <
 					text = <"Grade 1 - Superficial ulceration">
@@ -975,7 +919,7 @@ ontology
 				>
 				["at0066"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0068"] = <
 					text = <"Grade 2 - Deep transmural ulceration">
@@ -986,16 +930,9 @@ ontology
 					description = <"Phlegmon or any type of fistula">
 				>
 				["at0070"] = <
-					text = <"Small bowel">
+					text = <"Penetrating lesions">
 					description = <"">
-				>
-				["at0071"] = <
-					text = <"Organ">
-					description = <"">
-				>
-				["at0072"] = <
-					text = <"Segment">
-					description = <"Each 20-cm segment">
+					comment = <"Type of lesion">
 				>
 				["at0073"] = <
 					text = <"Investigational method">
@@ -1003,19 +940,11 @@ ontology
 				>
 				["at0074"] = <
 					text = <"Grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0075"] = <
-					text = <"Colon / Rectum">
-					description = <"">
-				>
-				["at0076"] = <
-					text = <"Organ">
-					description = <"">
-				>
-				["at0077"] = <
-					text = <"Segment">
-					description = <"">
+					text = <"Penetrating lesions">
+					description = <"Type of lesion">
 				>
 				["at0078"] = <
 					text = <"Investigational method">
@@ -1023,27 +952,19 @@ ontology
 				>
 				["at0079"] = <
 					text = <"Colonoscopy grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0080"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0081"] = <
 					text = <"Grade 2 - Transmural ulceration">
 					description = <"Transmural ulceration">
 				>
 				["at0082"] = <
-					text = <"Anus">
-					description = <"">
-				>
-				["at0083"] = <
-					text = <"Organ">
-					description = <"">
-				>
-				["at0084"] = <
-					text = <"Segment">
-					description = <"">
+					text = <"Penetrating lesions">
+					description = <"Type of lesion">
 				>
 				["at0085"] = <
 					text = <"Investigational method">
@@ -1051,11 +972,11 @@ ontology
 				>
 				["at0086"] = <
 					text = <"Clinical examination grade">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0087"] = <
 					text = <"MRI or CT grades">
-					description = <"">
+					description = <"The grade of severity">
 				>
 				["at0088"] = <
 					text = <"Grade 1 - Anal ulceration">
@@ -1082,41 +1003,35 @@ ontology
 					description = <"Extensive anal and perianal suppuration, horseshoe abscess, or fistula(e) involving or extending above the levator plate">
 				>
 				["at0095"] = <
-					text = <"Upper tract segment coefficient">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					text = <"Upper tract organ coefficient">
+					description = <"">
 				>
 				["at0105"] = <
-					text = <"Small bowel segment coefficient">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 1, then \"coefficient\" = 1.0
-If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 2.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 5.0">
+					text = <"Small bowel segmental index calculation">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0106"] = <
-					text = <"Colon / Rectum segment coefficient">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 2.0
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 5.5">
+					text = <"Colon / Rectum segmental index calculation">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0108"] = <
-					text = <"Anus segment coefficient">
-					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 1.5
-If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					text = <"Anus organ coefficient">
+					description = <"">
 				>
 				["at0110"] = <
-					text = <"Colon / Rectum segment coefficient">
-					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 1, then \"coefficient\" = 1.0
-If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
-If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.5">
+					text = <"Colon / Rectum organ coefficient">
+					description = <"">
 				>
 				["at0111"] = <
-					text = <"Anus segment coefficient">
-					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
-If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+					text = <"Anus segmental index calculation">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0112"] = <
-					text = <"Small bowel segment coefficient">
-					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 1.5
-If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.0">
+					text = <"Small bowel organ coefficient">
+					description = <"">
 				>
 				["at0113"] = <
 					text = <"Lémann Index">
@@ -1139,17 +1054,9 @@ U = 5*[(2segments*5 + 1segment*4)/20]
 Segmental indexes = number of segments * segment coefficient = 2segments*5 + 1segment*4
 5 and 4 come from the verification of the grades (e.g. Clinical examination or MRI or CT grades) with the respective segment coefficients that are used for the calculation. For example in the case of \"2 segments with stricture and prestenotic dilatation (grade 3)\" the \"type of lesion\" = stricturing and \"grade of severity\" = 3, then the \"coefficient\" = 5.0. Due to having 2 segments, the calculation should be 2*5.0.">
 				>
-				["at0114"] = <
-					text = <"Small bowel index calculation">
-					description = <"Small bowel index calculation = (sum of segmental indexes / 20)">
-				>
-				["at0115"] = <
-					text = <"Upper tract index calculation">
-					description = <"Upper tract index calculation = (sum of segmental indexes / 3)">
-				>
 				["at0116"] = <
 					text = <"Resection">
-					description = <"">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0117"] = <
 					text = <"No">
@@ -1161,45 +1068,21 @@ Segmental indexes = number of segments * segment coefficient = 2segments*5 + 1se
 				>
 				["at0119"] = <
 					text = <"Resection">
-					description = <"">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0120"] = <
 					text = <"Resection">
-					description = <"">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0121"] = <
 					text = <"Resection">
-					description = <"">
-				>
-				["at0122"] = <
-					text = <"Resection">
-					description = <"">
-				>
-				["at0123"] = <
-					text = <"Resection">
-					description = <"">
-				>
-				["at0124"] = <
-					text = <"Resection">
-					description = <"">
-				>
-				["at0125"] = <
-					text = <"Resection">
-					description = <"">
-				>
-				["at0126"] = <
-					text = <"Colon / Rectum index calculation">
-					description = <"Colon / Rectum index calculation  = (sum of segmental indexes / 6)">
-				>
-				["at0127"] = <
-					text = <"Anus index calculation">
-					description = <"Anus index calculation = 1 single segment result
-Will have the same value as \"Anus segment coefficient\" data element.">
+					description = <"Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
 				>
 				["at0128"] = <
 					text = <"Anus index calculation">
-					description = <"Anus index calculation = 1 single segment result
-Will have the same value as \"Anus segment coefficient\" data element.">
+					description = <"Anus index calculation = 1 
+single segment result
+">
 				>
 				["at0129"] = <
 					text = <"Colon / Rectum index calculation">
@@ -1242,9 +1125,63 @@ Will have the same value as \"Anus segment coefficient\" data element.">
 					description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
 					comment = <"For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
 				>
-				["at0142"] = <
-					text = <"Upper tract segment coefficient">
-					description = <"">
+				["at0143"] = <
+					text = <"Upper tract segmental index calculation">
+					description = <"Sum of all indexes (resection, structuring, penetrating).
+Note that for each resection with \"yes\", sum 10 to the segmental index calculation, if \"no\" leave as 0.">
+				>
+				["at0144"] = <
+					text = <"Structuring lesions">
+					description = <"Type of lesion">
+				>
+				["at0145"] = <
+					text = <"Structuring lesions">
+					description = <"Type of lesion">
+				>
+				["at0146"] = <
+					text = <"Structuring lesions">
+					description = <"Type of lesion">
+				>
+				["at0147"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 3.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0148"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 2.0">
+				>
+				["at0149"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 1, then \"coefficient\" = 1.0
+If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 5.0">
+				>
+				["at0150"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 1.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.0">
+				>
+				["at0151"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 2.0
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 5.5">
+				>
+				["at0152"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 1, then \"coefficient\" = 1.0
+If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 4.5">
+				>
+				["at0153"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = stricturing and \"grade of severity\" = 2, then \"coefficient\" = 1.5
+If \"type of lesion\" = stricturing and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
+				>
+				["at0154"] = <
+					text = <"Index">
+					description = <"If \"type of lesion\" = penetrating and \"grade of severity\" = 2, then \"coefficient\" = 2.5
+If \"type of lesion\" = penetrating and \"grade of severity\" = 3, then \"coefficient\" = 3.5">
 				>
 			>
 		>
