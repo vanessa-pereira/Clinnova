@@ -63,7 +63,7 @@ Reilly MC, Tanner A, Meltzer EO. Work, classroom and activity impairment instrum
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"370966e91a8f4e9c5590021f8ca8d540">
+		["MD5-CAM-1.0.1"] = <"1124e72179889ae0e1db4bef00a3aa3f">
 		["build_uid"] = <"4b1a3cb2-cf67-3267-8988-a98e624de10d">
 	>
 
@@ -357,56 +357,56 @@ Berücksichtigen Sie nur, wie stark die Colitis ulcerosa Ihre Fähigkeit beeintr
 				["at0004"] = <
 					text = <"Actuellement employé">
 					description = <"Question originale: \"Êtes-vous actuellement employé (travailleur rémunéré) ?\"">
-					comment = <"*If NO, check “NO” and skip to question 6 (Affection of health problems on daily activities). (en)">
+					comment = <"Si NON, cochez « NON » et passez à la question 6 (Affectation de problèmes de santé sur les activités quotidiennes)">
 				>
 				["at0005"] = <
-					text = <"*Yes (en)">
-					description = <"*Yes (en)">
+					text = <"Oui">
+					description = <"Oui">
 				>
 				["at0006"] = <
-					text = <"*No (en)">
-					description = <"*No (en)">
+					text = <"Non">
+					description = <"Non">
 				>
 				["at0007"] = <
 					text = <"Absent du travail en raison de problèmes de santé">
 					description = <"Question originale: \"Au cours des sept derniers jours, combien d'heures de travail avez-vous manquées à cause de problèmes liés à votre colite ulcéreuse ?\"">
-					comment = <"*This question is about the past seven days, not including today.
+					comment = <"Cette question porte sur les sept derniers jours, sans compter aujourd'hui.
 
-Include hours you missed on sick days, times you went in late, left early, etc., because of your health problems. Do not include time you missed to participate in this study. (en)">
+Incluez les heures que vous avez manquées les jours de maladie, les heures où vous êtes arrivés en retard, partis tôt, etc., en raison de vos problèmes de santé. N'incluez pas le temps que vous avez manqué pour participer à cette étude.">
 				>
 				["at0008"] = <
 					text = <"Absent du travail pour d'autres raisons">
 					description = <"Question originale: \"During the past seven days, how many hours did you miss from work because of any other reason, such as vacation, holidays, time off to participate in this study?\"">
-					comment = <"*This question is about the past seven days, not including today. (en)">
+					comment = <"Cette question porte sur les sept derniers jours, sans compter aujourd'hui.">
 				>
 				["at0009"] = <
 					text = <"Heures effectivement travaillées">
 					description = <"Question originale: \"Au cours des sept derniers jours, combien d'heures de travail avez-vous manquées pour toute autre raison, comme des vacances, des congés, du temps libre pour participer à cette étude ?\"">
-					comment = <"*This question is about the past seven days, not including today.
+					comment = <"Cette question porte sur les sept derniers jours, sans compter aujourd'hui.
 
-If “0”, skip to question 6 (Affection of health problems on daily activities). (en)">
+Si « 0 », passez à la question 6 (Affectation des problèmes de santé sur les activités quotidiennes).">
 				>
 				["at0010"] = <
 					text = <"Affection des problèmes de santé">
 					description = <"Question originale: \"Au cours des sept derniers jours, dans quelle mesure vos problèmes de santé ont-ils affecté votre productivité pendant que vous travailliez?\"">
-					comment = <"*This question is about the past seven days, not including today.
+					comment = <"Cette question porte sur les sept derniers jours, sans compter aujourd'hui.
 
-Think about days you were limited in the amount or kind of work you could do, days you accomplished less than you would like, or days you could not do your work as carefully as usual. If health problems affected your work only a little, choose a low number. Choose a high number if health problems affected your work a great deal.
+Pensez aux jours où vous avez été limité dans la quantité ou le type de travail que vous pouviez faire, aux jours où vous avez accompli moins que vous ne le voudriez ou aux jours où vous ne pouviez pas faire votre travail aussi soigneusement que d'habitude. Si des problèmes de santé n'ont que peu affecté votre travail, choisissez un nombre peu élevé. Choisissez un nombre élevé si des problèmes de santé ont beaucoup affecté votre travail.
 
-Hereby a rating of 0 means \"Health problems had no effect on my work\" and a rating of 10 means \"Health problems completely prevented me from working\".
+Ainsi, une note de 0 signifie \"Les problèmes de santé n'ont eu aucun effet sur mon travail\" et une note de 10 signifie \"Les problèmes de santé m'ont complètement empêché de travailler\".
 
-Consider only how much ulcerative colitis affected productivity while you were working.  (en)">
+Considérez seulement à quel point la colite ulcéreuse a affecté la productivité pendant que vous travailliez.">
 				>
 				["at0011"] = <
 					text = <"Affection des problèmes de santé sur les activités quotidiennes">
 					description = <"Question originale: \"Au cours des sept derniers jours, dans quelle mesure vos problèmes de santé ont-ils affecté votre capacité à effectuer vos activités quotidiennes habituelles, autres que votre travail ?\"">
-					comment = <"*This question is about the past seven days, not including today.
+					comment = <"Cette question porte sur les sept derniers jours, sans compter aujourd'hui.
 
-By regular activities, we mean the usual activities you do, such as work around the house, shopping, childcare, exercising, studying, etc. Think about times you were limited in the amount or kind of activities you could do and times you accomplished less than you would like. If health problems affected your activities only a little, choose a low number. Choose a high number if health problems affected your activities a great deal.
+Par activités régulières, nous entendons les activités habituelles que vous faites, telles que le travail à la maison, les courses, la garde des enfants, l'exercice, les études, etc. que vous ne le souhaiteriez. Si les problèmes de santé n'ont que peu affecté vos activités, choisissez un nombre peu élevé. Choisissez un nombre élevé si des problèmes de santé ont beaucoup affecté vos activités.
 
-Hereby a rating of 0 means \"Health problems had no effect on my daily activities\" and a rating of 10 means \"Health problems completely prevented me from doing my daily activities\".
+Ainsi, une note de 0 signifie « Les problèmes de santé n'ont eu aucun effet sur mes activités quotidiennes » et une note de 10 signifie « Des problèmes de santé m'ont complètement empêché de faire mes activités quotidiennes ».
 
-Consider only how much ulcerative colitis affected your ability to perform your normal daily activities, excluding your job. (en)">
+Considérez seulement dans quelle mesure la colite ulcéreuse a affecté votre capacité à effectuer vos activités quotidiennes normales, à l'exclusion de votre travail.">
 				>
 				["at0012"] = <
 					text = <"Item tree">
@@ -419,7 +419,7 @@ Consider only how much ulcerative colitis affected your ability to perform your 
 				["at0014"] = <
 					text = <"Extension">
 					description = <"Informations supplémentaires requises pour saisir le contexte local ou pour s'aligner sur d'autres modèles/formalismes de référence.">
-					comment = <"*For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents. (en)">
+					comment = <"Par exemple : informations sur le département de l'hôpital local ou métadonnées supplémentaires pour s'aligner sur les équivalents FHIR ou CIMI.">
 				>
 			>
 		>
