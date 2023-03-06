@@ -11,16 +11,16 @@ language
 			language = <[ISO_639-1::de]>
 			author = <
 				["name"] = <"Vanessa Pereira">
-				["organisation"] = <"Luxembourg Institute of Health / Better">
-				["email"] = <"vanessapereira@pm.com">
+				["organisation"] = <"Luxembourg Institute of Health">
+				["email"] = <"vanessapereira@pm.me">
 			>
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
 				["name"] = <"Vanessa Pereira">
-				["organisation"] = <"Luxembourg Institute of Health / Better">
-				["email"] = <"vanessapereira@pm.com">
+				["organisation"] = <"Luxembourg Institute of Health">
+				["email"] = <"vanessapereira@pm.me">
 			>
 		>
 	>
@@ -29,8 +29,8 @@ description
 	original_author = <
 		["date"] = <"2022-07-22">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
-		["email"] = <"vanessapereira@pm.com">
+		["organisation"] = <"Luxembourg Institute of Health">
+		["email"] = <"vanessapereira@pm.me">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -91,7 +91,7 @@ Révisé (IPQ-R).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9fbb26b810a5ba463cb6373ef0c1d691">
+		["MD5-CAM-1.0.1"] = <"f8b12d001a27deea9223c8777cfc04db">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
 	>
 
