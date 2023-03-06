@@ -36,10 +36,10 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"*To assess the frequency and severity of fecal incontinence. The score takes into account the type and frequency of incontinence and the extent to which it alters the patient’s life. (en)">
-			keywords = <"*Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) (en)", ...>
+			purpose = <"Zur Beurteilung der Häufigkeit und Schwere der Stuhlinkontinenz. Der Score berücksichtigt die Art und Häufigkeit der Inkontinenz und das Ausmaß, in dem sie das Leben des Patienten verändert.">
+			keywords = <"Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS)", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*© Copyright: The Wexner Scale is copyrighted by the American Society for Colon and Rectal Surgeons (ASCRS). While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. (en)">
+			use = <"© Copyright: Die Wexner-Skala ist von der American Society for Colon and Rectal Surgeons (ASCRS) urheberrechtlich geschützt. Während openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -49,10 +49,10 @@ description
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			purpose = <"*To assess the frequency and severity of fecal incontinence. The score takes into account the type and frequency of incontinence and the extent to which it alters the patient’s life. (en)">
-			keywords = <"*Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) (en)", ...>
+			purpose = <"Évaluer la fréquence et la gravité de l'incontinence fécale. Le score prend en compte le type et la fréquence de l'incontinence et la mesure dans laquelle elle altère la vie du patient.">
+			keywords = <"Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS)", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*© Copyright: The Wexner Scale is copyrighted by the American Society for Colon and Rectal Surgeons (ASCRS). While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. (en)">
+			use = <"© Copyright: L'échelle de Wexner est la propriété de l'American Society for Colon and Rectal Surgeons (ASCRS). Alors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur.">
 		>
 	>
 	other_details = <
@@ -64,7 +64,7 @@ Vaizey CJ, Carapeti E, Cahill JA, Kamm MA. Prospective comparison of faecal inco
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c29583fa36ff4293ec6f26c900a50334">
+		["MD5-CAM-1.0.1"] = <"4dd29513e0ef9304e6e1d48cb45295c8">
 		["build_uid"] = <"ac757da8-ade7-3edf-bce6-d549068c9067">
 	>
 
@@ -273,7 +273,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Score fonctionnel d’incontinence fécale dit de Jorge & Wexner">
-					description = <"*Also known as Wexner Cleveland Clinic Incontinence Score (Wexner Scale) or Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) is a fecal incontinence score from 0-20; where 0 is perfect continence and 20 is complete incontinence. (en)">
+					description = <"Également connu sous le nom de Wexner Cleveland Clinic Incontinence Score (échelle de Wexner) ou Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) est un score d'incontinence fécale de 0 à 20 ; où 0 correspond à une continence parfaite et 20 à une incontinence complète.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -281,7 +281,7 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Tout événement">
-					description = <"*All of the questions should be answered according to patient's incidence of bowel (fecal) incontinence. (en)">
+					description = <"Toutes les questions doivent être répondues en fonction de l'incidence de l'incontinence intestinale (fécale) du patient.">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -305,7 +305,7 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Modifications de qualité de vie">
-					description = <"*Defined in the original study only as \"the extent to which it alters the patient's life\" (en)">
+					description = <"Défini dans l'étude originale uniquement comme \"la mesure dans laquelle il modifie la vie du patient\".">
 				>
 				["at0009"] = <
 					text = <"Jamais">
@@ -374,7 +374,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Jorge-Wexner Stuhlinkontinenz-Score">
-					description = <"*Also known as Wexner Cleveland Clinic Incontinence Score (Wexner Scale) or Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) is a fecal incontinence score from 0-20; where 0 is perfect continence and 20 is complete incontinence. (en)">
+					description = <"Auch bekannt als Wexner Cleveland Clinic Incontinence Score (Wexner Scale) oder Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) ist ein Stuhlinkontinenz-Score von 0-20; wobei 0 perfekte Kontinenz und 20 vollständige Inkontinenz ist.">
 				>
 				["at0001"] = <
 					text = <"History">
