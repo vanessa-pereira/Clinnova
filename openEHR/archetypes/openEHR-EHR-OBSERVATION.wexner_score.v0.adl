@@ -10,11 +10,17 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health">
+				["email"] = <"vanessapereira@pm.me">
 			>
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			author = <
+				["name"] = <"Vanessa Pereira">
+				["organisation"] = <"Luxembourg Institute of Health">
+				["email"] = <"vanessapereira@pm.me">
 			>
 		>
 	>
@@ -23,21 +29,30 @@ description
 	original_author = <
 		["date"] = <"2022-07-25">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
-		["email"] = <"vanessapereira@pm.com">
+		["organisation"] = <"Luxembourg Institute of Health">
+		["email"] = <"vanessapereira@pm.me">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
+			purpose = <"*To assess the frequency and severity of fecal incontinence. The score takes into account the type and frequency of incontinence and the extent to which it alters the patient’s life. (en)">
+			keywords = <"*Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*© Copyright: The Wexner Scale is copyrighted by the American Society for Colon and Rectal Surgeons (ASCRS). While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To assess the frequency and severity of fecal incontinence. The score takes into account the type and frequency of incontinence and the extent to which it alters the patient’s life.">
+			keywords = <"Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS)", ...>
+			use = <"© Copyright: The Wexner Scale is copyrighted by the American Society for Colon and Rectal Surgeons (ASCRS). While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
+			purpose = <"*To assess the frequency and severity of fecal incontinence. The score takes into account the type and frequency of incontinence and the extent to which it alters the patient’s life. (en)">
+			keywords = <"*Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*© Copyright: The Wexner Scale is copyrighted by the American Society for Colon and Rectal Surgeons (ASCRS). While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. (en)">
 		>
 	>
 	other_details = <
@@ -49,7 +64,7 @@ Vaizey CJ, Carapeti E, Cahill JA, Kamm MA. Prospective comparison of faecal inco
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"02cab25e5c0b087f59d14bac715b9155">
+		["MD5-CAM-1.0.1"] = <"c29583fa36ff4293ec6f26c900a50334">
 		["build_uid"] = <"ac757da8-ade7-3edf-bce6-d549068c9067">
 	>
 
@@ -158,7 +173,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Jorge-Wexner faecal score incontinence">
-					description = <"wexner score">
+					description = <"Also known as Wexner Cleveland Clinic Incontinence Score (Wexner Scale) or Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) is a fecal incontinence score from 0-20; where 0 is perfect continence and 20 is complete incontinence.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -258,7 +273,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Score fonctionnel d’incontinence fécale dit de Jorge & Wexner">
-					description = <"*wexner score (en)">
+					description = <"*Also known as Wexner Cleveland Clinic Incontinence Score (Wexner Scale) or Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) is a fecal incontinence score from 0-20; where 0 is perfect continence and 20 is complete incontinence. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -359,7 +374,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Jorge-Wexner Stuhlinkontinenz-Score">
-					description = <"Jorge-Wexner Stuhlinkontinenz-Score">
+					description = <"*Also known as Wexner Cleveland Clinic Incontinence Score (Wexner Scale) or Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS) is a fecal incontinence score from 0-20; where 0 is perfect continence and 20 is complete incontinence. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
