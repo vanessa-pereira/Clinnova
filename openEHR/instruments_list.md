@@ -27,13 +27,13 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | The Montreal classification for ulcerative colitis    |Vanessa Pereira|[OBSERVATION.montreal_classification_uc.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.montreal_classification_uc.v0.adl)|in dev review | PROM / No |
 | Nancy histological index for ulcerative colitis   |Vanessa Pereira|[OBSERVATION.nancy_index_uc.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.nancy_index_uc.v0.adl)|in dev review | PROM / No |
 | 5-item Medication adherence Scale (MARS-5)               |Vanessa Pereira|[OBSERVATION.mars_5.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.mars_5.v0.adl)|in dev review  | PROM / Yes   |
+| Functional Assessment of Chronic Illness Therapy - Fatigue (FACIT-F)               |Vanessa Pereira|[OBSERVATION.facit-f.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.undefined.adl)|in dev  | PROM / Yes   |
 | Pittsburgh Sleep Quality Index (PSQI)                    |Vanessa Pereira|[OBSERVATION.psqi.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.psqi.v0.adl)|in dev review | PROM / Yes |
 | Lémann Index                   |Vanessa Pereira|[OBSERVATION.lemann_index.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.lemann_index.v0.adl)|in dev review  | PROM / ? |
 | Health questionnaire (EQ-5D-5L)                          |Ian McNicoll/Vanessa| [OBSERVATION.eq_5d_5l.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.eq_5d_5l.v0.adl)|in dev review  | PROM / Yes  |
 | Environmental questionnaire (EQ)                          |Vanessa Pereira|[OBSERVATION.environmental_questionnaire_lih.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.environmental_questionnaire_lih.v0.adl)|in progress |PROM / No, trademark of LIH|
 | Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |[openEHR-EHR-OBSERVATION.phq_9.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |in progress (translation)| PROM / Yes    |
 | Perceived Stress Scale (PSS)                             | Vanessa Pereira | [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.pss.v0.adl)|in dev review|PROM / Yes, but free to use for research|
-| Fatigue Severity Scale (FSS)                             | Vanessa Pereira | [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.fss.v0.adl)|in dev review|PROM / Yes   |
 | Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)| Vanessa Pereira |[OBSERVATION.wpai_cd.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wpai_cd.v0.adl)| in dev review|PROM / ? |
 | Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)| Vanessa Pereira |[OBSERVATION.wpai_uc.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wpai_uc.v0.adl)| SENT TO CKM | PROM / ? |
 | International physical activity questionnaire (IPAQ)| Vanessa Pereira |[OBSERVATION.ipaq_sf.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ipaq.v0.adl)| in dev review | PROM / ? |
@@ -42,7 +42,7 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | Standardized voice collection                            |Vanessa Pereira|  colive_voice_lih?  | PAUSED | PROM / No, trademark of LIH|
 | ~~Short IBD-related Quality of Life (SIBDQ)~~               |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sibdq.v0.adl)|**CANCELLED**| PROM / Yes |
 | ~~Food questionnaire (FQ)~~                                   |Vanessa Pereira|[OBSERVATION.food_questionnaire_lih.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.food_questionnaire_lih.v0.adl)|**CANCELLED**| PROM / No, trademark of LIH|
-
+| ~~Fatigue Severity Scale (FSS)~~                             | Vanessa Pereira | [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.fss.v0.adl)|**CANCELLED**|PROM / Yes   |
 ***
 
 ### Rheumatic Diseases (RD) - Rheumatoid arthritis (RA), systemic lupus erythematosus (SLE)
