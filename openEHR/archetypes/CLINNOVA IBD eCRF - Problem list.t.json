@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "d91ad163-a3e8-4175-8993-bc19f0a7e148",
-      "MD5-CAM-1.0.1" : "3d1bc124f403b44a236600d2819b6d25",
+      "MD5-CAM-1.0.1" : "76ed5cc524f083314b783ffcda7860c5",
       "PARENT:MD5-CAM-1.0.1" : "A198E225F67F0E4A49653AC9C6EBCC0A"
     },
     "details" : {
@@ -1550,6 +1550,10 @@
                         "terminologyId" : "SNOMED-CT",
                         "code" : "40733004",
                         "value" : "Disorder due to infection"
+                      }, {
+                        "terminologyId" : "SNOMED-CT",
+                        "code" : "840539006",
+                        "value" : "COVID-19"
                       } ]
                     } ]
                   } ],
