@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.16",
+      "sem_ver" : "0.1.17",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "6c587034a64e44ed4053c2173afa3d6a",
+      "MD5-CAM-1.0.1" : "334560a45bc4eae5cb42910af94dcc17",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -29039,6 +29039,14 @@
                             "terminologyId" : "SNOMED-CT",
                             "code" : "34206005",
                             "value" : "Subcutaneous route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "47625008",
+                            "value" : "Intravenous route"
+                          }, {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "78421000",
+                            "value" : "Intramuscular route"
                           } ]
                         } ]
                       } ],
