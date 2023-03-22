@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.20",
+      "sem_ver" : "0.1.21",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "b7ad66ea749b69d8d66b7d09674900c5",
+      "MD5-CAM-1.0.1" : "27d2b60967ea59e4436ac05675f4abef",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -890,7 +890,7 @@
             "redcap_mapping" : "cmroute"
           },
           "/activities[at0001.1]/description[at0002]/items[at0105.1]" : {
-            "redcap_mapping" : "homeopathic_cmscat"
+            "redcap_mapping" : "homeopathic_cmscat, complementary_cmscat"
           },
           "/activities[at0001.1]/description[at0002]/items[at0113.1]/items[at0011.1]" : {
             "redcap_mapping" : "cmongo, sup_cmongo"
@@ -948,6 +948,7 @@
                           },
                           "constraint" : [ ],
                           "selectedTerminologies" : [ "medicationATC_CNS2023" ],
+                          "limitToList" : false,
                           "includedExternalTerminologyCodes" : [ {
                             "terminologyId" : "medicationATC_CNS2023",
                             "code" : "A01AA30",
@@ -7350,7 +7351,7 @@
       "documentation" : {
         "en" : {
           "/items[at0144.1]" : {
-            "redcap_mapping" : "cmdostot, cmdosu"
+            "redcap_mapping" : "cmdostot, cmdosu, other_cmdosu"
           },
           "/items[at0178.1]" : {
             "redcap_mapping" : "cmdosu, other_cmdosu"
@@ -7455,30 +7456,6 @@
                     "@type" : "C_STRING",
                     "rmTypeName" : "STRING",
                     "constraint" : [ "ml" ]
-                  } ]
-                }, {
-                  "@type" : "C_PRIMITIVE_TUPLE",
-                  "members" : [ {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "[arb'U]{SQ-T}" ]
-                  }, {
-                    "@type" : "C_REAL",
-                    "rmTypeName" : "REAL",
-                    "constraint" : [ {
-                      "lowerIncluded" : false,
-                      "upperIncluded" : false,
-                      "lowerUnbounded" : true,
-                      "upperUnbounded" : true
-                    } ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "http://unitsofmeasure.org" ]
-                  }, {
-                    "@type" : "C_STRING",
-                    "rmTypeName" : "STRING",
-                    "constraint" : [ "SQ-T" ]
                   } ]
                 }, {
                   "@type" : "C_PRIMITIVE_TUPLE",
@@ -7624,6 +7601,54 @@
                     "rmTypeName" : "STRING",
                     "constraint" : [ "mIU" ]
                   } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "g" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "http://unitsofmeasure.org" ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "g" ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mmol" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "http://unitsofmeasure.org" ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mmol" ]
+                  } ]
                 } ]
               } ]
             }, {
@@ -7658,6 +7683,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0178.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
