@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.19",
+      "sem_ver" : "0.1.20",
       "build_uid" : "1b80c8f3-cd0f-46fe-9753-a7f053bbfba1",
-      "MD5-CAM-1.0.1" : "3b2b17b38091f3343e46dd8366c53d49",
+      "MD5-CAM-1.0.1" : "b7ad66ea749b69d8d66b7d09674900c5",
       "PARENT:MD5-CAM-1.0.1" : "006E9F209FD9F3691A5B9EFF0BAC3B5B"
     },
     "details" : {
@@ -7576,6 +7576,54 @@
                     "rmTypeName" : "STRING",
                     "constraint" : [ "1" ]
                   } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "k[iU]" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "http://unitsofmeasure.org" ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "kIU" ]
+                  } ]
+                }, {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "m[iU]" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "http://unitsofmeasure.org" ]
+                  }, {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mIU" ]
+                  } ]
                 } ]
               } ]
             }, {
@@ -7887,13 +7935,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "at0144.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0144.1",
-            "text" : "Total dose",
-            "description" : "The amount of medication administered at one time.",
-            "comment" : "For example: 1 mg, 1.5 ml, 0.125 g; or 1-2 ml, 12.5-20.5 mg."
-          },
           "[arb'U]{SQ-T}" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "tab",
