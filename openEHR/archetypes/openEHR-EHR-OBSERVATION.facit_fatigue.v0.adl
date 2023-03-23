@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
-		["MD5-CAM-1.0.1"] = <"a70f215479d7e4a9a67cc207fee44598">
+		["MD5-CAM-1.0.1"] = <"f9b5540d9875820845e31dfed9700b80">
 	>
 
 definition
@@ -73,6 +73,65 @@ definition
 											2|[local::at0008],
 											3|[local::at0009],
 											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Had trouble starting things
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Had trouble finishing things
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Had energy
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Was able to do usual activities
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Needed to sleep during the day
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Was too tired to eat
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Needed help to do usual activities
+										value matches {
+											DV_ORDINAL matches {*}
 										}
 									}
 								}
@@ -154,15 +213,61 @@ ontology
 					text = <"Felt listless">
 					description = <"Original question:\" \"">
 					Question_number = <"3">
-					Item_code = <"An2">
+					Item_code = <"An1">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0013"] = <
 					text = <"Felt tired">
 					description = <"Original question:\" \"">
 					Question_number = <"4">
+					Item_code = <"An2">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0014"] = <
+					text = <"Had trouble starting things">
+					description = <"Original question:\"I have trouble _starting_ things because I am tired.\"">
+					Question_number = <"5">
 					Item_code = <"An3">
 					Subscale = <"fatigue_subscale">
+				>
+				["at0015"] = <
+					text = <"Had trouble finishing things">
+					description = <"Original question:\" \"">
+					Question_number = <"6">
+					Item_code = <"An4">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0016"] = <
+					text = <"Had energy">
+					description = <"Original question:\" \"">
+					Question_number = <"7">
+					Item_code = <"An5">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0017"] = <
+					text = <"Was able to do usual activities">
+					description = <"Original question:\" \"">
+					Question_number = <"8">
+					Item_code = <"An7">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0018"] = <
+					text = <"Needed to sleep during the day">
+					description = <"Original question:\" \"">
+					Question_number = <"9">
+					Item_code = <"An8">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0019"] = <
+					text = <"Was too tired to eat">
+					description = <"Original question:\" \"">
+					Question_number = <"10">
+					Item_code = <"An12">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0020"] = <
+					text = <"Needed help to do usual activities">
+					description = <"">
 				>
 			>
 		>
