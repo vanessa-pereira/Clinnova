@@ -1,0 +1,169 @@
+archetype (adl_version=1.4; uid=fe6a49bc-953d-4c23-b137-f9338fec5b18)
+	openEHR-EHR-OBSERVATION.facit_fatigue.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-03-23">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
+		["MD5-CAM-1.0.1"] = <"a70f215479d7e4a9a67cc207fee44598">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- FACIT-Fatigue
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- The past 7 days
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Felt fatigued
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Felt weak all over
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Felt listless
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Felt tired
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION occurrences matches {0..1} matches {
+								value matches {P7D}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"FACIT-Fatigue">
+					description = <"FACIT Fatigue Scale (Version 4)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"The past 7 days">
+					description = <"Original question: \"Below is a list of statements that other people with your illness have said are important. Please circle or mark one number per line to indicate your response as it applies to the past 7 days.\"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Felt fatigued">
+					description = <"Original question: \"I feel fatigued.\"">
+					Question_number = <"1">
+					Item_code = <"HI7">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0006"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"A little bit">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Somewhat">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Quite a bit">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Very much">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Felt weak all over">
+					description = <"Original question:\" \"">
+					Question_number = <"2">
+					Item_code = <"HI12">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0012"] = <
+					text = <"Felt listless">
+					description = <"Original question:\" \"">
+					Question_number = <"3">
+					Item_code = <"An2">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0013"] = <
+					text = <"Felt tired">
+					description = <"Original question:\" \"">
+					Question_number = <"4">
+					Item_code = <"An3">
+					Subscale = <"fatigue_subscale">
+				>
+			>
+		>
+	>
