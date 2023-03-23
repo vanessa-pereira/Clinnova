@@ -62,7 +62,7 @@ From FACIT: Licensing fees are assessed on a per trial/per measure basis for com
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
-		["MD5-CAM-1.0.1"] = <"b32c74e5315b52f5de1e79f95cb91d11">
+		["MD5-CAM-1.0.1"] = <"5080e955d895d5f67a2d339c7e9b8d28">
 	>
 
 definition
@@ -196,7 +196,7 @@ definition
 											DV_COUNT matches {*}
 										}
 									}
-									ELEMENT[at0025] occurrences matches {0..1} matches {    -- Fatigue subscale score
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- FACIT-fatigue total score
 										value matches {
 											DV_COUNT matches {
 												magnitude matches {|0..52|}
@@ -378,9 +378,9 @@ Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An1
 A reversal is multiplying the score of the question (element.magnitude.value) by 1/4.">
 				>
 				["at0025"] = <
-					text = <"Fatigue subscale score">
+					text = <"FACIT-fatigue total score">
 					description = <"Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
-">
+The higher the score, the better the QOL.">
 				>
 			>
 		>
@@ -494,9 +494,9 @@ Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An1
 A reversal is multiplying the score of the question (element.magnitude.value) by 1/4. (en)">
 				>
 				["at0025"] = <
-					text = <"*Fatigue subscale score (en)">
+					text = <"*FACIT-fatigue total score (en)">
 					description = <"*Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
- (en)">
+The higher the score, the better the QOL. (en)">
 				>
 			>
 		>
@@ -610,9 +610,9 @@ Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An1
 A reversal is multiplying the score of the question (element.magnitude.value) by 1/4. (en)">
 				>
 				["at0025"] = <
-					text = <"*Fatigue subscale score (en)">
+					text = <"*FACIT-fatigue total score (en)">
 					description = <"*Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
- (en)">
+The higher the score, the better the QOL. (en)">
 				>
 			>
 		>
