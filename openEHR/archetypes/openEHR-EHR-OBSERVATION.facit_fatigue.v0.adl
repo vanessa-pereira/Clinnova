@@ -27,7 +27,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
-		["MD5-CAM-1.0.1"] = <"f9b5540d9875820845e31dfed9700b80">
+		["MD5-CAM-1.0.1"] = <"5b3842b4808691ae6e4b5aaf7d26698a">
 	>
 
 definition
@@ -131,7 +131,29 @@ definition
 									}
 									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Needed help to do usual activities
 										value matches {
-											DV_ORDINAL matches {*}
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Was frustrated by being too tired to do things
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Had to limit social activity due to being tired
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
 										}
 									}
 								}
@@ -147,7 +169,14 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0004] matches {*}    -- Item tree
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
 		}
 	}
 
@@ -177,7 +206,7 @@ ontology
 				>
 				["at0005"] = <
 					text = <"Felt fatigued">
-					description = <"Original question: \"I feel fatigued.\"">
+					description = <"Original question: \"I feel fatigued\"">
 					Question_number = <"1">
 					Item_code = <"HI7">
 					Subscale = <"fatigue_subscale">
@@ -204,21 +233,21 @@ ontology
 				>
 				["at0011"] = <
 					text = <"Felt weak all over">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I feel weak all over\"">
 					Question_number = <"2">
 					Item_code = <"HI12">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0012"] = <
 					text = <"Felt listless">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I feel listless (“washed out”)\"">
 					Question_number = <"3">
 					Item_code = <"An1">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0013"] = <
 					text = <"Felt tired">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I feel tired\"">
 					Question_number = <"4">
 					Item_code = <"An2">
 					Subscale = <"fatigue_subscale">
@@ -226,48 +255,72 @@ ontology
 				["at0014"] = <
 					text = <"Had trouble starting things">
 					description = <"Original question:\"I have trouble _starting_ things because I am tired.\"">
+					comment = <"The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form.">
 					Question_number = <"5">
 					Item_code = <"An3">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0015"] = <
 					text = <"Had trouble finishing things">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I have trouble _finishing_ things because I am tired\"">
+					comment = <"The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form.">
 					Question_number = <"6">
 					Item_code = <"An4">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0016"] = <
 					text = <"Had energy">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I have energy\"">
 					Question_number = <"7">
 					Item_code = <"An5">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0017"] = <
 					text = <"Was able to do usual activities">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I am able to do my usual activities\"">
 					Question_number = <"8">
 					Item_code = <"An7">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0018"] = <
 					text = <"Needed to sleep during the day">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I need to sleep during the day\"">
 					Question_number = <"9">
 					Item_code = <"An8">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0019"] = <
 					text = <"Was too tired to eat">
-					description = <"Original question:\" \"">
+					description = <"Original question:\"I am too tired to eat\"">
 					Question_number = <"10">
 					Item_code = <"An12">
 					Subscale = <"fatigue_subscale">
 				>
 				["at0020"] = <
 					text = <"Needed help to do usual activities">
-					description = <"">
+					description = <"Original question:\"I need help doing my usual activities\"">
+					Question_number = <"11">
+					Item_code = <"An14">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0021"] = <
+					text = <"Was frustrated by being too tired to do things">
+					description = <"Original question:\"I am frustrated by being too tired to do the things I want to do\"">
+					Question_number = <"12">
+					Item_code = <"An15">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0022"] = <
+					text = <"Had to limit social activity due to being tired">
+					description = <"Original question:\"I have to limit my social activity because I am tired\"">
+					Question_number = <"13">
+					Item_code = <"An16">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0023"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
 			>
 		>
