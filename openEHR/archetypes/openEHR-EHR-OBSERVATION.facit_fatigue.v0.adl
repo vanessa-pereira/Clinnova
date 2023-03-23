@@ -6,6 +6,18 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+	>
 
 description
 	original_author = <
@@ -16,8 +28,16 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -27,7 +47,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
-		["MD5-CAM-1.0.1"] = <"5b3842b4808691ae6e4b5aaf7d26698a">
+		["MD5-CAM-1.0.1"] = <"06961cdf6287eeeb7d30730055426804">
 	>
 
 definition
@@ -321,6 +341,212 @@ ontology
 					text = <"Extension">
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"*FACIT-Fatigue (en)">
+					description = <"*FACIT Fatigue Scale (Version 4) (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*The past 7 days (en)">
+					description = <"*Original question: \"Below is a list of statements that other people with your illness have said are important. Please circle or mark one number per line to indicate your response as it applies to the past 7 days.\" (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Felt fatigued (en)">
+					description = <"*Original question: \"I feel fatigued\" (en)">
+				>
+				["at0006"] = <
+					text = <"*Not at all (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*A little bit (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Somewhat (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Quite a bit (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Very much (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Felt weak all over (en)">
+					description = <"*Original question:\"I feel weak all over\" (en)">
+				>
+				["at0012"] = <
+					text = <"*Felt listless (en)">
+					description = <"*Original question:\"I feel listless (“washed out”)\" (en)">
+				>
+				["at0013"] = <
+					text = <"*Felt tired (en)">
+					description = <"*Original question:\"I feel tired\" (en)">
+				>
+				["at0014"] = <
+					text = <"*Had trouble starting things (en)">
+					description = <"*Original question:\"I have trouble _starting_ things because I am tired.\" (en)">
+					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+				>
+				["at0015"] = <
+					text = <"*Had trouble finishing things (en)">
+					description = <"*Original question:\"I have trouble _finishing_ things because I am tired\" (en)">
+					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+				>
+				["at0016"] = <
+					text = <"*Had energy (en)">
+					description = <"*Original question:\"I have energy\" (en)">
+				>
+				["at0017"] = <
+					text = <"*Was able to do usual activities (en)">
+					description = <"*Original question:\"I am able to do my usual activities\" (en)">
+				>
+				["at0018"] = <
+					text = <"*Needed to sleep during the day (en)">
+					description = <"*Original question:\"I need to sleep during the day\" (en)">
+				>
+				["at0019"] = <
+					text = <"*Was too tired to eat (en)">
+					description = <"*Original question:\"I am too tired to eat\" (en)">
+				>
+				["at0020"] = <
+					text = <"*Needed help to do usual activities (en)">
+					description = <"*Original question:\"I need help doing my usual activities\" (en)">
+				>
+				["at0021"] = <
+					text = <"*Was frustrated by being too tired to do things (en)">
+					description = <"*Original question:\"I am frustrated by being too tired to do the things I want to do\" (en)">
+				>
+				["at0022"] = <
+					text = <"*Had to limit social activity due to being tired (en)">
+					description = <"*Original question:\"I have to limit my social activity because I am tired\" (en)">
+				>
+				["at0023"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"*FACIT-Fatigue (en)">
+					description = <"*FACIT Fatigue Scale (Version 4) (en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*The past 7 days (en)">
+					description = <"*Original question: \"Below is a list of statements that other people with your illness have said are important. Please circle or mark one number per line to indicate your response as it applies to the past 7 days.\" (en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"*Felt fatigued (en)">
+					description = <"*Original question: \"I feel fatigued\" (en)">
+				>
+				["at0006"] = <
+					text = <"*Not at all (en)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"*A little bit (en)">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"*Somewhat (en)">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"*Quite a bit (en)">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"*Very much (en)">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"*Felt weak all over (en)">
+					description = <"*Original question:\"I feel weak all over\" (en)">
+				>
+				["at0012"] = <
+					text = <"*Felt listless (en)">
+					description = <"*Original question:\"I feel listless (“washed out”)\" (en)">
+				>
+				["at0013"] = <
+					text = <"*Felt tired (en)">
+					description = <"*Original question:\"I feel tired\" (en)">
+				>
+				["at0014"] = <
+					text = <"*Had trouble starting things (en)">
+					description = <"*Original question:\"I have trouble _starting_ things because I am tired.\" (en)">
+					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+				>
+				["at0015"] = <
+					text = <"*Had trouble finishing things (en)">
+					description = <"*Original question:\"I have trouble _finishing_ things because I am tired\" (en)">
+					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+				>
+				["at0016"] = <
+					text = <"*Had energy (en)">
+					description = <"*Original question:\"I have energy\" (en)">
+				>
+				["at0017"] = <
+					text = <"*Was able to do usual activities (en)">
+					description = <"*Original question:\"I am able to do my usual activities\" (en)">
+				>
+				["at0018"] = <
+					text = <"*Needed to sleep during the day (en)">
+					description = <"*Original question:\"I need to sleep during the day\" (en)">
+				>
+				["at0019"] = <
+					text = <"*Was too tired to eat (en)">
+					description = <"*Original question:\"I am too tired to eat\" (en)">
+				>
+				["at0020"] = <
+					text = <"*Needed help to do usual activities (en)">
+					description = <"*Original question:\"I need help doing my usual activities\" (en)">
+				>
+				["at0021"] = <
+					text = <"*Was frustrated by being too tired to do things (en)">
+					description = <"*Original question:\"I am frustrated by being too tired to do the things I want to do\" (en)">
+				>
+				["at0022"] = <
+					text = <"*Had to limit social activity due to being tired (en)">
+					description = <"*Original question:\"I have to limit my social activity because I am tired\" (en)">
+				>
+				["at0023"] = <
+					text = <"*Extension (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
 			>
 		>
