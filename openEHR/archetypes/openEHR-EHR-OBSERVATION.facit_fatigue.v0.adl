@@ -66,7 +66,7 @@ FACIT-Fatigue website: https://www.facit.org/measures/FACIT-Fatigue">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6c873926e32bff129524f7150929f541">
+		["MD5-CAM-1.0.1"] = <"248b5866c063483169252c1dab856296">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
 	>
 
@@ -373,13 +373,20 @@ ontology
 					text = <"FACIT-fatigue total score">
 					description = <"Perform reversals and sum individual items to obtain a score.
 
-Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+Reversals should be done on questions: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
 
-A reversal is multiplying the score of the question (element.magnitude.value) by 1/4.
+A reversal is done by subtracting to the value 4, the  score obtained (element.magnitude.value). 
+e.g. (4 - (item code response HI7, e.g. \"somewhat\") = item_score)
 
 Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
 
 The higher the score, the better the QOL.">
+					comment = <"Example on reversals: 
+- on item code HI7:
+[4 - (item code response HI7, e.g. \"somewhat\") = item_score]
+This would equals 4 - 2 = 2
+
+">
 				>
 			>
 		>
@@ -489,13 +496,18 @@ The higher the score, the better the QOL.">
 					text = <"Score total FACIT-fatigue">
 					description = <"Effectuez des inversions et additionnez les éléments individuels pour obtenir un score.
 
-Les inversions doivent être effectuées sur : HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+Les inversions doivent être effectuées pour les questions : HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
 
-Une inversion consiste à multiplier le score de la question (élément.magnitude.valeur) par 1/4.
+Une inversion se fait en soustrayant à la valeur 4, le score obtenu (element.magnitude.value). 
+Par exemple : (4 - (réponse au code de l'élément HI7, par exemple \"un peu\") = item_score)
 
-Multipliez la somme des scores des items par le nombre d'items de la sous-échelle, puis divisez par le nombre d'items auxquels vous avez répondu. On obtient ainsi le score de la sous-échelle.
+Multiplier la somme des scores des items par le nombre d'items de la sous-échelle, puis diviser par le nombre d'items auxquels il a été répondu. On obtient ainsi le score de la sous-échelle.
 
-Plus le score est élevé, meilleure est la qualité de vie.">
+Plus le score est élevé, meilleure est la qualité de vie. ">
+					comment = <"Exemple d'inversion : 
+- sur le code de l'item HI7 :
+[4 - (code de réponse à l'item HI7, par exemple \"un peu\") = item_score].
+Cela équivaudrait à 4 - 2 = 2">
 				>
 			>
 		>
@@ -603,15 +615,20 @@ Plus le score est élevé, meilleure est la qualité de vie.">
 				>
 				["at0025"] = <
 					text = <"FACIT-Gesamtwertung für Müdigkeit">
-					description = <"Führen Sie Stornierungen durch und addieren Sie die einzelnen Posten, um eine Punktzahl zu erhalten.
+					description = <"Führen Sie Umkehrungen durch und addieren Sie die einzelnen Aufgaben, um eine Punktzahl zu erhalten.
 
-Stornierungen sollten durchgeführt werden für: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+Die Umkehrungen sollten bei folgenden Fragen durchgeführt werden: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
 
-Eine Umkehrung ist die Multiplikation der Punktzahl der Frage (element.magnitude.value) mit 1/4.
+Eine Umkehrung erfolgt durch Subtraktion der erhaltenen Punktzahl (element.magnitude.value) von dem Wert 4. 
+z. B. (4 - (Itemcode-Antwort HI7, z. B. \"etwas\") = item_score)
 
-Multiplizieren Sie die Summe der Item-Scores mit der Anzahl der Items in der Subskala und dividieren Sie dann durch die Anzahl der beantworteten Items. Dies ergibt den Wert der Subskala.
+Multiplizieren Sie die Summe der Item-Scores mit der Anzahl der Items in der Subskala und dividieren Sie dann durch die Anzahl der beantworteten Items. Dies ergibt die Punktzahl der Subskala.
 
-Je höher die Punktzahl, desto besser ist die Lebensqualität.">
+Je höher die Punktzahl, desto besser ist die Lebensqualität. ">
+					comment = <"Beispiel für Stornierungen: 
+- bei Itemcode HI7:
+[4 - (Itemcode-Antwort HI7, z. B. \"etwas\") = item_score]
+Dies entspräche 4 - 2 = 2">
 				>
 			>
 		>
