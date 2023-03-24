@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -30,16 +30,18 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			purpose = <"*To assesses self-reported fatigue and its impact upon daily activities and function in patients 18 years and older. (en)">
+			purpose = <"Bewertung der selbstberichteten Müdigkeit und ihrer Auswirkungen auf die täglichen Aktivitäten und Funktionen bei Patienten ab 18 Jahren.">
+			keywords = <"*FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale (en)", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*Licensing and copyright: 
-While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+			use = <"Lizenzierung und Urheberrecht: 
+Während die openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jegliche Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.
 
-From FACIT: Licensing fees are assessed on a per trial/per measure basis for commercial use. There is no fee for use of the English version, but a license should be obtained. Non-commercial use is assessed on a case-by-case basis. Licensing fees are typically not applied to investigator-initiated research, students, or clinical use. To license an available version of this measure for commercial or non-commercial use, please complete the form at FACIT website (https://www.facit.org/license-registration-form) BEFORE using this openEHR archetype in your system. (en)">
+Von FACIT: Für die kommerzielle Nutzung werden Lizenzgebühren pro Testversion/pro Maßnahme erhoben. Für die Nutzung der englischen Version wird keine Gebühr erhoben, es sollte jedoch eine Lizenz erworben werden. Die nichtkommerzielle Nutzung wird von Fall zu Fall beurteilt. Lizenzgebühren werden in der Regel nicht für von Forschern initiierte Forschung, Studenten oder klinische Nutzung erhoben. Um eine verfügbare Version dieser Maßnahme für kommerzielle oder nicht-kommerzielle Zwecke zu lizenzieren, füllen Sie bitte das Formular auf der FACIT-Website (https://www.facit.org/license-registration-form) aus, BEVOR Sie diesen openEHR-Archetyp in Ihrem System verwenden.">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To assesses self-reported fatigue and its impact upon daily activities and function in patients 18 years and older.">
+			keywords = <"FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale", ...>
 			use = <"Licensing and copyright: 
 While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
 
@@ -48,6 +50,7 @@ From FACIT: Licensing fees are assessed on a per trial/per measure basis for com
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
 			purpose = <"*To assesses self-reported fatigue and its impact upon daily activities and function in patients 18 years and older. (en)">
+			keywords = <"*FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale (en)", ...>
 			copyright = <"© openEHR Foundation">
 			use = <"*Licensing and copyright: 
 While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
@@ -61,8 +64,8 @@ From FACIT: Licensing fees are assessed on a per trial/per measure basis for com
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"cfc1f00d7ed3d06d7e3e16dd109619a1">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
-		["MD5-CAM-1.0.1"] = <"5080e955d895d5f67a2d339c7e9b8d28">
 	>
 
 definition
@@ -189,11 +192,6 @@ definition
 											2|[local::at0008],
 											3|[local::at0009],
 											4|[local::at0010]
-										}
-									}
-									ELEMENT[at0024] occurrences matches {0..1} matches {    -- Sum individual item scores
-										value matches {
-											DV_COUNT matches {*}
 										}
 									}
 									ELEMENT[at0025] occurrences matches {0..1} matches {    -- FACIT-fatigue total score
@@ -369,17 +367,16 @@ ontology
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
 				>
-				["at0024"] = <
-					text = <"Sum individual item scores">
+				["at0025"] = <
+					text = <"FACIT-fatigue total score">
 					description = <"Perform reversals and sum individual items to obtain a score.
 
 Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
 
-A reversal is multiplying the score of the question (element.magnitude.value) by 1/4.">
-				>
-				["at0025"] = <
-					text = <"FACIT-fatigue total score">
-					description = <"Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
+A reversal is multiplying the score of the question (element.magnitude.value) by 1/4.
+
+Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
+
 The higher the score, the better the QOL.">
 				>
 			>
@@ -485,17 +482,16 @@ The higher the score, the better the QOL.">
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
-				["at0024"] = <
-					text = <"*Sum individual item scores (en)">
+				["at0025"] = <
+					text = <"*FACIT-fatigue total score (en)">
 					description = <"*Perform reversals and sum individual items to obtain a score.
 
 Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
 
-A reversal is multiplying the score of the question (element.magnitude.value) by 1/4. (en)">
-				>
-				["at0025"] = <
-					text = <"*FACIT-fatigue total score (en)">
-					description = <"*Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
+A reversal is multiplying the score of the question (element.magnitude.value) by 1/4.
+
+Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
+
 The higher the score, the better the QOL. (en)">
 				>
 			>
@@ -503,16 +499,17 @@ The higher the score, the better the QOL. (en)">
 		["de"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue) (en)">
-					description = <"*The Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue) is a 13-item measure that assesses self-reported fatigue and its impact upon daily activities and function. It was developed in the mid-1990’s to meet a growing demand for more precise evaluation of fatigue associated with anemia in cancer patients. The archetype is build on the FACIT Fatigue Scale Version 4. (en)">
+					text = <"FACIT-Erschöpfung">
+					description = <"Die Functional Assessment of Chronic Illness Therapy - Fatigue Scale (FACIT-Fatigue) ist ein 13-teiliger Fragebogen zur Bewertung der selbstberichteten Müdigkeit und ihrer Auswirkungen auf die täglichen Aktivitäten und Funktionen. Sie wurde Mitte der 1990er Jahre entwickelt, um der wachsenden Nachfrage nach einer präziseren Bewertung der mit Anämie verbundenen Müdigkeit bei Krebspatienten gerecht zu werden. Der Archetyp basiert auf der FACIT Fatigue Scale fassung 4.">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*The past 7 days (en)">
-					description = <"*Original question: \"Below is a list of statements that other people with your illness have said are important. Please circle or mark one number per line to indicate your response as it applies to the past 7 days.\" (en)">
+					text = <"Die letzten 7 Tage">
+					description = <"Originalfrage: \"Nachfolgend finden Sie eine Liste von Aussagen, die von anderen Personen mit Ihrer Krankheit für wichtig befunden wurden. **Bitte geben Sie jeweils an, wie sehr jede der folgenden Aussagen _im Laufe der letzten 7 Tage_ auf Sie zugetroffen hat, indem Sie die entsprechende Zahl ankreuzen.**\"">
+					comment = <"Die \"Originalfrage\" verwendet die Markdown-Notation, um das erforderliche unterstrichene Format des ursprünglichen Papierfragebogens zu erfassen. ">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -523,8 +520,8 @@ The higher the score, the better the QOL. (en)">
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"*Felt fatigued (en)">
-					description = <"*Original question: \"I feel fatigued\" (en)">
+					text = <"Ich bin erschöpft">
+					description = <"Originalfrage: \"Ich bin erschöpft\"">
 				>
 				["at0006"] = <
 					text = <"*Not at all (en)">
@@ -547,72 +544,71 @@ The higher the score, the better the QOL. (en)">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Felt weak all over (en)">
-					description = <"*Original question:\"I feel weak all over\" (en)">
+					text = <"Ich fühle mich insgesamt schwach">
+					description = <"Originalfrage:\"Ich fühle mich insgesamt schwach\"">
 				>
 				["at0012"] = <
-					text = <"*Felt listless (en)">
-					description = <"*Original question:\"I feel listless (“washed out”)\" (en)">
+					text = <"Ich fühle mich lustlos (ausgelaugt)">
+					description = <"Originalfrage:\" Ich fühle mich lustlos (ausgelaugt)\"">
 				>
 				["at0013"] = <
-					text = <"*Felt tired (en)">
-					description = <"*Original question:\"I feel tired\" (en)">
+					text = <"Ich bin müde">
+					description = <"Originalfrage:\"Ich bin müde \"">
 				>
 				["at0014"] = <
-					text = <"*Had trouble starting things (en)">
-					description = <"*Original question:\"I have trouble _starting_ things because I am tired.\" (en)">
-					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+					text = <"Es fällt mir schwer, etwas anzufangen, weil ich müde bin">
+					description = <"Originalfrage:\"Es fällt mir schwer, etwas _anzufangen_, weil ich müde bin\"">
+					comment = <"Die \"Originalfrage\" verwendet die Markdown-Notation, um das erforderliche unterstrichene Format des ursprünglichen Papierfragebogens zu erfassen. Dies könnte darauf zurückzuführen sein, dass die Ähnlichkeit der Fragen Nr. 5 und 6 in der Front-End-App/dem Front-End-Formular nicht verwirrt.">
 				>
 				["at0015"] = <
-					text = <"*Had trouble finishing things (en)">
-					description = <"*Original question:\"I have trouble _finishing_ things because I am tired\" (en)">
-					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+					text = <"Es fällt mir schwer, etwas zu Ende zu führen, weil ich müde bin">
+					description = <"Originalfrage:\"Es fällt mir schwer, etwas _zu Ende zu führen_, weil ich müde bin\"">
+					comment = <"Die \"Originalfrage\" verwendet die Markdown-Notation, um das erforderliche unterstrichene Format des ursprünglichen Papierfragebogens zu erfassen. Dies könnte darauf zurückzuführen sein, dass die Ähnlichkeit der Fragen Nr. 5 und 6 in der Front-End-App/dem Front-End-Formular nicht verwirrt.">
 				>
 				["at0016"] = <
-					text = <"*Had energy (en)">
-					description = <"*Original question:\"I have energy\" (en)">
+					text = <"Ich habe Energie">
+					description = <"Originalfrage:\"Ich habe Energie\"">
 				>
 				["at0017"] = <
-					text = <"*Was able to do usual activities (en)">
-					description = <"*Original question:\"I am able to do my usual activities\" (en)">
+					text = <"Ich bin in der Lage, meinen gewohnten Aktivitäten nachzugehen (Beruf, Einkaufen, Schule, Freizeit, Sport usw.)">
+					description = <"Originalfrage:\" \"">
 				>
 				["at0018"] = <
-					text = <"*Needed to sleep during the day (en)">
-					description = <"*Original question:\"I need to sleep during the day\" (en)">
+					text = <"Ich habe das Bedürfnis, tagsüber zu schlafen">
+					description = <"Originalfrage:\" \"">
 				>
 				["at0019"] = <
-					text = <"*Was too tired to eat (en)">
-					description = <"*Original question:\"I am too tired to eat\" (en)">
+					text = <"Ich bin zu müde, um zu essen">
+					description = <"Originalfrage:\" \"">
 				>
 				["at0020"] = <
-					text = <"*Needed help to do usual activities (en)">
-					description = <"*Original question:\"I need help doing my usual activities\" (en)">
+					text = <"Ich brauche Hilfe bei meinen gewohnten Aktivitäten (Beruf, Einkaufen, Schule, Freizeit, Sport usw.)">
+					description = <"Originalfrage:\" \"">
 				>
 				["at0021"] = <
-					text = <"*Was frustrated by being too tired to do things (en)">
-					description = <"*Original question:\"I am frustrated by being too tired to do the things I want to do\" (en)">
+					text = <"Ich bin frustriert, weil ich zu müde bin, die Dinge zu tun, die ich machen möchte">
+					description = <"Originalfrage:\" \"">
 				>
 				["at0022"] = <
-					text = <"*Had to limit social activity due to being tired (en)">
-					description = <"*Original question:\"I have to limit my social activity because I am tired\" (en)">
+					text = <"Ich muss meine sozialen Aktivitäten einschränken, weil ich müde bin">
+					description = <"Originalfrage:\" \"">
 				>
 				["at0023"] = <
 					text = <"*Extension (en)">
 					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
 					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
 				>
-				["at0024"] = <
-					text = <"*Sum individual item scores (en)">
-					description = <"*Perform reversals and sum individual items to obtain a score.
-
-Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
-
-A reversal is multiplying the score of the question (element.magnitude.value) by 1/4. (en)">
-				>
 				["at0025"] = <
-					text = <"*FACIT-fatigue total score (en)">
-					description = <"*Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
-The higher the score, the better the QOL. (en)">
+					text = <"FACIT-Gesamtwertung für Müdigkeit">
+					description = <"Führen Sie Stornierungen durch und addieren Sie die einzelnen Posten, um eine Punktzahl zu erhalten.
+
+Stornierungen sollten durchgeführt werden für: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+
+Eine Umkehrung ist die Multiplikation der Punktzahl der Frage (element.magnitude.value) mit 1/4.
+
+Multiplizieren Sie die Summe der Item-Scores mit der Anzahl der Items in der Subskala und dividieren Sie dann durch die Anzahl der beantworteten Items. Dies ergibt den Wert der Subskala.
+
+Je höher die Punktzahl, desto besser ist die Lebensqualität.">
 				>
 			>
 		>
