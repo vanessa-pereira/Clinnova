@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=d5030219-d570-4ef7-9f58-0b7dc2af2c1f)
-	openEHR-EHR-CLUSTER.clinnova_ibd_icf2.v0
+	openEHR-EHR-CLUSTER.clinnova_ibd_icf3.v0
 
 concept
 	[at0000]
@@ -26,14 +26,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"28058a63ff8d164415662c50dd4caf3d">
+		["MD5-CAM-1.0.1"] = <"3a28e8d06da4e26d97aeacc8aaa663f0">
 		["build_uid"] = <"2bcf7970-cfbe-3aeb-bc62-812c57ead63e">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Clinnova IBD Informed Consent Form - version 2
+	CLUSTER[at0000] matches {    -- Clinnova IBD Informed Consent Form - version 3
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Patient agreed to take part in the study, donate biological samples, under terms set out on information sheet
+			ELEMENT[at0001] matches {    -- Patient agreed to take part in the study, donate biological samples, under terms set out on information sheet
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -48,7 +48,7 @@ definition
 				items cardinality matches {1..*; unordered} matches {
 					CLUSTER[at0012] occurrences matches {0..1} matches {    -- Discovered germline mutation by medical team
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0003] occurrences matches {0..1} matches {    -- Patient gave consent to attending physician/doctor/geneticist to inform of such findings, possible implications and to refer to a local geneticist
+							ELEMENT[at0003] matches {    -- Patient gave consent to attending physician/doctor/geneticist to inform of such findings, possible implications and to refer to a local geneticist
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
@@ -73,7 +73,7 @@ definition
 					}
 					CLUSTER[at0008] occurrences matches {0..1} matches {    -- Discovered germline mutation and unable to receive information in person
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Patient wished to designate a member of family to receive results and discuss implications with medical team
+							ELEMENT[at0009] matches {    -- Patient wished to designate a member of family to receive results and discuss implications with medical team
 								value matches {
 									DV_CODED_TEXT matches {
 										defining_code matches {
@@ -98,7 +98,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other research in the same field
+			ELEMENT[at0013] matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other research in the same field
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -109,7 +109,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0014] occurrences matches {0..1} matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other Clinnova related research in the same field
+			ELEMENT[at0014] matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other Clinnova related research in the same field
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -120,7 +120,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Patient agreed to secondary use of his samples for genetic research
+			ELEMENT[at0015] matches {    -- Patient agreed to secondary use of his samples for genetic research
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -131,7 +131,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0016] occurrences matches {0..1} matches {    -- Patient agreed to transfer of his samples/data outside the European Union
+			ELEMENT[at0016] matches {    -- Patient agreed to transfer of his samples/data outside the European Union
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -142,7 +142,7 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Patient agreed to use the provided smartwatch (Withings ScanWatch) in the condition described in the information sheet
+			ELEMENT[at0019] matches {    -- Patient agreed to download the Colive application and to perform voice recordings via this application
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -153,7 +153,18 @@ definition
 					}
 				}
 			}
-			ELEMENT[at0018] occurrences matches {0..1} matches {    -- Patient agreed to be contacted again by the person leading the study with a view to taking part in another study
+			ELEMENT[at0017] matches {    -- Patient agreed to use the provided smartwatch (Withings ScanWatch) in the condition described in the information sheet
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0018] matches {    -- Patient agreed to be contacted again by the person leading the study with a view to taking part in another study
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -172,8 +183,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Clinnova IBD Informed Consent Form - version 2">
-					description = <"Clinnova IBD Informed Consent Form - version 2">
+					text = <"Clinnova IBD Informed Consent Form - version 3">
+					description = <"Clinnova IBD Informed Consent Form - version 3">
 				>
 				["at0001"] = <
 					text = <"Patient agreed to take part in the study, donate biological samples, under terms set out on information sheet">
@@ -256,6 +267,10 @@ If I have answered “YES”, this means that I consent to my representative rec
 				["at0018"] = <
 					text = <"Patient agreed to be contacted again by the person leading the study with a view to taking part in another study">
 					description = <"Original question: \"I agree to being contacted again by the person leading the study with a view to taking part in another study.\"">
+				>
+				["at0019"] = <
+					text = <"Patient agreed to download the Colive application and to perform voice recordings via this application">
+					description = <"Original question: \"I agree to download the Colive application and to perform voice recordings via this application\"">
 				>
 			>
 		>

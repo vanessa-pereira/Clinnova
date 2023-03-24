@@ -1,0 +1,635 @@
+archetype (adl_version=1.4; uid=fe6a49bc-953d-4c23-b137-f9338fec5b18)
+	openEHR-EHR-OBSERVATION.facit_fatigue.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2023-03-23">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Bewertung der selbstberichteten Müdigkeit und ihrer Auswirkungen auf die täglichen Aktivitäten und Funktionen bei Patienten ab 18 Jahren.">
+			keywords = <"FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Lizenzierung und Urheberrecht: 
+Während die openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jegliche Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.
+
+Von FACIT: Für die kommerzielle Nutzung werden Lizenzgebühren pro Testversion/pro Maßnahme erhoben. Für die Nutzung der englischen Version wird keine Gebühr erhoben, es sollte jedoch eine Lizenz erworben werden. Die nichtkommerzielle Nutzung wird von Fall zu Fall beurteilt. Lizenzgebühren werden in der Regel nicht für von Forschern initiierte Forschung, Studenten oder klinische Nutzung erhoben. Um eine verfügbare Version dieser Maßnahme für kommerzielle oder nicht-kommerzielle Zwecke zu lizenzieren, füllen Sie bitte das Formular auf der FACIT-Website (https://www.facit.org/license-registration-form) aus, BEVOR Sie diesen openEHR-Archetyp in Ihrem System verwenden.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To assesses self-reported fatigue and its impact upon daily activities and function in patients 18 years and older.">
+			keywords = <"FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale", ...>
+			use = <"Licensing and copyright: 
+While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+
+From FACIT: Licensing fees are assessed on a per trial/per measure basis for commercial use. There is no fee for use of the English version, but a license should be obtained. Non-commercial use is assessed on a case-by-case basis. Licensing fees are typically not applied to investigator-initiated research, students, or clinical use. To license an available version of this measure for commercial or non-commercial use, please complete the form at FACIT website (https://www.facit.org/license-registration-form) BEFORE using this openEHR archetype in your system.">
+		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Évaluer la fatigue déclarée et son impact sur les activités et fonctions quotidiennes chez les patients âgés de 18 ans et plus.">
+			keywords = <"FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale", ...>
+			copyright = <"© openEHR Foundation">
+			use = <"Licence et droits d'auteur : 
+Bien que les archétypes de l'OpenEHR soient tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par des droits d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les détenteurs des droits d'auteur.
+
+De FACIT : Les frais de licence sont évalués par essai/par mesure pour l'utilisation commerciale. Il n'y a pas de frais pour l'utilisation de la version anglaise, mais une licence doit être obtenue. L'utilisation non commerciale est évaluée au cas par cas. Les frais de licence ne s'appliquent généralement pas aux recherches menées à l'initiative des chercheurs, aux étudiants ou à l'utilisation clinique. Pour obtenir une licence pour une version disponible de cette mesure à des fins commerciales ou non commerciales, veuillez remplir le formulaire sur le site web de FACIT (https://www.facit.org/license-registration-form) AVANT d'utiliser cet archétype openEHR dans votre système.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Cella D. Lai JS, Chang CH. Peterman A. Slavin M. Fatigue in cancer patients compared with fatigue in the general United States population. Cancer 2002;94:528-38 
+FACIT-Fatigue website: https://www.facit.org/measures/FACIT-Fatigue">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"248b5866c063483169252c1dab856296">
+		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- The past 7 days
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0005] occurrences matches {0..1} matches {    -- Felt fatigued
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Felt weak all over
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Felt listless
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Felt tired
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Had trouble starting things
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0015] occurrences matches {0..1} matches {    -- Had trouble finishing things
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Had energy
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Was able to do usual activities
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0018] occurrences matches {0..1} matches {    -- Needed to sleep during the day
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Was too tired to eat
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0020] occurrences matches {0..1} matches {    -- Needed help to do usual activities
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0021] occurrences matches {0..1} matches {    -- Was frustrated by being too tired to do things
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0022] occurrences matches {0..1} matches {    -- Had to limit social activity due to being tired
+										value matches {
+											0|[local::at0006],
+											1|[local::at0007],
+											2|[local::at0008],
+											3|[local::at0009],
+											4|[local::at0010]
+										}
+									}
+									ELEMENT[at0025] occurrences matches {0..1} matches {    -- FACIT-fatigue total score
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..52|}
+											}
+										}
+									}
+								}
+							}
+						}
+						width matches {
+							DV_DURATION occurrences matches {0..1} matches {
+								value matches {P7D}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0023] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue)">
+					description = <"The Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue) is a 13-item measure that assesses self-reported fatigue and its impact upon daily activities and function. It was developed in the mid-1990’s to meet a growing demand for more precise evaluation of fatigue associated with anemia in cancer patients. The archetype is build on the FACIT Fatigue Scale Version 4.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"The past 7 days">
+					description = <"Original question: \"Below is a list of statements that other people with your illness have said are important. Please circle or mark one number per line to indicate your response as it applies to the past 7 days.\"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Felt fatigued">
+					description = <"Original question: \"I feel fatigued\"">
+					Question_number = <"1">
+					Item_code = <"HI7">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0006"] = <
+					text = <"Not at all">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"A little bit">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Somewhat">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Quite a bit">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Very much">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Felt weak all over">
+					description = <"Original question:\"I feel weak all over\"">
+					Question_number = <"2">
+					Item_code = <"HI12">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0012"] = <
+					text = <"Felt listless">
+					description = <"Original question:\"I feel listless (“washed out”)\"">
+					Question_number = <"3">
+					Item_code = <"An1">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0013"] = <
+					text = <"Felt tired">
+					description = <"Original question:\"I feel tired\"">
+					Question_number = <"4">
+					Item_code = <"An2">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0014"] = <
+					text = <"Had trouble starting things">
+					description = <"Original question:\"I have trouble _starting_ things because I am tired.\"">
+					comment = <"The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form.">
+					Question_number = <"5">
+					Item_code = <"An3">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0015"] = <
+					text = <"Had trouble finishing things">
+					description = <"Original question:\"I have trouble _finishing_ things because I am tired\"">
+					comment = <"The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form.">
+					Question_number = <"6">
+					Item_code = <"An4">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0016"] = <
+					text = <"Had energy">
+					description = <"Original question:\"I have energy\"">
+					Question_number = <"7">
+					Item_code = <"An5">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0017"] = <
+					text = <"Was able to do usual activities">
+					description = <"Original question:\"I am able to do my usual activities\"">
+					Question_number = <"8">
+					Item_code = <"An7">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0018"] = <
+					text = <"Needed to sleep during the day">
+					description = <"Original question:\"I need to sleep during the day\"">
+					Question_number = <"9">
+					Item_code = <"An8">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0019"] = <
+					text = <"Was too tired to eat">
+					description = <"Original question:\"I am too tired to eat\"">
+					Question_number = <"10">
+					Item_code = <"An12">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0020"] = <
+					text = <"Needed help to do usual activities">
+					description = <"Original question:\"I need help doing my usual activities\"">
+					Question_number = <"11">
+					Item_code = <"An14">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0021"] = <
+					text = <"Was frustrated by being too tired to do things">
+					description = <"Original question:\"I am frustrated by being too tired to do the things I want to do\"">
+					Question_number = <"12">
+					Item_code = <"An15">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0022"] = <
+					text = <"Had to limit social activity due to being tired">
+					description = <"Original question:\"I have to limit my social activity because I am tired\"">
+					Question_number = <"13">
+					Item_code = <"An16">
+					Subscale = <"fatigue_subscale">
+				>
+				["at0023"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0025"] = <
+					text = <"FACIT-fatigue total score">
+					description = <"Perform reversals and sum individual items to obtain a score.
+
+Reversals should be done on questions: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+
+A reversal is done by subtracting to the value 4, the  score obtained (element.magnitude.value). 
+e.g. (4 - (item code response HI7, e.g. \"somewhat\") = item_score)
+
+Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
+
+The higher the score, the better the QOL.">
+					comment = <"Example on reversals: 
+- on item code HI7:
+[4 - (item code response HI7, e.g. \"somewhat\") = item_score]
+This would equals 4 - 2 = 2
+
+">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"FACIT-Fatigue Scale">
+					description = <"L'échelle FACIT-Fatigue (Functional Assessment of Chronic Illness Therapy - Fatigue Scale) est un instrument de mesure en 13 points qui évalue la fatigue autodéclarée et son impact sur les activités et fonctions quotidiennes. Elle a été mise au point au milieu des années 1990 pour répondre à une demande croissante d'évaluation plus précise de la fatigue associée à l'anémie chez les patients atteints de cancer. L'archétype est basé sur la version 4 de l'échelle de fatigue FACIT.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Dans les 7 derniers jours">
+					description = <"Question originale: \"Vous trouverez ci-dessous une liste de commentaires que d’autres personnes atteintes de la même maladie que vous ont jugés importants. **Veuillez indiquer votre réponse en entourant un seul chiffre par ligne et en tenant compte des _7 derniers jours._**\"">
+					comment = <"La \"question originale\" utilise la notation Markdown pour capturer le format souligné requis du questionnaire papier original. ">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Je me sens épuisé(e)">
+					description = <"Question originale: \"Je me sens épuisé(e)\"">
+				>
+				["at0006"] = <
+					text = <"Pas du tout">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Un peu">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Moyennement">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Beaucoup">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Énormément">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Je ressens une faiblesse générale">
+					description = <"Question originale: \"Je ressens une faiblesse générale\"">
+				>
+				["at0012"] = <
+					text = <"Je suis sans énergie lessivé(e)">
+					description = <"Question originale: \"Je suis sans énergie [lessivé(e)]\"">
+				>
+				["at0013"] = <
+					text = <"Je me sens fatigué(e)">
+					description = <"Question originale: \"Je me sens fatigué(e)\"">
+				>
+				["at0014"] = <
+					text = <"J'ai du mal à commencer les choses parce que je suis  fatigué(e)">
+					description = <"Question originale: \"J'ai du mal à _commencer_ les choses parce que je suis fatigué(e)\"">
+					comment = <"La \"question originale\" utilise la notation markdown pour noter le format souligné requis du questionnaire papier original. Cela peut être dû au fait qu'il n'y a pas de confusion dans la similitude des questions 5 et 6 dans l'application/le formulaire frontal. ">
+				>
+				["at0015"] = <
+					text = <"J'ai du mal à terminer les choses parce que je suis  fatigué(e)">
+					description = <"Question originale: \"J'ai du mal à terminer les choses parce que je suis fatigué(e)\"">
+					comment = <"La \"question originale\" utilise la notation markdown pour noter le format souligné requis du questionnaire papier original. Cela peut être dû au fait qu'il n'y a pas de confusion dans la similitude des questions 5 et 6 dans l'application/le formulaire frontal. ">
+				>
+				["at0016"] = <
+					text = <"J'ai de l'énergie">
+					description = <"Question originale: \"J'ai de l'énergie\"">
+				>
+				["at0017"] = <
+					text = <"Je suis capable de faire ce que je fais d'habitude">
+					description = <"Question originale: \"Je suis capable de faire ce que je fais d'habitude\"">
+				>
+				["at0018"] = <
+					text = <"J'ai besoin de dormir dans la journée">
+					description = <"Question originale: \"J'ai besoin de dormir dans la journée\"">
+				>
+				["at0019"] = <
+					text = <"Je suis trop fatigué(e) pour manger">
+					description = <"Question originale: \"Je suis trop fatigué(e) pour manger\"">
+				>
+				["at0020"] = <
+					text = <"J’ai besoin d’aide pour faire mes activités habituelles">
+					description = <"Question originale: \"J’ai besoin d’aide pour faire mes activités habituelles\"">
+				>
+				["at0021"] = <
+					text = <"Je suis frustré(e) d'être trop fatigué(e) pour pouvoir  faire ce que je veux">
+					description = <"Question originale: \"Je suis frustré(e) d'être trop fatigué(e) pour pouvoir faire ce que je veux\"">
+				>
+				["at0022"] = <
+					text = <"Je dois limiter mes activités sociales parce que je suis  fatigué(e)">
+					description = <"Question originale: \"Je dois limiter mes activités sociales parce que je suis fatigué(e)\"">
+				>
+				["at0023"] = <
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour étendre le modèle au contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR. ">
+				>
+				["at0025"] = <
+					text = <"Score total FACIT-fatigue">
+					description = <"Effectuez des inversions et additionnez les éléments individuels pour obtenir un score.
+
+Les inversions doivent être effectuées pour les questions : HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+
+Une inversion se fait en soustrayant à la valeur 4, le score obtenu (element.magnitude.value). 
+Par exemple : (4 - (réponse au code de l'élément HI7, par exemple \"un peu\") = item_score)
+
+Multiplier la somme des scores des items par le nombre d'items de la sous-échelle, puis diviser par le nombre d'items auxquels il a été répondu. On obtient ainsi le score de la sous-échelle.
+
+Plus le score est élevé, meilleure est la qualité de vie. ">
+					comment = <"Exemple d'inversion : 
+- sur le code de l'item HI7 :
+[4 - (code de réponse à l'item HI7, par exemple \"un peu\") = item_score].
+Cela équivaudrait à 4 - 2 = 2">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"FACIT-Erschöpfung">
+					description = <"Die Functional Assessment of Chronic Illness Therapy - Fatigue Scale (FACIT-Fatigue) ist ein 13-teiliger Fragebogen zur Bewertung der selbstberichteten Müdigkeit und ihrer Auswirkungen auf die täglichen Aktivitäten und Funktionen. Sie wurde Mitte der 1990er Jahre entwickelt, um der wachsenden Nachfrage nach einer präziseren Bewertung der mit Anämie verbundenen Müdigkeit bei Krebspatienten gerecht zu werden. Der Archetyp basiert auf der FACIT Fatigue Scale fassung 4.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Die letzten 7 Tage">
+					description = <"Originalfrage: \"Nachfolgend finden Sie eine Liste von Aussagen, die von anderen Personen mit Ihrer Krankheit für wichtig befunden wurden. **Bitte geben Sie jeweils an, wie sehr jede der folgenden Aussagen _im Laufe der letzten 7 Tage_ auf Sie zugetroffen hat, indem Sie die entsprechende Zahl ankreuzen.**\"">
+					comment = <"Die \"Originalfrage\" verwendet die Markdown-Notation, um das erforderliche unterstrichene Format des ursprünglichen Papierfragebogens zu erfassen. ">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Ich bin erschöpft">
+					description = <"Originalfrage: \"Ich bin erschöpft\"">
+				>
+				["at0006"] = <
+					text = <"Überhaupt nicht">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Ein wenig">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Mäßig">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Ziemlich">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Sehr">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Ich fühle mich insgesamt schwach">
+					description = <"Originalfrage:\"Ich fühle mich insgesamt schwach\"">
+				>
+				["at0012"] = <
+					text = <"Ich fühle mich lustlos (ausgelaugt)">
+					description = <"Originalfrage:\" Ich fühle mich lustlos (ausgelaugt)\"">
+				>
+				["at0013"] = <
+					text = <"Ich bin müde">
+					description = <"Originalfrage:\"Ich bin müde \"">
+				>
+				["at0014"] = <
+					text = <"Es fällt mir schwer, etwas anzufangen, weil ich müde bin">
+					description = <"Originalfrage:\"Es fällt mir schwer, etwas _anzufangen_, weil ich müde bin\"">
+					comment = <"Die \"Originalfrage\" verwendet die Markdown-Notation, um das erforderliche unterstrichene Format des ursprünglichen Papierfragebogens zu erfassen. Dies könnte darauf zurückzuführen sein, dass die Ähnlichkeit der Fragen Nr. 5 und 6 in der Front-End-App/dem Front-End-Formular nicht verwirrt.">
+				>
+				["at0015"] = <
+					text = <"Es fällt mir schwer, etwas zu Ende zu führen, weil ich müde bin">
+					description = <"Originalfrage:\"Es fällt mir schwer, etwas _zu Ende zu führen_, weil ich müde bin\"">
+					comment = <"Die \"Originalfrage\" verwendet die Markdown-Notation, um das erforderliche unterstrichene Format des ursprünglichen Papierfragebogens zu erfassen. Dies könnte darauf zurückzuführen sein, dass die Ähnlichkeit der Fragen Nr. 5 und 6 in der Front-End-App/dem Front-End-Formular nicht verwirrt.">
+				>
+				["at0016"] = <
+					text = <"Ich habe Energie">
+					description = <"Originalfrage:\"Ich habe Energie\"">
+				>
+				["at0017"] = <
+					text = <"Ich bin in der Lage, meinen gewohnten Aktivitäten nachzugehen (Beruf, Einkaufen, Schule, Freizeit, Sport usw.)">
+					description = <"Originalfrage:\" \"">
+				>
+				["at0018"] = <
+					text = <"Ich habe das Bedürfnis, tagsüber zu schlafen">
+					description = <"Originalfrage:\" \"">
+				>
+				["at0019"] = <
+					text = <"Ich bin zu müde, um zu essen">
+					description = <"Originalfrage:\" \"">
+				>
+				["at0020"] = <
+					text = <"Ich brauche Hilfe bei meinen gewohnten Aktivitäten (Beruf, Einkaufen, Schule, Freizeit, Sport usw.)">
+					description = <"Originalfrage:\" \"">
+				>
+				["at0021"] = <
+					text = <"Ich bin frustriert, weil ich zu müde bin, die Dinge zu tun, die ich machen möchte">
+					description = <"Originalfrage:\" \"">
+				>
+				["at0022"] = <
+					text = <"Ich muss meine sozialen Aktivitäten einschränken, weil ich müde bin">
+					description = <"Originalfrage:\" \"">
+				>
+				["at0023"] = <
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen, die zur Erfassung lokaler Inhalte oder zur Anpassung an andere Referenzmodelle/Formalismen erforderlich sind.">
+					comment = <"Zum Beispiel: Lokale Informationsanforderungen oder zusätzliche Metadaten, um Verknüpfungen mit FHIR oder CIMI Äquivalenten herzustellen.">
+				>
+				["at0025"] = <
+					text = <"FACIT-Gesamtwertung für Müdigkeit">
+					description = <"Führen Sie Umkehrungen durch und addieren Sie die einzelnen Aufgaben, um eine Punktzahl zu erhalten.
+
+Die Umkehrungen sollten bei folgenden Fragen durchgeführt werden: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+
+Eine Umkehrung erfolgt durch Subtraktion der erhaltenen Punktzahl (element.magnitude.value) von dem Wert 4. 
+z. B. (4 - (Itemcode-Antwort HI7, z. B. \"etwas\") = item_score)
+
+Multiplizieren Sie die Summe der Item-Scores mit der Anzahl der Items in der Subskala und dividieren Sie dann durch die Anzahl der beantworteten Items. Dies ergibt die Punktzahl der Subskala.
+
+Je höher die Punktzahl, desto besser ist die Lebensqualität. ">
+					comment = <"Beispiel für Stornierungen: 
+- bei Itemcode HI7:
+[4 - (Itemcode-Antwort HI7, z. B. \"etwas\") = item_score]
+Dies entspräche 4 - 2 = 2">
+				>
+			>
+		>
+	>
