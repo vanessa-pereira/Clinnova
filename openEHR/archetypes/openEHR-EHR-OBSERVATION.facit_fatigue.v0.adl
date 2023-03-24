@@ -49,25 +49,25 @@ From FACIT: Licensing fees are assessed on a per trial/per measure basis for com
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			purpose = <"*To assesses self-reported fatigue and its impact upon daily activities and function in patients 18 years and older. (en)">
-			keywords = <"*FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale (en)", ...>
+			purpose = <"Évaluer la fatigue déclarée et son impact sur les activités et fonctions quotidiennes chez les patients âgés de 18 ans et plus.">
+			keywords = <"FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale", ...>
 			copyright = <"© openEHR Foundation">
-			use = <"*Licensing and copyright: 
-While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.
+			use = <"Licence et droits d'auteur : 
+Bien que les archétypes de l'OpenEHR soient tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par des droits d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les détenteurs des droits d'auteur.
 
-From FACIT: Licensing fees are assessed on a per trial/per measure basis for commercial use. There is no fee for use of the English version, but a license should be obtained. Non-commercial use is assessed on a case-by-case basis. Licensing fees are typically not applied to investigator-initiated research, students, or clinical use. To license an available version of this measure for commercial or non-commercial use, please complete the form at FACIT website (https://www.facit.org/license-registration-form) BEFORE using this openEHR archetype in your system. (en)">
+De FACIT : Les frais de licence sont évalués par essai/par mesure pour l'utilisation commerciale. Il n'y a pas de frais pour l'utilisation de la version anglaise, mais une licence doit être obtenue. L'utilisation non commerciale est évaluée au cas par cas. Les frais de licence ne s'appliquent généralement pas aux recherches menées à l'initiative des chercheurs, aux étudiants ou à l'utilisation clinique. Pour obtenir une licence pour une version disponible de cette mesure à des fins commerciales ou non commerciales, veuillez remplir le formulaire sur le site web de FACIT (https://www.facit.org/license-registration-form) AVANT d'utiliser cet archétype openEHR dans votre système.">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Cella D. Lai JS, Chang CH. Peterman A. Slavin M. Fatigue in cancer patients compared with fatigue in the general United States population. Cancer 2002;94:528-38 
+FACIT-Fatigue website: https://www.facit.org/measures/FACIT-Fatigue">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"cfc1f00d7ed3d06d7e3e16dd109619a1">
+		["MD5-CAM-1.0.1"] = <"6c873926e32bff129524f7150929f541">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
-		["references"] = <"Cella D. Lai JS, Chang CH. Peterman A. Slavin M. Fatigue in cancer patients compared with fatigue in the general United States population. Cancer 2002;94:528-38 
-FACIT-Fatigue website: ">
 	>
 
 definition
@@ -386,16 +386,17 @@ The higher the score, the better the QOL.">
 		["fr"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue) (en)">
-					description = <"*The Functional Assessment of Chronic Illness Therapy – Fatigue Scale (FACIT-Fatigue) is a 13-item measure that assesses self-reported fatigue and its impact upon daily activities and function. It was developed in the mid-1990’s to meet a growing demand for more precise evaluation of fatigue associated with anemia in cancer patients. The archetype is build on the FACIT Fatigue Scale Version 4. (en)">
+					text = <"FACIT-Fatigue Scale">
+					description = <"L'échelle FACIT-Fatigue (Functional Assessment of Chronic Illness Therapy - Fatigue Scale) est un instrument de mesure en 13 points qui évalue la fatigue autodéclarée et son impact sur les activités et fonctions quotidiennes. Elle a été mise au point au milieu des années 1990 pour répondre à une demande croissante d'évaluation plus précise de la fatigue associée à l'anémie chez les patients atteints de cancer. L'archétype est basé sur la version 4 de l'échelle de fatigue FACIT.">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"*The past 7 days (en)">
-					description = <"*Original question: \"Below is a list of statements that other people with your illness have said are important. Please circle or mark one number per line to indicate your response as it applies to the past 7 days.\" (en)">
+					text = <"Dans les 7 derniers jours">
+					description = <"Question originale: \"Vous trouverez ci-dessous une liste de commentaires que d’autres personnes atteintes de la même maladie que vous ont jugés importants. **Veuillez indiquer votre réponse en entourant un seul chiffre par ligne et en tenant compte des _7 derniers jours._**\"">
+					comment = <"La \"question originale\" utilise la notation Markdown pour capturer le format souligné requis du questionnaire papier original. ">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -406,95 +407,95 @@ The higher the score, the better the QOL.">
 					description = <"@ internal @">
 				>
 				["at0005"] = <
-					text = <"*Felt fatigued (en)">
-					description = <"*Original question: \"I feel fatigued\" (en)">
+					text = <"Je me sens épuisé(e)">
+					description = <"Question originale: \"Je me sens épuisé(e)\"">
 				>
 				["at0006"] = <
-					text = <"*Not at all (en)">
+					text = <"Pas du tout">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*A little bit (en)">
+					text = <"Un peu">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*Somewhat (en)">
+					text = <"Moyennement">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Quite a bit (en)">
+					text = <"Beaucoup">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Very much (en)">
+					text = <"Énormément">
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"*Felt weak all over (en)">
-					description = <"*Original question:\"I feel weak all over\" (en)">
+					text = <"Je ressens une faiblesse générale">
+					description = <"Question originale: \"Je ressens une faiblesse générale\"">
 				>
 				["at0012"] = <
-					text = <"*Felt listless (en)">
-					description = <"*Original question:\"I feel listless (“washed out”)\" (en)">
+					text = <"Je suis sans énergie lessivé(e)">
+					description = <"Question originale: \"Je suis sans énergie [lessivé(e)]\"">
 				>
 				["at0013"] = <
-					text = <"*Felt tired (en)">
-					description = <"*Original question:\"I feel tired\" (en)">
+					text = <"Je me sens fatigué(e)">
+					description = <"Question originale: \"Je me sens fatigué(e)\"">
 				>
 				["at0014"] = <
-					text = <"*Had trouble starting things (en)">
-					description = <"*Original question:\"I have trouble _starting_ things because I am tired.\" (en)">
-					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+					text = <"J'ai du mal à commencer les choses parce que je suis  fatigué(e)">
+					description = <"Question originale: \"J'ai du mal à _commencer_ les choses parce que je suis fatigué(e)\"">
+					comment = <"La \"question originale\" utilise la notation markdown pour noter le format souligné requis du questionnaire papier original. Cela peut être dû au fait qu'il n'y a pas de confusion dans la similitude des questions 5 et 6 dans l'application/le formulaire frontal. ">
 				>
 				["at0015"] = <
-					text = <"*Had trouble finishing things (en)">
-					description = <"*Original question:\"I have trouble _finishing_ things because I am tired\" (en)">
-					comment = <"*The \"original question\" is using markdown notation to note the required underlined format of the original paper questionnaire. This might be due to avoid confusion in the similarity if questions number 5 and 6 in the front-end app/form. (en)">
+					text = <"J'ai du mal à terminer les choses parce que je suis  fatigué(e)">
+					description = <"Question originale: \"J'ai du mal à terminer les choses parce que je suis fatigué(e)\"">
+					comment = <"La \"question originale\" utilise la notation markdown pour noter le format souligné requis du questionnaire papier original. Cela peut être dû au fait qu'il n'y a pas de confusion dans la similitude des questions 5 et 6 dans l'application/le formulaire frontal. ">
 				>
 				["at0016"] = <
-					text = <"*Had energy (en)">
-					description = <"*Original question:\"I have energy\" (en)">
+					text = <"J'ai de l'énergie">
+					description = <"Question originale: \"J'ai de l'énergie\"">
 				>
 				["at0017"] = <
-					text = <"*Was able to do usual activities (en)">
-					description = <"*Original question:\"I am able to do my usual activities\" (en)">
+					text = <"Je suis capable de faire ce que je fais d'habitude">
+					description = <"Question originale: \"Je suis capable de faire ce que je fais d'habitude\"">
 				>
 				["at0018"] = <
-					text = <"*Needed to sleep during the day (en)">
-					description = <"*Original question:\"I need to sleep during the day\" (en)">
+					text = <"J'ai besoin de dormir dans la journée">
+					description = <"Question originale: \"J'ai besoin de dormir dans la journée\"">
 				>
 				["at0019"] = <
-					text = <"*Was too tired to eat (en)">
-					description = <"*Original question:\"I am too tired to eat\" (en)">
+					text = <"Je suis trop fatigué(e) pour manger">
+					description = <"Question originale: \"Je suis trop fatigué(e) pour manger\"">
 				>
 				["at0020"] = <
-					text = <"*Needed help to do usual activities (en)">
-					description = <"*Original question:\"I need help doing my usual activities\" (en)">
+					text = <"J’ai besoin d’aide pour faire mes activités habituelles">
+					description = <"Question originale: \"J’ai besoin d’aide pour faire mes activités habituelles\"">
 				>
 				["at0021"] = <
-					text = <"*Was frustrated by being too tired to do things (en)">
-					description = <"*Original question:\"I am frustrated by being too tired to do the things I want to do\" (en)">
+					text = <"Je suis frustré(e) d'être trop fatigué(e) pour pouvoir  faire ce que je veux">
+					description = <"Question originale: \"Je suis frustré(e) d'être trop fatigué(e) pour pouvoir faire ce que je veux\"">
 				>
 				["at0022"] = <
-					text = <"*Had to limit social activity due to being tired (en)">
-					description = <"*Original question:\"I have to limit my social activity because I am tired\" (en)">
+					text = <"Je dois limiter mes activités sociales parce que je suis  fatigué(e)">
+					description = <"Question originale: \"Je dois limiter mes activités sociales parce que je suis fatigué(e)\"">
 				>
 				["at0023"] = <
-					text = <"*Extension (en)">
-					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
-					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+					text = <"Extension">
+					description = <"Informations supplémentaires nécessaires pour étendre le modèle au contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.">
+					comment = <"Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR. ">
 				>
 				["at0025"] = <
-					text = <"*FACIT-fatigue total score (en)">
-					description = <"*Perform reversals and sum individual items to obtain a score.
+					text = <"Score total FACIT-fatigue">
+					description = <"Effectuez des inversions et additionnez les éléments individuels pour obtenir un score.
 
-Reversals should be done on: HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
+Les inversions doivent être effectuées sur : HI7, HI12, An1, An2, An3, An4, An8, An12, An14, An15, An16.
 
-A reversal is multiplying the score of the question (element.magnitude.value) by 1/4.
+Une inversion consiste à multiplier le score de la question (élément.magnitude.valeur) par 1/4.
 
-Multiply the sum of the item scores by the number of items in the subscale, then divide by the number of items answered. This produces the subscale score.
+Multipliez la somme des scores des items par le nombre d'items de la sous-échelle, puis divisez par le nombre d'items auxquels vous avez répondu. On obtient ainsi le score de la sous-échelle.
 
-The higher the score, the better the QOL. (en)">
+Plus le score est élevé, meilleure est la qualité de vie.">
 				>
 			>
 		>
@@ -526,23 +527,23 @@ The higher the score, the better the QOL. (en)">
 					description = <"Originalfrage: \"Ich bin erschöpft\"">
 				>
 				["at0006"] = <
-					text = <"*Not at all (en)">
+					text = <"Überhaupt nicht">
 					description = <"">
 				>
 				["at0007"] = <
-					text = <"*A little bit (en)">
+					text = <"Ein wenig">
 					description = <"">
 				>
 				["at0008"] = <
-					text = <"*Somewhat (en)">
+					text = <"Mäßig">
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"*Quite a bit (en)">
+					text = <"Ziemlich">
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"*Very much (en)">
+					text = <"Sehr">
 					description = <"">
 				>
 				["at0011"] = <
@@ -596,9 +597,9 @@ The higher the score, the better the QOL. (en)">
 					description = <"Originalfrage:\" \"">
 				>
 				["at0023"] = <
-					text = <"*Extension (en)">
-					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
-					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+					text = <"Erweiterung">
+					description = <"Zusätzliche Informationen, die zur Erfassung lokaler Inhalte oder zur Anpassung an andere Referenzmodelle/Formalismen erforderlich sind.">
+					comment = <"Zum Beispiel: Lokale Informationsanforderungen oder zusätzliche Metadaten, um Verknüpfungen mit FHIR oder CIMI Äquivalenten herzustellen.">
 				>
 				["at0025"] = <
 					text = <"FACIT-Gesamtwertung für Müdigkeit">
