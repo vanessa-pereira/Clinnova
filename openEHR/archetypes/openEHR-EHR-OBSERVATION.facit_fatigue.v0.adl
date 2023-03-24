@@ -31,7 +31,7 @@ description
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Bewertung der selbstberichteten Müdigkeit und ihrer Auswirkungen auf die täglichen Aktivitäten und Funktionen bei Patienten ab 18 Jahren.">
-			keywords = <"*FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale (en)", ...>
+			keywords = <"FACIT-Fatigue, FACIT, fatigue, PROM, proms, patient reported outcomes, Functional Assessment of Chronic Illness Therapy – Fatigue Scale", ...>
 			copyright = <"© openEHR Foundation">
 			use = <"Lizenzierung und Urheberrecht: 
 Während die openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jegliche Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.
@@ -66,6 +66,8 @@ From FACIT: Licensing fees are assessed on a per trial/per measure basis for com
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"cfc1f00d7ed3d06d7e3e16dd109619a1">
 		["build_uid"] = <"3375d724-0132-3800-b581-acbf9747437f">
+		["references"] = <"Cella D. Lai JS, Chang CH. Peterman A. Slavin M. Fatigue in cancer patients compared with fatigue in the general United States population. Cancer 2002;94:528-38 
+FACIT-Fatigue website: ">
 	>
 
 definition
