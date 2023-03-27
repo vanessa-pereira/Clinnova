@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "52b6f6cd-390f-4066-8f3f-1d5259c70cde",
-      "MD5-CAM-1.0.1" : "2ad0db7e4cca51f8f6ce9381dae1865c",
+      "MD5-CAM-1.0.1" : "9b1781ef17067e1bd07670435e5fb568",
       "PARENT:MD5-CAM-1.0.1" : "782C49493E523506E8C34B7C5CF7B761"
     },
     "details" : {
@@ -243,15 +243,6 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.14",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-fss-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
         "nodeId" : "at0.16",
         "attributes" : [ ],
         "attributeTuples" : [ ],
@@ -292,6 +283,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-ipaq_sf-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.26",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-facit_fatigue-001.v0",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -382,7 +382,118 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "EEC8640C1336806D602A1BC344D4F733"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Erfassung der Daten eines Medizingerätes, welches in der Gesundheitsversorgung eingesetzt wird.",
+          "keywords" : [ "Medizingerät", "Maschine", "Implantat", "Gerät", "Katheter", "Prothese", "Hilfsmittel", "biomedizinisch", "Instrument", "Gerätschaften", "Ausrüstung", "Messgerät", "Monitor", "Software" ],
+          "use" : "Zur Erfassung der Details eines Medizingerätes, welches in der Gesundheitsversorgung eingesetzt wird.\r\n\r\nDie Verwendung des Begriffs \"Medizingerät\" variiert je nach Kontext. In der Welt der Standards bezieht sich der Begriff „Gerät“ in der Regel auf mechanische oder elektronische Geräte, die das Gesundheitswesen unterstützen und eine strenge Dokumentation in Bezug auf Standortverfolgung, Wartung, Kalibrierung, Softwareversionen usw. erfordern. Im terminologischen Kontext ist die Verwendung von Medizingeräten sehr weit verbreitet, einschließlich aller medizinischen Produkte, die für die direkte oder indirekte Bereitstellung der klinischen Versorgung verwendet werden können, sofern sie nicht auf eine Weise wirken, die eine direkte pharmakologische, metabolische oder immunologische Wirkung hat.\r\n\r\nBeispiele für medizinische Geräte reichen von einfachen Geräten wie Blasenkathetern, Zungenspateln, Kontaktlinsen, künstlichen Gelenkimplantaten, Brustimplantaten und einfachen\r\nVerbänden bis hin zu fortschrittlichen Geräten wie künstlichen Herzen, Spritzenpumpen, Spirometern, Anwendungen für Mobiltelefone und computergestützten Geräten zur Erfassung medizinischer Point-of-Care-Messungen. \r\n\r\nIn der komplexen Situation, in der ein chirurgisch implantiertes Gerät als Mittel zur Abgabe von Therapeutika, wie bei einer Chemotherapie direkt in den Körper verwendet wird, werden mit diesem Archetyp nur die Details des Medizinprodukts selbst, sowie die Bestellung von Medikamenten und Details zum Medikament aufgezeichnet. Die tatsächliche Verabreichung des therapeutischen Mittels wird unter Verwendung spezifischer arzneimittelbezogener Instruktions- und Aktionsarchetypen aufgezeichnet. \r\n\r\nDieser Archetyp soll das Gerüst für die strukturierte Darstellung von Medizingeräten bereitstellen. Die hier enthaltenen Datenelemente sind für keinen Gerätetyp spezifisch. Für Einmalprodukte sind normalerweise Datenelemente wie Chargennummer und Verfallsdatum erforderlich. Im Gegensatz dazu sind diese normalerweise nicht relevant für langlebige Geräte, die häufig eine Reihe von Kennungen aufweisen, einschließlich UID, Seriennummer, Modell usw.\r\n\r\nDarüber hinaus erfordern verschiedene Arten von Geräten spezifische Informationen, die für ihren Zweck relevant sind. Diese Daten können mithilfe bestimmter CLUSTER-Archetypen aufgezeichnet werden, die im SLOT \"Specific Properties\" (Spezifische Eigenschaften) eingefügt sind. Zum Beispiel: Für die Verwendung eines Harnkatheters sind möglicherweise zusätzliche Angaben zum Durchmesser und der Länge des Katheters, Materialzusammensetzung, Anzahl der Lumen usw. erforderlich.\r\n\r\nWenn das Medizinprodukt eine Reihe von Komponenten enthält, welche für eine Aufzeichnung von Details erforderlich ist, sollte jede einzelne Komponente explizit unter Verwendung eines zusätzlichen Archetyps CLUSTER.device aufgezeichnet werden, der in den SLOT 'Components' eingefügt wird.\r\n\r\nIm Datenfeld 'Software-Version' kann nur eine Version erfasst werden. Dies gilt hauptsächlich für ein Gerät, bei dem es sich um ausschließlich eine Softwareanwendung handelt. Wenn das Gerät über mehrere Software- oder Hardwarekomponenten verfügt, die spezifiziert werden müssen, sollte dies unter Verwendung des Zusatzes CLUSTER.device erfolgen, der in den SLOT 'Components' eingefügt wird.\r\n\r\nVerwenden Sie den Archetyp CLUSTER.device_details, der in den SLOT 'Asset Management' in diesem Archetyp eingefügt ist, um zusätzliche Details für dauerhafte oder andauernde Geräte aufzuzeichnen, die sich auf den Besitz, die Verfolgung des physischen Standorts, Wartungspläne usw. beziehen.\r\n\r\nDieser Archetyp wurde für die allgemeine Verwendung in anderen Archetypen entwickelt, die ein Gerät beschreiben müssen. Beispiele sind: OBSERVATION.blood_pressure für das Blutdruckmessgerät; OBSERVATION.ecg für das EKG-Gerät; BEOBACHTUNG.Urinanalyse der Reagenzstreifen und der zum Testen verwendeten Vorrichtung; ACTION.procedure; und CLUSTER.exam_tympanic_membrane, um das verwendete Otoskop zu beschreiben.",
+          "misuse" : "Nicht zur Aufzeichnung von Daten bezüglich der Medizinprodukte, die eine direkte pharmakologische, metabolische oder immunologische Wirkung\r\nhaben, verwenden. Zum Beispiel: Ein mit Arzneimitteln imprägnierter Verband, für den ein Rezept erforderlich ist, sollte unter Verwendung des Archetyps INSTRUCTION.medication_order aufgezeichnet werden, der sich\r\nauf die Wirkstoffe, die Dosierung usw. konzentriert.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en medicinsk utrustning som används vid tillhandahållandet av hälso- och sjukvård.",
+          "keywords" : [ "utrustning", "maskin", "implantera", "apparat", "kateter", "protes", "aid", "biomedicinsk", "instrument", "Utrustning", "meter", "övervaka", "programvara" ],
+          "use" : "Arketypen används för att registrera information om en medicinsk utrustning. Medicinsk utrustning används vid tillhandahållande av hälso- och sjukvård.\r\nAnvändningen av termen \"medicinsk utrustning\" varierar beroende på sammanhanget. Termen utrustning enligt standarder används för att beskriva mekaniska eller elektroniska produkter som stöder hälso- och sjukvård och kräver noggrann dokumentation om platsspårning, underhåll, kalibrering, programvaruversioner etc. Inom terminologin, användningen av termen utrustning är mycket bred. Det inkluderar alla medicinska utrustningar som kan användas i direkt eller indirekt tillhandahållande av klinisk vård. Termen används inte för de utrustning som registrerar data om läkemedel som har en direkt farmakologisk, metabolisk eller immunologisk effekt. \r\n\r\nExempel på medicintekniska produkter: enkla apparater urinkatetrar, tungdämpare, kontaktlinser, konstgjorda ledimplantat, bröstimplantat. Samt vanliga förband till avancerade utrustningar som konstgjorda hjärtan, sprutdrivare, spirometrar, mobiltelefonapplikationer, även datoriserade utrustningar som fångar upp sjukvårdsmedicinska mätningar.\r\n\r\nDenna arketyp kan användas för att beskrivautrustningar som används i komplicerade situationer, för exempel: i ett fall där en kirurgiskt implanterad utrustning används för att leverera terapeutiska medel direkt in i kroppen i en kemoterapi behandling. Fast används arketypen medicinsk utrustning för att bara registrera detaljerna om själva den medicinska utrustningen och inte behandlingen. Beställningen för medicinering och detaljer om faktiska administrering av det terapeutiska medlet kommer att registreras med hjälp av specifika läkemedelsrelaterade INSTRUKTIONS- och HANDLINGS-arketyper.\r\n\r\nDen här arketypen är designad för att ge ramverk för en strukturerad representation av medicinsk utrustning. Dataelementen i arketypen är inte specifika för någon typ av utrustning. Utrustningar för engångsbruk kräver vanligtvis dataelement som partinummer och utgångsdatum. Däremot är dessa vanligtvis inte relevanta för hållbara utrustningar som ofta har en uppsättning av identifierare, inklusive ett UID, serienummer, modell etc.\r\n\r\nOlika typer av utrustningar kommer att kräva ha specifik information som är relevant för utrustningens syfte. Dessa data kan registreras med specifika CLUSTER-arketyper infogade i SLOT för 'Specifika egenskaper'. Till exempel: användning av en urinkatet kan kräva ytterligare detaljer om kateterns diameter och längd, materialkomposition, antal lumen etc.\r\n\r\nOm den medicinska utrustningen har ett antal komponenter som kräver registrering av detaljer, bör varje enskild komponent registreras med hjälp av en extra CLUSTER.device-arketyp som sätts in i \"Components\" SLOT.\r\n\r\nDatafältet 'Programvara version' gör det möjligt att bara en enda version blir registrerad. Detta gäller främst för en utrustning som är en programvara. Om utrustningen har flera programvara- eller hårdvara komponenter som behöver specificeras, bör detta göras med hjälp av ett tillägg CLUSTER.device som sätts in i 'Components' SLOT.\r\n\r\nDenna arketyp har designats för generisk användning inom andra arketyper. d.v.s. Arketyper som behöver beskriva en utrustning. Exempel är: OBSERVATION.blood_pressure för blodtrycksmätaren; OBSERVATION.ecg för EKG-maskinen; OBSERVATION. Urinanalys för reagensremsorna och anordningen som används för testning; ACTION.procedure; och CLUSTER.exam_tympanic_membrane för att specificera det använda otoskopet.",
+          "misuse" : "Får inte användas för att registrera data om läkemedel som har en direkt farmakologisk, metabolisk eller immunologisk effekt. Till exempel: ett läkemedelsimpregnerat förband som kräver recept bör registreras med hjälp av INSTRUCTION.medication_order-arketypen, med fokus på de aktiva ingredienserna, dosering etc. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om medisinsk utstyr benyttet i utførelsen av helsetjenester.",
+          "keywords" : [ "medisinsk utstyr", "maskin", "implantat", "apparat", "kateter", "protese", "hjelpemiddel", "instrument", "utstyr", "måler", "monitor", "software", "programvare", "MTU", "medisinsk teknisk utstyr", "MU" ],
+          "use" : "Benyttes for å registrere detaljer om medisinsk utstyr benyttet i utførelsen av helsetjenester.\r\n\r\nTermen \"medisinsk utstyr\" varierer med ulike kontekster. Innen standardisering refererer termen ofte til mekanisk eller elektronisk utstyr som støtter helsetjenesten og krever streng dokumentasjon rundt lokalisering, vedlikehold, kalibrering, programvareversjoner etc. I en terminologikontekst er bruken av \"medisinsk utstyr\" veldig bred, og inkluderer et hvilket som helst medisinsk utstyr som benyttes direkte eller indirekte i utførelsen av helsetjenester. Unntak er utstyr som har en direkte farmakologisk, metabolsk og immunologisk effekt. \r\n\r\nEksempler på medisinsk utstyr strekker seg fra enkelt utstyr som urinkatetre, spatler, kontaktlinser, leddproteser, brystimplantater, bandasjer, hofteproteser, sprøytepumper og spirometre, til avansert utstyr som kunstige hjerter, mobiltelefonapplikasjoner og pasientnære datastyrte enheter for å fange opp medisinske målinger.\r\n\r\nI en kompleks setting hvor en kirurgisk implantert enhet skal brukes for å tilføre et legemiddel, for eksempel cellegift direkte i kroppen, vil denne arketypen kun registrere detaljer om det medisinske utstyret. Ordinasjonen og detaljer rundt den faktiske administrasjonen av legemidlet vil bli lagret i spesifikke medikasjonsrelaterte INSTRUCTION og ACTION-arketyper \r\n\r\nDenne arketypen er designet for å gi et rammeverk for strukturert representasjon av et hvilket som helst medisinsk utstyr, og dataelementene i arketypen er ikke spesifikke for en enkelt type utstyr. Engangsutstyr vil vanligvis kreve registrering av lot-nummer og utløpsdato, i motsetning til flergangsutstyr som vil kreve en rekke identifikatorer som UID, serienummer, modell etc.\r\n\r\nUlikt utstyr vil kunne kreve spesifikk informasjon som er relevant for deres bruksområde. Data om dette kan lagres i spesifikke CLUSTER-arketyper lagt til i SLOTet \"Spesifikke detaljer\". For eksempel: Ved bruk av et urinkateter vil man kunne ønske å registrere tilleggsinformasjon som diameter og lengde på kateteret, hvilke materialer kateteret består av, antall lumen osv.\r\n\r\nHar det medisinske utstyret flere komponenter som krever registrering av detaljer må hver komponent registreres i egen CLUSTER.device arketype lagt til i SLOTet \"Komponent\".\r\n\r\nDatafeltet \"Programvareversjon\" tillater at kun en versjon registreres. Feltet benyttes i hovedsak for medisinsk utstyr som er en programvareapplikasjon. Har det medisinske utstyret flere programvare- eller maskinvarekomponenter som må spesifiseres, gjøres dette ved å legge til en ny CLUSTER.device i \"Komponent\"-SLOTet.\r\n\r\nFor å registrere tilleggsinformasjon for varig eller permanent utstyr som omhandler eierskap, fysisk lokalisering, vedlikeholdsplaner etc, bruk CLUSTER.device_details-arketypen lagt til i SLOTet \"Forvaltning av det medisinske utstyret\" i denne arketypen.\r\n\r\nArketypen er designet for generisk bruk i andre arketyper der man trenger å beskrive medisinsk utstyr. Eksempler: OBSERVATION.blood_pressure for sfygmomanometer, OBSERVATION.ecg for EKG-appararatet, OBSERVATION.urinalysis for urinstix og utstyr som brukes for testing, ACTION.procedure og CLUSTER.exam_tympanic_membrane for detaljer om otoskopet som er benyttet.",
+          "misuse" : "Brukes ikke for å registrere data om medisinske produkter som utøver en direkte farmakologisk, metabolsk eller immunologisk effekt. For eksempel: En bandasje som inneholder et medikament som krever resept registreres i arketypen INSTRUCTION.medication_order, med fokus på aktive ingredienser, dose etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar los detalles de un objeto físico, producto o dispositivo utilizado en el sentido mas amplio de la provisión de cuidados de la salud, pero no como medio terapéutico o metabólico.",
+          "keywords" : [ "dispositivo", "máquina", "implante", "cateter", "prótesis", "auxiliar", "biomédico", "instrumento", "equipamiento", "medidor", "monitor", "físico", "objeto" ],
+          "use" : "Utilizado para registrar los detalles de cualquier dispositivo genérico que puede ser utilizado directamente de un modo terapéutico o diagnóstico, o indirectamente como apoyo a la provisión de cuidados de la salud. El uso del término dispositivo varía dependiendo del contexto. En el mundo de los estándares, el término dispositivo tiende a referirse a dispositivos mecánicos o electrónicos que actuan como apoyo del cuidado de la salud y que requiren documentación rigurosa en cuanto a especificaciones, mantenimiento, etc. En el contexto de las terminologías, el uso de dispositivo es muy amplio, incluyendo a cualquier objeto físico que pueda ser utilizado directa o indirectamente en la provisión de cuidados clínicos. Los ejemplos incluyen ventiladores, medidores de flujo expiratorio máximo, espirómetros, lentes oculares y de contacto, catéteres endovasculares, implantes mamarios, prótesis, tubos de drenaje y anillos para callos. \r\nEste arquetipo esta diseñado para proveer la base de una representación estructurada de cualquier dispositivo, desde el simple ejemplo de una marca de tira reactiva urinaria con una fecha de vencimiento hasta un oído biónico implantable que puede requerir documentación compleja, software, hardware, mantenimiento, calibración, etc.\r\nPara los casos de uso habituales podría ser apropiada la especialización de este arquetipo para formas específicas (ej.: cateter endovascular o cateter urinario).",
+          "misuse" : "No debe ser utilizado para el registro de medicamentos, vacunas o similares, que se utizan como medios terapéuticos o metabólicos.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar os detalhes de um dispositivo médico usado na prestação de cuidados de saúde.",
+          "keywords" : [ "dispositivo", "máquina", "implante", "catéter", "prótese", "cuidado", "biomedical", "instrumento", "equipamento", "monitor", "software", "utensílio" ],
+          "use" : "Use para gravar os detalhes de um dispositivo médico utilizado na prestação de cuidados de saúde .\r\n\r\nO uso do termo \"dispositivo médico\" varia dependendo do contexto. No mundo dos padrões, o termo dispositivo tende a referir-se a dispositivos mecânicos ou eletrônicos que apoiam cuidados de saúde e exigem documentação rigorosa sobre rastreamento de localização, manutenção, calibração, versões de software etc. Dentro do contexto da terminologia o uso de dispositivo é muito amplo , incluindo qualquer dispositivo médico que pode ser utilizado direta ou indiretamente em cuidados clínicos , desde que não atue de forma que exerça uma ação farmacológica direta , metabólica ou como efeito imunológico .\r\n\r\nOs dispositivos médicos variam de dispositivos simples, como catéteres urinários, abaixadores de língua, lentes de contato, próteses articulares, os implantes mamários e curativos simples, até dispositivos avançados, como corações artificiais, espirômetros, além de aplicativos para celulares e dispositivos computadorizados que capturam medidas médicas.\r\n\r\nEm situações complexas, onde um dispositivo implantado cirurgicamente é usado para administrar agentes terapêuticos, tais como a quimioterapia, este arquétipo irá ser utilizado para gravar apenas os detalhes sobre o próprio dispositivo médico e a prescrição da medicação e detalhes sobre o administração real do agente terapêutico serão registrados utilizando-se a arquétipos INSTRUCTION e ACTION sobre a medicação específica.\r\n\r\nEste arquétipo é projetado para fornecer a estrutura para representação estruturada de qualquer dispositivo médico e os elementos de dados que estão contidos aqui não são específicos para algum tipo de dispositivo. Dispositivos de uso único comumente vão exigir elementos de dados, tais como número de lote e data de validade. Em contrapartida estes geralmente não são relevantes para dispositivos duráveis que, muitas vezes, têm um conjunto de identificadores, incluindo uma UID, número de série, modelo, etc..\r\n\r\nAlém disso, diferentes tipos de dispositivos exigirão informações específicas relevantes para a sua finalidade. Estes dados podem ser gravados utilizando-se arquétipos CLUSTER específico inseridos no SLOT das propriedades específicas. Por exemplo: utilização de um catéter urinário pode exigir detalhes adicionais sobre o diâmetro e o comprimento do catéter, composição do material, número de lúmens etc.\r\n\r\nSe o dispositivo médico tem um número de componentes que necessitem de gravação de dados, todos os componentes individuais deverão ser registrados explicitamente utilizando-se um arquétipo CLUSTER.device adicional introduzido nos campos dos componentes.\r\n\r\nO campo de dados versão do software permite apenas uma única versão a ser gravado. Isto é especialmente aplicável para um dispositivo que é uma aplicação de software. Se o dispositivo possui vários componentes de software ou hardware que precisam ser especificados, este deve ser feito por meio de um CLUSTER.device além de inserido no slot do 'Componentes'.\r\n\r\nPara gravar detalhes adicionais para dispositivos duráveis ou permanentes que se relacionam com a posse, rastreamento de localização física, programações de manutenção etc, o uso do arquétipo CLUSTER.device_details no slot \"A gestão de ativos\" desse arquétipo.\r\n\r\nEste arquétipo foi projetado para uso genérico com outros arquétipos que precisam descrever um dispositivo. Exemplos incluem: OBSERVATION.blood_pressure para o esfigmomanômetro; OBSERVATION.ecg para o equipamento de ECG; OBSERVATION.urinalysis para as tiras de reagente e o dispositivo usado para os testes; ACTION.procedure; e CLUSTER.exam_tympanic_membrane para detalhar o otoscópio usado.",
+          "misuse" : "Não deve ser utilizado para gravar dados sobre os medicamentos que exercem uma ação farmacológica direta , metabólica ou efeito imunológico. Por exemplo: um curativo impregnado que exige uma prescrição deve ser gravado utilizando-se o o arquétipo INSTRUCTION.medication_order, com foco em ingredientes ativos, dosagem, etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل التفاصيل حول شيئ محسوس, مُنتَج أو جهيزة يتم استخدامها في أوسع وصف لتقديم الخدمة الصحية, و لكن دون طريقة أيضية أو علاجية مباشِرة.",
+          "keywords" : [ "الجهيزة", "الآلة", "الطُّعم", "جهاز مساعد", "القثطار", "البِدْلة", "مساعدة", "طبي بيولوجي", "أداة", "المعدات", "مقياس", "مِرْقب", "بدني/محسوس", "شيئ" ],
+          "use" : "يستخدم لتسجيل التفاصيل حول أي جهيزة جنيسة (غير محدودة الملكية) و التي يمكن أن تستخدم إما مباشرةً بطريقة علاجية أو تشخيصية أو تستخدم بشكل غير مباشر لدعم تقديم الخدمة الصحية.\r\nو يختلف استخدام اللفظ (جهيزة) على حسب السياق. \r\nو في داخل عالم المعايير, فإن اللفظ (جهيزة) يميل إلى الإشارة إلى الجهائز الإلكترونية أو الميكانيكية/الحركية و التي تدعم الرعاية الصحية, و تتطلب توثيق مكثف فيما يتعلق بالمواصفات و الصيانة... إلى آخره.\r\nو في سياق عالم المصطلحات فإن استخدام (جهيزة) واسع جدا, بما في ذلك أي شيئ محسوس يمكن استخدامه في تقديم الرعاية الصحية إما بشكل مباشر أو غير مباشر. \r\nو تتضمن الأمثلة: دوائر أجهزة التنفس الصناعي, مقاييس الجريان القِمِّي, مقاييس التنفس, نظارات العين, العدسات اللاصقة, القثطار داخل الوريد, طُعوم الثدي, البِدْلات, أنابيب المَنْزَح, و الحلقات المسمارية.\r\n\r\nو تم تصميم هذا النموذج ليمثل الأساس لعرض مركب لأي جهيزة, من مثال بسيط لنوع من غميسة البول مع تاريخ الاستخدام, إلى طعم أذن من كائن حيّ و الذي يتطلب توثيق مركب مثل البرنامج الإلكتروني, و الأجزاء الصلبة, و الصيانة و التعيير, إلى آخره.\r\n\r\nو بالنسبة لحالات الاستخدام المعتادة, فقد يكون من المناسب تخصيص هذا النموذج خاصة في القثطار داخل الوريد أو القثطار البولي.",
+          "misuse" : "لا يستخدم لتسجيل المنتجات, مثل الأدوية أو التطعيمات أو ما شابه, و التي تستخدم لأغراض علاجية أو أيضية",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the details of a medical device used in the provision of healthcare.",
+          "keywords" : [ "device", "machine", "implant", "appliance", "catheter", "prosthesis", "aid", "biomedical", "instrument", "equipment", "meter", "monitor", "software" ],
+          "use" : "Use to record the details of a medical device used in the provision of healthcare.\r\n\r\nUse of the term 'medical device' varies depending on context. Within the Standards world, the term device tends to refer to mechanical or electronic devices that support healthcare and require rigorous documentation regarding location tracking, maintenance, calibration, software versions etc.  Within the terminology context the use of device is very broad, including any medical device that can be used in direct or indirect provision of clinical care, as long as it does not act in a way that exerts a direct pharmacological, metabolic or  immunological effect.\r\n\r\nExamples of medical devices range from simple devices such as urinary catheters, tongue depressors, contact lenses, artificial joint implants, breast implants and plain dressings through to advanced devices such as artificial hearts, syringe drivers, spirometers, mobile phone applications and computerised devices that capture point-of-care medical measurements. \r\n\r\nIn the complex situation where a surgically implanted device is used as the means to deliver therapeutic agents such as chemotherapy directly into the body, this archetype will be used to record only the details about the medical device itself and the order for medication and details about the actual administration of the therapeutic agent will be recorded using specific medication-related INSTRUCTION and ACTION archetypes.\r\n\r\nThis archetype is designed to provide the framework for structured representation of any medical device and the data elements that are contained here are not specific for any one type of device. Single use devices will commonly require data elements such as Lot Number and Date of Expiry. In contrast these are usually not relevant for durable devices which will often have a set of identifiers, including a UID, Serial Number, Model etc.\r\n\r\nFurther, different types of devices will require specific information relevant to their purpose. This data can be recorded using specific CLUSTER archetypes inserted into the 'Specific properties' SLOT. For example: use of a urinary catheter may require additional details about the diameter and length of catheter, material composition, number of lumens etc.\r\n\r\nIf the medical device has a number of components that require recording of details, each individual component should be recorded explicitly by using an additional CLUSTER.device archetype inserted into the 'Components' SLOT.\r\n\r\nThe data field 'Software Version' allows for only a single version to be recorded. This is primarily applicable for a device which is a software application. If the device has multiple software or hardware components that need to be specified, this should be done by using an addition CLUSTER.device inserted into the 'Components' SLOT.\r\n\r\nTo record additional details for durable or persistent devices that relate to ownership, physical location tracking, maintenance schedules etc, use CLUSTER.device_details archetype inserted into the 'Asset management' SLOT in this archetype.\r\n\r\nThis archetype has been designed for generic use within other archetypes that need to describe a device. Examples include: OBSERVATION.blood_pressure for the sphygmomanometer; OBSERVATION.ecg for the ECG machine; OBSERVATION.urinalysis for the reactent strips and the device used for testing; ACTION.procedure; and CLUSTER.exam_tympanic_membrane to detail the otoscope used.",
+          "misuse" : "Not to be used to record data about medicinal products that exert a direct pharmacological, metabolic or immunologic effect. For example: a medicine impregnated dressing that requires a prescription should be recorded using the  INSTRUCTION.medication_order archetype, focused on the active ingredients, dosage etc.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.device.v1",
     "differential" : true,
@@ -521,7 +632,35 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "debcd9a41bccb34943c394557c620c42"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To save the cohort name and timeline moment assessment (baseline to follow-up).",
+          "keywords" : [ ],
+          "use" : "To be used under the Pathfinder - Medtronic registries.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.research_information.v0",
     "differential" : true,
@@ -677,7 +816,49 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "c26eef7785cac0baee13626f94afc9a2"
       },
-      "details" : { }
+      "details" : {
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "©Clinical Models UK",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -750,7 +931,55 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "55628380c785e72b57357284a830562d"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Für die Erfassung und Berichterstattung von EQ-5D-5L-Fragebogeninformationen, um die Gesundheitsergebnisse einer Vielzahl von Interventionen auf einer gemeinsamen Skala zu Bewertungs-, Zuordnungs- und Überwachungszwecken zu bewerten.",
+          "keywords" : [ "EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol" ],
+          "use" : "Zum Aufzeichnen von EQ-5D-5L-Fragebogeninformationen.\n\nDieses Instrument hat strenge Designrichtlinien (UI), die auf Anwendungsebene befolgt werden müssen. Detaillierte Informationen finden Sie in den EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)\n\nWährend openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen. © EuroQol-Forschungsstiftung. EQ-5D™ ist eine Marke der EuroQol Research Foundation. (Bitte beachten Sie: Für jede Sprachversion werden das Urheberrechtsjahr und die entsprechende Versionsnummer zum Urheberrechtsvermerk hinzugefügt, der in der Fußzeile des Fragebogens angezeigt wird.)\n\nWeitere Informationen finden Sie in der EQ-5D-Benutzerlizenzrichtlinie (https://euroqol.org/support/documents/eq-5d-user-license-policy/) und der EQ-5D-Registrierung (https://registration.euroqol.org /)\nBei Fragen zur EQ-5D-Benutzerlizenzrichtlinie wenden Sie sich bitte an das EuroQol-Büro unter der folgenden Adresse und Kontaktdaten:\nEuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890\nE: userinformationservice@euroqol.org",
+          "misuse" : "Darf nicht verwendet werden, es sei denn, die Bestimmungen des Urheberrechts wurden eingehalten.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the capture and reporting of EQ-5D-5L questionnaire information in order to assess health outcome from a wide variety of interventions on a common scale, for purposes of evaluation, allocation and monitoring.",
+          "keywords" : [ "EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol" ],
+          "use" : "Use to record EQ-5D-5L questionnaire information.\n\nThis instrument has strict design guidelines (UI) that need to be followed at the application level. For detailed information, please check the EQ-5D Digital Representation Universal Guidelines (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)\n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. © EuroQol Research Foundation. EQ-5D™ is a trade mark of the EuroQol Research Foundation. (Please note: For each language version, the copyright year and corresponding version number are added to the copyright notice as presented in the footer of the questionnaire)\n\nFor more information please check EQ-5D User License Policy (https://euroqol.org/support/documents/eq-5d-user-license-policy/) and EQ-5D Registration (https://registration.euroqol.org/)\nFor any questions regarding the EQ-5D User License Policy, please contact the EuroQol Office at the following address and contact details:\nEuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890\nE: userinformationservice@euroqol.org\n\n",
+          "misuse" : "Not to be used unless the terms of copyright have been observed.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Pour la saisie et la communication des informations du questionnaire EQ-5D-5L afin d'évaluer les résultats pour la santé d'une grande variété d'interventions sur une échelle commune, à des fins d'évaluation, d'attribution et de suivi.",
+          "keywords" : [ "EQ-5D-5L, questionnaire, visual analogue scale, EQ VAS, VAS, EQ-5D, 5-level EQ-5D, EuroQol" ],
+          "use" : "Utilisez pour enregistrer les informations du questionnaire EQ-5D-5L.\n\nCet instrument a des directives de conception (UI) strictes qui doivent être suivies au niveau de l'application. Pour des informations détaillées, veuillez consulter les directives universelles de représentation numérique EQ-5D (https://euroqol.org/support/documents/eq-5d-digital-representation-universal-guidelines/)\n\nAlors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur. © Fondation de recherche EuroQol. EQ-5D™ est une marque déposée de la Fondation de recherche EuroQol. (Veuillez noter : pour chaque version linguistique, l'année du copyright et le numéro de version correspondant sont ajoutés à l'avis de copyright tel que présenté dans le pied de page du questionnaire)\n\nPour plus d'informations, veuillez consulter la politique de licence utilisateur EQ-5D (https://euroqol.org/support/documents/eq-5d-user-license-policy/) et l'enregistrement EQ-5D (https://registration.euroqol.org /)\nPour toute question concernant la politique de licence utilisateur EQ-5D, veuillez contacter le bureau EuroQol à l'adresse et aux coordonnées suivantes:\nEuroQol Research Foundation - Marten Meesweg 107, 3068 AV Rotterdam, The Netherlands, T: +31 88 202 6890\nE: userinformationservice@euroqol.org",
+          "misuse" : "Ne pas utiliser à moins que les termes du droit d'auteur aient été respectés.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -847,7 +1076,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6a2b074ef129ab0ae6d9b8be74149c76"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.ibd_di_sr.v0",
     "differential" : true,
@@ -920,7 +1188,46 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "0ab48ebec65bc3c069acc9cb71b0c42e"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.sccai.v0",
     "differential" : true,
@@ -991,9 +1298,57 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "9fbb26b810a5ba463cb6373ef0c1d691"
+        "PARENT:MD5-CAM-1.0.1" : "f8b12d001a27deea9223c8777cfc04db"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Um die kognitiven und emotionalen Repräsentationen von Krankheiten schnell zu beurteilen.",
+          "keywords" : [ "Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM, Fragebogen zur Krankheitswahrnehmung, Kurzform IPQ, IPQ" ],
+          "use" : "Alle Items außer der Kausalfrage werden anhand einer Antwortskala von 0 bis 10 bewertet. Fünf der Items bewerten kognitive Krankheitsrepräsentationen: Folgen (Item 1), Zeitachse (Item 2), persönliche Kontrolle (Item 3), Behandlungskontrolle (Item 4) und Identität (Item 5). Zwei der Items erfassen emotionale Repräsentationen: Sorge (Item 6) und Emotionen (Item 8). Ein Item erfasst die Krankheitsverständlichkeit (Item 7). Die Items 1–5 bewerten die kognitiven Dimensionen, die sich auf das Verständnis von Krankheit, ihre Ursachen und die Wirkung der Behandlung beziehen, während die Items 6 bis 8 die emotionalen Dimensionen bewerten, die sich auf Emotionen wie Stimmung, Angst, Angst oder Wut beziehen.\nDie Beurteilung der kausalen Repräsentation erfolgt durch ein Open-Ended-Response-Item, das die Patienten auffordert, die drei wichtigsten kausalen Faktoren ihrer Erkrankung anzugeben (Item 9). Der Gesamtscore der Krankheitswahrnehmung wird durch Invertieren des Scores für die Items 3, 4 und 8 berechnet und zum Score der anderen Items addiert. Die maximale Gesamtpunktzahl beträgt 80 und die minimale Gesamtpunktzahl 0. Eine höhere Punktzahl weist auf eine bedrohlichere Sichtweise des Patienten hin, während eine niedrigere Punktzahl auf eine optimistischere Einstellung gegenüber der Krankheit hinweist.\n\nDie allgemeinste Version des Brief IPQ verwendet das Wort \"Krankheit\", aber es ist möglich, dieses durch den Namen einer bestimmten Krankheit wie Diabetes oder Asthma zu ersetzen. In ähnlicher Weise verwendet das Behandlungskontrollelement das Wort „Behandlung“, aber dieses kann durch eine bestimmte Behandlung wie „Operation“ oder „Inhalator“ ersetzt werden, wenn Forscher an einer bestimmten Behandlung interessiert sind. Dies kann in diesem Archetyp ggf. mit den Datenpunkten „Name der ausgewerteten Krankheit“ und „Name der Behandlung“ ergänzt werden.\n\n\nWährend openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.\n\nCopyright-Erklärung: © Alle Rechte vorbehalten. Für die Erlaubnis zur Nutzung der Waage wenden Sie sich bitte an: lizbroadbent@clear.net.nz",
+          "misuse" : "Um die kognitiven und emotionalen Repräsentationen von Krankheiten schnell zu beurteilen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To rapidly assess the cognitive and emotional representations of illness.",
+          "keywords" : [ "Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM" ],
+          "use" : "All of the items except the causal question are rated using a 0 to 10 response scale. Five of the items assess cognitive illness representations: consequences (Item 1), timeline (Item 2), personal control (Item 3), treatment control (Item 4), and identity (Item 5). Two of the items assess emotional representations: concern (Item 6) and emotions (Item 8). One item assesses illness comprehensibility (Item 7). Items 1–5 assess the cognitive dimensions which relate to the understanding of illness, its causes, and eﬀect of treatment while items 6 to 8 evaluate the emotional dimensions that relate to emotions such as mood, fear, anxiety or anger. \nAssessment of the causal representation is by an open-ended response item, which asks patients to list the three most important causal factors in their illness (Item 9). The total score of illness perception is calculated by inverting the score for items 3, 4 and 8 and added to the score of the other items. The maximum total score is 80 and the minimum total score is 0. A higher score indicates a more threatening view of the patient, while a lower score indicates a more optimistic of the disease. \n\nThe most general version of the Brief IPQ uses the word \"illness\", but it is possible to replace this with the name of a particular illness such as diabetes or asthma. Similarly, the treatment control item uses the word \"treatment\", but this can be replaced by a particular treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a particular treatment. This can be added in this archetype using the data points \"name of illness evaluated\" and \"name of treatment\", if necessary.\n\n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.\n\nCopyright statement: © All rights reserved. For permission to use the scale please contact: lizbroadbent@clear.net.nz",
+          "misuse" : "Must not be used to record Illness Perception Questionnaire (IPQ) and Illness Perception Questionnaire–\nRevised (IPQ-R).",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Évaluer rapidement les représentations cognitives et émotionnelles de la maladie.",
+          "keywords" : [ "Brief Illness Perception Questionnaire, Brief IPQ, Questionnaire, PROM, IPQ" ],
+          "use" : "Tous les items, à l'exception de la question causale, sont évalués à l'aide d'une échelle de réponse de 0 à 10. Cinq des items évaluent les représentations des maladies cognitives : conséquences (Item 1), chronologie (Item 2), contrôle personnel (Item 3), contrôle du traitement (Item 4) et identité (Item 5). Deux des items évaluent les représentations émotionnelles : l'inquiétude (item 6) et les émotions (item 8). Un item évalue la compréhensibilité de la maladie (item 7). Les éléments 1 à 5 évaluent les dimensions cognitives liées à la compréhension de la maladie, de ses causes et de l'effet du traitement, tandis que les éléments 6 à 8 évaluent les dimensions émotionnelles liées aux émotions telles que l'humeur, la peur, l'anxiété ou la colère.\nL'évaluation de la représentation causale se fait par un item de réponse ouvert, qui demande aux patients d'énumérer les trois facteurs causaux les plus importants de leur maladie (item 9). Le score total de perception de la maladie est calculé en inversant le score des items 3, 4 et 8 et additionné au score des autres items. Le score total maximum est de 80 et le score total minimum est de 0. Un score plus élevé indique une vision plus menaçante du patient, tandis qu'un score inférieur indique une vision plus optimiste de la maladie.\n\nLa version la plus générale du Brief IPQ utilise le mot \"maladie\", mais il est possible de le remplacer par le nom d'une maladie particulière comme le diabète ou l'asthme. De même, l'item de contrôle du traitement utilise le mot « traitement », mais celui-ci peut être remplacé par un traitement particulier tel que « chirurgie » ou « inhalateur » si les chercheurs sont intéressés par un traitement particulier. Cela peut être ajouté dans cet archétype en utilisant les points de données \"nom de la maladie évaluée\" et \"nom du traitement\", si nécessaire.\n\n\nAlors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur.\n\nDéclaration de copyright : © Tous droits réservés. Pour obtenir l'autorisation d'utiliser la balance, veuillez contacter : lizbroadbent@clear.net.nz",
+          "misuse" : "Ne doit pas être utilisé pour enregistrer le questionnaire de perception de la maladie (IPQ) et le questionnaire de perception de la maladie–\nRévisé (IPQ-R).",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
@@ -1116,7 +1471,52 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "9e1f41d0ab0d40c7026c4f613387df86"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Bewertet das Ausmaß, in dem eine Person das Leben im vergangenen Monat als unvorhersehbar, unkontrollierbar und überlastend empfunden hat.",
+          "keywords" : [ "Perceived Stress Scale, PSS, PROM, Scale, Stress, Fragen zum thema stress" ],
+          "use" : "Die Fragen in dieser Skala fragen nach Gefühlen und Gedanken des Patienten während des letzten Monats. In jedem Fall wird der Patient gebeten anzugeben, wie oft er auf eine bestimmte Weise gefühlt oder gedacht hat. Obwohl einige der Fragen ähnlich sind, gibt es Unterschiede zwischen ihnen und der Patient sollte jede Frage als separate Frage behandeln. Der beste Ansatz ist, ziemlich schnell zu antworten.\r\n\r\nNach Umkehrung der Punktzahlen bei den vier positiv angegebenen Items (Items 4, 5, 7 und 8 - (d.h. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - bereits in diesem Archetyp wiederhergestellt), wird die PSS-10-Gesamtpunktzahl durch Summieren aller 10 Punkte ermittelt. Höhere Werte zeigten ein höheres Maß an wahrgenommenem Stress an.\r\n\r\n\r\nWährend openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen. Beachten Sie, dass keine Nutzungserlaubnis erforderlich ist, wenn es für gemeinnützige akademische Forschung oder Bildung verwendet wird. Wenden Sie sich für andere Zwecke an Ellen Conser unter conser@andrew.cmu.edu.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Evaluates the degree to which an individual has perceived life as unpredictable, uncontrollable and overloading over the previous month.",
+          "keywords" : [ "Perceived Stress Scale, PSS, PROM, Scale, Stress" ],
+          "use" : "The questions in this scale ask about patient feelings and thoughts during the last month. In each case, the patient will be asked to indicate how often felt or thought a certain way. Although some of the questions are similar, there are differences between them and the patient should treat each one as a separate question. The best approach is to answer fairly quickly.\r\n\r\nAfter reversing the scores on the four positively stated items (Items 4, 5, 7, and 8 -  (i.e. 0 => 4; 1 => 3; 2 => 2; 3 => 1; 4 => 0) - already reverted in this archetype), the PSS-10 total score is obtained by summing up all 10 items. Higher scores indicated a higher level of perceived stress.\r\n\r\n\r\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. Note that permission for use is not necessary when used for nonprofit academic research or education. For other use contact Ellen Conser at conser@andrew.cmu.edu.  \r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Évalue le degré auquel un individu a perçu la vie comme imprévisible, incontrôlable et surchargée au cours du mois précédent.",
+          "keywords" : [ "Perceived Stress Scale, PSS, PROM, Scale, Stress" ],
+          "use" : "Les questions de cette échelle portent sur les sentiments et les pensées du patient au cours du dernier mois. Dans chaque cas, il sera demandé au patient d'indiquer à quelle fréquence il a ressenti ou pensé d'une certaine manière. Bien que certaines questions soient similaires, il existe des différences entre elles et le patient doit traiter chacune comme une question distincte. La meilleure approche est de répondre assez rapidement.\r\n\r\nAprès avoir inversé les scores des quatre items positifs (items 4, 5, 7 et 8 - (c'est-à-dire 0 => 4 ; 1 => 3 ; 2 => 2 ; 3 => 1 ; 4 => 0) - déjà inversé dans cet archétype), le score total PSS-10 est obtenu en additionnant les 10 items. Des scores plus élevés indiquaient un niveau plus élevé de stress perçu.\r\n\r\n\r\nAlors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur. Notez que l'autorisation d'utilisation n'est pas nécessaire lorsqu'elle est utilisée pour la recherche universitaire ou l'éducation à but non lucratif. Pour toute autre utilisation, contactez Ellen Conser à conser@andrew.cmu.edu.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pss.v0",
     "differential" : true,
@@ -1189,7 +1589,51 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "3FCD1BF5007BEC7E97A62E070FA10E5C"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Aufzeichnung der Ergebnisse des Patient Health Questionnaire-9 (PHQ-9) und seiner Subset-Bewertung PHQ-2.",
+          "keywords" : [ "Screening", "Depression", "Stimmung", "Bewertung", "Psychische Gesundheit" ],
+          "use" : "Zur Aufzeichnung der Ergebnisse des Patient Health Questionnaire-9 (PHQ-9) und seiner Subset-Bewertung PHQ-2.\r\n\r\nDer Archetyp ist so konzipiert, dass die eigentlichen PHQ-Fragen als Beschreibung für jedes Datenelement des Fragebogens erfasst werden. Der Name des Datenelements ist eine pragmatische Beschreibung, die auf die Absicht der Frage hinweist.\r\n\r\nDas ursprüngliche PHQ-9-Tool wurde von Dr. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke und Kollegen, mit einem Bildungsstipendium von Pfizer Inc. Von der PHQ Screeners-Website (http://www.phqscreeners.com/overview.aspx): „Alle PHQ-, GAD-7-Screener und -Übersetzungen können hier heruntergeladen werden Website und es ist keine Genehmigung erforderlich, um sie zu reproduzieren, zu übersetzen, anzuzeigen oder zu verteilen.\" Und von der PHQ-Webseite (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"Keine Erlaubnis erforderlich, um zu reproduzieren, zu übersetzen, anzuzeigen oder zu verteilen\".",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results of the Patient Health Questionnaire-9 (PHQ-9) and its subset assessment PHQ-2.",
+          "keywords" : [ "screening", "depression", "mood", "assessment", "mental health" ],
+          "use" : "Use to record the results of the Patient Health Questionnaire-9 (PHQ-9) and its subset assessment PHQ-2.\r\n\r\nThe archetype has been designed such that the actual PHQ questions are recorded as the description for each questionnaire data element. The data element name is a pragmatic description that is indicative of the question intent.\r\n\r\nThe original PHQ‐9 tool was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. From the PHQ Screeners website (http://www.phqscreeners.com/overview.aspx): \"All PHQ, GAD-7 screeners and translations are downloadable from this website and no permission is required to reproduce, translate, display or distribute them.\" And from the PHQ webpage (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"No permission required to reproduce, translate, display or distribute\". \r\n\r\nThe Australian indigenous adaptation for the PHQ-9 subset assessing mood was developed by Dr. Alex Brown, Baker IDI Heart and Diabetes Institute, Alice Springs, 2009. The adapted questions are expressed within the Comments area for each questionnaire data element. Used with permission.",
+          "copyright" : "© Northern Territory Department of Health (Australia), openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Pour enregistrer les résultats du Questionnaire sur la santé du patient-9 (PHQ-9) et son évaluation de sous-ensemble PHQ-2.",
+          "keywords" : [ "projection", "dépression", "humeur", "évaluation", "santé mentale" ],
+          "use" : "Utilisez-le pour enregistrer les résultats du Questionnaire sur la santé du patient-9 (PHQ-9) et de son sous-ensemble d'évaluation PHQ-2.\r\n\r\nL'archétype a été conçu de telle sorte que les questions réelles du PHQ soient enregistrées comme description pour chaque élément de données du questionnaire. Le nom de l'élément de données est une description pragmatique qui indique l'intention de la question.\r\n\r\nL'outil original PHQ‐9 a été développé par les Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke et ses collègues, avec une bourse d'études de Pfizer Inc. Sur le site Web PHQ Screeners (http://www.phqscreeners.com/overview.aspx) : \"Tous les filtres PHQ, GAD-7 et les traductions sont téléchargeables à partir de ce site Web et aucune autorisation n'est requise pour les reproduire, les traduire, les afficher ou les distribuer.\" Et sur la page Web de PHQ (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf) : \"Aucune autorisation requise pour reproduire, traduire, afficher ou distribuer\".",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.phq_9.v0",
     "differential" : true,
@@ -1259,79 +1703,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "5b7fd12c-ff0f-4626-b71c-bc8fb41a0deb",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "41f8140a35aa1971a126ff4ff25088a9"
-      },
-      "details" : { }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.fss.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-fss-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "de" : { },
-        "fr" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "0773c088-553a-3598-bf0a-3ffea583e291",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "ebcfdb01-61d8-4604-9f05-2aac772db27d",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -1341,9 +1712,54 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "02cab25e5c0b087f59d14bac715b9155"
+        "PARENT:MD5-CAM-1.0.1" : "4dd29513e0ef9304e6e1d48cb45295c8"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Beurteilung der Häufigkeit und Schwere der Stuhlinkontinenz. Der Score berücksichtigt die Art und Häufigkeit der Inkontinenz und das Ausmaß, in dem sie das Leben des Patienten verändert.",
+          "keywords" : [ "Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS)" ],
+          "use" : "© Copyright: Die Wexner-Skala ist von der American Society for Colon and Rectal Surgeons (ASCRS) urheberrechtlich geschützt. Während openEHR-Archetypen alle unter einer offenen Lizenz frei verfügbar sind, ist der spezifische Inhalt dieses Archetyps urheberrechtlich geschützt. Jede Verwendung dieses Archetyps innerhalb von Implementierungen muss in Übereinstimmung mit den von den Urheberrechtsinhabern festgelegten Bedingungen erfolgen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assess the frequency and severity of fecal incontinence. The score takes into account the type and frequency of incontinence and the extent to which it alters the patient’s life.",
+          "keywords" : [ "Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS)" ],
+          "use" : "© Copyright: The Wexner Scale is copyrighted by the American Society for Colon and Rectal Surgeons (ASCRS). While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Évaluer la fréquence et la gravité de l'incontinence fécale. Le score prend en compte le type et la fréquence de l'incontinence et la mesure dans laquelle elle altère la vie du patient.",
+          "keywords" : [ "Wexner Cleveland Clinic Incontinence Score (Wexner Scale), Jorge-Wexner faecal score incontinence, Wexner score, Wexner scale, Jorge-Wexner score, Cleveland Clinic Fecal Incontinence Severity Scoring System (CCIS)" ],
+          "use" : "© Copyright: L'échelle de Wexner est la propriété de l'American Society for Colon and Rectal Surgeons (ASCRS). Alors que les archétypes openEHR sont tous disponibles gratuitement sous une licence ouverte, le contenu spécifique de cet archétype est protégé par le droit d'auteur. Toute utilisation de cet archétype dans les implémentations doit être conforme aux conditions établies par les titulaires des droits d'auteur.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.wexner_score.v0",
     "differential" : true,
@@ -1414,9 +1830,53 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "6b170bd5d224e91d67d282441ba7e384"
+        "PARENT:MD5-CAM-1.0.1" : "1124e72179889ae0e1db4bef00a3aa3f"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Beurteilung der Arbeitsbeeinträchtigung aufgrund von Colitis ulcerosa.",
+          "keywords" : [ "*Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC), WPAI-UC, PROM, PRO, Ulcerative Colitis, UC (en)" ],
+          "use" : "Urheberrecht: Laut Autorin Margaret C. Reilly ist das Instrument nicht urheberrechtlich geschützt.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assess work impairment due to ulcerative colitis.",
+          "keywords" : [ "Work Productivity and Activity Impairment Questionnaire: Ulcerative Colitis V2.0 (WPAI-UC), WPAI-UC, PROM, PRO, Ulcerative Colitis, UC" ],
+          "use" : "Copyright: Instrument not copyrighted according to the author, Margaret C. Reilly.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Évaluer l'incapacité au travail due à la colite ulcéreuse.",
+          "keywords" : [ "Questionnaire sur la productivité au travail et les troubles de l'activité : colite ulcéreuse V2.0 (WPAI-UC), WPAI-UC, PROM, PRO, colite ulcéreuse, UC" ],
+          "use" : "Copyright : Instrument non protégé par le droit d'auteur selon l'auteur, Margaret C. Reilly",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.wpai_uc.v0",
     "differential" : true,
@@ -1493,7 +1953,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "83c158f0b57ce27f4b10c0e3dabd7ca1"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "The MARS-5 assesses a patient’s typical medication adherence through 5 questions (eg, “I forget to take my medication”; “I alter the dose of my medication”), using a 5-level response format (1—always, 2—often, 3—sometimes, 4—rarely, and 5—never). Responses are summed for a total score ranging between 5 and 25, with higher scores indicating a higher level of adherence. Using the MARS-5, a score of ≥20 has previously been used as a cutoff for adherence in an IBD population, while other chronic diseases have defined adherence at a cutoff as high as 25",
+          "keywords" : [ "Medication Adherence Report Scale 5, MARS-5, MARS5, PROM, PRO, Medication" ],
+          "use" : "Use to record the results for each component from the MARS-5 questionnaire. \n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The MARS is copyrighted and permission to use the scale can be obtained from Professor Rob Horne University of Brighton (r.horne@bton.ac.uk)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.mars_5.v0",
     "differential" : true,
@@ -1566,7 +2067,48 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ce4e4a7714b1f06cb5d89f9770784b3c"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assesses patient sleep quality and disturbances over a 1-month time interval.",
+          "keywords" : [ "Pittsburgh Sleep Quality Index, PSQI, Sleep, Sleep quality, Questionnaire, depression, sleep disorders" ],
+          "use" : "The 19 items are grouped in seven “component” scores: subjective sleep quality, sleep latency, sleep duration, habitual sleep efficiency, sleep disturbances, use of sleeping medication, and daytime dysfunction, each weighted equally on a 0 to 3 scale. The sum of scores are between 0 to 21 points.\n\nA total score of “5” or greater is indicative of poor sleep quality. If you scored “5” or more it is suggested that you discuss your sleep habits with a healthcare provider.\n\nWhile openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The Pittsburgh Sleep Quality Index (PSQI) is copyrighted by Daniel J. Buysse, M.D.  Permission has been granted to reproduce the scale on this website for clinicians to use in their practice and for researchers to use in non-industry studies. For other uses of the scale, the owner of the copyright should be contacted.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.psqi.v0",
     "differential" : true,
@@ -1639,7 +2181,52 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "73a6c523d34c4ff92c6a5180b03d9cc2"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Ziel der Fragebögen ist es, gemeinsame Instrumente bereitzustellen, mit denen international vergleichbare Daten zur gesundheitsbezogenen körperlichen Aktivität erhoben werden können.",
+          "keywords" : [ "International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO (en)" ],
+          "use" : "Die Verwendung der IPAQ-Instrumente für Überwachungs- und Forschungszwecke wird empfohlen. Es wird empfohlen, die Reihenfolge oder den Wortlaut der Fragen nicht zu ändern, da dies die psychometrischen Eigenschaften der Instrumente beeinflusst. Die ursprünglichen Fragen aus dem IPAQ sind in den Elementbeschreibungen nach dem Tag „ursprüngliche Frage“ und dem, was in der nach vorne gerichteten App angezeigt werden soll, zu sehen.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "The purpose of the questionnaires is to provide common instruments that can be used to obtain internationally comparable data on health–related physical activity.",
+          "keywords" : [ "International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO" ],
+          "use" : "Use of the IPAQ instruments for monitoring and research purposes is encouraged. It is recommended that no changes be made to the order or wording of the questions as this will affect the psychometric properties of the instruments. The original questions from the IPAQ can be seen at the element descriptions after \"original question\" tag and its what should be shown in the front facing app.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "L’objectif des questionnaires est de fournir des instruments communs utilisables pour obtenir des données sur l’activité physique liée à la santé comparables au niveau international.",
+          "keywords" : [ "International physical activity questionnaire, IPAQ. PROM, PROMs, patient reported outcomes, PRO, Questionnaire International Sur L’activité Physique" ],
+          "use" : "Le recours aux instruments IPAQ pour la surveillance et la recherche est encouragé. Il est recommandé de ne pas modifier l’ordre ou la formulation des questions, car cela affectera les propriétés psychométriques des instruments. Les questions d'origine de l'IPAQ peuvent être vues dans les descriptions des éléments après la balise \"question d'origine\" et ce qui doit être affiché dans l'application frontale.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.ipaq_sf.v0",
     "differential" : true,
@@ -1668,6 +2255,153 @@
     },
     "adlVersion" : "1.4",
     "buildUid" : "3354b9ad-56ec-3273-9b5b-901e9324e72c",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "e25c7e55-52e9-438c-be0e-04171b065828",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "248b5866c063483169252c1dab856296"
+      },
+      "details" : { }
+    },
+    "annotations" : {
+      "@type" : "RESOURCE_ANNOTATIONS",
+      "documentation" : {
+        "en" : {
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0019]" : {
+            "Question_number" : "10",
+            "Item_code" : "An12",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0005]" : {
+            "Question_number" : "1",
+            "Item_code" : "HI7",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0016]" : {
+            "Question_number" : "7",
+            "Item_code" : "An5",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0015]" : {
+            "Question_number" : "6",
+            "Item_code" : "An4",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0018]" : {
+            "Question_number" : "9",
+            "Item_code" : "An8",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0017]" : {
+            "Question_number" : "8",
+            "Item_code" : "An7",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0012]" : {
+            "Question_number" : "3",
+            "Item_code" : "An1",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0011]" : {
+            "Question_number" : "2",
+            "Item_code" : "HI12",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0022]" : {
+            "Question_number" : "13",
+            "Item_code" : "An16",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0014]" : {
+            "Question_number" : "5",
+            "Item_code" : "An3",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0013]" : {
+            "Question_number" : "4",
+            "Item_code" : "An2",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0021]" : {
+            "Question_number" : "12",
+            "Item_code" : "An15",
+            "Subscale" : "fatigue_subscale"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0020]" : {
+            "Question_number" : "11",
+            "Item_code" : "An14",
+            "Subscale" : "fatigue_subscale"
+          }
+        },
+        "fr" : { },
+        "de" : { }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.facit_fatigue.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-facit_fatigue-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "fr" : { },
+        "de" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "3375d724-0132-3800-b581-acbf9747437f",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
