@@ -15,6 +15,11 @@ language
 				["email"] = <"bassem.khouzam@medtronic.com">
 			>
 		>
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+			>
+		>
 	>
 
 description
@@ -26,6 +31,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			copyright = <"© openEHR Foundation">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To save the cohort name and timeline moment assessment (baseline to follow-up).">
@@ -42,7 +51,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"debcd9a41bccb34943c394557c620c42">
+		["MD5-CAM-1.0.1"] = <"dffdd0985a756a531115014bb0828e4d">
 		["build_uid"] = <"e7a889a7-c53d-35a5-b5cf-d4649b58920a">
 	>
 
@@ -68,7 +77,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Research information">
-					description = <"Research information for the cancer registries from Medtronic VBHC IHU.">
+					description = <"Research information for registries.">
 				>
 				["at0001"] = <
 					text = <"Cohort study name">
@@ -84,7 +93,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Informations sur la recherche">
-					description = <"Informations sur la recherche pour les registres du cancer de Medtronic VBHC IHU.">
+					description = <"Informations sur la recherche pour les registres.">
 				>
 				["at0001"] = <
 					text = <"Nom de l'étude de la cohorte">
@@ -93,6 +102,22 @@ ontology
 				["at0002"] = <
 					text = <"Moment de l'évaluation">
 					description = <"Moment de l'évaluation, baseline, suivi. ">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Informationen zur Forschung">
+					description = <"Forschungsinformationen für Register.">
+				>
+				["at0001"] = <
+					text = <"Name der Kohortenstudie">
+					description = <"Name der Kohorte/Studie für das Register.">
+				>
+				["at0002"] = <
+					text = <"Zeitliche Bewertung">
+					description = <"Zeitpunkt der Bewertung, Ausgangssituation, Follow-up. ">
 				>
 			>
 		>
