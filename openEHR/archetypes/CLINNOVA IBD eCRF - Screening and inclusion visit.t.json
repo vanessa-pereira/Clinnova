@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.116",
+      "sem_ver" : "0.1.117",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "32082533dc3060c8f8b2a7d199e4e530",
+      "MD5-CAM-1.0.1" : "a3b523d3f8bcfb82865d9595d9d1b5d3",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -42903,32 +42903,8 @@
                               "limitToList" : false,
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "85774003",
-                                "value" : "Terminal ileum"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "9040008",
-                                "value" : "Ascending colon"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "2713005",
-                                "value" : "Caecum"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "485005",
-                                "value" : "Transverse colon"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "32622004",
-                                "value" : "Descending colon"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "60184004",
-                                "value" : "Sigmoid colon"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "34402009",
-                                "value" : "Rectum"
+                                "code" : "113276009",
+                                "value" : "Intestinal structure"
                               } ]
                             } ]
                           } ],
@@ -42994,60 +42970,9 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0008.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "0..1",
-                              "terminologyId" : {
-                                "value" : "SNOMED-CT_LIH"
-                              },
-                              "constraint" : [ ],
-                              "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
-                              "includedExternalTerminologyCodes" : [ {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "415582006",
-                                "value" : "Stenosis"
-                              }, {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "118622000",
-                                "value" : "Fistula"
-                              }, {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "44132006",
-                                "value" : "Abscess"
-                              }, {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "56208002",
-                                "value" : "Ulcer"
-                              }, {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "LIHBOWTHICK",
-                                "value" : "Bowel wall thickness"
-                              }, {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "LIHLOSSTRAS",
-                                "value" : "Loss of bowel wall stratification"
-                              }, {
-                                "terminologyId" : "SNOMED-CT_LIH",
-                                "code" : "LIHLIMBSCOR",
-                                "value" : "Limberg perfusion score"
-                              } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -43595,8 +43520,32 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "113276009",
-                    "value" : "Intestinal structure"
+                    "code" : "85774003",
+                    "value" : "Terminal ileum"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "9040008",
+                    "value" : "Ascending colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "2713005",
+                    "value" : "Caecum"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "485005",
+                    "value" : "Transverse colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "32622004",
+                    "value" : "Descending colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "60184004",
+                    "value" : "Sigmoid colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "34402009",
+                    "value" : "Rectum"
                   } ]
                 } ]
               } ],
@@ -43614,16 +43563,118 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0004.0.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT_LIH"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "415582006",
+                    "value" : "Stenosis"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "118622000",
+                    "value" : "Fistula"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "44132006",
+                    "value" : "Abscess"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "56208002",
+                    "value" : "Ulcer"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "LIHBOWTHICK",
+                    "value" : "Bowel wall thickness"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "LIHLOSSTRAS",
+                    "value" : "Loss of bowel wall stratification"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "LIHLIMBSCOR",
+                    "value" : "Limberg perfusion score"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0006.0.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT_LIH"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "415582006",
+                    "value" : "Stenosis"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "118622000",
+                    "value" : "Fistula"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "44132006",
+                    "value" : "Abscess"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "56208002",
+                    "value" : "Ulcer"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "LIHBOWTHICK",
+                    "value" : "Bowel wall thickness"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "LIHLOSSTRAS",
+                    "value" : "Loss of bowel wall stratification"
+                  }, {
+                    "terminologyId" : "SNOMED-CT_LIH",
+                    "code" : "LIHLIMBSCOR",
+                    "value" : "Limberg perfusion score"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
