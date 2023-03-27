@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.111",
+      "sem_ver" : "0.1.112",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "0ac0112621cf9558f6b1d2694e6f0926",
+      "MD5-CAM-1.0.1" : "39bb83e016264100897f60af536dd0f4",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -18435,172 +18435,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "31f4adcb-5bcd-482f-96a4-4bb301b41f59",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "bcddd6cba0e671954678433b157f1c13"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "Assess the size of mucosal ulcers, the ulcerated surface, the endoscopic extension and the presence of stenosis and give a score for interpretation of the stage of the disease.",
-          "keywords" : [ "Simplified Endoscopic Disease Severity Score for Crohn’s Disease, SES-CD, SESCD, Crohn’s Disease, Endoscopic, Score" ],
-          "use" : "Copyright: No information",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "annotations" : {
-      "@type" : "RESOURCE_ANNOTATIONS",
-      "documentation" : {
-        "en" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]" : {
-            "redcap_mapping" : "rectum_proccur"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0009]" : {
-            "redcap_mapping" : "ulcers_rsorres_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0014]" : {
-            "redcap_mapping" : "ulcers_rsorres_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0018]" : {
-            "redcap_mapping" : "ulcers_rsorres_3"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0023]" : {
-            "redcap_mapping" : "ulcers_rsorres_4"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0027]" : {
-            "redcap_mapping" : "ulcers_rsorres_5"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028]/items[at0029]" : {
-            "redcap_mapping" : "left_colon_proccur"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028]/items[at0033]" : {
-            "redcap_mapping" : "left_colon_rsorres_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028]/items[at0038]" : {
-            "redcap_mapping" : "left_colon_rsorres_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028]/items[at0043]" : {
-            "redcap_mapping" : "left_colon_rsorres_3"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028]/items[at0048]" : {
-            "redcap_mapping" : "left_colon_rsorres_4"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028]/items[at0053]" : {
-            "redcap_mapping" : "left_colon_rsorres_5"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0054]/items[at0055]" : {
-            "redcap_mapping" : "trans_colon_proccur"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0054]/items[at0059]" : {
-            "redcap_mapping" : "trans_colon_rsorres_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0054]/items[at0064]" : {
-            "redcap_mapping" : "trans_colon_rsorres_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0054]/items[at0069]" : {
-            "redcap_mapping" : "trans_colon_rsorres_3"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0054]/items[at0074]" : {
-            "redcap_mapping" : "trans_colon_rsorres_4"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0054]/items[at0079]" : {
-            "redcap_mapping" : "trans_colon_rsorres_5"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0080]/items[at0081]" : {
-            "redcap_mapping" : "right_colon_proccur"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0080]/items[at0085]" : {
-            "redcap_mapping" : "right_colon_rsorres_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0080]/items[at0090]" : {
-            "redcap_mapping" : "right_colon_rsorres_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0080]/items[at0095]" : {
-            "redcap_mapping" : "right_colon_rsorres_3"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0080]/items[at0100]" : {
-            "redcap_mapping" : "right_colon_rsorres_4"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0080]/items[at0105]" : {
-            "redcap_mapping" : "right_colon_rsorres_5"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/items[at0107]" : {
-            "redcap_mapping" : "illeum_proccur"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/items[at0111]" : {
-            "redcap_mapping" : "ileum_rsorres_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0132]" : {
-            "redcap_mapping" : "ses_cd_rsorres, ses_cd_rsorres_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/items[at0116]" : {
-            "redcap_mapping" : "ileum_rsorres_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/items[at0121]" : {
-            "redcap_mapping" : "ileum_rsorres_3"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/items[at0126]" : {
-            "redcap_mapping" : "ileum_rsorres_4"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0106]/items[at0131]" : {
-            "redcap_mapping" : "ileum_rsorres_5, ileum_rsorres_6"
-          }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.sescd.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-sescd-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "7c3c221d-8449-3b5f-bd28-6039f3292361",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "c1f5b989-695c-4157-8366-423ef7673aed",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -18806,33 +18640,6 @@
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-021.v1",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..1",
-          "nodeId" : "at0.10",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-sescd-001.v0",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..1",
-          "nodeId" : "at0.2",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-cdai-001.v0",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "OBSERVATION",
-          "occurrences" : "0..1",
-          "nodeId" : "at0.4",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-lemann_index-001.v0",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -19063,222 +18870,6 @@
       },
       "otherDetails" : { }
     } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "cfb70b4f-60f9-48cc-9cea-0701c20c7a56",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "041c641bd090331e426b822d06b5d04b"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "The Crohn's Disease Activity Index (CDAI) is used in clinical trials to assess disease activity in Crohn's disease. Crohn disease is a chronic transmural inflammatory bowel disease that usually affects the distal ileum and colon but may occur in any part of the gastrointestinal tract. Symptoms include diarrhea and abdominal pain. Abscesses, internal and external fistulas, and bowel obstruction may arise. Extraintestinal symptoms, particularly arthritis, may occur.",
-          "keywords" : [ "Crohn's Disease Activity Index, CDAI, PROM" ],
-          "use" : "While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. \nCopyright statement: Copyright © 1976 The Williams & Wilkins Co. Published by Elsevier Inc. All rights reserved.",
-          "misuse" : "CDAI has some limitations, which include:\n- interobserver variability\n- ratings of 'general well being' and 'intensity of abdominal pain' are subjective\n- stool frequency is based on a diary filled in by the patient for 7 days before evaluation which doesn't generally get done in routine clinical practice\n- it is not accurate in patients with fistulizing and stenosing disease\n- it is not useful in patients with previous extensive ileo-colonic resections or stoma\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "annotations" : {
-      "@type" : "RESOURCE_ANNOTATIONS",
-      "documentation" : {
-        "en" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0005]" : {
-            "redcap_mapping" : "cdai_rstestcd_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0006]" : {
-            "redcap_mapping" : "cdai_rstestcd_2"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0009]" : {
-            "redcap_mapping" : "cdai_rstestcd_3"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0014]" : {
-            "redcap_mapping" : "cdai_rstestcd_4"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0021]" : {
-            "redcap_mapping" : "cdai_rstestcd_5"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0028.1]" : {
-            "redcap_mapping" : "cdai_rstestcd_6"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0032]/items[at0033]" : {
-            "redcap_mapping" : "cdai_rstestcd_7"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0032]/items[at0034]" : {
-            "redcap_mapping" : "cdai_rstestcd_8"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0036]" : {
-            "redcap_mapping" : "cdai_rstestcd_9"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0037]" : {
-            "redcap_mapping" : "cdai_interpretation"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0004]/items[at0015]" : {
-            "redcap_mapping" : "cdai_rstestcd_1"
-          },
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0032]/items[at0035]" : {
-            "redcap_mapping" : "cdai_rstestcd_8"
-          }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.cdai.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-cdai-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "HISTORY",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "events",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "items",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "ELEMENT",
-                      "nodeId" : "at0028.1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "c31fc849-9be2-303e-b886-49efa2f4716b",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "33408006-36cc-4eb7-922b-61ade9db90b6",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "2367cfaec376bbaa3c0c196510926f62"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To assess cumulative structural bowel damage in Crohn disease.",
-          "keywords" : [ "Lémann Index, CD, Crohn’s disease, CDAI, Crohn’s Disease Activity Index" ],
-          "use" : "Criteria for inclusion and exclusion:\n- Inclusion criteria were age older than 16 years and confirmed diagnosis of CD >3 months before enrollment.\n- Exclusion criteria were female patients with known or suspected pregnancy, or without effective contraception, and patients with glomerular filtration rate of <30 mL/min.\n\nThe calculation of the final coefficients and grade of severity can be found at https://www.gastrojournal.org/action/showPdf?pii=S0016-5085%2814%2901137-8 in Table 4 for a better view.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.lemann_index.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-OBSERVATION.ovl-lemann_index-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "OBSERVATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "70045b40-8c22-3ab1-a52f-da937cc619b4",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
     "uid" : "ca71e80e-f8f9-4d5b-a483-3505425f6807",
@@ -20198,7 +19789,45 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "SECTION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "0..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.2",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-sescd-002.v0",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.4",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-cdai-002.v0",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "OBSERVATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.6",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-lemann_index-002.v0",
+          "referenceType" : "archetypeOverlay"
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -67316,6 +66945,159 @@
       },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "987c2381-7bdf-41c9-8a49-55aba50de47b",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "bcddd6cba0e671954678433b157f1c13"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.sescd.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-sescd-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "7c3c221d-8449-3b5f-bd28-6039f3292361",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "0624cad5-6327-4c76-ae5e-ad7e820b5561",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "041c641bd090331e426b822d06b5d04b"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.cdai.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-cdai-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "c31fc849-9be2-303e-b886-49efa2f4716b",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b1e5889a-369d-4dca-b3ec-e806c9ac3d9d",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "2367cfaec376bbaa3c0c196510926f62"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.lemann_index.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-lemann_index-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "70045b40-8c22-3ab1-a52f-da937cc619b4",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
