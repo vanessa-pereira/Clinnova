@@ -38,7 +38,6 @@ description
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To save the cohort name and timeline moment assessment (baseline to follow-up).">
-			use = <"To be used under the Pathfinder - Medtronic registries.">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
