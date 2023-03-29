@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.124",
+      "sem_ver" : "0.1.125",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "6579eb2be567fb730a53cbc3134a976f",
+      "MD5-CAM-1.0.1" : "ff33b06d7cc9d53f8dd414abe5300bcb",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -15792,6 +15792,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0011.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -65474,16 +65475,6 @@
         "PARENT:MD5-CAM-1.0.1" : "ED4B4306720942258EBFA6E298DEEAE4"
       },
       "details" : { }
-    },
-    "annotations" : {
-      "@type" : "RESOURCE_ANNOTATIONS",
-      "documentation" : {
-        "en" : {
-          "/data[at0001]/events[at0016]/data[at0003.2]/items[at0004.1]" : {
-            "redcap_mapping" : "pregst_rporres"
-          }
-        }
-      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pregnancy_finding.v0",
     "differential" : true,
