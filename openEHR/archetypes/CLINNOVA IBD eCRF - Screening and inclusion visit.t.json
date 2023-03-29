@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.125",
+      "sem_ver" : "0.1.126",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "ff33b06d7cc9d53f8dd414abe5300bcb",
+      "MD5-CAM-1.0.1" : "2894342bfe5f18a560d380df96644907",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -26051,7 +26051,7 @@
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "33586001",
-                                "value" : "Siting"
+                                "value" : "Sitting"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "102538003",
@@ -27521,28 +27521,6 @@
                       "nodeId" : "at1023.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.43" ],
-                              "selectedTerminologies" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
@@ -27569,6 +27547,28 @@
                                 "code" : "263654008",
                                 "value" : "Abnormal"
                               } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.45" ],
+                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -27625,7 +27625,7 @@
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "33586001",
-                                "value" : "Siting"
+                                "value" : "Sitting"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "102538003",
@@ -27834,10 +27834,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -27878,10 +27878,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -27922,10 +27922,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -27966,10 +27966,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28010,10 +28010,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28054,10 +28054,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28098,10 +28098,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28142,10 +28142,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28186,10 +28186,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28230,10 +28230,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -28274,10 +28274,10 @@
             "code" : "ac0.14",
             "description" : ""
           },
-          "ac0.43" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.43",
+            "code" : "ac0.45",
             "description" : ""
           }
         }
@@ -28493,6 +28493,16 @@
         "ac0.43" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.43",
+          "members" : [ "at1057" ]
+        },
+        "ac0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.44",
+          "members" : [ "at1057" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
           "members" : [ "at1057" ]
         }
       }
@@ -29053,7 +29063,7 @@
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "33586001",
-                                "value" : "Siting"
+                                "value" : "Sitting"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "102538003",
