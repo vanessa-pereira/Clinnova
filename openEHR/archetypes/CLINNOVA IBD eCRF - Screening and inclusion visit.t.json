@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.126",
+      "sem_ver" : "0.1.127",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "2894342bfe5f18a560d380df96644907",
+      "MD5-CAM-1.0.1" : "5945b9c7ab2525c626a2b43550938d6a",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -3281,7 +3281,7 @@
       "documentation" : {
         "en" : {
           "/data[at0001]/events[at0188]/data[at0003.9]/items[at0030]" : {
-            "redcap_mapping" : "pro2_ceportot"
+            "redcap_mapping" : "pro2_ceportot_calc"
           },
           "/data[at0001]/events[at0002.1]" : {
             "redcap_mapping" : "cdpro2_fadat_1"
@@ -3329,7 +3329,7 @@
             "redcap_mapping" : "cdpro2_fadat_2"
           },
           "/data[at0001]/events[at0188]/data[at0003.9]/items[at0013]" : {
-            "redcap_mapping" : "stools_faportot_calc"
+            "redcap_mapping" : "stools_faportot"
           },
           "/data[at0001]/events[at0175]/data[at0003.8]/items[at0026]" : {
             "redcap_mapping" : "gastralgia_ceoccur_avg"
@@ -27521,6 +27521,28 @@
                       "nodeId" : "at1023.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.45" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
@@ -27547,28 +27569,6 @@
                                 "code" : "263654008",
                                 "value" : "Abnormal"
                               } ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      }, {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "name",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_CODED_TEXT",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "defining_code",
-                            "children" : [ {
-                              "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "TERMINOLOGY_CODE",
-                              "occurrences" : "1..1",
-                              "terminologyId" : {
-                                "value" : "local"
-                              },
-                              "constraint" : [ "ac0.45" ],
-                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -65484,7 +65484,39 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ED4B4306720942258EBFA6E298DEEAE4"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung einer Aussage über die Schwangerschaft einer Person, n der Regel eine zeitpunktbezogene Bestimmung zum Zeitpunkt der Aufzeichnung in der Krankenakte.",
+          "keywords" : [ "Schwangerschaft", "Schwanger", "Vorsorge", "Alarm", "Warnung", "Schwerwiegend" ],
+          "use" : "Der Archetyp wird verwendet, um eine Behauptung über den Schwangerschaftszustand einer Person darzustellen, in der Regel eine zeitpunktbezogene Bestimmung zum Zeitpunkt der Aufzeichnung in der Krankenakte.\r\n\r\nDieser Archetyp wurde entwickelt, um sowohl die Feststellung eines nachgewiesenen oder möglichen Vorliegen einer Schwangerschaft zu erfassen als auch die Beweise zu dokumentieren, die die Feststellung stützen.\r\n\r\nDieser Archetyp sollte von jedem klinischen Entscheidungsunterstützungssystem als kritischer Archetyp angesehen werden, der das Vorliegen oder den Ausschluss einer Schwangerschaft prüft, beispielsweise vor der Verschreibung fruchtschädigender Medikamente oder zum Ausschluss schwangerschaftsbedingter Komplikationen bei der Diagnose von Kollaps oder Bauchschmerzen bei Frauen im gebärfähigen Alter.",
+          "misuse" : "Nicht zur Darstellung zusammenfassender Informationen über eine einzelne Schwangerschaft. Verwenden Sie dafür den Archetyp EVALUATION.pregnancy_summary.\r\n\r\nDarf nicht verwendet werden, um Details über während einer Schwangerschaft durchgeführte Eingriffe darzustellen, z. B. Abtreibungen oder Entbindungen. Verwenden Sie zu diesem Zweck die ACTION.procedure oder andere relevante Archetypen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record an assertion about the pregnant condition of an individual, usually a point-in-time determination at the time of recording in the health record.",
+          "keywords" : [ "pregnancy, pregnant, caution, alert, warning, gravid" ],
+          "use" : "Use to record an assertion about the pregnant condition of an individual, usually a point-in-time determination at the time of recording in the health record.\r\n\r\nThis archetype has been designed to capture both the determination of a proven or possible presence of a pregnancy, as well as documenting the evidence supporting the determination. \r\n\r\nThis archetype should be regarded as a critical archetype by any clinical decision support system testing for presence or exclusion of a pregnancy, for example, prior to prescribing teratogenic medications or to exclude pregnancy related complications in the diagnosis of collapse or abdominal pain in women of child-bearing years.",
+          "misuse" : "Not for recording summary information about a single pregnancy. Use the EVALUATION.pregnancy_summary for this purpose.\r\n\r\nNot to be used to record details about procedures performed during a pregnancy, for example terminations or deliveries. Use the ACTION.procedure or other relevant archetypes for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pregnancy_finding.v0",
     "differential" : true,
