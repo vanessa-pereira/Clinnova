@@ -6,18 +6,6 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			author = <
-			>
-		>
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
-			author = <
-			>
-		>
-	>
 
 description
 	original_author = <
@@ -28,18 +16,10 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			copyright = <"© openEHR Foundation">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			keywords = <"2 Item Crohn's Disease, Patient reported outcome, CD-PRO-2, PROM", ...>
 			use = <"This archetype represents a patient assessment that needs to be filled up everyday and when getting the total days necessary to do the calculation for the total scores, a final composition submission must be present. This means that in order to achieve the total score, multi submissions must be sent to the database and in order to achieve this the composition should have different versions during his lifecycle. This archetype includes several single point events which include the total scores for each abdominal pain and number of stools. In the 7 days point events these elements should be constrained to 0 at the template level or in the run time, being only filled in on the interval events for 7 days average and total score where the count and ordinals for number of stools and abdominal pain should be constrained to 0.">
-		>
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -49,7 +29,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d615c1e92b4ac041af0bc851a9e53ddb">
+		["MD5-CAM-1.0.1"] = <"74e90693f714f518398c8b83057147f1">
 		["build_uid"] = <"b5304988-1401-3114-bdc6-6e8695624772">
 	>
 
@@ -354,254 +334,6 @@ ontology
 				["at0193"] = <
 					text = <"Severe">
 					description = <"CD-PRO-2 score is bigger than 34">
-				>
-			>
-		>
-		["fr"] = <
-			items = <
-				["at0000"] = <
-					text = <"*2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2) (en)">
-					description = <"*2-item Crohn Disease Patient-Reported Outcome (CDPRO2) is a self-reported questionnaire and consists of two questions. The patient has to answer these questions daily for seven days. Cut-offs are mean daily stool frequency ≤1.5, abdominal pain ≤1, and general well-being score of ≤1. The Crohn's Disease Activity Index (CDAI) is a measure of disease activity based on symptoms, signs and a laboratory test. The US Food and Drug Administration has indicated that patient reported outcomes (PROs) should be the primary outcome in randomised controlled trials for Crohn's disease (CD). (en)">
-				>
-				["at0001"] = <
-					text = <"History">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Day 1 (en)">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0005"] = <
-					text = <"*Number of liquid or very soft stools (en)">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"*Abdominal pain (en)">
-					description = <"">
-				>
-				["at0012"] = <
-					text = <"*7 days average number of liquid or very soft stools (en)">
-					description = <"*Sum of number of liquid or very soft stools from all 7 days dividing by 7 (en)">
-				>
-				["at0013"] = <
-					text = <"*Total score number of liquid or very soft stools (en)">
-					description = <"*Is calculated by multiplying 7 days average number of liquid or very soft stools by a weighting factor of x2 (en)">
-				>
-				["at0016"] = <
-					text = <"*None (en)">
-					description = <"">
-				>
-				["at0017"] = <
-					text = <"*Mild (en)">
-					description = <"">
-				>
-				["at0018"] = <
-					text = <"*Moderate (en)">
-					description = <"">
-				>
-				["at0019"] = <
-					text = <"*Severe (en)">
-					description = <"">
-				>
-				["at0026"] = <
-					text = <"*7 day average abdominal pain (en)">
-					description = <"*Sum of number of abdominal pains ordinals from all 7 days dividing by 7 (en)">
-				>
-				["at0027"] = <
-					text = <"*Total score abdominal pain (en)">
-					description = <"*Is calculated by multiplying the 7 days average number of abdominal pain by a weighting factor of x5 (en)">
-				>
-				["at0028"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0029"] = <
-					text = <"*Extension (en)">
-					description = <"">
-				>
-				["at0030"] = <
-					text = <"*CD-PRO-2 total score (en)">
-					description = <"*PRO-2 is sum of the element \"Total score number of liquid or very soft stools\" and element \"Total score abdominal pain\". (en)">
-				>
-				["at0109"] = <
-					text = <"*Day 2 (en)">
-					description = <"">
-				>
-				["at0122"] = <
-					text = <"*Day 3 (en)">
-					description = <"">
-				>
-				["at0135"] = <
-					text = <"*Day 4 (en)">
-					description = <"">
-				>
-				["at0148"] = <
-					text = <"*Day 5 (en)">
-					description = <"">
-				>
-				["at0161"] = <
-					text = <"*Day 6 (en)">
-					description = <"">
-				>
-				["at0174"] = <
-					text = <"*Day 7 (en)">
-					description = <"">
-				>
-				["at0175"] = <
-					text = <"*Average 7 days (en)">
-					description = <"">
-				>
-				["at0188"] = <
-					text = <"*Total score (en)">
-					description = <"">
-				>
-				["at0189"] = <
-					text = <"*Total score interpretation (en)">
-					description = <"*The Crohn disease activity in relation to the PRO-2 scoring (en)">
-				>
-				["at0190"] = <
-					text = <"*Remission (en)">
-					description = <"*CD-PRO-2 score less than 8 (en)">
-				>
-				["at0191"] = <
-					text = <"*Mild (en)">
-					description = <"*CD-PRO-2 score equals 8 or less than 14 (en)">
-				>
-				["at0192"] = <
-					text = <"*Moderate (en)">
-					description = <"*CD-PRO-2 score equals 14 or less than 34 (en)">
-				>
-				["at0193"] = <
-					text = <"*Severe (en)">
-					description = <"*CD-PRO-2 score is bigger than 34 (en)">
-				>
-			>
-		>
-		["de"] = <
-			items = <
-				["at0000"] = <
-					text = <"*2 Item Crohn's Disease - Patient reported outcome (CD-PRO-2) (en)">
-					description = <"*2-item Crohn Disease Patient-Reported Outcome (CDPRO2) is a self-reported questionnaire and consists of two questions. The patient has to answer these questions daily for seven days. Cut-offs are mean daily stool frequency ≤1.5, abdominal pain ≤1, and general well-being score of ≤1. The Crohn's Disease Activity Index (CDAI) is a measure of disease activity based on symptoms, signs and a laboratory test. The US Food and Drug Administration has indicated that patient reported outcomes (PROs) should be the primary outcome in randomised controlled trials for Crohn's disease (CD). (en)">
-				>
-				["at0001"] = <
-					text = <"History">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Day 1 (en)">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0005"] = <
-					text = <"*Number of liquid or very soft stools (en)">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"*Abdominal pain (en)">
-					description = <"">
-				>
-				["at0012"] = <
-					text = <"*7 days average number of liquid or very soft stools (en)">
-					description = <"*Sum of number of liquid or very soft stools from all 7 days dividing by 7 (en)">
-				>
-				["at0013"] = <
-					text = <"*Total score number of liquid or very soft stools (en)">
-					description = <"*Is calculated by multiplying 7 days average number of liquid or very soft stools by a weighting factor of x2 (en)">
-				>
-				["at0016"] = <
-					text = <"*None (en)">
-					description = <"">
-				>
-				["at0017"] = <
-					text = <"*Mild (en)">
-					description = <"">
-				>
-				["at0018"] = <
-					text = <"*Moderate (en)">
-					description = <"">
-				>
-				["at0019"] = <
-					text = <"*Severe (en)">
-					description = <"">
-				>
-				["at0026"] = <
-					text = <"*7 day average abdominal pain (en)">
-					description = <"*Sum of number of abdominal pains ordinals from all 7 days dividing by 7 (en)">
-				>
-				["at0027"] = <
-					text = <"*Total score abdominal pain (en)">
-					description = <"*Is calculated by multiplying the 7 days average number of abdominal pain by a weighting factor of x5 (en)">
-				>
-				["at0028"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0029"] = <
-					text = <"*Extension (en)">
-					description = <"">
-				>
-				["at0030"] = <
-					text = <"*CD-PRO-2 total score (en)">
-					description = <"*PRO-2 is sum of the element \"Total score number of liquid or very soft stools\" and element \"Total score abdominal pain\". (en)">
-				>
-				["at0109"] = <
-					text = <"*Day 2 (en)">
-					description = <"">
-				>
-				["at0122"] = <
-					text = <"*Day 3 (en)">
-					description = <"">
-				>
-				["at0135"] = <
-					text = <"*Day 4 (en)">
-					description = <"">
-				>
-				["at0148"] = <
-					text = <"*Day 5 (en)">
-					description = <"">
-				>
-				["at0161"] = <
-					text = <"*Day 6 (en)">
-					description = <"">
-				>
-				["at0174"] = <
-					text = <"*Day 7 (en)">
-					description = <"">
-				>
-				["at0175"] = <
-					text = <"*Average 7 days (en)">
-					description = <"">
-				>
-				["at0188"] = <
-					text = <"*Total score (en)">
-					description = <"">
-				>
-				["at0189"] = <
-					text = <"*Total score interpretation (en)">
-					description = <"*The Crohn disease activity in relation to the PRO-2 scoring (en)">
-				>
-				["at0190"] = <
-					text = <"*Remission (en)">
-					description = <"*CD-PRO-2 score less than 8 (en)">
-				>
-				["at0191"] = <
-					text = <"*Mild (en)">
-					description = <"*CD-PRO-2 score equals 8 or less than 14 (en)">
-				>
-				["at0192"] = <
-					text = <"*Moderate (en)">
-					description = <"*CD-PRO-2 score equals 14 or less than 34 (en)">
-				>
-				["at0193"] = <
-					text = <"*Severe (en)">
-					description = <"*CD-PRO-2 score is bigger than 34 (en)">
 				>
 			>
 		>
