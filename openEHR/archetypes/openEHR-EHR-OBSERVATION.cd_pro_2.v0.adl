@@ -7,13 +7,13 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
+		["de"] = <
+			language = <[ISO_639-1::de]>
 			author = <
 			>
 		>
-		["de"] = <
-			language = <[ISO_639-1::de]>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
 			author = <
 			>
 		>
@@ -49,7 +49,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a9c5668c2ee199abec663d5d9aa8ed33">
+		["MD5-CAM-1.0.1"] = <"d615c1e92b4ac041af0bc851a9e53ddb">
 		["build_uid"] = <"b5304988-1401-3114-bdc6-6e8695624772">
 	>
 
@@ -133,6 +133,19 @@ definition
 													>
 												>
 											>
+										}
+									}
+									ELEMENT[at0189] occurrences matches {0..1} matches {    -- Total score interpretation
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0190,    -- Remission
+													at0191,    -- Mild
+													at0192,    -- Moderate
+													at0193]    -- Severe
+												}
+											}
 										}
 									}
 								}
@@ -252,7 +265,7 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Total score number of liquid or very soft stools">
-					description = <"Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of liquid or very soft stools) by a weighting factor of x2, then summing the total scores for all eight items.">
+					description = <"Is calculated by multiplying 7 days average number of liquid or very soft stools by a weighting factor of x2">
 				>
 				["at0016"] = <
 					text = <"None">
@@ -276,7 +289,7 @@ ontology
 				>
 				["at0027"] = <
 					text = <"Total score abdominal pain">
-					description = <"Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of abdominal pain) by a weighting factor of x5, then summing the total scores for all eight items.">
+					description = <"Is calculated by multiplying the 7 days average number of abdominal pain by a weighting factor of x5">
 				>
 				["at0028"] = <
 					text = <"Item tree">
@@ -288,7 +301,7 @@ ontology
 				>
 				["at0030"] = <
 					text = <"CD-PRO-2 total score">
-					description = <"Sum of the total score element from \"Number of liquid or very soft stools\" cluster and total score element from \"Abdominal pain\" cluster.">
+					description = <"PRO-2 is sum of the element \"Total score number of liquid or very soft stools\" and element \"Total score abdominal pain\".">
 				>
 				["at0109"] = <
 					text = <"Day 2">
@@ -321,6 +334,26 @@ ontology
 				["at0188"] = <
 					text = <"Total score">
 					description = <"">
+				>
+				["at0189"] = <
+					text = <"Total score interpretation">
+					description = <"The Crohn disease activity in relation to the PRO-2 scoring">
+				>
+				["at0190"] = <
+					text = <"Remission">
+					description = <"CD-PRO-2 score less than 8">
+				>
+				["at0191"] = <
+					text = <"Mild">
+					description = <"CD-PRO-2 score equals 8 or less than 14">
+				>
+				["at0192"] = <
+					text = <"Moderate">
+					description = <"CD-PRO-2 score equals 14 or less than 34">
+				>
+				["at0193"] = <
+					text = <"Severe">
+					description = <"CD-PRO-2 score is bigger than 34">
 				>
 			>
 		>
@@ -356,7 +389,7 @@ ontology
 				>
 				["at0013"] = <
 					text = <"*Total score number of liquid or very soft stools (en)">
-					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of liquid or very soft stools) by a weighting factor of x2, then summing the total scores for all eight items. (en)">
+					description = <"*Is calculated by multiplying 7 days average number of liquid or very soft stools by a weighting factor of x2 (en)">
 				>
 				["at0016"] = <
 					text = <"*None (en)">
@@ -380,7 +413,7 @@ ontology
 				>
 				["at0027"] = <
 					text = <"*Total score abdominal pain (en)">
-					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of abdominal pain) by a weighting factor of x5, then summing the total scores for all eight items. (en)">
+					description = <"*Is calculated by multiplying the 7 days average number of abdominal pain by a weighting factor of x5 (en)">
 				>
 				["at0028"] = <
 					text = <"Item tree">
@@ -392,7 +425,7 @@ ontology
 				>
 				["at0030"] = <
 					text = <"*CD-PRO-2 total score (en)">
-					description = <"*Sum of the total score element from \"Number of liquid or very soft stools\" cluster and total score element from \"Abdominal pain\" cluster. (en)">
+					description = <"*PRO-2 is sum of the element \"Total score number of liquid or very soft stools\" and element \"Total score abdominal pain\". (en)">
 				>
 				["at0109"] = <
 					text = <"*Day 2 (en)">
@@ -425,6 +458,26 @@ ontology
 				["at0188"] = <
 					text = <"*Total score (en)">
 					description = <"">
+				>
+				["at0189"] = <
+					text = <"*Total score interpretation (en)">
+					description = <"*The Crohn disease activity in relation to the PRO-2 scoring (en)">
+				>
+				["at0190"] = <
+					text = <"*Remission (en)">
+					description = <"*CD-PRO-2 score less than 8 (en)">
+				>
+				["at0191"] = <
+					text = <"*Mild (en)">
+					description = <"*CD-PRO-2 score equals 8 or less than 14 (en)">
+				>
+				["at0192"] = <
+					text = <"*Moderate (en)">
+					description = <"*CD-PRO-2 score equals 14 or less than 34 (en)">
+				>
+				["at0193"] = <
+					text = <"*Severe (en)">
+					description = <"*CD-PRO-2 score is bigger than 34 (en)">
 				>
 			>
 		>
@@ -460,7 +513,7 @@ ontology
 				>
 				["at0013"] = <
 					text = <"*Total score number of liquid or very soft stools (en)">
-					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of liquid or very soft stools) by a weighting factor of x2, then summing the total scores for all eight items. (en)">
+					description = <"*Is calculated by multiplying 7 days average number of liquid or very soft stools by a weighting factor of x2 (en)">
 				>
 				["at0016"] = <
 					text = <"*None (en)">
@@ -484,7 +537,7 @@ ontology
 				>
 				["at0027"] = <
 					text = <"*Total score abdominal pain (en)">
-					description = <"*Is calculated by multiplying each item (day 1 to day 7 and the 7 days average number of abdominal pain) by a weighting factor of x5, then summing the total scores for all eight items. (en)">
+					description = <"*Is calculated by multiplying the 7 days average number of abdominal pain by a weighting factor of x5 (en)">
 				>
 				["at0028"] = <
 					text = <"Item tree">
@@ -496,7 +549,7 @@ ontology
 				>
 				["at0030"] = <
 					text = <"*CD-PRO-2 total score (en)">
-					description = <"*Sum of the total score element from \"Number of liquid or very soft stools\" cluster and total score element from \"Abdominal pain\" cluster. (en)">
+					description = <"*PRO-2 is sum of the element \"Total score number of liquid or very soft stools\" and element \"Total score abdominal pain\". (en)">
 				>
 				["at0109"] = <
 					text = <"*Day 2 (en)">
@@ -529,6 +582,26 @@ ontology
 				["at0188"] = <
 					text = <"*Total score (en)">
 					description = <"">
+				>
+				["at0189"] = <
+					text = <"*Total score interpretation (en)">
+					description = <"*The Crohn disease activity in relation to the PRO-2 scoring (en)">
+				>
+				["at0190"] = <
+					text = <"*Remission (en)">
+					description = <"*CD-PRO-2 score less than 8 (en)">
+				>
+				["at0191"] = <
+					text = <"*Mild (en)">
+					description = <"*CD-PRO-2 score equals 8 or less than 14 (en)">
+				>
+				["at0192"] = <
+					text = <"*Moderate (en)">
+					description = <"*CD-PRO-2 score equals 14 or less than 34 (en)">
+				>
+				["at0193"] = <
+					text = <"*Severe (en)">
+					description = <"*CD-PRO-2 score is bigger than 34 (en)">
 				>
 			>
 		>
