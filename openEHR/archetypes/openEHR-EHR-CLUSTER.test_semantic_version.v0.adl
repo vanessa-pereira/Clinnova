@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=a31ade8a-ad60-4dc8-a107-b10294630a7b)
-	openEHR-EHR-CLUSTER.test_semantic_version.v1
+	openEHR-EHR-CLUSTER.test_semantic_version.v0
 
 concept
 	[at0000]
@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
-		["date"] = <"2023-04-26">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
+		["date"] = <"2023-04-26">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5e5669a700676b2330364d97af943966">
+		["MD5-CAM-1.0.1"] = <"18214a4464b4e9864211b47df7750b7e">
 		["build_uid"] = <"3c6333d9-8350-33a8-828f-0d19d1a3cd7a">
 	>
 
