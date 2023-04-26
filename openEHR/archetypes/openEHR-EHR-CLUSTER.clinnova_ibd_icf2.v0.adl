@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=d5030219-d570-4ef7-9f58-0b7dc2af2c1f)
-	openEHR-EHR-CLUSTER.clinnova_ibd_icf3.v0
+	openEHR-EHR-CLUSTER.clinnova_ibd_icf_v3.v0
 
 concept
 	[at0000]
@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3a28e8d06da4e26d97aeacc8aaa663f0">
+		["MD5-CAM-1.0.1"] = <"1d7b9a3babc07d3ee97092329fa60db4">
 		["build_uid"] = <"2bcf7970-cfbe-3aeb-bc62-812c57ead63e">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Clinnova IBD Informed Consent Form - version 3
+	CLUSTER[at0000] matches {    -- Clinnova IBD Informed Consent Form
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] matches {    -- Patient agreed to take part in the study, donate biological samples, under terms set out on information sheet
 				value matches {
@@ -183,7 +183,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Clinnova IBD Informed Consent Form - version 3">
+					text = <"Clinnova IBD Informed Consent Form">
 					description = <"Clinnova IBD Informed Consent Form - version 3">
 				>
 				["at0001"] = <
