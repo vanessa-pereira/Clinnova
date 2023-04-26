@@ -1,0 +1,277 @@
+archetype (adl_version=1.4; uid=d5030219-d570-4ef7-9f58-0b7dc2af2c1f)
+	openEHR-EHR-CLUSTER.clinnova_ibd_icf3.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-01-30">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"release_candidate">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f8797b729290cb3565d15049f65e8c5f">
+		["build_uid"] = <"2bcf7970-cfbe-3aeb-bc62-812c57ead63e">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Clinnova IBD Informed Consent Form
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] matches {    -- Patient agreed to take part in the study, donate biological samples, under terms set out on information sheet
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			CLUSTER[at0002] occurrences matches {0..1} matches {    -- Genetic analysis concerns during research study
+				items cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0012] occurrences matches {0..1} matches {    -- Discovered germline mutation by medical team
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0003] matches {    -- Patient gave consent to attending physician/doctor/geneticist to inform of such findings, possible implications and to refer to a local geneticist
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0004,    -- Yes
+											at0005]    -- No
+										}
+									}
+								}
+							}
+							ELEMENT[at0006] occurrences matches {0..1} matches {    -- Treating physician name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0007] occurrences matches {0..1} matches {    -- Treating physician contact
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0008] occurrences matches {0..1} matches {    -- Discovered germline mutation and unable to receive information in person
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0009] matches {    -- Patient wished to designate a member of family to receive results and discuss implications with medical team
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0004,    -- Yes
+											at0005]    -- No
+										}
+									}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Family representative name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Family representative contact
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+				}
+			}
+			ELEMENT[at0013] matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other research in the same field
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0014] matches {    -- Patient agreed to secondary use of his samples/pseudonymised data for other Clinnova related research in the same field
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0015] matches {    -- Patient agreed to secondary use of his samples for genetic research
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0016] matches {    -- Patient agreed to transfer of his samples/data outside the European Union
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0019] matches {    -- Patient agreed to download the Colive application and to perform voice recordings via this application
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0017] matches {    -- Patient agreed to use the provided smartwatch (Withings ScanWatch) in the condition described in the information sheet
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0018] matches {    -- Patient agreed to be contacted again by the person leading the study with a view to taking part in another study
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005]    -- No
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Clinnova IBD Informed Consent Form">
+					description = <"Clinnova IBD Informed Consent Form - version 3">
+				>
+				["at0001"] = <
+					text = <"Patient agreed to take part in the study, donate biological samples, under terms set out on information sheet">
+					description = <"Original question: \"I willingly agree to take part in this study and to donate biological samples, under the terms set out on the attached information sheet\"">
+				>
+				["at0002"] = <
+					text = <"Genetic analysis concerns during research study">
+					description = <"Original question: \"I understand that genetic analyses are performed in the context of the present clinical research study and I will inform the clinical team of my wishes in case of incidental findings below:\"">
+				>
+				["at0003"] = <
+					text = <"Patient gave consent to attending physician/doctor/geneticist to inform of such findings, possible implications and to refer to a local geneticist">
+					description = <"Original question: \"Should a germline mutation be discovered (a mutation or aberration that might not only affect my future health but also that of my children, siblings, parents, etc.), I give consent to my attending physician / the doctor leading the study / a geneticist to inform me of such findings in order to discuss the possible implications and to refer me to a local geneticist if necessary.
+
+By making my decision, I confirm that I have been properly informed and understand that the researcher is under no obligation to actively search for genetic mutations in my sample(s) and that the discovery of such a mutation in no way constitutes a diagnosis. I have also been informed that if such a mutation is discovered, it will be during the course of data analysis following the processing of my samples and within the context of this particular study (rather than during future studies that may make secondary use of my samples after this study). I will also be contacted at this time if I have ticked “YES” above. Lastly, I confirm that I have been informed of my right to change my mind at any time.
+
+→ Consequences of my decision: 
+If I select “NO”, neither I nor any of my close family members will receive any information in relation to incidental findings. 
+If I select “YES”, my attending physician / the doctor leading the study / a geneticist will inform me of any incidental findings. I will then be invited to discuss the possible implications and will be referred to a local geneticist if necessary.\"">
+				>
+				["at0004"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Treating physician name">
+					description = <"Original question: \"Name and contact details of my treating physician\"">
+				>
+				["at0007"] = <
+					text = <"Treating physician contact">
+					description = <"Original question: \"Name and contact details of my treating physician\"">
+				>
+				["at0008"] = <
+					text = <"Discovered germline mutation and unable to receive information in person">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Patient wished to designate a member of family to receive results and discuss implications with medical team">
+					description = <"Original question: \"If I have answered “YES” to the previous question, and if a germline mutation is identified and I am unable to receive such information in person, 
+I wish to designate a member of my family (representative) to receive these results, so that he/she may be given the opportunity to discuss the implications with my attending physician and be referred to a local geneticist.
+
+→ Consequences of my decision: 
+If I have answered “YES”, this means that I consent to my representative receiving such information, discussing any implications with my attending physician and being referred to a local geneticist.\"">
+				>
+				["at0010"] = <
+					text = <"Family representative name">
+					description = <"Original question: \"Name and contact details of my representative: \"">
+				>
+				["at0011"] = <
+					text = <"Family representative contact">
+					description = <"Original question: \"Name and contact details of my representative: \"">
+				>
+				["at0012"] = <
+					text = <"Discovered germline mutation by medical team">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Patient agreed to secondary use of his samples/pseudonymised data for other research in the same field">
+					description = <"Original question: \"I agree to the secondary use of my samples /pseudonymised data for other biomedical research in the same field (immune related disease).\"">
+				>
+				["at0014"] = <
+					text = <"Patient agreed to secondary use of his samples/pseudonymised data for other Clinnova related research in the same field">
+					description = <"Original question: \"I agree to the secondary use of my samples/pseudonymised data for other Clinnova related research in the same field.\"">
+				>
+				["at0015"] = <
+					text = <"Patient agreed to secondary use of his samples for genetic research">
+					description = <"Original question: \"I agree to the secondary use of my samples for genetic research.\"">
+				>
+				["at0016"] = <
+					text = <"Patient agreed to transfer of his samples/data outside the European Union">
+					description = <"Original question: \"I agree to the transfer of my samples and data outside the European Union.\"">
+				>
+				["at0017"] = <
+					text = <"Patient agreed to use the provided smartwatch (Withings ScanWatch) in the condition described in the information sheet">
+					description = <"Original question: \"I agree to the use the provided smartwatch (Withings ScanWatch) in the condition described in the information sheet\"">
+				>
+				["at0018"] = <
+					text = <"Patient agreed to be contacted again by the person leading the study with a view to taking part in another study">
+					description = <"Original question: \"I agree to being contacted again by the person leading the study with a view to taking part in another study.\"">
+				>
+				["at0019"] = <
+					text = <"Patient agreed to download the Colive application and to perform voice recordings via this application">
+					description = <"Original question: \"I agree to download the Colive application and to perform voice recordings via this application\"">
+				>
+			>
+		>
+	>
