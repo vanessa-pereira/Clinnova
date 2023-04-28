@@ -7,42 +7,42 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 
 ### Inflammatory bowel disease (IBD)
 
+> **_NOTE:_** in the url column, the archetype id's without prefix "openEHR-EHR-" means they are not in the openEHR international CKM and are newly made.
+
 | Questionnaire OR element                                 | Working in   | url         | Status       | Type/Copyrighted?  |
 | -----------                                              | -----------  |-----------  | ---------    | --------           |
-| Short IBD-related Quality of Life (SIBDQ)                |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.sibdq.v0.adl)| in dev review| PROM / Yes         |
-| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in progress  | PROM /  No        |
-| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| in dev review| PROM / Yes     |
-| Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| in dev review| PROM / No          |
-| Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              |             |
-| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|             | in progress  | CROM / Yes                   |
-| Lémann Index (bowel damage)                              |              |             |              | PROM /             |
-| Harvey Bradshaw Index Crohn's activity index (HBI)       |              |             |              | PROM / No          |
-| Crohn Disease - Patient reported outcome (CD-PRO-2)      |              |             |              | PROM /             |
-| Ulcerative Colitis - Patient reported outcome (UC-PRO-2) |              |             |              | PROM /             |
-| Simple Endoscopic Score for Crohn Disease (SES-CD)       |              |             |              |                    |
-| Ulcerative Colitis Endoscopic Index of Severity (UCEIS)  |              |             |              |                    |
-| Simple Clinical Colitis Activity Index (SCCAI)           |              |             |              | PROM / No          |
-| Morisky Medication Adherence Scale (MMAS-8)              |              |             |              |                    |
-| The Montreal classification for Crohn disease and ulcerative colitis    |             |              |                    |
-| Nancy histological index for ulcerative colitis          |              |             |              |                    |
-| Visual analogue scale of Medication Adherence (VAS-MA)   |              |             |will use vas cluster?| PROM /      |
-| 5-item Medication adherence Scale (MARS-5)               |              |             |              | PROM / Yes         |
-| Pittsburgh Sleep Quality Index (PSQI)                    |              |             |              | PROM / Yes         |
-| Health questionnaire (EQ-5D-5L)                          |Ian McNicoll  |             | in progress  | PROM /             |
-| Food questionnaire (FQ)                                  |              |             |              | PROM / No, trademark of LIH|
-| Environmental questionnaire (EQ)                         |              |             |              | PROM / No, trademark of LIH|
-| Standardized voice collection                            |              |             |              | PROM / No, trademark of LIH|
-| Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |[openEHR-EHR-OBSERVATION.phq_9.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |            | PROM / Yes    |
-| Perceived Stress Scale (PSS)                             |Vanessa Pereira| [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.pss.v0.adl)|in dev review|PROM / Yes, but free to use for research|
-| Fatigue Severity Scale (FSS)                             |Vanessa Pereira| [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/local/openEHR-EHR-OBSERVATION.fss.v0.adl)|in progress|PROM / Yes          |
-| Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)|           |          |             |           |           |
-| Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)|        |          |             |           |           |
-| ~~Endoscopic partial Mayo score (PMES)~~                 |              |             | **cancelled**    |                    |
-| ~~Multidimensional fatigue inventory (MFI)~~             |              |             | **cancelled**    |                    |
-| ~~Hospital Anxiety and Depression Scale (HADS)~~         |Highmed       | [openEHR-EHR-OBSERVATION.hads.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1751) | **canceled**, subst by PHQ-9| PROM / Yes  |
-| ~~Work Productivity and Activity Impairment Questionnaire: General Health V2.0 (WPAI:GH)~~ | Highmed  |[openEHR-EHR-OBSERVATION.wpai_gh.v1](https://ckm.highmed.org/ckm/archetypes/1246.145.1737) | **canceled**, subst by WPAI:UC & WPAI:CD| PROM /          |
-
-
+| Short IBD-Disability Index (IBD-DI-SR)                   |Vanessa Pereira|[OBSERVATION.ibd_di_sr.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl)| in dev review | PROM /  No |
+| Brief Illness Perception Questionnaire (Brief IPQ)       |Vanessa Pereira|[OBSERVATION.brief_ipq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.brief_ipq.v0.adl)| SENT TO CKM| PROM / Yes |
+| Jorge and Wexner faecal score incontinence               |Vanessa Pereira|[OBSERVATION.wexner_score.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wexner_score.v0.adl)| SENT TO CKM | PROM / yes |
+| Mayo score (ulcerative colitis)                          |international ckm | [openEHR-EHR-OBSERVATION.mayo_score.v1](https://ckm.openehr.org/ckm/archetypes/1013.1.5078)|              | PROM / Yes  |
+| Crohn's Disease Activity Index (CDAI)                    |Vanessa Pereira|[OBSERVATION.cdai.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ibd_di_sr.v0.adl) | in dev review  | CROM / Yes |
+| Lémann Index (bowel damage)                              |Vanessa Pereira|[OBSERVATION.lemann_index.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.lemann_index.v0.adl) | SENT TO CKM | CROM / No information   |
+| Harvey Bradshaw Index Crohn's activity index (HBI)       |Vanessa Pereira|[OBSERVATION.phbi.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.phbi.v0.adl)|in dev review  | PROM / No         |
+| Crohn Disease - Patient reported outcome (CD-PRO-2)      |Vanessa Pereira|[OBSERVATION.cd_pro_2.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.cd_pro_2.v0.adl)|in dev review  | PROM / ? |
+| Ulcerative Colitis - Patient reported outcome (UC-PRO-2) |Vanessa Pereira|[OBSERVATION.uc_pro_2.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.uc_pro_2.v0.adl)|in dev review | PROM / ? |
+| Simple Endoscopic Score for Crohn Disease (SES-CD)       |Vanessa Pereira|[OBSERVATION.sescd.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sescd.v0.adl)|in dev review | CROM / No information|
+| Ulcerative Colitis Endoscopic Index of Severity (UCEIS)  |Vanessa Pereira|[OBSERVATION.uceis.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.uceis.v0.adl)|in dev review | CROM / Yes |
+| Simple Clinical Colitis Activity Index (SCCAI)           |Vanessa Pereira|[OBSERVATION.sccai.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sccai.v0.adl)|in dev review | PROM / No |
+| The Montreal classification for Crohn disease    |Vanessa Pereira|[OBSERVATION.montreal_classification_cd.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.montreal_classification_cd.v0.adl)|in dev review | PROM / No |
+| The Montreal classification for ulcerative colitis    |Vanessa Pereira|[OBSERVATION.montreal_classification_uc.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.montreal_classification_uc.v0.adl)|in dev review | PROM / No |
+| Nancy histological index for ulcerative colitis   |Vanessa Pereira|[OBSERVATION.nancy_index_uc.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.nancy_index_uc.v0.adl)|in dev review | PROM / No |
+| 5-item Medication adherence Scale (MARS-5)               |Vanessa Pereira|[OBSERVATION.mars_5.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.mars_5.v0.adl)|in dev review  | PROM / Yes   |
+| Functional Assessment of Chronic Illness Therapy - Fatigue (FACIT-Fatigue) |Vanessa Pereira|[OBSERVATION.facit_fatigue.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.facit_fatigue.adl)|in dev review | PROM / Yes   |
+| Pittsburgh Sleep Quality Index (PSQI)                    |Vanessa Pereira|[OBSERVATION.psqi.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.psqi.v0.adl)|in dev review | PROM / Yes |
+| Lémann Index                   |Vanessa Pereira|[OBSERVATION.lemann_index.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.lemann_index.v0.adl)|in dev review  | PROM / ? |
+| Health questionnaire (EQ-5D-5L)                          |Ian McNicoll/Vanessa| [OBSERVATION.eq_5d_5l.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.eq_5d_5l.v0.adl)|in dev review  | PROM / Yes  |
+| Environmental questionnaire (EQ)                          |Vanessa Pereira|[OBSERVATION.environmental_questionnaire_lih.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.environmental_questionnaire_lih.v0.adl)|in progress |PROM / No, trademark of LIH|
+| Patient Health Questionnaire-9 (PHQ-9)                   |International CKM |[openEHR-EHR-OBSERVATION.phq_9.v0](https://ckm.openehr.org/ckm/archetypes/1013.1.1645) |in progress (translation)| PROM / Yes    |
+| Perceived Stress Scale (PSS)                             | Vanessa Pereira | [OBSERVATION.pss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.pss.v0.adl)|in dev review|PROM / Yes, but free to use for research|
+| Work Productivity and Activity Impairment Questionnaire: Crohn's disease V2.0 (WPAI:CD)| Vanessa Pereira |[OBSERVATION.wpai_cd.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wpai_cd.v0.adl)| in dev review|PROM / ? |
+| Work Productivity and Activity Impairment Questionnaire: Ulcerative colitis V2.0 (WPAI:UC)| Vanessa Pereira |[OBSERVATION.wpai_uc.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.wpai_uc.v0.adl)| SENT TO CKM | PROM / ? |
+| International physical activity questionnaire (IPAQ)| Vanessa Pereira |[OBSERVATION.ipaq_sf.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.ipaq.v0.adl)| in dev review | PROM / ? |
+| Short Form Dietary Questionnaire (SFFFQ)| Vanessa Pereira |[OBSERVATION.sfffq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sfffq.v0.adl)| in progress | PROM / Yes |
+| Clavien-Dindo Classification| Vanessa Pereira |[CLUSTER.clavien_dindo.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-CLUSTER.clavien_dindo.v0.adl)| in progress | - / Yes |
+| Standardized voice collection                            |Vanessa Pereira|  colive_voice_lih?  | PAUSED | PROM / No, trademark of LIH|
+| ~~Short IBD-related Quality of Life (SIBDQ)~~               |Vanessa Pereira|[OBSERVATION.sibdq.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.sibdq.v0.adl)|**CANCELLED**| PROM / Yes |
+| ~~Food questionnaire (FQ)~~                                   |Vanessa Pereira|[OBSERVATION.food_questionnaire_lih.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.food_questionnaire_lih.v0.adl)|**CANCELLED**| PROM / No, trademark of LIH|
+| ~~Fatigue Severity Scale (FSS)~~                             | Vanessa Pereira | [OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.fss.v0.adl)|**CANCELLED**|PROM / Yes   |
 ***
 
 ### Rheumatic Diseases (RD) - Rheumatoid arthritis (RA), systemic lupus erythematosus (SLE)
