@@ -1,5 +1,5 @@
 archetype (adl_version=1.4; uid=77fa3dfd-5494-4172-9ccc-685b92da4321)
-	openEHR-EHR-CLUSTER.redcap_audit.v0
+	openEHR-EHR-CLUSTER.nifi_input.v0
 
 concept
 	[at0000]
@@ -9,10 +9,10 @@ language
 
 description
 	original_author = <
+		["date"] = <"2023-05-05">
 		["name"] = <"Vanessa Pereira">
 		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.me">
-		["date"] = <"2023-05-05">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9c178e3eb9df4c200badb6c27760a21b">
+		["MD5-CAM-1.0.1"] = <"49ba6deaf81172c469e9ca0bd5b7f8e4">
 		["build_uid"] = <"4bcb47bb-1659-3fda-9e8a-e8ba9575bc8c">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Redcap audit
+	CLUSTER[at0000] matches {    -- NiFi input
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- MD5 hash
 				value matches {
@@ -46,7 +46,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Redcap audit">
+					text = <"NiFi input">
 					description = <"redcap_audit">
 				>
 				["at0001"] = <
