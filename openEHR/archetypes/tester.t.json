@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.3.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "5a28869f214e8252c3235ba941c9ebac",
+      "MD5-CAM-1.0.1" : "3f288495fd6c10f903a24fe95fcd7be8",
       "PARENT:MD5-CAM-1.0.1" : "782C49493E523506E8C34B7C5CF7B761"
     },
     "details" : {
@@ -147,7 +147,7 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.4",
+        "nodeId" : "at0.6",
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-substance_use_screening-001.v0",
@@ -441,7 +441,7 @@
         "original_namespace" : "org.openehr",
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
-        "MD5-CAM-1.0.1" : "704acf6ec9dc5285d5aa056d96d41e9a",
+        "MD5-CAM-1.0.1" : "5728738003fc5cafb4bcb7cbeb87bbef",
         "PARENT:MD5-CAM-1.0.1" : "60834FB342B68A169ADF87DE620BC29D"
       },
       "details" : {
@@ -505,13 +505,13 @@
           "/data[at0022]/events[at0023]/data[at0001]/items[at0026.1]/items[at0024.1]" : {
             "redcap_mapping" : "regular_caff eine_suyn___1"
           },
-          "/data[at0022]/events[at0023]/data[at0001]/items[at0026.2]/items[at0024.2]" : {
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024.2]" : {
             "redcap_mapping" : "regular_caff eine_suyn___2"
           },
-          "/data[at0022]/events[at0023]/data[at0001]/items[at0026.3]/items[at0024.3]" : {
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024.3]" : {
             "redcap_mapping" : "regular_caff eine_suyn___3"
           },
-          "/data[at0022]/events[at0023]/data[at0001]/items[at0026.4]/items[at0024.4]" : {
+          "/data[at0022]/events[at0023]/data[at0001]/items[at0026]/items[at0024.4]" : {
             "redcap_mapping" : "regular_caff eine_suyn___4"
           }
         }
@@ -578,6 +578,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0027.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -595,7 +596,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.4" ],
+                              "constraint" : [ "ac0.16" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -656,6 +657,18 @@
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "288456005",
                                     "value" : "Caffeinated Coffee"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "26476000",
+                                    "value" : "Caffeinated Black Tea"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "412194001",
+                                    "value" : "Caffeinated Green Tea"
+                                  }, {
+                                    "terminologyId" : "SNOMED-CT",
+                                    "code" : "288458006",
+                                    "value" : "Caffeinated Soda"
                                   } ]
                                 } ]
                               } ],
@@ -678,12 +691,13 @@
                                 "rmAttributeName" : "defining_code",
                                 "children" : [ {
                                   "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "at0036", "at0037", "at0039" ]
+                                  "constraint" : [ "ac0.8" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -767,477 +781,6 @@
                         } ]
                       } ],
                       "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0026.2",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0021.2",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "SNOMED-CT",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "26476000",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Black tea",
-                                "@type" : "DV_CODED_TEXT"
-                              },
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "26476000",
-                                    "value" : "Black tea"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0024.2",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "at0036", "at0037", "at0039" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_BOOLEAN",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0003.3",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0002.3",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0025.2",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0026.3",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0021.3",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "SNOMED-CT",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "412194001",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Green tea",
-                                "@type" : "DV_CODED_TEXT"
-                              },
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "412194001",
-                                    "value" : "Green tea"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0024.3",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "at0036", "at0037", "at0039" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_BOOLEAN",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0003.2",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0002.2",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0025.3",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0026.4",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0021.4",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "SNOMED-CT",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "288458006",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Caffeinated soft drinks",
-                                "@type" : "DV_CODED_TEXT"
-                              },
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "SNOMED-CT"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "SNOMED-CT" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "SNOMED-CT",
-                                    "code" : "288458006",
-                                    "value" : "Caffeinated soft drinks"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0024.4",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "at0036", "at0037", "at0039" ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_BOOLEAN",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0003.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0002.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0025.1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
                     } ]
                   } ],
                   "attributeTuples" : [ ]
@@ -1263,160 +806,65 @@
             "description" : "Series of questions and associated answers used to screen for the harmful or hazardous use of medications, and other legal and illegal substances.",
             "comment" : "Also known as substance abuse, and includes substance dependence, addiction and doping. Examples of substances include, but are not limited to, alcohol, tobacco, amphetamines, barbiturates, benzodiazepines, cannabis, cocaine, hallucinogens, opioids, anabolic steroids, erythropoietin, or sniffing glue."
           },
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027.1",
-            "text" : "In your lifetime, have you ever regularly drunk caffeinated drink, that is, at least once per week for 6 months or longer?",
-            "description" : "Is there a history of use of any substance related to the screening purpose?",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
           "at0024.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0024.1",
-            "text" : "Consumed caffeinated coffee?",
+            "text" : "Regularly drunk at least once per week for the last 6 months or longer?",
             "description" : "Is there a history of use of a specific substance or group of substances.",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
           },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "Specific substance - coffee",
-            "description" : "Details about a specified substance or grouping of substances relevant for the screening purpose.",
-            "comment" : "Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance."
-          },
-          "at0026.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.2",
-            "text" : "Specific substance - black tea",
-            "description" : "Details about a specified substance or grouping of substances relevant for the screening purpose.",
-            "comment" : "Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance."
-          },
-          "at0024.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.2",
-            "text" : "Consumed caffeinated black tea?",
-            "description" : "Is there a history of use of a specific substance or group of substances.",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
-          },
-          "at0026.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.3",
-            "text" : "Specific substance - green tea",
-            "description" : "Details about a specified substance or grouping of substances relevant for the screening purpose.",
-            "comment" : "Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance."
-          },
-          "at0024.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.3",
-            "text" : "Consumed caffeinated green tea?",
-            "description" : "Is there a history of use of a specific substance or group of substances.",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
-          },
-          "at0026.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.4",
-            "text" : "Specific substance - soda",
-            "description" : "Details about a specified substance or grouping of substances relevant for the screening purpose.",
-            "comment" : "Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance."
-          },
-          "at0024.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.4",
-            "text" : "Consumed caffeinated soda?",
-            "description" : "Is there a history of use of a specific substance or group of substances.",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. For example an alternative valueset using the DV_TEXT datatype can be: Currently using [The individual currently uses the specific substance either on a regular basis or as required.] Never used [The individual has never used the specific substance.] Used in the past [The individual has used the specific substance in the past, but isn't currently using it.] Unknown [It is not known whether the individual uses or has used the specific substance.]"
-          },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.16",
             "description" : ""
           }
         },
         "nb" : {
-          "at0026.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "Spesifikk substans (2)",
-            "description" : "Detaljer om en spesifikk substans eller gruppe av substanser er innenfor kartleggingsformålet.",
-            "comment" : "Bruk separate instanser av dette clusteret for å skille mellom spesifikke substanser eller grupper av substanser."
-          },
-          "at0026.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "Spesifikk substans (3)",
-            "description" : "Detaljer om en spesifikk substans eller gruppe av substanser er innenfor kartleggingsformålet.",
-            "comment" : "Bruk separate instanser av dette clusteret for å skille mellom spesifikke substanser eller grupper av substanser."
-          },
-          "at0026.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "Spesifikk substans (4)",
-            "description" : "Detaljer om en spesifikk substans eller gruppe av substanser er innenfor kartleggingsformålet.",
-            "comment" : "Bruk separate instanser av dette clusteret for å skille mellom spesifikke substanser eller grupper av substanser."
-          },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
             "description" : ""
           }
         },
         "de" : {
-          "at0026.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "*Specific substance (en) (2)",
-            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
-            "comment" : "*Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance. (en)"
-          },
-          "at0026.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "*Specific substance (en) (3)",
-            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
-            "comment" : "*Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance. (en)"
-          },
-          "at0026.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "*Specific substance (en) (4)",
-            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
-            "comment" : "*Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance. (en)"
-          },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
             "description" : ""
           }
         },
         "nl" : {
-          "at0026.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "*Specific substance (en) (2)",
-            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
-            "comment" : "*Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance. (en)"
-          },
-          "at0026.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "*Specific substance (en) (3)",
-            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
-            "comment" : "*Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance. (en)"
-          },
-          "at0026.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "*Specific substance (en) (4)",
-            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
-            "comment" : "*Use separate instances of this CLUSTER to differentiate between specific substances or groupings of substance. (en)"
-          },
-          "ac0.4" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.4",
+            "code" : "ac0.8",
+            "description" : ""
+          },
+          "ac0.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.16",
             "description" : ""
           }
         }
@@ -1443,6 +891,66 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.4",
           "members" : [ "at0028", "at0029", "at0030" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0028", "at0029", "at0030" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0028", "at0029" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0036", "at0037" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.10",
+          "members" : [ "at0036", "at0037" ]
+        },
+        "ac0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.11",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.12",
+          "members" : [ "at0036", "at0037" ]
+        },
+        "ac0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.13",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at0036", "at0037" ]
+        },
+        "ac0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.15",
+          "members" : [ "at0028", "at0029" ]
+        },
+        "ac0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.16",
+          "members" : [ "at0028", "at0029" ]
         }
       }
     },
