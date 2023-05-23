@@ -25,14 +25,18 @@ description
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Satsangi, J, Silverberg, MS, Vermeire, S & Colombel, J-F 2006, 'The Montreal classification of inflammatory bowel disease: controversies, consensus, and implications', Gut, vol. 55, no. 6, pp. 749-53. https://doi.org/10.1136/gut.2005.082909
+
+Freeman H. J. (2007). Application of the Montreal classification for Crohn's disease to a single clinician database of 1015 patients. Canadian journal of gastroenterology = Journal canadien de gastroenterologie, 21(6), 363–366. https://doi.org/10.1155/2007/951526
+
+The Diagnosis and Treatment of Crohn's Disease and Ulcerative Colitis
+Dtsch Arztebl Int 2009; 106(8): 123-33. DOI: 10.3238/arztebl.2009.0123
+Baumgart, D C">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"c75bb47b0201591104522678fc6d8205">
 		["build_uid"] = <"b378e98f-da5a-3fb0-8807-61af2f173420">
-		["references"] = <"Satsangi, J, Silverberg, MS, Vermeire, S & Colombel, J-F 2006, 'The Montreal classification of inflammatory bowel disease: controversies, consensus, and implications', Gut, vol. 55, no. 6, pp. 749-53. https://doi.org/10.1136/gut.2005.082909
-
-Freeman H. J. (2007). Application of the Montreal classification for Crohn's disease to a single clinician database of 1015 patients. Canadian journal of gastroenterology = Journal canadien de gastroenterologie, 21(6), 363–366. https://doi.org/10.1155/2007/951526">
-		["MD5-CAM-1.0.1"] = <"fde565d4557c497fad6dfcfb447a74c7">
 	>
 
 definition
@@ -65,19 +69,6 @@ definition
 													at0010,    -- E1: Ulcerative proctitis
 													at0011,    -- E2: Left-sided UC (distal colitis)
 													at0012]    -- E3: extensive UC (pancolitis)
-												}
-											}
-										}
-									}
-									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Behaviour
-										value matches {
-											DV_CODED_TEXT matches {
-												defining_code matches {
-													[local::
-													at0014,    -- B1: Non-stricturing, non-penetrating
-													at0015,    -- B2: Stricturing
-													at0016,    -- B3: Penetrating
-													at0017]    -- P: Perianal disease modifiers, such as B1p, B2p, B3p
 												}
 											}
 										}
@@ -161,26 +152,6 @@ ontology
 				["at0012"] = <
 					text = <"E3: extensive UC (pancolitis)">
 					description = <"Involvement extends proximal to the splenic flexure">
-				>
-				["at0013"] = <
-					text = <"Behaviour">
-					description = <"Disease behaviour">
-				>
-				["at0014"] = <
-					text = <"B1: Non-stricturing, non-penetrating">
-					description = <"">
-				>
-				["at0015"] = <
-					text = <"B2: Stricturing">
-					description = <"">
-				>
-				["at0016"] = <
-					text = <"B3: Penetrating">
-					description = <"">
-				>
-				["at0017"] = <
-					text = <"P: Perianal disease modifiers, such as B1p, B2p, B3p">
-					description = <"">
 				>
 				["at0019"] = <
 					text = <"Comment">
