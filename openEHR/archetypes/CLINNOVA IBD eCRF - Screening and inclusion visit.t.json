@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.140",
+      "sem_ver" : "0.1.141",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "ba61213b87e6b0fdd1fe6a50559ed9de",
+      "MD5-CAM-1.0.1" : "93d76ddcc27057d673d3aaf756a5fcc6",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -56863,6 +56863,9 @@
           },
           "/data[at0001]/events[at0002]/data[at0003]/items[at0014.1]" : {
             "redcap_mapping" : "mri_rsscat"
+          },
+          "/data[at0001]/events[at0002]/data[at0003]/items[at0020.1]" : {
+            "redcap_mapping" : "mri_bowel_rsorres"
           }
         }
       }
@@ -57100,6 +57103,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0008.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -57181,9 +57185,48 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0020.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "415582006",
+                                "value" : "Stenosis"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "118622000",
+                                "value" : "Fistula"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "44132006",
+                                "value" : "Abscess"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "56208002",
+                                "value" : "Ulcer"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -57886,9 +57929,60 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0020.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "SNOMED-CT_LIH"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "415582006",
+                                "value" : "Stenosis"
+                              }, {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "118622000",
+                                "value" : "Fistula"
+                              }, {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "44132006",
+                                "value" : "Abscess"
+                              }, {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "56208002",
+                                "value" : "Ulcer"
+                              }, {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "LIHBOWTHICK",
+                                "value" : "Bowel wall thickness"
+                              }, {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "LIHLOSSTRAS",
+                                "value" : "Loss of bowel wall stratification"
+                              }, {
+                                "terminologyId" : "SNOMED-CT_LIH",
+                                "code" : "LIHLIMBSCOR",
+                                "value" : "Limberg perfusion score"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -57901,10 +57995,19 @@
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
                       "occurrences" : "0..1",
-                      "nodeId" : "at0044.1",
+                      "nodeId" : "at0006.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
                       "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-imaging_exam-bowel-001.v1",
+                      "referenceType" : "archetypeOverlay"
+                    }, {
+                      "@type" : "C_ARCHETYPE_ROOT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0006.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ],
+                      "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-imaging_exam-001.v1",
                       "referenceType" : "archetypeOverlay"
                     } ]
                   } ],
@@ -58438,118 +58541,16 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0004.0.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT_LIH"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "415582006",
-                    "value" : "Stenosis"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "118622000",
-                    "value" : "Fistula"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "44132006",
-                    "value" : "Abscess"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "56208002",
-                    "value" : "Ulcer"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "LIHBOWTHICK",
-                    "value" : "Bowel wall thickness"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "LIHLOSSTRAS",
-                    "value" : "Loss of bowel wall stratification"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "LIHLIMBSCOR",
-                    "value" : "Limberg perfusion score"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0006.0.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "SNOMED-CT_LIH"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "SNOMED-CT_LIH" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "415582006",
-                    "value" : "Stenosis"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "118622000",
-                    "value" : "Fistula"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "44132006",
-                    "value" : "Abscess"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "56208002",
-                    "value" : "Ulcer"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "LIHBOWTHICK",
-                    "value" : "Bowel wall thickness"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "LIHLOSSTRAS",
-                    "value" : "Loss of bowel wall stratification"
-                  }, {
-                    "terminologyId" : "SNOMED-CT_LIH",
-                    "code" : "LIHLIMBSCOR",
-                    "value" : "Limberg perfusion score"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -79642,6 +79643,177 @@
         "email" : "martijn.vaneenennaam@nedap.com, paul.vandenberg@nedap.com"
       },
       "accreditation" : "Ph.D.",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "21786f52-1d48-4a26-98a4-c27897969b50",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "C7771A8FC401E050446E16FFF42F3BC3"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.imaging_exam.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-imaging_exam-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "85774003",
+                    "value" : "Terminal ileum"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "9040008",
+                    "value" : "Ascending colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "2713005",
+                    "value" : "Caecum"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "485005",
+                    "value" : "Transverse colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "32622004",
+                    "value" : "Descending colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "60184004",
+                    "value" : "Sigmoid colon"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "34402009",
+                    "value" : "Rectum"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "e090a712-a4a9-4358-ab8a-de5eb58c37ec",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen",
+        "organisation" : "Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
       "otherDetails" : { }
     } ]
   } ],
