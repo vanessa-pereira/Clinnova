@@ -1,0 +1,170 @@
+archetype (adl_version=1.4; uid=159f1544-e339-4fdb-989b-7c615bb89a52)
+	openEHR-EHR-CLUSTER.limberg_score.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-05-24">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
+		["email"] = <"vanessapereira@pm.me">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To assess bowel wall vascularity in inflammatory bowel disease. 
+
+">
+			keywords = <"limbberg score, imaging, ultrasound, doppler, crohn disease, ulcerative colities", ...>
+			use = <"Note this archetype was built to match a questionnaire approach but the 2 main data points are present in the model - wall thickness and Limberg score/grade. Can be used together with the examination imaging result archetype. ">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"1cb6bbc9-7e84-3c6b-8175-0a7fad96d2bb">
+		["references"] = <"Goertz, R.S., Hensel, S., Wildner, D. et al. Bowel wall thickening and hyperemia assessed by high-frequency ultrasound indicate histological inflammation in Crohn’s ileitis. Abdom Radiol 46, 1855–1863 (2021). https://doi.org/10.1007/s00261-020-02895-8
+
+https://radcalculators.org/limberg-score-calculator-inflammatory-bowel-disease-severity-ultrasound/
+
+Sasaki, T., Kunisaki, R., Kinoshita, H. et al. Doppler ultrasound findings correlate with tissue vascularity and inflammation in surgical pathology specimens from patients with small intestinal Crohn’s disease. BMC Res Notes 7, 363 (2014). https://doi.org/10.1186/1756-0500-7-363
+
+https://radiopaedia.org/articles/limberg-score">
+		["MD5-CAM-1.0.1"] = <"73e5dd848e46347e22faf30d8807ca39">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Limberg score is a semiquantitative color Doppler ultrasound assessment of the bowel wall vascularity in inflammatory bowel disease.
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Bowel wall thickening?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Yes
+							at0003]    -- No
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Bowel wall thickness
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"mm">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Bowel wall vascularity on color Doppler ultrasound?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0006,    -- Absent
+							at0007,    -- Intermittently increased
+							at0008,    -- Diffusely increased
+							at0009]    -- Hypervascularity in both the bowel wall and the adjacent mesenteric fat
+						}
+					}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Score
+				value matches {
+					0|[local::at0011],
+					1|[local::at0012],
+					2|[local::at0013],
+					3|[local::at0014],
+					4|[local::at0015]
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Limberg score is a semiquantitative color Doppler ultrasound assessment of the bowel wall vascularity in inflammatory bowel disease.">
+					description = <"This score was designed for the assessment of Crohn’s disease and ulcerative colitis. It has been shown that mural stratification is most commonly lost in Crohn’s disease, while it is typically spared in ulcerative colitis.">
+				>
+				["at0001"] = <
+					text = <"Bowel wall thickening?">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Bowel wall thickness">
+					description = <"Wall thickening is defined as >4 mm thickness.">
+				>
+				["at0005"] = <
+					text = <"Bowel wall vascularity on color Doppler ultrasound?">
+					description = <"">
+					comment = <"Vascularity should be assessed during expiration and with color Doppler. Note that the score predates more advanced mircovascular flow imaging techniques (superb microvascular imaging etc.) and was not designed with these techniques in mind.
+The bowel should be interrogated with a linear array probe.
+The range of velocity should allow visualization of slow flow (~4cm/s), and color gain should be at the highest possible level without noise.">
+				>
+				["at0006"] = <
+					text = <"Absent">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Intermittently increased">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Diffusely increased">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Hypervascularity in both the bowel wall and the adjacent mesenteric fat">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Score">
+					description = <"">
+					comment = <"A score of 2 and above is considered abnormal.">
+				>
+				["at0011"] = <
+					text = <"Grade 0 - Normal">
+					description = <"Normal bowel wall with no thickening (<4 mm), well-delineated mural stratification, no mural flow (no color Doppler signal)">
+				>
+				["at0012"] = <
+					text = <"Grade 1 - Wall thickening">
+					description = <"Wall thickening (hypoechoic wall thickening and partially obscured mural stratification) and absent mural flow">
+				>
+				["at0013"] = <
+					text = <"Grade 2 - Hypo-flow">
+					description = <"Hypo-flow: wall thickening with intermittent (or \"spot\") increases in vascularity">
+				>
+				["at0014"] = <
+					text = <"Grade 3 - Hyper-flow">
+					description = <"Hyper-flow: wall thickening with protracted stretches of increased vascularity">
+				>
+				["at0015"] = <
+					text = <"Grade 4 - Hyper-flow">
+					description = <"Hyper-flow: color flow Doppler signals in both the bowel wall and surrounding mesenteric fat">
+				>
+			>
+		>
+	>
