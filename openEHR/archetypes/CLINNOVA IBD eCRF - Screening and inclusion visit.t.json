@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.144",
+      "sem_ver" : "0.1.145",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "eee31e9003e8343d3150c2f8124a250a",
+      "MD5-CAM-1.0.1" : "507bd908af37d8598b22d2f66035526f",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -61983,7 +61983,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..*",
                       "nodeId" : "at0097.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -64727,7 +64727,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..*",
                       "nodeId" : "at0097.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -65348,7 +65348,7 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "lbtest_XXXX"
+            "redcap_mapping" : "lborres_XXXX"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
@@ -65370,7 +65370,7 @@
           "/items[at0003.1]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note",
-            "redcap_mapping" : "bclsig_XXXX"
+            "redcap_mapping" : "lbclsig_XXXX"
           }
         },
         "nb" : {
@@ -66443,7 +66443,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..*",
                       "nodeId" : "at0097.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -79630,7 +79630,22 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "38d9da2584306d931508a762c5ec25c2"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To assess bowel wall vascularity in inflammatory bowel disease. \n\n",
+          "keywords" : [ "Limberg score, imaging, ultrasound, doppler, Crohn disease, ulcerative colitis" ],
+          "use" : "Note this archetype was built to match a questionnaire approach but the 2 main data points are present in the model - wall thickness and Limberg score/grade. Can be used together with the examination imaging result archetype. ",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.limberg_score.v0",
     "differential" : true,
