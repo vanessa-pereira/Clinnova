@@ -21,17 +21,13 @@ description
 			purpose = <"To assess bowel wall vascularity in inflammatory bowel disease. 
 
 ">
-			keywords = <"limbberg score, imaging, ultrasound, doppler, crohn disease, ulcerative colities", ...>
+			keywords = <"Limberg score, imaging, ultrasound, doppler, Crohn disease, ulcerative colitis", ...>
 			use = <"Note this archetype was built to match a questionnaire approach but the 2 main data points are present in the model - wall thickness and Limberg score/grade. Can be used together with the examination imaging result archetype. ">
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["build_uid"] = <"1cb6bbc9-7e84-3c6b-8175-0a7fad96d2bb">
 		["references"] = <"Goertz, R.S., Hensel, S., Wildner, D. et al. Bowel wall thickening and hyperemia assessed by high-frequency ultrasound indicate histological inflammation in Crohn’s ileitis. Abdom Radiol 46, 1855–1863 (2021). https://doi.org/10.1007/s00261-020-02895-8
 
 https://radcalculators.org/limberg-score-calculator-inflammatory-bowel-disease-severity-ultrasound/
@@ -39,11 +35,15 @@ https://radcalculators.org/limberg-score-calculator-inflammatory-bowel-disease-s
 Sasaki, T., Kunisaki, R., Kinoshita, H. et al. Doppler ultrasound findings correlate with tissue vascularity and inflammation in surgical pathology specimens from patients with small intestinal Crohn’s disease. BMC Res Notes 7, 363 (2014). https://doi.org/10.1186/1756-0500-7-363
 
 https://radiopaedia.org/articles/limberg-score">
-		["MD5-CAM-1.0.1"] = <"73e5dd848e46347e22faf30d8807ca39">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"38d9da2584306d931508a762c5ec25c2">
+		["build_uid"] = <"1cb6bbc9-7e84-3c6b-8175-0a7fad96d2bb">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- Limberg score is a semiquantitative color Doppler ultrasound assessment of the bowel wall vascularity in inflammatory bowel disease.
+	CLUSTER[at0000] matches {    -- Limberg score
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Bowel wall thickening?
 				value matches {
@@ -98,8 +98,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Limberg score is a semiquantitative color Doppler ultrasound assessment of the bowel wall vascularity in inflammatory bowel disease.">
-					description = <"This score was designed for the assessment of Crohn’s disease and ulcerative colitis. It has been shown that mural stratification is most commonly lost in Crohn’s disease, while it is typically spared in ulcerative colitis.">
+					text = <"Limberg score">
+					description = <"Limberg score is a semiquantitative color Doppler ultrasound assessment of the bowel wall vascularity in inflammatory bowel disease. This score was designed for the assessment of Crohn’s disease and ulcerative colitis. It has been shown that mural stratification is most commonly lost in Crohn’s disease, while it is typically spared in ulcerative colitis.">
 				>
 				["at0001"] = <
 					text = <"Bowel wall thickening?">
