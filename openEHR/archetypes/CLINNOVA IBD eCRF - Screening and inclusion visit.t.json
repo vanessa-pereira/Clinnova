@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.146",
+      "sem_ver" : "0.1.147",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "825c24a3e165b315311f32e080326fdb",
+      "MD5-CAM-1.0.1" : "1bf3c6a1ecdf624c1b390e5f79122ea6",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -68211,7 +68211,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..*",
                       "nodeId" : "at0097.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -69817,9 +69817,6 @@
           }
         },
         "en" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0005.1]" : {
-            "redcap_mapping" : "drug_lbcat"
-          },
           "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
             "redcap_mapping" : "druglevel_lbdat"
           }
@@ -69997,7 +69994,7 @@
                     }, {
                       "@type" : "C_ARCHETYPE_ROOT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..*",
                       "nodeId" : "at0097.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ],
@@ -70998,7 +70995,7 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "lbperf_XXXX"
+            "redcap_mapping" : "transglutaminase_lbtest, asca_lbtest, panca_lbperf, tpmt_lbtest, hla_lbperf"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
@@ -72025,9 +72022,6 @@
           }
         },
         "en" : {
-          "/data[at0001]/events[at0002]/data[at0003]/items[at0005.1]" : {
-            "redcap_mapping" : "drug_lbcat"
-          },
           "/data[at0001]/events[at0002]/data[at0003]/items[at0075.1]" : {
             "redcap_mapping" : "other_lbdat"
           }
