@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.145",
+      "sem_ver" : "0.1.146",
       "build_uid" : "ad8764d6-ad95-40fc-819f-524086ad274f",
-      "MD5-CAM-1.0.1" : "507bd908af37d8598b22d2f66035526f",
+      "MD5-CAM-1.0.1" : "825c24a3e165b315311f32e080326fdb",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -67016,12 +67016,12 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "redcap_mapping" : "lbperf_XXXX"
+            "redcap_mapping" : "measles_lbtest, varicella_lbtest, hepatitis_b_lbtest, hiv_lbtest, epstein_lbtest, cytomegalo_lbtest"
           },
           "/items[at0001.1]" : {
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "redcap_mapping" : "lborres_XXXX"
+            "redcap_mapping" : "lborres_XXXX, lborres2_XXXX"
           },
           "/items[at0005.1]" : {
             "hl7v2_mapping" : "OBX.11",
