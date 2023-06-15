@@ -46,7 +46,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"387e84ed03298049674f36f9b8418827">
+		["MD5-CAM-1.0.1"] = <"0338c397eceb71ffe3ab94d94451a725">
 		["build_uid"] = <"e278fa20-c9ff-3f41-bd8d-c6b85ec894b2">
 	>
 
@@ -135,6 +135,7 @@ definition
 																	at0026]    -- Rural, non-farm
 																}
 															}
+															DV_TEXT matches {*}
 														}
 													}
 													ELEMENT[at0027] occurrences matches {0..1} matches {    -- Main source of water in residence was from private well?
