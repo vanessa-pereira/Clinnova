@@ -7,7 +7,7 @@ Cohort list:
   <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/instruments_list.md#multiple-sclerosis-ms">Multiple sclerosis (MS)</a></li>
 </ul>
 
-Status:
+
   
 ## Initial - list of instruments
 Might be not final per use-case and more will be added in a near future.
