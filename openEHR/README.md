@@ -2,9 +2,9 @@
 
 Cohort list:
 <ul>
-  <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/instruments_list.md#inflammatory-bowel-disease-ibd"> Inflammatory bowel disease (IDB)</a></li>
-  <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/instruments_list.md#rheumatic-diseases-rd---rheumatoid-arthritis-ra-systemic-lupus-erythematosus-sle-systemic-sclerosis-ssc-and-antisynthetase-syndrome-assd">Rheumatic Diseases (RD)</a></li>
-  <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/instruments_list.md#multiple-sclerosis-ms">Multiple sclerosis (MS)</a></li>
+  <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/README.md#inflammatory-bowel-disease-ibd"> Inflammatory bowel disease (IDB)</a></li>
+  <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/README.md#rheumatic-diseases-rd---rheumatoid-arthritis-ra-systemic-lupus-erythematosus-sle-systemic-sclerosis-ssc-and-antisynthetase-syndrome-assd">Rheumatic Diseases (RD)</a></li>
+  <li><a href="https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/README.md#multiple-sclerosis-ms">Multiple sclerosis (MS)</a></li>
 </ul>
 
 
