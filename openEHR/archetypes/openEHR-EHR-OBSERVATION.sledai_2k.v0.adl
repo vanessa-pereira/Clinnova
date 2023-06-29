@@ -1,0 +1,378 @@
+archetype (adl_version=1.4; uid=def24cbf-33dc-408a-a3ff-6627889a17fd)
+	openEHR-EHR-OBSERVATION.sledai_2k.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-09-23">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			keywords = <"SLEDAI-2K, SLEDAI-2000, SLEDAI, Lupus, SLE, Systemic Lupus Erythematosus, Activity index, Systemic Lupus Erythematosus Disease Activity Index 2000", ...>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Gladman DD, Ibañez D, Urowitz MB. Systemic lupus erythematosus disease activity index 2000.Journal of Rheumatology 2002, 29 (2): 288-91
+
+Bombardier C, Gladman DD, Urowitz MB, Caron D, Chang CH, and the Committee on Prognosis Studies in SLE. The development and validation of the SLE Disease Activity Index (SLEDAI). Arthritis Rheum 1992;35:630-40.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4a6a0a25fddf0734a7e0b6b28aacf127">
+		["build_uid"] = <"c8fc076d-e8fe-3615-b8dd-cb26fc81304f">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- SLE Disease Activity Index 2000 (SLEDAI-2K)
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] matches {    -- Seizure
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0010] matches {    -- Psychosis
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0011] matches {    -- Organic brain syndrome
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0012] matches {    -- Visual disturbance
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0013] matches {    -- Cranial nerve disorder
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0014] matches {    -- Lupus headache
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0015] matches {    -- CVA
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0016] matches {    -- Vasculitis
+										value matches {
+											8|[local::at0005],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0017] matches {    -- Arthritis
+										value matches {
+											4|[local::at0006],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0018] matches {    -- Myositis
+										value matches {
+											4|[local::at0006],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0019] matches {    -- Urinary casts
+										value matches {
+											4|[local::at0006],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0020] matches {    -- Hematuria
+										value matches {
+											4|[local::at0006],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0021] matches {    -- Proteinuria
+										value matches {
+											4|[local::at0006],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0022] matches {    -- Pyuria
+										value matches {
+											4|[local::at0006],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0023] matches {    -- Rash
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0024] matches {    -- Alopecia
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0025] matches {    -- Mucosal ulcers
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0026] matches {    -- Pleurisy
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0027] matches {    -- Pericarditis
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0028] matches {    -- Low complement
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0029] matches {    -- Increased DNA binding
+										value matches {
+											2|[local::at0007],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0030] matches {    -- Fever
+										value matches {
+											1|[local::at0008],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0031] matches {    -- Thrombocytopenia
+										value matches {
+											1|[local::at0008],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0032] matches {    -- Leukopenia
+										value matches {
+											1|[local::at0008],
+											0|[local::at0035]
+										}
+									}
+									ELEMENT[at0033] matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0034] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0036] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0037] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"SLE Disease Activity Index 2000 (SLEDAI-2K)">
+					description = <"Systemic Lupus Erythematosus Disease Activity Index 2000 (SELDAI 2K). The SLEDAI was originally developed to determine disease activity in patients with lupus.
+
+SLEDAI-2K was developed as a modification of SLEDAI in order to include persistent, active disease in those descriptors that had previously only considered new or recurrent occurrences. Specifically SLEDAI-2K allows persistent active disease in alopecia, mucous membrane ulcers, rash, and proteinuria to be scored.
+
+SLEDAI-2K was validated against the original SLEDAI as a predictor for mortality and as a measure of global disease activity. It was also found to be equivalent to SLEDAI in describing changes in disease activity from one visit to the next.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Seizure">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the SLEDAI-2K not captured in other fields.">
+				>
+				["at0010"] = <
+					text = <"Psychosis">
+					description = <"Altered ability to function in normal activity due to severe disturbance in the perception of reality. Include halluciination, incoherence, marked loose associations, impoverished though content, marked illogical thinking, bizarre, disorganized, or catatonic behavior. Exclude uremic or drug causes.">
+				>
+				["at0011"] = <
+					text = <"Organic brain syndrome">
+					description = <"Altered mental function with impaired orientation, memory, or other intellectual function with rapid onset and fluctuating clinical features, inability to sustain attention to environment, plus at least 2 of the following: perceptual disturbance, incoherent speech, insomnia or daytime drowsiness, increased or decreased psychomotor activity. Exclude metabolic, infectious or drug causes.">
+				>
+				["at0012"] = <
+					text = <"Visual disturbance">
+					description = <"Retinal changes of SLE. Include cytoid bodies, retinal hemorrhages, serous exudate or hemorrhages in the choroid, or optic neuritis. Exclude hypertension, infection or drug causes.">
+				>
+				["at0013"] = <
+					text = <"Cranial nerve disorder">
+					description = <"New onset of sensory or motor neuropathy involving cranial nerves.">
+				>
+				["at0014"] = <
+					text = <"Lupus headache">
+					description = <"Severe, persistent headache; may be migrainous, but must be nonresponsive to narcotic analgesia.">
+				>
+				["at0015"] = <
+					text = <"CVA">
+					description = <"New onset of cerebrovascular accident(s). Exclude arteriosclerosis.">
+				>
+				["at0016"] = <
+					text = <"Vasculitis">
+					description = <"Ulceration, gangrene, tender finger nodules, periungual infarction, splinter hemorrhages, or biopsy/angiogram proof of vasculitis.">
+				>
+				["at0017"] = <
+					text = <"Arthritis">
+					description = <"≥2 joints with pain and signs of inflammation (ie tenderness, swelling or effusion).">
+				>
+				["at0018"] = <
+					text = <"Myositis">
+					description = <"Proximal muscle aching/weakness, associated with elevated creatinine.">
+				>
+				["at0019"] = <
+					text = <"Urinary casts">
+					description = <"Heme-granular or red blood cell casts.">
+				>
+				["at0020"] = <
+					text = <"Hematuria">
+					description = <">5 red blood cells/high power field. Exclude stone, infection, or other cause.">
+				>
+				["at0021"] = <
+					text = <"Proteinuria">
+					description = <">0.5 grams/24 hours.">
+				>
+				["at0022"] = <
+					text = <"Pyuria">
+					description = <">5 white blood cells/high power field. Exclude infection.">
+				>
+				["at0023"] = <
+					text = <"Rash">
+					description = <"Inflammatory type rash.">
+				>
+				["at0024"] = <
+					text = <"Alopecia">
+					description = <"Abnormal, patchy or diffuse loss of hair.">
+				>
+				["at0025"] = <
+					text = <"Mucosal ulcers">
+					description = <"Oral or nasal ulceration.">
+				>
+				["at0026"] = <
+					text = <"Pleurisy">
+					description = <"Pleuritic chest pain with pleural rub or effusion, or pleural thickening.">
+				>
+				["at0027"] = <
+					text = <"Pericarditis">
+					description = <"Pericardial pain with at least 1 of the following: rub, effusion, electrocardiographic confirmation, echocardiographic confirmation.">
+				>
+				["at0028"] = <
+					text = <"Low complement">
+					description = <"Decrease in CH50, C3, or C4.">
+				>
+				["at0029"] = <
+					text = <"Increased DNA binding">
+					description = <"Increased DNA binding by Farr assay above normal range.">
+				>
+				["at0030"] = <
+					text = <"Fever">
+					description = <">38 degrees celsius. Exclude infectious cause.">
+				>
+				["at0031"] = <
+					text = <"Thrombocytopenia">
+					description = <"<100,000 platelets x10⁹/L, exclude drug causes.">
+				>
+				["at0032"] = <
+					text = <"Leukopenia">
+					description = <"<3,000 white blood cells x10⁹/L, exclude drug causes.">
+				>
+				["at0033"] = <
+					text = <"Total score">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0037"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+			>
+		>
+	>
