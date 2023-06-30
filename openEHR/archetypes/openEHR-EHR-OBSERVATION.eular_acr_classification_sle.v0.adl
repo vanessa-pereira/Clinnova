@@ -1,0 +1,363 @@
+archetype (adl_version=1.4; uid=6e0d609d-c56a-495c-8c58-288e33c171e6)
+	openEHR-EHR-OBSERVATION.eular_acr_classification_sle.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-10-13">
+		["name"] = <"Vanessa Pereira">
+		["organisation"] = <"Pathfinder - Better">
+		["email"] = <"vanessa.pereira@better.care">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To help diagnosing systemic lupus erythematosus (SLE).">
+			keywords = <"EULAR, ACR, SLE, systemic lupus erythematosus, criteria, classification", ...>
+			use = <"The 2019 EULAR/ACR classification criteria for SLE include positive ANA at least once as obligatory entry criterion; followed by additive weighted criteria grouped in 7 clinical (constitutional, hematologic, neuropsychiatric, mucocutaneous, serosal, musculoskeletal, renal) and 3 immunological (antiphospholipid antibodies, complement proteins, SLE-specific antibodies) domains, and weighted from 2 to 10. Patients accumulating ≥10 points are classified as meeting the SLE classification criteria.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Petri M, Orbai AM, Alarcan GS, et al. Derivation and validation of the Systemic Lupus International Collaborating Clinics classification criteria for systemic lupus erythematosus. Arthritis Rheum. 2012;64(8):2677.
+Pons-Estel GJ, Wojdyla D, McGwin G Jr et al The American College of Rheumatology and the Systemic Lupus International Collaborating Clinics classification criteria for systemic lupus erythematosus in two multiethnic cohorts: a commentary. Lupus. 2014;23(1):3.">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"7d756af18f49f3bf6c7c03fb9a9a301e">
+		["build_uid"] = <"99a39818-e28f-3e3b-8ef6-d8ea142e9bf7">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- EULAR/ACR Classification Criteria for SLE
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0005] occurrences matches {0..1} matches {    -- Clinical domains and criteria
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0011] occurrences matches {0..1} matches {    -- Constitutional
+												value matches {
+													2|[local::at0012]
+												}
+											}
+											ELEMENT[at0013] occurrences matches {0..3} matches {    -- Hematologic
+												value matches {
+													3|[local::at0014],
+													4|[local::at0015],
+													4|[local::at0016]
+												}
+											}
+											ELEMENT[at0017] occurrences matches {0..3} matches {    -- Neuropsychiatric
+												value matches {
+													2|[local::at0018],
+													3|[local::at0019],
+													5|[local::at0020]
+												}
+											}
+											ELEMENT[at0021] occurrences matches {0..4} matches {    -- Mucocutaneous
+												value matches {
+													2|[local::at0022],
+													2|[local::at0023],
+													4|[local::at0024],
+													6|[local::at0025]
+												}
+											}
+											ELEMENT[at0026] occurrences matches {0..2} matches {    -- Serosal
+												value matches {
+													5|[local::at0027],
+													6|[local::at0028]
+												}
+											}
+											ELEMENT[at0029] occurrences matches {0..1} matches {    -- Musculoskeletal
+												value matches {
+													6|[local::at0030]
+												}
+											}
+											ELEMENT[at0031] occurrences matches {0..3} matches {    -- Renal
+												value matches {
+													4|[local::at0032],
+													8|[local::at0033],
+													10|[local::at0034]
+												}
+											}
+											ELEMENT[at0044] occurrences matches {0..1} matches {    -- Score
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+										}
+									}
+									CLUSTER[at0006] occurrences matches {0..1} matches {    -- Immunological domains and criteria
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0035] occurrences matches {0..1} matches {    -- Antiphospholipid antibodies
+												value matches {
+													2|[local::at0036]
+												}
+											}
+											ELEMENT[at0037] occurrences matches {0..2} matches {    -- Complement proteins
+												value matches {
+													3|[local::at0038],
+													4|[local::at0039]
+												}
+											}
+											ELEMENT[at0040] occurrences matches {0..1} matches {    -- SLE-specific antibodies
+												value matches {
+													6|[local::at0041]
+												}
+											}
+											ELEMENT[at0045] occurrences matches {0..1} matches {    -- Score
+												value matches {
+													DV_COUNT matches {*}
+												}
+											}
+										}
+									}
+									ELEMENT[at0007] matches {    -- Total score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+									ELEMENT[at0008] occurrences matches {0..1} matches {    -- Classification
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0009,    -- SLE Classification Criteria not met
+													at0010]    -- SLE Classification Criteria fulfilled
+												}
+											}
+										}
+									}
+									ELEMENT[at0042] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0043] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"EULAR/ACR Classification Criteria for SLE">
+					description = <"Classification criteria for systemic lupus erythematosus (SLE) jointly supported by the European League Against Rheumatism (EULAR) and the American College of Rheumatology (ACR).">
+					comment = <"Do not count a criterion if there is a more likely explanation than SLE.
+Occurrence of a criterion on at least one occasion is sufficient.
+SLE classification requires at least one clinical criterion and ≥10 points.
+Criteria need not occur simultaneously.
+Within each domain, only the highest weighted criterion is counted toward the total score.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Clinical domains and criteria">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Immunological domains and criteria">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Total score">
+					description = <"Within each domain, only the highest weighted criterion is counted towardthe total score.">
+				>
+				["at0008"] = <
+					text = <"Classification">
+					description = <"Classify as Systemic Lupus Erythematosus with a score of 10 or more if entry criterion fulfilled.">
+				>
+				["at0009"] = <
+					text = <"SLE Classification Criteria not met">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"SLE Classification Criteria fulfilled">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Constitutional">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Fever">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Hematologic">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Leukopenia">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Thrombocytopenia">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Autoimmune hemolysis">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Neuropsychiatric">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Delirium">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Psychosis">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Seizure">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Mucocutaneous">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Non-scarring alopecia">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Oral ulcers">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Subacute cutaneous OR discoid lupus">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Acute cutaneous lupus">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Serosal">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Pleural or pericardial effusion">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Acute pericarditis">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Musculoskeletal">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Joint involvement">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Renal">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Proteinuria >0.5g/24h">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Renal biopsy Class II or V lupus nephritis">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Renal biopsy Class III or IV lupus nephritis">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Antiphospholipid antibodies">
+					description = <"">
+					comment = <"Anti-β2GPI = anti–β2-glycoprotein I">
+				>
+				["at0036"] = <
+					text = <"Anti-cardiolipin antibodies OR Anti-β2GP1 antibodies OR Lupus anticoagulant">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Complement proteins">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Low C3 OR low C4">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Low C3 AND low C4">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"SLE-specific antibodies">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Anti-dsDNA antibody* OR Anti-Smith antibody">
+					description = <"* = in an assay with 90% specificity against relevant disease controls. anti-dsDNA = anti–double-stranded DNA">
+				>
+				["at0042"] = <
+					text = <"Comment">
+					description = <"Additional narrative about the EULAR/ACR Classification Criteria for SLE, not captured in other fields.">
+				>
+				["at0043"] = <
+					text = <"Extension">
+					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+				["at0044"] = <
+					text = <"Score">
+					description = <"Within each domain, only the highest weighted criterion is counted">
+				>
+				["at0045"] = <
+					text = <"Score">
+					description = <"Within each domain, only the highest weighted criterion is counted">
+				>
+			>
+		>
+	>
