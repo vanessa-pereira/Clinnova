@@ -55,7 +55,7 @@ original questionnaire: https://static.cambridge.org/content/id/urn:cambridge.or
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2a421626ba67350dcc4b9b2eb180a2a4">
+		["MD5-CAM-1.0.1"] = <"0ad6472b33796cbc78fce27047bcca13">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
@@ -328,9 +328,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 											ELEMENT[at0043] matches {    -- Chicken or Turkey – steaks, roasts, joints, mince or portions (not in batter or breadcrumbs)
@@ -340,9 +338,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 											ELEMENT[at0044] matches {    -- Sausages, bacon, corned beef, meat pies/pasties, burgers
@@ -352,9 +348,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 											ELEMENT[at0045] matches {    -- Chicken/turkey nuggets/twizzlers, turkey burgers, chicken pies, or in batter or breadcrumbs
@@ -364,9 +358,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 											ELEMENT[at0046] matches {    -- White fish in batter or breadcrumbs – like ‘fish ‘n chips’
@@ -376,9 +368,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 											ELEMENT[at0047] matches {    -- White fish not in batter or breadcrumbs
@@ -388,9 +378,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 											ELEMENT[at0048] matches {    -- Oily fish – like herrings, sardines, salmon, trout, mackerel, fresh tuna (not tinned tuna)
@@ -400,9 +388,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0027],
-													6|[local::at0028],
-													7|[local::at0029]
+													5|[local::at0112]
 												}
 											}
 										}
@@ -1138,6 +1124,10 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 					text = <"Extension">
 					description = <"">
 				>
+				["at0112"] = <
+					text = <"7 or more times a week">
+					description = <"">
+				>
 			>
 		>
 		["fr"] = <
@@ -1625,6 +1615,10 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 					text = <"*Extension (en)">
 					description = <"">
 				>
+				["at0112"] = <
+					text = <"*7 or more times a week (en)">
+					description = <"">
+				>
 			>
 		>
 		["de"] = <
@@ -2110,6 +2104,10 @@ Original question: \"8. Please tick how often you eat at least ONE portion of th
 				>
 				["at0111"] = <
 					text = <"*Extension (en)">
+					description = <"">
+				>
+				["at0112"] = <
+					text = <"*7 or more times a week (en)">
 					description = <"">
 				>
 			>
