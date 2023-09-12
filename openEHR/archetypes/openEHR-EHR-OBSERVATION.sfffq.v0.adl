@@ -55,7 +55,7 @@ original questionnaire: https://static.cambridge.org/content/id/urn:cambridge.or
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0ad6472b33796cbc78fce27047bcca13">
+		["MD5-CAM-1.0.1"] = <"d6836a0d8996a5a06b72a665e8d59af1">
 		["build_uid"] = <"12ce79f0-5861-3535-a594-049d2c7aebb2">
 	>
 
@@ -358,7 +358,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0112]
+													8|[local::at0112]
 												}
 											}
 											ELEMENT[at0046] matches {    -- White fish in batter or breadcrumbs – like ‘fish ‘n chips’
@@ -368,7 +368,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0112]
+													8|[local::at0112]
 												}
 											}
 											ELEMENT[at0047] matches {    -- White fish not in batter or breadcrumbs
@@ -378,7 +378,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0112]
+													8|[local::at0112]
 												}
 											}
 											ELEMENT[at0048] matches {    -- Oily fish – like herrings, sardines, salmon, trout, mackerel, fresh tuna (not tinned tuna)
@@ -388,7 +388,7 @@ definition
 													2|[local::at0024],
 													3|[local::at0025],
 													4|[local::at0026],
-													5|[local::at0112]
+													8|[local::at0112]
 												}
 											}
 										}
