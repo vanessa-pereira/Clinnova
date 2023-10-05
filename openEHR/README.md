@@ -53,7 +53,8 @@ All archetypes that are for PROM will be translated in english (en), german (de)
 | ~~Fatigue Severity Scale (FSS)~~                         |Vanessa Pereira |[OBSERVATION.fss.v0](https://github.com/vanessa-pereira/Clinnova/blob/main/openEHR/archetypes/openEHR-EHR-OBSERVATION.fss.v0.adl)|**CANCELLED**|PROM / Yes   |
 ***
 
-### Rheumatic Diseases (RD) - Rheumatoid arthritis (RA), systemic lupus erythematosus (SLE), systemic sclerosis (SSc) and antisynthetase syndrome (ASSD)
+### Rheumatic Diseases (RD) 
+*Rheumatoid arthritis (RA), systemic lupus erythematosus (SLE), systemic sclerosis (SSc) and antisynthetase syndrome (ASSD)*
 
 | Questionnaire / concept                                  | Working in       | url            | Type/Copyrighted?      | References | 
 | -----------                                              | -----------      |-----------      | -----------  | -----------      |  
