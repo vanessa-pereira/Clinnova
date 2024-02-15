@@ -23,7 +23,7 @@ description
 	original_author = <
 		["date"] = <"2022-07-27">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.com">
 	>
 	lifecycle_state = <"unmanaged">
@@ -78,7 +78,7 @@ Klein, E.M., Brähler, E., Dreier, M. et al. The German version of the Perceived
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9e1f41d0ab0d40c7026c4f613387df86">
+		["MD5-CAM-1.0.1"] = <"d6f835613576ef79f66d97fc5d84c505">
 		["build_uid"] = <"eab972a9-e22b-3c56-932f-29c45a1a3e39">
 	>
 
