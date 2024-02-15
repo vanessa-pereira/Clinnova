@@ -11,7 +11,7 @@ description
 	original_author = <
 		["date"] = <"2022-08-01">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessapereira@pm.com">
 	>
 	lifecycle_state = <"unmanaged">
@@ -40,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d13620add2dd7e6eb330e81df378e71c">
+		["MD5-CAM-1.0.1"] = <"9a439fd9a861774d7f0d20ba647c8fc9">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
