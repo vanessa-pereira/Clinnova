@@ -40,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9a439fd9a861774d7f0d20ba647c8fc9">
+		["MD5-CAM-1.0.1"] = <"a7673a6505c6a0964988f66f25a3275e">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
@@ -237,7 +237,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Crohn's Disease Activity Index (CDAI)">
-					description = <"CDAI">
+					description = <"The Crohn's Disease Activity Index (CDAI) determines the current severity of Crohn's disease.">
 				>
 				["at0001"] = <
 					text = <"History">
