@@ -18,7 +18,9 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"Quantify damage that has occurred since the onset of lupus.">
 			keywords = <"SLICC, ACR, index, SLE, Systemic Lupus Erythematosus", ...>
+			copyright = <"SLICC/ACR Damage Index © 1996, American College of Rheumatology, managed by Wiley">
 		>
 	>
 	other_details = <
@@ -30,7 +32,7 @@ Gladman DD, Urowitz MB, Goldsmith CH, Fortin P, Ginzler E, Gordon C, et al. The 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3583d4d7c49137afabf6e123e58acbec">
+		["MD5-CAM-1.0.1"] = <"374e12799f18e21206b7435409c56000">
 		["build_uid"] = <"2371dae4-c358-3321-913f-963f1ee0e946">
 	>
 
