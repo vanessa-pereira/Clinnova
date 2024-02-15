@@ -20,6 +20,7 @@ description
 			language = <[ISO_639-1::en]>
 			purpose = <"Assesses the endoscopic severity of ulcerative colitis.">
 			keywords = <"UCES, Ulcerative Colitis Endoscopic Index of Severity, Ulcerative Colitis, UC", ...>
+			copyright = <"Instrument copyrighted by Watson Laboratories, Parsippany NJ United States a subsidiary of Actavis Inc">
 			use = <"Copyright: Instrument copyrighted by Watson Laboratories, Parsippany NJ United States a subsidiary of Actavis Inc">
 		>
 	>
