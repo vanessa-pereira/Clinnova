@@ -36,17 +36,29 @@ description
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
-			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
+			purpose = <"*Assess disease activity in patients with Crohn's disease (CD) (en)">
+			keywords = <"*Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"Assess disease activity in patients with Crohn's disease (CD)">
 			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
+			use = <"The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index. ">
 		>
 		["fr"] = <
 			language = <[ISO_639-1::fr]>
-			keywords = <"Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease", ...>
+			purpose = <"*Assess disease activity in patients with Crohn's disease (CD) (en)">
+			keywords = <"*Patient Harvey Bradshaw Index (P-HBI), PROM, Patient Harvey Bradshaw Index, P-HBI, HBI, Harvey Bradshaw, CD, Crohn's disease (en)", ...>
 			copyright = <"© openEHR Foundation">
+			use = <"*The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
+
+The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index.  (en)">
 		>
 	>
 	other_details = <
@@ -64,7 +76,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3d5a5bdea630b21e8db299a1c23614be">
+		["MD5-CAM-1.0.1"] = <"e2873dfb90862ec38546b5894d7af2ec">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -264,9 +276,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Patient Harvey Bradshaw Index (P-HBI)">
-					description = <"All items within the P-HBI refer to symptoms during the previous week and medical terminology and disease symptoms were clariﬁed. The ﬁrst item about general well-being is formulated as follows: “If you would have to rate your general well-being by giving it a number, what number would you choose?” (1 = terrible, 10 = very well). The second item about abdominal pain is: “To what extent did you have abdominal pain during the previous week? Please indicate this on a scale from 0 to 10, where 0 stands for no abdominal pain and 10 for the worst imaginable abdominal pain.” The third item on physical examination of abdominal mass was omitted, as we assumed that patients cannot adequately physically examine themselves. As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. The fourth item is the question concerning number of daily liquid stools: “How many times on average per day did you have diarrhea during the previous week? Diarrhea is a liquid stool that cannot be picked up (for instance with a fork).”For the questions about the 8 well-known extra intestinal manifestations, the response options for the patient were 3-fold: “yes,” “no,” and “I do not know.” This third response option was added, as patients may not know whether they have a speciﬁc manifestation or may be unfamiliar with its speciﬁc medical terminology.
-
-The response option ‘I do not know’ is only added for the patient-modified Harvey Bradshaw Index. ">
+					description = <"Patient Harvey Bradshaw Index (P-HBI) is a patient based questionnaire of the clinical based Harvey Bradshaw Index (HBI) which is used to assess disease activity in patients with Crohn's disease (CD). As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI.">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -513,9 +523,7 @@ Abdominal pain:
 			items = <
 				["at0000"] = <
 					text = <"Indice de Harvey Bradshaw modifié par le patient (P-HBI)">
-					description = <"Tous les éléments du P-HBI font référence aux symptômes de la semaine précédente et la terminologie médicale et les symptômes de la maladie ont été clarifiés. Le premier item sur le bien-être général est formulé comme suit : « Si vous deviez évaluer votre bien-être général en lui donnant un chiffre, quel chiffre choisiriez-vous ? (1 = terrible, 10 = très bien). Le deuxième élément concernant les douleurs abdominales est : « Dans quelle mesure avez-vous ressenti des douleurs abdominales au cours de la semaine précédente ? Veuillez l'indiquer sur une échelle de 0 à 10, où 0 signifie aucune douleur abdominale et 10 la pire douleur abdominale imaginable. Le troisième élément sur l'examen physique de la masse abdominale a été omis, car nous avons supposé que les patients ne peuvent pas s'examiner physiquement de manière adéquate. Par conséquent, le HBI modifié par le patient se compose de 11 éléments, au lieu des 12 éléments du HBI basé sur le clinicien. Le quatrième item est la question concernant le nombre de selles liquides quotidiennes : « Combien de fois en moyenne par jour avez-vous eu la diarrhée au cours de la semaine précédente ? La diarrhée est une selle liquide qui ne peut pas être ramassée (par exemple avec une fourchette). » Pour les questions sur les 8 manifestations extra-intestinales bien connues, les options de réponse pour le patient étaient de 3 : « oui », « non, \" et je ne sais pas.\" Cette troisième option de réponse a été ajoutée, car les patients peuvent ne pas savoir s'ils ont une manifestation spécifique ou peuvent ne pas être familiers avec sa terminologie médicale spécifique.
-
-L'option de réponse « Je ne sais pas » n'est ajoutée que pour l'indice Harvey Bradshaw modifié par le patient.">
+					description = <"*Patient Harvey Bradshaw Index (P-HBI) is a patient based questionnaire of the clinical based Harvey Bradshaw Index (HBI) which is used to assess disease activity in patients with Crohn's disease (CD). As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -762,9 +770,7 @@ Douleur abdominale:
 			items = <
 				["at0000"] = <
 					text = <"Patientenmodifizierter Harvey-Bradshaw-Index (P-HBI)">
-					description = <"Alle Items innerhalb des P-HBI beziehen sich auf Symptome während der Vorwoche und medizinische Terminologie und Krankheitssymptome wurden geklärt. Das erste Item zum allgemeinen Wohlbefinden ist wie folgt formuliert: „Wenn Sie Ihr allgemeines Wohlbefinden mit einer Zahl bewerten müssten, welche Zahl würden Sie wählen?“ (1 = schrecklich, 10 = sehr gut). Das zweite Item zu Bauchschmerzen lautet: „Inwieweit hatten Sie in der Vorwoche Bauchschmerzen? Bitte geben Sie dies auf einer Skala von 0 bis 10 an, wobei 0 für keine Bauchschmerzen und 10 für die stärksten vorstellbaren Bauchschmerzen steht.“ Der dritte Punkt zur körperlichen Untersuchung der Abdominalmasse wurde ausgelassen, da wir davon ausgingen, dass Patienten sich selbst nicht ausreichend körperlich untersuchen können. Folglich besteht der patientenmodifizierte HBI aus 11 Items anstelle der 12 Items im klinikbasierten HBI. Das vierte Item ist die Frage nach der Anzahl der täglichen flüssigen Stuhlgänge: „Wie oft hatten Sie in der vergangenen Woche durchschnittlich pro Tag Durchfall? Durchfall ist ein flüssiger Stuhl, der nicht (z. B. mit einer Gabel) aufgenommen werden kann.“ Bei den Fragen zu den 8 bekannten extraintestinalen Manifestationen gab es 3 Antwortmöglichkeiten für den Patienten: „ja“, „nein“, \" und ich weiß es nicht.\" Diese dritte Antwortoption wurde hinzugefügt, da Patienten möglicherweise nicht wissen, ob sie eine bestimmte Manifestation haben oder mit der spezifischen medizinischen Terminologie nicht vertraut sind.
-
-Die Antwortoption „Ich weiß nicht“ wird nur für den patientenmodifizierten Harvey-Bradshaw-Index hinzugefügt.">
+					description = <"*Patient Harvey Bradshaw Index (P-HBI) is a patient based questionnaire of the clinical based Harvey Bradshaw Index (HBI) which is used to assess disease activity in patients with Crohn's disease (CD). As a consequence, the patient-modiﬁed HBI consists of 11 items, instead of the 12 items in the clinician-based HBI. (en)">
 				>
 				["at0001"] = <
 					text = <"History">
