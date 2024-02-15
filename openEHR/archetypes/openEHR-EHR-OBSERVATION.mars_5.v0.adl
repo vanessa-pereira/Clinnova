@@ -6,18 +6,6 @@ concept
 
 language
 	original_language = <[ISO_639-1::en]>
-	translations = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			author = <
-			>
-		>
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
-			author = <
-			>
-		>
-	>
 
 description
 	original_author = <
@@ -28,10 +16,6 @@ description
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
-		["de"] = <
-			language = <[ISO_639-1::de]>
-			copyright = <"© openEHR Foundation">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"The MARS-5 assesses a patient’s typical medication adherence through 5 questions (eg, “I forget to take my medication”; “I alter the dose of my medication”), using a 5-level response format (1—always, 2—often, 3—sometimes, 4—rarely, and 5—never). Responses are summed for a total score ranging between 5 and 25, with higher scores indicating a higher level of adherence. Using the MARS-5, a score of ≥20 has previously been used as a cutoff for adherence in an IBD population, while other chronic diseases have defined adherence at a cutoff as high as 25">
@@ -39,10 +23,6 @@ description
 			use = <"Use to record the results for each component from the MARS-5 questionnaire. 
 
 While openEHR archetypes are all freely available under an open license, the specific content of this archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. The MARS is copyrighted and permission to use the scale can be obtained from Professor Rob Horne University of Brighton (r.horne@bton.ac.uk)">
-		>
-		["fr"] = <
-			language = <[ISO_639-1::fr]>
-			copyright = <"© openEHR Foundation">
 		>
 	>
 	other_details = <
@@ -56,7 +36,7 @@ Chan, A.H.Y., Vervloet, M., Lycett, H., Brabers, A., Dijk, L. van, Home, R. Deve
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"83c158f0b57ce27f4b10c0e3dabd7ca1">
+		["MD5-CAM-1.0.1"] = <"5800cec32fd2602fdd459a92b4636b00">
 		["build_uid"] = <"db99022c-f96d-3fc8-a064-db7507688d69">
 	>
 
@@ -221,160 +201,6 @@ ontology
 				["at0018"] = <
 					text = <"Comment">
 					description = <"Additional narrative about the clinical instrument not captured in other fields.">
-				>
-			>
-		>
-		["de"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Medication Adherence Report Scale 5 (MARS-5) (en)">
-					description = <"*The Medication Adherence Report Scale (MARS‐5, ©Professor Rob Horne) – a shorter form of MARS‐10 – comprises items which describe a range of nonadherent behaviours, with items phrased in a nonthreatening and nonjudgmental way to normalise nonadherence, and a response scale that allows the categorisation of patients in terms of their position along the “adherence dimension” rather than on the basis of a “yes/no” or “high/low” dichotomous response, thus providing more detail and differentiation between individuals. The questionnaire consists of 5 statements, each describing a behaviour related to non-adherence. Participants rate how often they behave as describe by the statement e.g. ‘I alter the dose’ using a 5-point scale (Always = 1, Never = 5), with higher scores indicating better adherence. As practical adherence barriers represent difficulties with taking treatment, participants scoring highly on the MPRAQ (i.e. more practical difficulties with taking treatment) would have lower scores on the MARS (i.e. poorer adherence).
- (en)">
-				>
-				["at0001"] = <
-					text = <"History">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Any event (en)">
-					description = <"*Here are some ways in which people have said that they use their medicines. For each of the statements, please tick the box which best applies to you. (en)">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*I forget to take them (en)">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"*Always (en)">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"*Often (en)">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"*Sometimes (en)">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"*Rarely (en)">
-					description = <"">
-				>
-				["at0009"] = <
-					text = <"*Never (en)">
-					description = <"">
-				>
-				["at0010"] = <
-					text = <"*I alter the dose (en)">
-					description = <"">
-				>
-				["at0011"] = <
-					text = <"*I stop taking them for a while (en)">
-					description = <"">
-				>
-				["at0012"] = <
-					text = <"*I decided to miss out a dose (en)">
-					description = <"">
-				>
-				["at0013"] = <
-					text = <"*I take less then instructed (en)">
-					description = <"">
-				>
-				["at0014"] = <
-					text = <"*Total score (en)">
-					description = <"">
-				>
-				["at0016"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0017"] = <
-					text = <"*Extension (en)">
-					description = <"">
-				>
-				["at0018"] = <
-					text = <"*Comment (en)">
-					description = <"*Additional narrative about the clinical instrument not captured in other fields. (en)">
-				>
-			>
-		>
-		["fr"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Medication Adherence Report Scale 5 (MARS-5) (en)">
-					description = <"*The Medication Adherence Report Scale (MARS‐5, ©Professor Rob Horne) – a shorter form of MARS‐10 – comprises items which describe a range of nonadherent behaviours, with items phrased in a nonthreatening and nonjudgmental way to normalise nonadherence, and a response scale that allows the categorisation of patients in terms of their position along the “adherence dimension” rather than on the basis of a “yes/no” or “high/low” dichotomous response, thus providing more detail and differentiation between individuals. The questionnaire consists of 5 statements, each describing a behaviour related to non-adherence. Participants rate how often they behave as describe by the statement e.g. ‘I alter the dose’ using a 5-point scale (Always = 1, Never = 5), with higher scores indicating better adherence. As practical adherence barriers represent difficulties with taking treatment, participants scoring highly on the MPRAQ (i.e. more practical difficulties with taking treatment) would have lower scores on the MARS (i.e. poorer adherence).
- (en)">
-				>
-				["at0001"] = <
-					text = <"History">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Any event (en)">
-					description = <"*Here are some ways in which people have said that they use their medicines. For each of the statements, please tick the box which best applies to you. (en)">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*I forget to take them (en)">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"*Always (en)">
-					description = <"">
-				>
-				["at0006"] = <
-					text = <"*Often (en)">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"*Sometimes (en)">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"*Rarely (en)">
-					description = <"">
-				>
-				["at0009"] = <
-					text = <"*Never (en)">
-					description = <"">
-				>
-				["at0010"] = <
-					text = <"*I alter the dose (en)">
-					description = <"">
-				>
-				["at0011"] = <
-					text = <"*I stop taking them for a while (en)">
-					description = <"">
-				>
-				["at0012"] = <
-					text = <"*I decided to miss out a dose (en)">
-					description = <"">
-				>
-				["at0013"] = <
-					text = <"*I take less then instructed (en)">
-					description = <"">
-				>
-				["at0014"] = <
-					text = <"*Total score (en)">
-					description = <"">
-				>
-				["at0016"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0017"] = <
-					text = <"*Extension (en)">
-					description = <"">
-				>
-				["at0018"] = <
-					text = <"*Comment (en)">
-					description = <"*Additional narrative about the clinical instrument not captured in other fields. (en)">
 				>
 			>
 		>
