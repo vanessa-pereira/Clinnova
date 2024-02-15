@@ -76,7 +76,7 @@ Sandborn WJ, Feagan BG, Hanauer SB, et al. A review of activity indices and effi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e2873dfb90862ec38546b5894d7af2ec">
+		["MD5-CAM-1.0.1"] = <"28ac75035dfa7c71f3c82e2fb4393e9d">
 		["build_uid"] = <"9b0e4530-e98a-37d3-a27b-1aa08fb9b84d">
 	>
 
@@ -393,10 +393,6 @@ These questions refer to your symptoms during the PREVIOUS WEEK.
 					comment = <"For calculation of the Total score, each number of liquid stools counts x1.
 In case of a stoma or pouch please score deviation in comparison to its normal state.">
 				>
-				["1/d"] = <
-					text = <"per day">
-					description = <"@ units @">
-				>
 				["at0028"] = <
 					text = <"Has a stoma?">
 					description = <"Original question: \"Do you have a stoma?\"">
@@ -640,10 +636,6 @@ Ces questions portent sur les symptômes que vous avez eus au cours de la SEMAIN
 					comment = <"Pour le calcul du score Total, chaque nombre de selles liquides compte x1.
 Dans le cas d'une stomie ou d'une poche, veuillez noter l'écart par rapport à son état normal.">
 				>
-				["1/d"] = <
-					text = <"par jour">
-					description = <"@ units @">
-				>
 				["at0028"] = <
 					text = <"A une stomie?">
 					description = <"Original question: \"Avez-vous une stomie ?\"">
@@ -886,10 +878,6 @@ Die Fragen beziehen sich auf Ihre Symptome während der VERGANGENEN WOCHE.
 					description = <"Original question: \"Wie oft hatten Sie in der vergangenen Woche Durchfall pro Tag? Durchfall bedeutet flüssiger Stuhl, der nicht aufgehoben werden könnte (etwa mit einer Gabel).\"">
 					comment = <"Für die Berechnung der Gesamtpunktzahl zählt jede Anzahl flüssiger Stühle x1.
 Im Falle eines Stomas oder Pouches bewerten Sie bitte die Abweichung im Vergleich zum Normalzustand.">
-				>
-				["1/d"] = <
-					text = <"pro tag">
-					description = <"@ units @">
 				>
 				["at0028"] = <
 					text = <"Hat ein Stoma?">
