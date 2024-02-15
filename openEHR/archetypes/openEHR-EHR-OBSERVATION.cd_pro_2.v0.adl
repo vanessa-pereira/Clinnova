@@ -11,7 +11,7 @@ description
 	original_author = <
 		["date"] = <"2022-08-11">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Luxembourg Institute of Health / Better">
+		["organisation"] = <"Luxembourg Institute of Health">
 		["email"] = <"vanessapereira@pm.com">
 	>
 	lifecycle_state = <"unmanaged">
@@ -29,7 +29,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"74e90693f714f518398c8b83057147f1">
+		["MD5-CAM-1.0.1"] = <"ab9563fe32e16d0f4421adbcc32dabfe">
 		["build_uid"] = <"b5304988-1401-3114-bdc6-6e8695624772">
 	>
 
