@@ -32,7 +32,7 @@ Bewtra M, Brensinger CM, Tomov VT, et al. An optimized patient-reported ulcerati
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0a0fa5e7f830066568ab031462c10320">
+		["MD5-CAM-1.0.1"] = <"9f2d349ae70f1e255a432bce626ac564">
 		["build_uid"] = <"c04df22a-d644-3ea6-9c7a-538d1a5e723e">
 	>
 
@@ -122,7 +122,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Simple Clinical Colitis Activity Index (SCCAI)">
-					description = <"Simple Clinical Colitis Activity Index (SCCAI) was developed as a clinical index of disease activity not requiring physical examination, sigmoidoscopic evaluation or laboratory indices, for patients who suffer from ulcerative colitis (UC)">
+					description = <"Simple Clinical Colitis Activity Index (SCCAI) was developed as a clinical index of disease activity not requiring physical examination, sigmoidoscopic evaluation or laboratory indices, for patients who suffer from ulcerative colitis (UC). It was created in 1998 and is still used to assess the severity of symptoms. It is also used for research purposes to determine the efficacy of various treatments aimed at relieving symptoms. The calculated score ranges from 0 to 19, where active disease is a score of 5 or higher. The score is determined by asking the person with colitis questions regarding: Bowel frequency at day/night, Urgency of defecation, Blood in stool, General health, and Extracolonic manifestations.">
 				>
 				["at0001"] = <
 					text = <"History">
