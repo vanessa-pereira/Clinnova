@@ -91,7 +91,7 @@ Révisé (IPQ-R).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f8b12d001a27deea9223c8777cfc04db">
+		["MD5-CAM-1.0.1"] = <"02531b95996c36280aea002d00293169">
 		["build_uid"] = <"8f71b638-70a8-3577-936c-f6cef4a15847">
 	>
 
@@ -296,7 +296,7 @@ ontology
 			items = <
 				["at0000"] = <
 					text = <"Brief Illness Perception Questionnaire (Brief IPQ)">
-					description = <"Brief Illness Perception Questionnaire (Brief IPQ)is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness. ">
+					description = <"Brief Illness Perception Questionnaire (Brief IPQ) is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness. ">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -511,7 +511,7 @@ treatment such as \"surgery\" or \"inhaler\" if researchers are interested in a 
 			items = <
 				["at0000"] = <
 					text = <"Bref Questionnaire de Perception de Maladie (Brief IPQ)">
-					description = <"Brief Illness Perception Questionnaire (Brief IPQ) est une échelle de neuf items conçue pour évaluer rapidement les représentations cognitives et émotionnelles de la maladie.">
+					description = <"*Brief Illness Perception Questionnaire (Brief IPQ) is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness.  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
@@ -713,7 +713,7 @@ votre maladie. Les raisons les plus importantes pour moi:
 			items = <
 				["at0000"] = <
 					text = <"Fragebogen zur Krankheitswahrnehmung (Kurzform - IPQ)">
-					description = <"Der Brief Illness Perception Questionnaire (Brief IPQ) ist eine Skala mit neun Punkten, die entwickelt wurde, um die kognitiven und emotionalen Repräsentationen von Krankheiten schnell zu bewerten.">
+					description = <"*Brief Illness Perception Questionnaire (Brief IPQ) is a nine-item scale designed to rapidly assess the cognitive and emotional representations of illness.  (en)">
 				>
 				["at0001"] = <
 					text = <"History">
