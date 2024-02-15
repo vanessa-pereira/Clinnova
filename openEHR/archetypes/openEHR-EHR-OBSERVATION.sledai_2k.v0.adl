@@ -11,13 +11,14 @@ description
 	original_author = <
 		["date"] = <"2021-09-23">
 		["name"] = <"Vanessa Pereira">
-		["organisation"] = <"Pathfinder - Better">
+		["organisation"] = <"Luxembourg Institute of Health (LIH)">
 		["email"] = <"vanessa.pereira@protonmail.com">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			purpose = <"To determine disease activity in patients with lupus.">
 			keywords = <"SLEDAI-2K, SLEDAI-2000, SLEDAI, Lupus, SLE, Systemic Lupus Erythematosus, Activity index, Systemic Lupus Erythematosus Disease Activity Index 2000", ...>
 		>
 	>
@@ -30,7 +31,7 @@ Bombardier C, Gladman DD, Urowitz MB, Caron D, Chang CH, and the Committee on Pr
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0329fd7c633bb819966e40f99a8f397d">
+		["MD5-CAM-1.0.1"] = <"7063b6bdafc145640a03cb6f2f09a80f">
 		["build_uid"] = <"c8fc076d-e8fe-3615-b8dd-cb26fc81304f">
 	>
 
@@ -39,7 +40,7 @@ definition
 		data matches {
 			HISTORY[at0001] matches {    -- History
 				events cardinality matches {1..*; unordered} matches {
-					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+					INTERVAL_EVENT[at0002] occurrences matches {0..*} matches {    -- Over the last 10 days
 						data matches {
 							ITEM_TREE[at0003] matches {    -- Tree
 								items cardinality matches {0..*; unordered} matches {
@@ -202,6 +203,18 @@ definition
 								}
 							}
 						}
+						math_function matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[openehr::640]
+								}
+							}
+						}
+						width matches {
+							DV_DURATION matches {
+								value matches {P10D}
+							}
+						}
 					}
 				}
 			}
@@ -226,19 +239,19 @@ ontology
 					text = <"SLE Disease Activity Index 2000 (SLEDAI-2K)">
 					description = <"Systemic Lupus Erythematosus Disease Activity Index 2000 (SELDAI 2K). The SLEDAI was originally developed to determine disease activity in patients with lupus.
 
-SLEDAI-2K was developed as a modification of SLEDAI in order to include persistent, active disease in those descriptors that had previously only considered new or recurrent occurrences. Specifically SLEDAI-2K allows persistent active disease in alopecia, mucous membrane ulcers, rash, and proteinuria to be scored.
+Was developed as a modification of SLEDAI in order to include persistent, active disease in those descriptors that had previously only considered new or recurrent occurrences. Specifically SLEDAI-2K allows persistent active disease in alopecia, mucous membrane ulcers, rash, and proteinuria to be scored.
 
 SLEDAI-2K is based on the presence of 24 descriptors in nine organ systems over the preceding 30 days. Descriptors of SLEDAI-2K are documented as present or absent. Each of the descriptors has a weighted score and the total score of SLEDAI-2K is the sum of all 24 descriptor scores. The total SLEDAI-2K score falls between 0 and 105, with higher scores representing higher disease activity
 
-SLEDAI-2K was validated against the original SLEDAI as a predictor for mortality and as a measure of global disease activity. It was also found to be equivalent to SLEDAI in describing changes in disease activity from one visit to the next.">
+Was validated against the original SLEDAI as a predictor for mortality and as a measure of global disease activity. It was also found to be equivalent to SLEDAI in describing changes in disease activity from one visit to the next.">
 				>
 				["at0001"] = <
 					text = <"History">
 					description = <"@ internal @">
 				>
 				["at0002"] = <
-					text = <"Any event">
-					description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+					text = <"Over the last 10 days">
+					description = <"The SLEDAI-2K refers to the presence of a descriptor (seizure, psychosis, etc) in the time of visit or the preceding 10 days)">
 				>
 				["at0003"] = <
 					text = <"Tree">
@@ -246,7 +259,7 @@ SLEDAI-2K was validated against the original SLEDAI as a predictor for mortality
 				>
 				["at0004"] = <
 					text = <"Seizure">
-					description = <"">
+					description = <"Recent onset, exclude metabolic, infectious or drug causes.">
 				>
 				["at0005"] = <
 					text = <"Yes">
