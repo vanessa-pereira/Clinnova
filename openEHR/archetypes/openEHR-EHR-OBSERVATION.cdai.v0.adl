@@ -40,7 +40,7 @@ Best WR. Predicting the Crohn's disease activity index from the Harvey-Bradshaw 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a7673a6505c6a0964988f66f25a3275e">
+		["MD5-CAM-1.0.1"] = <"087c311fdc467668216c810d7e39e0ad">
 		["build_uid"] = <"c31fc849-9be2-303e-b886-49efa2f4716b">
 	>
 
@@ -149,13 +149,9 @@ definition
 														list = <
 															["1"] = <
 																units = <"kg">
-																units_system = <"http://unitsofmeasure.org">
-																units_display_name = <"kg">
 															>
 															["2"] = <
 																units = <"[lb_av]">
-																units_system = <"http://unitsofmeasure.org">
-																units_display_name = <"lbm">
 															>
 														>
 													>
@@ -168,13 +164,9 @@ definition
 														list = <
 															["1"] = <
 																units = <"kg">
-																units_system = <"http://unitsofmeasure.org">
-																units_display_name = <"kg">
 															>
 															["2"] = <
 																units = <"[lb_av]">
-																units_system = <"http://unitsofmeasure.org">
-																units_display_name = <"lbm">
 															>
 														>
 													>
