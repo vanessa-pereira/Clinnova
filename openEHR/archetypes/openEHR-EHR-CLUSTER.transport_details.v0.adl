@@ -1,0 +1,73 @@
+archetype (adl_version=1.4; uid=ebb8c983-c029-4397-a3d4-ea8a76b8f5a4)
+	openEHR-EHR-CLUSTER.transport_details.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2018-11-20">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"33c304bb08e5291a1613a13faed29877">
+		["build_uid"] = <"a1eeb575-99b3-3afa-bdb6-f326e7b763f2">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Transport details
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Transport status
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Transport number
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Biological material type code
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Transport details">
+					description = <"transport_details">
+				>
+				["at0001"] = <
+					text = <"Transport status">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Transport number">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Biological material type code">
+					description = <"*">
+				>
+			>
+		>
+	>
