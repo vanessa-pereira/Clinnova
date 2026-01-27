@@ -22,10 +22,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "480f0f0c2639968866348bf81149bcb4",
+      "MD5-CAM-1.0.1" : "54d3fb27674b6feeecd6952fc5971e47",
       "PARENT:MD5-CAM-1.0.1" : "2A64B8463AA11FF22EA7977CDF0E9959",
       "build_uid" : "69b4641f-8643-47ec-84a1-bcfa3c836da0",
-      "sem_ver" : "1.0.1"
+      "sem_ver" : "1.0.2"
     },
     "details" : {
       "en" : {
@@ -318,6 +318,13 @@
           "text" : "*Extension(en)",
           "description" : "*Additional information required to capture local context or to align with other reference models/formalisms.(en)",
           "comment" : "* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)"
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "*Extension(en)",
+          "description" : "*Additional information required to capture local context or to align with other reference models/formalisms.(en)",
+          "comment" : "* e.g. Local hospital departmental infomation or additional metadata to align with FHIR or CIMI equivalents.(en)"
         }
       },
       "nb" : {
@@ -336,6 +343,13 @@
         "at0006.0.2" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0006.0.2",
+          "text" : "Tilleggsinformasjon",
+          "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
+          "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
           "text" : "Tilleggsinformasjon",
           "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
           "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI."
@@ -372,6 +386,19 @@
           "text" : "Extensão",
           "description" : "Informação adicional requerida para capturar o contexto local ou para alinhar a outros modelos de referência/formalismos.",
           "comment" : "Por exemplo: requisitos de informações locais ou metadados para alinhar com equivalentes do FHIR or CIMI."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Extensão",
+          "description" : "Informação adicional requerida para capturar o contexto local ou para alinhar a outros modelos de referência/formalismos.",
+          "comment" : "Por exemplo: requisitos de informações locais ou metadados para alinhar com equivalentes do FHIR or CIMI."
+        },
+        "at0002.0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Identificador do relatório",
+          "description" : "Informação de identificação sobre o relatório."
         }
       },
       "de" : {
@@ -447,9 +474,9 @@
         "at0006" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0006",
-          "text" : "*Extension (en)",
-          "description" : "*Additional information required to capture local context or to align with other reference models/formalisms. (en)",
-          "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
+          "text" : "Laajennus",
+          "description" : "Tarvitaan lisätietoja paikallisen tilanteen mallintamiseksi tai yhdenmukaistamiseksi muiden vertailumallien / muodollisuuksien kanssa. \r\n",
+          "comment" : "Esimerkiksi: paikalliset tietovaatimukset tai ylimääräiset metatiedot FHIR- tai CIMI-vastaavien mukaisiksi."
         },
         "at0006.0.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -499,9 +526,9 @@
         "at0006" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0006",
-          "text" : "*Extension (en)",
-          "description" : "*Additional information required to capture local context or to align with other reference models/formalisms. (en)",
-          "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
+          "text" : "Estensione",
+          "description" : "Informazioni aggiuntive necessarie per catturare il contesto locale o per allinearsi con altri modelli/formalismi di riferimento.",
+          "comment" : "Per esempio: requisiti informativi locali o metadati aggiuntivi per allinearsi con gli equivalenti FHIR o CIMI."
         },
         "at0006.0.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -551,9 +578,9 @@
         "at0006" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0006",
-          "text" : "*Extension (en)",
-          "description" : "*Additional information required to capture local context or to align with other reference models/formalisms. (en)",
-          "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
+          "text" : "Uitbreiding",
+          "description" : "Extra informatie nodig om de context te beschrijven of te voldoen aan andere modellen of formalismen.",
+          "comment" : "Bijvoorbeeld: lokale informatievereisten of aanvullende metadata om overeen te komen met FHIR- of CIMI-equivalenten."
         },
         "at0006.0.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -603,9 +630,9 @@
         "at0006" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0006",
-          "text" : "*Extension (en)",
-          "description" : "*Additional information required to capture local context or to align with other reference models/formalisms. (en)",
-          "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
+          "text" : "Tilläggsinformation",
+          "description" : "Plats för tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.",
+          "comment" : "Exempelvis lokala informationskrav eller metadata för anpassning till FHIR- eller CIMI-motsvarigheter."
         },
         "at0006.0.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -655,9 +682,9 @@
         "at0006" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0006",
-          "text" : "*Extension (en)",
-          "description" : "*Additional information required to capture local context or to align with other reference models/formalisms. (en)",
-          "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)"
+          "text" : "扩展",
+          "description" : "用于捕获本地的上下文或与其他参考模型/形式保持一致所需的其他信息。",
+          "comment" : "比如：本地的信息需求或是为了与FHIR或CIMI保持一致的其他元数据。"
         },
         "at0006.0.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -827,6 +854,36 @@
           "keywords" : [ ],
           "use" : "*Use to record the result, including findings and the laboratory's interpretation, of an investigation performed on specimens collected from an individual or related to that individual. This is typically done in a laboratory, but may be done in other environments such as at the point of care.\r\n\r\nThis archetype is intended to cover the result of a single ordered investigation where the specimen(s) are collected as a single procedure, and may include multiple analyte results or other components. Examples of this could include 'Full blood count', which would yield a separate analyte result for the count of each type of blood cell, or 'kidney biopsy non-neoplastic', which would yield findings from microscopy, immunohistochemistry and electron microscopy.\r\n\r\nThis archetype has been designed to be a framework that will usually be extended with CLUSTER archetypes to enable appropriate recording of specific laboratory test result patterns. This includes, but is not limited to, tests for biochemistry, haematology, immunology and transfusion services etc and specific patterns for the unique requirements for microbiology and anatomical pathology. If the ordered tests or investigations do not commonly belong together in a named group or panel, each test result would normally be represented using separate instances of this archetype. There is, however, considerable variation in actual reporting/messaging practice and this archetype/related archetypes are designed to handle such variation.\r\n\r\nThis archetype supports multiple approaches to recording of specimen, reflecting current practice which varies enormously. A Laboratory test result has a high degree of alignment to an HL7 FHIR Diagnostic Report resource.\r\n\r\nIt is anticipated that one or more instances of this archetype, or archetype family, will be sent back to a requesting clinician within a laboratory report document comprising COMPOSITION.report_result archetype, or similar, and other relevant ENTRY archetypes.\r\n\r\nThe recording of confounding factors may be inconsistent, often depending on the analysing laboratory and on clinical information sent by the requester. In the State section of the archetype there is a simple 'Confounding factors' data element that is optional and can be repeated as one way to record a variety of simple factors that need to be made explicit as they may influence interpretation of the results. If the confounding factors are more complex, it may be appropriate to create a local/shared CLUSTER archetype that can be nested in the 'Confounding factors details' SLOT. \r\nNote 1: Known or required pre-conditions, such as 'fasting' or 'Day 1 of menstrual cycle', should be reported in the 'Sampling conditions' data element in the CLUSTER.specimen archetype, nested within this OBSERVATION archetype.\r\nNote 2: Known issues with specimen collection or handling, such as 'sample haemolysed' or 'prolonged use of tourniquet' should be reported within 'Specimen quality' in the CLUSTER.specimen archetype, nested within this OBSERVATION archetype.\r\n\r\nWhere 'reflex tests' are performed by the laboratory, these may be handled as per US/FHIR guidance (see https://www.hl7.org/fhir/2015may/uslabreport-guide.html) or other local policy. For example, one of the following ...\r\n1. Record the reflex test results additional 'Test findings' within the same 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Record the reflex test results as 'Test findings' within a new 'openEHR-EHR-OBSERVATION.laboratory_test_result' but refer to the original lab test request via 'Test request details'.\r\n3. Record the reflex test results as 'Test findings' within a new 'openEHR-EHR-OBSERVATION.laboratory_test_result' but reference a new lab test request as well as the original lab test request via 'Test request details'.(en)",
           "misuse" : "*Not to be used to record an Autopsy or a Forensic report, although tests on some specimens that are taken in such situations may be represented using this archetype. For these, additional or specialised archetypes will be required to represent the data.\r\n\r\nThis archetype is suitable for representation of general laboratory test results, but not intended to cover full synoptic reports. For these, additional specialising archetypes are required to represent the data.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registrar el resultado, incluidas las conclusiones y la interpretación del laboratorio, de una investigación realizada con muestras recogidas de un individuo o relacionadas con él.",
+          "keywords" : [ "laboratorio", "patología", "bioquímica", "hematología", "microbiología", "inmunología", "anatómico", "químico", "clínico", "inmunopatología", "citología", "histopatología", "prueba", "biopsia", "muestra", "forense", "genético", "medicina de laboratorio", "resultados", "análisis" ],
+          "use" : "Se utiliza para registrar el resultado, incluidos los hallazgos y la interpretación del laboratorio, de una investigación realizada en muestras recolectadas de un individuo o relacionadas con ese individuo. Esto normalmente se hace en un laboratorio, pero se puede hacer en otros entornos, como en el lugar de atención.\r\n\r\nEste arquetipo pretende cubrir el resultado de una única investigación ordenada en la que las muestras se recogen como un único procedimiento y puede incluir múltiples resultados de analitos u otros componentes. Ejemplos de esto podrían incluir un \"conteo sanguíneo completo\", que arrojaría un resultado de analito separado para el recuento de cada tipo de célula sanguínea, o una \"biopsia renal no neoplásica\", que arrojaría resultados mediante microscopía, inmunohistoquímica y microscopía electrónica.\r\n\r\nEste arquetipo ha sido diseñado para ser un borrador que generalmente se irá ampliando con arquetipos CLUSTER para permitir el registro apropiado de patrones de resultados de pruebas de laboratorio específicos. Esto incluye, entre otros, pruebas de bioquímica, hematología, inmunología y servicios de transfusión, etc., y patrones específicos para los requisitos únicos de microbiología y anatomía patológica. Si las pruebas o investigaciones solicitadas no están englobadas en ningún grupo, cada resultado de la prueba normalmente se representaría utilizando instancias separadas de este arquetipo. Sin embargo, existe una variación considerable en la práctica real de informes/mensajería y este arquetipo/arquetipos relacionados están diseñados para manejar dicha variación.\r\n\r\nEste arquetipo admite múltiples enfoques para el registro de muestras, lo que refleja la práctica actual que varía enormemente. El resultado de una prueba de laboratorio tiene un alto grado de alineación con un recurso de Informe de diagnóstico HL7 FHIR.\r\n\r\nSe prevé que una o más instancias de este arquetipo, o familia de arquetipos, se enviarán de vuelta al médico solicitante dentro de un documento de informe de laboratorio que comprenda el arquetipo COMPOSITION.report_result, o similar, y otros arquetipos ENTRY relevantes.\r\n\r\nEl registro de factores de confusión puede ser inconsistente, dependiendo a menudo del laboratorio analizador y de la información clínica enviada por el solicitante. En la sección Estado del arquetipo hay un elemento de datos simple de 'Factores de confusión', que es opcional y puede repetirse como una forma de registrar una variedad de factores simples que deben hacerse explícitos, ya que pueden influir en la interpretación de los resultados. Si los factores de confusión son más complejos, puede ser apropiado crear un arquetipo de tipo CLUSTER local/compartido, que pueda anidarse en el SLOT 'Detalles de los factores de confusión'.\r\nNota 1: Las condiciones previas conocidas o requeridas, como \"ayuno\" o \"Día 1 del ciclo menstrual\", deben informarse en el elemento de datos \"Condiciones de muestreo\" en el arquetipo CLUSTER.specimen, anidado dentro de este arquetipo OBSERVATION.\r\nNota 2: Los problemas conocidos con la recolección o manipulación de muestras, como \"muestra hemolizada\" o \"uso prolongado de torniquete\", deben informarse en \"Calidad de la muestra\" en el arquetipo CLUSTER.specimen, anidado dentro de este arquetipo OBSERVATION.\r\n\r\nCuando el laboratorio realiza \"pruebas de reflejos\", estas pueden manejarse según la guía US/FHIR (consulte https://www.hl7.org/fhir/2015may/uslabreport-guide.html) u otra política local. Por ejemplo, uno de los siguientes...\r\n1. Registre los resultados de la prueba reflejo adicional 'Resultados de la prueba' dentro del mismo 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Registre los resultados de la prueba reflejo, tales como 'Resultados de la prueba', dentro de un nuevo 'openEHR-EHR-OBSERVATION.laboratory_test_result' pero consulte la solicitud de prueba de laboratorio original a través de 'Detalles de la solicitud de prueba'.\r\n3. Registre los resultados de la prueba reflejo, tales como como 'Resultados de la prueba' dentro de un nuevo 'openEHR-EHR-OBSERVATION.laboratory_test_result' pero haga referencia a una nueva solicitud de prueba de laboratorio, así como a la solicitud de prueba de laboratorio original a través de 'Detalles de la solicitud de prueba'.",
+          "misuse" : "No debe utilizarse para registrar una autopsia o un informe forense, aunque las pruebas de algunas muestras que se toman en tales situaciones pueden representarse utilizando este arquetipo. En estos casos, se necesitarán arquetipos adicionales o especializados para representar los datos.\r\n\r\nEste arquetipo es adecuado para la representación de resultados generales de pruebas de laboratorio, pero no pretende abarcar informes sinópticos completos. En estos casos, se necesitarán arquetipos especializados adicionales para representar los datos.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar el resultat, incloses les conclusions i la interpretació del laboratori, d'una investigació realitzada amb mostres recollides o relacionades amb un individu.",
+          "keywords" : [ "laboratori", "patologia", "bioquímica", "hematologia", "microbiologia", "immunologia", "anatòmic", "químic", "clínic", "immunopatologia", "citologia", "histopatologia", "prova", "biòpsia", "mostra", "forense", "genètic", "medicina de laboratori", "resultats", "anàlisi" ],
+          "use" : "S'utilitza per registrar el resultat, incloses les troballes i la interpretació del laboratori, d'una investigació realitzada en mostres recol·lectades d'un individu o relacionades amb aquest individu. Això normalment es fa en un laboratori, però es pot fer en altres entorns, com ara el lloc d'atenció.\r\n\r\nAquest arquetip pretén cobrir el resultat d'una única investigació ordenada on les mostres es recullen com un únic procediment i pot incloure múltiples resultats d'analits o altres components. Exemples d'això podrien incloure un \"compte sanguini complet\", que donaria un resultat d'anàlit separat per al recompte de cada tipus de cèl·lula sanguínia, o una \"biòpsia renal no neoplàsica\", que donaria resultats mitjançant microscòpia, immunohistoquímica i microscòpia electrònica.\r\n\r\nAquest arquetip ha estat dissenyat per ser un esborrany que generalment s'anirà ampliant amb arquetips CLUSTER per permetre el registre apropiat de patrons de resultats de proves de laboratori específics. Això inclou, entre d'altres, proves de bioquímica, hematologia, immunologia i serveis de transfusió, etc. i patrons específics per als requisits únics de microbiologia i anatomia patològica. Si les proves o les investigacions sol·licitades no estan englobades en cap grup, cada resultat de la prova normalment es representaria utilitzant instàncies separades d'aquest arquetip. No obstant això, hi ha una variació considerable a la pràctica real d'informes/missatgeria i aquest arquetip/arquetips relacionats estan dissenyats per manejar aquesta variació.\r\n\r\nAquest arquetip admet múltiples enfocaments per al registre de mostres, cosa que reflecteix la pràctica actual que varia enormement. El resultat d‟una prova de laboratori té un alt grau d‟alineació amb un recurs d‟Informe de diagnòstic HL7 FHIR.\r\n\r\nEs preveu que una o més instàncies d'aquest arquetip o família d'arquetips s'enviaran de tornada al metge sol·licitant dins d'un document d'informe de laboratori que comprengui l'arquetip COMPOSITION.report_result, o similar, i altres arquetips ENTRY rellevants.\r\n\r\nEl registre de factors de confusió pot ser inconsistent, depenent sovint del laboratori analitzador i de la informació clínica enviada pel sol·licitant. A la secció Estat de l'arquetip hi ha un element de dades simple de 'Factors de confusió', que és opcional i es pot repetir com una forma de registrar una varietat de factors simples que s'han de fer explícits, ja que poden influir en la interpretació dels resultats . Si els factors de confusió són més complexos, pot ser apropiat crear un arquetip de tipus CLUSTER local/compartit, que es pugui niar al SLOT 'Detalls dels factors de confusió'.\r\nNota 1: Les condicions prèvies conegudes o requerides, com \"dejuni\" o \"Dia 1 del cicle menstrual\", s'han d'informar a l'element de dades \"Condicions de mostreig\" a l'arquetip CLUSTER.specimen, niat dins d'aquest arquetip OBSERVATION.\r\nNota 2: Els problemes coneguts amb la recol·lecció o manipulació de mostres, com ara \"mostra hemolitzada\" o \"ús prolongat de torniquet\", s'han d'informar a \"Qualitat de la mostra\" a l'arquetip CLUSTER.specimen, niat dins d'aquest arquetip OBSERVATION.\r\n\r\nQuan el laboratori realitza \"proves de reflexos\", aquestes es poden manejar segons la guia US/FHIR (consulteu https://www.hl7.org/fhir/2015may/uslabreport-guide.html) o una altra política local. Per exemple, un dels següents...\r\n1. Registreu els resultats de la prova reflex addicional 'Resultats de la prova' dins del mateix 'openEHR-EHR-OBSERVATION.laboratory_test_result'\r\n2. Registreu els resultats de la prova reflex, com ara 'Resultats de la prova', dins d'un nou 'openEHR-EHR-OBSERVATION.laboratory_test_result' però consulteu la sol·licitud de prova de laboratori original a través de 'Detalls de la sol·licitud de prova'.\r\n3. Registreu els resultats de la prova reflex, com ara 'Resultats de la prova' dins d'un nou 'openEHR-EHR-OBSERVATION.laboratory_test_result' però feu referència a una nova sol·licitud de prova de laboratori, així com a la sol·licitud de prova de laboratori original a través de 'Detalls de la sol·licitud de prova'.",
+          "misuse" : "No s'ha d'utilitzar per registrar una autòpsia o informe forense, encara que les proves d'algunes mostres que es prenen en aquestes situacions es poden representar utilitzant aquest arquetip. En aquests casos, caldrà arquetips addicionals o especialitzats per representar les dades.\r\n\r\nAquest arquetip és adequat per a la representació de resultats generals de proves de laboratori, però no pretén abastar informes sinòptics complets. En aquests casos, caldrà arquetips especialitzats addicionals per representar les dades.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -1224,7 +1281,9 @@
         "it" : { },
         "nl" : { },
         "sv" : { },
-        "pt-br" : { }
+        "pt-br" : { },
+        "es" : { },
+        "ca" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -1352,6 +1411,34 @@
         "email" : "joost.holslag@nedap.com"
       },
       "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
       "otherDetails" : { }
     } ]
   }, {
@@ -1557,6 +1644,51 @@
           "misuse" : "*Not to be used to record anatomical pathology macroscopic/microscopic findings, other than for additional testing such as cytometric flow studies.\r\n\r\nNot to be used to record results for microbiological culture findings. (en)",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在用于记录单值型的实验室检验结果，常见于医学生物化学、血液学、免疫学和输血医学等临床病理学/检验医学检测当中。",
+          "keywords" : [ "实验室", "病理学", "检验医学", "检验", "分析物", "检验项目", "检验结果", "化验结果", "构成要素" ],
+          "use" : "旨在用于记录单值型的实验室检验结果，常见于医学生物化学、血液学、免疫学和输血医学等临床病理学/检验医学检测当中。在解剖病理学报告当中，也可能会以“辅助检查”的形式出现。\r\n\r\n实验室检验结果原始型 OBSERVATION.laboratory_test_result 的“测试结果” 槽位之中可能会嵌套本原始型的一个或多个实例。\r\n\r\n在某些情况下，本原始型可能与通常作为组套（组合或套餐）的组成部分而进行检测和/或报告的其他检验结果一起存在于实验室检验项目组合原始型 CLUSTER.laboratory_test_panel 当中。\r\n\r\n这种原始型可以用于更复杂的实验室/病理学报告，如解剖病理学报告〔其中，定量结果（如流式细胞检查）常常会与传统的大体和显微镜检报告一起报告〕。",
+          "misuse" : "并非旨在用于记录解剖病理学大体和显微镜检所见，除非用于流式细胞检查之类的其他检测。\r\n\r\n并非旨在用于记录微生物培养所见方面的结果。",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registrar el resultado de un analito de laboratorio de valor único, normalmente en pruebas de patología clínica como bioquímica médica, hematología, inmunología y medicina transfusional.",
+          "keywords" : [ "laboratorio", "patología", "analito", "componente", "resultado" ],
+          "use" : "Se utiliza para registrar el resultado de un analito de laboratorio de valor único, normalmente en pruebas de patología clínica como bioquímica médica, hematología, inmunología y medicina transfusional. También puede encontrarse en informes de anatomía patológica como 'pruebas auxiliares'.\r\n\r\nUna o más instancias de este arquetipo pueden estar anidadas dentro del SLOT 'Resultado de la prueba', dentro de OBSERVATION.laboratory_test_result.\r\n\r\nEn algunas circunstancias, este arquetipo puede incluirse dentro de un arquetipo CLUSTER.laboratory_test_panel, junto con otros analitos que normalmente se analizan y/o informan como parte de una serie, panel o perfil.\r\n\r\nEste arquetipo se puede utilizar para informes de laboratorio/patología más complejos, como informes de anatomía patológica, donde los resultados cuantitativos, como los estudios de citometría de flujo, a menudo se informan junto con los informes macroscópicos y microscópicos convencionales.",
+          "misuse" : "No debe utilizarse para registrar hallazgos macroscópicos/microscópicos de anatomía patológica, excepto para pruebas adicionales como estudios de citometría de flujo.\r\n\r\nNo debe utilizarse para registrar resultados de cultivos microbiológicos.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar un resultat de laboratori d'un analit de valor únic, normalment de proves de patologia clínica, com ara bioquímica mèdica, hematologia, immunologia i medicina transfusional.",
+          "keywords" : [ "laboratori", "patologia", "analit", "component", "resultat" ],
+          "use" : "S'utilitza per registrar un resultat de laboratori d'un analit de valor únic, normalment de proves de patologia clínica, com ara bioquímica mèdica, hematologia, immunologia i medicina transfusional. També es pot trobar en informes d'anatomia patològica com a 'proves auxiliars'.\r\n\r\nUna o més instàncies d'aquest arquetip poden estar niades dins del SLOT 'Resultat de la prova', dins OBSERVATION.laboratory_test_result.\r\n\r\nEn algunes circumstàncies, aquest arquetip pot incloure's dins d'un arquetip CLUSTER.laboratory_test_panel, juntament amb altres analits que normalment s'analitzen i/o informen com a part d'una sèrie, panell o perfil.\r\n\r\nAquest arquetip es pot utilitzar per a informes de laboratori/patologia més complexos, com ara informes d'anatomia patològica, on els resultats quantitatius, com els estudis de citometria de flux, sovint s'informen juntament amb els informes macroscòpics i microscòpics convencionals.",
+          "misuse" : "No s'ha d'utilitzar per registrar troballes macroscòpiques/microscòpiques d'anatomia patològica, excepte per a proves addicionals com a estudis de citometria de flux.\r\n\r\nNo s'ha de fer servir per registrar resultats de cultius microbiològics.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -1564,10 +1696,6 @@
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
         "en" : {
-          "/items[at0001]" : {
-            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
-            "fhir_mapping" : "Observation.value[x]"
-          },
           "/items[at0003]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note"
@@ -1583,13 +1711,13 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "nb" : {
-          "/items[at0001]" : {
-            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
-            "fhir_mapping" : "Observation.value[x]"
-          },
           "/items[at0003]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note"
@@ -1605,13 +1733,13 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         },
         "pt-br" : {
-          "/items[at0001]" : {
-            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
-            "fhir_mapping" : "*Observation.value[x](en)"
-          },
           "/items[at0003]" : {
             "hl7v2_mapping" : "*NTE.3(en)",
             "fhir_mapping" : "*Observation.comments(en)"
@@ -1627,13 +1755,13 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
             "fhir_mapping" : "*Observation.code(en)"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+            "fhir_mapping" : "*Observation.value[x](en)"
           }
         },
         "de" : {
-          "/items[at0001]" : {
-            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
-            "fhir_mapping" : "Observation.value[x]"
-          },
           "/items[at0003]" : {
             "hl7v2_mapping" : "NTE.3",
             "fhir_mapping" : "Observation.note"
@@ -1649,6 +1777,10 @@
           "/items[at0024.1]" : {
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code"
+          },
+          "/items[at0001.1]" : {
+            "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+            "fhir_mapping" : "Observation.value[x]"
           }
         }
       }
@@ -1677,8 +1809,135 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
               "occurrences" : "1..1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "terminologyId" : {
+                    "value" : "LOINC"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "LOINC" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "LOINC",
+                    "code" : "2951-2",
+                    "value" : "Sodium [Moles/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Sodium [Moles/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "2160-0",
+                    "value" : "Creatinine [Mass/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Creatinine [Mass/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "3091-6",
+                    "value" : "Urea [Mass/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Urea [Mass/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "1920-8",
+                    "value" : "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "1742-6",
+                    "value" : "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "2324-2",
+                    "value" : "Gamma glutamyl transferase [Enzyma1920-tic activity/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Gamma glutamyl transferase [Enzyma1920-tic activity/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "2000-8",
+                    "value" : "Calcium [Moles/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Calcium [Moles/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "1975-2",
+                    "value" : "Bilirubin.total [Mass/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Bilirubin.total [Mass/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "6768-6",
+                    "value" : "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma",
+                    "translations" : {
+                      "en" : "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+                    }
+                  }, {
+                    "terminologyId" : "LOINC",
+                    "code" : "718-7",
+                    "value" : "Hemoglobin [Mass/volume] in Blood",
+                    "translations" : {
+                      "en" : "Hemoglobin [Mass/volume] in Blood"
+                    }
+                  } ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_QUANTITY",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ {
+                "@type" : "C_ATTRIBUTE_TUPLE",
+                "members" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "units",
+                  "children" : [ ]
+                }, {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "magnitude",
+                  "children" : [ ]
+                } ],
+                "tuples" : [ {
+                  "@type" : "C_PRIMITIVE_TUPLE",
+                  "members" : [ {
+                    "@type" : "C_STRING",
+                    "rmTypeName" : "STRING",
+                    "constraint" : [ "mmol/L" ]
+                  }, {
+                    "@type" : "C_REAL",
+                    "rmTypeName" : "REAL",
+                    "constraint" : [ {
+                      "lowerIncluded" : false,
+                      "upperIncluded" : false,
+                      "lowerUnbounded" : true,
+                      "upperUnbounded" : true
+                    } ]
+                  } ]
+                } ]
+              } ]
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -1733,7 +1992,10 @@
         "pt-br" : { },
         "de" : { },
         "nl" : { },
-        "sv" : { }
+        "sv" : { },
+        "es" : { },
+        "ca" : { },
+        "zh-cn" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -1822,6 +2084,48 @@
       },
       "accreditation" : "MD",
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "Freelancer",
+        "email" : "linforest@163.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Julio de Sosa",
+        "organisation" : "Servei Català de la Salut",
+        "email" : "juliodesosa@catsalut.cat"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -1836,7 +2140,47 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "dffdd0985a756a531115014bb0828e4d"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To save the cohort name and timeline moment assessment (baseline to follow-up).",
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.research_information.v0",
     "differential" : true,
